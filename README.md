@@ -19,14 +19,14 @@ this python program is for you !
 
 # What does it do ?
 
-PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts chains and ligands and removes water molecules, and then saving everything in a directory named as the PDB ID of the file. eg :
+PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts chains and ligands and removes water molecules, and then saves everything in a directory named as the PDB ID of the file. eg :
 
 4EY7.pdb
 
-this file will be treated and the output will depend on the user's input, if everything is left to default it will create a folder named **4EY7** containing :
+this file will be treated and the output will **depend** on the user's input, if everything is left to default it will create a folder named **4EY7** containing :
 
-- 4EY7.pdb with no metadata.
-- chain A File with no ligand / water molecules.
+- 4EY7.pdb with no metadata, found it to be lighter this way, and the original file will still remain.
+- chain 'A' File with no ligand / water molecules.
 - all ligand residues in that chain ( in this example it's only one, E20 )
 
 
@@ -43,7 +43,7 @@ You can download and install **python** from the official website (3.7.x recomme
 
 # Usage
 
-Very straightforward, all you have to do is put this script in the folder containing the PDBs that need to be treated, then follow instructions for each iteration.
+Very straightforward, all you have to do is put this script in the folder containing the PDBs that need to be treated, run it from command line / terminal then follow instructions for each iteration.
 
 For now there exists only 3 commands :
 
