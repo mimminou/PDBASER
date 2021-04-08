@@ -1,4 +1,15 @@
-# PDBASER
+
+
+
+
+                                                    
+            _____ ____  _____ _____ _____ _____ _____ 
+            |  _  |    \| __  |  _  |   __|   __| __  |
+            |   __|  |  | __ -|     |__   |   __|    -|
+            |__|  |____/|_____|__|__|_____|_____|__|__|
+                                                    
+
+
 
 Are you tired from using visualization software to separate tens and hundreds of proteic chains / ligands ?
 Are you tired of organizing the mess of molecules into separate folders ?
