@@ -32,7 +32,7 @@ You can download and install **python** from the official website (3.7.x recomme
 
 # Usage
 
-Very straightforward, all you have to do is put this script in the folder containing the PDBs that need to be treated, then follow instructions for each iteration.
+Very straightforward, all you have to do is put this script in the folder containing the PDBs that need to be treated, run it from command line / terminal then follow instructions for each iteration.
 
 For now there exists only 3 commands :
 
