@@ -26,8 +26,10 @@ PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts chains 
 this file will be treated and the output will **depend** on the user's input, if everything is left to default it will create a folder named **4EY7** containing :
 
 - 4EY7.pdb with no metadata, found it to be lighter this way, and the original file will still remain.
-- chain 'A' File with no ligand / water molecules.
+- chain 'A' File ( if left on default and chain A exists ) with no ligand / water molecules.
 - all hetero residues in that chain ( in this example, there is E20, NAG, ED0 and others but the main ligand is E20 )
+
+All outputs will have .PDB format for now, i will add MOL2 and maybe SDF formats when and if i'm free ( i have lots of studies . . .)
 
 
 
