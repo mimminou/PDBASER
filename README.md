@@ -19,7 +19,7 @@ this python program is for you !
 
 # What does it do ?
 
-PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts chains and ligands and removes water molecules, and then saves everything in a directory named as the PDB ID of the file. eg :
+PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts chains and ligands and removes water molecules, and then saves everything in a directory named as the PDB code of the file. eg :
 
 4EY7.pdb
 
