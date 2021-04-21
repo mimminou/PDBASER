@@ -34,15 +34,16 @@ def get_PDB_ENTRY(PDB_FILE, num):  ## NUM IS THE VARIABLE HOLDING THE REFERENCE 
     ## NUM IS USED TO KNOW OF THIS FUNCTION EXECUTED AT LEAST ONCE
     pdb_file = PDB_FILE
     defaultChain_is_A = False
+    saved_Lig = False
     chain_Name = []
+    res_Name = []
     if (pdb_file.endswith('.pdb') or pdb_file.endswith('.ent')) \
             and not pdb_file.startswith("Lig_") and not pdb_file.startswith("Prot_") \
             and not pdb_file.startswith("Chain_"):
-        if(pdb_file.startswith("pdb")):
+        if (pdb_file.startswith("pdb")):
             PDB_ID = pdb_file[3:-4].upper()
         else:
             PDB_ID = pdb_file[:-4].upper()
-
 
         print(" ")
         print("LOADING FILE : " + pdb_file)
@@ -58,8 +59,8 @@ def get_PDB_ENTRY(PDB_FILE, num):  ## NUM IS THE VARIABLE HOLDING THE REFERENCE 
 
             print(chain_Name)
 
-            #! LOAD USER INTERFACE
-            ##? 
+            # ! LOAD USER INTERFACE
+            ##?
         if defaultChain_is_A is False:
             print("WHICH CHAIN ???")
             print("TYPE 'SKIP' TO IGNORE THIS PDB FILE")
@@ -96,7 +97,25 @@ def get_PDB_ENTRY(PDB_FILE, num):  ## NUM IS THE VARIABLE HOLDING THE REFERENCE 
 
         num.setiteratedNum(num.getIteratedNum() + 1)
         chain_Name.clear()
+
+
         print("WORKING ON : " + PDB_ID)
+        print("-----------------------")
+        #! PRINT RESIDUE NAMES
+        for res_item in pdb:
+            for res in res_item[CHAIN]:
+                if (not is_het(res)):
+                    continue
+                if "H_" in res.id[0] :
+                    res_Name.append(str(res.id[0]).replace("H_","").strip())
+        print("-----------------------")
+        print("Residues in chain :  ")
+        print()
+        print()
+        print(res_Name)
+        print()
+        print()
+        print()
         print("TYPE SKIP TO SKIP RESIDUE EXTRACTION")
         print("")
         print("LEAVE BLANK TO EXTRACT ALL RESIDUS IN THE PICKED CHAIN")
@@ -104,6 +123,9 @@ def get_PDB_ENTRY(PDB_FILE, num):  ## NUM IS THE VARIABLE HOLDING THE REFERENCE 
         myResname = myResname.upper()
         myResname = "H_" + myResname
         RESNAME = myResname
+        res_Name.clear()
+
+
         for model in pdb:
             # for chain in model[CHAIN]:
             pathlib.Path(PDB_ID).mkdir(parents=True, exist_ok=True)
@@ -119,34 +141,34 @@ def get_PDB_ENTRY(PDB_FILE, num):  ## NUM IS THE VARIABLE HOLDING THE REFERENCE 
                     break
                 if (not is_het(residue)):
                     continue
-                if RESNAME in residue.id[0]:
+                if RESNAME == str(residue.id[0]).replace(" ",""):
                     print("")
                     print(str(residue.id))
-                    print("RESIDUE FOUND : " + residue.id[0][2:])
+                    print("RESIDUE FOUND : " + str(residue.id[0]).replace(" ",""))
                     print("")
-                    print("Saving Ligand " + residue.id[0][2:] +"_"+ str(residue.id[1]) + " . . . ")
+                    print("Saving Ligand " + str(residue.id[0]).replace("H_","") + "_" + str(residue.id[1]) + " . . . ")
                     pathlib.Path(PDB_ID).mkdir(parents=True, exist_ok=True)
-                    io.save("./" + PDB_ID + "/" + "Lig_" + residue.id[0][2:] + "_" + PDB_ID + ".pdb",
+                    io.save("./" + PDB_ID + "/" + PDB_ID +  "_Lig_" + residue.id[0][2:] + ".pdb",
                             ResidueSelect(model[CHAIN], residue))
-
+                    saved_Lig = True
             else:
-                print("Saving Peptidic Chain without residus. . .")
+                print("Saving Peptidic Chain . . .")
                 io.set_structure(model[CHAIN])
-                io.save("./" + PDB_ID + "/" f"Chain_{CHAIN}_{PDB_ID}.pdb", NonHetSelect())
+                io.save("./" + PDB_ID + "/" f"{PDB_ID}_Chain_{CHAIN}.pdb", NonHetSelect())
                 io.set_structure(pdb)
-                if RESNAME != "H_SKIP":
-                    print("No ligand " + RESNAME[2:] +" found for " + PDB_ID + " in chain " + CHAIN)
+                if RESNAME != "H_SKIP" and saved_Lig == False :
+                    print("No ligand " + RESNAME[2:] + " found for " + PDB_ID + " in chain " + CHAIN)
             io.save("./" + PDB_ID + "/" f"{PDB_ID}.pdb")
+            saved_Lig = False
 
 
 def extract_ligands(mypath):
     # ? MAIN FUNCTION
     num = iterNum()
 
-
     for pdb_file in os.listdir(mypath + '/'):  # ? LOADING ALL RAW PDB FILES IN CURRENT FOLDER LOOP
         get_PDB_ENTRY(pdb_file, num)
-    if num.getIteratedNum()> 0 or num.getSkippedNum()>0:
+    if num.getIteratedNum() > 0 or num.getSkippedNum() > 0:
         print("-------------------")
         print("TOTAL FILES : " + str(num.getIteratedNum() + num.getSkippedNum()))
         print("Iterated over : " + str(num.getIteratedNum()))
@@ -155,7 +177,6 @@ def extract_ligands(mypath):
 
     else:
         print("no PDB / ENT Files in this directory ... ")
-
 
 
 class iterNum:  ## Class of setter and getter to hold the number of iterations and skips
@@ -177,7 +198,6 @@ class iterNum:  ## Class of setter and getter to hold the number of iterations a
         return self.__iterated
 
 
-
 warnings.filterwarnings("ignore")
 path = str(pathlib.Path(__file__).parent)
 
@@ -196,6 +216,5 @@ print("""  _____  _____  ____           _____ ______ _____
 for s in range(0, 2):
     sleep(1)
     print()
-
 
 extract_ligands(path)
