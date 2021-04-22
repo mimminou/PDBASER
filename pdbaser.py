@@ -170,13 +170,24 @@ def extract_ligands(mypath):
         get_PDB_ENTRY(pdb_file, num)
     if num.getIteratedNum() > 0 or num.getSkippedNum() > 0:
         print("-------------------")
+        print("")
         print("TOTAL FILES : " + str(num.getIteratedNum() + num.getSkippedNum()))
         print("Iterated over : " + str(num.getIteratedNum()))
         print("Skipped over : " + str(num.getSkippedNum()))
+        print("")
         print("-------------------")
-
+        print("")
+        print("")
+        print("*************************************************************************************")
+        print("If this was useful for your work, please mention 'ABDELAZIZ.A' in your thanks section")
+        print("*************************************************************************************")
+        print("")
+        print("")
+        input("Press Enter to exit. . .")
     else:
         print("no PDB / ENT Files in this directory ... ")
+        input("Press Enter to exit. . .")
+
 
 
 class iterNum:  ## Class of setter and getter to hold the number of iterations and skips
@@ -213,6 +224,12 @@ print("""  _____  _____  ____           _____ ______ _____
  | |    | |__| | |_) / ____ \ ____) | |____| | \ \ 
  |_|    |_____/|____/_/    \_\_____/|______|_|  \_\
                                                    """)
+print("")
+print("")
+print("If this was useful for your work, please mention 'ABDELAZIZ.A' in your thanks section")
+print("")
+print("")
+
 for s in range(0, 2):
     sleep(1)
     print()
