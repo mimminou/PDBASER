@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="tk.Toplevel" id="toplevel0">
+    <property name="cursor">arrow</property>
+    <property name="geometry">800x480</property>
+    <property name="highlightbackground">#c8797b</property>
+    <property name="minsize">800|400</property>
+    <property name="relief">flat</property>
+    <property name="resizable">vertically</property>
+    <property name="title" translatable="yes">PDBaser - GUI</property>
+    <child>
+      <object class="ttk.Frame" id="frame0">
+        <property name="padding">5</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">10</property>
+          <property name="ipadx">0</property>
+          <property name="ipady">0</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="rowspan">6</property>
+          <property name="sticky">nsew</property>
+          <property type="col" id="0" name="minsize">0</property>
+          <property type="col" id="0" name="weight">8</property>
+          <property type="row" id="0" name="minsize">150</property>
+          <property type="row" id="0" name="pad">10</property>
+          <property type="row" id="0" name="weight">12</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="label1">
+            <property name="font">{Arial} 14 {}</property>
+            <property name="text" translatable="yes">PDB File</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">3</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property type="col" id="0" name="minsize">180</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Listbox" id="listbox1">
+            <property name="activestyle">dotbox</property>
+            <property name="exportselection">false</property>
+            <property name="font">{arial} 14 {}</property>
+            <property name="selectmode">browse</property>
+            <property name="takefocus">false</property>
+            <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_PDBSelectionChanged" add="" />
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">3</property>
+              <property name="ipadx">50</property>
+              <property name="ipady">100</property>
+              <property name="padx">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="rowspan">6</property>
+              <property name="sticky">nsew</property>
+              <property type="col" id="0" name="minsize">180</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">10</property>
+              <property type="row" id="1" name="minsize">0</property>
+              <property type="row" id="1" name="pad">10</property>
+              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Scrollbar" id="scrollbarPDB">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">nse</property>
+              <property type="col" id="0" name="minsize">180</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">10</property>
+              <property type="row" id="1" name="minsize">0</property>
+              <property type="row" id="1" name="pad">10</property>
+              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label2">
+            <property name="font">{Arial} 14 {}</property>
+            <property name="text" translatable="yes">Chain</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="columnspan">3</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property type="col" id="4" name="minsize">180</property>
+              <property type="col" id="4" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Listbox" id="listbox2">
+            <property name="activestyle">dotbox</property>
+            <property name="exportselection">false</property>
+            <property name="font">{aria} 14 {}</property>
+            <property name="selectmode">browse</property>
+            <property name="takefocus">false</property>
+            <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_ChainSelectionChanged" add="" />
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="columnspan">3</property>
+              <property name="ipadx">50</property>
+              <property name="ipady">100</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="rowspan">6</property>
+              <property name="sticky">nsew</property>
+              <property type="col" id="4" name="minsize">180</property>
+              <property type="col" id="4" name="weight">10</property>
+              <property type="row" id="1" name="minsize">0</property>
+              <property type="row" id="1" name="pad">10</property>
+              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Scrollbar" id="scrollbarChain">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">nse</property>
+              <property type="row" id="1" name="minsize">0</property>
+              <property type="row" id="1" name="pad">10</property>
+              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label3">
+            <property name="font">{Arial} 14 {}</property>
+            <property name="text" translatable="yes">Residue</property>
+            <layout manager="grid">
+              <property name="column">8</property>
+              <property name="columnspan">3</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property type="col" id="8" name="minsize">180</property>
+              <property type="col" id="8" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Listbox" id="listbox3">
+            <property name="activestyle">dotbox</property>
+            <property name="exportselection">false</property>
+            <property name="font">{arial} 14 {}</property>
+            <property name="selectmode">extended</property>
+            <property name="takefocus">false</property>
+            <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_ResidueSelectionChanged" add="" />
+            <layout manager="grid">
+              <property name="column">8</property>
+              <property name="columnspan">3</property>
+              <property name="ipadx">50</property>
+              <property name="ipady">100</property>
+              <property name="padx">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="rowspan">6</property>
+              <property name="sticky">nsew</property>
+              <property type="col" id="8" name="minsize">180</property>
+              <property type="col" id="8" name="weight">10</property>
+              <property type="row" id="1" name="minsize">0</property>
+              <property type="row" id="1" name="pad">10</property>
+              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Scrollbar" id="scrollbarResidue">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">8</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">nse</property>
+              <property type="row" id="1" name="minsize">0</property>
+              <property type="row" id="1" name="pad">10</property>
+              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator3">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="padx">20</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="rowspan">7</property>
+              <property name="sticky">ns</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator4">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">7</property>
+              <property name="padx">20</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="rowspan">7</property>
+              <property name="sticky">ns</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame2">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">9</property>
+              <property name="sticky">sew</property>
+              <property type="col" id="0" name="minsize">180</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="weight">10</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="label7">
+                <property name="text" translatable="yes">Find</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">ew</property>
+                  <property type="col" id="0" name="weight">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Entry" id="SearchBox">
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">ew</property>
+                  <property type="col" id="1" name="weight">10</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">100</property>
+        <property name="width">800</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">10</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="rowspan">2</property>
+          <property name="sticky">sew</property>
+          <property type="col" id="0" name="minsize">0</property>
+          <property type="col" id="0" name="weight">8</property>
+          <property type="row" id="1" name="weight">0</property>
+          <property type="row" id="6" name="minsize">80</property>
+          <property type="row" id="6" name="weight">1</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="label4">
+            <property name="relief">flat</property>
+            <property name="text" translatable="yes">Input Directory</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">ew</property>
+              <property type="row" id="0" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="pygubu.builder.widgets.pathchooserinput" id="PDB_input_DIR">
+            <property name="mustexist">true</property>
+            <property name="title" translatable="yes">PDB directory Folder</property>
+            <property name="type">directory</property>
+            <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="input_Path_Changed" add="" />
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="columnspan">3</property>
+              <property name="ipadx">180</property>
+              <property name="padx">5</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">ew</property>
+              <property type="col" id="0" name="minsize">0</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="row" id="0" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator2">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">5</property>
+              <property name="columnspan">2</property>
+              <property name="padx">20</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="rowspan">2</property>
+              <property name="sticky">ns</property>
+              <property type="row" id="0" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="label5">
+            <property name="relief">flat</property>
+            <property name="text" translatable="yes">Output Directory</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">ew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="pygubu.builder.widgets.pathchooserinput" id="PDB_output_DIR">
+            <property name="mustexist">true</property>
+            <property name="title" translatable="yes">PDB directory Folder</property>
+            <property name="type">directory</property>
+            <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="output_Path_Changed" add="" />
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="columnspan">3</property>
+              <property name="ipadx">180</property>
+              <property name="padx">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">ew</property>
+              <property type="col" id="0" name="minsize">0</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="row" id="0" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="Extract_Button">
+            <property name="text" translatable="yes">Extract</property>
+            <layout manager="grid">
+              <property name="column">7</property>
+              <property name="columnspan">2</property>
+              <property name="padx">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="rowspan">2</property>
+              <property name="sticky">nsew</property>
+              <property type="row" id="0" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
