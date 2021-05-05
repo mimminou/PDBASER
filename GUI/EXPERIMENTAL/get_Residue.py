@@ -1,6 +1,5 @@
 from Bio.PDB import PDBParser, PDBIO, Select
 
-
 def is_het(residue):
     res = residue.id[0]
     return res not in (" ", "W")
@@ -31,18 +30,14 @@ def get_PDB_Residues(PDB_FILE,Chain, input_DIR):  ## NUM IS THE VARIABLE HOLDING
     pdb_file = PDB_FILE
     Res_Name = []
 
-
-    print(" ")
-
     pdb = PDBParser().get_structure(PDB_FILE, input_DIR+"/" + PDB_FILE)
     io = PDBIO()
     io.set_structure(pdb)
-    print("Printing Chains . . .")
     for res_item in pdb:
         for res in res_item[Chain]:
             if (not is_het(res)):
                 continue
             if "H_" in res.id[0]:
-                Res_Name.append(str(res.id[0]).replace("H_", "").strip())
+                Res_Name.append([str(res.id[0][2:]),res.id[1]])
 
     return Res_Name

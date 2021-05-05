@@ -47,7 +47,7 @@
           <object class="tk.Listbox" id="listbox1">
             <property name="activestyle">dotbox</property>
             <property name="exportselection">false</property>
-            <property name="font">{arial} 14 {}</property>
+            <property name="font">{Helvetica} 12 {}</property>
             <property name="selectmode">browse</property>
             <property name="takefocus">false</property>
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_PDBSelectionChanged" add="" />
@@ -105,7 +105,7 @@
           <object class="tk.Listbox" id="listbox2">
             <property name="activestyle">dotbox</property>
             <property name="exportselection">false</property>
-            <property name="font">{aria} 14 {}</property>
+            <property name="font">{Helvetica} 12 {}</property>
             <property name="selectmode">browse</property>
             <property name="takefocus">false</property>
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_ChainSelectionChanged" add="" />
@@ -158,7 +158,7 @@
           <object class="tk.Listbox" id="listbox3">
             <property name="activestyle">dotbox</property>
             <property name="exportselection">false</property>
-            <property name="font">{arial} 14 {}</property>
+            <property name="font">{Helvetica} 12 {}</property>
             <property name="selectmode">extended</property>
             <property name="takefocus">false</property>
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_ResidueSelectionChanged" add="" />
@@ -234,7 +234,7 @@
               <property type="col" id="0" name="weight">10</property>
             </layout>
             <child>
-              <object class="ttk.Label" id="label7">
+              <object class="ttk.Label" id="FindLabel">
                 <property name="text" translatable="yes">Find</property>
                 <layout manager="grid">
                   <property name="column">0</property>
@@ -280,7 +280,7 @@
           <property type="row" id="6" name="weight">1</property>
         </layout>
         <child>
-          <object class="tk.Label" id="label4">
+          <object class="tk.Label" id="Input_Dir_Label">
             <property name="relief">flat</property>
             <property name="text" translatable="yes">Input Directory</property>
             <layout manager="grid">
@@ -328,7 +328,7 @@
           </object>
         </child>
         <child>
-          <object class="tk.Label" id="label5">
+          <object class="tk.Label" id="Output_Dir_Label">
             <property name="relief">flat</property>
             <property name="text" translatable="yes">Output Directory</property>
             <layout manager="grid">
@@ -362,6 +362,7 @@
         <child>
           <object class="ttk.Button" id="Extract_Button">
             <property name="text" translatable="yes">Extract</property>
+            <bind sequence="&lt;Button-1&gt;" handler="ButtonOnClick" add="" />
             <layout manager="grid">
               <property name="column">7</property>
               <property name="columnspan">2</property>
