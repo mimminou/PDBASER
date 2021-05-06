@@ -1,50 +1,53 @@
-![main_icon](/PDBASER/tree/main/GUI/icon.PNG)
+![main_icon](GUI/icon.PNG?raw=true)
 
-
-
-
-                                                    
-            _____ ____  _____ _____ _____ _____ _____ 
-            |  _  |    \| __  |  _  |   __|   __| __  |
-            |   __|  |  | __ -|     |__   |   __|    -|
-            |__|  |____/|_____|__|__|_____|_____|__|__|
-                                                    
-
-
-
-Are you tired from using visualization software to separate tens and hundreds of proteic chains / ligands ?
+Are you tired of using visualization software, or full blown suites just to separate protein chains / ligands ?
 Are you tired of organizing the mess of molecules into separate folders ?
 
-this python program is for you !
+PDBaser does this for you !
 
 
 # What does it do ?
 
-PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts chains and ligands and removes water molecules, and then saves everything in a directory named as the PDB code of the file. eg :
-
-4EY7.pdb
-
-this file will be treated and the output will **depend** on the user's input, if everything is left to default it will create a folder named **4EY7** containing :
-
-- 4EY7.pdb with no metadata, found it to be lighter this way, and the original file will still remain.
-- chain 'A' File ( if left on default and chain A exists ) with no ligand / water molecules.
-- all hetero residues in that chain ( in this example, there is E20, NAG, ED0 and others but the main ligand is E20 )
-
-All outputs will have .PDB format for now, i will add MOL2 and maybe SDF formats when and if i'm free ( i have lots of studies . . .)
+PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and removes water molecules, and then saves everything in a directory named as the original filename.
 
 
 
-# Requirments
+# Requirements
 
-for this module to work, you need at least **python 3.6.5** as well as **BioPython**
+For Windows users, PDBaser has a GUI version, which is the one actively maintained as of now, an installer is provided in the releases section.
 
-from the date i'm writing this, i've been experiencing some issues regarding BioPython when running python 3.9, therefore i suggest users to download any iteration of python 3.7 instead.
+For Linux / MacOS users, PDBaser_GUI.py and it's dependencies will probably run, although i haven't tested myself, for this to work, this program requires Python 3.6.5 or newer, BioPython and Pygubu installed. 
 
-You can download and install **python** from the official website (3.7.x recommended).
+# Features
+
+- Input / Output Folder selection.
+- Multiple residue extraction possibility, chain only extraction with no residues is also possible.
+- Search field available.
+
+![Screenshot](GUI/pdbaser.PNG?raw=true)
+
+### Limitations
+
+- No metadata extraction (Header, info etc ...), only atom 3D poses.
+- No support for different file formats (yet), only .pdb and .ent are supported right now.
+
+
+
+# Command line
+
+*NOTE :* **command line version probably won't be supported anymore**
+
+for this module to work, you need at least **python 3.6.5** as well as **BioPython**.
+
+from the date i'm writing this, i've been experiencing some issues regarding BioPython when running python 3.9, therefore i suggest users to download any iteration of python 3.8 instead.
+
+You can download and install **python** from the official website (3.8.5 recommended).
 
 **BioPython** can be installed from pip.
 
-# Usage
+
+
+### Usage
 
 Very straightforward, all you have to do is put this script in the folder containing the PDBs that need to be treated, run it from command line / terminal then follow instructions for each iteration.
 
