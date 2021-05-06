@@ -1,4 +1,4 @@
-![main_icon](GUI/icon.PNG?raw=true)
+![mainicon](GUI/icon.PNG?raw=true)
 
 Are you tired of using visualization software, or full blown suites just to separate protein chains / ligands ?
 Are you tired of organizing the mess of molecules into separate folders ?
