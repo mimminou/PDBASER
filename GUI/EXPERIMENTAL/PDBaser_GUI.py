@@ -16,6 +16,7 @@ class MainApp:
         builder.add_resource_path(PROJECT_PATH)
         builder.add_from_file(PROJECT_UI)
         self.mainwindow = builder.get_object('toplevel0')  ##GET MAIN WINDOW
+        self.mainwindow.iconbitmap("default_icon.ico")
         self.PDB_input_DIR = builder.get_object("PDB_input_DIR")  ##GET INPUT DIR
         self.PDB_output_DIR = builder.get_object("PDB_output_DIR")   ##GET OUTPUT DIR
         self.SearchBox = builder.get_object("SearchBox")
@@ -64,7 +65,7 @@ class MainApp:
                 self.InputDirLabel.config(foreground="red")
 
             else :
-                self.ListBox_PDB.insert("end",*self.PDB_Files)
+                self.ListBox_PDB.insert("end", *self.PDB_Files)
                 self.setList(self.PDB_Files)
                 self.findLabel.config(foreground="black")
                 self.InputDirLabel.config(foreground="Green")
@@ -102,7 +103,7 @@ class MainApp:
         try:
             selection = self.ListBox_Chains.get(self.ListBox_Chains.curselection())
             print(selection)
-            self.ListBox_Residues.insert("end",*get_Residue.get_PDB_Residues(self.ListBox_PDB.get(self.ListBox_PDB.curselection()) ,selection, self.PDB_input_DIR.cget("path")))
+            self.ListBox_Residues.insert("end", *get_Residue.get_PDB_Residues(self.ListBox_PDB.get(self.ListBox_PDB.curselection()) ,selection, self.PDB_input_DIR.cget("path")))
 
             print("MY SELECTION : " + str(selection))
         except Exception as exc:

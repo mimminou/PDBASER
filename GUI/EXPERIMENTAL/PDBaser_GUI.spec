@@ -31,4 +31,5 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          icon='D:\\Github\\repositories\\PDBASER\\GUI\\EXPERIMENTAL\\default_icon.ico',
+          console=False )

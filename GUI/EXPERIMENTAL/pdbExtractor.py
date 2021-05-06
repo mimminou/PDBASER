@@ -34,7 +34,7 @@ def Extract(Input_DIR, Output_DIR,PDB_Entry,Chain, Residues=None):  ## Main Func
     pdb = PDBParser().get_structure(PDB_Entry, Input_DIR+"/" + PDB_Entry)
     io = PDBIO()
     io.set_structure(pdb)
-    PDB_ID = PDB_Entry.replace(".pdb","")
+    PDB_ID = PDB_Entry.replace(".pdb","").replace(".ent","")
     pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
     for model in pdb:
         #         print("ba3")
