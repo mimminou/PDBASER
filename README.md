@@ -31,7 +31,7 @@ For Linux / MacOS users, PDBaser_GUI.py and it's dependencies will probably run,
 - No metadata extraction (Header, info etc ...), only atom 3D poses.
 - No support for different file formats (yet), only .pdb and .ent are supported right now.
 
-### Download
+# Download
 
 For Windows X86_64 : [Setup](https://github.com/mimminou/PDBASER/releases/download/v1.0/PDBaser_Win_x86_Setup.zip)
 
