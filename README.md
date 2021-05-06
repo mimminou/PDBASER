@@ -14,7 +14,7 @@ PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts pure pr
 
 # Requirements
 
-For Windows users, PDBaser has a GUI version, which is the one actively maintained as of now, an installer is provided in the releases section.
+For Windows users, PDBaser has a GUI version, which is the one actively maintained as of now.
 
 For Linux / MacOS users, PDBaser_GUI.py and it's dependencies will probably run, although i haven't tested myself, for this to work, this program requires Python 3.6.5 or newer, BioPython and Pygubu installed. 
 
@@ -31,6 +31,9 @@ For Linux / MacOS users, PDBaser_GUI.py and it's dependencies will probably run,
 - No metadata extraction (Header, info etc ...), only atom 3D poses.
 - No support for different file formats (yet), only .pdb and .ent are supported right now.
 
+### Download
+
+For Windows X86_64 : [Setup](https://github.com/mimminou/PDBASER/releases/download/v1.0/PDBaser_Win_x86_Setup.zip)
 
 
 # Command line
