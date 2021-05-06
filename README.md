@@ -1,3 +1,4 @@
+![main_icon](/PDBASER/tree/main/GUI/icon.PNG)
 
 
 
