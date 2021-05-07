@@ -8,15 +8,15 @@ PDBaser does this for you !
 
 # What does it do ?
 
-PDBASER reads raw .pdb / .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and removes water molecules, and then saves everything in a directory named as the original filename.
+thanks to BioPython, PDBaser reads raw .pdb / .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and removes water molecules, and then saves everything in a directory named as the original filename.
 
 
 
 # Requirements
 
-For Windows users, PDBaser has a GUI version, which is the one actively maintained as of now.
+For Windows users, PDBaser has a GUI version, which is the one actively maintained as of now and only requires Microsoft visual C++ 2015 x86, it can be donwloaded from microsoft's website.
 
-For Linux / MacOS users, PDBaser_GUI.py and it's dependencies will probably run, although i haven't tested myself, for this to work, this program requires Python 3.6.5 or newer, BioPython and Pygubu installed. 
+For Linux / MacOS users, PDBaser_GUI.py and it's dependencies will probably run, although i haven't tested myself, for this to work, this program requires Python 3.6.5 or newer, and BioPython and Pygubu installed. 
 
 # Features
 
@@ -31,7 +31,7 @@ For Linux / MacOS users, PDBaser_GUI.py and it's dependencies will probably run,
 - No metadata extraction (Header, info etc ...), only atom 3D poses.
 - No support for different file formats (yet), only .pdb and .ent are supported right now.
 
-# Download
+# Downloads
 
 For Windows X86_64 : [Setup](https://github.com/mimminou/PDBASER/releases/download/v1.0/PDBaser_Win_x86_Setup.zip)
 
