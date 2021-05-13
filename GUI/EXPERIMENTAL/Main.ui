@@ -226,8 +226,10 @@
             <property name="width">200</property>
             <layout manager="grid">
               <property name="column">0</property>
+              <property name="columnspan">10</property>
               <property name="propagate">True</property>
               <property name="row">9</property>
+              <property name="rowspan">1</property>
               <property name="sticky">sew</property>
               <property type="col" id="0" name="minsize">180</property>
               <property type="col" id="0" name="pad">0</property>
@@ -240,7 +242,7 @@
                   <property name="column">0</property>
                   <property name="propagate">True</property>
                   <property name="row">0</property>
-                  <property name="sticky">ew</property>
+                  <property name="sticky">w</property>
                   <property type="col" id="0" name="weight">1</property>
                 </layout>
               </object>
@@ -248,11 +250,36 @@
             <child>
               <object class="ttk.Entry" id="SearchBox">
                 <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">e</property>
+                  <property type="col" id="1" name="weight">10</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label4">
+                <property name="text" translatable="yes">Residue output format  </property>
+                <layout manager="grid">
                   <property name="column">1</property>
                   <property name="propagate">True</property>
                   <property name="row">0</property>
-                  <property name="sticky">ew</property>
-                  <property type="col" id="1" name="weight">10</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Combobox" id="formatComboBox">
+                <property name="exportselection">false</property>
+                <property name="state">readonly</property>
+                <property name="values">pdb mol2 sdf smiles</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
+                <layout manager="grid">
+                  <property name="column">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">e</property>
                 </layout>
               </object>
             </child>

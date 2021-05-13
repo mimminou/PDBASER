@@ -12,6 +12,7 @@ PROJECT_UI = path.join(PROJECT_PATH, "Main.ui")
 class MainApp:
     def __init__(self):
         self.PDB_Files = []
+        self.format = "pdb"
         self.builder = builder = Builder()
         builder.add_resource_path(PROJECT_PATH)
         builder.add_from_file(PROJECT_UI)
@@ -43,6 +44,11 @@ class MainApp:
         self.ListBox_PDB.config(yscrollcommand=self.ScrollbarPDB.set)
         self.ListBox_Chains.config(yscrollcommand=self.ScrollbarChains.set)
         self.ListBox_Residues.config(yscrollcommand=self.ScrollbarResidues.set)
+
+        ## GET COMBOBOX FOR RESIDUES TYPES
+
+        self.combobox = builder.get_object("formatComboBox")
+
 
         builder.connect_callbacks(self)
 
@@ -158,6 +164,10 @@ class MainApp:
             else :
                 Label.config(foreground="red")
 
+    def ComboxSelected(self, event=None):
+        print("CBOX SELECTED : " + self.combobox.get())
+        self.setOutputFormat(self.combobox.get())
+
 
     def Extractor(self):
         selected_residues = []
@@ -168,6 +178,7 @@ class MainApp:
                              self.PDB_output_DIR.cget("path"),
                              self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
                              self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
+                             self.getOutputFormat(),
                              selected_residues))
         self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(),bg = "lawn green")
         self.ExtractionDone(extracted_values)
@@ -180,6 +191,13 @@ class MainApp:
                                 "Chain : " + self.ListBox_Chains.get(self.ListBox_Chains.curselection()) + "\n"
                                 "Residue : \n" + "\n".join(values[0]))
 
+
+    def setOutputFormat(self,format):
+        self.format = format
+        return format
+
+    def getOutputFormat(self):
+        return self.format
 
     def getList(self):
         return self.PDB_Files
