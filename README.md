@@ -34,11 +34,32 @@ PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, althou
 ### Limitations
 
 - No metadata extraction (Header, info etc ...), only atom 3D poses.
-- Only .pdb / .ent inputs are supported, this is done by design as most proteins come only in .pdb and .ent formats, however residue outputs can have different formats
+
+- Only .pdb / .ent inputs are supported, this is done by design as most proteins come only in .pdb and .ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
+
+  
 
 # Downloads
 
 For Windows X86_64 :  [PDBaser_1.2](https://github.com/mimminou/PDBASER/releases/download/1.2/PDBaser_Win_x86_1.2.msi.zip)
+
+
+
+# Citations
+
+PDBaser relies on Biopython BIO.PDB module and openbabel's pybel module.
+
+Biopython : Hamelryck T and Manderick B (2003) PDB file parser and structure class implemented in Python. [*Bioinformatics*, 22, 2308-2310](http://dx.doi.org/10.1093/bioinformatics/btg299)
+
+openbabel's pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python wrapper for the OpenBabel cheminformatics toolkit. *Chemistry Central Journal* **2,** 5 (2008).
+
+
+
+If this software helped you making a scientific publication, a citation would be very appreciated :
+
+ABDELAZIZ, A. (2021). *PDBaser* (1.2) [A python program for fast protein - ligand  extraction]. https://github.com/mimminou/PDBASER
+
+
 
 
 
