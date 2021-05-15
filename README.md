@@ -57,7 +57,7 @@ openbabel's pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python 
 
 If this software helped you making a scientific publication, a citation would be very appreciated :
 
-ABDELAZIZ, A. (2021). *PDBaser* (1.2) A python program for fast protein - ligand  extraction. https://github.com/mimminou/PDBASER
+ABDELAZIZ, A. (2021). *PDBaser* (1.2) A python tool for fast protein - ligand extraction. https://github.com/mimminou/PDBASER
 
 
 
