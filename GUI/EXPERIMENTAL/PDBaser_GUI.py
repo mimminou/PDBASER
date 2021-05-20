@@ -4,6 +4,7 @@ import get_Chain
 import get_Residue
 import pdbExtractor
 from tkinter import messagebox
+##from PIL import Image, ImageTk  ## NEEDED FOR DEPICTION
 
 PROJECT_PATH = path.dirname(__file__)
 PROJECT_UI = path.join(PROJECT_PATH, "Main.ui")
@@ -26,6 +27,7 @@ class MainApp:
         self.InputDirLabel = builder.get_object("Input_Dir_Label")
         self.OutputDirLabel = builder.get_object("Output_Dir_Label")
         self.findLabel = builder.get_object("FindLabel")
+        #self.Canvas = builder.get_object("canvas")
 
                     ## GET LISTS ##
         self.ListBox_PDB = builder.get_object("listbox1")
@@ -117,12 +119,22 @@ class MainApp:
 
     def On_ResidueSelectionChanged(self, event=None):
         selected_res = []
+
         try:
             for index in self.ListBox_Residues.curselection():
                 selected_res.append(self.ListBox_Residues.get(index))
         except Exception as residueSelectionException:
             print("Residue selection error : " + str(residueSelectionException))
         print(selected_res)
+
+        # EXPERIMENTAL //// DEPICTION FUNCTION
+        # get_image = pdbExtractor.DrawMol(self.PDB_input_DIR.cget("path"),
+        #                      self.PDB_output_DIR.cget("path"),
+        #                      self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
+        #                      self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
+        #                      self.ListBox_Residues.get(index))
+        # img1 = ImageTk.PhotoImage(get_image)
+        # self.Canvas.create_image(0,0,image=img1)
 
 
     def finder(self,event):

@@ -1,4 +1,4 @@
-from Bio.PDB import PDBParser, PDBIO, Select
+from Bio.PDB import PDBParser, Select
 
 def is_het(residue):
     res = residue.id[0]
@@ -25,14 +25,10 @@ class ResidueSelect(Select):
         return residue == self.residue and is_het(residue)
 
 
-def get_PDB_Residues(PDB_FILE,Chain, input_DIR):  ## NUM IS THE VARIABLE HOLDING THE REFERENCE TO THE CALL ITERNUMBER
-    ## NUM IS USED TO KNOW IF THIS FUNCTION EXECUTED AT LEAST ONCE
-    pdb_file = PDB_FILE
+def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
     Res_Name = []
 
     pdb = PDBParser().get_structure(PDB_FILE, input_DIR+"/" + PDB_FILE)
-    io = PDBIO()
-    io.set_structure(pdb)
     for res_item in pdb:
         for res in res_item[Chain]:
             if (not is_het(res)):
