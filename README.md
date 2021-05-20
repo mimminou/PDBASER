@@ -41,7 +41,7 @@ PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, althou
 
 # Downloads
 
-For Windows X86_64 :  [PDBaser_1.2](https://github.com/mimminou/PDBASER/releases/download/1.2/PDBaser_Win_x86_1.2.msi.zip)
+For Windows X86_64 :  Check releases section.
 
 
 
