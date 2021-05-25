@@ -4,3 +4,8 @@
 .vs/PythonSettings.json
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
+GUI/EXPERIMENTAL/__pycache__/pdbExtractor.cpython-36.pyc
+GUI/Source/__pycache__/get_Chain.cpython-36.pyc
+GUI/Source/__pycache__/get_Residue.cpython-36.pyc
+GUI/Source/__pycache__/pdbExtractor.cpython-36.pyc
+GUI/EXPERIMENTAL/__pycache__/pdbExtractor.cpython-36.pyc
