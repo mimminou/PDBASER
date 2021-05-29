@@ -184,8 +184,6 @@ class MainApp:
                 debug("NOT PRINTING, TOO MANY SELECTIONS")
                 self.imager.config(image="")
 
-
-
         except Exception as residueSelectionException:
             debug("Residue selection error : " + str(residueSelectionException))
 

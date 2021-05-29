@@ -11,9 +11,10 @@ def get_PDB_Chains(PDB_FILE, input_DIR):
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        temp_file = gzOpen(input_DIR +"/" + PDB_FILE,"rt").read()
+        zippedFile = gzOpen(input_DIR +"/" + PDB_FILE,"rt")
+        temp_file = zippedFile.read()
+        zippedFile.close()
         Structure = StringIO(temp_file)
-
     pdb = PDBParser().get_structure(PDB_FILE,Structure)
     for item in pdb:
         for item2 in item:

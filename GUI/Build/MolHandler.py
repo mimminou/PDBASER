@@ -43,7 +43,9 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        temp_file = gzOpen(input_DIR +"/" + PDB_FILE,"rt").read()
+        zippedFile = gzOpen(input_DIR +"/" + PDB_FILE,"rt")
+        temp_file = zippedFile.read()
+        zippedFile.close()
         Structure = StringIO(temp_file)
 
     pdb = PDBParser().get_structure(PDB_FILE,Structure)
@@ -117,7 +119,9 @@ def DrawMol(input_DIR, Output_DIR, PDB_FILE, Chain, Residues=None):
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        temp_file = gzOpen(input_DIR + "/" + PDB_FILE,"rt").read()
+        zippedFile = gzOpen(input_DIR +"/" + PDB_FILE,"rt")
+        temp_file = zippedFile.read()
+        zippedFile.close()
         Structure = StringIO(temp_file)
 
     pdb = PDBParser().get_structure(PDB_FILE,Structure)
