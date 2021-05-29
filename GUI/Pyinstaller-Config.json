@@ -180,6 +180,134 @@
   {
    "optionDest": "datas",
    "value": "C:/OpenBabel-3.1.1/libcharset.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "D:/Github/repositories/PDBASER/GUI/EXPERIMENTAL/Main.ui;."
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.tkstdwidgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.ttkstdwidgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.widgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.widgets.pathchooserinput"
+  },
+  {
+   "optionDest": "datas",
+   "value": "D:/Github/repositories/PDBASER/GUI/EXPERIMENTAL/default_icon.ico;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/formats_cairo.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/formats_common.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/formats_compchem.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/formats_json.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/formats_misc.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/formats_utility.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/formats_xml.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/plugin_charges.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/plugin_descriptors.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/plugin_fingerprints.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/plugin_forcefields.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/plugin_ops.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/cairo.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/libinchi.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/libxml2.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/License.txt;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/xdr-0.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/libiconv.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/libpng16.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/freetype.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "D:/Stuff/iconv.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/bz2.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/expat.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/fontconfig.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/libcharset.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/OpenBabel-3.1.1/zlib1.dll;."
   }
  ],
  "nonPyinstallerOptions": {

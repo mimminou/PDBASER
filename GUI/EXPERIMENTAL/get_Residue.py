@@ -1,6 +1,7 @@
 from Bio.PDB import PDBParser, Select
-import gzip
+from gzip import open as gzOpen
 from io import StringIO
+
 
 def is_het(residue):
     res = residue.id[0]
@@ -33,7 +34,7 @@ def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        temp_file = gzip.open(input_DIR +"/" + PDB_FILE,"rt").read()
+        temp_file = gzOpen(input_DIR +"/" + PDB_FILE,"rt").read()
         Structure = StringIO(temp_file)
 
     pdb = PDBParser().get_structure(PDB_FILE,Structure)

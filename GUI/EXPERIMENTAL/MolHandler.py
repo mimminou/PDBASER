@@ -4,10 +4,10 @@ from warnings import simplefilter
 from openbabel import openbabel, pybel
 from io import StringIO
 from shutil import copyfile
-import logging
-import gzip
+from logging import debug
+from gzip import open as gzOpen
 
-logging.getLogger().setLevel(logging.ERROR)
+## THIS IS VERSION 1.5 OF THIS SCRIPT ...
 simplefilter("ignore")
 
 
@@ -15,8 +15,6 @@ def is_het(residue):
     res = residue.id[0]
     return res not in (" ", "W")
 
-
-## THIS IS VERSION 1.5 OF THIS SCRIPT ...
 
 class NonHetSelect(Select):
     def accept_residue(self, residue):
@@ -45,7 +43,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        temp_file = gzip.open(input_DIR +"/" + PDB_FILE,"rt").read()
+        temp_file = gzOpen(input_DIR +"/" + PDB_FILE,"rt").read()
         Structure = StringIO(temp_file)
 
     pdb = PDBParser().get_structure(PDB_FILE,Structure)
@@ -56,7 +54,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAINS
 
-            if Residues is None or residue == False:
+            if (Residues is None) or (not residue) :
                 break
             elif (not is_het(residue)):
                 continue
@@ -81,7 +79,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
 
                 else:
                     # SAVE RESIDUE IN VIRTUAL FILE
-                    logging.debug("SAVING TO VIRTUAL FILE")
+                    debug("SAVING TO VIRTUAL FILE")
                     virtualFileOtherFormats = StringIO()
                     io.save(virtualFileOtherFormats, ResidueSelect(model[Chain], residue))
                     virtualFileOtherFormats.seek(0)
@@ -99,13 +97,13 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     virtualFileOtherFormats.close()
 
         else:
-            logging.debug("Saving Peptidic Chain . . .")
+            debug("Saving Peptidic Chain . . .")
             io.set_structure(model[Chain])
             io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_ID}_Chain_{Chain}.pdb", NonHetSelect())
             io.set_structure(pdb)
         # SAVING FULL PROTEIN
         if saveFullProtein:
-            logging.debug("saving full protein")
+            debug("saving full protein")
             copyfile(input_DIR + "/" + PDB_FILE, Output_DIR + "/" + PDB_ID + "/" + f"{PDB_ID}.pdb")
     if compressedFile:
         Structure.close()  # CLOSE STRING IO IF FILE IS COMPRESSED
@@ -119,7 +117,7 @@ def DrawMol(input_DIR, Output_DIR, PDB_FILE, Chain, Residues=None):
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        temp_file = gzip.open(input_DIR +"/" + PDB_FILE,"rt").read()
+        temp_file = gzOpen(input_DIR + "/" + PDB_FILE,"rt").read()
         Structure = StringIO(temp_file)
 
     pdb = PDBParser().get_structure(PDB_FILE,Structure)
@@ -130,30 +128,32 @@ def DrawMol(input_DIR, Output_DIR, PDB_FILE, Chain, Residues=None):
     pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAINS
-            if Residues is None or residue == False:
-                break
+            if (Residues is None) or (not residue) :
+                return
             if (not is_het(residue)):
                 continue
             if str((residue.id[0], residue.id[1])).replace("H_", "") in str(Residues):  ## REMOVE H_ PREFIX
 
                 residue.id[0].replace(" ", "")
-                logging.debug("RESIDUES TEST : ")
-                logging.debug(residue.id[0])
+                debug("RESIDUES TEST : ")
+                debug(residue.id[0])
                 # SAVE RESIDUE IN VIRTUAL FILE
-                logging.debug("SAVING TO VIRTUAL FILE")
+                debug("SAVING TO VIRTUAL FILE")
                 virtualFile = StringIO()
                 io.save(virtualFile, ResidueSelect(model[Chain], residue))
+                ## USING OPEN BABEL NATIVE DEPICTOR
                 obConv = openbabel.OBConversion()  # INITIALIZE OPENBABEL OBCONVERSION
                 obConv.SetInAndOutFormats("pdb", "_png2")
-
                 mol = openbabel.OBMol()  # INITIALIZE OBMOL
                 obConv.ReadString(mol, virtualFile.getvalue())
+
                 virtualPicture = StringIO(obConv.WriteString(mol))  # WRITE TO VIRTUAL FILE AS STRING
                 virtualPicture.seek(0)
                 picture = virtualPicture.getvalue().encode('utf8',
-                                                           'surrogateescape')  # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE STRING
+                                                           'surrogateescape')  # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
                 virtualFile.close()
                 virtualPicture.close()
+
     if compressedFile:
         Structure.close()
     return picture

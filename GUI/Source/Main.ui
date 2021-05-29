@@ -2,31 +2,33 @@
 <interface version="1.1">
   <object class="tk.Toplevel" id="toplevel0">
     <property name="cursor">arrow</property>
-    <property name="geometry">800x480</property>
+    <property name="height">0</property>
     <property name="highlightbackground">#c8797b</property>
-    <property name="minsize">800|400</property>
+    <property name="minsize">900|540</property>
     <property name="relief">flat</property>
-    <property name="resizable">vertically</property>
+    <property name="resizable">none</property>
     <property name="title" translatable="yes">PDBaser - GUI</property>
+    <property name="width">0</property>
     <child>
       <object class="ttk.Frame" id="frame0">
+        <property name="height">0</property>
         <property name="padding">5</property>
+        <property name="width">900</property>
         <layout manager="grid">
           <property name="column">0</property>
-          <property name="columnspan">10</property>
+          <property name="columnspan">16</property>
           <property name="ipadx">0</property>
-          <property name="ipady">0</property>
           <property name="padx">10</property>
           <property name="pady">10</property>
-          <property name="propagate">True</property>
+          <property name="propagate">False</property>
           <property name="row">0</property>
-          <property name="rowspan">6</property>
+          <property name="rowspan">12</property>
           <property name="sticky">nsew</property>
           <property type="col" id="0" name="minsize">0</property>
-          <property type="col" id="0" name="weight">8</property>
-          <property type="row" id="0" name="minsize">150</property>
-          <property type="row" id="0" name="pad">10</property>
-          <property type="row" id="0" name="weight">12</property>
+          <property type="col" id="0" name="weight">0</property>
+          <property type="row" id="0" name="minsize">170</property>
+          <property type="row" id="0" name="pad">0</property>
+          <property type="row" id="0" name="weight">0</property>
         </layout>
         <child>
           <object class="ttk.Label" id="label1">
@@ -34,12 +36,14 @@
             <property name="text" translatable="yes">PDB File</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">3</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">2</property>
+              <property name="propagate">False</property>
               <property name="row">0</property>
-              <property type="col" id="0" name="minsize">180</property>
+              <property name="rowspan">1</property>
+              <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
-              <property type="col" id="0" name="weight">10</property>
+              <property type="col" id="0" name="uniform" />
+              <property type="col" id="0" name="weight">0</property>
             </layout>
           </object>
         </child>
@@ -48,25 +52,23 @@
             <property name="activestyle">dotbox</property>
             <property name="exportselection">false</property>
             <property name="font">{Helvetica} 12 {}</property>
-            <property name="selectmode">browse</property>
+            <property name="selectmode">single</property>
+            <property name="setgrid">false</property>
+            <property name="state">normal</property>
             <property name="takefocus">false</property>
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_PDBSelectionChanged" add="" />
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">3</property>
-              <property name="ipadx">50</property>
-              <property name="ipady">100</property>
-              <property name="padx">5</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">2</property>
+              <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">6</property>
+              <property name="rowspan">5</property>
               <property name="sticky">nsew</property>
-              <property type="col" id="0" name="minsize">180</property>
+              <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
-              <property type="col" id="0" name="weight">10</property>
+              <property type="col" id="0" name="uniform" />
+              <property type="col" id="0" name="weight">0</property>
               <property type="row" id="1" name="minsize">0</property>
-              <property type="row" id="1" name="pad">10</property>
-              <property type="row" id="1" name="weight">10</property>
             </layout>
           </object>
         </child>
@@ -75,15 +77,30 @@
             <property name="orient">vertical</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">2</property>
+              <property name="propagate">False</property>
               <property name="row">1</property>
+              <property name="rowspan">5</property>
               <property name="sticky">nse</property>
-              <property type="col" id="0" name="minsize">180</property>
+              <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
-              <property type="col" id="0" name="weight">10</property>
+              <property type="col" id="0" name="uniform" />
+              <property type="col" id="0" name="weight">0</property>
               <property type="row" id="1" name="minsize">0</property>
-              <property type="row" id="1" name="pad">10</property>
-              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator3">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="columnspan">1</property>
+              <property name="padx">5</property>
+              <property name="propagate">False</property>
+              <property name="row">0</property>
+              <property name="rowspan">6</property>
+              <property name="sticky">ns</property>
             </layout>
           </object>
         </child>
@@ -93,11 +110,12 @@
             <property name="text" translatable="yes">Chain</property>
             <layout manager="grid">
               <property name="column">4</property>
-              <property name="columnspan">3</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">1</property>
+              <property name="propagate">False</property>
               <property name="row">0</property>
-              <property type="col" id="4" name="minsize">180</property>
-              <property type="col" id="4" name="weight">10</property>
+              <property name="rowspan">1</property>
+              <property type="col" id="4" name="minsize">0</property>
+              <property type="col" id="4" name="weight">0</property>
             </layout>
           </object>
         </child>
@@ -106,23 +124,22 @@
             <property name="activestyle">dotbox</property>
             <property name="exportselection">false</property>
             <property name="font">{Helvetica} 12 {}</property>
-            <property name="selectmode">browse</property>
+            <property name="selectmode">single</property>
+            <property name="setgrid">false</property>
+            <property name="state">normal</property>
             <property name="takefocus">false</property>
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_ChainSelectionChanged" add="" />
             <layout manager="grid">
               <property name="column">4</property>
-              <property name="columnspan">3</property>
-              <property name="ipadx">50</property>
-              <property name="ipady">100</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">1</property>
+              <property name="ipady">0</property>
+              <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">6</property>
+              <property name="rowspan">5</property>
               <property name="sticky">nsew</property>
-              <property type="col" id="4" name="minsize">180</property>
-              <property type="col" id="4" name="weight">10</property>
+              <property type="col" id="4" name="minsize">0</property>
+              <property type="col" id="4" name="weight">0</property>
               <property type="row" id="1" name="minsize">0</property>
-              <property type="row" id="1" name="pad">10</property>
-              <property type="row" id="1" name="weight">10</property>
             </layout>
           </object>
         </child>
@@ -131,12 +148,28 @@
             <property name="orient">vertical</property>
             <layout manager="grid">
               <property name="column">4</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">1</property>
+              <property name="propagate">False</property>
               <property name="row">1</property>
+              <property name="rowspan">5</property>
               <property name="sticky">nse</property>
+              <property type="col" id="4" name="minsize">0</property>
+              <property type="col" id="4" name="weight">0</property>
               <property type="row" id="1" name="minsize">0</property>
-              <property type="row" id="1" name="pad">10</property>
-              <property type="row" id="1" name="weight">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator4">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">7</property>
+              <property name="columnspan">1</property>
+              <property name="padx">5</property>
+              <property name="propagate">False</property>
+              <property name="row">0</property>
+              <property name="rowspan">6</property>
+              <property name="sticky">ns</property>
             </layout>
           </object>
         </child>
@@ -146,11 +179,12 @@
             <property name="text" translatable="yes">Residue</property>
             <layout manager="grid">
               <property name="column">8</property>
-              <property name="columnspan">3</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">2</property>
+              <property name="propagate">False</property>
               <property name="row">0</property>
-              <property type="col" id="8" name="minsize">180</property>
-              <property type="col" id="8" name="weight">10</property>
+              <property name="rowspan">1</property>
+              <property type="col" id="8" name="minsize">0</property>
+              <property type="col" id="8" name="weight">0</property>
             </layout>
           </object>
         </child>
@@ -160,23 +194,21 @@
             <property name="exportselection">false</property>
             <property name="font">{Helvetica} 12 {}</property>
             <property name="selectmode">extended</property>
+            <property name="setgrid">false</property>
+            <property name="state">normal</property>
             <property name="takefocus">false</property>
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_ResidueSelectionChanged" add="" />
             <layout manager="grid">
               <property name="column">8</property>
-              <property name="columnspan">3</property>
-              <property name="ipadx">50</property>
-              <property name="ipady">100</property>
-              <property name="padx">5</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">2</property>
+              <property name="ipady">65</property>
+              <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">6</property>
+              <property name="rowspan">5</property>
               <property name="sticky">nsew</property>
-              <property type="col" id="8" name="minsize">180</property>
-              <property type="col" id="8" name="weight">10</property>
+              <property type="col" id="8" name="minsize">0</property>
+              <property type="col" id="8" name="weight">0</property>
               <property type="row" id="1" name="minsize">0</property>
-              <property type="row" id="1" name="pad">10</property>
-              <property type="row" id="1" name="weight">10</property>
             </layout>
           </object>
         </child>
@@ -185,135 +217,107 @@
             <property name="orient">vertical</property>
             <layout manager="grid">
               <property name="column">8</property>
-              <property name="propagate">True</property>
+              <property name="columnspan">3</property>
+              <property name="propagate">False</property>
               <property name="row">1</property>
+              <property name="rowspan">5</property>
               <property name="sticky">nse</property>
+              <property type="col" id="8" name="minsize">0</property>
+              <property type="col" id="8" name="weight">0</property>
               <property type="row" id="1" name="minsize">0</property>
-              <property type="row" id="1" name="pad">10</property>
-              <property type="row" id="1" name="weight">10</property>
             </layout>
           </object>
         </child>
         <child>
-          <object class="ttk.Separator" id="separator3">
-            <property name="orient">vertical</property>
-            <layout manager="grid">
-              <property name="column">3</property>
-              <property name="padx">20</property>
-              <property name="propagate">True</property>
-              <property name="row">0</property>
-              <property name="rowspan">7</property>
-              <property name="sticky">ns</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Separator" id="separator4">
-            <property name="orient">vertical</property>
-            <layout manager="grid">
-              <property name="column">7</property>
-              <property name="padx">20</property>
-              <property name="propagate">True</property>
-              <property name="row">0</property>
-              <property name="rowspan">7</property>
-              <property name="sticky">ns</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Frame" id="frame2">
-            <property name="height">200</property>
-            <property name="width">200</property>
+          <object class="ttk.Label" id="FindLabel">
+            <property name="anchor">center</property>
+            <property name="text" translatable="yes">Find in pdb list</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">10</property>
-              <property name="propagate">True</property>
-              <property name="row">9</property>
+              <property name="columnspan">1</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">False</property>
+              <property name="row">6</property>
               <property name="rowspan">1</property>
-              <property name="sticky">sew</property>
-              <property type="col" id="0" name="minsize">180</property>
+              <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
-              <property type="col" id="0" name="weight">10</property>
+              <property type="col" id="0" name="uniform" />
+              <property type="col" id="0" name="weight">0</property>
             </layout>
-            <child>
-              <object class="ttk.Label" id="FindLabel">
-                <property name="text" translatable="yes">Find</property>
-                <layout manager="grid">
-                  <property name="column">0</property>
-                  <property name="propagate">True</property>
-                  <property name="row">0</property>
-                  <property name="sticky">w</property>
-                  <property type="col" id="0" name="weight">1</property>
-                </layout>
-              </object>
-            </child>
-            <child>
-              <object class="ttk.Entry" id="SearchBox">
-                <layout manager="grid">
-                  <property name="column">0</property>
-                  <property name="propagate">True</property>
-                  <property name="row">0</property>
-                  <property name="sticky">e</property>
-                  <property type="col" id="1" name="weight">10</property>
-                </layout>
-              </object>
-            </child>
-            <child>
-              <object class="ttk.Label" id="label4">
-                <property name="text" translatable="yes">Residue output format  </property>
-                <layout manager="grid">
-                  <property name="column">1</property>
-                  <property name="propagate">True</property>
-                  <property name="row">0</property>
-                  <property name="sticky">e</property>
-                </layout>
-              </object>
-            </child>
-            <child>
-              <object class="ttk.Combobox" id="formatComboBox">
-                <property name="exportselection">false</property>
-                <property name="state">readonly</property>
-                <property name="values">pdb mol2 sdf smiles</property>
-                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
-                <layout manager="grid">
-                  <property name="column">2</property>
-                  <property name="propagate">True</property>
-                  <property name="row">0</property>
-                  <property name="sticky">e</property>
-                </layout>
-              </object>
-            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="SearchBox">
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">1</property>
+              <property name="padx">5</property>
+              <property name="pady">0</property>
+              <property name="propagate">False</property>
+              <property name="row">7</property>
+              <property name="rowspan">1</property>
+              <property type="col" id="0" name="minsize">0</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="uniform" />
+              <property type="col" id="0" name="weight">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="Depiction">
+            <property name="anchor">w</property>
+            <property name="background">#ffffff</property>
+            <property name="compound">top</property>
+            <property name="relief">flat</property>
+            <property name="takefocus">false</property>
+            <layout manager="grid">
+              <property name="column">12</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
+              <property name="padx">5</property>
+              <property name="propagate">False</property>
+              <property name="row">1</property>
+              <property name="rowspan">5</property>
+              <property name="sticky">nsew</property>
+              <property type="col" id="12" name="weight">0</property>
+              <property type="col" id="13" name="weight">0</property>
+              <property type="row" id="1" name="minsize">0</property>
+            </layout>
           </object>
         </child>
       </object>
     </child>
     <child>
       <object class="ttk.Frame" id="frame1">
-        <property name="height">100</property>
-        <property name="width">800</property>
+        <property name="height">0</property>
         <layout manager="grid">
           <property name="column">0</property>
           <property name="columnspan">10</property>
+          <property name="ipady">60</property>
           <property name="padx">10</property>
           <property name="pady">10</property>
-          <property name="propagate">True</property>
-          <property name="row">6</property>
-          <property name="rowspan">2</property>
-          <property name="sticky">sew</property>
+          <property name="propagate">False</property>
+          <property name="row">11</property>
+          <property name="rowspan">5</property>
+          <property name="sticky">new</property>
           <property type="col" id="0" name="minsize">0</property>
-          <property type="col" id="0" name="weight">8</property>
+          <property type="col" id="0" name="weight">0</property>
           <property type="row" id="1" name="weight">0</property>
+          <property type="row" id="10" name="minsize">80</property>
+          <property type="row" id="11" name="minsize">0</property>
           <property type="row" id="6" name="minsize">80</property>
           <property type="row" id="6" name="weight">1</property>
+          <property type="row" id="8" name="minsize">80</property>
         </layout>
         <child>
           <object class="tk.Label" id="Input_Dir_Label">
             <property name="relief">flat</property>
-            <property name="text" translatable="yes">Input Directory</property>
+            <property name="text" translatable="yes">Input directory</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="propagate">True</property>
-              <property name="row">0</property>
+              <property name="propagate">False</property>
+              <property name="row">4</property>
               <property name="sticky">ew</property>
               <property type="row" id="0" name="minsize">0</property>
             </layout>
@@ -327,11 +331,11 @@
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="input_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">3</property>
+              <property name="columnspan">2</property>
               <property name="ipadx">150</property>
               <property name="padx">5</property>
               <property name="propagate">True</property>
-              <property name="row">0</property>
+              <property name="row">4</property>
               <property name="sticky">ew</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
@@ -340,29 +344,16 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Separator" id="separator2">
-            <property name="orient">vertical</property>
-            <layout manager="grid">
-              <property name="column">5</property>
-              <property name="columnspan">2</property>
-              <property name="padx">20</property>
-              <property name="propagate">True</property>
-              <property name="row">0</property>
-              <property name="rowspan">2</property>
-              <property name="sticky">ns</property>
-              <property type="row" id="0" name="minsize">0</property>
-            </layout>
-          </object>
-        </child>
-        <child>
           <object class="tk.Label" id="Output_Dir_Label">
             <property name="relief">flat</property>
-            <property name="text" translatable="yes">Output Directory</property>
+            <property name="text" translatable="yes">Output directory</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="propagate">True</property>
-              <property name="row">1</property>
+              <property name="padx">5</property>
+              <property name="propagate">False</property>
+              <property name="row">5</property>
               <property name="sticky">ew</property>
+              <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -374,15 +365,15 @@
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="output_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">3</property>
+              <property name="columnspan">2</property>
               <property name="ipadx">150</property>
               <property name="padx">5</property>
               <property name="propagate">True</property>
-              <property name="row">1</property>
+              <property name="row">5</property>
               <property name="sticky">ew</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
-              <property type="row" id="0" name="minsize">0</property>
+              <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -394,11 +385,138 @@
               <property name="column">7</property>
               <property name="columnspan">2</property>
               <property name="padx">10</property>
-              <property name="propagate">True</property>
-              <property name="row">0</property>
-              <property name="rowspan">2</property>
+              <property name="propagate">False</property>
+              <property name="row">5</property>
+              <property name="rowspan">1</property>
               <property name="sticky">nsew</property>
               <property type="row" id="0" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label4">
+            <property name="text" translatable="yes">Save full protein</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
+              <property name="padx">0</property>
+              <property name="propagate">False</property>
+              <property name="row">2</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+              <property type="col" id="0" name="minsize">0</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="uniform" />
+              <property type="col" id="0" name="weight">0</property>
+              <property type="row" id="10" name="minsize">0</property>
+              <property type="row" id="10" name="pad">0</property>
+              <property type="row" id="11" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label5">
+            <property name="text" translatable="yes">Save 2D depiction</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
+              <property name="padx">0</property>
+              <property name="propagate">False</property>
+              <property name="row">1</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+              <property type="col" id="0" name="minsize">0</property>
+              <property type="col" id="0" name="pad">0</property>
+              <property type="col" id="0" name="uniform" />
+              <property type="col" id="0" name="weight">0</property>
+              <property type="row" id="10" name="minsize">0</property>
+              <property type="row" id="10" name="pad">0</property>
+              <property type="row" id="11" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Checkbutton" id="checkbutton1">
+            <property name="takefocus">false</property>
+            <property name="variable">boolean:SaveDepiction</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
+              <property name="propagate">False</property>
+              <property name="row">1</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+              <property type="row" id="10" name="minsize">0</property>
+              <property type="row" id="10" name="pad">0</property>
+              <property type="row" id="11" name="minsize">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Checkbutton" id="checkbutton2">
+            <property name="takefocus">false</property>
+            <property name="variable">boolean:ExtractFullProtein</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
+              <property name="propagate">False</property>
+              <property name="row">2</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+              <property type="row" id="10" name="minsize">0</property>
+              <property type="row" id="10" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Combobox" id="formatComboBox">
+            <property name="exportselection">false</property>
+            <property name="state">readonly</property>
+            <property name="values">pdb mol2 sdf smiles</property>
+            <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="columnspan">2</property>
+              <property name="ipadx">0</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+              <property type="col" id="1" name="weight">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label6">
+            <property name="text" translatable="yes">Output format</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">ew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Progressbar" id="progressbar1">
+            <property name="maximum">100</property>
+            <property name="mode">determinate</property>
+            <property name="orient">horizontal</property>
+            <property name="value">0</property>
+            <property name="variable">string:barVar</property>
+            <layout manager="grid">
+              <property name="column">9</property>
+              <property name="columnspan">1</property>
+              <property name="propagate">False</property>
+              <property name="row">5</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">nsew</property>
             </layout>
           </object>
         </child>

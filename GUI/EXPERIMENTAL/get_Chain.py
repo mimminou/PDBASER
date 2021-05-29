@@ -1,6 +1,7 @@
 from Bio.PDB import PDBParser
-import gzip
+from gzip import open as gzOpen
 from io import StringIO
+
 
 def get_PDB_Chains(PDB_FILE, input_DIR):
     chain_Name = []
@@ -10,7 +11,7 @@ def get_PDB_Chains(PDB_FILE, input_DIR):
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        temp_file = gzip.open(input_DIR +"/" + PDB_FILE,"rt").read()
+        temp_file = gzOpen(input_DIR +"/" + PDB_FILE,"rt").read()
         Structure = StringIO(temp_file)
 
     pdb = PDBParser().get_structure(PDB_FILE,Structure)
