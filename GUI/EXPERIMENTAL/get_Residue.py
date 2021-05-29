@@ -1,11 +1,11 @@
 from Bio.PDB import PDBParser, Select
+import gzip
+from io import StringIO
 
 def is_het(residue):
     res = residue.id[0]
     return res not in (" ", "W")
 
-
-## THIS IS VERSION 1.1 OF THIS SCRIPT ...
 
 class NonHetSelect(Select):
     def accept_residue(self, residue):
@@ -27,13 +27,22 @@ class ResidueSelect(Select):
 
 def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
     Res_Name = []
+    Structure = input_DIR + "/" + PDB_FILE
+    extensions = [".pdb.gz",".ent.gz"]
+    compressedFile = False
 
-    pdb = PDBParser().get_structure(PDB_FILE, input_DIR+"/" + PDB_FILE)
+    if PDB_FILE.endswith(tuple(extensions)):
+        compressedFile = True
+        temp_file = gzip.open(input_DIR +"/" + PDB_FILE,"rt").read()
+        Structure = StringIO(temp_file)
+
+    pdb = PDBParser().get_structure(PDB_FILE,Structure)
     for res_item in pdb:
         for res in res_item[Chain]:
             if (not is_het(res)):
                 continue
             if "H_" in res.id[0]:
                 Res_Name.append([str(res.id[0][2:]),res.id[1]])
-
+    if compressedFile:
+        Structure.close()
     return Res_Name

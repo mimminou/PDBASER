@@ -1,20 +1,23 @@
 from Bio.PDB import PDBParser
+import gzip
+from io import StringIO
 
-
-## THIS IS VERSION 1.2 OF THIS SCRIPT ...
-
-def get_PDB_Chains(PDB_FILE, input_DIR):  ## NUM IS THE VARIABLE HOLDING THE REFERENCE TO THE CALL ITERNUMBER
-    ## NUM IS USED TO KNOW IF THIS FUNCTION EXECUTED AT LEAST ONCE
-    pdb_file = PDB_FILE
+def get_PDB_Chains(PDB_FILE, input_DIR):
     chain_Name = []
+    Structure = input_DIR + "/" + PDB_FILE
+    extensions = [".pdb.gz",".ent.gz"]
+    compressedFile = False
 
-    print("LOADING FILE : " + pdb_file)
+    if PDB_FILE.endswith(tuple(extensions)):
+        compressedFile = True
+        temp_file = gzip.open(input_DIR +"/" + PDB_FILE,"rt").read()
+        Structure = StringIO(temp_file)
 
-    pdb = PDBParser().get_structure(PDB_FILE, input_DIR+"/" + PDB_FILE)
-    print("Printing Chains . . .")
+    pdb = PDBParser().get_structure(PDB_FILE,Structure)
     for item in pdb:
         for item2 in item:
             if(str(item2.get_id()).strip()!=""):## GET CHAINS NAMES
                 chain_Name.append(item2.get_id())
-
+    if compressedFile:
+        Structure.close()
     return chain_Name
