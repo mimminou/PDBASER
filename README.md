@@ -35,7 +35,7 @@ PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, althou
 ### Limitations
 
 - No metadata extraction (Header, info etc ...), only atom 3D poses.
-- Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in .pdb and .ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
+- Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in pdb and ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
 
   
 
