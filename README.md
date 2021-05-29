@@ -16,26 +16,26 @@ PDBaser reads raw .pdb and .ent files as downloaded from the pdb, extracts pure 
 
 #### Windows
 
-For Windows users, PDBaser has a precompiled version, it can be found in the releases category or in the downloads section below, it can be installed on windows 7 SP1 / 8 / 8.1 / 10 and only requires Microsoft visual C++ 2015 x86.
+For Windows users, PDBaser has a precompiled version, it can be found in the releases category, it can be installed on windows 7 SP1 / 8 / 8.1 / 10 and only requires Microsoft visual C++ 2015 x86.
 
 #### Linux / MacOS
 
-PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, although i haven't tested myself, for this to work, this program requires Python 3.6.5 (And only 3.6.5, other versions will not work with openbabel libraries) and Biopython, Pygubu and openbabel and it's python bindings (Again, 3.6.5) installed.
+PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, although i haven't tested myself, for this to work, this program requires Python 3.6.5 (And only 3.6.5, other versions will not work with openbabel libraries unless you compile them yourself), Biopython, Pygubu and openbabel and it's python bindings (Again, 3.6.5) are also required.
 
 # Features
 
 - Input / Output Folder selection.
+- Support for compressed pdb / ent files.
+- 2D Depiction and PNG output.
 - Support for the popular residues output formats (pdb, sdf, mol2, smiles)
 - Multiple residue extraction possibility, chain only extraction with no residues is also possible.
-- Search field available.
 
 ![Screenshot](GUI/pdbaser.PNG?raw=true)
 
 ### Limitations
 
 - No metadata extraction (Header, info etc ...), only atom 3D poses.
-
-- Only .pdb / .ent inputs are supported, this is done by design as most proteins come only in .pdb and .ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
+- Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in .pdb and .ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
 
   
 
@@ -57,7 +57,7 @@ openbabel's pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python 
 
 If this software helped you making a scientific publication, a citation would be very appreciated :
 
-ABDELAZIZ, A. (2021). *PDBaser* (1.2) A python tool for fast protein - ligand extraction. https://github.com/mimminou/PDBASER
+ABDELAZIZ, A. (2021). *PDBaser* (1.5) A python tool for fast protein - ligand extraction. https://github.com/mimminou/PDBASER
 
 
 
@@ -82,7 +82,7 @@ You can download and install **python** from the official website (3.6.5 recomme
 
 Very straightforward, all you have to do is put this script in the folder containing the PDBs that need to be treated, run it from command line / terminal then follow instructions for each iteration.
 
-For now there exists only 3 commands :
+There exists only 3 commands :
 
 - **SKIP** : command that skips the mentioned step.
 - **Inserting data** : normal usage.
