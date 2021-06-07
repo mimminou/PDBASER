@@ -36,6 +36,7 @@ class MainApp:
         # GET CheckBOXes
         self.checkBoxExtractFullProt = builder.get_variable("ExtractFullProtein")
         self.checkboxDepiction = builder.get_variable("SaveDepiction")
+        self.checkboxAddHydrogens = builder.get_variable("addHydrogens")
 
         # GET IMAGE SECTION
         self.imager = builder.get_object("Depiction")
@@ -207,7 +208,12 @@ class MainApp:
             try:
                 self.Extractor()
             except Exception as exception:
+                self.ListBox_PDB.config(state="normal")
+                self.ListBox_Chains.config(state="normal")
+                self.ListBox_Residues.config(state="normal")
+                self.progressBarVar.set(0)
                 messagebox.showerror("Error", "Please select a protein and a chain")
+
                 print(exception)
 
         else:
@@ -256,7 +262,8 @@ class MainApp:
                                                        self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
                                                        self.getOutputFormat(),
                                                        selected_residues, self.checkBoxExtractFullProt.get(),
-                                                       self.checkboxDepiction.get()))
+                                                       self.checkboxDepiction.get(),
+                                                       self.checkboxAddHydrogens.get()))
             self.progressBarVar.set(80)
 
             self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="lawn green")
@@ -264,8 +271,18 @@ class MainApp:
             self.ExtractionDone(extracted_values)
         except TclError as exception:
             print(exception)
-            messagebox.showerror("Error","Could not read chains from this file, perhaps it's a residue ?")
-            self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="tomato2")
+            print(self.ListBox_Chains.size())
+            if not self.ListBox_PDB.curselection():
+                messagebox.showerror("Error","Please Select a protein and a chain")
+                self.progressBarVar.set(0)
+            elif not (self.ListBox_Chains.size() > 0):
+                messagebox.showerror("Error","Could not read chains from this file, perhaps it's a residue ?")
+                self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="tomato2")
+                self.progressBarVar.set(0)
+            elif not (self.ListBox_Chains.curselection()):
+                messagebox.showerror("Error","Please Select a chain")
+                self.progressBarVar.set(0)
+
         self.ListBox_PDB.config(state="normal")
         self.ListBox_Chains.config(state="normal")
         self.ListBox_Residues.config(state="normal")

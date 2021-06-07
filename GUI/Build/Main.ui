@@ -4,7 +4,7 @@
     <property name="cursor">arrow</property>
     <property name="height">0</property>
     <property name="highlightbackground">#c8797b</property>
-    <property name="minsize">900|560</property>
+    <property name="minsize">900|540</property>
     <property name="relief">flat</property>
     <property name="resizable">none</property>
     <property name="title" translatable="yes">PDBaser - GUI</property>
@@ -26,7 +26,7 @@
           <property name="sticky">nsew</property>
           <property type="col" id="0" name="minsize">0</property>
           <property type="col" id="0" name="weight">0</property>
-          <property type="row" id="0" name="minsize">170</property>
+          <property type="row" id="0" name="minsize">145</property>
           <property type="row" id="0" name="pad">0</property>
           <property type="row" id="0" name="weight">0</property>
         </layout>
@@ -231,15 +231,16 @@
         <child>
           <object class="ttk.Label" id="FindLabel">
             <property name="anchor">center</property>
-            <property name="text" translatable="yes">Find in pdb list</property>
+            <property name="text" translatable="yes">Find</property>
             <layout manager="grid">
               <property name="column">0</property>
               <property name="columnspan">1</property>
-              <property name="padx">5</property>
+              <property name="padx">0</property>
               <property name="pady">5</property>
               <property name="propagate">False</property>
               <property name="row">6</property>
               <property name="rowspan">1</property>
+              <property name="sticky">w</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
               <property type="col" id="0" name="uniform" />
@@ -252,11 +253,12 @@
             <layout manager="grid">
               <property name="column">0</property>
               <property name="columnspan">1</property>
-              <property name="padx">5</property>
+              <property name="padx">0</property>
               <property name="pady">0</property>
               <property name="propagate">False</property>
-              <property name="row">7</property>
+              <property name="row">6</property>
               <property name="rowspan">1</property>
+              <property name="sticky">e</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
               <property type="col" id="0" name="uniform" />
@@ -283,28 +285,6 @@
               <property type="col" id="12" name="weight">0</property>
               <property type="col" id="13" name="weight">0</property>
               <property type="row" id="1" name="minsize">0</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label8">
-            <property name="text" translatable="yes">Get from PDB server</property>
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="propagate">True</property>
-              <property name="row">6</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Entry" id="getFromPDBTextEdit">
-            <property name="exportselection">false</property>
-            <property name="textvariable">string:getFromPDBList</property>
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="propagate">False</property>
-              <property name="row">7</property>
-              <property name="sticky">ew</property>
             </layout>
           </object>
         </child>
@@ -420,10 +400,10 @@
           <object class="ttk.Label" id="label4">
             <property name="text" translatable="yes">Save full protein</property>
             <layout manager="grid">
-              <property name="column">0</property>
+              <property name="column">2</property>
               <property name="columnspan">1</property>
               <property name="ipadx">0</property>
-              <property name="padx">0</property>
+              <property name="padx">5</property>
               <property name="propagate">False</property>
               <property name="row">2</property>
               <property name="rowspan">1</property>
@@ -442,10 +422,10 @@
           <object class="ttk.Label" id="label5">
             <property name="text" translatable="yes">Save 2D depiction</property>
             <layout manager="grid">
-              <property name="column">0</property>
+              <property name="column">2</property>
               <property name="columnspan">1</property>
               <property name="ipadx">0</property>
-              <property name="padx">0</property>
+              <property name="padx">5</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
               <property name="rowspan">1</property>
@@ -465,13 +445,12 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:SaveDepiction</property>
             <layout manager="grid">
-              <property name="column">1</property>
-              <property name="columnspan">1</property>
+              <property name="column">2</property>
+              <property name="columnspan">6</property>
               <property name="ipadx">0</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
               <property name="rowspan">1</property>
-              <property name="sticky">w</property>
               <property type="row" id="10" name="minsize">0</property>
               <property type="row" id="10" name="pad">0</property>
               <property type="row" id="11" name="minsize">0</property>
@@ -483,13 +462,12 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:ExtractFullProtein</property>
             <layout manager="grid">
-              <property name="column">1</property>
-              <property name="columnspan">1</property>
+              <property name="column">2</property>
+              <property name="columnspan">6</property>
               <property name="ipadx">0</property>
               <property name="propagate">False</property>
               <property name="row">2</property>
               <property name="rowspan">1</property>
-              <property name="sticky">w</property>
               <property type="row" id="10" name="minsize">0</property>
               <property type="row" id="10" name="pad">0</property>
             </layout>
@@ -502,15 +480,16 @@
             <property name="values">pdb mol2 sdf smi</property>
             <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
             <layout manager="grid">
-              <property name="column">1</property>
-              <property name="columnspan">1</property>
+              <property name="column">2</property>
+              <property name="columnspan">6</property>
               <property name="ipadx">0</property>
-              <property name="padx">2</property>
-              <property name="pady">2</property>
+              <property name="ipady">0</property>
+              <property name="padx">0</property>
+              <property name="pady">0</property>
               <property name="propagate">False</property>
               <property name="row">0</property>
               <property name="rowspan">1</property>
-              <property name="sticky">w</property>
+              <property name="sticky">e</property>
               <property type="col" id="1" name="weight">0</property>
             </layout>
           </object>
@@ -519,7 +498,8 @@
           <object class="ttk.Label" id="label6">
             <property name="text" translatable="yes">Output format</property>
             <layout manager="grid">
-              <property name="column">0</property>
+              <property name="column">2</property>
+              <property name="padx">5</property>
               <property name="propagate">True</property>
               <property name="row">0</property>
               <property name="sticky">w</property>
@@ -558,7 +538,8 @@
           <object class="ttk.Label" id="label7">
             <property name="text" translatable="yes">Add hydrogens</property>
             <layout manager="grid">
-              <property name="column">0</property>
+              <property name="column">2</property>
+              <property name="padx">5</property>
               <property name="propagate">False</property>
               <property name="row">3</property>
               <property name="sticky">w</property>
@@ -570,10 +551,55 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:addHydrogens</property>
             <layout manager="grid">
-              <property name="column">1</property>
+              <property name="column">2</property>
+              <property name="columnspan">6</property>
+              <property name="ipadx">0</property>
               <property name="propagate">False</property>
               <property name="row">3</property>
+              <property name="rowspan">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label9">
+            <property name="text" translatable="yes">Get from PDB server (coming soon !)</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">False</property>
+              <property name="row">0</property>
               <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="entry2">
+            <property name="exportselection">false</property>
+            <property name="state">disabled</property>
+            <property name="textvariable">string:getFromPDBList</property>
+            <property name="validate">none</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">2</property>
+              <property name="padx">5</property>
+              <property name="propagate">False</property>
+              <property name="row">1</property>
+              <property name="rowspan">3</property>
+              <property name="sticky">nsew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator1">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
+              <property name="padx">0</property>
+              <property name="propagate">False</property>
+              <property name="row">0</property>
+              <property name="rowspan">4</property>
+              <property name="sticky">nsw</property>
             </layout>
           </object>
         </child>
