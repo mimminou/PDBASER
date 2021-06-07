@@ -4,7 +4,7 @@
     <property name="cursor">arrow</property>
     <property name="height">0</property>
     <property name="highlightbackground">#c8797b</property>
-    <property name="minsize">900|540</property>
+    <property name="minsize">900|560</property>
     <property name="relief">flat</property>
     <property name="resizable">none</property>
     <property name="title" translatable="yes">PDBaser - GUI</property>
@@ -286,15 +286,38 @@
             </layout>
           </object>
         </child>
+        <child>
+          <object class="ttk.Label" id="label8">
+            <property name="text" translatable="yes">Get from PDB server</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="propagate">True</property>
+              <property name="row">6</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="getFromPDBTextEdit">
+            <property name="exportselection">false</property>
+            <property name="textvariable">string:getFromPDBList</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="propagate">False</property>
+              <property name="row">7</property>
+              <property name="sticky">ew</property>
+            </layout>
+          </object>
+        </child>
       </object>
     </child>
     <child>
       <object class="ttk.Frame" id="frame1">
         <property name="height">0</property>
+        <property name="width">200</property>
         <layout manager="grid">
           <property name="column">0</property>
           <property name="columnspan">10</property>
-          <property name="ipady">60</property>
+          <property name="ipady">70</property>
           <property name="padx">10</property>
           <property name="pady">10</property>
           <property name="propagate">False</property>
@@ -386,8 +409,8 @@
               <property name="columnspan">2</property>
               <property name="padx">10</property>
               <property name="propagate">False</property>
-              <property name="row">5</property>
-              <property name="rowspan">1</property>
+              <property name="row">4</property>
+              <property name="rowspan">2</property>
               <property name="sticky">nsew</property>
               <property type="row" id="0" name="minsize">0</property>
             </layout>
@@ -476,15 +499,15 @@
           <object class="ttk.Combobox" id="formatComboBox">
             <property name="exportselection">false</property>
             <property name="state">readonly</property>
-            <property name="values">pdb mol2 sdf smiles</property>
+            <property name="values">pdb mol2 sdf smi</property>
             <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">2</property>
+              <property name="columnspan">1</property>
               <property name="ipadx">0</property>
               <property name="padx">2</property>
               <property name="pady">2</property>
-              <property name="propagate">True</property>
+              <property name="propagate">False</property>
               <property name="row">0</property>
               <property name="rowspan">1</property>
               <property name="sticky">w</property>
@@ -499,7 +522,7 @@
               <property name="column">0</property>
               <property name="propagate">True</property>
               <property name="row">0</property>
-              <property name="sticky">ew</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>
@@ -512,11 +535,45 @@
             <property name="variable">string:barVar</property>
             <layout manager="grid">
               <property name="column">9</property>
-              <property name="columnspan">1</property>
+              <property name="columnspan">2</property>
               <property name="propagate">False</property>
-              <property name="row">5</property>
+              <property name="row">4</property>
               <property name="rowspan">1</property>
               <property name="sticky">nsew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="VersionLabel">
+            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.5)</property>
+            <layout manager="grid">
+              <property name="column">10</property>
+              <property name="propagate">True</property>
+              <property name="row">5</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label7">
+            <property name="text" translatable="yes">Add hydrogens</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">False</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Checkbutton" id="checkbutton3">
+            <property name="takefocus">false</property>
+            <property name="variable">boolean:addHydrogens</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">False</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>

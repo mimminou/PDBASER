@@ -1,4 +1,3 @@
-import tkinter
 from os import path, listdir
 from pygubu import Builder
 import get_Chain
