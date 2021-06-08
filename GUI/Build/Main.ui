@@ -4,7 +4,7 @@
     <property name="cursor">arrow</property>
     <property name="height">0</property>
     <property name="highlightbackground">#c8797b</property>
-    <property name="minsize">900|540</property>
+    <property name="minsize">900|550</property>
     <property name="relief">flat</property>
     <property name="resizable">none</property>
     <property name="title" translatable="yes">PDBaser - GUI</property>
@@ -321,7 +321,7 @@
               <property name="column">0</property>
               <property name="propagate">False</property>
               <property name="row">4</property>
-              <property name="sticky">ew</property>
+              <property type="col" id="0" name="pad">0</property>
               <property type="row" id="0" name="minsize">0</property>
             </layout>
           </object>
@@ -335,13 +335,14 @@
             <layout manager="grid">
               <property name="column">1</property>
               <property name="columnspan">2</property>
-              <property name="ipadx">150</property>
+              <property name="ipadx">200</property>
+              <property name="ipady">12</property>
               <property name="padx">5</property>
-              <property name="propagate">True</property>
+              <property name="propagate">False</property>
               <property name="row">4</property>
-              <property name="sticky">ew</property>
-              <property type="col" id="0" name="minsize">0</property>
-              <property type="col" id="0" name="pad">0</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">nsew</property>
+              <property type="col" id="1" name="pad">0</property>
               <property type="row" id="0" name="minsize">0</property>
             </layout>
           </object>
@@ -352,10 +353,9 @@
             <property name="text" translatable="yes">Output directory</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="padx">5</property>
               <property name="propagate">False</property>
               <property name="row">5</property>
-              <property name="sticky">ew</property>
+              <property type="col" id="0" name="pad">0</property>
               <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
@@ -369,19 +369,21 @@
             <layout manager="grid">
               <property name="column">1</property>
               <property name="columnspan">2</property>
-              <property name="ipadx">150</property>
+              <property name="ipadx">200</property>
+              <property name="ipady">12</property>
               <property name="padx">5</property>
-              <property name="propagate">True</property>
+              <property name="pady">0</property>
+              <property name="propagate">False</property>
               <property name="row">5</property>
-              <property name="sticky">ew</property>
-              <property type="col" id="0" name="minsize">0</property>
-              <property type="col" id="0" name="pad">0</property>
+              <property name="sticky">nsew</property>
+              <property type="col" id="1" name="pad">0</property>
               <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
         <child>
           <object class="ttk.Button" id="Extract_Button">
+            <property name="takefocus">false</property>
             <property name="text" translatable="yes">Extract</property>
             <bind sequence="&lt;Button-1&gt;" handler="ButtonOnClick" add="" />
             <layout manager="grid">
@@ -434,9 +436,6 @@
               <property type="col" id="0" name="pad">0</property>
               <property type="col" id="0" name="uniform" />
               <property type="col" id="0" name="weight">0</property>
-              <property type="row" id="10" name="minsize">0</property>
-              <property type="row" id="10" name="pad">0</property>
-              <property type="row" id="11" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -451,9 +450,6 @@
               <property name="propagate">False</property>
               <property name="row">1</property>
               <property name="rowspan">1</property>
-              <property type="row" id="10" name="minsize">0</property>
-              <property type="row" id="10" name="pad">0</property>
-              <property type="row" id="11" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -562,29 +558,32 @@
         </child>
         <child>
           <object class="ttk.Label" id="label9">
-            <property name="text" translatable="yes">Get from PDB server (coming soon !)</property>
+            <property name="text" translatable="yes">Get from PDB</property>
             <layout manager="grid">
-              <property name="column">1</property>
+              <property name="column">0</property>
               <property name="propagate">False</property>
               <property name="row">0</property>
-              <property name="sticky">w</property>
+              <property name="sticky">ew</property>
+              <property type="col" id="0" name="pad">0</property>
             </layout>
           </object>
         </child>
         <child>
-          <object class="ttk.Entry" id="entry2">
+          <object class="ttk.Entry" id="getFromFTP">
             <property name="exportselection">false</property>
-            <property name="state">disabled</property>
+            <property name="state">normal</property>
             <property name="textvariable">string:getFromPDBList</property>
             <property name="validate">none</property>
             <layout manager="grid">
               <property name="column">0</property>
               <property name="columnspan">2</property>
+              <property name="ipadx">60</property>
               <property name="padx">5</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
               <property name="rowspan">3</property>
-              <property name="sticky">nsew</property>
+              <property name="sticky">nw</property>
+              <property type="col" id="0" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -600,6 +599,51 @@
               <property name="row">0</property>
               <property name="rowspan">4</property>
               <property name="sticky">nsw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="DownloadButton">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Download</property>
+            <bind sequence="&lt;Button-1&gt;" handler="downloadPDB" add="" />
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="columnspan">1</property>
+              <property name="propagate">False</property>
+              <property name="row">1</property>
+              <property name="rowspan">3</property>
+              <property name="sticky">nse</property>
+              <property type="col" id="1" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label8">
+            <property name="justify">left</property>
+            <property name="text" translatable="yes">Separate PDB codes by a space </property>
+            <property name="wraplength">0</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">1</property>
+              <property name="propagate">False</property>
+              <property name="row">2</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+              <property type="col" id="0" name="pad">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label10">
+            <property name="text" translatable="yes">Downloaded files will be saved in output directory</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">2</property>
+              <property name="propagate">False</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
+              <property type="col" id="0" name="pad">0</property>
             </layout>
           </object>
         </child>

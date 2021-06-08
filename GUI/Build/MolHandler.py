@@ -100,6 +100,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     virtualString.writelines(resname + "\n") ## WRITE RESIDUE NAME SO THAT OTHER PROGRAMS CAN READ IT
 
                 elif ligandExtractFormat == "smi":
+                    #todo FIX LIGAND NAME IN SMI FILE FORMAT
                     pass
 
                 with open(filenameOtherFormats +"."+ ligandExtractFormat,"w") as savedFile :
