@@ -27,15 +27,18 @@ PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, althou
 - Input / Output Folder selection.
 - Support for compressed pdb / ent files.
 - 2D Depiction and PNG output.
-- Support for the popular residues output formats (pdb, sdf, mol2, smiles)
-- Multiple residue extraction possibility, chain only extraction with no residues is also possible.
+- Support for the popular residues output formats (pdb, sdf, mol2, smiles).
+- Multiple residue extraction at once is possible, chain only extraction with no residues is also possible.
+- Hydrogen generation for extracted residues is available (Except for SMILES format).
+- Possibility to download directly from the PDB directly.
 
 ![Screenshot](GUI/pdbaser.PNG?raw=true)
 
 ### Limitations
 
-- No metadata extraction (Header, info etc ...), only atom 3D poses.
+- No metadata extraction (Header, comments etc ...), only atom 3D poses with the molecule code in the PDB.
 - Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in pdb and ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
+- there is a known bug where extracting a ligand in SMILES format does not generate a name for it, i'm gonna fix it as soon as i finish some work on my studies.
 
   
 
@@ -57,7 +60,7 @@ openbabel's pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python 
 
 If this software helped you making a scientific publication, a citation would be very appreciated :
 
-ABDELAZIZ, A. (2021). *PDBaser* (1.5) A python tool for fast protein - ligand extraction. https://github.com/mimminou/PDBASER
+ABDELAZIZ, A. (2021). *PDBaser*, A python tool for fast protein - ligand extraction. https://github.com/mimminou/PDBASER
 
 
 
