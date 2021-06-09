@@ -1,11 +1,10 @@
-import tkinter
 from os import path, listdir
 from pygubu import Builder
 import get_Chain
 import get_Residue
 import MolHandler
 import get_PDB
-from tkinter import messagebox, TclError, Toplevel
+from tkinter import messagebox, TclError
 from io import BytesIO
 from PIL import Image, ImageTk  # NEEDED FOR DEPICTION
 from logging import debug
@@ -17,6 +16,7 @@ PROJECT_UI = path.join(PROJECT_PATH, "Main.ui")
 
 class MainApp:
     def __init__(self):
+        self.VERSION = "Abdelaziz. A, PDBaser(1.6)"
         self.PDB_Files = []
         self.format = "pdb"
         self.builder = builder = Builder()
@@ -34,6 +34,7 @@ class MainApp:
         self.InputDirLabel = builder.get_object("Input_Dir_Label")
         self.OutputDirLabel = builder.get_object("Output_Dir_Label")
         self.findLabel = builder.get_object("FindLabel")
+        self.versionLabel = builder.get_object("VersionLabel")
         self.getFromFTP = builder.get_object("getFromFTP")
         self.getFromFTP.bind("<Return>", self.downloadPDB)
         self.DownloaderButton = builder.get_object("DownloadButton")
@@ -78,8 +79,10 @@ class MainApp:
 
         ##GET PROGRESSBAR VAR
         self.progressBarVar = builder.get_variable("barVar")
-
         builder.connect_callbacks(self)
+
+        ## SET VERSION NUM
+        self.versionLabel.config(text=self.VERSION)
 
     def input_Path_Changed(self, event=None):
         self.setList([])
@@ -176,7 +179,6 @@ class MainApp:
             # //// DEPICTION FUNCTION
             if not (selected_res.__len__() == 0 or selected_res.__len__() > 1):
                 get_image = MolHandler.DrawMol(self.PDB_input_DIR.cget("path"),
-                                               self.PDB_output_DIR.cget("path"),
                                                self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
                                                self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
                                                self.ListBox_Residues.get(selected_index))
@@ -221,7 +223,7 @@ class MainApp:
 
     def getPDBFromServer(self, event=None):
         if not all(char.isalnum() or char.isspace() for char in self.getFromFTP.get()) :
-            messagebox.showerror("Failed to download","Please select correct PDB codes")
+            messagebox.showerror("Failed to download","Please select correct PDB ID codes")
             return
         PDBList = self.getFromFTP.get().split()
         NotFound = []

@@ -520,7 +520,7 @@
         </child>
         <child>
           <object class="ttk.Label" id="VersionLabel">
-            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.5)</property>
+            <property name="text" translatable="yes">VersionNUM</property>
             <layout manager="grid">
               <property name="column">10</property>
               <property name="propagate">True</property>

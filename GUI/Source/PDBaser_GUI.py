@@ -1,9 +1,9 @@
-import tkinter
 from os import path, listdir
 from pygubu import Builder
 import get_Chain
 import get_Residue
 import MolHandler
+import get_PDB
 from tkinter import messagebox, TclError
 from io import BytesIO
 from PIL import Image, ImageTk  # NEEDED FOR DEPICTION
@@ -16,6 +16,7 @@ PROJECT_UI = path.join(PROJECT_PATH, "Main.ui")
 
 class MainApp:
     def __init__(self):
+        self.VERSION = "Abdelaziz. A, PDBaser(1.6)"
         self.PDB_Files = []
         self.format = "pdb"
         self.builder = builder = Builder()
@@ -29,14 +30,21 @@ class MainApp:
         self.SearchBox = builder.get_object("SearchBox")
         self.SearchBox.bind("<Return>", self.finder)
         self.ExtractButton = builder.get_object("Extract_Button")
+        self.ExtractButton.config(command=self.ButtonOnClick)
         self.InputDirLabel = builder.get_object("Input_Dir_Label")
         self.OutputDirLabel = builder.get_object("Output_Dir_Label")
         self.findLabel = builder.get_object("FindLabel")
+        self.versionLabel = builder.get_object("VersionLabel")
+        self.getFromFTP = builder.get_object("getFromFTP")
+        self.getFromFTP.bind("<Return>", self.downloadPDB)
+        self.DownloaderButton = builder.get_object("DownloadButton")
+        self.DownloaderButton.config(command=self.downloadPDB)
         self.img1 = ""
 
         # GET CheckBOXes
         self.checkBoxExtractFullProt = builder.get_variable("ExtractFullProtein")
         self.checkboxDepiction = builder.get_variable("SaveDepiction")
+        self.checkboxAddHydrogens = builder.get_variable("addHydrogens")
 
         # GET IMAGE SECTION
         self.imager = builder.get_object("Depiction")
@@ -67,12 +75,14 @@ class MainApp:
         self.pdbSelectionChangeLock = Lock()
         self.ChainSelectionChangeLock = Lock()
         self.ExtractorLock = Lock()
+        self.Downloader = Lock()
 
         ##GET PROGRESSBAR VAR
         self.progressBarVar = builder.get_variable("barVar")
-
-
         builder.connect_callbacks(self)
+
+        ## SET VERSION NUM
+        self.versionLabel.config(text=self.VERSION)
 
     def input_Path_Changed(self, event=None):
         self.setList([])
@@ -115,7 +125,6 @@ class MainApp:
         pdbselectionThread = Thread(target=self.PDBSelectionThread)
         if not self.pdbSelectionChangeLock.locked():
             pdbselectionThread.start()
-
 
     def PDBSelectionThread(self):
         self.pdbSelectionChangeLock.acquire(True)
@@ -170,16 +179,17 @@ class MainApp:
             # //// DEPICTION FUNCTION
             if not (selected_res.__len__() == 0 or selected_res.__len__() > 1):
                 get_image = MolHandler.DrawMol(self.PDB_input_DIR.cget("path"),
-                                               self.PDB_output_DIR.cget("path"),
                                                self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
                                                self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
                                                self.ListBox_Residues.get(selected_index))
-
-                imageAsBytes = BytesIO(get_image)
-                depiction = Image.open(imageAsBytes)
-                self.img1 = ImageTk.PhotoImage(depiction)
-                self.imager.config(image=self.img1)
-                imageAsBytes.close()
+                if not (get_image == False):
+                    imageAsBytes = BytesIO(get_image)
+                    depiction = Image.open(imageAsBytes)
+                    self.img1 = ImageTk.PhotoImage(depiction)
+                    self.imager.config(image=self.img1)
+                    imageAsBytes.close()
+                else:
+                    messagebox.showerror("Error","There was an error generating the image")
             else:
                 debug("NOT PRINTING, TOO MANY SELECTIONS")
                 self.imager.config(image="")
@@ -203,20 +213,84 @@ class MainApp:
             messagebox.showinfo("Warning", "No entry ' " + str(SearchTerm) + " ' in this directory")
             self.findLabel.config(foreground="red")
 
+    def downloadPDB(self, event=None):
+        downloadThread = Thread(target=self.getPDBFromServer)
+        if self.PDB_output_DIR.cget("path"):
+            if (not downloadThread.is_alive()) or (not self.Downloader.locked()):
+                downloadThread.start()
+        else:
+            messagebox.showerror("Error", "Please select output path for downloading")
+
+    def getPDBFromServer(self, event=None):
+        if not all(char.isalnum() or char.isspace() for char in self.getFromFTP.get()) :
+            messagebox.showerror("Failed to download","Please select correct PDB ID codes")
+            return
+        PDBList = self.getFromFTP.get().split()
+        NotFound = []
+        Existing = []
+        Downloaded = []
+        count = len(PDBList)
+        if PDBList:
+            self.getFromFTP.config(state="disabled")
+            self.getFromFTP.unbind("<Return>")
+            self.ListBox_PDB.config(state="disabled")
+            self.ListBox_Chains.config(state="disabled")
+            self.ListBox_Residues.config(state="disabled")
+            self.DownloaderButton.config(state="disabled")
+            self.ExtractButton.config(state="disabled")
+            self.Downloader.acquire()
+            i = 0
+            for entry in PDBList:
+                i = (i + (100 / count)).__round__(2)
+                self.progressBarVar.set(i)  ## SET PROGRESS BAR TO i VALUE
+                DownloadOperation = get_PDB.getPDBFromFTP(self.PDB_output_DIR.cget("path"), entry)
+                if DownloadOperation == 0 :
+                    Downloaded.append(entry)
+                elif DownloadOperation == 1:
+                    messagebox.showerror("cannot access PDB", "Please check your internet connection or proxy settings")
+                    return
+                elif DownloadOperation == 2 :
+                    Existing.append(entry)
+                elif DownloadOperation == 3:
+                    NotFound.append(entry)
+
+        try:
+            self.getFromFTP.config(state="normal")
+            self.ListBox_PDB.config(state="normal")
+            self.ListBox_Chains.config(state="normal")
+            self.ListBox_Residues.config(state="normal")
+            self.DownloaderButton.config(state="normal")
+            self.ExtractButton.config(state="normal")
+            self.getFromFTP.bind("<Return>", self.downloadPDB)
+            self.Downloader.release()
+            self.progressBarVar.set(0)
+        except Exception as runtimeError:
+            pass
+        if Downloaded or NotFound or Existing:        # THESE are LISTS WITH values presenting downloaded / not downloaded PDB files / Existing
+            messagebox.showinfo("Task done", "\n" + "\nDownloaded : "  + ", ".join(Downloaded) +
+                                "\n\nNot Found : " + ", ".join(NotFound) +
+                                "\n\nExisting : " + ", ".join(Existing))
+
+        self.input_Path_Changed()
+
     def ButtonOnClick(self, event=None):
         if self.PDB_input_DIR.cget("path") and self.PDB_output_DIR.cget("path"):
             try:
                 self.Extractor()
             except Exception as exception:
+                self.ListBox_PDB.config(state="normal")
+                self.ListBox_Chains.config(state="normal")
+                self.ListBox_Residues.config(state="normal")
+                self.DownloaderButton.config(state="normal")
+                self.ExtractButton.config(state="normal")
+                self.progressBarVar.set(0)
                 messagebox.showerror("Error", "Please select a protein and a chain")
                 print(exception)
 
         else:
             if not self.PDB_output_DIR.cget("path"):
-                # self.OutputDirLabel.config(foreground="red")
                 self.flashLabel(self.OutputDirLabel, 0)
-            if not self.PDB_input_DIR.cget("path"):  # or not self.input_Path_Changed():
-                # self.InputDirLabel.config(foreground="red")
+            if not self.PDB_input_DIR.cget("path"):
                 self.flashLabel(self.InputDirLabel, 0)
 
     def flashLabel(self, Label, iteration):
@@ -234,6 +308,7 @@ class MainApp:
         self.setOutputFormat(self.combobox.get())
 
     def Extractor(self):
+        self.getFromFTP.delete(0, "end")
         ExtractionThread = Thread(target=self.extractionThread)
 
         if not self.ExtractorLock.locked():
@@ -246,9 +321,11 @@ class MainApp:
         extracted_values = []
         self.progressBarVar.set(45)
         try:
-            self.ListBox_PDB.config(state= "disabled")
+            self.ListBox_PDB.config(state="disabled")
             self.ListBox_Chains.config(state="disabled")
             self.ListBox_Residues.config(state="disabled")
+            self.DownloaderButton.config(state="disabled")
+            self.ExtractButton.config(state="disabled")
             for index in self.ListBox_Residues.curselection():
                 selected_residues.append(self.ListBox_Residues.get(index))
             extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
@@ -257,7 +334,8 @@ class MainApp:
                                                        self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
                                                        self.getOutputFormat(),
                                                        selected_residues, self.checkBoxExtractFullProt.get(),
-                                                       self.checkboxDepiction.get()))
+                                                       self.checkboxDepiction.get(),
+                                                       self.checkboxAddHydrogens.get()))
             self.progressBarVar.set(80)
 
             self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="lawn green")
@@ -265,11 +343,23 @@ class MainApp:
             self.ExtractionDone(extracted_values)
         except TclError as exception:
             print(exception)
-            messagebox.showerror("Error","Could not read chains from this file, perhaps it's a residue ?")
-            self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="tomato2")
+            print(self.ListBox_Chains.size())
+            if not self.ListBox_PDB.curselection():
+                messagebox.showerror("Error", "Please Select a protein and a chain")
+                self.progressBarVar.set(0)
+            elif not (self.ListBox_Chains.size() > 0):
+                messagebox.showerror("Error", "Could not read chains from this file, perhaps it's a residue ?")
+                self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="tomato2")
+                self.progressBarVar.set(0)
+            elif not (self.ListBox_Chains.curselection()):
+                messagebox.showerror("Error", "Please Select a chain")
+                self.progressBarVar.set(0)
+
         self.ListBox_PDB.config(state="normal")
         self.ListBox_Chains.config(state="normal")
         self.ListBox_Residues.config(state="normal")
+        self.DownloaderButton.config(state="normal")
+        self.ExtractButton.config(state="normal")
 
         self.ExtractorLock.release()
 
@@ -277,9 +367,9 @@ class MainApp:
         self.progressBarVar.set(100)
         messagebox.showinfo("Extraction Successeful",
                             "Protein : " + self.ListBox_PDB.get(self.ListBox_PDB.curselection()) + "\n"
-                                "Chain : " + self.ListBox_Chains.get(
+                                                                                                   "Chain : " + self.ListBox_Chains.get(
                                 self.ListBox_Chains.curselection()) + "\n"
-                                "Residue : \n" + "\n".join(values[0]))
+                                                                      "Residue : \n" + "\n".join(values[0]))
         self.progressBarVar.set(0)
 
     def setOutputFormat(self, format):

@@ -54,6 +54,11 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     io.set_structure(pdb)
     PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
     pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
+    if PDB_ID.startswith("pdb"):
+        PDB_Name =  PDB_ID[3:]
+    else:
+        PDB_Name = PDB_ID
+
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAINS
 
@@ -73,7 +78,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                 ## CONVERT RESIDUE TO SAVE IT IN OUTPUT DIRECTORY
                 if ligandExtractFormat == "smiles":
                     ligandExtractFormat = "smi"
-                filenameOtherFormats = Output_DIR + "/" + PDB_ID + "/" + PDB_ID + "_Lig_" + \
+                filenameOfOutput = Output_DIR + "/" + PDB_ID + "/" + PDB_Name + f"_{Chain}_" + \
                                        residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
                 molecule = pybel.readstring("pdb", virtualFileOtherFormats.getvalue())
 
@@ -103,14 +108,14 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     #todo FIX LIGAND NAME IN SMI FILE FORMAT
                     pass
                 if(add_hydrogens):
-                    with open(filenameOtherFormats +"_Hydrogen."+ ligandExtractFormat,"w") as savedFile :  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
+                    with open(filenameOfOutput +"_H."+ ligandExtractFormat,"w") as savedFile :  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
                         savedFile.write(virtualString.getvalue())
                 else:
-                    with open(filenameOtherFormats +"."+ ligandExtractFormat,"w") as savedFile :
+                    with open(filenameOfOutput +"."+ ligandExtractFormat,"w") as savedFile :
                         savedFile.write(virtualString.getvalue())
                 # Check IF SAVE DEPICTION IS TRUE
                 if (saveDepiction):
-                    molecule.draw(False, filenameOtherFormats + ".png")
+                    molecule.draw(False, filenameOfOutput + ".png")
 
                 virtualFileOtherFormats.close()
                 virtualString.close()
@@ -118,18 +123,18 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
         else:
             debug("Saving Peptidic Chain . . .")
             io.set_structure(model[Chain])
-            io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_ID}_Chain_{Chain}.pdb", NonHetSelect())
+            io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}.pdb", NonHetSelect())
             io.set_structure(pdb)
         # SAVING FULL PROTEIN
         if saveFullProtein:
             debug("saving full protein")
-            copyfile(input_DIR + "/" + PDB_FILE, Output_DIR + "/" + PDB_ID + "/" + f"{PDB_ID}.pdb")
+            copyfile(input_DIR + "/" + PDB_FILE, Output_DIR + "/" + PDB_ID + "/" + f"{PDB_Name}.pdb")
     if compressedFile:
         Structure.close()  # CLOSE STRING IO IF FILE IS COMPRESSED
     return extractedResidues
 
 
-def DrawMol(input_DIR, Output_DIR, PDB_FILE, Chain, Residues=None):
+def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None):
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
@@ -145,8 +150,7 @@ def DrawMol(input_DIR, Output_DIR, PDB_FILE, Chain, Residues=None):
     io = PDBIO()
     picture = ""
     io.set_structure(pdb)
-    PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
-    pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
+    #pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER RESIDUES IN CHAIN
             if (Residues is None) or (not residue):
