@@ -7,7 +7,7 @@ from shutil import copyfile
 from logging import debug
 from gzip import open as gzOpen
 
-## THIS IS VERSION 1.5 OF THIS SCRIPT ...
+## THIS IS VERSION 1.6 OF THIS SCRIPT ...
 simplefilter("ignore")
 
 
@@ -102,10 +102,12 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                 elif ligandExtractFormat == "smi":
                     #todo FIX LIGAND NAME IN SMI FILE FORMAT
                     pass
-
-                with open(filenameOtherFormats +"."+ ligandExtractFormat,"w") as savedFile :
-                    savedFile.write(virtualString.getvalue())
-
+                if(add_hydrogens):
+                    with open(filenameOtherFormats +"_Hydrogen."+ ligandExtractFormat,"w") as savedFile :  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
+                        savedFile.write(virtualString.getvalue())
+                else:
+                    with open(filenameOtherFormats +"."+ ligandExtractFormat,"w") as savedFile :
+                        savedFile.write(virtualString.getvalue())
                 # Check IF SAVE DEPICTION IS TRUE
                 if (saveDepiction):
                     molecule.draw(False, filenameOtherFormats + ".png")
@@ -146,7 +148,7 @@ def DrawMol(input_DIR, Output_DIR, PDB_FILE, Chain, Residues=None):
     PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
     pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
     for model in pdb:
-        for residue in model[Chain]:  ## ITERATE OVER CHAINS
+        for residue in model[Chain]:  ## ITERATE OVER RESIDUES IN CHAIN
             if (Residues is None) or (not residue):
                 return
             if (not is_het(residue)):
@@ -159,17 +161,31 @@ def DrawMol(input_DIR, Output_DIR, PDB_FILE, Chain, Residues=None):
                 # SAVE RESIDUE IN VIRTUAL FILE
                 debug("SAVING TO VIRTUAL FILE")
                 virtualFile = StringIO()
+                virtualPicture= StringIO()
                 io.save(virtualFile, ResidueSelect(model[Chain], residue))
                 ## USING OPEN BABEL NATIVE DEPICTOR
                 obConv = openbabel.OBConversion()  # INITIALIZE OPENBABEL OBCONVERSION
                 obConv.SetInAndOutFormats("pdb", "_png2")
                 mol = openbabel.OBMol()  # INITIALIZE OBMOL
-                obConv.ReadString(mol, virtualFile.getvalue())
+                try:
+                    obConv.ReadString(mol, virtualFile.getvalue())
+                    virtualPicture.write(obConv.WriteString(mol))  # WRITE TO VIRTUAL FILE AS STRING
+                    virtualPicture.seek(0)
+                    picture = virtualPicture.getvalue().encode('utf8',
+                                                            'surrogateescape')  # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
+                    if compressedFile:
+                        Structure.close()
 
-                virtualPicture = StringIO(obConv.WriteString(mol))  # WRITE TO VIRTUAL FILE AS STRING
-                virtualPicture.seek(0)
-                picture = virtualPicture.getvalue().encode('utf8',
-                                                           'surrogateescape')  # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
+                    virtualFile.close()
+                    virtualPicture.close()
+                    return picture
+
+                except Exception as e:
+                    print(e)
+                    virtualFile.close()
+                    virtualPicture.close()
+                    picture = False
+
                 virtualFile.close()
                 virtualPicture.close()
 

@@ -30,12 +30,14 @@ class MainApp:
         self.SearchBox = builder.get_object("SearchBox")
         self.SearchBox.bind("<Return>", self.finder)
         self.ExtractButton = builder.get_object("Extract_Button")
+        self.ExtractButton.config(command=self.ButtonOnClick)
         self.InputDirLabel = builder.get_object("Input_Dir_Label")
         self.OutputDirLabel = builder.get_object("Output_Dir_Label")
         self.findLabel = builder.get_object("FindLabel")
         self.getFromFTP = builder.get_object("getFromFTP")
         self.getFromFTP.bind("<Return>", self.downloadPDB)
         self.DownloaderButton = builder.get_object("DownloadButton")
+        self.DownloaderButton.config(command=self.downloadPDB)
         self.img1 = ""
 
         # GET CheckBOXes
@@ -178,12 +180,14 @@ class MainApp:
                                                self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
                                                self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
                                                self.ListBox_Residues.get(selected_index))
-
-                imageAsBytes = BytesIO(get_image)
-                depiction = Image.open(imageAsBytes)
-                self.img1 = ImageTk.PhotoImage(depiction)
-                self.imager.config(image=self.img1)
-                imageAsBytes.close()
+                if not (get_image == False):
+                    imageAsBytes = BytesIO(get_image)
+                    depiction = Image.open(imageAsBytes)
+                    self.img1 = ImageTk.PhotoImage(depiction)
+                    self.imager.config(image=self.img1)
+                    imageAsBytes.close()
+                else:
+                    messagebox.showerror("Error","There was an error generating the image")
             else:
                 debug("NOT PRINTING, TOO MANY SELECTIONS")
                 self.imager.config(image="")
@@ -210,16 +214,20 @@ class MainApp:
     def downloadPDB(self, event=None):
         downloadThread = Thread(target=self.getPDBFromServer)
         if self.PDB_output_DIR.cget("path"):
-            if not downloadThread.is_alive():
+            if (not downloadThread.is_alive()) or (not self.Downloader.locked()):
                 downloadThread.start()
         else:
             messagebox.showerror("Error", "Please select output path for downloading")
 
     def getPDBFromServer(self, event=None):
+        if not all(char.isalnum() or char.isspace() for char in self.getFromFTP.get()) :
+            messagebox.showerror("Failed to download","Please select correct PDB codes")
+            return
         PDBList = self.getFromFTP.get().split()
-        returnedValues = []
+        NotFound = []
+        Existing = []
+        Downloaded = []
         count = len(PDBList)
-        print(count)
         if PDBList:
             self.getFromFTP.config(state="disabled")
             self.getFromFTP.unbind("<Return>")
@@ -233,10 +241,16 @@ class MainApp:
             for entry in PDBList:
                 i = (i + (100 / count)).__round__(2)
                 self.progressBarVar.set(i)  ## SET PROGRESS BAR TO i VALUE
-                notDownloaded = get_PDB.getPDBFromFTP(self.PDB_output_DIR.cget("path"), entry)
-                print(" ----------- " + str(notDownloaded))
-                if notDownloaded == False:
-                    returnedValues.append(entry)
+                DownloadOperation = get_PDB.getPDBFromFTP(self.PDB_output_DIR.cget("path"), entry)
+                if DownloadOperation == 0 :
+                    Downloaded.append(entry)
+                elif DownloadOperation == 1:
+                    messagebox.showerror("cannot access PDB", "Please check your internet connection or proxy settings")
+                    return
+                elif DownloadOperation == 2 :
+                    Existing.append(entry)
+                elif DownloadOperation == 3:
+                    NotFound.append(entry)
 
         try:
             self.getFromFTP.config(state="normal")
@@ -247,12 +261,14 @@ class MainApp:
             self.ExtractButton.config(state="normal")
             self.getFromFTP.bind("<Return>", self.downloadPDB)
             self.Downloader.release()
-            print("DONE")
             self.progressBarVar.set(0)
         except Exception as runtimeError:
             pass
-        if returnedValues:
-            messagebox.showinfo("Download done", "Files not downloaded : \n" + str(returnedValues))
+        if Downloaded or NotFound or Existing:        # THESE are LISTS WITH values presenting downloaded / not downloaded PDB files / Existing
+            messagebox.showinfo("Task done", "\n" + "\nDownloaded : "  + ", ".join(Downloaded) +
+                                "\n\nNot Found : " + ", ".join(NotFound) +
+                                "\n\nExisting : " + ", ".join(Existing))
+
         self.input_Path_Changed()
 
     def ButtonOnClick(self, event=None):
@@ -267,15 +283,12 @@ class MainApp:
                 self.ExtractButton.config(state="normal")
                 self.progressBarVar.set(0)
                 messagebox.showerror("Error", "Please select a protein and a chain")
-
                 print(exception)
 
         else:
             if not self.PDB_output_DIR.cget("path"):
-                # self.OutputDirLabel.config(foreground="red")
                 self.flashLabel(self.OutputDirLabel, 0)
-            if not self.PDB_input_DIR.cget("path"):  # or not self.input_Path_Changed():
-                # self.InputDirLabel.config(foreground="red")
+            if not self.PDB_input_DIR.cget("path"):
                 self.flashLabel(self.InputDirLabel, 0)
 
     def flashLabel(self, Label, iteration):
@@ -293,6 +306,7 @@ class MainApp:
         self.setOutputFormat(self.combobox.get())
 
     def Extractor(self):
+        self.getFromFTP.delete(0, "end")
         ExtractionThread = Thread(target=self.extractionThread)
 
         if not self.ExtractorLock.locked():
@@ -371,12 +385,6 @@ class MainApp:
 
     def run(self):
         self.mainwindow.mainloop()
-
-
-class CustomDialog(Toplevel):
-    def __init__(self):
-        self.base = Toplevel()
-        self.base
 
 
 if __name__ == '__main__':

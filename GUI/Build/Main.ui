@@ -385,7 +385,6 @@
           <object class="ttk.Button" id="Extract_Button">
             <property name="takefocus">false</property>
             <property name="text" translatable="yes">Extract</property>
-            <bind sequence="&lt;Button-1&gt;" handler="ButtonOnClick" add="" />
             <layout manager="grid">
               <property name="column">7</property>
               <property name="columnspan">2</property>
@@ -606,7 +605,6 @@
           <object class="ttk.Button" id="DownloadButton">
             <property name="takefocus">false</property>
             <property name="text" translatable="yes">Download</property>
-            <bind sequence="&lt;Button-1&gt;" handler="downloadPDB" add="" />
             <layout manager="grid">
               <property name="column">1</property>
               <property name="columnspan">1</property>
