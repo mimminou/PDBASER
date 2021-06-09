@@ -30,7 +30,7 @@ PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, althou
 - Support for the popular residues output formats (pdb, sdf, mol2, smiles).
 - Multiple residue extraction at once is possible, chain only extraction with no residues is also possible.
 - Hydrogen generation for extracted residues is available (Except for SMILES format).
-- Possibility to download directly from the PDB directly.
+- Possibility to download proteins from the PDB directly.
 
 ![Screenshot](GUI/pdbaser.PNG?raw=true)
 
