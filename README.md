@@ -10,13 +10,16 @@ PDBaser does this for you !
 
 PDBaser reads raw .pdb and .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and removes water molecules, and then saves everything in a directory named as the original input filename.
 
+# Who is this for ?
+
+This tool is perfect for RMSD reliability test preparation, where a large number of proteins and their ligands are needed. It can also help people who are not very accustomed to command line interfaces, and aren't willing to pay a (usually high) premium for other software.
 
 
 # Requirements
 
 #### Windows
 
-For Windows users, PDBaser has a precompiled version, it can be found in the releases category, it can be installed on windows 7 SP1 / 8 / 8.1 / 10 and only requires Microsoft visual C++ 2015 x86.
+For Windows users, PDBaser has a precompiled version, it can be found in the releases category, and can be installed on windows 7 SP1 / 8 / 8.1 / 10 and only requires Microsoft visual C++ 2015 x86.
 
 #### Linux / MacOS
 
@@ -27,10 +30,10 @@ PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, althou
 - Input / Output Folder selection.
 - Support for compressed pdb / ent files.
 - 2D Depiction and PNG output.
-- Support for the popular residues output formats (pdb, sdf, mol2, smiles).
+- Outputs residues in most popular formats (pdb, sdf, mol2, smiles).
 - Multiple residue extraction at once is possible, chain only extraction with no residues is also possible.
 - Hydrogen generation for extracted residues is available (Except for SMILES format).
-- Possibility to download proteins from the PDB directly.
+- Support for downloading proteins from the PDB directly.
 
 ![Screenshot](GUI/pdbaser.PNG?raw=true)
 
