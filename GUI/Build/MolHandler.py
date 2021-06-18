@@ -98,11 +98,16 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     virtualString = StringIO(VS)
 
                 elif ligandExtractFormat == "mol2":
-                    lineLength = virtualString.readline().__len__()
-                    virtualString.seek(lineLength)     ## SKIP THE FIRST LINE OF THE HEADER IN TRIPOS MOL2 FILES
-                    virtualString.writelines("\n")
-                    virtualString.seek(lineLength)      ## POSITION CURSOR ON SECOND LINE IN MOL2 FILE
-                    virtualString.writelines(resname + "\n") ## WRITE RESIDUE NAME SO THAT OTHER PROGRAMS CAN READ IT
+                    virtualString.seek(0,0)     ## SKIP THE FIRST LINE OF THE HEADER IN TRIPOS MOL2 FILES
+                    content = virtualString.readlines()
+                    content.pop(1)
+                    content.insert(1,resname + "\n")
+                    VS = "".join(content)
+                    virtualString = StringIO(VS)
+                    #print(virtualString.readline())
+                    #virtualString.writelines("\n")
+                    #virtualString.seek(lineLength)      ## POSITION CURSOR ON SECOND LINE IN MOL2 FILE
+                    #virtualString.writelines(resname + "\n") ## WRITE RESIDUE NAME SO THAT OTHER PROGRAMS CAN READ IT
 
                 elif ligandExtractFormat == "smi":
                     #todo FIX LIGAND NAME IN SMI FILE FORMAT

@@ -8,7 +8,7 @@ def isThereInternet():
     Server = "one.one.one.one"
     try:
         host = socket.gethostbyname(Server)
-        s = socket.create_connection((host, 80), 2)
+        s = socket.create_connection((host, 80), 1)
         s.close()
         return True
     except Exception as exc:
