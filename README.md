@@ -15,15 +15,23 @@ PDBaser reads raw .pdb and .ent files as downloaded from the pdb, extracts pure 
 This tool is perfect for RMSD reliability test preparation, where a large number of proteins and their ligands are needed. It can also help people who are not very accustomed to command line interfaces, and aren't willing to pay a (usually high) premium for other software.
 
 
-# Requirements
+# Installation
 
 #### Windows
 
 For Windows users, PDBaser has a precompiled version, it can be found in the releases category, and can be installed on windows 7 SP1 / 8 / 8.1 / 10 and only requires Microsoft visual C++ 2015 x86.
 
-#### Linux / MacOS
+#### Linux / MacOS and other Unix / Unix-like
 
-PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, although i haven't tested myself, for this to work, this program requires Python 3.6.5 (And only 3.6.5, other versions will not work with openbabel libraries unless you compile them yourself), Biopython, Pygubu and openbabel and it's python bindings (Again, 3.6.5) are also required.
+PDBaser_GUI.py (from GUI folder) is not OS dependant, and it's dependencies will probably run on any operating system provided they are correctly setup.
+Since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to setup the environment for it from scratch.
+
+- 1- First, you need a working python environment with support for Tkinter (i'm looking at you, Arch Linux)
+- 2- Install BioPython and Pygubu from pip (pip install biopython / pip install pygubu)
+- 3- You need to build openbabel 3.1.1 with depiction support (Cairo) and python binding from source, and then install it from pip (openbabel==3.1.1). 
+
+
+If everything is setup correctly, running PDBaser_GUI.py should work,
 
 # Features
 
@@ -47,8 +55,10 @@ PDBaser_GUI.py (from GUI folder) and it's dependencies will probably run, althou
 
 # Downloads
 
-For Windows X86_64 :  Check releases section.
+For Windows x86/x64 : A binary setup is available in releases section.
 
+
+For Unix/Unix-like(Linux/MacOS etc..) : Source is available in releases section.
 
 
 # Citations
