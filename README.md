@@ -23,19 +23,20 @@ For Windows users, PDBaser has a precompiled version, it can be found in the rel
 
 #### Linux / MacOS and other Unix / Unix-like
 
-PDBaser_GUI.py (from GUI folder) is not OS dependant, and it's dependencies will probably run on any operating system provided they are correctly setup.
-Since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to setup the environment for it from scratch.
+The quickest way to get PDBaser running on those systems is by running the msi installer and then PDBaser_GUI.exe through Wine (Tested on Wine 6.0.1, Only works on a 64bit prefix). However, PDBaser_GUI.py (from GUI/Build/) is not OS dependant, and will probably run on any operating system provided the envorinmoent is correctly setup.
+
+Since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
 
 - 1- First, you need a working python environment with support for Tkinter (i'm looking at you, Arch Linux)
 - 2- Install BioPython and Pygubu from pip (pip install biopython / pip install pygubu)
-- 3- You need to build openbabel 3.1.1 with depiction support (Cairo) and python binding from source, and then install it from pip (openbabel==3.1.1). 
+- 3- You need to build openbabel 3.1.1 with depiction support (Cairo) and python bindings from source, and then install it from pip (openbabel==3.1.1). 
 
 
-If everything is setup correctly, running PDBaser_GUI.py should work,
+If everything is setup correctly, running PDBaser_GUI.py should work.
 
 # Features
 
-- Input / Output Folder selection.
+- Folder organization (Outputs are organized in a single folder named as the pdb file name).
 - Support for compressed pdb / ent files.
 - 2D Depiction and PNG output.
 - Outputs residues in most popular formats (pdb, sdf, mol2, smiles).
@@ -58,12 +59,12 @@ If everything is setup correctly, running PDBaser_GUI.py should work,
 For Windows x86/x64 : A binary setup is available in releases section.
 
 
-For Unix/Unix-like(Linux/MacOS etc..) : Source is available in releases section.
+For Unix/Unix-like(Linux/MacOS etc..) : Source is available in releases section, although i recommend installing the windows version and using it through Wine.
 
 
 # Citations
 
-PDBaser relies on Biopython BIO.PDB module and openbabel's pybel module.
+PDBaser relies on Biopython's BIO.PDB module and openbabel's pybel module.
 
 BIO.PDB : Hamelryck T and Manderick B (2003) PDB file parser and structure class implemented in Python. [*Bioinformatics*, 22, 2308-2310](http://dx.doi.org/10.1093/bioinformatics/btg299)
 
@@ -71,7 +72,7 @@ openbabel's pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python 
 
 
 
-If this software helped you making a scientific publication, a citation would be very appreciated :
+If this software helped you making a scientific publication, please cite it using the citation below :
 
 M. A. Abdelaziz, “PDBaser, A python tool for fast protein - ligand extraction”, https://github.com/mimminou/PDBASER
 
