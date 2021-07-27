@@ -21,18 +21,31 @@ This tool is perfect for RMSD reliability test preparation, where a large number
 
 For Windows users, PDBaser has a precompiled version, it can be found in the releases category, and can be installed on windows 7 SP1 / 8 / 8.1 / 10 and only requires Microsoft visual C++ 2015 x86.
 
-#### Linux / MacOS and other Unix / Unix-like
+#### Linux / MacOS and other Unix / Unix-like systems
 
-The quickest way to get PDBaser running on those systems is by running the msi installer and then PDBaser_GUI.exe through Wine (Tested on Wine 6.0.1, Only works on a 64bit prefix). However, PDBaser_GUI.py (from GUI/Build/) is not OS dependant, and will probably run on any operating system provided the envorinmoent is correctly setup.
-
-Since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
-
-- 1- First, you need a working python environment with support for Tkinter (i'm looking at you, Arch Linux)
-- 2- Install BioPython and Pygubu from pip (pip install biopython / pip install pygubu)
-- 3- You need to build openbabel 3.1.1 with depiction support (Cairo) and python bindings from source, and then install it from pip (openbabel==3.1.1). 
+There are 2 possible ways to run PDBaser in this case :
 
 
-If everything is setup correctly, running PDBaser_GUI.py should work.
+1. **Using Wine**
+
+
+    The quickest way to get PDBaser running on those systems is by using Wine (Tested on Wine 6.0.1, works only on a 64bit prefix for some reason),
+    
+    - 1 - Download and install the windows msi package and install it.
+    - 2 - open a terminal window where you installed PDBaser and run `wine PDBaser_GUI.exe`.
+
+
+2. **Building from source**
+
+
+    PDBaser is not OS dependant, and will probably run on any operating system provided the environment is correctly setup. However, since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
+
+    - 1 - First, you need a working python environment with support for Tkinter (i'm looking at you, Arch Linux)
+    - 2 - Install BioPython and Pygubu from pip (`pip install biopython` / `pip install pygubu`)
+    - 3 - You need to build openbabel 3.1.1 with depiction support (Cairo) and python bindings from source, and then install it from pip (`pip install openbabel==3.1.1`).
+
+
+    If everything is setup correctly, running GUI/Build/PDBaser_GUI.py should work.
 
 # Features
 
