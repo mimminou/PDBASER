@@ -6,17 +6,24 @@ import MolHandler
 import get_PDB
 from tkinter import messagebox, TclError
 from io import BytesIO
-from PIL import Image, ImageTk  # NEEDED FOR DEPICTION
+from PIL import Image, ImageDraw, ImageFont, ImageTk  # NEEDED FOR DEPICTION
 from logging import debug
 from threading import Thread, Lock
 
+# HIDDEN IMPORTS NEEDED FOR NUITKA :
+from pygubu.builder import tkstdwidgets
+from pygubu.builder import ttkstdwidgets
+from pygubu.builder import widgets
+from pygubu.builder.widgets import pathchooserinput
+
 PROJECT_PATH = path.dirname(__file__)
 PROJECT_UI = path.join(PROJECT_PATH, "Main.ui")
+global loadedPDB
 
 
 class MainApp:
     def __init__(self):
-        self.VERSION = "Abdelaziz. A, PDBaser(1.6)"
+        self.VERSION = "Abdelaziz. A, PDBaser(1.8)"
         self.PDB_Files = []
         self.format = "pdb"
         self.builder = builder = Builder()
@@ -43,7 +50,8 @@ class MainApp:
 
         # GET CheckBOXes
         self.checkBoxExtractFullProt = builder.get_variable("ExtractFullProtein")
-        self.checkboxDepiction = builder.get_variable("SaveDepiction")
+        self.checkboxDepictionPNG = builder.get_variable("SaveDepictionPNG")
+        self.checkboxDepictionSVG = builder.get_variable("SaveDepictionSVG")
         self.checkboxAddHydrogens = builder.get_variable("addHydrogens")
 
         # GET IMAGE SECTION
@@ -84,11 +92,14 @@ class MainApp:
         ## SET VERSION NUM
         self.versionLabel.config(text=self.VERSION)
 
+        # get multiprocessing
+
     def input_Path_Changed(self, event=None):
         self.setList([])
         self.ListBox_PDB.delete(0, "end")
         self.ListBox_Chains.delete(0, "end")
         self.ListBox_Residues.delete(0, "end")
+        self.imager.config(image="")
 
         extensions = [".pdb", ".PDB", ".ent", ".ENT", ".ent.gz", ".pdb.gz"]
         path = self.PDB_input_DIR.cget("path")
@@ -149,13 +160,16 @@ class MainApp:
             chainselectionThread.start()
 
     def ChainSelectionThread(self, event=None):
+        global loadedPDB
         self.ChainSelectionChangeLock.acquire(True)
         try:
             self.ListBox_PDB.config(state="disabled")
             selection = self.ListBox_Chains.get(self.ListBox_Chains.curselection())
             debug(selection)
-            self.ListBox_Residues.insert("end", *get_Residue.get_PDB_Residues(
-                self.ListBox_PDB.get(self.ListBox_PDB.curselection()), selection, self.PDB_input_DIR.cget("path")))
+            get_ResidueReturn = get_Residue.get_PDB_Residues(self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
+                                                             selection, self.PDB_input_DIR.cget("path"))
+            self.ListBox_Residues.insert("end", *get_ResidueReturn[0])
+            loadedPDB = get_ResidueReturn[1]
             self.imager.config(image="")
             debug("MY SELECTION : " + str(selection))
         except Exception as exc:
@@ -178,24 +192,47 @@ class MainApp:
                 selected_index = index
             # //// DEPICTION FUNCTION
             if not (selected_res.__len__() == 0 or selected_res.__len__() > 1):
-                get_image = MolHandler.DrawMol(self.PDB_input_DIR.cget("path"),
-                                               self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
-                                               self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
-                                               self.ListBox_Residues.get(selected_index))
-                if not (get_image == False):
-                    imageAsBytes = BytesIO(get_image)
-                    depiction = Image.open(imageAsBytes)
-                    self.img1 = ImageTk.PhotoImage(depiction)
-                    self.imager.config(image=self.img1)
-                    imageAsBytes.close()
-                else:
-                    messagebox.showerror("Error","There was an error generating the image")
+                self.drawDepiction(selected_index)
             else:
                 debug("NOT PRINTING, TOO MANY SELECTIONS")
                 self.imager.config(image="")
 
         except Exception as residueSelectionException:
             debug("Residue selection error : " + str(residueSelectionException))
+
+    def drawDepiction(self, selected_index):
+        self.get_image, self.MW = MolHandler.DrawMol(self.PDB_input_DIR.cget("path"),
+                                                     self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
+                                                     self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
+                                                     self.ListBox_Residues.get(selected_index),
+                                                     loadedPDB)  ##MW is molecular weight
+        if not (self.get_image is False):
+            self.imageAsBytes = BytesIO(self.get_image)
+            self.depiction = self.Resize_Image(
+                Image.open(self.imageAsBytes))  # Resizes image and adds white bars if it isn't squared
+            drawMW = ImageDraw.Draw(self.depiction)
+            font = ImageFont.truetype("arial", 15)
+            drawMW.text((5, 5), str(self.MW + " g/mol"), fill=(0, 0, 0), font=font)
+            self.img1 = ImageTk.PhotoImage(self.depiction)
+            self.imager.config(image=self.img1)
+            self.imageAsBytes.close()
+
+        else:
+            messagebox.showerror("Error", "There was an error generating the image")
+
+    def Resize_Image(self, inputImage):  # Thanks Jay D from SO ... you saved my life
+        image = inputImage
+        image_size = image.size
+        width = image_size[0]
+        height = image_size[1]
+        x = 300
+        y = 300
+        bigside = width if width > height else height
+        background = Image.new('RGBA', (bigside, bigside), (255, 255, 255, 255))
+        offset = (int(round(((bigside - width) / 2), 0)), int(round(((bigside - height) / 2), 0)))
+        background.paste(image, offset)
+        background = background.resize((x, y))
+        return background
 
     def finder(self, event=None):
         SearchTerm = self.SearchBox.get()
@@ -222,8 +259,8 @@ class MainApp:
             messagebox.showerror("Error", "Please select output path for downloading")
 
     def getPDBFromServer(self, event=None):
-        if not all(char.isalnum() or char.isspace() for char in self.getFromFTP.get()) :
-            messagebox.showerror("Failed to download","Please select correct PDB ID codes")
+        if not all(char.isalnum() or char.isspace() for char in self.getFromFTP.get()):
+            messagebox.showerror("Failed to download", "Please select correct PDB ID codes")
             return
         PDBList = self.getFromFTP.get().split()
         NotFound = []
@@ -244,12 +281,12 @@ class MainApp:
                 i = (i + (100 / count)).__round__(2)
                 self.progressBarVar.set(i)  ## SET PROGRESS BAR TO i VALUE
                 DownloadOperation = get_PDB.getPDBFromFTP(self.PDB_output_DIR.cget("path"), entry)
-                if DownloadOperation == 0 :
+                if DownloadOperation == 0:
                     Downloaded.append(entry)
                 elif DownloadOperation == 1:
                     messagebox.showerror("cannot access PDB", "Please check your internet connection or proxy settings")
                     return
-                elif DownloadOperation == 2 :
+                elif DownloadOperation == 2:
                     Existing.append(entry)
                 elif DownloadOperation == 3:
                     NotFound.append(entry)
@@ -266,11 +303,10 @@ class MainApp:
             self.progressBarVar.set(0)
         except Exception as runtimeError:
             pass
-        if Downloaded or NotFound or Existing:        # THESE are LISTS WITH values presenting downloaded / not downloaded PDB files / Existing
-            messagebox.showinfo("Task done", "\n" + "\nDownloaded : "  + ", ".join(Downloaded) +
+        if Downloaded or NotFound or Existing:  # THESE are LISTS WITH values presenting downloaded / not downloaded PDB files / Existing
+            messagebox.showinfo("Task done", "\n" + "\nDownloaded : " + ", ".join(Downloaded) +
                                 "\n\nNot Found : " + ", ".join(NotFound) +
                                 "\n\nExisting : " + ", ".join(Existing))
-
         self.input_Path_Changed()
 
     def ButtonOnClick(self, event=None):
@@ -334,7 +370,8 @@ class MainApp:
                                                        self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
                                                        self.getOutputFormat(),
                                                        selected_residues, self.checkBoxExtractFullProt.get(),
-                                                       self.checkboxDepiction.get(),
+                                                       self.checkboxDepictionPNG.get(),
+                                                       self.checkboxDepictionSVG.get(),
                                                        self.checkboxAddHydrogens.get()))
             self.progressBarVar.set(80)
 

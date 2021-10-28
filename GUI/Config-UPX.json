@@ -1,0 +1,221 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "D:\\Github\\repositories\\PDBASER\\GUI\\Build\\PDBaser_GUI.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": false
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "D:/Github/repositories/PDBASER/GUI/Build/default_icon.ico"
+  },
+  {
+   "optionDest": "upx_dir",
+   "value": "C:/UPX/upx-3.96-win32"
+  },
+  {
+   "optionDest": "ascii",
+   "value": false
+  },
+  {
+   "optionDest": "clean_build",
+   "value": false
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": false
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "win_private_assemblies",
+   "value": false
+  },
+  {
+   "optionDest": "win_no_prefer_redirects",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.tkstdwidgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.ttkstdwidgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.widgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.widgets.pathchooserinput"
+  },
+  {
+   "optionDest": "datas",
+   "value": "D:/Stuff/iconv.dll;."
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.tkstdwidgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.ttkstdwidgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.widgets"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pygubu.builder.widgets.pathchooserinput"
+  },
+  {
+   "optionDest": "datas",
+   "value": "D:/Github/repositories/PDBASER/GUI/Build/default_icon.ico;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "D:/Github/repositories/PDBASER/GUI/Build/Main.ui;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/bz2.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/cairo.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/expat.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/fontconfig.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/formats_cairo.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/formats_common.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/formats_compchem.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/formats_json.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/formats_misc.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/formats_utility.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/formats_xml.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/freetype.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/iconv.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/libcharset.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/libiconv.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/libinchi.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/libpng16.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/libxml2.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/openbabel-3.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/plugin_charges.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/plugin_descriptors.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/plugin_fingerprints.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/plugin_forcefields.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/plugin_ops.obf;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/xdr-0.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/bL4nK/output/OBABEL-LIBS/zlib1.dll;."
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "openbabel"
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": false,
+  "manualArguments": ""
+ }
+}

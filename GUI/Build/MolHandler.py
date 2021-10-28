@@ -1,15 +1,19 @@
 import pathlib
 from Bio.PDB import PDBParser, PDBIO, Select
 from warnings import simplefilter
-from openbabel import openbabel, pybel
-from io import StringIO
+from openbabel import pybel
+from io import StringIO, BytesIO
 from shutil import copyfile
 from logging import debug
+from oasa3 import cairo_out, coords_generator, molfile
+import cairo
 from gzip import open as gzOpen
 
-## THIS IS VERSION 1.6 OF THIS SCRIPT ...
+
+## THIS IS VERSION 1.8 OF THIS SCRIPT ...
 simplefilter("ignore")
 
+global Pic
 
 def is_het(residue):
     res = residue.id[0]
@@ -35,21 +39,25 @@ class ResidueSelect(Select):
 
 
 def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
-            saveDepiction=False, add_hydrogens=False):  ## Main Function
+            saveDepictionPNG=False,saveDepictionSVG=False, add_hydrogens=False):  ## Main Function
     extractedResidues = []
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
+    nonHetSelect = NonHetSelect()
+
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
         zippedFile = gzOpen(input_DIR + "/" + PDB_FILE, "rt")
+
         temp_file = zippedFile.read()
         zippedFile.close()
         Structure = StringIO(temp_file)
     if ligandExtractFormat is None:
         ligandExtractFormat = "pdb"
-    pdb = PDBParser().get_structure(PDB_FILE, Structure)
+    pdbParser = PDBParser()
+    pdb = pdbParser.get_structure(PDB_FILE, Structure)
     io = PDBIO()
     io.set_structure(pdb)
     PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
@@ -61,7 +69,8 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
 
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAINS
-
+            nonHetSelect = NonHetSelect()
+            resSelect = ResidueSelect(model[Chain], residue)
             if (Residues is None) or (not residue):
                 break
             elif (not is_het(residue)):
@@ -73,14 +82,15 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                 resname = residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
                 # SAVE RESIDUE IN VIRTUAL FILE
                 debug("SAVING TO VIRTUAL FILE")
-                virtualFileOtherFormats = StringIO()
-                io.save(virtualFileOtherFormats, ResidueSelect(model[Chain], residue))
+                virtualFilePDBFormat = StringIO()
+                io.save(virtualFilePDBFormat, resSelect)
                 ## CONVERT RESIDUE TO SAVE IT IN OUTPUT DIRECTORY
                 if ligandExtractFormat == "smiles":
                     ligandExtractFormat = "smi"
+
                 filenameOfOutput = Output_DIR + "/" + PDB_ID + "/" + PDB_Name + f"_{Chain}_" + \
                                        residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
-                molecule = pybel.readstring("pdb", virtualFileOtherFormats.getvalue())
+                molecule = pybel.readstring("pdb", virtualFilePDBFormat.getvalue())
 
                 if (add_hydrogens):             # ADD HYDROGEN
                     if not ligandExtractFormat == "smi":
@@ -104,10 +114,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     content.insert(1,resname + "\n")
                     VS = "".join(content)
                     virtualString = StringIO(VS)
-                    #print(virtualString.readline())
-                    #virtualString.writelines("\n")
-                    #virtualString.seek(lineLength)      ## POSITION CURSOR ON SECOND LINE IN MOL2 FILE
-                    #virtualString.writelines(resname + "\n") ## WRITE RESIDUE NAME SO THAT OTHER PROGRAMS CAN READ IT
+
 
                 elif ligandExtractFormat == "smi":
                     #todo FIX LIGAND NAME IN SMI FILE FORMAT
@@ -118,17 +125,23 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                 else:
                     with open(filenameOfOutput +"."+ ligandExtractFormat,"w") as savedFile :
                         savedFile.write(virtualString.getvalue())
-                # Check IF SAVE DEPICTION IS TRUE
-                if (saveDepiction):
-                    molecule.draw(False, filenameOfOutput + ".png")
 
-                virtualFileOtherFormats.close()
+                # Check IF SAVE DEPICTION IS TRUE
+                if (saveDepictionPNG):
+                    with open(filenameOfOutput + ".png","wb") as imgPNG:
+                        imgPNG.write(drawImg(virtualFilePDBFormat,"png"))
+
+                if (saveDepictionSVG):
+                    with open(filenameOfOutput + ".svg","wt") as imgSVG:
+                        imgSVG.write(drawImg(virtualFilePDBFormat,"svg").decode("utf-8"))
+
+                virtualFilePDBFormat.close()
                 virtualString.close()
 
         else:
             debug("Saving Peptidic Chain . . .")
             io.set_structure(model[Chain])
-            io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}.pdb", NonHetSelect())
+            io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}.pdb", nonHetSelect)
             io.set_structure(pdb)
         # SAVING FULL PROTEIN
         if saveFullProtein:
@@ -139,7 +152,36 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     return extractedResidues
 
 
-def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None):
+
+def drawImg(PDBString,format="png",getMW=False):    ## Used for generating coords and actual images
+    drawingFile = PDBString
+    drawingFile.seek(0)
+
+    resMolecule = pybel.readstring("pdb",drawingFile.getvalue())  # Need to be converted to SDF / MOL for image depiction
+    resMolecule.removeh()  # Removes H for better depiciton
+    molMoleculeString = StringIO(resMolecule.write("mol"))  # write as smiles to the stringIO
+    mol = molfile.text_to_mol(molMoleculeString.getvalue())
+    coordGenerator = coords_generator.coords_generator(18)  ## bond length
+    coordGenerator.calculate_coords(mol, 18, 1)  ##Generate coordinates for depiction with bond length 18
+    mycairoinstance = cairo_out.cairo_out(scaling=4, margin=15, font_size=10, bond_width=2.0,
+                                          background_color=(0, 0, 0, 0), bond_second_line_shortening=0.08,
+                                          color_bonds=False, space_around_atom=2.0,
+                                          line_width=1.2,
+                                          show_hydrogens_on_hetero= True,
+                                          wedge_width= 5)  ## Instantiante depictor, arguments are down below on this file
+
+    virtualPicture = BytesIO()
+    mycairoinstance.mol_to_cairo(mol, virtualPicture, format=format)  ## Save image to virtual picture as bytes with the specified format
+    molMoleculeString.close()
+    picture = virtualPicture.getvalue()
+    virtualPicture.close()
+    if(getMW==True):
+        mw = "{:.2f}".format(mol.weight)
+        return [picture,mw]
+    return picture
+
+
+def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
@@ -150,59 +192,130 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None):
         temp_file = zippedFile.read()
         zippedFile.close()
         Structure = StringIO(temp_file)
-
-    pdb = PDBParser().get_structure(PDB_FILE, Structure)
+    pdb = pdbFile
     io = PDBIO()
     picture = ""
     io.set_structure(pdb)
-    #pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER RESIDUES IN CHAIN
+            resSelect = ResidueSelect(model[Chain], residue)
             if (Residues is None) or (not residue):
+                print("residue is none")
                 return
             if (not is_het(residue)):
                 continue
-            if str((residue.id[0], residue.id[1])).replace("H_", "") in str(Residues):  ## REMOVE H_ PREFIX
 
+            if str((residue.id[0], residue.id[1])).replace("H_", "") in str(Residues):  ## REMOVE H_ PREFIX
                 residue.id[0].replace(" ", "")
                 debug("RESIDUES TEST : ")
                 debug(residue.id[0])
                 # SAVE RESIDUE IN VIRTUAL FILE
                 debug("SAVING TO VIRTUAL FILE")
                 virtualFile = StringIO()
-                virtualPicture= StringIO()
-                io.save(virtualFile, ResidueSelect(model[Chain], residue))
-                ## USING OPEN BABEL NATIVE DEPICTOR
-                obConv = openbabel.OBConversion()  # INITIALIZE OPENBABEL OBCONVERSION
-                obConv.SetInAndOutFormats("pdb", "_png2")
-                mol = openbabel.OBMol()  # INITIALIZE OBMOL
+                io.save(virtualFile, resSelect)
                 try:
-                    obConv.ReadString(mol, virtualFile.getvalue())
-                    virtualPicture.write(obConv.WriteString(mol))  # WRITE TO VIRTUAL FILE AS STRING
-                    virtualPicture.seek(0)
-                    picture = virtualPicture.getvalue().encode('utf8',
-                                                            'surrogateescape')  # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
+                    picture, mw = drawImg(virtualFile,getMW=True) # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
                     if compressedFile:
                         Structure.close()
-
                     virtualFile.close()
-                    virtualPicture.close()
-                    return picture
+                    return picture,mw
 
                 except Exception as e:
                     print(e)
                     virtualFile.close()
-                    virtualPicture.close()
                     picture = False
-
                 virtualFile.close()
-                virtualPicture.close()
 
     if compressedFile:
         Structure.close()
     return picture
 
-# TESTS, FOR INTERNAL USAGE ONLY, SPECIFIC TO MY PC, CHANGE THE VARIABLES AS YOU LIKE
+
+################################################################
+################################################################
+################################################################
+
+
+# TESTS AND OTHER META DATA :
+
+
+
 # input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
 # output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
-# Extract(input_dir,output_dir,"4EY7.pdb","A","sdf",('H_E20', 604))
+# if __name__ == "__main__":
+#     PDB_FILE = "4EY7.pdb"
+#     Structure = input_dir + "/" + PDB_FILE
+#     pdbParser = PDBParser()
+#     q = Queue()
+#     pdb = pdbParser.get_structure(PDB_FILE, Structure)
+#     for x in range(0,100):
+#         myP = Process(target=DrawMol,args=(input_dir,"4EY7.pdb","A",q,('E20', 604),pdb))
+#         myP.start()
+#         myP.join()
+#         print(q.get())
+#
+#         # DrawMol(input_dir,"4EY7.pdb","A","Q",('E20', 604),pdb)
+#     input("Finished, press any key to terminate . . .")
+
+#
+# ## NON PROCESS APPROACH
+# input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
+# output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
+# if __name__ == "__main__":
+#     PDB_FILE = "4EY7.pdb"
+#     Structure = input_dir + "/" + PDB_FILE
+#     pdbParser = PDBParser()
+#     pdb = pdbParser.get_structure(PDB_FILE, Structure)
+#     for x in range(0,1000):
+#         DrawMol(input_dir,"4EY7.pdb","A",('E20', 604),pdb)
+#     input("Finished, press any key to terminate . . .")
+# #
+# #
+
+
+
+# # TESTS, FOR INTERNAL USAGE ONLY, SPECIFIC TO MY PC, CHANGE THE VARIABLES AS YOU LIKE
+# input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
+# output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
+# for x in range(0,1000):
+#     print(Extract(input_dir,output_dir,"4EY7.pdb","A","smi",('E20', 604)))
+#     print(x)
+#
+# input("Finished, press any key to terminate . . .")
+
+
+# Cairo_out args
+# #default_options = {
+#         'scaling': 1.0,
+#         # should atom coordinates be rounded to whole pixels before rendering?
+#         # This improves image sharpness but might slightly change the geometry
+#         'align_coords': True,
+#         # the following also draws hydrogens on shown carbons
+#         'show_hydrogens_on_hetero': False,
+#         'show_carbon_symbol': False,
+#         'margin': 15,
+#         'line_width': 1.0,
+#         # how far second bond is drawn
+#         'bond_width': 6.0,
+#         'wedge_width': 6.0,
+#         'font_name': "Arial",
+#         'font_size': 16,
+#         # background color in RGBA
+#         'background_color': (1, 1, 1, 1),
+#         'color_atoms': True,
+#         'color_bonds': True,
+#         'space_around_atom': 2,
+#         # you can choose between atom_colors_full, atom_colors_minimal
+#         # or provide a custom dictionary
+#         'atom_colors': atom_colors_full,
+#         # proportion between subscript and normal letters size
+#         'subscript_size_ratio': 0.8,
+#         # how much to shorten second line of double and triple bonds (0-0.5)
+#         'bond_second_line_shortening': 0.15,
+#         # the following two are just for playing
+#         # - without antialiasing the output is ugly
+#         'antialias_text': True,
+#         'antialias_drawing': True,
+#         # this will only change appearance of overlapping text
+#         'add_background_to_text': False,
+#     }

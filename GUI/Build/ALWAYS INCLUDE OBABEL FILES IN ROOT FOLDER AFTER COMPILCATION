@@ -1,0 +1,1 @@
+nuitka PDBaser_GUI.py --plugin-enable=anti-bloat --standalone --windows-disable-console --windows-icon-from-ico=default_icon.ico --include-data-file=default_icon.ico=default_icon.ico --windows-force-stderr-spec=errors.txt --windows-force-stdout=Slog.txt --mingw64

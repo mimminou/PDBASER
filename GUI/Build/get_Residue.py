@@ -29,7 +29,7 @@ class ResidueSelect(Select):
 def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
     Res_Name = []
     Structure = input_DIR + "/" + PDB_FILE
-    extensions = [".pdb.gz",".ent.gz"]
+    extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
 
     if PDB_FILE.endswith(tuple(extensions)):
@@ -38,14 +38,15 @@ def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
         temp_file = zippedFile.read()
         zippedFile.close()
         Structure = StringIO(temp_file)
-
-    pdb = PDBParser().get_structure(PDB_FILE,Structure)
+    pdbParser = PDBParser()
+    pdb = pdbParser.get_structure(PDB_FILE,Structure)
     for res_item in pdb:
         for res in res_item[Chain]:
             if (not is_het(res)):
                 continue
             if "H_" in res.id[0]:
-                Res_Name.append([str(res.id[0][2:]),res.id[1]])
+                Res_Name.append([str(res.id[0][2:]), res.id[1]])
     if compressedFile:
         Structure.close()
-    return Res_Name
+
+    return Res_Name, pdb

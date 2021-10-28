@@ -29,10 +29,14 @@ def getPDBFromFTP(output_DIR, PDB_FILE):
         returnString = f.getvalue()
         if ExistsString in returnString:   # CHECK IF FILE EXIST
             print(returnString)
+            f.close()
             return 2
         elif NotFoundString in returnString : # FILE NOT FOUND IN PDB
+            f.close()
             return 3
         else:
+            f.close()
             return 0
     except Exception as x:
+        f.close()
         print(x)
