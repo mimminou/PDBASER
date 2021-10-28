@@ -77,7 +77,7 @@ For Unix/Unix-like(Linux/MacOS etc..) : Source is available in releases section,
 
 # Citations
 
-PDBaser relies on Biopython's BIO.PDB module and openbabel's pybel module.
+PDBaser relies on Biopython's BIO.PDB module, openbabel's pybel module and OASA.
 
 BIO.PDB : Hamelryck T and Manderick B (2003) PDB file parser and structure class implemented in Python. [*Bioinformatics*, 22, 2308-2310](http://dx.doi.org/10.1093/bioinformatics/btg299)
 
