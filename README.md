@@ -51,7 +51,7 @@ There are 2 possible ways to run PDBaser in this case :
 
 - Folder organization (Outputs are organized in a single folder named as the pdb file name).
 - Support for compressed pdb / ent files.
-- 2D Depiction and PNG output.
+- 2D Depiction and PNG/SVG output.
 - Outputs residues in most popular formats (pdb, sdf, mol2, smiles).
 - Multiple residue extraction at once is possible, chain only extraction with no residues is also possible.
 - Hydrogen generation for extracted residues is available (Except for SMILES format).
@@ -88,7 +88,6 @@ openbabel's pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python 
 If this software helped you making a scientific publication, please cite it using the citation below :
 
 M. A. Abdelaziz, “PDBaser, A python tool for fast protein - ligand extraction”, https://github.com/mimminou/PDBASER
-
 
 
 
