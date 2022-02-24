@@ -4,9 +4,9 @@
     <property name="cursor">arrow</property>
     <property name="height">0</property>
     <property name="highlightbackground">#c8797b</property>
-    <property name="minsize">900|550</property>
+    <property name="minsize">800|500</property>
     <property name="relief">flat</property>
-    <property name="resizable">none</property>
+    <property name="resizable">both</property>
     <property name="title" translatable="yes">PDBaser - GUI</property>
     <property name="width">0</property>
     <child>
@@ -18,15 +18,14 @@
           <property name="column">0</property>
           <property name="columnspan">16</property>
           <property name="ipadx">0</property>
+          <property name="ipady">300</property>
           <property name="padx">10</property>
-          <property name="pady">10</property>
+          <property name="pady">0</property>
           <property name="propagate">False</property>
           <property name="row">0</property>
-          <property name="rowspan">12</property>
+          <property name="rowspan">7</property>
           <property name="sticky">nsew</property>
-          <property type="col" id="0" name="minsize">0</property>
           <property type="col" id="0" name="weight">0</property>
-          <property type="row" id="0" name="minsize">145</property>
           <property type="row" id="0" name="pad">0</property>
           <property type="row" id="0" name="weight">0</property>
         </layout>
@@ -36,7 +35,7 @@
             <property name="text" translatable="yes">PDB File</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">2</property>
+              <property name="columnspan">1</property>
               <property name="propagate">False</property>
               <property name="row">0</property>
               <property name="rowspan">1</property>
@@ -59,16 +58,16 @@
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_PDBSelectionChanged" add="" />
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">2</property>
+              <property name="columnspan">1</property>
+              <property name="ipady">60</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">5</property>
+              <property name="rowspan">4</property>
               <property name="sticky">nsew</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
               <property type="col" id="0" name="uniform" />
               <property type="col" id="0" name="weight">0</property>
-              <property type="row" id="1" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -77,16 +76,15 @@
             <property name="orient">vertical</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">2</property>
+              <property name="columnspan">1</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">5</property>
+              <property name="rowspan">4</property>
               <property name="sticky">nse</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
               <property type="col" id="0" name="uniform" />
               <property type="col" id="0" name="weight">0</property>
-              <property type="row" id="1" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -98,8 +96,8 @@
               <property name="columnspan">1</property>
               <property name="padx">5</property>
               <property name="propagate">False</property>
-              <property name="row">0</property>
-              <property name="rowspan">6</property>
+              <property name="row">1</property>
+              <property name="rowspan">4</property>
               <property name="sticky">ns</property>
             </layout>
           </object>
@@ -132,14 +130,13 @@
             <layout manager="grid">
               <property name="column">4</property>
               <property name="columnspan">1</property>
-              <property name="ipady">0</property>
+              <property name="ipady">60</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">5</property>
+              <property name="rowspan">4</property>
               <property name="sticky">nsew</property>
               <property type="col" id="4" name="minsize">0</property>
               <property type="col" id="4" name="weight">0</property>
-              <property type="row" id="1" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -151,11 +148,10 @@
               <property name="columnspan">1</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">5</property>
+              <property name="rowspan">4</property>
               <property name="sticky">nse</property>
               <property type="col" id="4" name="minsize">0</property>
               <property type="col" id="4" name="weight">0</property>
-              <property type="row" id="1" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -167,8 +163,8 @@
               <property name="columnspan">1</property>
               <property name="padx">5</property>
               <property name="propagate">False</property>
-              <property name="row">0</property>
-              <property name="rowspan">6</property>
+              <property name="row">1</property>
+              <property name="rowspan">4</property>
               <property name="sticky">ns</property>
             </layout>
           </object>
@@ -200,15 +196,14 @@
             <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="On_ResidueSelectionChanged" add="" />
             <layout manager="grid">
               <property name="column">8</property>
-              <property name="columnspan">2</property>
-              <property name="ipady">65</property>
+              <property name="columnspan">1</property>
+              <property name="ipady">60</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">5</property>
+              <property name="rowspan">4</property>
               <property name="sticky">nsew</property>
               <property type="col" id="8" name="minsize">0</property>
               <property type="col" id="8" name="weight">0</property>
-              <property type="row" id="1" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -220,11 +215,10 @@
               <property name="columnspan">3</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">5</property>
+              <property name="rowspan">4</property>
               <property name="sticky">nse</property>
               <property type="col" id="8" name="minsize">0</property>
               <property type="col" id="8" name="weight">0</property>
-              <property type="row" id="1" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -235,12 +229,13 @@
             <layout manager="grid">
               <property name="column">0</property>
               <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
               <property name="padx">0</property>
-              <property name="pady">5</property>
+              <property name="pady">0</property>
               <property name="propagate">False</property>
-              <property name="row">6</property>
+              <property name="row">5</property>
               <property name="rowspan">1</property>
-              <property name="sticky">w</property>
+              <property name="sticky">nsew</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
               <property type="col" id="0" name="uniform" />
@@ -258,7 +253,7 @@
               <property name="propagate">False</property>
               <property name="row">6</property>
               <property name="rowspan">1</property>
-              <property name="sticky">e</property>
+              <property name="sticky">nsew</property>
               <property type="col" id="0" name="minsize">0</property>
               <property type="col" id="0" name="pad">0</property>
               <property type="col" id="0" name="uniform" />
@@ -268,7 +263,7 @@
         </child>
         <child>
           <object class="ttk.Label" id="Depiction">
-            <property name="anchor">w</property>
+            <property name="anchor">center</property>
             <property name="background">#ffffff</property>
             <property name="compound">top</property>
             <property name="relief">flat</property>
@@ -276,15 +271,14 @@
             <layout manager="grid">
               <property name="column">12</property>
               <property name="columnspan">1</property>
-              <property name="ipadx">150</property>
-              <property name="padx">5</property>
+              <property name="padx">0</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">5</property>
+              <property name="rowspan">4</property>
               <property name="sticky">nsew</property>
+              <property type="col" id="12" name="minsize">500</property>
               <property type="col" id="12" name="weight">0</property>
               <property type="col" id="13" name="weight">0</property>
-              <property type="row" id="1" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -293,25 +287,18 @@
     <child>
       <object class="ttk.Frame" id="frame1">
         <property name="height">0</property>
-        <property name="width">200</property>
+        <property name="width">400</property>
         <layout manager="grid">
           <property name="column">0</property>
           <property name="columnspan">10</property>
-          <property name="ipady">80</property>
+          <property name="ipady">5</property>
           <property name="padx">10</property>
           <property name="pady">10</property>
-          <property name="propagate">False</property>
-          <property name="row">11</property>
+          <property name="propagate">True</property>
+          <property name="row">16</property>
           <property name="rowspan">5</property>
-          <property name="sticky">new</property>
-          <property type="col" id="0" name="minsize">0</property>
+          <property name="sticky">nsew</property>
           <property type="col" id="0" name="weight">0</property>
-          <property type="row" id="1" name="weight">0</property>
-          <property type="row" id="10" name="minsize">80</property>
-          <property type="row" id="11" name="minsize">0</property>
-          <property type="row" id="6" name="minsize">80</property>
-          <property type="row" id="6" name="weight">1</property>
-          <property type="row" id="8" name="minsize">80</property>
         </layout>
         <child>
           <object class="tk.Label" id="Input_Dir_Label">
@@ -319,10 +306,13 @@
             <property name="text" translatable="yes">Input directory</property>
             <layout manager="grid">
               <property name="column">0</property>
+              <property name="columnspan">1</property>
+              <property name="padx">10</property>
               <property name="propagate">False</property>
-              <property name="row">5</property>
-              <property type="col" id="0" name="pad">0</property>
-              <property type="row" id="0" name="minsize">0</property>
+              <property name="row">6</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+              <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -334,16 +324,13 @@
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="input_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">2</property>
-              <property name="ipadx">200</property>
-              <property name="ipady">12</property>
-              <property name="padx">5</property>
-              <property name="propagate">False</property>
-              <property name="row">5</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">80</property>
+              <property name="propagate">True</property>
+              <property name="row">6</property>
               <property name="rowspan">1</property>
               <property name="sticky">nsew</property>
-              <property type="col" id="1" name="pad">0</property>
-              <property type="row" id="0" name="minsize">0</property>
+              <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -353,10 +340,12 @@
             <property name="text" translatable="yes">Output directory</property>
             <layout manager="grid">
               <property name="column">0</property>
+              <property name="columnspan">1</property>
+              <property name="padx">10</property>
               <property name="propagate">False</property>
-              <property name="row">6</property>
-              <property type="col" id="0" name="pad">0</property>
-              <property type="row" id="1" name="pad">0</property>
+              <property name="row">7</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>
@@ -368,16 +357,12 @@
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="output_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">2</property>
-              <property name="ipadx">200</property>
-              <property name="ipady">12</property>
-              <property name="padx">5</property>
-              <property name="pady">0</property>
-              <property name="propagate">False</property>
-              <property name="row">6</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">80</property>
+              <property name="propagate">True</property>
+              <property name="row">7</property>
+              <property name="rowspan">1</property>
               <property name="sticky">nsew</property>
-              <property type="col" id="1" name="pad">0</property>
-              <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -386,14 +371,14 @@
             <property name="takefocus">false</property>
             <property name="text" translatable="yes">Extract</property>
             <layout manager="grid">
-              <property name="column">7</property>
-              <property name="columnspan">2</property>
+              <property name="column">3</property>
+              <property name="columnspan">1</property>
               <property name="padx">10</property>
               <property name="propagate">False</property>
-              <property name="row">5</property>
+              <property name="row">6</property>
               <property name="rowspan">2</property>
               <property name="sticky">nsew</property>
-              <property type="row" id="0" name="minsize">0</property>
+              <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -401,18 +386,13 @@
           <object class="ttk.Label" id="label4">
             <property name="text" translatable="yes">Save depiction SVG</property>
             <layout manager="grid">
-              <property name="column">2</property>
+              <property name="column">3</property>
               <property name="columnspan">1</property>
-              <property name="ipadx">0</property>
-              <property name="padx">5</property>
+              <property name="padx">0</property>
               <property name="propagate">False</property>
               <property name="row">2</property>
               <property name="rowspan">1</property>
               <property name="sticky">w</property>
-              <property type="col" id="0" name="minsize">0</property>
-              <property type="col" id="0" name="pad">0</property>
-              <property type="col" id="0" name="uniform" />
-              <property type="col" id="0" name="weight">0</property>
               <property type="row" id="10" name="minsize">0</property>
               <property type="row" id="10" name="pad">0</property>
               <property type="row" id="11" name="minsize">0</property>
@@ -423,18 +403,13 @@
           <object class="ttk.Label" id="label5">
             <property name="text" translatable="yes">Save depiction PNG</property>
             <layout manager="grid">
-              <property name="column">2</property>
+              <property name="column">3</property>
               <property name="columnspan">1</property>
-              <property name="ipadx">0</property>
-              <property name="padx">5</property>
+              <property name="padx">0</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
               <property name="rowspan">1</property>
               <property name="sticky">w</property>
-              <property type="col" id="0" name="minsize">0</property>
-              <property type="col" id="0" name="pad">0</property>
-              <property type="col" id="0" name="uniform" />
-              <property type="col" id="0" name="weight">0</property>
             </layout>
           </object>
         </child>
@@ -443,12 +418,14 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:SaveDepictionPNG</property>
             <layout manager="grid">
-              <property name="column">2</property>
-              <property name="columnspan">6</property>
+              <property name="column">4</property>
+              <property name="columnspan">2</property>
               <property name="ipadx">0</property>
+              <property name="padx">10</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
               <property name="rowspan">1</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>
@@ -457,14 +434,17 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:SaveDepictionSVG</property>
             <layout manager="grid">
-              <property name="column">2</property>
-              <property name="columnspan">6</property>
+              <property name="column">4</property>
+              <property name="columnspan">1</property>
               <property name="ipadx">0</property>
+              <property name="padx">10</property>
               <property name="propagate">False</property>
               <property name="row">2</property>
               <property name="rowspan">1</property>
+              <property name="sticky">w</property>
               <property type="row" id="10" name="minsize">0</property>
               <property type="row" id="10" name="pad">0</property>
+              <property type="row" id="11" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -475,17 +455,13 @@
             <property name="values">pdb mol2 sdf smi</property>
             <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
             <layout manager="grid">
-              <property name="column">2</property>
-              <property name="columnspan">6</property>
-              <property name="ipadx">0</property>
-              <property name="ipady">0</property>
+              <property name="column">4</property>
+              <property name="columnspan">1</property>
               <property name="padx">0</property>
-              <property name="pady">0</property>
               <property name="propagate">False</property>
               <property name="row">0</property>
               <property name="rowspan">1</property>
-              <property name="sticky">e</property>
-              <property type="col" id="1" name="weight">0</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>
@@ -493,10 +469,12 @@
           <object class="ttk.Label" id="label6">
             <property name="text" translatable="yes">Output format</property>
             <layout manager="grid">
-              <property name="column">2</property>
-              <property name="padx">5</property>
-              <property name="propagate">True</property>
+              <property name="column">3</property>
+              <property name="columnspan">1</property>
+              <property name="padx">0</property>
+              <property name="propagate">False</property>
               <property name="row">0</property>
+              <property name="rowspan">1</property>
               <property name="sticky">w</property>
             </layout>
           </object>
@@ -509,23 +487,26 @@
             <property name="value">0</property>
             <property name="variable">string:barVar</property>
             <layout manager="grid">
-              <property name="column">9</property>
-              <property name="columnspan">2</property>
+              <property name="column">4</property>
+              <property name="columnspan">1</property>
               <property name="propagate">False</property>
-              <property name="row">5</property>
-              <property name="rowspan">1</property>
+              <property name="row">6</property>
+              <property name="rowspan">2</property>
               <property name="sticky">nsew</property>
+              <property type="row" id="1" name="pad">0</property>
             </layout>
           </object>
         </child>
         <child>
           <object class="ttk.Label" id="VersionLabel">
-            <property name="text" translatable="yes">VersionNUM</property>
+            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.8)</property>
             <layout manager="grid">
-              <property name="column">10</property>
+              <property name="column">4</property>
+              <property name="columnspan">1</property>
               <property name="propagate">True</property>
-              <property name="row">6</property>
-              <property name="sticky">e</property>
+              <property name="row">7</property>
+              <property name="rowspan">2</property>
+              <property name="sticky">nsew</property>
             </layout>
           </object>
         </child>
@@ -533,10 +514,12 @@
           <object class="ttk.Label" id="label7">
             <property name="text" translatable="yes">Add hydrogens</property>
             <layout manager="grid">
-              <property name="column">2</property>
-              <property name="padx">5</property>
+              <property name="column">3</property>
+              <property name="columnspan">1</property>
+              <property name="padx">0</property>
               <property name="propagate">False</property>
               <property name="row">4</property>
+              <property name="rowspan">1</property>
               <property name="sticky">w</property>
             </layout>
           </object>
@@ -546,12 +529,14 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:addHydrogens</property>
             <layout manager="grid">
-              <property name="column">2</property>
-              <property name="columnspan">6</property>
+              <property name="column">4</property>
+              <property name="columnspan">1</property>
               <property name="ipadx">0</property>
+              <property name="padx">10</property>
               <property name="propagate">False</property>
               <property name="row">4</property>
               <property name="rowspan">1</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>
@@ -560,10 +545,11 @@
             <property name="text" translatable="yes">Get from PDB</property>
             <layout manager="grid">
               <property name="column">0</property>
+              <property name="columnspan">1</property>
               <property name="propagate">False</property>
               <property name="row">0</property>
-              <property name="sticky">ew</property>
-              <property type="col" id="0" name="pad">0</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">nw</property>
             </layout>
           </object>
         </child>
@@ -575,14 +561,13 @@
             <property name="validate">none</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">2</property>
-              <property name="ipadx">60</property>
+              <property name="columnspan">3</property>
+              <property name="ipadx">30</property>
               <property name="padx">5</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
               <property name="rowspan">3</property>
               <property name="sticky">nw</property>
-              <property type="col" id="0" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -590,14 +575,29 @@
           <object class="ttk.Separator" id="separator1">
             <property name="orient">vertical</property>
             <layout manager="grid">
-              <property name="column">2</property>
+              <property name="column">1</property>
               <property name="columnspan">1</property>
               <property name="ipadx">0</property>
               <property name="padx">0</property>
               <property name="propagate">False</property>
               <property name="row">0</property>
-              <property name="rowspan">4</property>
-              <property name="sticky">nsw</property>
+              <property name="rowspan">5</property>
+              <property name="sticky">nse</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator2">
+            <property name="orient">horizontal</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">6</property>
+              <property name="ipady">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">False</property>
+              <property name="row">5</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">new</property>
             </layout>
           </object>
         </child>
@@ -608,11 +608,10 @@
             <layout manager="grid">
               <property name="column">1</property>
               <property name="columnspan">1</property>
+              <property name="padx">10</property>
               <property name="propagate">False</property>
               <property name="row">1</property>
-              <property name="rowspan">3</property>
-              <property name="sticky">nse</property>
-              <property type="col" id="1" name="pad">0</property>
+              <property name="rowspan">1</property>
             </layout>
           </object>
         </child>
@@ -623,12 +622,14 @@
             <property name="wraplength">0</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">1</property>
+              <property name="columnspan">3</property>
               <property name="propagate">False</property>
               <property name="row">2</property>
               <property name="rowspan">1</property>
               <property name="sticky">w</property>
-              <property type="col" id="0" name="pad">0</property>
+              <property type="row" id="10" name="minsize">0</property>
+              <property type="row" id="10" name="pad">0</property>
+              <property type="row" id="11" name="minsize">0</property>
             </layout>
           </object>
         </child>
@@ -637,11 +638,11 @@
             <property name="text" translatable="yes">Downloaded files will be saved in output directory</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">2</property>
+              <property name="columnspan">3</property>
               <property name="propagate">False</property>
               <property name="row">3</property>
+              <property name="rowspan">1</property>
               <property name="sticky">w</property>
-              <property type="col" id="0" name="pad">0</property>
             </layout>
           </object>
         </child>
@@ -649,10 +650,10 @@
           <object class="ttk.Label" id="label11">
             <property name="text" translatable="yes">Save full protein</property>
             <layout manager="grid">
-              <property name="column">2</property>
+              <property name="column">3</property>
               <property name="columnspan">1</property>
-              <property name="padx">5</property>
-              <property name="propagate">True</property>
+              <property name="padx">0</property>
+              <property name="propagate">False</property>
               <property name="row">3</property>
               <property name="rowspan">1</property>
               <property name="sticky">w</property>
@@ -664,10 +665,13 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:ExtractFullProtein</property>
             <layout manager="grid">
-              <property name="column">2</property>
-              <property name="columnspan">6</property>
+              <property name="column">4</property>
+              <property name="columnspan">1</property>
+              <property name="padx">10</property>
               <property name="propagate">False</property>
               <property name="row">3</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>

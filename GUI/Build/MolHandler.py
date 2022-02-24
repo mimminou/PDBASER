@@ -1,12 +1,15 @@
 import pathlib
 from Bio.PDB import PDBParser, PDBIO, Select
 from warnings import simplefilter
-from openbabel import pybel
+import platform
+if platform.system()=="windows":
+    from obabel.openbabel import pybel
+else:
+    from openbabel import pybel
 from io import StringIO, BytesIO
 from shutil import copyfile
 from logging import debug
-from oasa3 import cairo_out, coords_generator, molfile
-import cairo
+from oasa import cairo_out, coords_generator, molfile
 from gzip import open as gzOpen
 
 
@@ -214,7 +217,7 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
                 virtualFile = StringIO()
                 io.save(virtualFile, resSelect)
                 try:
-                    picture, mw = drawImg(virtualFile,getMW=True) # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
+                    picture, mw = drawImg(virtualFile, getMW=True) # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
                     if compressedFile:
                         Structure.close()
                     virtualFile.close()

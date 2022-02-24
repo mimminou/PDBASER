@@ -9,6 +9,7 @@ from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont, ImageTk  # NEEDED FOR DEPICTION
 from logging import debug
 from threading import Thread, Lock
+import platform
 
 # HIDDEN IMPORTS NEEDED FOR NUITKA :
 from pygubu.builder import tkstdwidgets
@@ -31,7 +32,8 @@ class MainApp:
         builder.add_from_file(PROJECT_UI)
         # GET MAIN WINDOW ITEMS
         self.mainwindow = builder.get_object('toplevel0')  ##GET MAIN WINDOW
-        self.mainwindow.iconbitmap("default_icon.ico")
+        if platform.system()=="Windows":
+            self.mainwindow.iconbitmap("default_icon.ico") ##Set Icon for Windows
         self.PDB_input_DIR = builder.get_object("PDB_input_DIR")  ##GET INPUT DIR
         self.PDB_output_DIR = builder.get_object("PDB_output_DIR")  ##GET OUTPUT DIR
         self.SearchBox = builder.get_object("SearchBox")
@@ -190,7 +192,7 @@ class MainApp:
             for index in self.ListBox_Residues.curselection():
                 selected_res.append(self.ListBox_Residues.get(index))
                 selected_index = index
-            # //// DEPICTION FUNCTION
+            #? DEPICTION FUNCTION
             if not (selected_res.__len__() == 0 or selected_res.__len__() > 1):
                 self.drawDepiction(selected_index)
             else:
@@ -208,16 +210,21 @@ class MainApp:
                                                      loadedPDB)  ##MW is molecular weight
         if not (self.get_image is False):
             self.imageAsBytes = BytesIO(self.get_image)
-            self.depiction = self.Resize_Image(
-                Image.open(self.imageAsBytes))  # Resizes image and adds white bars if it isn't squared
-            drawMW = ImageDraw.Draw(self.depiction)
-            font = ImageFont.truetype("arial", 15)
-            drawMW.text((5, 5), str(self.MW + " g/mol"), fill=(0, 0, 0), font=font)
-            self.img1 = ImageTk.PhotoImage(self.depiction)
-            self.imager.config(image=self.img1)
-            self.imageAsBytes.close()
+            try:
+                self.depiction = self.Resize_Image(
+                    Image.open(self.imageAsBytes))  # Resizes image and adds white bars if it isn't squared
+                drawMW = ImageDraw.Draw(self.depiction)
+                font = ImageFont.truetype("LiberationSans-Regular.ttf", size=15) # Avoid specifying a font for crosscompatibility
+                drawMW.text((5, 5), str(self.MW + " g/mol"), fill=(0, 0, 0), font=font)
+                self.img1 = ImageTk.PhotoImage(self.depiction)
+                self.imager.config(image=self.img1)
+                self.imageAsBytes.close()
+            except Exception as exc:
+                print(exc)
+                self.imageAsBytes.close()
 
         else:
+            print("Error in image depiction")
             messagebox.showerror("Error", "There was an error generating the image")
 
     def Resize_Image(self, inputImage):  # Thanks Jay D from SO ... you saved my life
@@ -225,8 +232,8 @@ class MainApp:
         image_size = image.size
         width = image_size[0]
         height = image_size[1]
-        x = 300
-        y = 300
+        x = 480
+        y = 480
         bigside = width if width > height else height
         background = Image.new('RGBA', (bigside, bigside), (255, 255, 255, 255))
         offset = (int(round(((bigside - width) / 2), 0)), int(round(((bigside - height) / 2), 0)))
