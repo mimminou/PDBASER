@@ -6,7 +6,7 @@ from io import StringIO
 def get_PDB_Chains(PDB_FILE, input_DIR):
     chain_Name = []
     Structure = input_DIR + "/" + PDB_FILE
-    extensions = [".pdb.gz",".ent.gz"]
+    extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
 
     if PDB_FILE.endswith(tuple(extensions)):

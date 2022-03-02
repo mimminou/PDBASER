@@ -295,7 +295,7 @@
           <property name="sticky">nsew</property>
         </layout>
         <containerlayout manager="grid">
-          <property name="anchor">center</property>
+          <property name="anchor">nw</property>
           <property type="row" id="0" name="weight">1</property>
         </containerlayout>
         <child>
@@ -415,6 +415,7 @@
         </child>
         <child>
           <object class="ttk.Checkbutton" id="checkbutton1">
+            <property name="state">normal</property>
             <property name="takefocus">false</property>
             <property name="variable">boolean:SaveDepictionPNG</property>
             <layout manager="grid">
@@ -433,6 +434,7 @@
         </child>
         <child>
           <object class="ttk.Checkbutton" id="checkbutton2">
+            <property name="state">normal</property>
             <property name="takefocus">false</property>
             <property name="variable">boolean:SaveDepictionSVG</property>
             <layout manager="grid">
@@ -453,6 +455,7 @@
           <object class="ttk.Combobox" id="formatComboBox">
             <property name="exportselection">false</property>
             <property name="state">readonly</property>
+            <property name="takefocus">false</property>
             <property name="values">pdb mol2 sdf smi</property>
             <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
             <layout manager="grid">
@@ -505,7 +508,7 @@
         </child>
         <child>
           <object class="ttk.Label" id="VersionLabel">
-            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.8)</property>
+            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.9)</property>
             <layout manager="grid">
               <property name="column">4</property>
               <property name="columnspan">1</property>
@@ -522,25 +525,7 @@
               <property name="column">3</property>
               <property name="columnspan">1</property>
               <property name="padx">0</property>
-              <property name="row">4</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Checkbutton" id="checkbutton3">
-            <property name="takefocus">false</property>
-            <property name="variable">boolean:addHydrogens</property>
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">1</property>
-              <property name="ipadx">0</property>
-              <property name="padx">10</property>
-              <property name="row">4</property>
+              <property name="row">3</property>
               <property name="rowspan">1</property>
               <property name="sticky">w</property>
             </layout>
@@ -674,7 +659,7 @@
               <property name="column">3</property>
               <property name="columnspan">1</property>
               <property name="padx">0</property>
-              <property name="row">3</property>
+              <property name="row">4</property>
               <property name="rowspan">1</property>
               <property name="sticky">w</property>
             </layout>
@@ -685,11 +670,31 @@
         </child>
         <child>
           <object class="ttk.Checkbutton" id="checkbutton4">
+            <property name="state">normal</property>
             <property name="takefocus">false</property>
             <property name="variable">boolean:ExtractFullProtein</property>
             <layout manager="grid">
               <property name="column">4</property>
               <property name="columnspan">1</property>
+              <property name="padx">10</property>
+              <property name="row">4</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+            </layout>
+            <containerlayout manager="grid">
+              <property name="propagate">False</property>
+            </containerlayout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Checkbutton" id="checkbutton3">
+            <property name="state">normal</property>
+            <property name="takefocus">false</property>
+            <property name="variable">boolean:addHydrogens</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
               <property name="padx">10</property>
               <property name="row">3</property>
               <property name="rowspan">1</property>
@@ -698,6 +703,68 @@
             <containerlayout manager="grid">
               <property name="propagate">False</property>
             </containerlayout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label12">
+            <property name="text" translatable="yes">Keep water in Chain</property>
+            <layout manager="grid">
+              <property name="column">5</property>
+              <property name="columnspan">1</property>
+              <property name="row">1</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Checkbutton" id="checkbutton5">
+            <property name="state">normal</property>
+            <property name="takefocus">false</property>
+            <property name="variable">boolean:KeepWaters</property>
+            <layout manager="grid">
+              <property name="column">5</property>
+              <property name="columnspan">1</property>
+              <property name="row">1</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Checkbutton" id="checkbutton6">
+            <property name="state">normal</property>
+            <property name="takefocus">false</property>
+            <property name="variable">boolean:BSG</property>
+            <layout manager="grid">
+              <property name="column">5</property>
+              <property name="row">2</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label13">
+            <property name="text" translatable="yes">Generate Binding Site</property>
+            <layout manager="grid">
+              <property name="column">5</property>
+              <property name="row">2</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Spinbox" id="spinbox1">
+            <property name="from_">1</property>
+            <property name="increment">1</property>
+            <property name="state">readonly</property>
+            <property name="to">10</property>
+            <property name="values">1 2 3 4 5 6 7 8 9 10</property>
+            <layout manager="grid">
+              <property name="column">5</property>
+              <property name="columnspan">1</property>
+              <property name="row">3</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
+            </layout>
           </object>
         </child>
       </object>

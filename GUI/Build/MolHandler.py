@@ -1,5 +1,5 @@
 import pathlib
-from Bio.PDB import PDBParser, PDBIO, Select
+from Bio.PDB import PDBParser, PDBIO, Select, NeighborSearch, Selection
 from warnings import simplefilter
 from io import StringIO, BytesIO
 from shutil import copyfile
@@ -9,9 +9,10 @@ from oasa.coords_generator import coords_generator
 from oasa.cairo_out import cairo_out
 from gzip import open as gzOpen
 from openbabel import pybel
+from get_Residue import __getResList
+from numpy import unique, array
 
-
-## THIS IS VERSION 1.8 OF THIS SCRIPT ...
+## THIS IS VERSION 1.9 OF THIS SCRIPT ...
 simplefilter("ignore")
 
 
@@ -19,10 +20,38 @@ def is_het(residue):
     res = residue.id[0]
     return res not in (" ", "W")
 
+def is_water(residue):
+    res = residue.id[0]
+    return res not in ("W")
+
+def getHeteroResidueList():
+    return __getResList()
+
+
+class BINDING_SITE_SELECT(Select):
+    def __init__(self, binding_site_residues, keep_waters=True):
+        self.binding_site_residues = binding_site_residues
+        self.keep_waters= keep_waters
+
+    def accept_residue(self, residue):
+        if(self.keep_waters):
+            if residue in self.binding_site_residues:
+                return 1
+
+        else:
+            if residue in self.binding_site_residues and is_water(residue):
+                return 1
+
 
 class NonHetSelect(Select):
     def accept_residue(self, residue):
         return 1 if residue.id[0] == " " else 0
+
+
+class KeepWaterSelect(Select):
+    __ignoredResList = getHeteroResidueList()
+    def accept_residue(self, residue):
+        return 1 if residue.id[0] not in self.__ignoredResList else 0
 
 
 class ResidueSelect(Select):
@@ -34,18 +63,18 @@ class ResidueSelect(Select):
         return chain.id == self.chain.id
 
     def accept_residue(self, residue):
-        # ? REMOVING WATER AND OTHER HETEROMOLECULES
+        # ? IGNORE WATER AND OTHER HETEROMOLECULES
         return residue == self.residue and is_het(residue)
 
 
 def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
-            saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False):  ## Main Function
+            saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius = 0):  ## Main Function
     extractedResidues = []
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
     nonHetSelect = NonHetSelect()
-
+    keepWaterSelect = KeepWaterSelect()
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
         zippedFile = gzOpen(input_DIR + "/" + PDB_FILE, "rt")
@@ -61,14 +90,13 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     io.set_structure(pdb)
     PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
     pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
-    if PDB_ID.startswith("pdb"):
+    if PDB_ID.startswith("pdb"):            ##? To Handle PDB files downloaded from the RCSPDB, if you name your files manually starting with "pdb" this can break stuff
         PDB_Name = PDB_ID[3:]
     else:
         PDB_Name = PDB_ID
 
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAINS
-            nonHetSelect = NonHetSelect()
             resSelect = ResidueSelect(model[Chain], residue)
             if (Residues is None) or (not residue):
                 break
@@ -114,10 +142,10 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     VS = "".join(content)
                     virtualString = StringIO(VS)
 
-
                 elif ligandExtractFormat == "smi":
                     # todo FIX LIGAND NAME IN SMI FILE FORMAT
                     pass
+
                 if (add_hydrogens):
                     with open(filenameOfOutput + "_H." + ligandExtractFormat,
                               "w") as savedFile:  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
@@ -125,6 +153,9 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                 else:
                     with open(filenameOfOutput + "." + ligandExtractFormat, "w") as savedFile:
                         savedFile.write(virtualString.getvalue())
+
+                if (binding_site_radius != 0):                 # THIS GENERATES THE BINDING SITE
+                    extractedResidues.append(generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR, residue, binding_site_radius, keep_waters))
 
                 # Check IF SAVE DEPICTION IS TRUE
                 if (saveDepictionPNG):
@@ -141,7 +172,11 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
         else:
             debug("Saving Peptidic Chain . . .")
             io.set_structure(model[Chain])
-            io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}.pdb", nonHetSelect)
+            if(keep_waters):
+                io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}_W_.pdb", keepWaterSelect)
+            else:
+                io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}.pdb", nonHetSelect)
+
             io.set_structure(pdb)
         # SAVING FULL PROTEIN
         if saveFullProtein:
@@ -232,46 +267,41 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
         Structure.close()
     return picture
 
+
+
+# generates binding site and extracts it
+def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputPath, selectedResidue, radius = 7, KeepWaters = True):
+    if (len(radius)==0):
+        radius = 7
+    elif radius == 0 :
+        radius = radius + 1
+    radius = int(radius)
+    Binding_Site = set()   # Create a set, much faster than List since order doesn't really matter
+    residueAtoms = Selection.unfold_entities(selectedResidue, "A")
+    querySet = Selection.unfold_entities(pdb_STRCUT, "A")
+    ns = NeighborSearch(querySet)
+    for atom in residueAtoms:
+        Binding_Site.update(ns.search(atom.coord, radius, "R"))
+
+    if (KeepWaters):
+        bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = False)
+        fileName = f"{PDB_Name}_Chain_{Chain}_BINDING_SITE"
+        output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
+    else:
+        bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = True)
+        fileName = f"{PDB_Name}_Chain_{Chain}_BINDING_SITE_W"
+        output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
+    pdbio.save(output_filename, bss)
+    return fileName
+
+
+
 ################################################################
 ################################################################
 ################################################################
 
 
 # TESTS AND OTHER META DATA :
-
-
-# input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
-# output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
-# if __name__ == "__main__":
-#     PDB_FILE = "4EY7.pdb"
-#     Structure = input_dir + "/" + PDB_FILE
-#     pdbParser = PDBParser()
-#     q = Queue()
-#     pdb = pdbParser.get_structure(PDB_FILE, Structure)
-#     for x in range(0,100):
-#         myP = Process(target=DrawMol,args=(input_dir,"4EY7.pdb","A",q,('E20', 604),pdb))
-#         myP.start()
-#         myP.join()
-#         print(q.get())
-#
-#         # DrawMol(input_dir,"4EY7.pdb","A","Q",('E20', 604),pdb)
-#     input("Finished, press any key to terminate . . .")
-
-#
-# ## NON PROCESS APPROACH
-# input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
-# output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
-# if __name__ == "__main__":
-#     PDB_FILE = "4EY7.pdb"
-#     Structure = input_dir + "/" + PDB_FILE
-#     pdbParser = PDBParser()
-#     pdb = pdbParser.get_structure(PDB_FILE, Structure)
-#     for x in range(0,1000):
-#         DrawMol(input_dir,"4EY7.pdb","A",('E20', 604),pdb)
-#     input("Finished, press any key to terminate . . .")
-# #
-# #
-
 
 # # TESTS, FOR INTERNAL USAGE ONLY, SPECIFIC TO MY PC, CHANGE THE VARIABLES AS YOU LIKE
 # input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"

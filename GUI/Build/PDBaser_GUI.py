@@ -24,7 +24,7 @@ global loadedPDB
 
 class MainApp:
     def __init__(self):
-        self.VERSION = "Abdelaziz. A, PDBaser(1.8)"
+        self.VERSION = "Abdelaziz. A, PDBaser(1.9)"
         self.PDB_Files = []
         self.format = "pdb"
         self.builder = builder = Builder()
@@ -51,10 +51,22 @@ class MainApp:
         self.img1 = ""
 
         # GET CheckBOXes
-        self.checkBoxExtractFullProt = builder.get_variable("ExtractFullProtein")
-        self.checkboxDepictionPNG = builder.get_variable("SaveDepictionPNG")
-        self.checkboxDepictionSVG = builder.get_variable("SaveDepictionSVG")
-        self.checkboxAddHydrogens = builder.get_variable("addHydrogens")
+        # self.checkBoxExtractFullProt = builder.get_variable("ExtractFullProtein")
+        # self.checkboxDepictionPNG = builder.get_variable("SaveDepictionPNG")
+        # self.checkboxDepictionSVG = builder.get_variable("SaveDepictionSVG")
+        # self.checkboxAddHydrogens = builder.get_variable("addHydrogens")
+
+        self.checkBoxExtractFullProt = builder.get_object("checkbutton1")
+        self.checkboxDepictionPNG = builder.get_object("checkbutton2")
+        self.checkboxAddHydrogens = builder.get_object("checkbutton3")
+        self.checkboxDepictionSVG = builder.get_object("checkbutton4")
+        self.checkboxKeepWater = builder.get_object("checkbutton5")
+        self.checkboxGenerateBindingSite = builder.get_object("checkbutton6")
+
+
+        # GET SPINBOXES
+
+        self.spinboxBindingSiteRadius = builder.get_object("spinbox1")
 
         # GET IMAGE SECTION
         # self.imager = builder.get_object("Depiction") #Deprecated, Instead of LABEL use CANVAS
@@ -103,7 +115,7 @@ class MainApp:
         self.ListBox_PDB.delete(0, "end")
         self.ListBox_Chains.delete(0, "end")
         self.ListBox_Residues.delete(0, "end")
-        self.imager.create_image(480, 480, image="", anchor="nw")
+        self.imager.delete("all")
         # self.imager.config(image="") deprecated
 
         extensions = [".pdb", ".PDB", ".ent", ".ENT", ".ent.gz", ".pdb.gz"]
@@ -152,7 +164,7 @@ class MainApp:
                 self.ListBox_Chains.insert("end",
                                            *get_Chain.get_PDB_Chains(str(selection), self.PDB_input_DIR.cget("path")))
                 # self.imager.config(image="")
-                self.imager.create_image(480, 480, image="", anchor="nw")
+                self.imager.delete("all")
 
             except Exception as exception:
                 print(exception)
@@ -178,7 +190,7 @@ class MainApp:
             self.ListBox_Residues.insert("end", *get_ResidueReturn[0])
             loadedPDB = get_ResidueReturn[1]
             # self.imager.config(image="")
-            self.imager.create_image(480, 480, image="", anchor="nw")
+            self.imager.delete("all")
 
             debug("MY SELECTION : " + str(selection))
         except Exception as exc:
@@ -205,7 +217,7 @@ class MainApp:
             else:
                 debug("NOT PRINTING, TOO MANY SELECTIONS")
                 # self.imager.config(image="")
-                self.imager.create_image(480, 480, image="", anchor="nw")
+                self.imager.delete("all")
 
 
         except Exception as residueSelectionException:
@@ -227,6 +239,7 @@ class MainApp:
                 font = ImageFont.truetype("LiberationSans-Regular.ttf", size=15,) # Avoid specifying a font for crosscompatibility
                 drawMW.text((5, 5), str(self.MW + " g/mol"), fill=(0, 0, 0), font=font)
                 self.img1 = ImageTk.PhotoImage(self.depiction)
+                self.imager.delete("all")
                 self.imager.create_image(0, 0, image=self.img1, anchor="nw")
                 # self.imager.config(image=self.img1)
                 self.imageAsBytes.close()
@@ -360,6 +373,10 @@ class MainApp:
 
     def ComboxSelected(self, event=None):
         debug("CBOX SELECTED : " + self.combobox.get())
+        if(self.combobox.get()=="smi"):
+            self.checkboxAddHydrogens.config(state="disabled")
+        else:
+            self.checkboxAddHydrogens.config(state="normal")
         self.setOutputFormat(self.combobox.get())
 
     def Extractor(self):
@@ -383,17 +400,32 @@ class MainApp:
             self.ExtractButton.config(state="disabled")
             for index in self.ListBox_Residues.curselection():
                 selected_residues.append(self.ListBox_Residues.get(index))
-            extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
-                                                       self.PDB_output_DIR.cget("path"),
-                                                       self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
-                                                       self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
-                                                       self.getOutputFormat(),
-                                                       selected_residues, self.checkBoxExtractFullProt.get(),
-                                                       self.checkboxDepictionPNG.get(),
-                                                       self.checkboxDepictionSVG.get(),
-                                                       self.checkboxAddHydrogens.get()))
-            self.progressBarVar.set(80)
+            if self.checkboxGenerateBindingSite.state():
+                extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
+                                                           self.PDB_output_DIR.cget("path"),
+                                                           self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
+                                                           self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
+                                                           self.getOutputFormat(),
+                                                           selected_residues, self.checkBoxExtractFullProt.state(),
+                                                           self.checkboxDepictionPNG.state(),
+                                                           self.checkboxDepictionSVG.state(),
+                                                           self.checkboxAddHydrogens.state(),
+                                                           self.checkboxKeepWater.state(),
+                                                           self.spinboxBindingSiteRadius.get()))
 
+            else:
+                extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
+                                                           self.PDB_output_DIR.cget("path"),
+                                                           self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
+                                                           self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
+                                                           self.getOutputFormat(),
+                                                           selected_residues, self.checkBoxExtractFullProt.state(),
+                                                           self.checkboxDepictionPNG.state(),
+                                                           self.checkboxDepictionSVG.state(),
+                                                           self.checkboxAddHydrogens.state(),
+                                                           self.checkboxKeepWater.state()))
+
+            self.progressBarVar.set(80)
             self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="lawn green")
 
             self.ExtractionDone(extracted_values)
