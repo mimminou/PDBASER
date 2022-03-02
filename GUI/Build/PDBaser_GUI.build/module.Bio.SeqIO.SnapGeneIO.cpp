@@ -1,5 +1,5 @@
 /* Generated code for Python module 'Bio.SeqIO.SnapGeneIO'
- * created by Nuitka version 0.6.17.3
+ * created by Nuitka version 0.7
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -57,8 +57,8 @@ static void createModuleConstants(void) {
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -80,39 +80,39 @@ void checkModuleConstants_Bio$SeqIO$SnapGeneIO(void) {
 // The module code objects.
 static PyCodeObject *codeobj_83f709c8afed0a45585927f7e355391f;
 static PyCodeObject *codeobj_ad80febe9219515e7170c9d7165c8a3a;
-static PyCodeObject *codeobj_c34991594746c044f7132f9fe11377d9;
-static PyCodeObject *codeobj_d9952534a57e491b4907eed8148f7b1d;
-static PyCodeObject *codeobj_4b618d30bb5fd2dbbcefff80fc074b74;
-static PyCodeObject *codeobj_cf851429fcc96a7378ba0710fdb51177;
-static PyCodeObject *codeobj_fa162b35f42ae75673b0a269bc9b6353;
+static PyCodeObject *codeobj_b729560f62de5c054ce6dc01015fc2a7;
+static PyCodeObject *codeobj_252d9dca94676f049b628c22a33081e5;
+static PyCodeObject *codeobj_120f9c22b510967d19505bf4e59f80a5;
+static PyCodeObject *codeobj_0b0a2bac32eb4dea45fa884bee598a2a;
+static PyCodeObject *codeobj_aa6f7a367eb123cb5df465087d07f227;
 static PyCodeObject *codeobj_001d9f8536009504cd793f01db66f423;
 static PyCodeObject *codeobj_ef5d87486f9526a83dac6e2d23117461;
 static PyCodeObject *codeobj_73b42917e17261fbfba6099658281106;
-static PyCodeObject *codeobj_3f6baa87eb551e860d74d9f17ed7c655;
+static PyCodeObject *codeobj_87322dce83727d4848bcf9ff2c305806;
 static PyCodeObject *codeobj_dd289883bb9c468cf6b74aead84e2f53;
 static PyCodeObject *codeobj_7f779cbbd52fd282b10805ee94813ec0;
-static PyCodeObject *codeobj_4c45a8e8aff66906f0b3487e41620091;
-static PyCodeObject *codeobj_0224c1e29080c28f61f333ac97c88403;
-static PyCodeObject *codeobj_65201d7cba494c151ab3d393ff9be678;
+static PyCodeObject *codeobj_86ea7be9ed961951d7a69fc6f44acf4d;
+static PyCodeObject *codeobj_2727074d956a045ac6db22d6d7b690ae;
+static PyCodeObject *codeobj_261e6e13bfbf26e4534496bb2c012c76;
 
 static void createModuleCodeObjects(void) {
     module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[172]); CHECK_OBJECT(module_filename_obj);
     codeobj_83f709c8afed0a45585927f7e355391f = MAKE_CODEOBJECT(module_filename_obj, 113, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[173], mod_consts[174], NULL, 1, 0, 0);
     codeobj_ad80febe9219515e7170c9d7165c8a3a = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[175], NULL, NULL, 0, 0, 0);
-    codeobj_c34991594746c044f7132f9fe11377d9 = MAKE_CODEOBJECT(module_filename_obj, 257, CO_NOFREE, mod_consts[160], mod_consts[176], NULL, 0, 0, 0);
-    codeobj_d9952534a57e491b4907eed8148f7b1d = MAKE_CODEOBJECT(module_filename_obj, 260, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[109], mod_consts[177], mod_consts[176], 2, 0, 0);
-    codeobj_4b618d30bb5fd2dbbcefff80fc074b74 = MAKE_CODEOBJECT(module_filename_obj, 229, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[79], mod_consts[76], NULL, 1, 0, 0);
-    codeobj_cf851429fcc96a7378ba0710fdb51177 = MAKE_CODEOBJECT(module_filename_obj, 234, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[59], mod_consts[178], NULL, 4, 0, 0);
-    codeobj_fa162b35f42ae75673b0a269bc9b6353 = MAKE_CODEOBJECT(module_filename_obj, 243, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[29], mod_consts[179], NULL, 4, 0, 0);
+    codeobj_b729560f62de5c054ce6dc01015fc2a7 = MAKE_CODEOBJECT(module_filename_obj, 250, CO_NOFREE, mod_consts[159], mod_consts[176], NULL, 0, 0, 0);
+    codeobj_252d9dca94676f049b628c22a33081e5 = MAKE_CODEOBJECT(module_filename_obj, 253, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[109], mod_consts[177], mod_consts[176], 2, 0, 0);
+    codeobj_120f9c22b510967d19505bf4e59f80a5 = MAKE_CODEOBJECT(module_filename_obj, 222, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[80], mod_consts[77], NULL, 1, 0, 0);
+    codeobj_0b0a2bac32eb4dea45fa884bee598a2a = MAKE_CODEOBJECT(module_filename_obj, 227, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[59], mod_consts[178], NULL, 4, 0, 0);
+    codeobj_aa6f7a367eb123cb5df465087d07f227 = MAKE_CODEOBJECT(module_filename_obj, 236, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[29], mod_consts[179], NULL, 4, 0, 0);
     codeobj_001d9f8536009504cd793f01db66f423 = MAKE_CODEOBJECT(module_filename_obj, 25, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[12], mod_consts[180], NULL, 1, 0, 0);
     codeobj_ef5d87486f9526a83dac6e2d23117461 = MAKE_CODEOBJECT(module_filename_obj, 101, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[121], mod_consts[181], NULL, 3, 0, 0);
-    codeobj_73b42917e17261fbfba6099658281106 = MAKE_CODEOBJECT(module_filename_obj, 54, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[150], mod_consts[182], NULL, 3, 0, 0);
-    codeobj_3f6baa87eb551e860d74d9f17ed7c655 = MAKE_CODEOBJECT(module_filename_obj, 126, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[152], mod_consts[183], NULL, 3, 0, 0);
-    codeobj_dd289883bb9c468cf6b74aead84e2f53 = MAKE_CODEOBJECT(module_filename_obj, 112, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[69], mod_consts[184], NULL, 3, 0, 0);
-    codeobj_7f779cbbd52fd282b10805ee94813ec0 = MAKE_CODEOBJECT(module_filename_obj, 72, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[151], mod_consts[185], NULL, 3, 0, 0);
-    codeobj_4c45a8e8aff66906f0b3487e41620091 = MAKE_CODEOBJECT(module_filename_obj, 184, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[153], mod_consts[186], NULL, 3, 0, 0);
-    codeobj_0224c1e29080c28f61f333ac97c88403 = MAKE_CODEOBJECT(module_filename_obj, 275, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[112], mod_consts[187], NULL, 2, 0, 0);
-    codeobj_65201d7cba494c151ab3d393ff9be678 = MAKE_CODEOBJECT(module_filename_obj, 270, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[170], mod_consts[188], NULL, 2, 0, 0);
+    codeobj_73b42917e17261fbfba6099658281106 = MAKE_CODEOBJECT(module_filename_obj, 54, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[149], mod_consts[182], NULL, 3, 0, 0);
+    codeobj_87322dce83727d4848bcf9ff2c305806 = MAKE_CODEOBJECT(module_filename_obj, 126, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[151], mod_consts[183], NULL, 3, 0, 0);
+    codeobj_dd289883bb9c468cf6b74aead84e2f53 = MAKE_CODEOBJECT(module_filename_obj, 112, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[184], NULL, 3, 0, 0);
+    codeobj_7f779cbbd52fd282b10805ee94813ec0 = MAKE_CODEOBJECT(module_filename_obj, 72, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[150], mod_consts[185], NULL, 3, 0, 0);
+    codeobj_86ea7be9ed961951d7a69fc6f44acf4d = MAKE_CODEOBJECT(module_filename_obj, 177, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[152], mod_consts[186], NULL, 3, 0, 0);
+    codeobj_2727074d956a045ac6db22d6d7b690ae = MAKE_CODEOBJECT(module_filename_obj, 268, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[112], mod_consts[187], NULL, 2, 0, 0);
+    codeobj_261e6e13bfbf26e4534496bb2c012c76 = MAKE_CODEOBJECT(module_filename_obj, 263, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[169], mod_consts[188], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -120,6 +120,9 @@ static PyObject *MAKE_GENERATOR_Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$ge
 
 
 static PyObject *MAKE_GENERATOR_Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate(struct Nuitka_CellObject **closure);
+
+
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(PyObject *defaults);
@@ -346,14 +349,13 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
         CHECK_OBJECT(generator_heap->var_packet_type);
         tmp_len_arg_1 = generator_heap->var_packet_type;
-        tmp_compexpr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -363,12 +365,9 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             generator_heap->type_description_1 = "cooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[4];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        assert(!(tmp_tmp_condition_result_1_object_1 == NULL));
-        tmp_condition_result_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
+        tmp_cmp_expr_right_1 = mod_consts[4];
+        tmp_condition_result_1 = RICH_COMPARE_LT_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -382,18 +381,18 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_subscript_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_subscript_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -403,16 +402,16 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             generator_heap->type_description_1 = "cooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[6];
+        tmp_args_element_value_1 = mod_consts[6];
         CHECK_OBJECT(generator_heap->var_packet_type);
-        tmp_args_element_name_2 = generator_heap->var_packet_type;
+        tmp_args_element_value_2 = generator_heap->var_packet_type;
         generator->m_frame->m_frame.f_lineno = 40;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -422,9 +421,9 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             generator_heap->type_description_1 = "cooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[7];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_1 = mod_consts[7];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -485,14 +484,13 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
         CHECK_OBJECT(generator_heap->var_length);
         tmp_len_arg_2 = generator_heap->var_length;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -502,12 +500,9 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             generator_heap->type_description_1 = "cooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[9];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_2_object_1 == NULL));
-        tmp_condition_result_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[9];
+        tmp_condition_result_2 = RICH_COMPARE_LT_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -531,18 +526,18 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
     branch_no_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_subscript_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_subscript_value_2;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -552,16 +547,16 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             generator_heap->type_description_1 = "cooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[11];
+        tmp_args_element_value_3 = mod_consts[11];
         CHECK_OBJECT(generator_heap->var_length);
-        tmp_args_element_name_4 = generator_heap->var_length;
+        tmp_args_element_value_4 = generator_heap->var_length;
         generator->m_frame->m_frame.f_lineno = 45;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_expression_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -571,9 +566,9 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             generator_heap->type_description_1 = "cooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[7];
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_2, 0);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_2 = mod_consts[7];
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_2, 0);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -595,7 +590,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_5;
         if (Nuitka_Cell_GET(generator->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[1]);
@@ -610,9 +605,9 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
 
         tmp_called_instance_3 = Nuitka_Cell_GET(generator->m_closure[0]);
         CHECK_OBJECT(generator_heap->var_length);
-        tmp_args_element_name_5 = generator_heap->var_length;
+        tmp_args_element_value_5 = generator_heap->var_length;
         generator->m_frame->m_frame.f_lineno = 47;
-        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[2], tmp_args_element_name_5);
+        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[2], tmp_args_element_value_5);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -632,15 +627,13 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         PyObject *tmp_len_arg_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
         CHECK_OBJECT(generator_heap->var_data);
         tmp_len_arg_3 = generator_heap->var_data;
-        tmp_compexpr_left_3 = BUILTIN_LEN(tmp_len_arg_3);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = BUILTIN_LEN(tmp_len_arg_3);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -651,10 +644,10 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(generator_heap->var_length);
-        tmp_compexpr_right_3 = generator_heap->var_length;
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_right_3 = generator_heap->var_length;
+        tmp_condition_result_3 = RICH_COMPARE_LT_NBOOL_LONG_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -664,24 +657,12 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
             generator_heap->type_description_1 = "cooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            generator_heap->exception_lineno = 48;
-            generator_heap->type_description_1 = "cooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -699,22 +680,22 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__1__iterate$$$genobj__1__iterat
     }
     branch_no_3:;
     {
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_tuple_element_1;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
         CHECK_OBJECT(generator_heap->var_packet_type);
         tmp_tuple_element_1 = generator_heap->var_packet_type;
-        tmp_expression_name_3 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_expression_name_3, 0, tmp_tuple_element_1);
+        tmp_expression_value_3 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_expression_value_3, 0, tmp_tuple_element_1);
         CHECK_OBJECT(generator_heap->var_length);
         tmp_tuple_element_1 = generator_heap->var_length;
-        PyTuple_SET_ITEM0(tmp_expression_name_3, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_expression_value_3, 1, tmp_tuple_element_1);
         CHECK_OBJECT(generator_heap->var_data);
         tmp_tuple_element_1 = generator_heap->var_data;
-        PyTuple_SET_ITEM0(tmp_expression_name_3, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_expression_value_3, 2, tmp_tuple_element_1);
         Nuitka_PreserveHeap(generator_heap->yield_tmps, &tmp_tuple_element_1, sizeof(PyObject *), NULL);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_3;
+        return tmp_expression_value_3;
         yield_return_1:
         Nuitka_RestoreHeap(generator_heap->yield_tmps, &tmp_tuple_element_1, sizeof(PyObject *), NULL);
         if (yield_return_value == NULL) {
@@ -953,12 +934,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[13]);
+        tmp_expression_value_1 = par_record;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[13]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1007,20 +988,20 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1030,12 +1011,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_1 = mod_consts[15];
+        tmp_left_value_1 = mod_consts[15];
         CHECK_OBJECT(par_length);
-        tmp_left_name_2 = par_length;
-        tmp_right_name_2 = mod_consts[4];
-        tmp_right_name_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_2, tmp_right_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_left_value_2 = par_length;
+        tmp_right_value_2 = mod_consts[4];
+        tmp_right_value_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_2, tmp_right_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1045,9 +1026,9 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1058,14 +1039,14 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_2 = par_data;
+        tmp_args_element_value_2 = par_data;
         frame_73b42917e17261fbfba6099658281106->m_frame.f_lineno = 63;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1076,7 +1057,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         Py_DECREF(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1253,17 +1234,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
 
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_assattr_target_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[17]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[17]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1274,15 +1256,9 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_sequence);
-        tmp_called_instance_1 = var_sequence;
-        frame_73b42917e17261fbfba6099658281106->m_frame.f_lineno = 64;
-        tmp_args_element_name_3 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[18],
-            PyTuple_GET_ITEM(mod_consts[19], 0)
-        );
-
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_expression_value_2 = var_sequence;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[18]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1293,8 +1269,22 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
             goto frame_exception_exit_1;
         }
         frame_73b42917e17261fbfba6099658281106->m_frame.f_lineno = 64;
-        tmp_assattr_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_args_element_value_3 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[19]);
+
+        Py_DECREF(tmp_called_value_3);
+        if (tmp_args_element_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 64;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_73b42917e17261fbfba6099658281106->m_frame.f_lineno = 64;
+        tmp_assattr_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1323,12 +1313,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_ass_subscript_1;
         tmp_ass_subvalue_1 = mod_consts[20];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_2 = par_record;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
+        tmp_expression_value_3 = par_record;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[21]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1355,12 +1345,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         CHECK_OBJECT(var_flags);
-        tmp_left_name_3 = var_flags;
-        tmp_right_name_3 = mod_consts[4];
-        tmp_condition_result_2 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
+        tmp_left_value_3 = var_flags;
+        tmp_right_value_3 = mod_consts[4];
+        tmp_condition_result_2 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
         if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -1382,12 +1372,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_ass_subscript_2;
         tmp_ass_subvalue_2 = mod_consts[23];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_3 = par_record;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[21]);
+        tmp_expression_value_4 = par_record;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[21]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1417,12 +1407,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet(struc
     {
         PyObject *tmp_ass_subvalue_3;
         PyObject *tmp_ass_subscribed_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_ass_subscript_3;
         tmp_ass_subvalue_3 = mod_consts[25];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_4 = par_record;
-        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[21]);
+        tmp_expression_value_5 = par_record;
+        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[21]);
         if (tmp_ass_subscribed_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1632,16 +1622,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[27]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1652,15 +1643,9 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_called_instance_1 = par_data;
-        frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 78;
-        tmp_args_element_name_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[18],
-            PyTuple_GET_ITEM(mod_consts[28], 0)
-        );
-
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_1 = par_data;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[18]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1671,8 +1656,22 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
         frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 78;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[28]);
+
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_args_element_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 78;
+            type_description_1 = "oooooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 78;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1688,16 +1687,16 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1708,12 +1707,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xml);
-        tmp_args_element_name_2 = var_xml;
-        tmp_args_element_name_3 = mod_consts[30];
+        tmp_args_element_value_2 = var_xml;
+        tmp_args_element_value_3 = mod_consts[30];
         frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 79;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
         if (tmp_assign_source_2 == NULL) {
@@ -1731,15 +1730,13 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_type);
-        tmp_compexpr_left_1 = var_type;
-        tmp_compexpr_right_1 = mod_consts[31];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_type;
+        tmp_cmp_expr_right_1 = mod_consts[31];
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1749,35 +1746,23 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 80;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_ass_subscript_1;
         tmp_ass_subvalue_1 = mod_consts[32];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[21]);
+        tmp_expression_value_2 = par_record;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1807,12 +1792,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_ass_subscript_2;
         tmp_ass_subvalue_2 = mod_consts[34];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_2 = par_record;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
+        tmp_expression_value_3 = par_record;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[21]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1840,16 +1825,16 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     branch_end_1:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1860,12 +1845,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xml);
-        tmp_args_element_name_4 = var_xml;
-        tmp_args_element_name_5 = mod_consts[35];
+        tmp_args_element_value_4 = var_xml;
+        tmp_args_element_value_5 = mod_consts[35];
         frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 85;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
         if (tmp_assign_source_3 == NULL) {
@@ -1883,10 +1868,10 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     }
     {
         nuitka_bool tmp_condition_result_2;
-        int tmp_truth_name_2;
+        int tmp_truth_name_1;
         CHECK_OBJECT(var_date);
-        tmp_truth_name_2 = CHECK_IF_TRUE(var_date);
-        if (tmp_truth_name_2 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(var_date);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1896,7 +1881,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
@@ -1906,19 +1891,19 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     branch_yes_2:;
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
         PyObject *tmp_ass_subscribed_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_ass_subscript_3;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[36]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[36]);
 
-        if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[36]);
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[36]);
         }
 
-        if (tmp_called_instance_2 == NULL) {
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1929,13 +1914,13 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_date);
-        tmp_args_element_name_6 = var_date;
-        tmp_args_element_name_7 = mod_consts[38];
+        tmp_args_element_value_6 = var_date;
+        tmp_args_element_value_7 = mod_consts[38];
         frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 87;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7};
             tmp_ass_subvalue_3 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
+                tmp_called_instance_1,
                 mod_consts[37],
                 call_args
             );
@@ -1963,8 +1948,8 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = par_record;
-        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[21]);
+        tmp_expression_value_4 = par_record;
+        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[21]);
         if (tmp_ass_subscribed_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1993,16 +1978,16 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     branch_no_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2013,12 +1998,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xml);
-        tmp_args_element_name_8 = var_xml;
-        tmp_args_element_name_9 = mod_consts[41];
+        tmp_args_element_value_8 = var_xml;
+        tmp_args_element_value_9 = mod_consts[41];
         frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 89;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_5, call_args);
         }
 
         if (tmp_assign_source_4 == NULL) {
@@ -2036,10 +2021,10 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     }
     {
         nuitka_bool tmp_condition_result_3;
-        int tmp_truth_name_3;
+        int tmp_truth_name_2;
         CHECK_OBJECT(var_acc);
-        tmp_truth_name_3 = CHECK_IF_TRUE(var_acc);
-        if (tmp_truth_name_3 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(var_acc);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2049,7 +2034,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
@@ -2090,16 +2075,16 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     branch_no_3:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2110,12 +2095,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xml);
-        tmp_args_element_name_10 = var_xml;
-        tmp_args_element_name_11 = mod_consts[43];
+        tmp_args_element_value_10 = var_xml;
+        tmp_args_element_value_11 = mod_consts[43];
         frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 93;
         {
-            PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11};
-            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11};
+            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
         if (tmp_assign_source_5 == NULL) {
@@ -2133,10 +2118,10 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     }
     {
         nuitka_bool tmp_condition_result_4;
-        int tmp_truth_name_4;
+        int tmp_truth_name_3;
         CHECK_OBJECT(var_comment);
-        tmp_truth_name_4 = CHECK_IF_TRUE(var_comment);
-        if (tmp_truth_name_4 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(var_comment);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2146,7 +2131,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_4 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
@@ -2156,20 +2141,15 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     branch_yes_4:;
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_1;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(var_comment);
-        tmp_called_instance_3 = var_comment;
-        frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 95;
-        tmp_expression_name_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[44],
-            &PyTuple_GET_ITEM(mod_consts[45], 0)
-        );
-
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_6 = var_comment;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[44]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2179,9 +2159,23 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[7];
-        tmp_assattr_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_1, 0);
-        Py_DECREF(tmp_expression_name_4);
+        frame_7f779cbbd52fd282b10805ee94813ec0->m_frame.f_lineno = 95;
+        tmp_expression_value_5 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_7, mod_consts[45]);
+
+        Py_DECREF(tmp_called_value_7);
+        if (tmp_expression_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 95;
+            type_description_1 = "oooooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_subscript_value_1 = mod_consts[7];
+        tmp_assattr_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_1, 0);
+        Py_DECREF(tmp_expression_value_5);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2249,11 +2243,11 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
         }
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
         CHECK_OBJECT(var_acc);
-        tmp_operand_name_1 = var_acc;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = var_acc;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2264,8 +2258,8 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
@@ -2274,7 +2268,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
     branch_yes_5:;
     {
         PyObject *tmp_assattr_value_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_assattr_target_4;
         if (par_record == NULL) {
 
@@ -2288,8 +2282,8 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet(str
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = par_record;
-        tmp_assattr_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[46]);
+        tmp_expression_value_7 = par_record;
+        tmp_assattr_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[46]);
         if (tmp_assattr_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2541,16 +2535,16 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet(st
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2560,13 +2554,13 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet(st
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_1 = mod_consts[49];
+        tmp_args_element_value_1 = mod_consts[49];
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_2 = par_data;
+        tmp_args_element_value_2 = par_data;
         frame_ef5d87486f9526a83dac6e2d23117461->m_frame.f_lineno = 107;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_iter_arg_1 == NULL) {
@@ -2579,7 +2573,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet(st
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         Py_DECREF(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2830,21 +2824,28 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet(st
 
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(var_cookie);
-        tmp_called_instance_1 = var_cookie;
+        tmp_expression_value_1 = var_cookie;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[18]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 108;
+            type_description_1 = "ooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_ef5d87486f9526a83dac6e2d23117461->m_frame.f_lineno = 108;
-        tmp_compexpr_left_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[18],
-            PyTuple_GET_ITEM(mod_consts[19], 0)
-        );
+        tmp_cmp_expr_left_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[19]);
 
-        if (tmp_compexpr_left_1 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2854,10 +2855,10 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[51];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[51];
+        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2867,24 +2868,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 108;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
@@ -3129,16 +3118,25 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
         {
             PyObject *tmp_assign_source_2;
             PyObject *tmp_iter_arg_2;
-            PyObject *tmp_called_instance_1;
+            PyObject *tmp_called_value_1;
+            PyObject *tmp_expression_value_1;
             CHECK_OBJECT(par_rangespec);
-            tmp_called_instance_1 = par_rangespec;
-            frame_dd289883bb9c468cf6b74aead84e2f53->m_frame.f_lineno = 113;
-            tmp_iter_arg_2 = CALL_METHOD_WITH_SINGLE_ARG(
-                tmp_called_instance_1,
-                mod_consts[44],
-                PyTuple_GET_ITEM(mod_consts[54], 0)
-            );
+            tmp_expression_value_1 = par_rangespec;
+            tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[44]);
+            if (tmp_called_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
 
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 113;
+                type_description_1 = "oooooooo";
+                goto try_except_handler_3;
+            }
+            frame_dd289883bb9c468cf6b74aead84e2f53->m_frame.f_lineno = 113;
+            tmp_iter_arg_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[54]);
+
+            Py_DECREF(tmp_called_value_1);
             if (tmp_iter_arg_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3424,7 +3422,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
         exception_lineno = 113;
         goto try_except_handler_2;
         outline_result_1:;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         Py_DECREF(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3601,12 +3599,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
 
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(var_start);
-        tmp_left_name_1 = var_start;
-        tmp_right_name_1 = mod_consts[4];
-        tmp_assign_source_10 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = var_start;
+        tmp_right_value_1 = mod_consts[4];
+        tmp_assign_source_10 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_1, tmp_right_value_1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3627,13 +3625,13 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_start);
-        tmp_compexpr_left_1 = var_start;
+        tmp_cmp_expr_left_1 = var_start;
         CHECK_OBJECT(var_end);
-        tmp_compexpr_right_1 = var_end;
-        tmp_condition_result_1 = RICH_COMPARE_GT_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_cmp_expr_right_1 = var_end;
+        tmp_condition_result_1 = RICH_COMPARE_GT_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3654,18 +3652,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_arg_value_1_1;
         PyObject *tmp_len_arg_1;
         PyObject *tmp_kw_call_dict_value_0_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3696,7 +3694,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[56]);
+            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[56]);
         }
 
         Py_DECREF(tmp_kw_call_arg_value_1_1);
@@ -3715,17 +3713,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
     }
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_kw_call_arg_value_0_2;
         PyObject *tmp_kw_call_arg_value_1_2;
         PyObject *tmp_kw_call_dict_value_0_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3744,7 +3742,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2, tmp_kw_call_arg_value_1_2};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_2};
-            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[56]);
+            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_3, args, kw_values, mod_consts[56]);
         }
 
         if (tmp_assign_source_12 == NULL) {
@@ -3762,13 +3760,13 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         CHECK_OBJECT(var_l1);
-        tmp_left_name_2 = var_l1;
+        tmp_left_value_2 = var_l1;
         CHECK_OBJECT(var_l2);
-        tmp_right_name_2 = var_l2;
-        tmp_assign_source_13 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = var_l2;
+        tmp_assign_source_13 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3786,17 +3784,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
     branch_no_1:;
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_4;
         PyObject *tmp_kw_call_arg_value_0_3;
         PyObject *tmp_kw_call_arg_value_1_3;
         PyObject *tmp_kw_call_dict_value_0_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3816,7 +3814,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location(struct 
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_3, tmp_kw_call_arg_value_1_3};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_3};
-            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_3, args, kw_values, mod_consts[56]);
+            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_4, args, kw_values, mod_consts[56]);
         }
 
         if (tmp_assign_source_14 == NULL) {
@@ -3983,6 +3981,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     PyObject *var_feature = NULL;
     PyObject *var_quals = NULL;
     PyObject *var_type = NULL;
+    PyObject *var_label = NULL;
     PyObject *var_strand = NULL;
     PyObject *var_directionality = NULL;
     PyObject *var_location = NULL;
@@ -3992,7 +3991,6 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     PyObject *var_qname = NULL;
     PyObject *var_qvalues = NULL;
     PyObject *var_value = NULL;
-    PyObject *var_name = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
     PyObject *tmp_for_loop_2__for_iterator = NULL;
@@ -4001,12 +3999,15 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     PyObject *tmp_for_loop_3__iter_value = NULL;
     PyObject *tmp_for_loop_4__for_iterator = NULL;
     PyObject *tmp_for_loop_4__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_3f6baa87eb551e860d74d9f17ed7c655;
+    struct Nuitka_FrameObject *frame_87322dce83727d4848bcf9ff2c305806;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
+    PyObject *tmp_dictset_value;
+    PyObject *tmp_dictset_dict;
+    PyObject *tmp_dictset_key;
     int tmp_res;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -4026,7 +4027,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_4;
-    static struct Nuitka_FrameObject *cache_frame_3f6baa87eb551e860d74d9f17ed7c655 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_87322dce83727d4848bcf9ff2c305806 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_5;
     PyObject *exception_keeper_value_5;
@@ -4035,45 +4036,46 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_3f6baa87eb551e860d74d9f17ed7c655)) {
-        Py_XDECREF(cache_frame_3f6baa87eb551e860d74d9f17ed7c655);
+    if (isFrameUnusable(cache_frame_87322dce83727d4848bcf9ff2c305806)) {
+        Py_XDECREF(cache_frame_87322dce83727d4848bcf9ff2c305806);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_3f6baa87eb551e860d74d9f17ed7c655 == NULL) {
+        if (cache_frame_87322dce83727d4848bcf9ff2c305806 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_3f6baa87eb551e860d74d9f17ed7c655 = MAKE_FUNCTION_FRAME(codeobj_3f6baa87eb551e860d74d9f17ed7c655, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_87322dce83727d4848bcf9ff2c305806 = MAKE_FUNCTION_FRAME(codeobj_87322dce83727d4848bcf9ff2c305806, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_3f6baa87eb551e860d74d9f17ed7c655->m_type_description == NULL);
-    frame_3f6baa87eb551e860d74d9f17ed7c655 = cache_frame_3f6baa87eb551e860d74d9f17ed7c655;
+    assert(cache_frame_87322dce83727d4848bcf9ff2c305806->m_type_description == NULL);
+    frame_87322dce83727d4848bcf9ff2c305806 = cache_frame_87322dce83727d4848bcf9ff2c305806;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_3f6baa87eb551e860d74d9f17ed7c655);
+    pushFrameStack(frame_87322dce83727d4848bcf9ff2c305806);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_3f6baa87eb551e860d74d9f17ed7c655) == 2); // Frame stack
+    assert(Py_REFCNT(frame_87322dce83727d4848bcf9ff2c305806) == 2); // Frame stack
 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[27]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4084,15 +4086,9 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_called_instance_1 = par_data;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 133;
-        tmp_args_element_name_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[18],
-            PyTuple_GET_ITEM(mod_consts[28], 0)
-        );
-
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_1 = par_data;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[18]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4102,9 +4098,23 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             type_description_1 = "ooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 133;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 133;
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[28]);
+
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_args_element_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 133;
+            type_description_1 = "ooooooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 133;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4121,12 +4131,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_instance_1;
         CHECK_OBJECT(var_xml);
-        tmp_called_instance_2 = var_xml;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 134;
+        tmp_called_instance_1 = var_xml;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 134;
         tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
+            tmp_called_instance_1,
             mod_consts[57],
             PyTuple_GET_ITEM(mod_consts[58], 0)
         );
@@ -4208,17 +4218,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4230,15 +4240,15 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         }
         CHECK_OBJECT(var_feature);
         tmp_tuple_element_1 = var_feature;
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         tmp_tuple_element_1 = mod_consts[60];
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[61]);
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 137;
-        tmp_assign_source_6 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[61]);
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 137;
+        tmp_assign_source_6 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4258,111 +4268,67 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     }
     {
         PyObject *tmp_assign_source_7;
-        tmp_assign_source_7 = mod_consts[4];
-        {
-            PyObject *old = var_strand;
-            var_strand = tmp_assign_source_7;
-            Py_INCREF(var_strand);
-            Py_XDECREF(old);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
+
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-    }
-    {
-        PyObject *tmp_assign_source_8;
-        PyObject *tmp_int_arg_1;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
-
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
-        }
-
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 141;
+            exception_lineno = 138;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_feature);
-        tmp_tuple_element_2 = var_feature;
-        tmp_args_name_2 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_tuple_element_2 = mod_consts[62];
-        PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
-        tmp_kwargs_name_2 = PyDict_Copy(mod_consts[63]);
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 141;
-        tmp_int_arg_1 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
-        if (tmp_int_arg_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 141;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
+        tmp_args_element_value_2 = var_feature;
+        tmp_args_element_value_3 = mod_consts[46];
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 138;
+        {
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
-        tmp_assign_source_8 = PyNumber_Int(tmp_int_arg_1);
-        Py_DECREF(tmp_int_arg_1);
-        if (tmp_assign_source_8 == NULL) {
+
+        if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 140;
+            exception_lineno = 138;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
         {
-            PyObject *old = var_directionality;
-            var_directionality = tmp_assign_source_8;
+            PyObject *old = var_label;
+            var_label = tmp_assign_source_7;
             Py_XDECREF(old);
         }
 
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
         int tmp_truth_name_1;
-        CHECK_OBJECT(var_directionality);
-        tmp_compexpr_left_1 = var_directionality;
-        tmp_compexpr_right_1 = mod_consts[64];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 143;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
+        CHECK_OBJECT(var_label);
+        tmp_truth_name_1 = CHECK_IF_TRUE(var_label);
         if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
 
-            exception_lineno = 143;
+
+            exception_lineno = 139;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
         tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
@@ -4371,40 +4337,156 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     }
     branch_yes_1:;
     {
+        PyObject *tmp_list_element_1;
+        CHECK_OBJECT(var_label);
+        tmp_list_element_1 = var_label;
+        tmp_dictset_value = PyList_New(1);
+        PyList_SET_ITEM0(tmp_dictset_value, 0, tmp_list_element_1);
+        CHECK_OBJECT(var_quals);
+        tmp_dictset_dict = var_quals;
+        tmp_dictset_key = mod_consts[62];
+        assert(PyDict_CheckExact(tmp_dictset_dict));
+        tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
+
+        Py_DECREF(tmp_dictset_value);
+        assert(!(tmp_res != 0));
+    }
+    branch_no_1:;
+    {
+        PyObject *tmp_assign_source_8;
+        tmp_assign_source_8 = mod_consts[4];
+        {
+            PyObject *old = var_strand;
+            var_strand = tmp_assign_source_8;
+            Py_INCREF(var_strand);
+            Py_XDECREF(old);
+        }
+
+    }
+    {
         PyObject *tmp_assign_source_9;
-        tmp_assign_source_9 = mod_consts[65];
+        PyObject *tmp_int_arg_1;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_value_2;
+        PyObject *tmp_tuple_element_2;
+        PyObject *tmp_kwargs_value_2;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
+
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        }
+
+        if (tmp_called_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 144;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_2;
+        }
+        CHECK_OBJECT(var_feature);
+        tmp_tuple_element_2 = var_feature;
+        tmp_args_value_2 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_2);
+        tmp_tuple_element_2 = mod_consts[63];
+        PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_2);
+        tmp_kwargs_value_2 = PyDict_Copy(mod_consts[64]);
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 144;
+        tmp_int_arg_1 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_2, tmp_kwargs_value_2);
+        Py_DECREF(tmp_args_value_2);
+        Py_DECREF(tmp_kwargs_value_2);
+        if (tmp_int_arg_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 144;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_2;
+        }
+        tmp_assign_source_9 = PyNumber_Int(tmp_int_arg_1);
+        Py_DECREF(tmp_int_arg_1);
+        if (tmp_assign_source_9 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 143;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_2;
+        }
+        {
+            PyObject *old = var_directionality;
+            var_directionality = tmp_assign_source_9;
+            Py_XDECREF(old);
+        }
+
+    }
+    {
+        nuitka_bool tmp_condition_result_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        CHECK_OBJECT(var_directionality);
+        tmp_cmp_expr_left_1 = var_directionality;
+        tmp_cmp_expr_right_1 = mod_consts[65];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 146;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_2;
+        }
+        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_2;
+        } else {
+            goto branch_no_2;
+        }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
+    }
+    branch_yes_2:;
+    {
+        PyObject *tmp_assign_source_10;
+        tmp_assign_source_10 = mod_consts[66];
         {
             PyObject *old = var_strand;
             assert(old != NULL);
-            var_strand = tmp_assign_source_9;
+            var_strand = tmp_assign_source_10;
             Py_INCREF(var_strand);
             Py_DECREF(old);
         }
 
     }
-    branch_no_1:;
+    branch_no_2:;
     {
-        PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = Py_None;
+        PyObject *tmp_assign_source_11;
+        tmp_assign_source_11 = Py_None;
         {
             PyObject *old = var_location;
-            var_location = tmp_assign_source_10;
+            var_location = tmp_assign_source_11;
             Py_INCREF(var_location);
             Py_XDECREF(old);
         }
 
     }
     {
-        PyObject *tmp_assign_source_11;
+        PyObject *tmp_assign_source_12;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_instance_2;
         CHECK_OBJECT(var_feature);
-        tmp_called_instance_3 = var_feature;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 147;
+        tmp_called_instance_2 = var_feature;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 150;
         tmp_iter_arg_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_3,
+            tmp_called_instance_2,
             mod_consts[57],
-            PyTuple_GET_ITEM(mod_consts[66], 0)
+            PyTuple_GET_ITEM(mod_consts[67], 0)
         );
 
         if (tmp_iter_arg_2 == NULL) {
@@ -4413,25 +4495,25 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 147;
+            exception_lineno = 150;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_11 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_12 = MAKE_ITERATOR(tmp_iter_arg_2);
         Py_DECREF(tmp_iter_arg_2);
-        if (tmp_assign_source_11 == NULL) {
+        if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 147;
+            exception_lineno = 150;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
         {
             PyObject *old = tmp_for_loop_2__for_iterator;
-            tmp_for_loop_2__for_iterator = tmp_assign_source_11;
+            tmp_for_loop_2__for_iterator = tmp_assign_source_12;
             Py_XDECREF(old);
         }
 
@@ -4440,11 +4522,11 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     loop_start_2:;
     {
         PyObject *tmp_next_source_2;
-        PyObject *tmp_assign_source_12;
+        PyObject *tmp_assign_source_13;
         CHECK_OBJECT(tmp_for_loop_2__for_iterator);
         tmp_next_source_2 = tmp_for_loop_2__for_iterator;
-        tmp_assign_source_12 = ITERATOR_NEXT(tmp_next_source_2);
-        if (tmp_assign_source_12 == NULL) {
+        tmp_assign_source_13 = ITERATOR_NEXT(tmp_next_source_2);
+        if (tmp_assign_source_13 == NULL) {
             if (CHECK_AND_CLEAR_STOP_ITERATION_OCCURRED()) {
 
                 goto loop_end_2;
@@ -4452,166 +4534,58 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 type_description_1 = "ooooooooooooooooo";
-                exception_lineno = 147;
+                exception_lineno = 150;
                 goto try_except_handler_3;
             }
         }
 
         {
             PyObject *old = tmp_for_loop_2__iter_value;
-            tmp_for_loop_2__iter_value = tmp_assign_source_12;
-            Py_XDECREF(old);
-        }
-
-    }
-    {
-        PyObject *tmp_assign_source_13;
-        CHECK_OBJECT(tmp_for_loop_2__iter_value);
-        tmp_assign_source_13 = tmp_for_loop_2__iter_value;
-        {
-            PyObject *old = var_segment;
-            var_segment = tmp_assign_source_13;
-            Py_INCREF(var_segment);
+            tmp_for_loop_2__iter_value = tmp_assign_source_13;
             Py_XDECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
-
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
-        }
-
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 148;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-        CHECK_OBJECT(var_segment);
-        tmp_args_element_name_2 = var_segment;
-        tmp_args_element_name_3 = mod_consts[67];
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 148;
+        CHECK_OBJECT(tmp_for_loop_2__iter_value);
+        tmp_assign_source_14 = tmp_for_loop_2__iter_value;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
-        }
-
-        if (tmp_assign_source_14 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 148;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-        {
-            PyObject *old = var_rng;
-            var_rng = tmp_assign_source_14;
+            PyObject *old = var_segment;
+            var_segment = tmp_assign_source_14;
+            Py_INCREF(var_segment);
             Py_XDECREF(old);
         }
 
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
-        if (var_location == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 149;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_operand_name_1 = var_location;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        if (tmp_res == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 149;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_2;
-        } else {
-            goto branch_no_2;
-        }
-    }
-    branch_yes_2:;
-    {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[69]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[69]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 150;
+            exception_lineno = 151;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_3;
         }
-        CHECK_OBJECT(var_rng);
-        tmp_args_element_name_4 = var_rng;
-        if (var_strand == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[70]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 150;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_args_element_name_5 = var_strand;
-        if (par_record == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 150;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_args_element_name_6 = par_record;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 150;
+        CHECK_OBJECT(var_segment);
+        tmp_args_element_value_4 = var_segment;
+        tmp_args_element_value_5 = mod_consts[68];
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 151;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_assign_source_15 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_15 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
         if (tmp_assign_source_15 == NULL) {
@@ -4620,30 +4594,23 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 150;
+            exception_lineno = 151;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_3;
         }
         {
-            PyObject *old = var_location;
-            var_location = tmp_assign_source_15;
+            PyObject *old = var_rng;
+            var_rng = tmp_assign_source_15;
             Py_XDECREF(old);
         }
 
     }
-    goto branch_end_2;
-    branch_no_2:;
     {
-        PyObject *tmp_assign_source_16;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
+        bool tmp_condition_result_3;
+        PyObject *tmp_operand_value_1;
         if (var_location == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4653,14 +4620,9 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             goto try_except_handler_3;
         }
 
-        tmp_left_name_1 = var_location;
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[69]);
-
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[69]);
-        }
-
-        if (tmp_called_name_6 == NULL) {
+        tmp_operand_value_1 = var_location;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4670,21 +4632,51 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_3;
         }
+        tmp_condition_result_3 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
+            goto branch_yes_3;
+        } else {
+            goto branch_no_3;
+        }
+    }
+    branch_yes_3:;
+    {
+        PyObject *tmp_assign_source_16;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[70]);
+
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+        }
+
+        if (tmp_called_value_7 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 153;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_3;
+        }
         CHECK_OBJECT(var_rng);
-        tmp_args_element_name_7 = var_rng;
+        tmp_args_element_value_6 = var_rng;
         if (var_strand == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[70]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 152;
+            exception_lineno = 153;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_8 = var_strand;
+        tmp_args_element_value_7 = var_strand;
         if (par_record == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
@@ -4692,37 +4684,25 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 152;
+            exception_lineno = 153;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_9 = par_record;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 152;
+        tmp_args_element_value_8 = par_record;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 153;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_right_name_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_assign_source_16 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_7, call_args);
         }
 
-        if (tmp_right_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 152;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_assign_source_16 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 152;
+            exception_lineno = 153;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_3;
         }
@@ -4733,14 +4713,116 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         }
 
     }
-    branch_end_2:;
+    goto branch_end_3;
+    branch_no_3:;
+    {
+        PyObject *tmp_assign_source_17;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        if (var_location == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 155;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_3;
+        }
+
+        tmp_left_value_1 = var_location;
+        tmp_called_value_8 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[70]);
+
+        if (unlikely(tmp_called_value_8 == NULL)) {
+            tmp_called_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+        }
+
+        if (tmp_called_value_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 155;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_3;
+        }
+        CHECK_OBJECT(var_rng);
+        tmp_args_element_value_9 = var_rng;
+        if (var_strand == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 155;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_3;
+        }
+
+        tmp_args_element_value_10 = var_strand;
+        if (par_record == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 155;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_3;
+        }
+
+        tmp_args_element_value_11 = par_record;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 155;
+        {
+            PyObject *call_args[] = {tmp_args_element_value_9, tmp_args_element_value_10, tmp_args_element_value_11};
+            tmp_right_value_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_8, call_args);
+        }
+
+        if (tmp_right_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 155;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_3;
+        }
+        tmp_assign_source_17 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_assign_source_17 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 155;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_3;
+        }
+        {
+            PyObject *old = var_location;
+            var_location = tmp_assign_source_17;
+            Py_XDECREF(old);
+        }
+
+    }
+    branch_end_3:;
     if (CONSIDER_THREADING() == false) {
         assert(ERROR_OCCURRED());
 
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 147;
+        exception_lineno = 150;
         type_description_1 = "ooooooooooooooooo";
         goto try_except_handler_3;
     }
@@ -4778,65 +4860,65 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_operand_name_2;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_2;
         if (var_location == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 153;
+            exception_lineno = 156;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
 
-        tmp_operand_name_2 = var_location;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_operand_value_2 = var_location;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 153;
+            exception_lineno = 156;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_3 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_3;
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
+            goto branch_yes_4;
         } else {
-            goto branch_no_3;
+            goto branch_no_4;
         }
     }
-    branch_yes_3:;
+    branch_yes_4:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[71];
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 154;
+        tmp_make_exception_arg_1 = mod_consts[72];
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 157;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
         exception_type = tmp_raise_type_1;
-        exception_lineno = 154;
+        exception_lineno = 157;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
         type_description_1 = "ooooooooooooooooo";
         goto try_except_handler_2;
     }
-    branch_no_3:;
+    branch_no_4:;
     {
-        PyObject *tmp_assign_source_17;
+        PyObject *tmp_assign_source_18;
         PyObject *tmp_iter_arg_3;
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_instance_3;
         CHECK_OBJECT(var_feature);
-        tmp_called_instance_4 = var_feature;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 156;
+        tmp_called_instance_3 = var_feature;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 159;
         tmp_iter_arg_3 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_4,
+            tmp_called_instance_3,
             mod_consts[57],
-            PyTuple_GET_ITEM(mod_consts[72], 0)
+            PyTuple_GET_ITEM(mod_consts[73], 0)
         );
 
         if (tmp_iter_arg_3 == NULL) {
@@ -4845,25 +4927,25 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 156;
+            exception_lineno = 159;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_17 = MAKE_ITERATOR(tmp_iter_arg_3);
+        tmp_assign_source_18 = MAKE_ITERATOR(tmp_iter_arg_3);
         Py_DECREF(tmp_iter_arg_3);
-        if (tmp_assign_source_17 == NULL) {
+        if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 156;
+            exception_lineno = 159;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
         {
             PyObject *old = tmp_for_loop_3__for_iterator;
-            tmp_for_loop_3__for_iterator = tmp_assign_source_17;
+            tmp_for_loop_3__for_iterator = tmp_assign_source_18;
             Py_XDECREF(old);
         }
 
@@ -4872,11 +4954,11 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     loop_start_3:;
     {
         PyObject *tmp_next_source_3;
-        PyObject *tmp_assign_source_18;
+        PyObject *tmp_assign_source_19;
         CHECK_OBJECT(tmp_for_loop_3__for_iterator);
         tmp_next_source_3 = tmp_for_loop_3__for_iterator;
-        tmp_assign_source_18 = ITERATOR_NEXT(tmp_next_source_3);
-        if (tmp_assign_source_18 == NULL) {
+        tmp_assign_source_19 = ITERATOR_NEXT(tmp_next_source_3);
+        if (tmp_assign_source_19 == NULL) {
             if (CHECK_AND_CLEAR_STOP_ITERATION_OCCURRED()) {
 
                 goto loop_end_3;
@@ -4884,101 +4966,101 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 type_description_1 = "ooooooooooooooooo";
-                exception_lineno = 156;
+                exception_lineno = 159;
                 goto try_except_handler_4;
             }
         }
 
         {
             PyObject *old = tmp_for_loop_3__iter_value;
-            tmp_for_loop_3__iter_value = tmp_assign_source_18;
-            Py_XDECREF(old);
-        }
-
-    }
-    {
-        PyObject *tmp_assign_source_19;
-        CHECK_OBJECT(tmp_for_loop_3__iter_value);
-        tmp_assign_source_19 = tmp_for_loop_3__iter_value;
-        {
-            PyObject *old = var_qualifier;
-            var_qualifier = tmp_assign_source_19;
-            Py_INCREF(var_qualifier);
+            tmp_for_loop_3__iter_value = tmp_assign_source_19;
             Py_XDECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_20;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_args_name_3;
-        PyObject *tmp_tuple_element_3;
-        PyObject *tmp_kwargs_name_3;
-        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
-
-        if (unlikely(tmp_called_name_7 == NULL)) {
-            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
-        }
-
-        if (tmp_called_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 157;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_4;
-        }
-        CHECK_OBJECT(var_qualifier);
-        tmp_tuple_element_3 = var_qualifier;
-        tmp_args_name_3 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_3);
-        tmp_tuple_element_3 = mod_consts[46];
-        PyTuple_SET_ITEM0(tmp_args_name_3, 1, tmp_tuple_element_3);
-        tmp_kwargs_name_3 = PyDict_Copy(mod_consts[73]);
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 157;
-        tmp_assign_source_20 = CALL_FUNCTION(tmp_called_name_7, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_args_name_3);
-        Py_DECREF(tmp_kwargs_name_3);
-        if (tmp_assign_source_20 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 157;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_4;
-        }
+        CHECK_OBJECT(tmp_for_loop_3__iter_value);
+        tmp_assign_source_20 = tmp_for_loop_3__iter_value;
         {
-            PyObject *old = var_qname;
-            var_qname = tmp_assign_source_20;
+            PyObject *old = var_qualifier;
+            var_qualifier = tmp_assign_source_20;
+            Py_INCREF(var_qualifier);
             Py_XDECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_21;
-        tmp_assign_source_21 = PyList_New(0);
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_args_value_3;
+        PyObject *tmp_tuple_element_3;
+        PyObject *tmp_kwargs_value_3;
+        tmp_called_value_9 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
+
+        if (unlikely(tmp_called_value_9 == NULL)) {
+            tmp_called_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        }
+
+        if (tmp_called_value_9 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 160;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_4;
+        }
+        CHECK_OBJECT(var_qualifier);
+        tmp_tuple_element_3 = var_qualifier;
+        tmp_args_value_3 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 0, tmp_tuple_element_3);
+        tmp_tuple_element_3 = mod_consts[46];
+        PyTuple_SET_ITEM0(tmp_args_value_3, 1, tmp_tuple_element_3);
+        tmp_kwargs_value_3 = PyDict_Copy(mod_consts[74]);
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 160;
+        tmp_assign_source_21 = CALL_FUNCTION(tmp_called_value_9, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_args_value_3);
+        Py_DECREF(tmp_kwargs_value_3);
+        if (tmp_assign_source_21 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 160;
+            type_description_1 = "ooooooooooooooooo";
+            goto try_except_handler_4;
+        }
         {
-            PyObject *old = var_qvalues;
-            var_qvalues = tmp_assign_source_21;
+            PyObject *old = var_qname;
+            var_qname = tmp_assign_source_21;
             Py_XDECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_22;
+        tmp_assign_source_22 = PyList_New(0);
+        {
+            PyObject *old = var_qvalues;
+            var_qvalues = tmp_assign_source_22;
+            Py_XDECREF(old);
+        }
+
+    }
+    {
+        PyObject *tmp_assign_source_23;
         PyObject *tmp_iter_arg_4;
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_instance_4;
         CHECK_OBJECT(var_qualifier);
-        tmp_called_instance_5 = var_qualifier;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 161;
+        tmp_called_instance_4 = var_qualifier;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 164;
         tmp_iter_arg_4 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
+            tmp_called_instance_4,
             mod_consts[57],
-            PyTuple_GET_ITEM(mod_consts[74], 0)
+            PyTuple_GET_ITEM(mod_consts[75], 0)
         );
 
         if (tmp_iter_arg_4 == NULL) {
@@ -4987,25 +5069,25 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 161;
+            exception_lineno = 164;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_assign_source_22 = MAKE_ITERATOR(tmp_iter_arg_4);
+        tmp_assign_source_23 = MAKE_ITERATOR(tmp_iter_arg_4);
         Py_DECREF(tmp_iter_arg_4);
-        if (tmp_assign_source_22 == NULL) {
+        if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 161;
+            exception_lineno = 164;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_4;
         }
         {
             PyObject *old = tmp_for_loop_4__for_iterator;
-            tmp_for_loop_4__for_iterator = tmp_assign_source_22;
+            tmp_for_loop_4__for_iterator = tmp_assign_source_23;
             Py_XDECREF(old);
         }
 
@@ -5014,11 +5096,11 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     loop_start_4:;
     {
         PyObject *tmp_next_source_4;
-        PyObject *tmp_assign_source_23;
+        PyObject *tmp_assign_source_24;
         CHECK_OBJECT(tmp_for_loop_4__for_iterator);
         tmp_next_source_4 = tmp_for_loop_4__for_iterator;
-        tmp_assign_source_23 = ITERATOR_NEXT(tmp_next_source_4);
-        if (tmp_assign_source_23 == NULL) {
+        tmp_assign_source_24 = ITERATOR_NEXT(tmp_next_source_4);
+        if (tmp_assign_source_24 == NULL) {
             if (CHECK_AND_CLEAR_STOP_ITERATION_OCCURRED()) {
 
                 goto loop_end_4;
@@ -5026,42 +5108,42 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 type_description_1 = "ooooooooooooooooo";
-                exception_lineno = 161;
+                exception_lineno = 164;
                 goto try_except_handler_5;
             }
         }
 
         {
             PyObject *old = tmp_for_loop_4__iter_value;
-            tmp_for_loop_4__iter_value = tmp_assign_source_23;
+            tmp_for_loop_4__iter_value = tmp_assign_source_24;
             Py_XDECREF(old);
         }
 
     }
     {
-        PyObject *tmp_assign_source_24;
+        PyObject *tmp_assign_source_25;
         CHECK_OBJECT(tmp_for_loop_4__iter_value);
-        tmp_assign_source_24 = tmp_for_loop_4__iter_value;
+        tmp_assign_source_25 = tmp_for_loop_4__iter_value;
         {
             PyObject *old = var_value;
-            var_value = tmp_assign_source_24;
+            var_value = tmp_assign_source_25;
             Py_INCREF(var_value);
             Py_XDECREF(old);
         }
 
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_called_instance_6;
+        nuitka_bool tmp_condition_result_5;
+        PyObject *tmp_called_instance_5;
         PyObject *tmp_call_result_1;
         int tmp_truth_name_2;
         CHECK_OBJECT(var_value);
-        tmp_called_instance_6 = var_value;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 162;
+        tmp_called_instance_5 = var_value;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 165;
         tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_6,
-            mod_consts[75],
-            PyTuple_GET_ITEM(mod_consts[76], 0)
+            tmp_called_instance_5,
+            mod_consts[76],
+            PyTuple_GET_ITEM(mod_consts[77], 0)
         );
 
         if (tmp_call_result_1 == NULL) {
@@ -5070,7 +5152,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 162;
+            exception_lineno = 165;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
@@ -5081,151 +5163,151 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_call_result_1);
 
-            exception_lineno = 162;
+            exception_lineno = 165;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_condition_result_4 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_5 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_1);
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_4;
+        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_5;
         } else {
-            goto branch_no_4;
+            goto branch_no_5;
         }
     }
-    branch_yes_4:;
+    branch_yes_5:;
     {
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_1;
         if (var_qvalues == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_1 = var_qvalues;
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[78]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_expression_value_2 = var_qvalues;
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[79]);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[79]);
+        tmp_called_value_11 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[80]);
 
-        if (unlikely(tmp_called_name_9 == NULL)) {
-            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[79]);
+        if (unlikely(tmp_called_value_11 == NULL)) {
+            tmp_called_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[80]);
         }
 
-        if (tmp_called_name_9 == NULL) {
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_10);
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
         CHECK_OBJECT(var_value);
-        tmp_expression_name_4 = var_value;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[80]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_5 = var_value;
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[81]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_10);
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_subscript_name_1 = mod_consts[81];
-        tmp_expression_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_subscript_value_1 = mod_consts[82];
+        tmp_expression_value_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_10);
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[82]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_args_element_name_11 == NULL) {
+        tmp_args_element_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[83]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_args_element_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_10);
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 163;
-        tmp_args_element_name_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_11);
-        Py_DECREF(tmp_args_element_name_11);
-        if (tmp_args_element_name_10 == NULL) {
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 166;
+        tmp_args_element_value_12 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_13);
+        Py_DECREF(tmp_args_element_value_13);
+        if (tmp_args_element_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_10);
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 163;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_10);
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_10);
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 166;
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_12);
+        Py_DECREF(tmp_called_value_10);
+        Py_DECREF(tmp_args_element_value_12);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 163;
+            exception_lineno = 166;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
         Py_DECREF(tmp_call_result_2);
     }
-    goto branch_end_4;
-    branch_no_4:;
+    goto branch_end_5;
+    branch_no_5:;
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_called_instance_7;
+        nuitka_bool tmp_condition_result_6;
+        PyObject *tmp_called_instance_6;
         PyObject *tmp_call_result_3;
         int tmp_truth_name_3;
         CHECK_OBJECT(var_value);
-        tmp_called_instance_7 = var_value;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 164;
+        tmp_called_instance_6 = var_value;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 167;
         tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_7,
-            mod_consts[75],
-            PyTuple_GET_ITEM(mod_consts[83], 0)
+            tmp_called_instance_6,
+            mod_consts[76],
+            PyTuple_GET_ITEM(mod_consts[84], 0)
         );
 
         if (tmp_call_result_3 == NULL) {
@@ -5234,7 +5316,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 164;
+            exception_lineno = 167;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
@@ -5245,151 +5327,151 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_call_result_3);
 
-            exception_lineno = 164;
+            exception_lineno = 167;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_condition_result_5 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_6 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_3);
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_5;
+        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_6;
         } else {
-            goto branch_no_5;
+            goto branch_no_6;
         }
     }
-    branch_yes_5:;
+    branch_yes_6:;
     {
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_2;
         if (var_qvalues == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_5 = var_qvalues;
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[78]);
-        if (tmp_called_name_10 == NULL) {
+        tmp_expression_value_6 = var_qvalues;
+        tmp_called_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[79]);
+        if (tmp_called_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_11 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[79]);
+        tmp_called_value_13 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[80]);
 
-        if (unlikely(tmp_called_name_11 == NULL)) {
-            tmp_called_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[79]);
+        if (unlikely(tmp_called_value_13 == NULL)) {
+            tmp_called_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[80]);
         }
 
-        if (tmp_called_name_11 == NULL) {
+        if (tmp_called_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_12);
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
         CHECK_OBJECT(var_value);
-        tmp_expression_name_8 = var_value;
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[80]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_9 = var_value;
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[81]);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_12);
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_subscript_name_2 = mod_consts[84];
-        tmp_expression_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_subscript_value_2 = mod_consts[85];
+        tmp_expression_value_7 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_12);
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[82]);
-        Py_DECREF(tmp_expression_name_6);
-        if (tmp_args_element_name_13 == NULL) {
+        tmp_args_element_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[83]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_args_element_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_12);
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 165;
-        tmp_args_element_name_12 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_13);
-        Py_DECREF(tmp_args_element_name_13);
-        if (tmp_args_element_name_12 == NULL) {
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 168;
+        tmp_args_element_value_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_15);
+        Py_DECREF(tmp_args_element_value_15);
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_12);
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 165;
-        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_12);
-        Py_DECREF(tmp_called_name_10);
-        Py_DECREF(tmp_args_element_name_12);
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 168;
+        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_14);
+        Py_DECREF(tmp_called_value_12);
+        Py_DECREF(tmp_args_element_value_14);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 165;
+            exception_lineno = 168;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
         Py_DECREF(tmp_call_result_4);
     }
-    goto branch_end_5;
-    branch_no_5:;
+    goto branch_end_6;
+    branch_no_6:;
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_called_instance_8;
+        nuitka_bool tmp_condition_result_7;
+        PyObject *tmp_called_instance_7;
         PyObject *tmp_call_result_5;
         int tmp_truth_name_4;
         CHECK_OBJECT(var_value);
-        tmp_called_instance_8 = var_value;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 166;
+        tmp_called_instance_7 = var_value;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 169;
         tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_8,
-            mod_consts[75],
-            PyTuple_GET_ITEM(mod_consts[85], 0)
+            tmp_called_instance_7,
+            mod_consts[76],
+            PyTuple_GET_ITEM(mod_consts[86], 0)
         );
 
         if (tmp_call_result_5 == NULL) {
@@ -5398,7 +5480,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 166;
+            exception_lineno = 169;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
@@ -5409,129 +5491,129 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_call_result_5);
 
-            exception_lineno = 166;
+            exception_lineno = 169;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_condition_result_6 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_7 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_5);
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_6;
+        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_7;
         } else {
-            goto branch_no_6;
+            goto branch_no_7;
         }
     }
-    branch_yes_6:;
+    branch_yes_7:;
     {
-        PyObject *tmp_called_name_12;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_14;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_call_result_6;
-        PyObject *tmp_args_element_name_14;
+        PyObject *tmp_args_element_value_16;
         PyObject *tmp_int_arg_2;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_3;
         if (var_qvalues == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 167;
+            exception_lineno = 170;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_9 = var_qvalues;
-        tmp_called_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[78]);
-        if (tmp_called_name_12 == NULL) {
+        tmp_expression_value_10 = var_qvalues;
+        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[79]);
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 167;
+            exception_lineno = 170;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
         CHECK_OBJECT(var_value);
-        tmp_expression_name_12 = var_value;
-        tmp_expression_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[80]);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_13 = var_value;
+        tmp_expression_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[81]);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_14);
 
-            exception_lineno = 167;
+            exception_lineno = 170;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_subscript_name_3 = mod_consts[86];
-        tmp_expression_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_11);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_subscript_value_3 = mod_consts[87];
+        tmp_expression_value_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_12, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_14);
 
-            exception_lineno = 167;
+            exception_lineno = 170;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_int_arg_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[82]);
-        Py_DECREF(tmp_expression_name_10);
+        tmp_int_arg_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[83]);
+        Py_DECREF(tmp_expression_value_11);
         if (tmp_int_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_14);
 
-            exception_lineno = 167;
+            exception_lineno = 170;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_14 = PyNumber_Int(tmp_int_arg_2);
+        tmp_args_element_value_16 = PyNumber_Int(tmp_int_arg_2);
         Py_DECREF(tmp_int_arg_2);
-        if (tmp_args_element_name_14 == NULL) {
+        if (tmp_args_element_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_14);
 
-            exception_lineno = 167;
+            exception_lineno = 170;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 167;
-        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_14);
-        Py_DECREF(tmp_called_name_12);
-        Py_DECREF(tmp_args_element_name_14);
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 170;
+        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_14, tmp_args_element_value_16);
+        Py_DECREF(tmp_called_value_14);
+        Py_DECREF(tmp_args_element_value_16);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 167;
+            exception_lineno = 170;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_5;
         }
         Py_DECREF(tmp_call_result_6);
     }
-    branch_no_6:;
+    branch_no_7:;
+    branch_end_6:;
     branch_end_5:;
-    branch_end_4:;
     if (CONSIDER_THREADING() == false) {
         assert(ERROR_OCCURRED());
 
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 161;
+        exception_lineno = 164;
         type_description_1 = "ooooooooooooooooo";
         goto try_except_handler_5;
     }
@@ -5574,12 +5656,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         PyObject *tmp_ass_subscript_1;
         if (var_qvalues == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 168;
+            exception_lineno = 171;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_4;
         }
@@ -5587,12 +5669,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         tmp_ass_subvalue_1 = var_qvalues;
         if (var_quals == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[88]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 168;
+            exception_lineno = 171;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_4;
         }
@@ -5607,7 +5689,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 168;
+            exception_lineno = 171;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_4;
         }
@@ -5618,7 +5700,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 156;
+        exception_lineno = 159;
         type_description_1 = "ooooooooooooooooo";
         goto try_except_handler_4;
     }
@@ -5656,272 +5738,35 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     {
-        PyObject *tmp_assign_source_25;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
-        tmp_called_name_13 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
-
-        if (unlikely(tmp_called_name_13 == NULL)) {
-            tmp_called_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
-        }
-
-        if (tmp_called_name_13 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 170;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        CHECK_OBJECT(var_feature);
-        tmp_args_element_name_15 = var_feature;
-        tmp_args_element_name_16 = mod_consts[46];
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 170;
-        {
-            PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16};
-            tmp_assign_source_25 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
-        }
-
-        if (tmp_assign_source_25 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 170;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        {
-            PyObject *old = var_name;
-            var_name = tmp_assign_source_25;
-            Py_XDECREF(old);
-        }
-
-    }
-    {
-        nuitka_bool tmp_condition_result_7;
-        int tmp_truth_name_5;
-        CHECK_OBJECT(var_name);
-        tmp_truth_name_5 = CHECK_IF_TRUE(var_name);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 171;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_7 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_7;
-        } else {
-            goto branch_no_7;
-        }
-    }
-    branch_yes_7:;
-    {
-        bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        tmp_compexpr_left_2 = mod_consts[88];
-        if (var_quals == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 172;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_right_2 = var_quals;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_2, tmp_compexpr_left_2);
-        if (tmp_res == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 172;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_8 = (tmp_res == 0) ? true : false;
-        if (tmp_condition_result_8 != false) {
-            goto branch_yes_8;
-        } else {
-            goto branch_no_8;
-        }
-    }
-    branch_yes_8:;
-    {
-        PyObject *tmp_ass_subvalue_2;
-        PyObject *tmp_list_element_1;
-        PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_ass_subscript_2;
-        CHECK_OBJECT(var_name);
-        tmp_list_element_1 = var_name;
-        tmp_ass_subvalue_2 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_ass_subvalue_2, 0, tmp_list_element_1);
-        if (var_quals == NULL) {
-            Py_DECREF(tmp_ass_subvalue_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 174;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_ass_subscribed_2 = var_quals;
-        tmp_ass_subscript_2 = mod_consts[88];
-        tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_2, tmp_ass_subscript_2, tmp_ass_subvalue_2);
-        Py_DECREF(tmp_ass_subvalue_2);
-        if (tmp_result == false) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 174;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-    }
-    goto branch_end_8;
-    branch_no_8:;
-    {
-        bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_4;
-        CHECK_OBJECT(var_name);
-        tmp_compexpr_left_3 = var_name;
-        if (var_quals == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 175;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_13 = var_quals;
-        tmp_subscript_name_4 = mod_consts[88];
-        tmp_compexpr_right_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_4);
-        if (tmp_compexpr_right_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 175;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_3, tmp_compexpr_left_3);
-        Py_DECREF(tmp_compexpr_right_3);
-        if (tmp_res == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 175;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_9 = (tmp_res == 0) ? true : false;
-        if (tmp_condition_result_9 != false) {
-            goto branch_yes_9;
-        } else {
-            goto branch_no_9;
-        }
-    }
-    branch_yes_9:;
-    {
-        PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_list_element_2;
-        PyObject *tmp_ass_subscribed_3;
-        PyObject *tmp_ass_subscript_3;
-        CHECK_OBJECT(var_name);
-        tmp_list_element_2 = var_name;
-        tmp_ass_subvalue_3 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_ass_subvalue_3, 0, tmp_list_element_2);
-        if (var_quals == NULL) {
-            Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 178;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_ass_subscribed_3 = var_quals;
-        tmp_ass_subscript_3 = mod_consts[46];
-        tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_3, tmp_ass_subscript_3, tmp_ass_subvalue_3);
-        Py_DECREF(tmp_ass_subvalue_3);
-        if (tmp_result == false) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 178;
-            type_description_1 = "ooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-    }
-    branch_no_9:;
-    branch_end_8:;
-    branch_no_7:;
-    {
         PyObject *tmp_assign_source_26;
-        PyObject *tmp_called_name_14;
+        PyObject *tmp_called_value_15;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
-        tmp_called_name_14 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[89]);
+        tmp_called_value_15 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_called_name_14 == NULL)) {
-            tmp_called_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
+        if (unlikely(tmp_called_value_15 == NULL)) {
+            tmp_called_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_called_name_14 == NULL) {
+        if (tmp_called_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 180;
+            exception_lineno = 173;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
         if (var_location == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 180;
+            exception_lineno = 173;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
@@ -5931,22 +5776,22 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         tmp_kw_call_dict_value_0_1 = var_type;
         if (var_quals == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[88]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 180;
+            exception_lineno = 173;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
 
         tmp_kw_call_dict_value_1_1 = var_quals;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 180;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 173;
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_assign_source_26 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_14, args, kw_values, mod_consts[90]);
+            tmp_assign_source_26 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_15, args, kw_values, mod_consts[90]);
         }
 
         if (tmp_assign_source_26 == NULL) {
@@ -5955,7 +5800,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 180;
+            exception_lineno = 173;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
@@ -5968,10 +5813,10 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
 
     }
     {
-        PyObject *tmp_called_instance_9;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_called_instance_8;
+        PyObject *tmp_expression_value_14;
         PyObject *tmp_call_result_7;
-        PyObject *tmp_args_element_name_17;
+        PyObject *tmp_args_element_value_17;
         if (par_record == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
@@ -5979,35 +5824,35 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 181;
+            exception_lineno = 174;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_14 = par_record;
-        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[91]);
-        if (tmp_called_instance_9 == NULL) {
+        tmp_expression_value_14 = par_record;
+        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[91]);
+        if (tmp_called_instance_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 181;
+            exception_lineno = 174;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_feature);
-        tmp_args_element_name_17 = var_feature;
-        frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame.f_lineno = 181;
-        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_9, mod_consts[78], tmp_args_element_name_17);
-        Py_DECREF(tmp_called_instance_9);
+        tmp_args_element_value_17 = var_feature;
+        frame_87322dce83727d4848bcf9ff2c305806->m_frame.f_lineno = 174;
+        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[79], tmp_args_element_value_17);
+        Py_DECREF(tmp_called_instance_8);
         if (tmp_call_result_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 181;
+            exception_lineno = 174;
             type_description_1 = "ooooooooooooooooo";
             goto try_except_handler_2;
         }
@@ -6053,7 +5898,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     try_end_4:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_3f6baa87eb551e860d74d9f17ed7c655);
+    RESTORE_FRAME_EXCEPTION(frame_87322dce83727d4848bcf9ff2c305806);
 #endif
 
     // Put the previous frame back on top.
@@ -6064,18 +5909,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_3f6baa87eb551e860d74d9f17ed7c655);
+    RESTORE_FRAME_EXCEPTION(frame_87322dce83727d4848bcf9ff2c305806);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_3f6baa87eb551e860d74d9f17ed7c655, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_3f6baa87eb551e860d74d9f17ed7c655->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_3f6baa87eb551e860d74d9f17ed7c655, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_87322dce83727d4848bcf9ff2c305806, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_87322dce83727d4848bcf9ff2c305806->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_87322dce83727d4848bcf9ff2c305806, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_3f6baa87eb551e860d74d9f17ed7c655,
+        frame_87322dce83727d4848bcf9ff2c305806,
         type_description_1,
         par_length,
         par_data,
@@ -6084,6 +5929,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         var_feature,
         var_quals,
         var_type,
+        var_label,
         var_strand,
         var_directionality,
         var_location,
@@ -6092,23 +5938,22 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
         var_qualifier,
         var_qname,
         var_qvalues,
-        var_value,
-        var_name
+        var_value
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_3f6baa87eb551e860d74d9f17ed7c655 == cache_frame_3f6baa87eb551e860d74d9f17ed7c655) {
+    if (frame_87322dce83727d4848bcf9ff2c305806 == cache_frame_87322dce83727d4848bcf9ff2c305806) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_3f6baa87eb551e860d74d9f17ed7c655);
-        cache_frame_3f6baa87eb551e860d74d9f17ed7c655 = NULL;
+        Py_DECREF(cache_frame_87322dce83727d4848bcf9ff2c305806);
+        cache_frame_87322dce83727d4848bcf9ff2c305806 = NULL;
     }
 
-    assertFrameObject(frame_3f6baa87eb551e860d74d9f17ed7c655);
+    assertFrameObject(frame_87322dce83727d4848bcf9ff2c305806);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6138,6 +5983,8 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     var_quals = NULL;
     Py_XDECREF(var_type);
     var_type = NULL;
+    Py_XDECREF(var_label);
+    var_label = NULL;
     Py_XDECREF(var_strand);
     var_strand = NULL;
     Py_XDECREF(var_directionality);
@@ -6156,8 +6003,6 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     var_qvalues = NULL;
     Py_XDECREF(var_value);
     var_value = NULL;
-    Py_XDECREF(var_name);
-    var_name = NULL;
     goto function_return_exit;
     // Exception handler code:
     try_except_handler_1:;
@@ -6178,6 +6023,8 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     var_quals = NULL;
     Py_XDECREF(var_type);
     var_type = NULL;
+    Py_XDECREF(var_label);
+    var_label = NULL;
     Py_XDECREF(var_strand);
     var_strand = NULL;
     Py_XDECREF(var_directionality);
@@ -6196,8 +6043,6 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet(
     var_qvalues = NULL;
     Py_XDECREF(var_value);
     var_value = NULL;
-    Py_XDECREF(var_name);
-    var_name = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_5;
     exception_value = exception_keeper_value_5;
@@ -6260,7 +6105,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     PyObject *tmp_for_loop_1__iter_value = NULL;
     PyObject *tmp_for_loop_2__for_iterator = NULL;
     PyObject *tmp_for_loop_2__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_4c45a8e8aff66906f0b3487e41620091;
+    struct Nuitka_FrameObject *frame_86ea7be9ed961951d7a69fc6f44acf4d;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -6279,7 +6124,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    static struct Nuitka_FrameObject *cache_frame_4c45a8e8aff66906f0b3487e41620091 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_86ea7be9ed961951d7a69fc6f44acf4d = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
@@ -6288,83 +6133,92 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_4c45a8e8aff66906f0b3487e41620091)) {
-        Py_XDECREF(cache_frame_4c45a8e8aff66906f0b3487e41620091);
+    if (isFrameUnusable(cache_frame_86ea7be9ed961951d7a69fc6f44acf4d)) {
+        Py_XDECREF(cache_frame_86ea7be9ed961951d7a69fc6f44acf4d);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_4c45a8e8aff66906f0b3487e41620091 == NULL) {
+        if (cache_frame_86ea7be9ed961951d7a69fc6f44acf4d == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_4c45a8e8aff66906f0b3487e41620091 = MAKE_FUNCTION_FRAME(codeobj_4c45a8e8aff66906f0b3487e41620091, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_86ea7be9ed961951d7a69fc6f44acf4d = MAKE_FUNCTION_FRAME(codeobj_86ea7be9ed961951d7a69fc6f44acf4d, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_4c45a8e8aff66906f0b3487e41620091->m_type_description == NULL);
-    frame_4c45a8e8aff66906f0b3487e41620091 = cache_frame_4c45a8e8aff66906f0b3487e41620091;
+    assert(cache_frame_86ea7be9ed961951d7a69fc6f44acf4d->m_type_description == NULL);
+    frame_86ea7be9ed961951d7a69fc6f44acf4d = cache_frame_86ea7be9ed961951d7a69fc6f44acf4d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_4c45a8e8aff66906f0b3487e41620091);
+    pushFrameStack(frame_86ea7be9ed961951d7a69fc6f44acf4d);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4c45a8e8aff66906f0b3487e41620091) == 2); // Frame stack
+    assert(Py_REFCNT(frame_86ea7be9ed961951d7a69fc6f44acf4d) == 2); // Frame stack
 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[27]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 191;
+            exception_lineno = 184;
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_called_instance_1 = par_data;
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 191;
-        tmp_args_element_name_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[18],
-            PyTuple_GET_ITEM(mod_consts[28], 0)
-        );
-
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_1 = par_data;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[18]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 191;
+            exception_lineno = 184;
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 191;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 184;
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[28]);
+
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_args_element_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 184;
+            type_description_1 = "ooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 184;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 191;
+            exception_lineno = 184;
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
@@ -6374,12 +6228,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_instance_1;
         CHECK_OBJECT(var_xml);
-        tmp_called_instance_2 = var_xml;
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 192;
+        tmp_called_instance_1 = var_xml;
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 185;
         tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
+            tmp_called_instance_1,
             mod_consts[57],
             PyTuple_GET_ITEM(mod_consts[93], 0)
         );
@@ -6390,7 +6244,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 192;
+            exception_lineno = 185;
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
@@ -6402,7 +6256,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 192;
+            exception_lineno = 185;
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
@@ -6425,7 +6279,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 type_description_1 = "ooooooooooo";
-                exception_lineno = 192;
+                exception_lineno = 185;
                 goto try_except_handler_2;
             }
         }
@@ -6461,32 +6315,32 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 195;
+            exception_lineno = 188;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_primer);
-        tmp_args_element_name_2 = var_primer;
-        tmp_args_element_name_3 = mod_consts[46];
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 195;
+        tmp_args_element_value_2 = var_primer;
+        tmp_args_element_value_3 = mod_consts[46];
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 188;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
         if (tmp_assign_source_6 == NULL) {
@@ -6495,7 +6349,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 195;
+            exception_lineno = 188;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
@@ -6517,7 +6371,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 196;
+            exception_lineno = 189;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
@@ -6537,8 +6391,10 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
         PyList_SET_ITEM0(tmp_dictset_value, 0, tmp_list_element_1);
         CHECK_OBJECT(var_quals);
         tmp_dictset_dict = var_quals;
-        tmp_dictset_key = mod_consts[88];
+        tmp_dictset_key = mod_consts[62];
+        assert(PyDict_CheckExact(tmp_dictset_dict));
         tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
+
         Py_DECREF(tmp_dictset_value);
         assert(!(tmp_res != 0));
     }
@@ -6546,12 +6402,12 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_instance_2;
         CHECK_OBJECT(var_primer);
-        tmp_called_instance_3 = var_primer;
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 199;
+        tmp_called_instance_2 = var_primer;
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 192;
         tmp_iter_arg_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_3,
+            tmp_called_instance_2,
             mod_consts[57],
             PyTuple_GET_ITEM(mod_consts[94], 0)
         );
@@ -6562,7 +6418,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 199;
+            exception_lineno = 192;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
@@ -6574,7 +6430,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 199;
+            exception_lineno = 192;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
@@ -6601,7 +6457,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 type_description_1 = "ooooooooooo";
-                exception_lineno = 199;
+                exception_lineno = 192;
                 goto try_except_handler_3;
             }
         }
@@ -6627,44 +6483,44 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 200;
+            exception_lineno = 193;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_site);
         tmp_tuple_element_1 = var_site;
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_tuple_element_1 = mod_consts[68];
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[95]);
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 200;
-        tmp_assign_source_10 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = mod_consts[69];
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[95]);
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 193;
+        tmp_assign_source_10 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 200;
+            exception_lineno = 193;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
@@ -6678,44 +6534,44 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     {
         PyObject *tmp_assign_source_11;
         PyObject *tmp_int_arg_1;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_name_2;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_value_2;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
+        PyObject *tmp_kwargs_value_2;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 203;
+            exception_lineno = 196;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_site);
         tmp_tuple_element_2 = var_site;
-        tmp_args_name_2 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
+        tmp_args_value_2 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_2);
         tmp_tuple_element_2 = mod_consts[96];
-        PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
-        tmp_kwargs_name_2 = PyDict_Copy(mod_consts[97]);
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 203;
-        tmp_int_arg_1 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_2);
+        tmp_kwargs_value_2 = PyDict_Copy(mod_consts[97]);
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 196;
+        tmp_int_arg_1 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_2, tmp_kwargs_value_2);
+        Py_DECREF(tmp_args_value_2);
+        Py_DECREF(tmp_kwargs_value_2);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 203;
+            exception_lineno = 196;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
@@ -6727,7 +6583,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 203;
+            exception_lineno = 196;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
@@ -6740,47 +6596,33 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_strand);
-        tmp_compexpr_left_1 = var_strand;
-        tmp_compexpr_right_1 = mod_consts[4];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_strand;
+        tmp_cmp_expr_right_1 = mod_consts[4];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 204;
+            exception_lineno = 197;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 204;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = mod_consts[65];
+        tmp_assign_source_12 = mod_consts[66];
         {
             PyObject *old = var_strand;
             assert(old != NULL);
@@ -6807,50 +6649,50 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     branch_end_2:;
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_5;
+        PyObject *tmp_called_value_6;
         PyObject *tmp_kw_call_arg_value_0_1;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[89]);
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 209;
+            exception_lineno = 202;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[69]);
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[70]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[69]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 210;
+            exception_lineno = 203;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_rng);
-        tmp_args_element_name_4 = var_rng;
+        tmp_args_element_value_4 = var_rng;
         CHECK_OBJECT(var_strand);
-        tmp_args_element_name_5 = var_strand;
+        tmp_args_element_value_5 = var_strand;
         if (par_record == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
@@ -6858,16 +6700,16 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 210;
+            exception_lineno = 203;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_6 = par_record;
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 210;
+        tmp_args_element_value_6 = par_record;
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 203;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_kw_call_arg_value_0_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_kw_call_arg_value_0_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_7, call_args);
         }
 
         if (tmp_kw_call_arg_value_0_1 == NULL) {
@@ -6876,29 +6718,29 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 210;
+            exception_lineno = 203;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
         tmp_kw_call_dict_value_0_1 = mod_consts[98];
         if (var_quals == NULL) {
             Py_DECREF(tmp_kw_call_arg_value_0_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[88]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 212;
+            exception_lineno = 205;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
 
         tmp_kw_call_dict_value_1_1 = var_quals;
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 209;
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 202;
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_5, args, kw_values, mod_consts[90]);
+            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_6, args, kw_values, mod_consts[90]);
         }
 
         Py_DECREF(tmp_kw_call_arg_value_0_1);
@@ -6908,7 +6750,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 209;
+            exception_lineno = 202;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
@@ -6920,10 +6762,10 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
 
     }
     {
-        PyObject *tmp_called_instance_4;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_args_element_value_7;
         if (par_record == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
@@ -6931,35 +6773,35 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 214;
+            exception_lineno = 207;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_1 = par_record;
-        tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[91]);
-        if (tmp_called_instance_4 == NULL) {
+        tmp_expression_value_2 = par_record;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[91]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 214;
+            exception_lineno = 207;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_feature);
-        tmp_args_element_name_7 = var_feature;
-        frame_4c45a8e8aff66906f0b3487e41620091->m_frame.f_lineno = 214;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[78], tmp_args_element_name_7);
-        Py_DECREF(tmp_called_instance_4);
+        tmp_args_element_value_7 = var_feature;
+        frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame.f_lineno = 207;
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[79], tmp_args_element_value_7);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 214;
+            exception_lineno = 207;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
@@ -6971,7 +6813,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 199;
+        exception_lineno = 192;
         type_description_1 = "ooooooooooo";
         goto try_except_handler_3;
     }
@@ -7014,7 +6856,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 192;
+        exception_lineno = 185;
         type_description_1 = "ooooooooooo";
         goto try_except_handler_2;
     }
@@ -7048,7 +6890,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     try_end_2:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4c45a8e8aff66906f0b3487e41620091);
+    RESTORE_FRAME_EXCEPTION(frame_86ea7be9ed961951d7a69fc6f44acf4d);
 #endif
 
     // Put the previous frame back on top.
@@ -7059,18 +6901,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4c45a8e8aff66906f0b3487e41620091);
+    RESTORE_FRAME_EXCEPTION(frame_86ea7be9ed961951d7a69fc6f44acf4d);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_4c45a8e8aff66906f0b3487e41620091, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_4c45a8e8aff66906f0b3487e41620091->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_4c45a8e8aff66906f0b3487e41620091, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_86ea7be9ed961951d7a69fc6f44acf4d, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_86ea7be9ed961951d7a69fc6f44acf4d->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_86ea7be9ed961951d7a69fc6f44acf4d, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_4c45a8e8aff66906f0b3487e41620091,
+        frame_86ea7be9ed961951d7a69fc6f44acf4d,
         type_description_1,
         par_length,
         par_data,
@@ -7087,17 +6929,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet(s
 
 
     // Release cached frame if used for exception.
-    if (frame_4c45a8e8aff66906f0b3487e41620091 == cache_frame_4c45a8e8aff66906f0b3487e41620091) {
+    if (frame_86ea7be9ed961951d7a69fc6f44acf4d == cache_frame_86ea7be9ed961951d7a69fc6f44acf4d) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_4c45a8e8aff66906f0b3487e41620091);
-        cache_frame_4c45a8e8aff66906f0b3487e41620091 = NULL;
+        Py_DECREF(cache_frame_86ea7be9ed961951d7a69fc6f44acf4d);
+        cache_frame_86ea7be9ed961951d7a69fc6f44acf4d = NULL;
     }
 
-    assertFrameObject(frame_4c45a8e8aff66906f0b3487e41620091);
+    assertFrameObject(frame_86ea7be9ed961951d7a69fc6f44acf4d);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7211,72 +7053,72 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__8__decode(struct Nuitka_F
 
     // Local variable declarations.
     PyObject *par_text = python_pars[0];
-    struct Nuitka_FrameObject *frame_4b618d30bb5fd2dbbcefff80fc074b74;
+    struct Nuitka_FrameObject *frame_120f9c22b510967d19505bf4e59f80a5;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_4b618d30bb5fd2dbbcefff80fc074b74 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_120f9c22b510967d19505bf4e59f80a5 = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_4b618d30bb5fd2dbbcefff80fc074b74)) {
-        Py_XDECREF(cache_frame_4b618d30bb5fd2dbbcefff80fc074b74);
+    if (isFrameUnusable(cache_frame_120f9c22b510967d19505bf4e59f80a5)) {
+        Py_XDECREF(cache_frame_120f9c22b510967d19505bf4e59f80a5);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_4b618d30bb5fd2dbbcefff80fc074b74 == NULL) {
+        if (cache_frame_120f9c22b510967d19505bf4e59f80a5 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_4b618d30bb5fd2dbbcefff80fc074b74 = MAKE_FUNCTION_FRAME(codeobj_4b618d30bb5fd2dbbcefff80fc074b74, module_Bio$SeqIO$SnapGeneIO, sizeof(void *));
+        cache_frame_120f9c22b510967d19505bf4e59f80a5 = MAKE_FUNCTION_FRAME(codeobj_120f9c22b510967d19505bf4e59f80a5, module_Bio$SeqIO$SnapGeneIO, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_4b618d30bb5fd2dbbcefff80fc074b74->m_type_description == NULL);
-    frame_4b618d30bb5fd2dbbcefff80fc074b74 = cache_frame_4b618d30bb5fd2dbbcefff80fc074b74;
+    assert(cache_frame_120f9c22b510967d19505bf4e59f80a5->m_type_description == NULL);
+    frame_120f9c22b510967d19505bf4e59f80a5 = cache_frame_120f9c22b510967d19505bf4e59f80a5;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_4b618d30bb5fd2dbbcefff80fc074b74);
+    pushFrameStack(frame_120f9c22b510967d19505bf4e59f80a5);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4b618d30bb5fd2dbbcefff80fc074b74) == 2); // Frame stack
+    assert(Py_REFCNT(frame_120f9c22b510967d19505bf4e59f80a5) == 2); // Frame stack
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[100]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[100]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 231;
+            exception_lineno = 224;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[101];
-        tmp_args_element_name_2 = mod_consts[102];
+        tmp_args_element_value_1 = mod_consts[101];
+        tmp_args_element_value_2 = mod_consts[102];
         CHECK_OBJECT(par_text);
-        tmp_args_element_name_3 = par_text;
-        frame_4b618d30bb5fd2dbbcefff80fc074b74->m_frame.f_lineno = 231;
+        tmp_args_element_value_3 = par_text;
+        frame_120f9c22b510967d19505bf4e59f80a5->m_frame.f_lineno = 224;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -7285,7 +7127,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__8__decode(struct Nuitka_F
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 231;
+            exception_lineno = 224;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
@@ -7293,7 +7135,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__8__decode(struct Nuitka_F
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b618d30bb5fd2dbbcefff80fc074b74);
+    RESTORE_FRAME_EXCEPTION(frame_120f9c22b510967d19505bf4e59f80a5);
 #endif
 
     // Put the previous frame back on top.
@@ -7303,7 +7145,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__8__decode(struct Nuitka_F
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b618d30bb5fd2dbbcefff80fc074b74);
+    RESTORE_FRAME_EXCEPTION(frame_120f9c22b510967d19505bf4e59f80a5);
 #endif
 
     // Put the previous frame back on top.
@@ -7314,35 +7156,35 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__8__decode(struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b618d30bb5fd2dbbcefff80fc074b74);
+    RESTORE_FRAME_EXCEPTION(frame_120f9c22b510967d19505bf4e59f80a5);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_4b618d30bb5fd2dbbcefff80fc074b74, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_4b618d30bb5fd2dbbcefff80fc074b74->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_4b618d30bb5fd2dbbcefff80fc074b74, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_120f9c22b510967d19505bf4e59f80a5, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_120f9c22b510967d19505bf4e59f80a5->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_120f9c22b510967d19505bf4e59f80a5, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_4b618d30bb5fd2dbbcefff80fc074b74,
+        frame_120f9c22b510967d19505bf4e59f80a5,
         type_description_1,
         par_text
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_4b618d30bb5fd2dbbcefff80fc074b74 == cache_frame_4b618d30bb5fd2dbbcefff80fc074b74) {
+    if (frame_120f9c22b510967d19505bf4e59f80a5 == cache_frame_120f9c22b510967d19505bf4e59f80a5) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_4b618d30bb5fd2dbbcefff80fc074b74);
-        cache_frame_4b618d30bb5fd2dbbcefff80fc074b74 = NULL;
+        Py_DECREF(cache_frame_120f9c22b510967d19505bf4e59f80a5);
+        cache_frame_120f9c22b510967d19505bf4e59f80a5 = NULL;
     }
 
-    assertFrameObject(frame_4b618d30bb5fd2dbbcefff80fc074b74);
+    assertFrameObject(frame_120f9c22b510967d19505bf4e59f80a5);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7386,62 +7228,62 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
     PyObject *par_name = python_pars[1];
     PyObject *par_default = python_pars[2];
     PyObject *par_error = python_pars[3];
-    struct Nuitka_FrameObject *frame_cf851429fcc96a7378ba0710fdb51177;
+    struct Nuitka_FrameObject *frame_0b0a2bac32eb4dea45fa884bee598a2a;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_cf851429fcc96a7378ba0710fdb51177 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_0b0a2bac32eb4dea45fa884bee598a2a = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_cf851429fcc96a7378ba0710fdb51177)) {
-        Py_XDECREF(cache_frame_cf851429fcc96a7378ba0710fdb51177);
+    if (isFrameUnusable(cache_frame_0b0a2bac32eb4dea45fa884bee598a2a)) {
+        Py_XDECREF(cache_frame_0b0a2bac32eb4dea45fa884bee598a2a);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_cf851429fcc96a7378ba0710fdb51177 == NULL) {
+        if (cache_frame_0b0a2bac32eb4dea45fa884bee598a2a == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_cf851429fcc96a7378ba0710fdb51177 = MAKE_FUNCTION_FRAME(codeobj_cf851429fcc96a7378ba0710fdb51177, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_0b0a2bac32eb4dea45fa884bee598a2a = MAKE_FUNCTION_FRAME(codeobj_0b0a2bac32eb4dea45fa884bee598a2a, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_cf851429fcc96a7378ba0710fdb51177->m_type_description == NULL);
-    frame_cf851429fcc96a7378ba0710fdb51177 = cache_frame_cf851429fcc96a7378ba0710fdb51177;
+    assert(cache_frame_0b0a2bac32eb4dea45fa884bee598a2a->m_type_description == NULL);
+    frame_0b0a2bac32eb4dea45fa884bee598a2a = cache_frame_0b0a2bac32eb4dea45fa884bee598a2a;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_cf851429fcc96a7378ba0710fdb51177);
+    pushFrameStack(frame_0b0a2bac32eb4dea45fa884bee598a2a);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_cf851429fcc96a7378ba0710fdb51177) == 2); // Frame stack
+    assert(Py_REFCNT(frame_0b0a2bac32eb4dea45fa884bee598a2a) == 2); // Frame stack
 
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_node);
         tmp_called_instance_1 = par_node;
         CHECK_OBJECT(par_name);
-        tmp_args_element_name_1 = par_name;
-        frame_cf851429fcc96a7378ba0710fdb51177->m_frame.f_lineno = 235;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[75], tmp_args_element_name_1);
+        tmp_args_element_value_1 = par_name;
+        frame_0b0a2bac32eb4dea45fa884bee598a2a->m_frame.f_lineno = 228;
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[76], tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 235;
+            exception_lineno = 228;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
@@ -7452,7 +7294,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_call_result_1);
 
-            exception_lineno = 235;
+            exception_lineno = 228;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
@@ -7466,77 +7308,77 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[79]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[80]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[79]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[80]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 236;
+            exception_lineno = 229;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_node);
-        tmp_expression_name_3 = par_node;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[80]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_node;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[81]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 236;
+            exception_lineno = 229;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_name);
-        tmp_subscript_name_1 = par_name;
-        tmp_expression_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_subscript_value_1 = par_name;
+        tmp_expression_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 236;
+            exception_lineno = 229;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[82]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[83]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 236;
+            exception_lineno = 229;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        frame_cf851429fcc96a7378ba0710fdb51177->m_frame.f_lineno = 236;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        frame_0b0a2bac32eb4dea45fa884bee598a2a->m_frame.f_lineno = 229;
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 236;
+            exception_lineno = 229;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
@@ -7555,7 +7397,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 237;
+            exception_lineno = 230;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
@@ -7572,11 +7414,11 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
         PyObject *tmp_make_exception_arg_1;
         CHECK_OBJECT(par_error);
         tmp_make_exception_arg_1 = par_error;
-        frame_cf851429fcc96a7378ba0710fdb51177->m_frame.f_lineno = 238;
+        frame_0b0a2bac32eb4dea45fa884bee598a2a->m_frame.f_lineno = 231;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
         exception_type = tmp_raise_type_1;
-        exception_lineno = 238;
+        exception_lineno = 231;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
         type_description_1 = "oooo";
         goto frame_exception_exit_1;
@@ -7591,7 +7433,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_cf851429fcc96a7378ba0710fdb51177);
+    RESTORE_FRAME_EXCEPTION(frame_0b0a2bac32eb4dea45fa884bee598a2a);
 #endif
 
     // Put the previous frame back on top.
@@ -7601,7 +7443,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_cf851429fcc96a7378ba0710fdb51177);
+    RESTORE_FRAME_EXCEPTION(frame_0b0a2bac32eb4dea45fa884bee598a2a);
 #endif
 
     // Put the previous frame back on top.
@@ -7612,18 +7454,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_cf851429fcc96a7378ba0710fdb51177);
+    RESTORE_FRAME_EXCEPTION(frame_0b0a2bac32eb4dea45fa884bee598a2a);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_cf851429fcc96a7378ba0710fdb51177, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_cf851429fcc96a7378ba0710fdb51177->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_cf851429fcc96a7378ba0710fdb51177, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_0b0a2bac32eb4dea45fa884bee598a2a, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_0b0a2bac32eb4dea45fa884bee598a2a->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_0b0a2bac32eb4dea45fa884bee598a2a, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_cf851429fcc96a7378ba0710fdb51177,
+        frame_0b0a2bac32eb4dea45fa884bee598a2a,
         type_description_1,
         par_node,
         par_name,
@@ -7633,17 +7475,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(st
 
 
     // Release cached frame if used for exception.
-    if (frame_cf851429fcc96a7378ba0710fdb51177 == cache_frame_cf851429fcc96a7378ba0710fdb51177) {
+    if (frame_0b0a2bac32eb4dea45fa884bee598a2a == cache_frame_0b0a2bac32eb4dea45fa884bee598a2a) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_cf851429fcc96a7378ba0710fdb51177);
-        cache_frame_cf851429fcc96a7378ba0710fdb51177 = NULL;
+        Py_DECREF(cache_frame_0b0a2bac32eb4dea45fa884bee598a2a);
+        cache_frame_0b0a2bac32eb4dea45fa884bee598a2a = NULL;
     }
 
-    assertFrameObject(frame_cf851429fcc96a7378ba0710fdb51177);
+    assertFrameObject(frame_0b0a2bac32eb4dea45fa884bee598a2a);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7700,14 +7542,14 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
     PyObject *par_default = python_pars[2];
     PyObject *par_error = python_pars[3];
     PyObject *var_children = NULL;
-    struct Nuitka_FrameObject *frame_fa162b35f42ae75673b0a269bc9b6353;
+    struct Nuitka_FrameObject *frame_aa6f7a367eb123cb5df465087d07f227;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_fa162b35f42ae75673b0a269bc9b6353 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_aa6f7a367eb123cb5df465087d07f227 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7715,50 +7557,50 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_fa162b35f42ae75673b0a269bc9b6353)) {
-        Py_XDECREF(cache_frame_fa162b35f42ae75673b0a269bc9b6353);
+    if (isFrameUnusable(cache_frame_aa6f7a367eb123cb5df465087d07f227)) {
+        Py_XDECREF(cache_frame_aa6f7a367eb123cb5df465087d07f227);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_fa162b35f42ae75673b0a269bc9b6353 == NULL) {
+        if (cache_frame_aa6f7a367eb123cb5df465087d07f227 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_fa162b35f42ae75673b0a269bc9b6353 = MAKE_FUNCTION_FRAME(codeobj_fa162b35f42ae75673b0a269bc9b6353, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_aa6f7a367eb123cb5df465087d07f227 = MAKE_FUNCTION_FRAME(codeobj_aa6f7a367eb123cb5df465087d07f227, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_fa162b35f42ae75673b0a269bc9b6353->m_type_description == NULL);
-    frame_fa162b35f42ae75673b0a269bc9b6353 = cache_frame_fa162b35f42ae75673b0a269bc9b6353;
+    assert(cache_frame_aa6f7a367eb123cb5df465087d07f227->m_type_description == NULL);
+    frame_aa6f7a367eb123cb5df465087d07f227 = cache_frame_aa6f7a367eb123cb5df465087d07f227;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_fa162b35f42ae75673b0a269bc9b6353);
+    pushFrameStack(frame_aa6f7a367eb123cb5df465087d07f227);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_fa162b35f42ae75673b0a269bc9b6353) == 2); // Frame stack
+    assert(Py_REFCNT(frame_aa6f7a367eb123cb5df465087d07f227) == 2); // Frame stack
 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_node);
         tmp_called_instance_1 = par_node;
         CHECK_OBJECT(par_name);
-        tmp_args_element_name_1 = par_name;
-        frame_fa162b35f42ae75673b0a269bc9b6353->m_frame.f_lineno = 244;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[57], tmp_args_element_name_1);
+        tmp_args_element_value_1 = par_name;
+        frame_aa6f7a367eb123cb5df465087d07f227->m_frame.f_lineno = 237;
+        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[57], tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 244;
+            exception_lineno = 237;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -7774,18 +7616,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
         int tmp_and_left_truth_2;
         nuitka_bool tmp_and_left_value_2;
         nuitka_bool tmp_and_right_value_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(var_children);
         tmp_truth_name_1 = CHECK_IF_TRUE(var_children);
         if (tmp_truth_name_1 == -1) {
@@ -7794,7 +7636,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 246;
+            exception_lineno = 239;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -7806,7 +7648,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 246;
+            exception_lineno = 239;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -7817,28 +7659,28 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
         }
         and_right_1:;
         CHECK_OBJECT(var_children);
-        tmp_expression_name_2 = var_children;
-        tmp_subscript_name_1 = mod_consts[7];
-        tmp_expression_name_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = var_children;
+        tmp_subscript_value_1 = mod_consts[7];
+        tmp_expression_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 247;
+            exception_lineno = 240;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[103]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[103]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 247;
+            exception_lineno = 240;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -7849,7 +7691,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_attribute_value_1);
 
-            exception_lineno = 247;
+            exception_lineno = 240;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -7862,7 +7704,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 247;
+            exception_lineno = 240;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -7873,66 +7715,66 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
         }
         and_right_2:;
         CHECK_OBJECT(var_children);
-        tmp_expression_name_5 = var_children;
-        tmp_subscript_name_2 = mod_consts[7];
-        tmp_expression_name_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_2, 0);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_5 = var_children;
+        tmp_subscript_value_2 = mod_consts[7];
+        tmp_expression_value_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_2, 0);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 248;
+            exception_lineno = 241;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[104]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[104]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 248;
+            exception_lineno = 241;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[105]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[105]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 248;
+            exception_lineno = 241;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_node);
-        tmp_expression_name_6 = par_node;
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[106]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_6 = par_node;
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[106]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_1);
+            Py_DECREF(tmp_cmp_expr_left_1);
 
-            exception_lineno = 248;
+            exception_lineno = 241;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_and_right_value_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_and_right_value_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_and_right_value_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 248;
+            exception_lineno = 241;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -7955,76 +7797,76 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_3;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[79]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_3;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[80]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[79]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[80]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 250;
+            exception_lineno = 243;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_children);
-        tmp_expression_name_9 = var_children;
-        tmp_subscript_name_3 = mod_consts[7];
-        tmp_expression_name_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_3, 0);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_expression_value_9 = var_children;
+        tmp_subscript_value_3 = mod_consts[7];
+        tmp_expression_value_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_9, tmp_subscript_value_3, 0);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 250;
+            exception_lineno = 243;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[104]);
-        Py_DECREF(tmp_expression_name_8);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[104]);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 250;
+            exception_lineno = 243;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[107]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[107]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 250;
+            exception_lineno = 243;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        frame_fa162b35f42ae75673b0a269bc9b6353->m_frame.f_lineno = 250;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        frame_aa6f7a367eb123cb5df465087d07f227->m_frame.f_lineno = 243;
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 250;
+            exception_lineno = 243;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -8043,7 +7885,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 251;
+            exception_lineno = 244;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -8060,11 +7902,11 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
         PyObject *tmp_make_exception_arg_1;
         CHECK_OBJECT(par_error);
         tmp_make_exception_arg_1 = par_error;
-        frame_fa162b35f42ae75673b0a269bc9b6353->m_frame.f_lineno = 252;
+        frame_aa6f7a367eb123cb5df465087d07f227->m_frame.f_lineno = 245;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
         exception_type = tmp_raise_type_1;
-        exception_lineno = 252;
+        exception_lineno = 245;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
         type_description_1 = "ooooo";
         goto frame_exception_exit_1;
@@ -8079,7 +7921,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_fa162b35f42ae75673b0a269bc9b6353);
+    RESTORE_FRAME_EXCEPTION(frame_aa6f7a367eb123cb5df465087d07f227);
 #endif
 
     // Put the previous frame back on top.
@@ -8089,7 +7931,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_fa162b35f42ae75673b0a269bc9b6353);
+    RESTORE_FRAME_EXCEPTION(frame_aa6f7a367eb123cb5df465087d07f227);
 #endif
 
     // Put the previous frame back on top.
@@ -8100,18 +7942,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_fa162b35f42ae75673b0a269bc9b6353);
+    RESTORE_FRAME_EXCEPTION(frame_aa6f7a367eb123cb5df465087d07f227);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_fa162b35f42ae75673b0a269bc9b6353, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_fa162b35f42ae75673b0a269bc9b6353->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_fa162b35f42ae75673b0a269bc9b6353, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_aa6f7a367eb123cb5df465087d07f227, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_aa6f7a367eb123cb5df465087d07f227->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_aa6f7a367eb123cb5df465087d07f227, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_fa162b35f42ae75673b0a269bc9b6353,
+        frame_aa6f7a367eb123cb5df465087d07f227,
         type_description_1,
         par_node,
         par_name,
@@ -8122,17 +7964,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(struc
 
 
     // Release cached frame if used for exception.
-    if (frame_fa162b35f42ae75673b0a269bc9b6353 == cache_frame_fa162b35f42ae75673b0a269bc9b6353) {
+    if (frame_aa6f7a367eb123cb5df465087d07f227 == cache_frame_aa6f7a367eb123cb5df465087d07f227) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_fa162b35f42ae75673b0a269bc9b6353);
-        cache_frame_fa162b35f42ae75673b0a269bc9b6353 = NULL;
+        Py_DECREF(cache_frame_aa6f7a367eb123cb5df465087d07f227);
+        cache_frame_aa6f7a367eb123cb5df465087d07f227 = NULL;
     }
 
-    assertFrameObject(frame_fa162b35f42ae75673b0a269bc9b6353);
+    assertFrameObject(frame_aa6f7a367eb123cb5df465087d07f227);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8215,53 +8057,53 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__11___init__(struct Nuitka
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_source = python_pars[1];
-    struct Nuitka_FrameObject *frame_d9952534a57e491b4907eed8148f7b1d;
+    struct Nuitka_FrameObject *frame_252d9dca94676f049b628c22a33081e5;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_d9952534a57e491b4907eed8148f7b1d = NULL;
+    static struct Nuitka_FrameObject *cache_frame_252d9dca94676f049b628c22a33081e5 = NULL;
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_d9952534a57e491b4907eed8148f7b1d)) {
-        Py_XDECREF(cache_frame_d9952534a57e491b4907eed8148f7b1d);
+    if (isFrameUnusable(cache_frame_252d9dca94676f049b628c22a33081e5)) {
+        Py_XDECREF(cache_frame_252d9dca94676f049b628c22a33081e5);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_d9952534a57e491b4907eed8148f7b1d == NULL) {
+        if (cache_frame_252d9dca94676f049b628c22a33081e5 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_d9952534a57e491b4907eed8148f7b1d = MAKE_FUNCTION_FRAME(codeobj_d9952534a57e491b4907eed8148f7b1d, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_252d9dca94676f049b628c22a33081e5 = MAKE_FUNCTION_FRAME(codeobj_252d9dca94676f049b628c22a33081e5, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_d9952534a57e491b4907eed8148f7b1d->m_type_description == NULL);
-    frame_d9952534a57e491b4907eed8148f7b1d = cache_frame_d9952534a57e491b4907eed8148f7b1d;
+    assert(cache_frame_252d9dca94676f049b628c22a33081e5->m_type_description == NULL);
+    frame_252d9dca94676f049b628c22a33081e5 = cache_frame_252d9dca94676f049b628c22a33081e5;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_d9952534a57e491b4907eed8148f7b1d);
+    pushFrameStack(frame_252d9dca94676f049b628c22a33081e5);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_d9952534a57e491b4907eed8148f7b1d) == 2); // Frame stack
+    assert(Py_REFCNT(frame_252d9dca94676f049b628c22a33081e5) == 2); // Frame stack
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[108]);
@@ -8269,54 +8111,54 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__11___init__(struct Nuitka
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 268;
+            exception_lineno = 261;
             type_description_1 = "ooc";
             goto frame_exception_exit_1;
         }
 
-        tmp_type_arg_name_1 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_type_arg_value_1 = Nuitka_Cell_GET(self->m_closure[0]);
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_1 = BUILTIN_SUPER0(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_1 = BUILTIN_SUPER0(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 268;
+            exception_lineno = 261;
             type_description_1 = "ooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[109]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[109]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 268;
+            exception_lineno = 261;
             type_description_1 = "ooc";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_source);
         tmp_tuple_element_1 = par_source;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[110]);
-        frame_d9952534a57e491b4907eed8148f7b1d->m_frame.f_lineno = 268;
-        tmp_call_result_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[110]);
+        frame_252d9dca94676f049b628c22a33081e5->m_frame.f_lineno = 261;
+        tmp_call_result_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 268;
+            exception_lineno = 261;
             type_description_1 = "ooc";
             goto frame_exception_exit_1;
         }
@@ -8324,7 +8166,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__11___init__(struct Nuitka
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_d9952534a57e491b4907eed8148f7b1d);
+    RESTORE_FRAME_EXCEPTION(frame_252d9dca94676f049b628c22a33081e5);
 #endif
 
     // Put the previous frame back on top.
@@ -8335,18 +8177,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__11___init__(struct Nuitka
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_d9952534a57e491b4907eed8148f7b1d);
+    RESTORE_FRAME_EXCEPTION(frame_252d9dca94676f049b628c22a33081e5);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_d9952534a57e491b4907eed8148f7b1d, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_d9952534a57e491b4907eed8148f7b1d->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_d9952534a57e491b4907eed8148f7b1d, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_252d9dca94676f049b628c22a33081e5, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_252d9dca94676f049b628c22a33081e5->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_252d9dca94676f049b628c22a33081e5, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_d9952534a57e491b4907eed8148f7b1d,
+        frame_252d9dca94676f049b628c22a33081e5,
         type_description_1,
         par_self,
         par_source,
@@ -8355,17 +8197,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__11___init__(struct Nuitka
 
 
     // Release cached frame if used for exception.
-    if (frame_d9952534a57e491b4907eed8148f7b1d == cache_frame_d9952534a57e491b4907eed8148f7b1d) {
+    if (frame_252d9dca94676f049b628c22a33081e5 == cache_frame_252d9dca94676f049b628c22a33081e5) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_d9952534a57e491b4907eed8148f7b1d);
-        cache_frame_d9952534a57e491b4907eed8148f7b1d = NULL;
+        Py_DECREF(cache_frame_252d9dca94676f049b628c22a33081e5);
+        cache_frame_252d9dca94676f049b628c22a33081e5 = NULL;
     }
 
-    assertFrameObject(frame_d9952534a57e491b4907eed8148f7b1d);
+    assertFrameObject(frame_252d9dca94676f049b628c22a33081e5);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8415,13 +8257,13 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__12_parse(struct Nuitka_Fu
     PyObject *par_self = python_pars[0];
     PyObject *par_handle = python_pars[1];
     PyObject *var_records = NULL;
-    struct Nuitka_FrameObject *frame_65201d7cba494c151ab3d393ff9be678;
+    struct Nuitka_FrameObject *frame_261e6e13bfbf26e4534496bb2c012c76;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_65201d7cba494c151ab3d393ff9be678 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_261e6e13bfbf26e4534496bb2c012c76 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -8430,50 +8272,50 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__12_parse(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_65201d7cba494c151ab3d393ff9be678)) {
-        Py_XDECREF(cache_frame_65201d7cba494c151ab3d393ff9be678);
+    if (isFrameUnusable(cache_frame_261e6e13bfbf26e4534496bb2c012c76)) {
+        Py_XDECREF(cache_frame_261e6e13bfbf26e4534496bb2c012c76);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_65201d7cba494c151ab3d393ff9be678 == NULL) {
+        if (cache_frame_261e6e13bfbf26e4534496bb2c012c76 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_65201d7cba494c151ab3d393ff9be678 = MAKE_FUNCTION_FRAME(codeobj_65201d7cba494c151ab3d393ff9be678, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_261e6e13bfbf26e4534496bb2c012c76 = MAKE_FUNCTION_FRAME(codeobj_261e6e13bfbf26e4534496bb2c012c76, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_65201d7cba494c151ab3d393ff9be678->m_type_description == NULL);
-    frame_65201d7cba494c151ab3d393ff9be678 = cache_frame_65201d7cba494c151ab3d393ff9be678;
+    assert(cache_frame_261e6e13bfbf26e4534496bb2c012c76->m_type_description == NULL);
+    frame_261e6e13bfbf26e4534496bb2c012c76 = cache_frame_261e6e13bfbf26e4534496bb2c012c76;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_65201d7cba494c151ab3d393ff9be678);
+    pushFrameStack(frame_261e6e13bfbf26e4534496bb2c012c76);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_65201d7cba494c151ab3d393ff9be678) == 2); // Frame stack
+    assert(Py_REFCNT(frame_261e6e13bfbf26e4534496bb2c012c76) == 2); // Frame stack
 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_handle);
-        tmp_args_element_name_1 = par_handle;
-        frame_65201d7cba494c151ab3d393ff9be678->m_frame.f_lineno = 272;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[112], tmp_args_element_name_1);
+        tmp_args_element_value_1 = par_handle;
+        frame_261e6e13bfbf26e4534496bb2c012c76->m_frame.f_lineno = 265;
+        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[112], tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 272;
+            exception_lineno = 265;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
@@ -8482,7 +8324,7 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__12_parse(struct Nuitka_Fu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_65201d7cba494c151ab3d393ff9be678);
+    RESTORE_FRAME_EXCEPTION(frame_261e6e13bfbf26e4534496bb2c012c76);
 #endif
 
     // Put the previous frame back on top.
@@ -8493,18 +8335,18 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__12_parse(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_65201d7cba494c151ab3d393ff9be678);
+    RESTORE_FRAME_EXCEPTION(frame_261e6e13bfbf26e4534496bb2c012c76);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_65201d7cba494c151ab3d393ff9be678, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_65201d7cba494c151ab3d393ff9be678->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_65201d7cba494c151ab3d393ff9be678, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_261e6e13bfbf26e4534496bb2c012c76, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_261e6e13bfbf26e4534496bb2c012c76->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_261e6e13bfbf26e4534496bb2c012c76, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_65201d7cba494c151ab3d393ff9be678,
+        frame_261e6e13bfbf26e4534496bb2c012c76,
         type_description_1,
         par_self,
         par_handle,
@@ -8513,17 +8355,17 @@ static PyObject *impl_Bio$SeqIO$SnapGeneIO$$$function__12_parse(struct Nuitka_Fu
 
 
     // Release cached frame if used for exception.
-    if (frame_65201d7cba494c151ab3d393ff9be678 == cache_frame_65201d7cba494c151ab3d393ff9be678) {
+    if (frame_261e6e13bfbf26e4534496bb2c012c76 == cache_frame_261e6e13bfbf26e4534496bb2c012c76) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_65201d7cba494c151ab3d393ff9be678);
-        cache_frame_65201d7cba494c151ab3d393ff9be678 = NULL;
+        Py_DECREF(cache_frame_261e6e13bfbf26e4534496bb2c012c76);
+        cache_frame_261e6e13bfbf26e4534496bb2c012c76 = NULL;
     }
 
-    assertFrameObject(frame_65201d7cba494c151ab3d393ff9be678);
+    assertFrameObject(frame_261e6e13bfbf26e4534496bb2c012c76);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8748,7 +8590,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_m_frame = MAKE_FUNCTION_FRAME(codeobj_0224c1e29080c28f61f333ac97c88403, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_m_frame = MAKE_FUNCTION_FRAME(codeobj_2727074d956a045ac6db22d6d7b690ae, module_Bio$SeqIO$SnapGeneIO, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
@@ -8795,25 +8637,25 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[115]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[115]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[115]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[115]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 277;
+            generator_heap->exception_lineno = 270;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
-        generator->m_frame->m_frame.f_lineno = 277;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[116]);
+        generator->m_frame->m_frame.f_lineno = 270;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[116]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8821,7 +8663,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 277;
+            generator_heap->exception_lineno = 270;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
@@ -8830,21 +8672,21 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[12]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_1;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 278;
+            generator_heap->exception_lineno = 271;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
@@ -8855,21 +8697,21 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
 
-            generator_heap->exception_lineno = 278;
+            generator_heap->exception_lineno = 271;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(generator->m_closure[0]);
-        generator->m_frame->m_frame.f_lineno = 278;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(generator->m_closure[0]);
+        generator->m_frame->m_frame.f_lineno = 271;
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 278;
+            generator_heap->exception_lineno = 271;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
@@ -8881,10 +8723,10 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_value_name_1;
+        PyObject *tmp_value_value_1;
         CHECK_OBJECT(generator_heap->var_packets);
-        tmp_value_name_1 = generator_heap->var_packets;
-        tmp_iter_arg_1 = ITERATOR_NEXT(tmp_value_name_1);
+        tmp_value_value_1 = generator_heap->var_packets;
+        tmp_iter_arg_1 = ITERATOR_NEXT(tmp_value_value_1);
         if (tmp_iter_arg_1 == NULL) {
             if (!ERROR_OCCURRED()) {
                 generator_heap->exception_type = PyExc_StopIteration;
@@ -8897,10 +8739,10 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 280;
+            generator_heap->exception_lineno = 273;
             goto try_except_handler_3;
         }
-        tmp_assign_source_3 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_3 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         Py_DECREF(tmp_iter_arg_1);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8908,7 +8750,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 280;
+            generator_heap->exception_lineno = 273;
             generator_heap->type_description_1 = "ccoooooo";
             goto try_except_handler_3;
         }
@@ -8934,7 +8776,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 280;
+            generator_heap->exception_lineno = 273;
             goto try_except_handler_4;
         }
         assert(generator_heap->tmp_tuple_unpack_1__element_1 == NULL);
@@ -8958,7 +8800,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 280;
+            generator_heap->exception_lineno = 273;
             goto try_except_handler_4;
         }
         assert(generator_heap->tmp_tuple_unpack_1__element_2 == NULL);
@@ -8982,7 +8824,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 280;
+            generator_heap->exception_lineno = 273;
             goto try_except_handler_4;
         }
         assert(generator_heap->tmp_tuple_unpack_1__element_3 == NULL);
@@ -9007,7 +8849,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
                     FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
                     generator_heap->type_description_1 = "ccoooooo";
-                    generator_heap->exception_lineno = 280;
+                    generator_heap->exception_lineno = 273;
                     goto try_except_handler_4;
                 }
             }
@@ -9021,7 +8863,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             generator_heap->exception_tb = NULL;
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 280;
+            generator_heap->exception_lineno = 273;
             goto try_except_handler_4;
         }
     }
@@ -9103,11 +8945,11 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_StopIteration;
-        generator_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_StopIteration;
+        generator_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(generator_heap->tmp_res == -1));
         tmp_condition_result_1 = (generator_heap->tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -9122,14 +8964,14 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
         PyObject *tmp_make_exception_arg_1;
         PyObject *tmp_raise_cause_1;
         tmp_make_exception_arg_1 = mod_consts[118];
-        generator->m_frame->m_frame.f_lineno = 282;
+        generator->m_frame->m_frame.f_lineno = 275;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
         tmp_raise_cause_1 = Py_None;
         generator_heap->exception_type = tmp_raise_type_1;
         generator_heap->exception_value = NULL;
         Py_INCREF(tmp_raise_cause_1);
-        generator_heap->exception_lineno = 282;
+        generator_heap->exception_lineno = 275;
         RAISE_EXCEPTION_WITH_CAUSE(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb, tmp_raise_cause_1);
         generator_heap->type_description_1 = "ccoooooo";
         goto try_except_handler_5;
@@ -9138,7 +8980,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     branch_no_1:;
     generator_heap->tmp_result = RERAISE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
     if (unlikely(generator_heap->tmp_result == false)) {
-        generator_heap->exception_lineno = 279;
+        generator_heap->exception_lineno = 272;
     }
 
     if (generator_heap->exception_tb && generator_heap->exception_tb->tb_frame == &generator->m_frame->m_frame) generator->m_frame->m_frame.f_lineno = generator_heap->exception_tb->tb_lineno;
@@ -9209,90 +9051,76 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(generator_heap->var_packet_type);
-        tmp_compexpr_left_2 = generator_heap->var_packet_type;
-        tmp_compexpr_right_2 = mod_consts[119];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = generator_heap->var_packet_type;
+        tmp_cmp_expr_right_2 = mod_consts[119];
+        tmp_condition_result_2 = RICH_COMPARE_NE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 284;
+            generator_heap->exception_lineno = 277;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            generator_heap->exception_lineno = 284;
-            generator_heap->type_description_1 = "ccoooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
         tmp_make_exception_arg_2 = mod_consts[120];
-        generator->m_frame->m_frame.f_lineno = 285;
+        generator->m_frame->m_frame.f_lineno = 278;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
         generator_heap->exception_type = tmp_raise_type_2;
-        generator_heap->exception_lineno = 285;
+        generator_heap->exception_lineno = 278;
         RAISE_EXCEPTION_WITH_TYPE(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
         generator_heap->type_description_1 = "ccoooooo";
         goto frame_exception_exit_1;
     }
     branch_no_2:;
     {
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[121]);
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[121]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[121]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[121]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 286;
+            generator_heap->exception_lineno = 279;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(generator_heap->var_length);
-        tmp_args_element_name_2 = generator_heap->var_length;
+        tmp_args_element_value_2 = generator_heap->var_length;
         CHECK_OBJECT(generator_heap->var_data);
-        tmp_args_element_name_3 = generator_heap->var_data;
+        tmp_args_element_value_3 = generator_heap->var_data;
         CHECK_OBJECT(generator_heap->var_record);
-        tmp_args_element_name_4 = generator_heap->var_record;
-        generator->m_frame->m_frame.f_lineno = 286;
+        tmp_args_element_value_4 = generator_heap->var_record;
+        generator->m_frame->m_frame.f_lineno = 279;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
         }
 
         if (tmp_call_result_1 == NULL) {
@@ -9301,7 +9129,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 286;
+            generator_heap->exception_lineno = 279;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
@@ -9319,7 +9147,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 288;
+            generator_heap->exception_lineno = 281;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
@@ -9342,7 +9170,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
                 FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
                 generator_heap->type_description_1 = "ccoooooo";
-                generator_heap->exception_lineno = 288;
+                generator_heap->exception_lineno = 281;
                 goto try_except_handler_6;
             }
         }
@@ -9360,14 +9188,14 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
         PyObject *tmp_iter_arg_3;
         CHECK_OBJECT(generator_heap->tmp_for_loop_1__iter_value);
         tmp_iter_arg_3 = generator_heap->tmp_for_loop_1__iter_value;
-        tmp_assign_source_12 = MAKE_ITERATOR(tmp_iter_arg_3);
+        tmp_assign_source_12 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_3);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 288;
+            generator_heap->exception_lineno = 281;
             generator_heap->type_description_1 = "ccoooooo";
             goto try_except_handler_7;
         }
@@ -9397,7 +9225,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 288;
+            generator_heap->exception_lineno = 281;
             goto try_except_handler_8;
         }
         {
@@ -9425,7 +9253,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 288;
+            generator_heap->exception_lineno = 281;
             goto try_except_handler_8;
         }
         {
@@ -9453,7 +9281,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 288;
+            generator_heap->exception_lineno = 281;
             goto try_except_handler_8;
         }
         {
@@ -9482,7 +9310,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
                     FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
                     generator_heap->type_description_1 = "ccoooooo";
-                    generator_heap->exception_lineno = 288;
+                    generator_heap->exception_lineno = 281;
                     goto try_except_handler_8;
                 }
             }
@@ -9496,7 +9324,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             generator_heap->exception_tb = NULL;
 
             generator_heap->type_description_1 = "ccoooooo";
-            generator_heap->exception_lineno = 288;
+            generator_heap->exception_lineno = 281;
             goto try_except_handler_8;
         }
     }
@@ -9601,35 +9429,48 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
 
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[122]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_5;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[122]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[122]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[122]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 289;
+            generator_heap->exception_lineno = 282;
+            generator_heap->type_description_1 = "ccoooooo";
+            goto try_except_handler_6;
+        }
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[123]);
+        if (tmp_called_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
+
+
+            generator_heap->exception_lineno = 282;
             generator_heap->type_description_1 = "ccoooooo";
             goto try_except_handler_6;
         }
         CHECK_OBJECT(generator_heap->var_packet_type);
-        tmp_args_element_name_5 = generator_heap->var_packet_type;
-        generator->m_frame->m_frame.f_lineno = 289;
-        tmp_assign_source_19 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[123], tmp_args_element_name_5);
+        tmp_args_element_value_5 = generator_heap->var_packet_type;
+        generator->m_frame->m_frame.f_lineno = 282;
+        tmp_assign_source_19 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_5);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 289;
+            generator_heap->exception_lineno = 282;
             generator_heap->type_description_1 = "ccoooooo";
             goto try_except_handler_6;
         }
@@ -9642,12 +9483,12 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(generator_heap->var_handler);
-        tmp_compexpr_left_3 = generator_heap->var_handler;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = generator_heap->var_handler;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -9656,17 +9497,17 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     }
     branch_yes_3:;
     {
-        PyObject *tmp_called_name_4;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
         CHECK_OBJECT(generator_heap->var_handler);
-        tmp_called_name_4 = generator_heap->var_handler;
+        tmp_called_value_5 = generator_heap->var_handler;
         CHECK_OBJECT(generator_heap->var_length);
-        tmp_args_element_name_6 = generator_heap->var_length;
+        tmp_args_element_value_6 = generator_heap->var_length;
         CHECK_OBJECT(generator_heap->var_data);
-        tmp_args_element_name_7 = generator_heap->var_data;
+        tmp_args_element_value_7 = generator_heap->var_data;
         if (generator_heap->var_record == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[39]);
@@ -9674,16 +9515,16 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
 
-            generator_heap->exception_lineno = 291;
+            generator_heap->exception_lineno = 284;
             generator_heap->type_description_1 = "ccoooooo";
             goto try_except_handler_6;
         }
 
-        tmp_args_element_name_8 = generator_heap->var_record;
-        generator->m_frame->m_frame.f_lineno = 291;
+        tmp_args_element_value_8 = generator_heap->var_record;
+        generator->m_frame->m_frame.f_lineno = 284;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_5, call_args);
         }
 
         if (tmp_call_result_2 == NULL) {
@@ -9692,7 +9533,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 291;
+            generator_heap->exception_lineno = 284;
             generator_heap->type_description_1 = "ccoooooo";
             goto try_except_handler_6;
         }
@@ -9705,7 +9546,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
         FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-        generator_heap->exception_lineno = 288;
+        generator_heap->exception_lineno = 281;
         generator_heap->type_description_1 = "ccoooooo";
         goto try_except_handler_6;
     }
@@ -9743,9 +9584,9 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
     Py_DECREF(generator_heap->tmp_for_loop_1__for_iterator);
     generator_heap->tmp_for_loop_1__for_iterator = NULL;
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_2;
         if (generator_heap->var_record == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[39]);
@@ -9753,37 +9594,37 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
 
-            generator_heap->exception_lineno = 293;
+            generator_heap->exception_lineno = 286;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = generator_heap->var_record;
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[13]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_2 = generator_heap->var_record;
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[13]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 293;
+            generator_heap->exception_lineno = 286;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
-        generator_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        generator_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (generator_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 293;
+            generator_heap->exception_lineno = 286;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = (generator_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (generator_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -9794,18 +9635,18 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
         tmp_make_exception_arg_3 = mod_consts[124];
-        generator->m_frame->m_frame.f_lineno = 294;
+        generator->m_frame->m_frame.f_lineno = 287;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
         generator_heap->exception_type = tmp_raise_type_3;
-        generator_heap->exception_lineno = 294;
+        generator_heap->exception_lineno = 287;
         RAISE_EXCEPTION_WITH_TYPE(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
         generator_heap->type_description_1 = "ccoooooo";
         goto frame_exception_exit_1;
     }
     branch_no_4:;
     {
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_3;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
         if (generator_heap->var_record == NULL) {
 
@@ -9814,15 +9655,15 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
 
-            generator_heap->exception_lineno = 296;
+            generator_heap->exception_lineno = 289;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = generator_heap->var_record;
-        Py_INCREF(tmp_expression_name_2);
+        tmp_expression_value_3 = generator_heap->var_record;
+        Py_INCREF(tmp_expression_value_3);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_2;
+        return tmp_expression_value_3;
         yield_return_1:
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -9830,7 +9671,7 @@ static PyObject *Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 296;
+            generator_heap->exception_lineno = 289;
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
@@ -9965,7 +9806,7 @@ static PyObject *MAKE_GENERATOR_Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$ge
 #if PYTHON_VERSION >= 0x350
         mod_consts[125],
 #endif
-        codeobj_0224c1e29080c28f61f333ac97c88403,
+        codeobj_2727074d956a045ac6db22d6d7b690ae,
         closure,
         2,
         sizeof(struct Bio$SeqIO$SnapGeneIO$$$function__13_iterate$$$genobj__1_iterate_locals)
@@ -9981,7 +9822,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_va
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_fa162b35f42ae75673b0a269bc9b6353,
+        codeobj_aa6f7a367eb123cb5df465087d07f227,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10004,9 +9845,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__11___init__(stru
         impl_Bio$SeqIO$SnapGeneIO$$$function__11___init__,
         mod_consts[109],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[169],
+        mod_consts[168],
 #endif
-        codeobj_d9952534a57e491b4907eed8148f7b1d,
+        codeobj_252d9dca94676f049b628c22a33081e5,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10027,11 +9868,11 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__11___init__(stru
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__12_parse() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SnapGeneIO$$$function__12_parse,
-        mod_consts[170],
+        mod_consts[169],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[171],
+        mod_consts[170],
 #endif
-        codeobj_65201d7cba494c151ab3d393ff9be678,
+        codeobj_261e6e13bfbf26e4534496bb2c012c76,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10056,7 +9897,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__13_iterate() {
 #if PYTHON_VERSION >= 0x300
         mod_consts[125],
 #endif
-        codeobj_0224c1e29080c28f61f333ac97c88403,
+        codeobj_2727074d956a045ac6db22d6d7b690ae,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10102,7 +9943,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__1__iterate() {
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet,
-        mod_consts[150],
+        mod_consts[149],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -10127,7 +9968,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_pac
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet,
-        mod_consts[151],
+        mod_consts[150],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -10177,7 +10018,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location,
-        mod_consts[69],
+        mod_consts[70],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -10202,11 +10043,11 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__5__parse_locatio
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet,
-        mod_consts[152],
+        mod_consts[151],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_3f6baa87eb551e860d74d9f17ed7c655,
+        codeobj_87322dce83727d4848bcf9ff2c305806,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10227,11 +10068,11 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__6__parse_feature
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet,
-        mod_consts[153],
+        mod_consts[152],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_4c45a8e8aff66906f0b3487e41620091,
+        codeobj_86ea7be9ed961951d7a69fc6f44acf4d,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10252,11 +10093,11 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__8__decode() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SnapGeneIO$$$function__8__decode,
-        mod_consts[79],
+        mod_consts[80],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_4b618d30bb5fd2dbbcefff80fc074b74,
+        codeobj_120f9c22b510967d19505bf4e59f80a5,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10281,7 +10122,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_cf851429fcc96a7378ba0710fdb51177,
+        codeobj_0b0a2bac32eb4dea45fa884bee598a2a,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -10478,63 +10319,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("Bio.SeqIO.SnapGeneIO");
+
+    // Store the module for future use.
     module_Bio$SeqIO$SnapGeneIO = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.SeqIO.SnapGeneIO: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("Bio.SeqIO.SnapGeneIO: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.SeqIO.SnapGeneIO: Calling createModuleConstants().\n");
+        PRINT_STRING("Bio.SeqIO.SnapGeneIO: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.SeqIO.SnapGeneIO: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("Bio.SeqIO.SnapGeneIO: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initBio$SeqIO$SnapGeneIO\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_Bio$SeqIO$SnapGeneIO = MODULE_DICT(module_Bio$SeqIO$SnapGeneIO);
 
@@ -10555,7 +10400,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         UPDATE_STRING_DICT0(
             moduledict_Bio$SeqIO$SnapGeneIO,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[102]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)const_str_plain___name__);
@@ -10605,7 +10450,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -10653,9 +10498,11 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     // Temp variables if any
     struct Nuitka_CellObject *outline_0_var___class__ = Nuitka_Cell_Empty();
     PyObject *tmp_class_creation_1__bases = NULL;
+    PyObject *tmp_class_creation_1__bases_orig = NULL;
     PyObject *tmp_class_creation_1__class_decl_dict = NULL;
     PyObject *tmp_class_creation_1__metaclass = NULL;
     PyObject *tmp_class_creation_1__prepared = NULL;
+    PyObject *tmp_import_from_1__module = NULL;
     struct Nuitka_FrameObject *frame_ad80febe9219515e7170c9d7165c8a3a;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
@@ -10663,18 +10510,18 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    int tmp_res;
-    PyObject *tmp_dictdel_dict;
-    PyObject *tmp_dictdel_key;
-    PyObject *locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257 = NULL;
-    PyObject *tmp_dictset_value;
-    struct Nuitka_FrameObject *frame_c34991594746c044f7132f9fe11377d9_2;
-    NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_c34991594746c044f7132f9fe11377d9_2 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
+    int tmp_res;
+    PyObject *tmp_dictdel_dict;
+    PyObject *tmp_dictdel_key;
+    PyObject *locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250 = NULL;
+    PyObject *tmp_dictset_value;
+    struct Nuitka_FrameObject *frame_b729560f62de5c054ce6dc01015fc2a7_2;
+    NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_b729560f62de5c054ce6dc01015fc2a7_2 = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -10683,6 +10530,10 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
+    PyObject *exception_keeper_type_4;
+    PyObject *exception_keeper_value_4;
+    PyTracebackObject *exception_keeper_tb_4;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_4;
 
     // Module code.
     {
@@ -10758,25 +10609,25 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[36];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[133];
-        tmp_level_name_1 = mod_consts[7];
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 12;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[36];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[133];
+        tmp_level_value_1 = mod_consts[7];
+        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 14;
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 12;
+            exception_lineno = 14;
 
             goto frame_exception_exit_1;
         }
@@ -10798,7 +10649,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 12;
+            exception_lineno = 14;
 
             goto frame_exception_exit_1;
         }
@@ -10807,25 +10658,25 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[134];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[135];
-        tmp_level_name_2 = mod_consts[7];
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 13;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[134];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[135];
+        tmp_level_value_2 = mod_consts[7];
+        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 15;
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 13;
+            exception_lineno = 15;
 
             goto frame_exception_exit_1;
         }
@@ -10847,7 +10698,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 13;
+            exception_lineno = 15;
 
             goto frame_exception_exit_1;
         }
@@ -10856,25 +10707,25 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[136];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[137];
-        tmp_level_name_3 = mod_consts[7];
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 14;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[136];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[137];
+        tmp_level_value_3 = mod_consts[7];
+        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 16;
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 14;
+            exception_lineno = 16;
 
             goto frame_exception_exit_1;
         }
@@ -10896,7 +10747,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 14;
+            exception_lineno = 16;
 
             goto frame_exception_exit_1;
         }
@@ -10905,25 +10756,25 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[138];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[139];
-        tmp_level_name_4 = mod_consts[7];
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 15;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[138];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[139];
+        tmp_level_value_4 = mod_consts[7];
+        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 17;
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 15;
+            exception_lineno = 17;
 
             goto frame_exception_exit_1;
         }
@@ -10945,7 +10796,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 15;
+            exception_lineno = 17;
 
             goto frame_exception_exit_1;
         }
@@ -10954,25 +10805,25 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_5;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[140];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[141];
-        tmp_level_name_5 = mod_consts[7];
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 17;
-        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[140];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[141];
+        tmp_level_value_5 = mod_consts[7];
+        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 19;
+        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 17;
+            exception_lineno = 19;
 
             goto frame_exception_exit_1;
         }
@@ -10994,7 +10845,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 17;
+            exception_lineno = 19;
 
             goto frame_exception_exit_1;
         }
@@ -11002,118 +10853,19 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_import_name_from_6;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[142];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[143];
-        tmp_level_name_6 = mod_consts[7];
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 18;
-        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
-        if (tmp_import_name_from_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 18;
-
-            goto frame_exception_exit_1;
-        }
-        if (PyModule_Check(tmp_import_name_from_6)) {
-            tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_6,
-                (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO,
-                mod_consts[55],
-                mod_consts[7]
-            );
-        } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[55]);
-        }
-
-        Py_DECREF(tmp_import_name_from_6);
-        if (tmp_assign_source_9 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 18;
-
-            goto frame_exception_exit_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_9);
-    }
-    {
-        PyObject *tmp_assign_source_10;
-        PyObject *tmp_import_name_from_7;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[142];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_7 = Py_None;
-        tmp_fromlist_name_7 = mod_consts[144];
-        tmp_level_name_7 = mod_consts[7];
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 19;
-        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
-        if (tmp_import_name_from_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 19;
-
-            goto frame_exception_exit_1;
-        }
-        if (PyModule_Check(tmp_import_name_from_7)) {
-            tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_7,
-                (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO,
-                mod_consts[89],
-                mod_consts[7]
-            );
-        } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[89]);
-        }
-
-        Py_DECREF(tmp_import_name_from_7);
-        if (tmp_assign_source_10 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 19;
-
-            goto frame_exception_exit_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_10);
-    }
-    {
-        PyObject *tmp_assign_source_11;
-        PyObject *tmp_import_name_from_8;
-        PyObject *tmp_name_name_8;
-        PyObject *tmp_globals_arg_name_8;
-        PyObject *tmp_locals_arg_name_8;
-        PyObject *tmp_fromlist_name_8;
-        PyObject *tmp_level_name_8;
-        tmp_name_name_8 = mod_consts[145];
-        tmp_globals_arg_name_8 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_8 = Py_None;
-        tmp_fromlist_name_8 = mod_consts[146];
-        tmp_level_name_8 = mod_consts[7];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[142];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[143];
+        tmp_level_value_6 = mod_consts[7];
         frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 20;
-        tmp_import_name_from_8 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_8, tmp_locals_arg_name_8, tmp_fromlist_name_8, tmp_level_name_8);
-        if (tmp_import_name_from_8 == NULL) {
+        tmp_assign_source_9 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
+        if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11123,18 +10875,54 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_8)) {
-            tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_8,
+        assert(tmp_import_from_1__module == NULL);
+        tmp_import_from_1__module = tmp_assign_source_9;
+    }
+    // Tried code:
+    {
+        PyObject *tmp_assign_source_10;
+        PyObject *tmp_import_name_from_6;
+        CHECK_OBJECT(tmp_import_from_1__module);
+        tmp_import_name_from_6 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_6)) {
+            tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_6,
                 (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO,
-                mod_consts[115],
+                mod_consts[89],
                 mod_consts[7]
             );
         } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[115]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[89]);
         }
 
-        Py_DECREF(tmp_import_name_from_8);
+        if (tmp_assign_source_10 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 20;
+
+            goto try_except_handler_1;
+        }
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_10);
+    }
+    {
+        PyObject *tmp_assign_source_11;
+        PyObject *tmp_import_name_from_7;
+        CHECK_OBJECT(tmp_import_from_1__module);
+        tmp_import_name_from_7 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_7)) {
+            tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_7,
+                (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO,
+                mod_consts[55],
+                mod_consts[7]
+            );
+        } else {
+            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[55]);
+        }
+
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11143,25 +10931,101 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
 
             exception_lineno = 20;
 
-            goto frame_exception_exit_1;
+            goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[115], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_11);
     }
+    goto try_end_1;
+    // Exception handler code:
+    try_except_handler_1:;
+    exception_keeper_type_1 = exception_type;
+    exception_keeper_value_1 = exception_value;
+    exception_keeper_tb_1 = exception_tb;
+    exception_keeper_lineno_1 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    CHECK_OBJECT(tmp_import_from_1__module);
+    Py_DECREF(tmp_import_from_1__module);
+    tmp_import_from_1__module = NULL;
+    // Re-raise.
+    exception_type = exception_keeper_type_1;
+    exception_value = exception_keeper_value_1;
+    exception_tb = exception_keeper_tb_1;
+    exception_lineno = exception_keeper_lineno_1;
+
+    goto frame_exception_exit_1;
+    // End of try:
+    try_end_1:;
+    CHECK_OBJECT(tmp_import_from_1__module);
+    Py_DECREF(tmp_import_from_1__module);
+    tmp_import_from_1__module = NULL;
     {
         PyObject *tmp_assign_source_12;
+        PyObject *tmp_import_name_from_8;
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[144];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_7 = Py_None;
+        tmp_fromlist_value_7 = mod_consts[145];
+        tmp_level_value_7 = mod_consts[7];
+        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 21;
+        tmp_import_name_from_8 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
+        if (tmp_import_name_from_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 21;
+
+            goto frame_exception_exit_1;
+        }
+        if (PyModule_Check(tmp_import_name_from_8)) {
+            tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_8,
+                (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO,
+                mod_consts[115],
+                mod_consts[7]
+            );
+        } else {
+            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[115]);
+        }
+
+        Py_DECREF(tmp_import_name_from_8);
+        if (tmp_assign_source_12 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 21;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[115], tmp_assign_source_12);
+    }
+    {
+        PyObject *tmp_assign_source_13;
         PyObject *tmp_import_name_from_9;
-        PyObject *tmp_name_name_9;
-        PyObject *tmp_globals_arg_name_9;
-        PyObject *tmp_locals_arg_name_9;
-        PyObject *tmp_fromlist_name_9;
-        PyObject *tmp_level_name_9;
-        tmp_name_name_9 = mod_consts[147];
-        tmp_globals_arg_name_9 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
-        tmp_locals_arg_name_9 = Py_None;
-        tmp_fromlist_name_9 = mod_consts[148];
-        tmp_level_name_9 = mod_consts[4];
+        PyObject *tmp_name_value_8;
+        PyObject *tmp_globals_arg_value_8;
+        PyObject *tmp_locals_arg_value_8;
+        PyObject *tmp_fromlist_value_8;
+        PyObject *tmp_level_value_8;
+        tmp_name_value_8 = mod_consts[146];
+        tmp_globals_arg_value_8 = (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO;
+        tmp_locals_arg_value_8 = Py_None;
+        tmp_fromlist_value_8 = mod_consts[147];
+        tmp_level_value_8 = mod_consts[4];
         frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 22;
-        tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_name_9, tmp_globals_arg_name_9, tmp_locals_arg_name_9, tmp_fromlist_name_9, tmp_level_name_9);
+        tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
         if (tmp_import_name_from_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11173,18 +11037,18 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_9)) {
-            tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_Bio$SeqIO$SnapGeneIO,
-                mod_consts[149],
+                mod_consts[148],
                 mod_consts[7]
             );
         } else {
-            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[149]);
+            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[148]);
         }
 
         Py_DECREF(tmp_import_name_from_9);
-        if (tmp_assign_source_12 == NULL) {
+        if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11194,69 +11058,90 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[149], tmp_assign_source_12);
-    }
-    {
-        PyObject *tmp_assign_source_13;
-
-
-        tmp_assign_source_13 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__1__iterate();
-
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[148], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
 
 
-        tmp_assign_source_14 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet();
+        tmp_assign_source_14 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__1__iterate();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[150], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
 
 
-        tmp_assign_source_15 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet();
+        tmp_assign_source_15 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__2__parse_dna_packet();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[151], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[149], tmp_assign_source_15);
     }
     {
         PyObject *tmp_assign_source_16;
 
 
-        tmp_assign_source_16 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet();
+        tmp_assign_source_16 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__3__parse_notes_packet();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[121], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[150], tmp_assign_source_16);
     }
     {
         PyObject *tmp_assign_source_17;
 
 
-        tmp_assign_source_17 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location();
+        tmp_assign_source_17 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__4__parse_cookie_packet();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[69], tmp_assign_source_17);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[121], tmp_assign_source_17);
     }
     {
         PyObject *tmp_assign_source_18;
 
 
-        tmp_assign_source_18 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet();
+        tmp_assign_source_18 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__5__parse_location();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[152], tmp_assign_source_18);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[70], tmp_assign_source_18);
     }
     {
         PyObject *tmp_assign_source_19;
 
 
-        tmp_assign_source_19 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet();
+        tmp_assign_source_19 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__6__parse_features_packet();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[153], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[151], tmp_assign_source_19);
     }
     {
         PyObject *tmp_assign_source_20;
+
+
+        tmp_assign_source_20 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__7__parse_primers_packet();
+
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[152], tmp_assign_source_20);
+    }
+    {
+        PyObject *tmp_assign_source_21;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
         tmp_dict_key_1 = mod_consts[7];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[149]);
+
+        if (unlikely(tmp_dict_value_1 == NULL)) {
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[149]);
+        }
+
+        assert(!(tmp_dict_value_1 == NULL));
+        tmp_assign_source_21 = _PyDict_NewPresized( 4 );
+        tmp_res = PyDict_SetItem(tmp_assign_source_21, tmp_dict_key_1, tmp_dict_value_1);
+        assert(!(tmp_res != 0));
+        tmp_dict_key_1 = mod_consts[153];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[152]);
+
+        if (unlikely(tmp_dict_value_1 == NULL)) {
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[152]);
+        }
+
+        assert(!(tmp_dict_value_1 == NULL));
+        tmp_res = PyDict_SetItem(tmp_assign_source_21, tmp_dict_key_1, tmp_dict_value_1);
+        assert(!(tmp_res != 0));
+        tmp_dict_key_1 = mod_consts[154];
         tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[150]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
@@ -11264,18 +11149,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         }
 
         assert(!(tmp_dict_value_1 == NULL));
-        tmp_assign_source_20 = _PyDict_NewPresized( 4 );
-        tmp_res = PyDict_SetItem(tmp_assign_source_20, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[154];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[153]);
-
-        if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[153]);
-        }
-
-        assert(!(tmp_dict_value_1 == NULL));
-        tmp_res = PyDict_SetItem(tmp_assign_source_20, tmp_dict_key_1, tmp_dict_value_1);
+        tmp_res = PyDict_SetItem(tmp_assign_source_21, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
         tmp_dict_key_1 = mod_consts[155];
         tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[151]);
@@ -11285,167 +11159,202 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         }
 
         assert(!(tmp_dict_value_1 == NULL));
-        tmp_res = PyDict_SetItem(tmp_assign_source_20, tmp_dict_key_1, tmp_dict_value_1);
+        tmp_res = PyDict_SetItem(tmp_assign_source_21, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[156];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[152]);
-
-        if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[152]);
-        }
-
-        assert(!(tmp_dict_value_1 == NULL));
-        tmp_res = PyDict_SetItem(tmp_assign_source_20, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[122], tmp_assign_source_20);
-    }
-    {
-        PyObject *tmp_assign_source_21;
-
-
-        tmp_assign_source_21 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__8__decode();
-
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[79], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[122], tmp_assign_source_21);
     }
     {
         PyObject *tmp_assign_source_22;
-        PyObject *tmp_defaults_1;
-        tmp_defaults_1 = mod_consts[157];
-        Py_INCREF(tmp_defaults_1);
 
 
-        tmp_assign_source_22 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(tmp_defaults_1);
+        tmp_assign_source_22 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__8__decode();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_22);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_22);
     }
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_defaults_2;
-        tmp_defaults_2 = mod_consts[157];
-        Py_INCREF(tmp_defaults_2);
+        PyObject *tmp_defaults_1;
+        tmp_defaults_1 = mod_consts[156];
+        Py_INCREF(tmp_defaults_1);
 
 
-        tmp_assign_source_23 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(tmp_defaults_2);
+        tmp_assign_source_23 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__9__get_attribute_value(tmp_defaults_1);
 
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_23);
     }
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_tuple_element_1;
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[149]);
+        PyObject *tmp_defaults_2;
+        tmp_defaults_2 = mod_consts[156];
+        Py_INCREF(tmp_defaults_2);
 
-        if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[149]);
-        }
 
-        assert(!(tmp_tuple_element_1 == NULL));
-        tmp_assign_source_24 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_assign_source_24, 0, tmp_tuple_element_1);
-        assert(tmp_class_creation_1__bases == NULL);
-        tmp_class_creation_1__bases = tmp_assign_source_24;
+        tmp_assign_source_24 = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__10__get_child_value(tmp_defaults_2);
+
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
-        tmp_assign_source_25 = PyDict_New();
-        assert(tmp_class_creation_1__class_decl_dict == NULL);
-        tmp_class_creation_1__class_decl_dict = tmp_assign_source_25;
+        PyObject *tmp_tuple_element_1;
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[148]);
+
+        if (unlikely(tmp_tuple_element_1 == NULL)) {
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[148]);
+        }
+
+        assert(!(tmp_tuple_element_1 == NULL));
+        tmp_assign_source_25 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_assign_source_25, 0, tmp_tuple_element_1);
+        assert(tmp_class_creation_1__bases_orig == NULL);
+        tmp_class_creation_1__bases_orig = tmp_assign_source_25;
     }
     // Tried code:
     {
         PyObject *tmp_assign_source_26;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[158];
-        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_1;
-        } else {
-            goto condexpr_false_1;
+        PyObject *tmp_dircall_arg1_1;
+        CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+        tmp_dircall_arg1_1 = tmp_class_creation_1__bases_orig;
+        Py_INCREF(tmp_dircall_arg1_1);
+
+        {
+            PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
+            tmp_assign_source_26 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        condexpr_true_1:;
-        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[158];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 257;
-
-            goto try_except_handler_1;
-        }
-        goto condexpr_end_1;
-        condexpr_false_1:;
-        CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_1 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[7];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
-        if (tmp_type_arg_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 257;
-
-            goto try_except_handler_1;
-        }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
-        Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 257;
-
-            goto try_except_handler_1;
-        }
-        condexpr_end_1:;
-        CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_26 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
         if (tmp_assign_source_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        assert(tmp_class_creation_1__metaclass == NULL);
-        tmp_class_creation_1__metaclass = tmp_assign_source_26;
+        assert(tmp_class_creation_1__bases == NULL);
+        tmp_class_creation_1__bases = tmp_assign_source_26;
     }
     {
+        PyObject *tmp_assign_source_27;
+        tmp_assign_source_27 = PyDict_New();
+        assert(tmp_class_creation_1__class_decl_dict == NULL);
+        tmp_class_creation_1__class_decl_dict = tmp_assign_source_27;
+    }
+    {
+        PyObject *tmp_assign_source_28;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[158];
+        int tmp_truth_name_1;
+        PyObject *tmp_type_arg_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[157];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
+            goto condexpr_true_1;
+        } else {
+            goto condexpr_false_1;
+        }
+        condexpr_true_1:;
+        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[157];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
+        }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
+        goto condexpr_end_1;
+        condexpr_false_1:;
+        CHECK_OBJECT(tmp_class_creation_1__bases);
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_class_creation_1__bases);
+        if (tmp_truth_name_1 == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 250;
+
+            goto try_except_handler_2;
+        }
+        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+            goto condexpr_true_2;
+        } else {
+            goto condexpr_false_2;
+        }
+        condexpr_true_2:;
+        CHECK_OBJECT(tmp_class_creation_1__bases);
+        tmp_expression_value_1 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[7];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
+        if (tmp_type_arg_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 250;
+
+            goto try_except_handler_2;
+        }
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        Py_DECREF(tmp_type_arg_1);
+        if (tmp_metaclass_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 250;
+
+            goto try_except_handler_2;
+        }
+        goto condexpr_end_2;
+        condexpr_false_2:;
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
+        condexpr_end_2:;
+        condexpr_end_1:;
+        CHECK_OBJECT(tmp_class_creation_1__bases);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_28 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
+        if (tmp_assign_source_28 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 250;
+
+            goto try_except_handler_2;
+        }
+        assert(tmp_class_creation_1__metaclass == NULL);
+        tmp_class_creation_1__metaclass = tmp_assign_source_28;
+    }
+    {
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[157];
+        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -11454,7 +11363,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[158];
+    tmp_dictdel_key = mod_consts[157];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -11462,19 +11371,19 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 257;
+        exception_lineno = 250;
 
-        goto try_except_handler_1;
+        goto try_except_handler_2;
     }
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_2;
+        nuitka_bool tmp_condition_result_4;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_2, mod_consts[159]);
-        tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[158]);
+        tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -11482,71 +11391,71 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     }
     branch_yes_2:;
     {
-        PyObject *tmp_assign_source_27;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_assign_source_29;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[159]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[158]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_tuple_element_2 = mod_consts[160];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
+        tmp_tuple_element_2 = mod_consts[159];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_2 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
-        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 257;
-        tmp_assign_source_27 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        if (tmp_assign_source_27 == NULL) {
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
+        frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 250;
+        tmp_assign_source_29 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        if (tmp_assign_source_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_27;
+        tmp_class_creation_1__prepared = tmp_assign_source_29;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_4;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[161]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_4 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[160]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -11556,18 +11465,18 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[162];
+        tmp_left_value_1 = mod_consts[161];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[163];
-        tmp_getattr_default_1 = mod_consts[164];
+        tmp_getattr_attr_1 = mod_consts[162];
+        tmp_getattr_default_1 = mod_consts[163];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11575,142 +11484,142 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_5;
+            PyObject *tmp_expression_value_5;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_5 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_5 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[163]);
-            Py_DECREF(tmp_expression_name_5);
+            tmp_expression_value_5 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_5 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[162]);
+            Py_DECREF(tmp_expression_value_5);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 257;
+                exception_lineno = 250;
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
-        goto try_except_handler_1;
+        Py_DECREF(tmp_right_value_1);
+        goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         exception_type = tmp_raise_type_1;
         Py_INCREF(tmp_raise_type_1);
         exception_value = tmp_raise_value_1;
-        exception_lineno = 257;
+        exception_lineno = 250;
         RAISE_EXCEPTION_IMPLICIT(&exception_type, &exception_value, &exception_tb);
 
-        goto try_except_handler_1;
+        goto try_except_handler_2;
     }
     branch_no_3:;
     goto branch_end_2;
     branch_no_2:;
     {
-        PyObject *tmp_assign_source_28;
-        tmp_assign_source_28 = PyDict_New();
+        PyObject *tmp_assign_source_30;
+        tmp_assign_source_30 = PyDict_New();
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_28;
+        tmp_class_creation_1__prepared = tmp_assign_source_30;
     }
     branch_end_2:;
     {
-        PyObject *tmp_assign_source_29;
+        PyObject *tmp_assign_source_31;
         {
             PyObject *tmp_set_locals_1;
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_set_locals_1 = tmp_class_creation_1__prepared;
-            locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257 = tmp_set_locals_1;
+            locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250 = tmp_set_locals_1;
             Py_INCREF(tmp_set_locals_1);
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[165];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257, mod_consts[166], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[164];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250, mod_consts[165], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_3;
+            goto try_except_handler_4;
         }
-        tmp_dictset_value = mod_consts[167];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257, mod_consts[127], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[166];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250, mod_consts[127], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_3;
+            goto try_except_handler_4;
         }
-        tmp_dictset_value = mod_consts[160];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257, mod_consts[168], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[159];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250, mod_consts[167], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 257;
+            exception_lineno = 250;
 
-            goto try_except_handler_3;
+            goto try_except_handler_4;
         }
-        if (isFrameUnusable(cache_frame_c34991594746c044f7132f9fe11377d9_2)) {
-            Py_XDECREF(cache_frame_c34991594746c044f7132f9fe11377d9_2);
+        if (isFrameUnusable(cache_frame_b729560f62de5c054ce6dc01015fc2a7_2)) {
+            Py_XDECREF(cache_frame_b729560f62de5c054ce6dc01015fc2a7_2);
 
 #if _DEBUG_REFCOUNTS
-            if (cache_frame_c34991594746c044f7132f9fe11377d9_2 == NULL) {
+            if (cache_frame_b729560f62de5c054ce6dc01015fc2a7_2 == NULL) {
                 count_active_frame_cache_instances += 1;
             } else {
                 count_released_frame_cache_instances += 1;
             }
             count_allocated_frame_cache_instances += 1;
 #endif
-            cache_frame_c34991594746c044f7132f9fe11377d9_2 = MAKE_FUNCTION_FRAME(codeobj_c34991594746c044f7132f9fe11377d9, module_Bio$SeqIO$SnapGeneIO, sizeof(void *));
+            cache_frame_b729560f62de5c054ce6dc01015fc2a7_2 = MAKE_FUNCTION_FRAME(codeobj_b729560f62de5c054ce6dc01015fc2a7, module_Bio$SeqIO$SnapGeneIO, sizeof(void *));
 #if _DEBUG_REFCOUNTS
         } else {
             count_hit_frame_cache_instances += 1;
 #endif
         }
-        assert(cache_frame_c34991594746c044f7132f9fe11377d9_2->m_type_description == NULL);
-        frame_c34991594746c044f7132f9fe11377d9_2 = cache_frame_c34991594746c044f7132f9fe11377d9_2;
+        assert(cache_frame_b729560f62de5c054ce6dc01015fc2a7_2->m_type_description == NULL);
+        frame_b729560f62de5c054ce6dc01015fc2a7_2 = cache_frame_b729560f62de5c054ce6dc01015fc2a7_2;
 
         // Push the new frame as the currently active one.
-        pushFrameStack(frame_c34991594746c044f7132f9fe11377d9_2);
+        pushFrameStack(frame_b729560f62de5c054ce6dc01015fc2a7_2);
 
         // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_c34991594746c044f7132f9fe11377d9_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_b729560f62de5c054ce6dc01015fc2a7_2) == 2); // Frame stack
 
         // Framed code:
         {
@@ -11721,7 +11630,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
 
             tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__11___init__(tmp_closure_1);
 
-            tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257, mod_consts[109], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250, mod_consts[109], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11729,7 +11638,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 260;
+                exception_lineno = 253;
                 type_description_2 = "c";
                 goto frame_exception_exit_2;
             }
@@ -11738,7 +11647,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__12_parse();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257, mod_consts[170], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250, mod_consts[169], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -11746,7 +11655,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 270;
+            exception_lineno = 263;
             type_description_2 = "c";
             goto frame_exception_exit_2;
         }
@@ -11754,7 +11663,7 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SnapGeneIO$$$function__13_iterate();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257, mod_consts[112], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250, mod_consts[112], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -11762,13 +11671,13 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 275;
+            exception_lineno = 268;
             type_description_2 = "c";
             goto frame_exception_exit_2;
         }
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_c34991594746c044f7132f9fe11377d9_2);
+        RESTORE_FRAME_EXCEPTION(frame_b729560f62de5c054ce6dc01015fc2a7_2);
 #endif
 
         // Put the previous frame back on top.
@@ -11779,35 +11688,35 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         frame_exception_exit_2:;
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_c34991594746c044f7132f9fe11377d9_2);
+        RESTORE_FRAME_EXCEPTION(frame_b729560f62de5c054ce6dc01015fc2a7_2);
 #endif
 
         if (exception_tb == NULL) {
-            exception_tb = MAKE_TRACEBACK(frame_c34991594746c044f7132f9fe11377d9_2, exception_lineno);
-        } else if (exception_tb->tb_frame != &frame_c34991594746c044f7132f9fe11377d9_2->m_frame) {
-            exception_tb = ADD_TRACEBACK(exception_tb, frame_c34991594746c044f7132f9fe11377d9_2, exception_lineno);
+            exception_tb = MAKE_TRACEBACK(frame_b729560f62de5c054ce6dc01015fc2a7_2, exception_lineno);
+        } else if (exception_tb->tb_frame != &frame_b729560f62de5c054ce6dc01015fc2a7_2->m_frame) {
+            exception_tb = ADD_TRACEBACK(exception_tb, frame_b729560f62de5c054ce6dc01015fc2a7_2, exception_lineno);
         }
 
         // Attaches locals to frame if any.
         Nuitka_Frame_AttachLocals(
-            frame_c34991594746c044f7132f9fe11377d9_2,
+            frame_b729560f62de5c054ce6dc01015fc2a7_2,
             type_description_2,
             outline_0_var___class__
         );
 
 
         // Release cached frame if used for exception.
-        if (frame_c34991594746c044f7132f9fe11377d9_2 == cache_frame_c34991594746c044f7132f9fe11377d9_2) {
+        if (frame_b729560f62de5c054ce6dc01015fc2a7_2 == cache_frame_b729560f62de5c054ce6dc01015fc2a7_2) {
 #if _DEBUG_REFCOUNTS
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
 
-            Py_DECREF(cache_frame_c34991594746c044f7132f9fe11377d9_2);
-            cache_frame_c34991594746c044f7132f9fe11377d9_2 = NULL;
+            Py_DECREF(cache_frame_b729560f62de5c054ce6dc01015fc2a7_2);
+            cache_frame_b729560f62de5c054ce6dc01015fc2a7_2 = NULL;
         }
 
-        assertFrameObject(frame_c34991594746c044f7132f9fe11377d9_2);
+        assertFrameObject(frame_b729560f62de5c054ce6dc01015fc2a7_2);
 
         // Put the previous frame back on top.
         popFrameStack();
@@ -11819,85 +11728,97 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
 
-        goto try_except_handler_3;
+        goto try_except_handler_4;
         skip_nested_handling_1:;
         {
-            PyObject *tmp_assign_source_30;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
-            PyObject *tmp_tuple_element_4;
-            PyObject *tmp_kwargs_name_2;
-            CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_4 = mod_consts[160];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_4);
+            nuitka_bool tmp_condition_result_6;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_tuple_element_4 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_4);
-            tmp_tuple_element_4 = locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_4);
-            CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
-            frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 257;
-            tmp_assign_source_30 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
-            if (tmp_assign_source_30 == NULL) {
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
+            CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+            tmp_cmp_expr_right_1 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+            if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 257;
+                exception_lineno = 250;
 
-                goto try_except_handler_3;
+                goto try_except_handler_4;
+            }
+            if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+                goto branch_yes_4;
+            } else {
+                goto branch_no_4;
+            }
+            assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
+        }
+        branch_yes_4:;
+        CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+        tmp_dictset_value = tmp_class_creation_1__bases_orig;
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250, mod_consts[171], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 250;
+
+            goto try_except_handler_4;
+        }
+        branch_no_4:;
+        {
+            PyObject *tmp_assign_source_32;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
+            PyObject *tmp_tuple_element_4;
+            PyObject *tmp_kwargs_value_2;
+            CHECK_OBJECT(tmp_class_creation_1__metaclass);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_4 = mod_consts[159];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_4);
+            CHECK_OBJECT(tmp_class_creation_1__bases);
+            tmp_tuple_element_4 = tmp_class_creation_1__bases;
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_4);
+            tmp_tuple_element_4 = locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250;
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_4);
+            CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
+            frame_ad80febe9219515e7170c9d7165c8a3a->m_frame.f_lineno = 250;
+            tmp_assign_source_32 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
+            if (tmp_assign_source_32 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 250;
+
+                goto try_except_handler_4;
             }
             assert(Nuitka_Cell_GET(outline_0_var___class__) == NULL);
-            PyCell_SET(outline_0_var___class__, tmp_assign_source_30);
+            PyCell_SET(outline_0_var___class__, tmp_assign_source_32);
 
         }
         CHECK_OBJECT(Nuitka_Cell_GET(outline_0_var___class__));
-        tmp_assign_source_29 = Nuitka_Cell_GET(outline_0_var___class__);
-        Py_INCREF(tmp_assign_source_29);
+        tmp_assign_source_31 = Nuitka_Cell_GET(outline_0_var___class__);
+        Py_INCREF(tmp_assign_source_31);
+        goto try_return_handler_4;
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_4:;
+        Py_DECREF(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250);
+        locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250 = NULL;
         goto try_return_handler_3;
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_3:;
-        Py_DECREF(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257);
-        locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257 = NULL;
-        goto try_return_handler_2;
         // Exception handler code:
-        try_except_handler_3:;
-        exception_keeper_type_1 = exception_type;
-        exception_keeper_value_1 = exception_value;
-        exception_keeper_tb_1 = exception_tb;
-        exception_keeper_lineno_1 = exception_lineno;
-        exception_type = NULL;
-        exception_value = NULL;
-        exception_tb = NULL;
-        exception_lineno = 0;
-
-        Py_DECREF(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257);
-        locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_257 = NULL;
-        // Re-raise.
-        exception_type = exception_keeper_type_1;
-        exception_value = exception_keeper_value_1;
-        exception_tb = exception_keeper_tb_1;
-        exception_lineno = exception_keeper_lineno_1;
-
-        goto try_except_handler_2;
-        // End of try:
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_2:;
-        CHECK_OBJECT(outline_0_var___class__);
-        Py_DECREF(outline_0_var___class__);
-        outline_0_var___class__ = NULL;
-        goto outline_result_1;
-        // Exception handler code:
-        try_except_handler_2:;
+        try_except_handler_4:;
         exception_keeper_type_2 = exception_type;
         exception_keeper_value_2 = exception_value;
         exception_keeper_tb_2 = exception_tb;
@@ -11907,34 +11828,66 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
         exception_tb = NULL;
         exception_lineno = 0;
 
+        Py_DECREF(locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250);
+        locals_Bio$SeqIO$SnapGeneIO$$$class__1_SnapGeneIterator_250 = NULL;
         // Re-raise.
         exception_type = exception_keeper_type_2;
         exception_value = exception_keeper_value_2;
         exception_tb = exception_keeper_tb_2;
         exception_lineno = exception_keeper_lineno_2;
 
+        goto try_except_handler_3;
+        // End of try:
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_3:;
+        CHECK_OBJECT(outline_0_var___class__);
+        Py_DECREF(outline_0_var___class__);
+        outline_0_var___class__ = NULL;
+        goto outline_result_1;
+        // Exception handler code:
+        try_except_handler_3:;
+        exception_keeper_type_3 = exception_type;
+        exception_keeper_value_3 = exception_value;
+        exception_keeper_tb_3 = exception_tb;
+        exception_keeper_lineno_3 = exception_lineno;
+        exception_type = NULL;
+        exception_value = NULL;
+        exception_tb = NULL;
+        exception_lineno = 0;
+
+        // Re-raise.
+        exception_type = exception_keeper_type_3;
+        exception_value = exception_keeper_value_3;
+        exception_tb = exception_keeper_tb_3;
+        exception_lineno = exception_keeper_lineno_3;
+
         goto outline_exception_1;
         // End of try:
         NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
         return NULL;
         outline_exception_1:;
-        exception_lineno = 257;
-        goto try_except_handler_1;
+        exception_lineno = 250;
+        goto try_except_handler_2;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[160], tmp_assign_source_29);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)mod_consts[159], tmp_assign_source_31);
     }
-    goto try_end_1;
+    goto try_end_2;
     // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_3 = exception_type;
-    exception_keeper_value_3 = exception_value;
-    exception_keeper_tb_3 = exception_tb;
-    exception_keeper_lineno_3 = exception_lineno;
+    try_except_handler_2:;
+    exception_keeper_type_4 = exception_type;
+    exception_keeper_value_4 = exception_value;
+    exception_keeper_tb_4 = exception_tb;
+    exception_keeper_lineno_4 = exception_lineno;
     exception_type = NULL;
     exception_value = NULL;
     exception_tb = NULL;
     exception_lineno = 0;
 
+    CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+    Py_DECREF(tmp_class_creation_1__bases_orig);
+    tmp_class_creation_1__bases_orig = NULL;
     Py_XDECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
     Py_XDECREF(tmp_class_creation_1__class_decl_dict);
@@ -11944,14 +11897,14 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     Py_XDECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
     // Re-raise.
-    exception_type = exception_keeper_type_3;
-    exception_value = exception_keeper_value_3;
-    exception_tb = exception_keeper_tb_3;
-    exception_lineno = exception_keeper_lineno_3;
+    exception_type = exception_keeper_type_4;
+    exception_value = exception_keeper_value_4;
+    exception_tb = exception_keeper_tb_4;
+    exception_lineno = exception_keeper_lineno_4;
 
     goto frame_exception_exit_1;
     // End of try:
-    try_end_1:;
+    try_end_2:;
 
     // Restore frame exception if necessary.
 #if 0
@@ -11981,19 +11934,39 @@ PyObject *modulecode_Bio$SeqIO$SnapGeneIO(PyObject *module, struct Nuitka_MetaPa
     goto module_exception_exit;
 
     frame_no_exception_2:;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+    Py_DECREF(tmp_class_creation_1__bases_orig);
+    tmp_class_creation_1__bases_orig = NULL;
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("Bio.SeqIO.SnapGeneIO", false);
+
     return module_Bio$SeqIO$SnapGeneIO;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SnapGeneIO, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("Bio$SeqIO$SnapGeneIO", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'Bio.SeqIO.SeqXmlIO'
- * created by Nuitka version 0.6.17.3
+ * created by Nuitka version 0.7
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_Bio$SeqIO$SeqXmlIO;
 PyDictObject *moduledict_Bio$SeqIO$SeqXmlIO;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[330];
+static PyObject *mod_consts[329];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[330];
+static Py_hash_t mod_consts_hash[329];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 330; i++) {
+        for(int i = 0; i < 329; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_Bio$SeqIO$SeqXmlIO(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 330; i++) {
+    for(int i = 0; i < 329; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -114,45 +114,48 @@ static PyCodeObject *codeobj_97e9856e1ab5ab1f08327b5d5cfd749c;
 static PyCodeObject *codeobj_5a73473c38458f34b099508bc9d3232a;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[303]); CHECK_OBJECT(module_filename_obj);
-    codeobj_0289c0d8dd3cf6361f6c83279ae818ce = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[304], NULL, NULL, 0, 0, 0);
-    codeobj_7b7d74b9976a1f23a39b1ca1af0451a2 = MAKE_CODEOBJECT(module_filename_obj, 29, CO_NOFREE, mod_consts[138], mod_consts[305], NULL, 0, 0, 0);
-    codeobj_7c658cb20b8b0a7229b23b6e88fc77ae = MAKE_CODEOBJECT(module_filename_obj, 380, CO_NOFREE, mod_consts[281], mod_consts[305], NULL, 0, 0, 0);
-    codeobj_77784b56bf2d6daf1392401eb7f73d57 = MAKE_CODEOBJECT(module_filename_obj, 457, CO_NOFREE, mod_consts[288], mod_consts[305], NULL, 0, 0, 0);
-    codeobj_e5011ea807b8a9e221b5b1992721a356 = MAKE_CODEOBJECT(module_filename_obj, 32, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[1], mod_consts[306], mod_consts[305], 1, 0, 0);
-    codeobj_58b9a343167da02702238b5c375c96fc = MAKE_CODEOBJECT(module_filename_obj, 396, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[1], mod_consts[307], mod_consts[305], 3, 0, 0);
-    codeobj_9915476ba6bca01a551e46e76d6aefea = MAKE_CODEOBJECT(module_filename_obj, 465, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[1], mod_consts[308], mod_consts[305], 6, 0, 0);
-    codeobj_243186796217aefb88effe89ed2e902f = MAKE_CODEOBJECT(module_filename_obj, 622, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[187], mod_consts[309], NULL, 2, 0, 0);
-    codeobj_e1cabb669a0dc9770e5fe85deee973a4 = MAKE_CODEOBJECT(module_filename_obj, 576, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[185], mod_consts[310], NULL, 2, 0, 0);
-    codeobj_ce082a85f13d5d944571267e83c08fee = MAKE_CODEOBJECT(module_filename_obj, 641, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[188], mod_consts[311], NULL, 2, 0, 0);
-    codeobj_3db7160d46f3c595310b36611a68c980 = MAKE_CODEOBJECT(module_filename_obj, 592, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[186], mod_consts[312], NULL, 2, 0, 0);
-    codeobj_153286ffcef6876a7cfb22dcf6638641 = MAKE_CODEOBJECT(module_filename_obj, 544, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[184], mod_consts[313], NULL, 2, 0, 0);
-    codeobj_5f726bdc97b4d6bb0ad22306a12985a4 = MAKE_CODEOBJECT(module_filename_obj, 374, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[203], mod_consts[314], NULL, 2, 0, 0);
-    codeobj_3e577455c82ecdadbb683af794fd16ed = MAKE_CODEOBJECT(module_filename_obj, 304, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[115], mod_consts[315], NULL, 3, 0, 0);
-    codeobj_1e7165e41411a49eda4a0c42352ddd8b = MAKE_CODEOBJECT(module_filename_obj, 222, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[316], NULL, 3, 0, 0);
-    codeobj_7d405c4b28bc62f7254048f762082eb4 = MAKE_CODEOBJECT(module_filename_obj, 137, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[53], mod_consts[317], NULL, 3, 0, 0);
-    codeobj_41b461937f3fda914ae278238af43e6f = MAKE_CODEOBJECT(module_filename_obj, 359, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[128], mod_consts[315], NULL, 3, 0, 0);
-    codeobj_c82175d4419357e8a69c1845895e8e48 = MAKE_CODEOBJECT(module_filename_obj, 92, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[28], mod_consts[315], NULL, 3, 0, 0);
-    codeobj_a78fe4687731da4d83a9cd2deb7908de = MAKE_CODEOBJECT(module_filename_obj, 249, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[318], NULL, 3, 0, 0);
-    codeobj_5fcbecfc2ce0fd0421e4b1298310e4c8 = MAKE_CODEOBJECT(module_filename_obj, 202, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[77], mod_consts[315], NULL, 3, 0, 0);
-    codeobj_3423e92b06ed8e503aba0f147d87a218 = MAKE_CODEOBJECT(module_filename_obj, 434, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[153], mod_consts[319], NULL, 2, 0, 0);
-    codeobj_8d3c100649119582769587b088ece3a3 = MAKE_CODEOBJECT(module_filename_obj, 409, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[286], mod_consts[320], NULL, 2, 0, 0);
-    codeobj_789e8c4d35c616bbe168c966e35ca3cc = MAKE_CODEOBJECT(module_filename_obj, 271, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[66], mod_consts[321], NULL, 2, 0, 0);
-    codeobj_7b0daec79d52f3b45da51a02d02dcc49 = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[62], mod_consts[322], NULL, 2, 0, 0);
-    codeobj_26c94b9adfc5941e62a8a3d83ee70b8c = MAKE_CODEOBJECT(module_filename_obj, 44, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[166], mod_consts[323], NULL, 1, 0, 0);
-    codeobj_0fdc7593cf490629b61edfa002e76f7a = MAKE_CODEOBJECT(module_filename_obj, 104, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[30], mod_consts[324], NULL, 4, 0, 0);
-    codeobj_fc2ef1e9d12623b5431ac1615eca9852 = MAKE_CODEOBJECT(module_filename_obj, 146, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[52], mod_consts[325], NULL, 4, 0, 0);
-    codeobj_489b0f2328b48bc29ec26b575a43953c = MAKE_CODEOBJECT(module_filename_obj, 324, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[326], NULL, 2, 0, 0);
-    codeobj_4f6ae32f377f98123219377da3efe5c7 = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[11], mod_consts[327], NULL, 4, 0, 0);
-    codeobj_d7ae9b7af5181ea6f6e16db24ec9fb0e = MAKE_CODEOBJECT(module_filename_obj, 240, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[64], mod_consts[322], NULL, 2, 0, 0);
-    codeobj_3db018beb0af236e997c3616c1f07c7d = MAKE_CODEOBJECT(module_filename_obj, 169, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[60], mod_consts[328], NULL, 2, 0, 0);
-    codeobj_21f7b34500922ce71274d6c60fb76d62 = MAKE_CODEOBJECT(module_filename_obj, 539, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[296], mod_consts[323], NULL, 1, 0, 0);
-    codeobj_97e9856e1ab5ab1f08327b5d5cfd749c = MAKE_CODEOBJECT(module_filename_obj, 490, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[292], mod_consts[322], NULL, 1, 0, 0);
-    codeobj_5a73473c38458f34b099508bc9d3232a = MAKE_CODEOBJECT(module_filename_obj, 513, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[294], mod_consts[329], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[302]); CHECK_OBJECT(module_filename_obj);
+    codeobj_0289c0d8dd3cf6361f6c83279ae818ce = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[303], NULL, NULL, 0, 0, 0);
+    codeobj_7b7d74b9976a1f23a39b1ca1af0451a2 = MAKE_CODEOBJECT(module_filename_obj, 29, CO_NOFREE, mod_consts[137], mod_consts[304], NULL, 0, 0, 0);
+    codeobj_7c658cb20b8b0a7229b23b6e88fc77ae = MAKE_CODEOBJECT(module_filename_obj, 380, CO_NOFREE, mod_consts[280], mod_consts[304], NULL, 0, 0, 0);
+    codeobj_77784b56bf2d6daf1392401eb7f73d57 = MAKE_CODEOBJECT(module_filename_obj, 457, CO_NOFREE, mod_consts[287], mod_consts[304], NULL, 0, 0, 0);
+    codeobj_e5011ea807b8a9e221b5b1992721a356 = MAKE_CODEOBJECT(module_filename_obj, 32, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[1], mod_consts[305], mod_consts[304], 1, 0, 0);
+    codeobj_58b9a343167da02702238b5c375c96fc = MAKE_CODEOBJECT(module_filename_obj, 396, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[1], mod_consts[306], mod_consts[304], 3, 0, 0);
+    codeobj_9915476ba6bca01a551e46e76d6aefea = MAKE_CODEOBJECT(module_filename_obj, 465, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[1], mod_consts[307], mod_consts[304], 6, 0, 0);
+    codeobj_243186796217aefb88effe89ed2e902f = MAKE_CODEOBJECT(module_filename_obj, 622, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[187], mod_consts[308], NULL, 2, 0, 0);
+    codeobj_e1cabb669a0dc9770e5fe85deee973a4 = MAKE_CODEOBJECT(module_filename_obj, 576, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[185], mod_consts[309], NULL, 2, 0, 0);
+    codeobj_ce082a85f13d5d944571267e83c08fee = MAKE_CODEOBJECT(module_filename_obj, 641, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[188], mod_consts[310], NULL, 2, 0, 0);
+    codeobj_3db7160d46f3c595310b36611a68c980 = MAKE_CODEOBJECT(module_filename_obj, 592, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[186], mod_consts[311], NULL, 2, 0, 0);
+    codeobj_153286ffcef6876a7cfb22dcf6638641 = MAKE_CODEOBJECT(module_filename_obj, 544, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[184], mod_consts[312], NULL, 2, 0, 0);
+    codeobj_5f726bdc97b4d6bb0ad22306a12985a4 = MAKE_CODEOBJECT(module_filename_obj, 374, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[203], mod_consts[313], NULL, 2, 0, 0);
+    codeobj_3e577455c82ecdadbb683af794fd16ed = MAKE_CODEOBJECT(module_filename_obj, 304, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[114], mod_consts[314], NULL, 3, 0, 0);
+    codeobj_1e7165e41411a49eda4a0c42352ddd8b = MAKE_CODEOBJECT(module_filename_obj, 222, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[85], mod_consts[315], NULL, 3, 0, 0);
+    codeobj_7d405c4b28bc62f7254048f762082eb4 = MAKE_CODEOBJECT(module_filename_obj, 137, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[52], mod_consts[316], NULL, 3, 0, 0);
+    codeobj_41b461937f3fda914ae278238af43e6f = MAKE_CODEOBJECT(module_filename_obj, 359, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[127], mod_consts[314], NULL, 3, 0, 0);
+    codeobj_c82175d4419357e8a69c1845895e8e48 = MAKE_CODEOBJECT(module_filename_obj, 92, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[27], mod_consts[314], NULL, 3, 0, 0);
+    codeobj_a78fe4687731da4d83a9cd2deb7908de = MAKE_CODEOBJECT(module_filename_obj, 249, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[92], mod_consts[317], NULL, 3, 0, 0);
+    codeobj_5fcbecfc2ce0fd0421e4b1298310e4c8 = MAKE_CODEOBJECT(module_filename_obj, 202, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[76], mod_consts[314], NULL, 3, 0, 0);
+    codeobj_3423e92b06ed8e503aba0f147d87a218 = MAKE_CODEOBJECT(module_filename_obj, 434, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[152], mod_consts[318], NULL, 2, 0, 0);
+    codeobj_8d3c100649119582769587b088ece3a3 = MAKE_CODEOBJECT(module_filename_obj, 409, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[285], mod_consts[319], NULL, 2, 0, 0);
+    codeobj_789e8c4d35c616bbe168c966e35ca3cc = MAKE_CODEOBJECT(module_filename_obj, 271, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[65], mod_consts[320], NULL, 2, 0, 0);
+    codeobj_7b0daec79d52f3b45da51a02d02dcc49 = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[61], mod_consts[321], NULL, 2, 0, 0);
+    codeobj_26c94b9adfc5941e62a8a3d83ee70b8c = MAKE_CODEOBJECT(module_filename_obj, 44, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[166], mod_consts[322], NULL, 1, 0, 0);
+    codeobj_0fdc7593cf490629b61edfa002e76f7a = MAKE_CODEOBJECT(module_filename_obj, 104, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[29], mod_consts[323], NULL, 4, 0, 0);
+    codeobj_fc2ef1e9d12623b5431ac1615eca9852 = MAKE_CODEOBJECT(module_filename_obj, 146, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[51], mod_consts[324], NULL, 4, 0, 0);
+    codeobj_489b0f2328b48bc29ec26b575a43953c = MAKE_CODEOBJECT(module_filename_obj, 324, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[325], NULL, 2, 0, 0);
+    codeobj_4f6ae32f377f98123219377da3efe5c7 = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[11], mod_consts[326], NULL, 4, 0, 0);
+    codeobj_d7ae9b7af5181ea6f6e16db24ec9fb0e = MAKE_CODEOBJECT(module_filename_obj, 240, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[63], mod_consts[321], NULL, 2, 0, 0);
+    codeobj_3db018beb0af236e997c3616c1f07c7d = MAKE_CODEOBJECT(module_filename_obj, 169, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[59], mod_consts[327], NULL, 2, 0, 0);
+    codeobj_21f7b34500922ce71274d6c60fb76d62 = MAKE_CODEOBJECT(module_filename_obj, 539, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[295], mod_consts[322], NULL, 1, 0, 0);
+    codeobj_97e9856e1ab5ab1f08327b5d5cfd749c = MAKE_CODEOBJECT(module_filename_obj, 490, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[291], mod_consts[321], NULL, 1, 0, 0);
+    codeobj_5a73473c38458f34b099508bc9d3232a = MAKE_CODEOBJECT(module_filename_obj, 513, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[293], mod_consts[328], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
 static PyObject *MAKE_GENERATOR_Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate(struct Nuitka_CellObject **closure);
+
+
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement();
@@ -295,8 +298,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__1___init__(struct Nuitka_Fu
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
@@ -310,10 +313,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__1___init__(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
 
-        tmp_type_arg_name_1 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_type_arg_value_1 = Nuitka_Cell_GET(self->m_closure[0]);
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_called_instance_1 = BUILTIN_SUPER0(tmp_type_arg_name_1, tmp_object_arg_name_1);
+        tmp_object_arg_value_1 = par_self;
+        tmp_called_instance_1 = BUILTIN_SUPER0(tmp_type_arg_value_1, tmp_object_arg_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -610,11 +613,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__2_startDocument(struct Nuit
     // Framed code:
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[11]);
+        tmp_expression_value_1 = par_self;
+        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[11]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -809,12 +812,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_name);
-        tmp_compexpr_left_1 = par_name;
-        tmp_compexpr_right_1 = mod_consts[13];
-        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_cmp_expr_left_1 = par_name;
+        tmp_cmp_expr_right_1 = mod_consts[13];
+        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -849,12 +852,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -886,11 +889,24 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_attrs);
-        tmp_called_instance_1 = par_attrs;
+        tmp_expression_value_1 = par_attrs;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[16]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 55;
+            type_description_1 = "ooooooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_4f6ae32f377f98123219377da3efe5c7->m_frame.f_lineno = 55;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[16]);
+        tmp_iter_arg_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -950,7 +966,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         PyObject *tmp_iter_arg_2;
         CHECK_OBJECT(tmp_for_loop_1__iter_value);
         tmp_iter_arg_2 = tmp_for_loop_1__iter_value;
-        tmp_assign_source_4 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_4 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1150,7 +1166,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         PyObject *tmp_iter_arg_3;
         CHECK_OBJECT(var_key);
         tmp_iter_arg_3 = var_key;
-        tmp_assign_source_9 = MAKE_ITERATOR(tmp_iter_arg_3);
+        tmp_assign_source_9 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_3);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1346,12 +1362,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
 
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_3 = var_namespace;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = var_namespace;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_3 == tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -1361,15 +1377,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_yes_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_4 = var_localname;
-        tmp_compexpr_right_4 = mod_consts[2];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_left_4 = var_localname;
+        tmp_cmp_expr_right_4 = mod_consts[2];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1379,24 +1393,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 58;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_4 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
@@ -1404,18 +1406,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(var_value);
         tmp_assattr_value_1 = var_value;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 59;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[2], tmp_assattr_value_1);
         if (tmp_result == false) {
@@ -1433,15 +1424,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_tmp_condition_result_5_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_5 = var_localname;
-        tmp_compexpr_right_5 = mod_consts[3];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        if (tmp_tmp_condition_result_5_object_1 == NULL) {
+        tmp_cmp_expr_left_5 = var_localname;
+        tmp_cmp_expr_right_5 = mod_consts[3];
+        tmp_condition_result_5 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        if (tmp_condition_result_5 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1451,24 +1440,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_5_object_1);
-
-            exception_lineno = 60;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_5 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
         }
+        assert(tmp_condition_result_5 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_5:;
     {
@@ -1476,18 +1453,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(var_value);
         tmp_assattr_value_2 = var_value;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 61;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[3], tmp_assattr_value_2);
         if (tmp_result == false) {
@@ -1505,15 +1471,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_6 = var_localname;
-        tmp_compexpr_right_6 = mod_consts[4];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_left_6 = var_localname;
+        tmp_cmp_expr_right_6 = mod_consts[4];
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1523,24 +1487,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 62;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_6 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
@@ -1548,18 +1500,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         PyObject *tmp_assattr_target_3;
         CHECK_OBJECT(var_value);
         tmp_assattr_value_3 = var_value;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 63;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[4], tmp_assattr_value_3);
         if (tmp_result == false) {
@@ -1577,15 +1518,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_6:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_tmp_condition_result_7_object_1;
-        int tmp_truth_name_4;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_7 = var_localname;
-        tmp_compexpr_right_7 = mod_consts[5];
-        tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        if (tmp_tmp_condition_result_7_object_1 == NULL) {
+        tmp_cmp_expr_left_7 = var_localname;
+        tmp_cmp_expr_right_7 = mod_consts[5];
+        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1595,24 +1534,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_7_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_7_object_1);
-
-            exception_lineno = 64;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_7 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_7_object_1);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
         }
+        assert(tmp_condition_result_7 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_7:;
     {
@@ -1643,18 +1570,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         PyObject *tmp_assattr_target_4;
         CHECK_OBJECT(var_value);
         tmp_assattr_value_4 = var_value;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 67;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[5], tmp_assattr_value_4);
         if (tmp_result == false) {
@@ -1672,15 +1588,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_7:;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        PyObject *tmp_tmp_condition_result_8_object_1;
-        int tmp_truth_name_5;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_8 = var_localname;
-        tmp_compexpr_right_8 = mod_consts[6];
-        tmp_tmp_condition_result_8_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
-        if (tmp_tmp_condition_result_8_object_1 == NULL) {
+        tmp_cmp_expr_left_8 = var_localname;
+        tmp_cmp_expr_right_8 = mod_consts[6];
+        tmp_condition_result_8 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
+        if (tmp_condition_result_8 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1690,24 +1604,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_8_object_1);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_8_object_1);
-
-            exception_lineno = 68;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_8 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_8_object_1);
         if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
             goto branch_yes_8;
         } else {
             goto branch_no_8;
         }
+        assert(tmp_condition_result_8 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_8:;
     {
@@ -1715,18 +1617,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         PyObject *tmp_assattr_target_5;
         CHECK_OBJECT(var_value);
         tmp_assattr_value_5 = var_value;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 69;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_5 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[6], tmp_assattr_value_5);
         if (tmp_result == false) {
@@ -1745,7 +1636,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        tmp_make_exception_arg_3 = mod_consts[19];
+        tmp_make_exception_arg_3 = mod_consts[18];
         frame_4f6ae32f377f98123219377da3efe5c7->m_frame.f_lineno = 71;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -1764,15 +1655,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_9;
-        PyObject *tmp_compexpr_right_9;
-        PyObject *tmp_tmp_condition_result_9_object_1;
-        int tmp_truth_name_6;
+        PyObject *tmp_cmp_expr_left_9;
+        PyObject *tmp_cmp_expr_right_9;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_9 = var_namespace;
-        tmp_compexpr_right_9 = mod_consts[20];
-        tmp_tmp_condition_result_9_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_9, tmp_compexpr_right_9);
-        if (tmp_tmp_condition_result_9_object_1 == NULL) {
+        tmp_cmp_expr_left_9 = var_namespace;
+        tmp_cmp_expr_right_9 = mod_consts[19];
+        tmp_condition_result_9 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_9, tmp_cmp_expr_right_9);
+        if (tmp_condition_result_9 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1782,37 +1671,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_tmp_condition_result_9_object_1);
-        if (tmp_truth_name_6 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_9_object_1);
-
-            exception_lineno = 72;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_9 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_9_object_1);
         if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
             goto branch_yes_9;
         } else {
             goto branch_no_9;
         }
+        assert(tmp_condition_result_9 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_9:;
     {
         nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_compexpr_left_10;
-        PyObject *tmp_compexpr_right_10;
-        PyObject *tmp_tmp_condition_result_10_object_1;
-        int tmp_truth_name_7;
+        PyObject *tmp_cmp_expr_left_10;
+        PyObject *tmp_cmp_expr_right_10;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_10 = var_localname;
-        tmp_compexpr_right_10 = mod_consts[21];
-        tmp_tmp_condition_result_10_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_10, tmp_compexpr_right_10);
-        if (tmp_tmp_condition_result_10_object_1 == NULL) {
+        tmp_cmp_expr_left_10 = var_localname;
+        tmp_cmp_expr_right_10 = mod_consts[20];
+        tmp_condition_result_10 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_10, tmp_cmp_expr_right_10);
+        if (tmp_condition_result_10 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1822,24 +1697,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_7 = CHECK_IF_TRUE(tmp_tmp_condition_result_10_object_1);
-        if (tmp_truth_name_7 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_10_object_1);
-
-            exception_lineno = 73;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_10 = tmp_truth_name_7 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_10_object_1);
         if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
             goto branch_yes_10;
         } else {
             goto branch_no_10;
         }
+        assert(tmp_condition_result_10 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_10:;
     {
@@ -1859,7 +1722,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        tmp_make_exception_arg_4 = mod_consts[22];
+        tmp_make_exception_arg_4 = mod_consts[21];
         frame_4f6ae32f377f98123219377da3efe5c7->m_frame.f_lineno = 76;
         tmp_raise_type_4 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_4);
         assert(!(tmp_raise_type_4 == NULL));
@@ -1875,12 +1738,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     {
         PyObject *tmp_raise_type_5;
         PyObject *tmp_make_exception_arg_5;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[23];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[22];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_5 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_5 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1948,24 +1811,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     tmp_for_loop_1__for_iterator = NULL;
     {
         bool tmp_condition_result_11;
-        PyObject *tmp_compexpr_left_11;
-        PyObject *tmp_compexpr_right_11;
-        PyObject *tmp_expression_name_1;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 81;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[4]);
-        if (tmp_compexpr_left_11 == NULL) {
+        PyObject *tmp_cmp_expr_left_11;
+        PyObject *tmp_cmp_expr_right_11;
+        PyObject *tmp_expression_value_2;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_cmp_expr_left_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[4]);
+        if (tmp_cmp_expr_left_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1975,9 +1827,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_11 = Py_None;
-        tmp_condition_result_11 = (tmp_compexpr_left_11 == tmp_compexpr_right_11) ? true : false;
-        Py_DECREF(tmp_compexpr_left_11);
+        tmp_cmp_expr_right_11 = Py_None;
+        tmp_condition_result_11 = (tmp_cmp_expr_left_11 == tmp_cmp_expr_right_11) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_11);
         if (tmp_condition_result_11 != false) {
             goto branch_yes_11;
         } else {
@@ -1988,7 +1840,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     {
         PyObject *tmp_raise_type_6;
         PyObject *tmp_make_exception_arg_6;
-        tmp_make_exception_arg_6 = mod_consts[24];
+        tmp_make_exception_arg_6 = mod_consts[23];
         frame_4f6ae32f377f98123219377da3efe5c7->m_frame.f_lineno = 82;
         tmp_raise_type_6 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_6);
         assert(!(tmp_raise_type_6 == NULL));
@@ -2001,25 +1853,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_11:;
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_expression_name_2;
-        tmp_left_name_2 = mod_consts[25];
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 83;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_right_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[4]);
-        if (tmp_right_name_2 == NULL) {
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_expression_value_3;
+        tmp_left_value_2 = mod_consts[24];
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_right_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[4]);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2029,8 +1870,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_16 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_assign_source_16 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2046,11 +1887,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     }
     {
         nuitka_bool tmp_condition_result_12;
-        PyObject *tmp_compexpr_left_12;
-        PyObject *tmp_compexpr_right_12;
+        PyObject *tmp_cmp_expr_left_12;
+        PyObject *tmp_cmp_expr_right_12;
         if (var_schema == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[26]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2060,10 +1901,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_12 = var_schema;
+        tmp_cmp_expr_left_12 = var_schema;
         CHECK_OBJECT(var_url);
-        tmp_compexpr_right_12 = var_url;
-        tmp_condition_result_12 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_12, tmp_compexpr_right_12);
+        tmp_cmp_expr_right_12 = var_url;
+        tmp_condition_result_12 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_12, tmp_cmp_expr_right_12);
         if (tmp_condition_result_12 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -2085,13 +1926,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     {
         PyObject *tmp_raise_type_7;
         PyObject *tmp_make_exception_arg_7;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_tuple_element_1;
-        tmp_left_name_3 = mod_consts[27];
+        tmp_left_value_3 = mod_consts[26];
         if (var_schema == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[26]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2102,24 +1943,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
         }
 
         tmp_tuple_element_1 = var_schema;
-        tmp_right_name_3 = PyTuple_New(2);
+        tmp_right_value_3 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_3;
-            PyTuple_SET_ITEM0(tmp_right_name_3, 0, tmp_tuple_element_1);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 87;
-                type_description_1 = "ooooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_3 = par_self;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[4]);
+            PyObject *tmp_expression_value_4;
+            PyTuple_SET_ITEM0(tmp_right_value_3, 0, tmp_tuple_element_1);
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_4 = par_self;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[4]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2130,17 +1960,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
                 type_description_1 = "ooooooooooo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_3, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_3, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_3);
+        Py_DECREF(tmp_right_value_3);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_make_exception_arg_7 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_make_exception_arg_7 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_make_exception_arg_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2164,22 +1994,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     branch_no_12:;
     {
         PyObject *tmp_assattr_value_6;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_assattr_target_6;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 89;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_self;
-        tmp_assattr_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[28]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_5 = par_self;
+        tmp_assattr_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[27]);
         if (tmp_assattr_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2190,20 +2009,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_value_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 89;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_6 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[29], tmp_assattr_value_6);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[28], tmp_assattr_value_6);
         Py_DECREF(tmp_assattr_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -2218,22 +2026,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
     }
     {
         PyObject *tmp_assattr_value_7;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_assattr_target_7;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 90;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = par_self;
-        tmp_assattr_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[30]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_6 = par_self;
+        tmp_assattr_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[29]);
         if (tmp_assattr_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2244,18 +2041,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement(struct
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_value_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 90;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_7 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[7], tmp_assattr_value_7);
         Py_DECREF(tmp_assattr_value_7);
@@ -2495,7 +2281,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_name);
         tmp_iter_arg_1 = par_name;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2671,12 +2457,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -2687,12 +2473,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[32];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[31];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2716,12 +2502,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -2732,12 +2518,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[33];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[32];
         CHECK_OBJECT(par_qname);
-        tmp_right_name_2 = par_qname;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = par_qname;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2761,15 +2547,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[34];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[33];
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2779,30 +2563,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 99;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        tmp_make_exception_arg_3 = mod_consts[35];
+        tmp_make_exception_arg_3 = mod_consts[34];
         frame_c82175d4419357e8a69c1845895e8e48->m_frame.f_lineno = 100;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_RuntimeError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -2837,7 +2609,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement(struct N
         tmp_assattr_value_2 = Py_None;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[29], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[28], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3063,12 +2835,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_name);
-        tmp_compexpr_left_1 = par_name;
-        tmp_compexpr_right_1 = mod_consts[37];
-        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_cmp_expr_left_1 = par_name;
+        tmp_cmp_expr_right_1 = mod_consts[36];
+        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3090,7 +2862,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[38];
+        tmp_make_exception_arg_1 = mod_consts[37];
         frame_0fdc7593cf490629b61edfa002e76f7a->m_frame.f_lineno = 107;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -3103,12 +2875,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -3119,7 +2891,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        tmp_make_exception_arg_2 = mod_consts[39];
+        tmp_make_exception_arg_2 = mod_consts[38];
         frame_0fdc7593cf490629b61edfa002e76f7a->m_frame.f_lineno = 109;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_RuntimeError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
@@ -3132,14 +2904,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_no_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[40]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[39]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[40]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3150,7 +2922,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto frame_exception_exit_1;
         }
         frame_0fdc7593cf490629b61edfa002e76f7a->m_frame.f_lineno = 110;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS1_VECTORCALL(tmp_called_name_1, &PyTuple_GET_ITEM(mod_consts[41], 0), mod_consts[42]);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS1_VECTORCALL(tmp_called_value_1, &PyTuple_GET_ITEM(mod_consts[40], 0), mod_consts[41]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3166,13 +2938,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[6]);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3182,9 +2954,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
-        Py_DECREF(tmp_compexpr_left_3);
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -3194,13 +2966,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_yes_3:;
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_ass_subvalue_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[6]);
+        tmp_expression_value_2 = par_self;
+        tmp_ass_subvalue_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[6]);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3212,8 +2984,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_record);
-        tmp_expression_name_3 = var_record;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[43]);
+        tmp_expression_value_3 = var_record;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[42]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3224,7 +2996,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_1 = mod_consts[44];
+        tmp_ass_subscript_1 = mod_consts[43];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subscribed_1);
         Py_DECREF(tmp_ass_subvalue_1);
@@ -3242,13 +3014,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_compexpr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[5]);
-        if (tmp_compexpr_left_4 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_cmp_expr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[5]);
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3258,9 +3030,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = Py_None;
-        tmp_condition_result_4 = (tmp_compexpr_left_4 != tmp_compexpr_right_4) ? true : false;
-        Py_DECREF(tmp_compexpr_left_4);
+        tmp_cmp_expr_right_4 = Py_None;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_4 != tmp_cmp_expr_right_4) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_4);
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -3270,13 +3042,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_yes_4:;
     {
         PyObject *tmp_ass_subvalue_2;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_ass_subscript_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_ass_subvalue_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[5]);
+        tmp_expression_value_5 = par_self;
+        tmp_ass_subvalue_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[5]);
         if (tmp_ass_subvalue_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3289,7 +3061,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
         }
         if (var_record == NULL) {
             Py_DECREF(tmp_ass_subvalue_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3299,8 +3071,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = var_record;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[43]);
+        tmp_expression_value_6 = var_record;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[42]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3311,7 +3083,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_2 = mod_consts[46];
+        tmp_ass_subscript_2 = mod_consts[45];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_2, tmp_ass_subscript_2, tmp_ass_subvalue_2);
         Py_DECREF(tmp_ass_subscribed_2);
         Py_DECREF(tmp_ass_subvalue_2);
@@ -3329,13 +3101,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_no_4:;
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_ass_subscribed_3;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_ass_subscript_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_ass_subvalue_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[2]);
+        tmp_expression_value_7 = par_self;
+        tmp_ass_subvalue_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[2]);
         if (tmp_ass_subvalue_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3348,7 +3120,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
         }
         if (var_record == NULL) {
             Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3358,8 +3130,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = var_record;
-        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[43]);
+        tmp_expression_value_8 = var_record;
+        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[42]);
         if (tmp_ass_subscribed_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3388,11 +3160,24 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(par_attrs);
-        tmp_called_instance_1 = par_attrs;
+        tmp_expression_value_9 = par_attrs;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[16]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 116;
+            type_description_1 = "ooooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_0fdc7593cf490629b61edfa002e76f7a->m_frame.f_lineno = 116;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[16]);
+        tmp_iter_arg_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3452,7 +3237,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
         PyObject *tmp_iter_arg_2;
         CHECK_OBJECT(tmp_for_loop_1__iter_value);
         tmp_iter_arg_2 = tmp_for_loop_1__iter_value;
-        tmp_assign_source_4 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_4 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3652,7 +3437,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
         PyObject *tmp_iter_arg_3;
         CHECK_OBJECT(var_key);
         tmp_iter_arg_3 = var_key;
-        tmp_assign_source_9 = MAKE_ITERATOR(tmp_iter_arg_3);
+        tmp_assign_source_9 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_3);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3848,12 +3633,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
 
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_5 = var_namespace;
-        tmp_compexpr_right_5 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_5 == tmp_compexpr_right_5) ? true : false;
+        tmp_cmp_expr_left_5 = var_namespace;
+        tmp_cmp_expr_right_5 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_5 == tmp_cmp_expr_right_5) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -3863,15 +3648,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_yes_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_6 = var_localname;
-        tmp_compexpr_right_6 = mod_consts[47];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_left_6 = var_localname;
+        tmp_cmp_expr_right_6 = mod_consts[46];
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3881,24 +3664,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 119;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_6 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
@@ -3908,7 +3679,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
         tmp_assattr_value_1 = var_value;
         if (var_record == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3919,7 +3690,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
         }
 
         tmp_assattr_target_1 = var_record;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[47], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[46], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3935,15 +3706,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     branch_no_6:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_tmp_condition_result_7_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_7 = var_localname;
-        tmp_compexpr_right_7 = mod_consts[2];
-        tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        if (tmp_tmp_condition_result_7_object_1 == NULL) {
+        tmp_cmp_expr_left_7 = var_localname;
+        tmp_cmp_expr_right_7 = mod_consts[2];
+        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3953,36 +3722,24 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_7_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_7_object_1);
-
-            exception_lineno = 121;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_7 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_7_object_1);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
         }
+        assert(tmp_condition_result_7 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_7:;
     {
         PyObject *tmp_ass_subvalue_4;
         PyObject *tmp_ass_subscribed_4;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_ass_subscript_4;
         CHECK_OBJECT(var_value);
         tmp_ass_subvalue_4 = var_value;
         if (var_record == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3992,8 +3749,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_9 = var_record;
-        tmp_ass_subscribed_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[43]);
+        tmp_expression_value_10 = var_record;
+        tmp_ass_subscribed_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[42]);
         if (tmp_ass_subscribed_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4023,12 +3780,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[48];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[47];
         CHECK_OBJECT(var_localname);
-        tmp_right_name_1 = var_localname;
-        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_localname;
+        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4056,12 +3813,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[49];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[48];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_2 = var_namespace;
-        tmp_make_exception_arg_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = var_namespace;
+        tmp_make_exception_arg_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4128,12 +3885,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     tmp_for_loop_1__for_iterator = NULL;
     {
         bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
+        PyObject *tmp_expression_value_11;
         if (var_record == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4143,9 +3900,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_10 = var_record;
-        tmp_compexpr_left_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[47]);
-        if (tmp_compexpr_left_8 == NULL) {
+        tmp_expression_value_11 = var_record;
+        tmp_cmp_expr_left_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[46]);
+        if (tmp_cmp_expr_left_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4155,9 +3912,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_8 = Py_None;
-        tmp_condition_result_8 = (tmp_compexpr_left_8 == tmp_compexpr_right_8) ? true : false;
-        Py_DECREF(tmp_compexpr_left_8);
+        tmp_cmp_expr_right_8 = Py_None;
+        tmp_condition_result_8 = (tmp_cmp_expr_left_8 == tmp_cmp_expr_right_8) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_8);
         if (tmp_condition_result_8 != false) {
             goto branch_yes_8;
         } else {
@@ -4168,7 +3925,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     {
         PyObject *tmp_raise_type_5;
         PyObject *tmp_make_exception_arg_5;
-        tmp_make_exception_arg_5 = mod_consts[50];
+        tmp_make_exception_arg_5 = mod_consts[49];
         frame_0fdc7593cf490629b61edfa002e76f7a->m_frame.f_lineno = 132;
         tmp_raise_type_5 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_5);
         assert(!(tmp_raise_type_5 == NULL));
@@ -4180,15 +3937,15 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     }
     branch_no_8:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_12 = par_self;
-        tmp_expression_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[9]);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_13 = par_self;
+        tmp_expression_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[9]);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4198,9 +3955,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[51]);
-        Py_DECREF(tmp_expression_name_11);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[50]);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4211,8 +3968,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto frame_exception_exit_1;
         }
         if (var_record == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4222,10 +3979,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = var_record;
+        tmp_args_element_value_1 = var_record;
         frame_0fdc7593cf490629b61edfa002e76f7a->m_frame.f_lineno = 133;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4240,11 +3997,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_value_14;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_13 = par_self;
-        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[52]);
+        tmp_expression_value_14 = par_self;
+        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[51]);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4272,11 +4029,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
     }
     {
         PyObject *tmp_assattr_value_3;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_assattr_target_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_14 = par_self;
-        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[53]);
+        tmp_expression_value_15 = par_self;
+        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[52]);
         if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4289,7 +4046,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement(struct 
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[29], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[28], tmp_assattr_value_3);
         Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -4493,12 +4250,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(struct Nu
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_name);
-        tmp_compexpr_left_1 = par_name;
-        tmp_compexpr_right_1 = mod_consts[37];
-        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_cmp_expr_left_1 = par_name;
+        tmp_cmp_expr_right_1 = mod_consts[36];
+        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -4520,7 +4277,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(struct Nu
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[55];
+        tmp_make_exception_arg_1 = mod_consts[54];
         frame_7d405c4b28bc62f7254048f762082eb4->m_frame.f_lineno = 140;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -4533,12 +4290,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(struct Nu
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -4549,7 +4306,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(struct Nu
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        tmp_make_exception_arg_2 = mod_consts[39];
+        tmp_make_exception_arg_2 = mod_consts[38];
         frame_7d405c4b28bc62f7254048f762082eb4->m_frame.f_lineno = 142;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_RuntimeError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
@@ -4562,11 +4319,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(struct Nu
     branch_no_2:;
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[30]);
+        tmp_expression_value_1 = par_self;
+        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[29]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4594,11 +4351,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(struct Nu
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[28]);
+        tmp_expression_value_2 = par_self;
+        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[27]);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4611,7 +4368,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(struct Nu
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[29], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[28], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -4785,7 +4542,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_name);
         tmp_iter_arg_1 = par_name;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4961,12 +4718,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -4977,19 +4734,19 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
-        tmp_left_name_1 = mod_consts[57];
+        tmp_left_value_1 = mod_consts[56];
         CHECK_OBJECT(var_namespace);
         tmp_tuple_element_1 = var_namespace;
-        tmp_right_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_right_name_1, 0, tmp_tuple_element_1);
+        tmp_right_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_right_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(var_localname);
         tmp_tuple_element_1 = var_localname;
-        PyTuple_SET_ITEM0(tmp_right_name_1, 1, tmp_tuple_element_1);
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        PyTuple_SET_ITEM0(tmp_right_value_1, 1, tmp_tuple_element_1);
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5013,12 +4770,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -5029,19 +4786,19 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_tuple_element_2;
-        tmp_left_name_2 = mod_consts[58];
+        tmp_left_value_2 = mod_consts[57];
         CHECK_OBJECT(par_qname);
         tmp_tuple_element_2 = par_qname;
-        tmp_right_name_2 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_right_name_2, 0, tmp_tuple_element_2);
+        tmp_right_value_2 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_right_value_2, 0, tmp_tuple_element_2);
         CHECK_OBJECT(var_localname);
         tmp_tuple_element_2 = var_localname;
-        PyTuple_SET_ITEM0(tmp_right_name_2, 1, tmp_tuple_element_2);
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        PyTuple_SET_ITEM0(tmp_right_value_2, 1, tmp_tuple_element_2);
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5065,15 +4822,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[59];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[58];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5083,35 +4838,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 157;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_attrs);
-        tmp_args_element_name_1 = par_attrs;
+        tmp_args_element_value_1 = par_attrs;
         frame_fc2ef1e9d12623b5431ac1615eca9852->m_frame.f_lineno = 158;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[60], tmp_args_element_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[59], tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5127,15 +4870,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_4 = var_localname;
-        tmp_compexpr_right_4 = mod_consts[61];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_left_4 = var_localname;
+        tmp_cmp_expr_right_4 = mod_consts[60];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5145,35 +4886,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 159;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_attrs);
-        tmp_args_element_name_2 = par_attrs;
+        tmp_args_element_value_2 = par_attrs;
         frame_fc2ef1e9d12623b5431ac1615eca9852->m_frame.f_lineno = 160;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[62], tmp_args_element_name_2);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[61], tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5189,12 +4918,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_5 = var_localname;
-        tmp_compexpr_right_5 = mod_consts[63];
-        tmp_res = PySequence_Contains(tmp_compexpr_right_5, tmp_compexpr_left_5);
+        tmp_cmp_expr_left_5 = var_localname;
+        tmp_cmp_expr_right_5 = mod_consts[62];
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_5, tmp_cmp_expr_left_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5215,13 +4944,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     branch_yes_5:;
     {
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
         tmp_called_instance_3 = par_self;
         CHECK_OBJECT(par_attrs);
-        tmp_args_element_name_3 = par_attrs;
+        tmp_args_element_value_3 = par_attrs;
         frame_fc2ef1e9d12623b5431ac1615eca9852->m_frame.f_lineno = 162;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[64], tmp_args_element_name_3);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[63], tmp_args_element_value_3);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5237,15 +4966,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_6 = var_localname;
-        tmp_compexpr_right_6 = mod_consts[65];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_left_6 = var_localname;
+        tmp_cmp_expr_right_6 = mod_consts[64];
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5255,35 +4982,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 163;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_6 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         CHECK_OBJECT(par_self);
         tmp_called_instance_4 = par_self;
         CHECK_OBJECT(par_attrs);
-        tmp_args_element_name_4 = par_attrs;
+        tmp_args_element_value_4 = par_attrs;
         frame_fc2ef1e9d12623b5431ac1615eca9852->m_frame.f_lineno = 164;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[66], tmp_args_element_name_4);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[65], tmp_args_element_value_4);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5299,15 +5014,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     branch_no_6:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_tmp_condition_result_7_object_1;
-        int tmp_truth_name_4;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_7 = var_localname;
-        tmp_compexpr_right_7 = mod_consts[67];
-        tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        if (tmp_tmp_condition_result_7_object_1 == NULL) {
+        tmp_cmp_expr_left_7 = var_localname;
+        tmp_cmp_expr_right_7 = mod_consts[66];
+        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5317,35 +5030,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_7_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_7_object_1);
-
-            exception_lineno = 165;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_7 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_7_object_1);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
         }
+        assert(tmp_condition_result_7 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_7:;
     {
         PyObject *tmp_called_instance_5;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_5;
         CHECK_OBJECT(par_self);
         tmp_called_instance_5 = par_self;
         CHECK_OBJECT(par_attrs);
-        tmp_args_element_name_5 = par_attrs;
+        tmp_args_element_value_5 = par_attrs;
         frame_fc2ef1e9d12623b5431ac1615eca9852->m_frame.f_lineno = 166;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[68], tmp_args_element_name_5);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[67], tmp_args_element_value_5);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5362,12 +5063,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement(st
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        tmp_left_name_3 = mod_consts[69];
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        tmp_left_value_3 = mod_consts[68];
         CHECK_OBJECT(var_localname);
-        tmp_right_name_3 = var_localname;
-        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_3, tmp_right_name_3);
+        tmp_right_value_3 = var_localname;
+        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_3, tmp_right_value_3);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5629,11 +5330,24 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_attrs);
-        tmp_called_instance_1 = par_attrs;
+        tmp_expression_value_1 = par_attrs;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[16]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 173;
+            type_description_1 = "oooooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_3db018beb0af236e997c3616c1f07c7d->m_frame.f_lineno = 173;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[16]);
+        tmp_iter_arg_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5693,7 +5407,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
         PyObject *tmp_iter_arg_2;
         CHECK_OBJECT(tmp_for_loop_1__iter_value);
         tmp_iter_arg_2 = tmp_for_loop_1__iter_value;
-        tmp_assign_source_5 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_5 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5893,7 +5607,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
         PyObject *tmp_iter_arg_3;
         CHECK_OBJECT(var_key);
         tmp_iter_arg_3 = var_key;
-        tmp_assign_source_10 = MAKE_ITERATOR(tmp_iter_arg_3);
+        tmp_assign_source_10 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_3);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6089,12 +5803,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -6104,15 +5818,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     branch_yes_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_2 = var_localname;
-        tmp_compexpr_right_2 = mod_consts[71];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_localname;
+        tmp_cmp_expr_right_2 = mod_consts[70];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6122,24 +5834,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 176;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -6158,15 +5858,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[5];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[5];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6176,24 +5874,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 178;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -6236,12 +5922,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[72];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[71];
         CHECK_OBJECT(var_key);
-        tmp_right_name_1 = var_key;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_key;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6269,12 +5955,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[73];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[72];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_2 = var_namespace;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = var_namespace;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6341,11 +6027,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     tmp_for_loop_1__for_iterator = NULL;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         if (var_name == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[70]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6355,9 +6041,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_4 = var_name;
-        tmp_compexpr_right_4 = Py_None;
-        tmp_condition_result_4 = (tmp_compexpr_left_4 == tmp_compexpr_right_4) ? true : false;
+        tmp_cmp_expr_left_4 = var_name;
+        tmp_cmp_expr_right_4 = Py_None;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_4 == tmp_cmp_expr_right_4) ? true : false;
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -6368,7 +6054,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        tmp_make_exception_arg_3 = mod_consts[74];
+        tmp_make_exception_arg_3 = mod_consts[73];
         frame_3db018beb0af236e997c3616c1f07c7d->m_frame.f_lineno = 192;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -6381,8 +6067,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         if (var_ncbiTaxID == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
@@ -6395,9 +6081,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_5 = var_ncbiTaxID;
-        tmp_compexpr_right_5 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_5 == tmp_compexpr_right_5) ? true : false;
+        tmp_cmp_expr_left_5 = var_ncbiTaxID;
+        tmp_cmp_expr_right_5 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_5 == tmp_cmp_expr_right_5) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -6408,7 +6094,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        tmp_make_exception_arg_4 = mod_consts[75];
+        tmp_make_exception_arg_4 = mod_consts[74];
         frame_3db018beb0af236e997c3616c1f07c7d->m_frame.f_lineno = 194;
         tmp_raise_type_4 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_4);
         assert(!(tmp_raise_type_4 == NULL));
@@ -6421,13 +6107,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     branch_no_5:;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[9]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[9]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6437,9 +6123,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[76];
-        tmp_assign_source_18 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, -1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_1 = mod_consts[75];
+        tmp_assign_source_18 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, -1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6456,11 +6142,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_ass_subscript_1;
         if (var_name == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[70]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6472,8 +6158,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
 
         tmp_ass_subvalue_1 = var_name;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_3 = var_record;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[43]);
+        tmp_expression_value_4 = var_record;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[42]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6484,7 +6170,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_1 = mod_consts[44];
+        tmp_ass_subscript_1 = mod_consts[43];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subscribed_1);
         if (tmp_result == false) {
@@ -6501,7 +6187,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_ass_subscript_2;
         if (var_ncbiTaxID == NULL) {
 
@@ -6517,8 +6203,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
 
         tmp_ass_subvalue_2 = var_ncbiTaxID;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_4 = var_record;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[43]);
+        tmp_expression_value_5 = var_record;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[42]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6529,7 +6215,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_2 = mod_consts[46];
+        tmp_ass_subscript_2 = mod_consts[45];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_2, tmp_ass_subscript_2, tmp_ass_subvalue_2);
         Py_DECREF(tmp_ass_subscribed_2);
         if (tmp_result == false) {
@@ -6545,11 +6231,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
     }
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[77]);
+        tmp_expression_value_6 = par_self;
+        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[76]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6562,7 +6248,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement(struc
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[29], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[28], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -6795,7 +6481,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_name);
         tmp_iter_arg_1 = par_name;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6971,12 +6657,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -6987,12 +6673,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[79];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[78];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7016,12 +6702,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -7032,12 +6718,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[80];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[79];
         CHECK_OBJECT(par_qname);
-        tmp_right_name_2 = par_qname;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = par_qname;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7061,15 +6747,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[59];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[58];
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7079,30 +6763,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 209;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        tmp_make_exception_arg_3 = mod_consts[81];
+        tmp_make_exception_arg_3 = mod_consts[80];
         frame_5fcbecfc2ce0fd0421e4b1298310e4c8->m_frame.f_lineno = 210;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_RuntimeError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -7115,11 +6787,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
     branch_no_3:;
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[53]);
+        tmp_expression_value_1 = par_self;
+        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[52]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7132,7 +6804,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement(struct 
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[29], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[28], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -7341,7 +7013,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[83];
+        tmp_make_exception_arg_1 = mod_consts[82];
         frame_7b0daec79d52f3b45da51a02d02dcc49->m_frame.f_lineno = 216;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -7354,13 +7026,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[8]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7370,9 +7042,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -7383,14 +7055,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_2;
-        tmp_left_name_1 = mod_consts[84];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_2;
+        tmp_left_value_1 = mod_consts[83];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7400,8 +7072,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7426,7 +7098,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_value_1 = mod_consts[85];
+        tmp_assattr_value_1 = mod_consts[84];
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[8], tmp_assattr_value_1);
@@ -7443,11 +7115,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[86]);
+        tmp_expression_value_3 = par_self;
+        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[85]);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7460,7 +7132,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement(
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[29], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[28], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -7630,7 +7302,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_name);
         tmp_iter_arg_1 = par_name;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7806,12 +7478,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -7822,12 +7494,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[88];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[87];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7851,12 +7523,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -7867,12 +7539,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[89];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[88];
         CHECK_OBJECT(par_qname);
-        tmp_right_name_2 = par_qname;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = par_qname;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7896,15 +7568,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[61];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[60];
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7914,30 +7584,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 231;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        tmp_make_exception_arg_3 = mod_consts[90];
+        tmp_make_exception_arg_3 = mod_consts[89];
         frame_1e7165e41411a49eda4a0c42352ddd8b->m_frame.f_lineno = 232;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_RuntimeError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -7950,13 +7608,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     branch_no_3:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[9]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[9]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7966,9 +7624,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[76];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, -1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_1 = mod_consts[75];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, -1);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7984,10 +7642,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[8]);
+        tmp_expression_value_3 = par_self;
+        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[8]);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8003,10 +7661,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     }
     {
         nuitka_bool tmp_condition_result_4;
-        int tmp_truth_name_2;
+        int tmp_truth_name_1;
         CHECK_OBJECT(var_description);
-        tmp_truth_name_2 = CHECK_IF_TRUE(var_description);
-        if (tmp_truth_name_2 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(var_description);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8016,7 +7674,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_4 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
@@ -8031,7 +7689,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
         tmp_assattr_value_1 = var_description;
         CHECK_OBJECT(var_record);
         tmp_assattr_target_1 = var_record;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[61], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[60], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8064,11 +7722,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
     }
     {
         PyObject *tmp_assattr_value_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_assattr_target_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[53]);
+        tmp_expression_value_4 = par_self;
+        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[52]);
         if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8081,7 +7739,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement(st
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[29], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[28], tmp_assattr_value_3);
         Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -8302,7 +7960,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[92];
+        tmp_make_exception_arg_1 = mod_consts[91];
         frame_d7ae9b7af5181ea6f6e16db24ec9fb0e->m_frame.f_lineno = 243;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -8315,13 +7973,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[8]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8331,9 +7989,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -8344,14 +8002,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_2;
-        tmp_left_name_1 = mod_consts[84];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_2;
+        tmp_left_value_1 = mod_consts[83];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8361,8 +8019,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8387,7 +8045,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_value_1 = mod_consts[85];
+        tmp_assattr_value_1 = mod_consts[84];
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[8], tmp_assattr_value_1);
@@ -8404,11 +8062,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[93]);
+        tmp_expression_value_3 = par_self;
+        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[92]);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8421,7 +8079,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement(str
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[29], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[28], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -8590,7 +8248,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_name);
         tmp_iter_arg_1 = par_name;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8766,12 +8424,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -8782,12 +8440,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[95];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[94];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8811,12 +8469,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -8827,12 +8485,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[96];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[95];
         CHECK_OBJECT(par_qname);
-        tmp_right_name_2 = par_qname;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = par_qname;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8856,13 +8514,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     branch_no_2:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[9]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[9]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8872,9 +8530,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[76];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, -1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_1 = mod_consts[75];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, -1);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8890,15 +8548,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[97];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[96];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8908,35 +8564,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 257;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_ass_subscript_1;
-        tmp_ass_subvalue_1 = mod_consts[98];
+        tmp_ass_subvalue_1 = mod_consts[97];
         CHECK_OBJECT(var_record);
-        tmp_expression_name_3 = var_record;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[43]);
+        tmp_expression_value_3 = var_record;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[42]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8947,7 +8591,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_1 = mod_consts[99];
+        tmp_ass_subscript_1 = mod_consts[98];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subscribed_1);
         if (tmp_result == false) {
@@ -8965,15 +8609,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_4 = var_localname;
-        tmp_compexpr_right_4 = mod_consts[100];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_left_4 = var_localname;
+        tmp_cmp_expr_right_4 = mod_consts[99];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8983,35 +8625,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 259;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_ass_subscript_2;
-        tmp_ass_subvalue_2 = mod_consts[101];
+        tmp_ass_subvalue_2 = mod_consts[100];
         CHECK_OBJECT(var_record);
-        tmp_expression_name_4 = var_record;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[43]);
+        tmp_expression_value_4 = var_record;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[42]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9022,7 +8652,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_2 = mod_consts[99];
+        tmp_ass_subscript_2 = mod_consts[98];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_2, tmp_ass_subscript_2, tmp_ass_subvalue_2);
         Py_DECREF(tmp_ass_subscribed_2);
         if (tmp_result == false) {
@@ -9040,15 +8670,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_tmp_condition_result_5_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_5 = var_localname;
-        tmp_compexpr_right_5 = mod_consts[102];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        if (tmp_tmp_condition_result_5_object_1 == NULL) {
+        tmp_cmp_expr_left_5 = var_localname;
+        tmp_cmp_expr_right_5 = mod_consts[101];
+        tmp_condition_result_5 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        if (tmp_condition_result_5 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9058,35 +8686,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_5_object_1);
-
-            exception_lineno = 261;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_5 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
         }
+        assert(tmp_condition_result_5 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_5:;
     {
         PyObject *tmp_ass_subvalue_3;
         PyObject *tmp_ass_subscribed_3;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_ass_subscript_3;
-        tmp_ass_subvalue_3 = mod_consts[103];
+        tmp_ass_subvalue_3 = mod_consts[102];
         CHECK_OBJECT(var_record);
-        tmp_expression_name_5 = var_record;
-        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[43]);
+        tmp_expression_value_5 = var_record;
+        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[42]);
         if (tmp_ass_subscribed_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9097,7 +8713,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_3 = mod_consts[99];
+        tmp_ass_subscript_3 = mod_consts[98];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_3, tmp_ass_subscript_3, tmp_ass_subvalue_3);
         Py_DECREF(tmp_ass_subscribed_3);
         if (tmp_result == false) {
@@ -9116,12 +8732,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        tmp_left_name_3 = mod_consts[104];
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        tmp_left_value_3 = mod_consts[103];
         CHECK_OBJECT(var_localname);
-        tmp_right_name_3 = var_localname;
-        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_3, tmp_right_name_3);
+        tmp_right_value_3 = var_localname;
+        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_3, tmp_right_value_3);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9147,17 +8763,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     branch_end_3:;
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_assattr_target_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[105]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[104]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[105]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[104]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9168,9 +8784,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[8]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[8]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9181,8 +8797,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
             goto frame_exception_exit_1;
         }
         frame_a78fe4687731da4d83a9cd2deb7908de->m_frame.f_lineno = 267;
-        tmp_assattr_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assattr_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9195,7 +8811,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
         }
         if (var_record == NULL) {
             Py_DECREF(tmp_assattr_value_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9206,7 +8822,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
         }
 
         tmp_assattr_target_1 = var_record;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[106], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[105], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -9239,11 +8855,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
     }
     {
         PyObject *tmp_assattr_value_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_assattr_target_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[53]);
+        tmp_expression_value_7 = par_self;
+        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[52]);
         if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9256,7 +8872,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement(struc
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[29], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[28], tmp_assattr_value_3);
         Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -9505,11 +9121,24 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_attrs);
-        tmp_called_instance_1 = par_attrs;
+        tmp_expression_value_1 = par_attrs;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[16]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 275;
+            type_description_1 = "oooooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_789e8c4d35c616bbe168c966e35ca3cc->m_frame.f_lineno = 275;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[16]);
+        tmp_iter_arg_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9569,7 +9198,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
         PyObject *tmp_iter_arg_2;
         CHECK_OBJECT(tmp_for_loop_1__iter_value);
         tmp_iter_arg_2 = tmp_for_loop_1__iter_value;
-        tmp_assign_source_5 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_5 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9769,7 +9398,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
         PyObject *tmp_iter_arg_3;
         CHECK_OBJECT(var_key);
         tmp_iter_arg_3 = var_key;
-        tmp_assign_source_10 = MAKE_ITERATOR(tmp_iter_arg_3);
+        tmp_assign_source_10 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_3);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9965,12 +9594,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -9980,15 +9609,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     branch_yes_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_2 = var_localname;
-        tmp_compexpr_right_2 = mod_consts[2];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_localname;
+        tmp_cmp_expr_right_2 = mod_consts[2];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9998,24 +9625,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 278;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -10034,15 +9649,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[47];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[46];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10052,24 +9665,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 280;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -10089,12 +9690,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[108];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[107];
         CHECK_OBJECT(var_key);
-        tmp_right_name_1 = var_key;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_key;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10122,12 +9723,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[109];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[108];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_2 = var_namespace;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = var_namespace;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10194,8 +9795,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     tmp_for_loop_1__for_iterator = NULL;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         if (var_source == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
@@ -10208,9 +9809,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_4 = var_source;
-        tmp_compexpr_right_4 = Py_None;
-        tmp_condition_result_4 = (tmp_compexpr_left_4 == tmp_compexpr_right_4) ? true : false;
+        tmp_cmp_expr_left_4 = var_source;
+        tmp_cmp_expr_right_4 = Py_None;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_4 == tmp_cmp_expr_right_4) ? true : false;
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -10221,7 +9822,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        tmp_make_exception_arg_3 = mod_consts[110];
+        tmp_make_exception_arg_3 = mod_consts[109];
         frame_789e8c4d35c616bbe168c966e35ca3cc->m_frame.f_lineno = 292;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -10234,11 +9835,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         if (var_ID == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[110]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10248,9 +9849,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_5 = var_ID;
-        tmp_compexpr_right_5 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_5 == tmp_compexpr_right_5) ? true : false;
+        tmp_cmp_expr_left_5 = var_ID;
+        tmp_cmp_expr_right_5 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_5 == tmp_cmp_expr_right_5) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -10261,7 +9862,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        tmp_make_exception_arg_4 = mod_consts[112];
+        tmp_make_exception_arg_4 = mod_consts[111];
         frame_789e8c4d35c616bbe168c966e35ca3cc->m_frame.f_lineno = 294;
         tmp_raise_type_4 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_4);
         assert(!(tmp_raise_type_4 == NULL));
@@ -10274,13 +9875,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     branch_no_5:;
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
-        if (tmp_compexpr_left_6 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_cmp_expr_left_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
+        if (tmp_cmp_expr_left_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10290,9 +9891,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_6 = Py_None;
-        tmp_condition_result_6 = (tmp_compexpr_left_6 != tmp_compexpr_right_6) ? true : false;
-        Py_DECREF(tmp_compexpr_left_6);
+        tmp_cmp_expr_right_6 = Py_None;
+        tmp_condition_result_6 = (tmp_cmp_expr_left_6 != tmp_cmp_expr_right_6) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_6);
         if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
@@ -10303,14 +9904,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     {
         PyObject *tmp_raise_type_5;
         PyObject *tmp_make_exception_arg_5;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_expression_name_2;
-        tmp_left_name_3 = mod_consts[84];
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_expression_value_3;
+        tmp_left_value_3 = mod_consts[83];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_right_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_right_name_3 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_right_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[8]);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10320,8 +9921,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_make_exception_arg_5 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_make_exception_arg_5 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_make_exception_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10346,7 +9947,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_value_1 = mod_consts[85];
+        tmp_assattr_value_1 = mod_consts[84];
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[8], tmp_assattr_value_1);
@@ -10363,13 +9964,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[9]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_5 = par_self;
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[9]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10379,9 +9980,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[76];
-        tmp_assign_source_17 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_1, -1);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_subscript_value_1 = mod_consts[75];
+        tmp_assign_source_17 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_1, -1);
+        Py_DECREF(tmp_expression_value_4);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10397,10 +9998,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     }
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
         PyObject *tmp_tuple_element_1;
-        tmp_left_name_4 = mod_consts[113];
+        tmp_left_value_4 = mod_consts[112];
         if (var_source == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
@@ -10414,11 +10015,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
         }
 
         tmp_tuple_element_1 = var_source;
-        tmp_right_name_4 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_right_name_4, 0, tmp_tuple_element_1);
+        tmp_right_value_4 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_right_value_4, 0, tmp_tuple_element_1);
         if (var_ID == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[110]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10429,16 +10030,16 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
         }
 
         tmp_tuple_element_1 = var_ID;
-        PyTuple_SET_ITEM0(tmp_right_name_4, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_right_value_4, 1, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_4);
+        Py_DECREF(tmp_right_value_4);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_assign_source_18 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_assign_source_18 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10454,15 +10055,15 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     }
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(var_dbxref);
-        tmp_compexpr_left_7 = var_dbxref;
+        tmp_cmp_expr_left_7 = var_dbxref;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_5 = var_record;
-        tmp_compexpr_right_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[114]);
-        if (tmp_compexpr_right_7 == NULL) {
+        tmp_expression_value_6 = var_record;
+        tmp_cmp_expr_right_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[113]);
+        if (tmp_cmp_expr_right_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10472,8 +10073,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_7, tmp_compexpr_left_7);
-        Py_DECREF(tmp_compexpr_right_7);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_7, tmp_cmp_expr_left_7);
+        Py_DECREF(tmp_cmp_expr_right_7);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -10493,14 +10094,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     }
     branch_yes_7:;
     {
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_6 = var_record;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[114]);
-        if (tmp_called_instance_2 == NULL) {
+        tmp_expression_value_7 = var_record;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[113]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10511,10 +10112,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_dbxref);
-        tmp_args_element_name_1 = var_dbxref;
+        tmp_args_element_value_1 = var_dbxref;
         frame_789e8c4d35c616bbe168c966e35ca3cc->m_frame.f_lineno = 301;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[51], tmp_args_element_name_1);
-        Py_DECREF(tmp_called_instance_2);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[50], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10530,11 +10131,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
     branch_no_7:;
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[115]);
+        tmp_expression_value_8 = par_self;
+        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[114]);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10547,7 +10148,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement(struct
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[29], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[28], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -10780,7 +10381,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_name);
         tmp_iter_arg_1 = par_name;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10956,12 +10557,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -10972,12 +10573,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[117];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[116];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11001,12 +10602,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -11017,12 +10618,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[118];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[117];
         CHECK_OBJECT(par_qname);
-        tmp_right_name_2 = par_qname;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = par_qname;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11046,15 +10647,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[65];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[64];
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11064,35 +10663,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 313;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        tmp_left_name_3 = mod_consts[119];
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        tmp_left_value_3 = mod_consts[118];
         CHECK_OBJECT(var_localname);
-        tmp_right_name_3 = var_localname;
-        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_3, tmp_right_name_3);
+        tmp_right_value_3 = var_localname;
+        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_3, tmp_right_value_3);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11116,12 +10703,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
-        int tmp_truth_name_2;
+        int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[8]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11132,8 +10719,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_attribute_value_1);
-        if (tmp_truth_name_2 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_attribute_value_1);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11143,7 +10730,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_4 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_attribute_value_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
@@ -11155,14 +10742,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_expression_name_2;
-        tmp_left_name_4 = mod_consts[120];
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_expression_value_2;
+        tmp_left_value_4 = mod_consts[119];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_right_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_right_name_4 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_right_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
+        if (tmp_right_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11172,8 +10759,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_make_exception_arg_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_make_exception_arg_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_make_exception_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11215,11 +10802,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[53]);
+        tmp_expression_value_3 = par_self;
+        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[52]);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11232,7 +10819,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[29], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[28], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -11475,11 +11062,24 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_attrs);
-        tmp_called_instance_1 = par_attrs;
+        tmp_expression_value_1 = par_attrs;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[16]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 328;
+            type_description_1 = "ooooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_489b0f2328b48bc29ec26b575a43953c->m_frame.f_lineno = 328;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[16]);
+        tmp_iter_arg_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11539,7 +11139,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
         PyObject *tmp_iter_arg_2;
         CHECK_OBJECT(tmp_for_loop_1__iter_value);
         tmp_iter_arg_2 = tmp_for_loop_1__iter_value;
-        tmp_assign_source_5 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_5 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11739,7 +11339,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
         PyObject *tmp_iter_arg_3;
         CHECK_OBJECT(var_key);
         tmp_iter_arg_3 = var_key;
-        tmp_assign_source_10 = MAKE_ITERATOR(tmp_iter_arg_3);
+        tmp_assign_source_10 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_3);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11935,12 +11535,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -11950,15 +11550,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     branch_yes_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_2 = var_localname;
-        tmp_compexpr_right_2 = mod_consts[71];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_localname;
+        tmp_cmp_expr_right_2 = mod_consts[70];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11968,24 +11566,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             type_description_1 = "ooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 331;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -12004,15 +11590,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[122];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[121];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12022,24 +11606,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             type_description_1 = "ooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 333;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -12060,7 +11632,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
         PyObject *tmp_make_exception_arg_2;
-        tmp_make_exception_arg_1 = mod_consts[123];
+        tmp_make_exception_arg_1 = mod_consts[122];
         CHECK_OBJECT(var_key);
         tmp_make_exception_arg_2 = var_key;
         frame_489b0f2328b48bc29ec26b575a43953c->m_frame.f_lineno = 336;
@@ -12083,12 +11655,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[124];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[123];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12155,11 +11727,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     tmp_for_loop_1__for_iterator = NULL;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         if (var_property_name == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12169,9 +11741,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_4 = var_property_name;
-        tmp_compexpr_right_4 = Py_None;
-        tmp_condition_result_4 = (tmp_compexpr_left_4 == tmp_compexpr_right_4) ? true : false;
+        tmp_cmp_expr_left_4 = var_property_name;
+        tmp_cmp_expr_right_4 = Py_None;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_4 == tmp_cmp_expr_right_4) ? true : false;
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -12182,7 +11754,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_4;
-        tmp_make_exception_arg_4 = mod_consts[126];
+        tmp_make_exception_arg_4 = mod_consts[125];
         frame_489b0f2328b48bc29ec26b575a43953c->m_frame.f_lineno = 345;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_4);
         assert(!(tmp_raise_type_3 == NULL));
@@ -12195,13 +11767,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     branch_no_4:;
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[9]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[9]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12211,9 +11783,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[76];
-        tmp_assign_source_17 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, -1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_1 = mod_consts[75];
+        tmp_assign_source_17 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, -1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12229,13 +11801,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     }
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_tmp_condition_result_5_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         if (var_property_name == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12245,10 +11815,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_5 = var_property_name;
-        tmp_compexpr_right_5 = mod_consts[99];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        if (tmp_tmp_condition_result_5_object_1 == NULL) {
+        tmp_cmp_expr_left_5 = var_property_name;
+        tmp_cmp_expr_right_5 = mod_consts[98];
+        tmp_condition_result_5 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        if (tmp_condition_result_5 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12258,37 +11828,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_5_object_1);
-
-            exception_lineno = 347;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_5 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
         }
+        assert(tmp_condition_result_5 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_5:;
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_4 = var_record;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[43]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_5 = var_record;
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[42]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12299,8 +11857,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
         if (var_property_name == NULL) {
-            Py_DECREF(tmp_expression_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            Py_DECREF(tmp_expression_value_4);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12310,10 +11868,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_2 = var_property_name;
-        tmp_compexpr_left_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_compexpr_left_6 == NULL) {
+        tmp_subscript_value_2 = var_property_name;
+        tmp_cmp_expr_left_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_cmp_expr_left_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12324,8 +11882,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
         if (var_property_value == NULL) {
-            Py_DECREF(tmp_compexpr_left_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[127]);
+            Py_DECREF(tmp_cmp_expr_left_6);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[126]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12335,9 +11893,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_right_6 = var_property_value;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_6, tmp_compexpr_left_6);
-        Py_DECREF(tmp_compexpr_left_6);
+        tmp_cmp_expr_right_6 = var_property_value;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_6, tmp_cmp_expr_left_6);
+        Py_DECREF(tmp_cmp_expr_left_6);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -12370,11 +11928,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_ass_subscript_1;
         if (var_property_value == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[127]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[126]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12386,8 +11944,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
 
         tmp_ass_subvalue_1 = var_property_value;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_5 = var_record;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[43]);
+        tmp_expression_value_6 = var_record;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[42]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12400,7 +11958,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
         }
         if (var_property_name == NULL) {
             Py_DECREF(tmp_ass_subscribed_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12428,12 +11986,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     branch_no_5:;
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        PyObject *tmp_expression_value_7;
         if (var_property_name == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12443,11 +12001,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_7 = var_property_name;
+        tmp_cmp_expr_left_7 = var_property_name;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_6 = var_record;
-        tmp_compexpr_right_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[43]);
-        if (tmp_compexpr_right_7 == NULL) {
+        tmp_expression_value_7 = var_record;
+        tmp_cmp_expr_right_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[42]);
+        if (tmp_cmp_expr_right_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12457,8 +12015,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_7, tmp_compexpr_left_7);
-        Py_DECREF(tmp_compexpr_right_7);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_7, tmp_cmp_expr_left_7);
+        Py_DECREF(tmp_cmp_expr_right_7);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -12480,12 +12038,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_ass_subscript_2;
         tmp_ass_subvalue_2 = PyList_New(0);
         CHECK_OBJECT(var_record);
-        tmp_expression_name_7 = var_record;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[43]);
+        tmp_expression_value_8 = var_record;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[42]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12499,7 +12057,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
         if (var_property_name == NULL) {
             Py_DECREF(tmp_ass_subvalue_2);
             Py_DECREF(tmp_ass_subscribed_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12526,17 +12084,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     }
     branch_no_7:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_subscript_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(var_record);
-        tmp_expression_name_10 = var_record;
-        tmp_expression_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[43]);
-        if (tmp_expression_name_9 == NULL) {
+        tmp_expression_value_11 = var_record;
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[42]);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12547,8 +12105,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
         if (var_property_name == NULL) {
-            Py_DECREF(tmp_expression_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            Py_DECREF(tmp_expression_value_10);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12558,10 +12116,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_3 = var_property_name;
-        tmp_expression_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_9);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_subscript_value_3 = var_property_name;
+        tmp_expression_value_9 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12571,9 +12129,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[51]);
-        Py_DECREF(tmp_expression_name_8);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[50]);
+        Py_DECREF(tmp_expression_value_9);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12584,8 +12142,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
         if (var_property_value == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[127]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[126]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12595,10 +12153,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = var_property_value;
+        tmp_args_element_value_1 = var_property_value;
         frame_489b0f2328b48bc29ec26b575a43953c->m_frame.f_lineno = 356;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12614,11 +12172,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
     branch_end_5:;
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_11 = par_self;
-        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[128]);
+        tmp_expression_value_12 = par_self;
+        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[127]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12631,7 +12189,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement(str
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[29], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[28], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -12858,7 +12416,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_name);
         tmp_iter_arg_1 = par_name;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13034,12 +12592,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_namespace);
-        tmp_compexpr_left_1 = var_namespace;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var_namespace;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -13050,12 +12608,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[130];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[129];
         CHECK_OBJECT(var_namespace);
-        tmp_right_name_1 = var_namespace;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_namespace;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13079,12 +12637,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_qname);
-        tmp_compexpr_left_2 = par_qname;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_qname;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -13095,12 +12653,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[131];
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[130];
         CHECK_OBJECT(par_qname);
-        tmp_right_name_2 = par_qname;
-        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = par_qname;
+        tmp_make_exception_arg_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13124,15 +12682,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_localname);
-        tmp_compexpr_left_3 = var_localname;
-        tmp_compexpr_right_3 = mod_consts[67];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_localname;
+        tmp_cmp_expr_right_3 = mod_consts[66];
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13142,35 +12698,23 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 368;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        tmp_left_name_3 = mod_consts[132];
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        tmp_left_value_3 = mod_consts[131];
         CHECK_OBJECT(var_localname);
-        tmp_right_name_3 = var_localname;
-        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_3, tmp_right_name_3);
+        tmp_right_value_3 = var_localname;
+        tmp_make_exception_arg_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_3, tmp_right_value_3);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13194,11 +12738,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
     branch_no_3:;
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[53]);
+        tmp_expression_value_1 = par_self;
+        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[52]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13211,7 +12755,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement(struc
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[29], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[28], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -13401,13 +12945,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__18_characters(struct Nuitka
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[8]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13417,9 +12961,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__18_characters(struct Nuitka
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -13429,10 +12973,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__18_characters(struct Nuitka
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
+        tmp_expression_value_2 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13449,13 +12993,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__18_characters(struct Nuitka
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_left_name_1 = tmp_inplace_assign_1__value;
+        tmp_left_value_1 = tmp_inplace_assign_1__value;
         CHECK_OBJECT(par_data);
-        tmp_right_name_1 = par_data;
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = par_data;
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -13466,7 +13010,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__18_characters(struct Nuitka
             type_description_1 = "oo";
             goto try_except_handler_1;
         }
-        tmp_assign_source_2 = tmp_left_name_1;
+        tmp_assign_source_2 = tmp_left_value_1;
         tmp_inplace_assign_1__value = tmp_assign_source_2;
 
     }
@@ -13658,10 +13202,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_1;
         PyObject *tmp_assattr_target_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[135]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[134]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[134]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -13675,7 +13219,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_58b9a343167da02702238b5c375c96fc->m_frame.f_lineno = 403;
-        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[136]);
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[135]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13688,7 +13232,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[137], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[136], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -13703,14 +13247,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
     }
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[138]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[137]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[138]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[137]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13721,7 +13265,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_58b9a343167da02702238b5c375c96fc->m_frame.f_lineno = 404;
-        tmp_assign_source_1 = CALL_FUNCTION_NO_ARGS(tmp_called_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13737,12 +13281,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
     }
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[137]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[136]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13754,9 +13298,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_content_handler);
-        tmp_args_element_name_1 = var_content_handler;
+        tmp_args_element_value_1 = var_content_handler;
         frame_58b9a343167da02702238b5c375c96fc->m_frame.f_lineno = 405;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[139], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[138], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13771,17 +13315,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[137]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[136]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13791,9 +13335,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
             type_description_1 = "ooooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[140]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[139]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13803,42 +13347,42 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
             type_description_1 = "ooooc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[141]);
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[140]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[141]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[140]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 406;
             type_description_1 = "ooooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[142]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[141]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 406;
             type_description_1 = "ooooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = Py_True;
+        tmp_args_element_value_3 = Py_True;
         frame_58b9a343167da02702238b5c375c96fc->m_frame.f_lineno = 406;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13852,14 +13396,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[0]);
@@ -13872,11 +13416,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
 
-        tmp_type_arg_name_1 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_type_arg_value_1 = Nuitka_Cell_GET(self->m_closure[0]);
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_5 = BUILTIN_SUPER0(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_5 = BUILTIN_SUPER0(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13886,9 +13430,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
             type_description_1 = "ooooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[1]);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[1]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13900,14 +13444,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__(struct Nuitka_F
         }
         CHECK_OBJECT(par_stream_or_path);
         tmp_tuple_element_1 = par_stream_or_path;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[143]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[142]);
         frame_58b9a343167da02702238b5c375c96fc->m_frame.f_lineno = 407;
-        tmp_call_result_3 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_call_result_3 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14100,10 +13644,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[137]);
+        tmp_expression_value_1 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[136]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14123,7 +13667,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
         CHECK_OBJECT(var_parser);
         tmp_called_instance_1 = var_parser;
         frame_8d3c100649119582769587b088ece3a3->m_frame.f_lineno = 412;
-        tmp_assign_source_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[145]);
+        tmp_assign_source_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[144]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14139,10 +13683,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[146]);
+        tmp_expression_value_2 = par_self;
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[145]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14159,35 +13703,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     loop_start_1:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_1;
         if (par_handle == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 416;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_handle;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[148]);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 416;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_BLOCK == NULL) {
-            Py_DECREF(tmp_called_name_1);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -14198,10 +13718,34 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = var_BLOCK;
+        tmp_expression_value_3 = par_handle;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[147]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 416;
+            type_description_1 = "oooooooo";
+            goto frame_exception_exit_1;
+        }
+        if (var_BLOCK == NULL) {
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 416;
+            type_description_1 = "oooooooo";
+            goto frame_exception_exit_1;
+        }
+
+        tmp_args_element_value_1 = var_BLOCK;
         frame_8d3c100649119582769587b088ece3a3->m_frame.f_lineno = 416;
-        tmp_assign_source_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14220,11 +13764,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
 
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         CHECK_OBJECT(var_text);
-        tmp_operand_name_1 = var_text;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = var_text;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14235,8 +13779,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -14245,12 +13789,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     branch_yes_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_4;
         if (var_content_handler == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14260,9 +13804,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = var_content_handler;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[7]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_4 = var_content_handler;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[7]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14272,9 +13816,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -14285,7 +13829,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[150];
+        tmp_make_exception_arg_1 = mod_consts[149];
         frame_8d3c100649119582769587b088ece3a3->m_frame.f_lineno = 419;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -14300,7 +13844,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        tmp_make_exception_arg_2 = mod_consts[151];
+        tmp_make_exception_arg_2 = mod_consts[150];
         frame_8d3c100649119582769587b088ece3a3->m_frame.f_lineno = 421;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
@@ -14315,10 +13859,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         if (var_parser == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[137]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[136]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14330,9 +13874,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
 
         tmp_called_instance_2 = var_parser;
         CHECK_OBJECT(var_text);
-        tmp_args_element_name_2 = var_text;
+        tmp_args_element_value_2 = var_text;
         frame_8d3c100649119582769587b088ece3a3->m_frame.f_lineno = 422;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[152], tmp_args_element_name_2);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[151], tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14347,10 +13891,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         if (var_content_handler == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14360,8 +13904,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = var_content_handler;
-        tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[4]);
+        tmp_expression_value_5 = var_content_handler;
+        tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[4]);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14381,12 +13925,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_seqXMLversion);
-        tmp_compexpr_left_2 = var_seqXMLversion;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = var_seqXMLversion;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -14429,11 +13973,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_assattr_target_2;
         if (var_content_handler == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14443,8 +13987,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = var_content_handler;
-        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[2]);
+        tmp_expression_value_6 = var_content_handler;
+        tmp_assattr_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[2]);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14472,11 +14016,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         PyObject *tmp_assattr_value_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_assattr_target_3;
         if (var_content_handler == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14486,8 +14030,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = var_content_handler;
-        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[3]);
+        tmp_expression_value_7 = var_content_handler;
+        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[3]);
         if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14515,11 +14059,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         PyObject *tmp_assattr_value_4;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_assattr_target_4;
         if (var_content_handler == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14529,8 +14073,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = var_content_handler;
-        tmp_assattr_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[5]);
+        tmp_expression_value_8 = var_content_handler;
+        tmp_assattr_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[5]);
         if (tmp_assattr_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14558,11 +14102,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         PyObject *tmp_assattr_value_5;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_assattr_target_5;
         if (var_content_handler == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14572,8 +14116,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_9 = var_content_handler;
-        tmp_assattr_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[6]);
+        tmp_expression_value_9 = var_content_handler;
+        tmp_assattr_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[6]);
         if (tmp_assattr_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14601,13 +14145,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_10 = par_self;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[153]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_10 = par_self;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[152]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14618,8 +14162,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         if (par_handle == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14629,10 +14173,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = par_handle;
+        tmp_args_element_value_3 = par_handle;
         frame_8d3c100649119582769587b088ece3a3->m_frame.f_lineno = 431;
-        tmp_assign_source_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_2);
+        tmp_assign_source_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14937,10 +14481,10 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         if (Nuitka_Cell_GET(generator->m_closure[1]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[155]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -14950,8 +14494,8 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(generator->m_closure[1]);
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[137]);
+        tmp_expression_value_1 = Nuitka_Cell_GET(generator->m_closure[1]);
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[136]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14971,7 +14515,7 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
         CHECK_OBJECT(generator_heap->var_parser);
         tmp_called_instance_1 = generator_heap->var_parser;
         generator->m_frame->m_frame.f_lineno = 437;
-        tmp_assign_source_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[145]);
+        tmp_assign_source_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[144]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14987,10 +14531,10 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(generator_heap->var_content_handler);
-        tmp_expression_name_2 = generator_heap->var_content_handler;
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[9]);
+        tmp_expression_value_2 = generator_heap->var_content_handler;
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[9]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15006,10 +14550,10 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         if (Nuitka_Cell_GET(generator->m_closure[1]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[155]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -15019,8 +14563,8 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(generator->m_closure[1]);
-        tmp_assign_source_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[146]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(generator->m_closure[1]);
+        tmp_assign_source_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[145]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15037,10 +14581,9 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     loop_start_1:;
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
         if (generator_heap->var_records == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[9]);
@@ -15054,8 +14597,8 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
         }
 
         tmp_len_arg_1 = generator_heap->var_records;
-        tmp_compexpr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -15065,12 +14608,9 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[156];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        assert(!(tmp_tmp_condition_result_1_object_1 == NULL));
-        tmp_condition_result_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
+        tmp_cmp_expr_right_1 = mod_consts[156];
+        tmp_condition_result_1 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -15080,7 +14620,8 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
         if (generator_heap->var_records == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[9]);
@@ -15093,14 +14634,22 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_2 = generator_heap->var_records;
-        generator->m_frame->m_frame.f_lineno = 443;
-        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
-            mod_consts[157],
-            PyTuple_GET_ITEM(mod_consts[158], 0)
-        );
+        tmp_expression_value_4 = generator_heap->var_records;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[157]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
+
+
+            generator_heap->exception_lineno = 443;
+            generator_heap->type_description_1 = "ccoooooo";
+            goto frame_exception_exit_1;
+        }
+        generator->m_frame->m_frame.f_lineno = 443;
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[158]);
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15119,13 +14668,13 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
 
     }
     {
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_5;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
         CHECK_OBJECT(generator_heap->var_record);
-        tmp_expression_name_4 = generator_heap->var_record;
-        Py_INCREF(tmp_expression_name_4);
+        tmp_expression_value_5 = generator_heap->var_record;
+        Py_INCREF(tmp_expression_value_5);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_4;
+        return tmp_expression_value_5;
         yield_return_1:
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -15142,12 +14691,12 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     branch_no_1:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_1;
         if (Nuitka_Cell_GET(generator->m_closure[0]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[146]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -15157,9 +14706,9 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(generator->m_closure[0]);
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[148]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(generator->m_closure[0]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[147]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -15170,8 +14719,8 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
         if (generator_heap->var_BLOCK == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[146]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[145]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -15181,10 +14730,10 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = generator_heap->var_BLOCK;
+        tmp_args_element_value_1 = generator_heap->var_BLOCK;
         generator->m_frame->m_frame.f_lineno = 446;
-        tmp_assign_source_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15203,11 +14752,11 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
 
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
         CHECK_OBJECT(generator_heap->var_text);
-        tmp_operand_name_1 = generator_heap->var_text;
-        generator_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = generator_heap->var_text;
+        generator_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (generator_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -15218,8 +14767,8 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             generator_heap->type_description_1 = "ccoooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (generator_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (generator_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -15229,12 +14778,12 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     goto loop_end_1;
     branch_no_2:;
     {
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         if (generator_heap->var_parser == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[137]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[136]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -15244,11 +14793,11 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_3 = generator_heap->var_parser;
+        tmp_called_instance_2 = generator_heap->var_parser;
         CHECK_OBJECT(generator_heap->var_text);
-        tmp_args_element_name_2 = generator_heap->var_text;
+        tmp_args_element_value_2 = generator_heap->var_text;
         generator->m_frame->m_frame.f_lineno = 449;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[152], tmp_args_element_name_2);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[151], tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15274,7 +14823,7 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
     goto loop_start_1;
     loop_end_1:;
     {
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_yieldfrom_result_1;
         if (generator_heap->var_records == NULL) {
 
@@ -15288,10 +14837,10 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = generator_heap->var_records;
-        Py_INCREF(tmp_expression_name_6);
+        tmp_expression_value_7 = generator_heap->var_records;
+        Py_INCREF(tmp_expression_value_7);
         generator->m_yield_return_index = 2;
-        generator->m_yieldfrom = tmp_expression_name_6;
+        generator->m_yieldfrom = tmp_expression_value_7;
         return NULL;
 
         yield_return_2:
@@ -15309,7 +14858,8 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
         Py_DECREF(tmp_yieldfrom_result_1);
     }
     {
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_2;
         if (generator_heap->var_records == NULL) {
 
@@ -15323,9 +14873,21 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_4 = generator_heap->var_records;
+        tmp_expression_value_8 = generator_heap->var_records;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[159]);
+        if (tmp_called_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
+
+
+            generator_heap->exception_lineno = 453;
+            generator_heap->type_description_1 = "ccoooooo";
+            goto frame_exception_exit_1;
+        }
         generator->m_frame->m_frame.f_lineno = 453;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[159]);
+        tmp_call_result_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15339,11 +14901,11 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_3;
         if (generator_heap->var_parser == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[137]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[136]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -15353,9 +14915,9 @@ static PyObject *Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_c
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_5 = generator_heap->var_parser;
+        tmp_called_instance_3 = generator_heap->var_parser;
         generator->m_frame->m_frame.f_lineno = 454;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[160]);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[160]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15494,7 +15056,7 @@ static PyObject *MAKE_GENERATOR_Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$geno
     return Nuitka_Generator_New(
         Bio$SeqIO$SeqXmlIO$$$function__21_iterate$$$genobj__1_iterate_context,
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[153],
+        mod_consts[152],
 #if PYTHON_VERSION >= 0x350
         mod_consts[161],
 #endif
@@ -15566,11 +15128,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[0]);
@@ -15583,10 +15145,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
 
-        tmp_type_arg_name_1 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_type_arg_value_1 = Nuitka_Cell_GET(self->m_closure[0]);
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_called_instance_1 = BUILTIN_SUPER0(tmp_type_arg_name_1, tmp_object_arg_name_1);
+        tmp_object_arg_value_1 = par_self;
+        tmp_called_instance_1 = BUILTIN_SUPER0(tmp_type_arg_value_1, tmp_object_arg_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15598,11 +15160,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_target);
-        tmp_args_element_name_1 = par_target;
-        tmp_args_element_name_2 = mod_consts[162];
+        tmp_args_element_value_1 = par_target;
+        tmp_args_element_value_2 = mod_consts[162];
         frame_9915476ba6bca01a551e46e76d6aefea->m_frame.f_lineno = 481;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
                 mod_consts[1],
@@ -15625,10 +15187,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
     }
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[147]);
+        tmp_expression_value_1 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[146]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15644,17 +15206,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
     }
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_assattr_target_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[163]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[163]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[163]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[163]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15665,12 +15227,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_handle);
-        tmp_args_element_name_3 = var_handle;
-        tmp_args_element_name_4 = mod_consts[164];
+        tmp_args_element_value_3 = var_handle;
+        tmp_args_element_value_4 = mod_consts[164];
         frame_9915476ba6bca01a551e46e76d6aefea->m_frame.f_lineno = 483;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_assattr_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_assattr_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_assattr_value_1 == NULL) {
@@ -15700,11 +15262,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
     }
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[165]);
+        tmp_expression_value_2 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[165]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15775,7 +15337,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__(struct Nuitka_F
         tmp_assattr_value_4 = par_species;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[59], tmp_assattr_value_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[58], tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -16004,13 +15566,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[2]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[2]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16020,9 +15582,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -16031,10 +15593,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     }
     branch_yes_1:;
     {
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[2]);
+        tmp_expression_value_2 = par_self;
+        tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[2]);
         if (tmp_dictset_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16048,20 +15610,22 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
         CHECK_OBJECT(var_attrs);
         tmp_dictset_dict = var_attrs;
         tmp_dictset_key = mod_consts[2];
+        assert(PyDict_CheckExact(tmp_dictset_dict));
         tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
+
         Py_DECREF(tmp_dictset_value);
         assert(!(tmp_res != 0));
     }
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[167]);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_cmp_expr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[167]);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16071,9 +15635,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
-        Py_DECREF(tmp_compexpr_left_2);
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -16083,12 +15647,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     branch_yes_2:;
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_ass_subvalue_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[167]);
+        tmp_expression_value_4 = par_self;
+        tmp_ass_subvalue_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[167]);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16129,13 +15693,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     branch_no_2:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[59]);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_expression_value_5 = par_self;
+        tmp_cmp_expr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[58]);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16145,9 +15709,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
-        Py_DECREF(tmp_compexpr_left_3);
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -16156,14 +15720,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     }
     branch_yes_3:;
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[59]);
+        tmp_expression_value_6 = par_self;
+        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[58]);
         if (tmp_isinstance_inst_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16175,7 +15739,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             goto frame_exception_exit_1;
         }
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_inst_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -16187,8 +15751,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16199,8 +15763,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -16223,12 +15787,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     branch_no_4:;
     {
         PyObject *tmp_ass_subvalue_2;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_ass_subvalue_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[59]);
+        tmp_expression_value_7 = par_self;
+        tmp_ass_subvalue_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[58]);
         if (tmp_ass_subvalue_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16269,13 +15833,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     branch_no_3:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_8 = par_self;
-        tmp_compexpr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[168]);
-        if (tmp_compexpr_left_4 == NULL) {
+        tmp_expression_value_8 = par_self;
+        tmp_cmp_expr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[168]);
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16285,9 +15849,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_4 != tmp_compexpr_right_4) ? true : false;
-        Py_DECREF(tmp_compexpr_left_4);
+        tmp_cmp_expr_right_4 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_4 != tmp_cmp_expr_right_4) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_4);
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -16296,14 +15860,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     }
     branch_yes_5:;
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_2;
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_2;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_9 = par_self;
-        tmp_isinstance_inst_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[168]);
+        tmp_expression_value_9 = par_self;
+        tmp_isinstance_inst_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[168]);
         if (tmp_isinstance_inst_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16315,7 +15879,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             goto frame_exception_exit_1;
         }
         tmp_isinstance_cls_2 = mod_consts[173];
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         Py_DECREF(tmp_isinstance_inst_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -16327,8 +15891,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_2 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_operand_value_2 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16339,8 +15903,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -16363,12 +15927,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     branch_no_6:;
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_10 = par_self;
-        tmp_ass_subvalue_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[168]);
+        tmp_expression_value_10 = par_self;
+        tmp_ass_subvalue_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[168]);
         if (tmp_ass_subvalue_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16408,18 +15972,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
     }
     branch_no_5:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_12 = par_self;
-        tmp_expression_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[165]);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_12 = par_self;
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[165]);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16429,9 +15993,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_11);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_11);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16441,25 +16005,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[34];
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_1 = mod_consts[33];
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 511;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         if (var_attrs == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[171]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -16470,14 +16034,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = var_attrs;
+        tmp_args_element_value_3 = var_attrs;
         frame_97e9856e1ab5ab1f08327b5d5cfd749c->m_frame.f_lineno = 511;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 511;
             type_description_1 = "oo";
@@ -16485,12 +16049,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header(struct Nuit
         }
         frame_97e9856e1ab5ab1f08327b5d5cfd749c->m_frame.f_lineno = 511;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16671,17 +16235,15 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_tmp_or_right_value_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[47]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_1 = par_record;
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[46]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16691,8 +16253,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16705,16 +16267,6 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         }
         tmp_or_left_value_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         tmp_or_left_truth_1 = tmp_or_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
-        if (tmp_or_left_truth_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 515;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
         if (tmp_or_left_truth_1 == 1) {
             goto or_left_1;
         } else {
@@ -16722,9 +16274,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         }
         or_right_1:;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_2 = par_record;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[47]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_2 = par_record;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[46]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16734,10 +16286,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[178];
-        tmp_tmp_or_right_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_or_right_value_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[178];
+        tmp_or_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_or_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16747,19 +16299,6 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_or_right_value_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_or_right_value_1_object_1);
-
-            exception_lineno = 515;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_or_right_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_or_right_value_1_object_1);
         tmp_condition_result_1 = tmp_or_right_value_1;
         goto or_end_1;
         or_left_1:;
@@ -16770,6 +16309,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
@@ -16787,14 +16327,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     }
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_2;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_2;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_3 = par_record;
-        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[47]);
+        tmp_expression_value_3 = par_record;
+        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[46]);
         if (tmp_isinstance_inst_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16806,7 +16346,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             goto frame_exception_exit_1;
         }
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_inst_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -16818,8 +16358,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_2 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_operand_value_2 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16830,8 +16370,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -16856,11 +16396,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         PyObject *tmp_assign_source_1;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_4;
-        tmp_dict_key_1 = mod_consts[47];
+        PyObject *tmp_expression_value_4;
+        tmp_dict_key_1 = mod_consts[46];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_4 = par_record;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[47]);
+        tmp_expression_value_4 = par_record;
+        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[46]);
         if (tmp_dict_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16883,20 +16423,20 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_1;
-        tmp_compexpr_left_2 = mod_consts[2];
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_subscript_value_1;
+        tmp_cmp_expr_left_2 = mod_consts[2];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_5 = par_record;
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[43]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_expression_value_5 = par_record;
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[42]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16906,8 +16446,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_2, tmp_compexpr_left_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_2, tmp_cmp_expr_left_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16927,9 +16467,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         }
         and_right_1:;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[2]);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_cmp_expr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[2]);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16940,34 +16480,34 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_record);
-        tmp_expression_name_8 = par_record;
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[43]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_8 = par_record;
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[42]);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_3);
+            Py_DECREF(tmp_cmp_expr_left_3);
 
             exception_lineno = 525;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[2];
-        tmp_compexpr_right_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_subscript_value_1 = mod_consts[2];
+        tmp_cmp_expr_right_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_3);
+            Py_DECREF(tmp_cmp_expr_left_3);
 
             exception_lineno = 525;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_and_right_value_1 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_and_right_value_1 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_and_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -16992,17 +16532,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     }
     branch_yes_3:;
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_3;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_3;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_10 = par_record;
-        tmp_expression_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[43]);
-        if (tmp_expression_name_9 == NULL) {
+        tmp_expression_value_10 = par_record;
+        tmp_expression_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[42]);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17012,9 +16552,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[2];
-        tmp_isinstance_inst_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_9);
+        tmp_subscript_value_2 = mod_consts[2];
+        tmp_isinstance_inst_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_9, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_9);
         if (tmp_isinstance_inst_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17026,7 +16566,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             goto frame_exception_exit_1;
         }
         tmp_isinstance_cls_2 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         Py_DECREF(tmp_isinstance_inst_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -17038,8 +16578,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_3 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_3);
+        tmp_operand_value_3 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17050,8 +16590,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -17073,13 +16613,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     }
     branch_no_4:;
     {
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_3;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_12 = par_record;
-        tmp_expression_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[43]);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_12 = par_record;
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[42]);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17089,9 +16629,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_3 = mod_consts[2];
-        tmp_dictset_value = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_11);
+        tmp_subscript_value_3 = mod_consts[2];
+        tmp_dictset_value = LOOKUP_SUBSCRIPT(tmp_expression_value_11, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_11);
         if (tmp_dictset_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17105,23 +16645,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         CHECK_OBJECT(var_attrb);
         tmp_dictset_dict = var_attrb;
         tmp_dictset_key = mod_consts[2];
+        assert(PyDict_CheckExact(tmp_dictset_dict));
         tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
+
         Py_DECREF(tmp_dictset_value);
         assert(!(tmp_res != 0));
     }
     branch_no_3:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_expression_value_14;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17131,9 +16673,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_14 = par_self;
-        tmp_expression_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[165]);
-        if (tmp_expression_name_13 == NULL) {
+        tmp_expression_value_14 = par_self;
+        tmp_expression_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[165]);
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17143,9 +16685,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_13);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_13);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17155,25 +16697,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[182];
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_1 = mod_consts[182];
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 531;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
         if (var_attrb == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -17184,14 +16726,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = var_attrb;
+        tmp_args_element_value_3 = var_attrb;
         frame_5a73473c38458f34b099508bc9d3232a->m_frame.f_lineno = 531;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 531;
             type_description_1 = "ooo";
@@ -17199,12 +16741,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
         }
         frame_5a73473c38458f34b099508bc9d3232a->m_frame.f_lineno = 531;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17220,10 +16762,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17235,9 +16777,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
 
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_record);
-        tmp_args_element_name_4 = par_record;
+        tmp_args_element_value_4 = par_record;
         frame_5a73473c38458f34b099508bc9d3232a->m_frame.f_lineno = 532;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[184], tmp_args_element_name_4);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[184], tmp_args_element_value_4);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17253,10 +16795,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_5;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17268,9 +16810,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
 
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_record);
-        tmp_args_element_name_5 = par_record;
+        tmp_args_element_value_5 = par_record;
         frame_5a73473c38458f34b099508bc9d3232a->m_frame.f_lineno = 533;
-        tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[185], tmp_args_element_name_5);
+        tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[185], tmp_args_element_value_5);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17286,10 +16828,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     {
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_args_element_value_6;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17301,9 +16843,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
 
         tmp_called_instance_3 = par_self;
         CHECK_OBJECT(par_record);
-        tmp_args_element_name_6 = par_record;
+        tmp_args_element_value_6 = par_record;
         frame_5a73473c38458f34b099508bc9d3232a->m_frame.f_lineno = 534;
-        tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[186], tmp_args_element_name_6);
+        tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[186], tmp_args_element_value_6);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17319,10 +16861,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     {
         PyObject *tmp_called_instance_4;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_args_element_value_7;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17334,9 +16876,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
 
         tmp_called_instance_4 = par_self;
         CHECK_OBJECT(par_record);
-        tmp_args_element_name_7 = par_record;
+        tmp_args_element_value_7 = par_record;
         frame_5a73473c38458f34b099508bc9d3232a->m_frame.f_lineno = 535;
-        tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[187], tmp_args_element_name_7);
+        tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[187], tmp_args_element_value_7);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17352,10 +16894,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     {
         PyObject *tmp_called_instance_5;
         PyObject *tmp_call_result_6;
-        PyObject *tmp_args_element_name_8;
+        PyObject *tmp_args_element_value_8;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17367,9 +16909,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
 
         tmp_called_instance_5 = par_self;
         CHECK_OBJECT(par_record);
-        tmp_args_element_name_8 = par_record;
+        tmp_args_element_value_8 = par_record;
         frame_5a73473c38458f34b099508bc9d3232a->m_frame.f_lineno = 536;
-        tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[188], tmp_args_element_name_8);
+        tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[188], tmp_args_element_value_8);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17384,11 +16926,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
     }
     {
         PyObject *tmp_called_instance_6;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_call_result_7;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17398,8 +16940,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_15 = par_self;
-        tmp_called_instance_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[165]);
+        tmp_expression_value_15 = par_self;
+        tmp_called_instance_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[165]);
         if (tmp_called_instance_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17589,11 +17131,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__25_write_footer(struct Nuit
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[165]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[165]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17626,11 +17168,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__25_write_footer(struct Nuit
     }
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[165]);
+        tmp_expression_value_2 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[165]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17798,14 +17340,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        tmp_compexpr_left_1 = mod_consts[46];
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
+        tmp_cmp_expr_left_1 = mod_consts[45];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[43]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_1 = par_record;
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[42]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17815,8 +17357,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17837,13 +17379,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_3 = par_record;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[43]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_record;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[42]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17853,9 +17395,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[46];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_1 = mod_consts[45];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17881,7 +17423,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
         CHECK_OBJECT(var_local_ncbi_taxid);
         tmp_isinstance_inst_1 = var_local_ncbi_taxid;
         tmp_isinstance_cls_1 = (PyObject *)&PyList_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17902,14 +17444,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     branch_yes_2:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_3_object_1;
         CHECK_OBJECT(var_local_ncbi_taxid);
         tmp_len_arg_1 = var_local_ncbi_taxid;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17919,12 +17460,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[156];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_3_object_1 == NULL));
-        tmp_condition_result_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[156];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -17934,12 +17472,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(var_local_ncbi_taxid);
-        tmp_expression_name_4 = var_local_ncbi_taxid;
-        tmp_subscript_name_2 = mod_consts[195];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_2, 0);
+        tmp_expression_value_4 = var_local_ncbi_taxid;
+        tmp_subscript_value_2 = mod_consts[195];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_2, 0);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17962,14 +17500,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_4_object_1;
         CHECK_OBJECT(var_local_ncbi_taxid);
         tmp_len_arg_2 = var_local_ncbi_taxid;
-        tmp_compexpr_left_3 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17979,12 +17516,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = mod_consts[195];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        assert(!(tmp_tmp_condition_result_4_object_1 == NULL));
-        tmp_condition_result_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
+        tmp_cmp_expr_right_3 = mod_consts[195];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -18007,14 +17541,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     goto branch_end_4;
     branch_no_4:;
     {
-        PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[196];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_exception_made_1;
+        tmp_left_value_1 = mod_consts[196];
         CHECK_OBJECT(var_local_ncbi_taxid);
-        tmp_right_name_1 = var_local_ncbi_taxid;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_local_ncbi_taxid;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18026,14 +17560,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             goto frame_exception_exit_1;
         }
         frame_153286ffcef6876a7cfb22dcf6638641->m_frame.f_lineno = 556;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
+        tmp_exception_made_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
-        assert(!(tmp_raise_type_1 == NULL));
-        exception_type = tmp_raise_type_1;
-        exception_lineno = 556;
-        RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
-        type_description_1 = "ooooo";
-        goto frame_exception_exit_1;
+        assert(!(tmp_exception_made_1 == NULL));
+        Py_DECREF(tmp_exception_made_1);
     }
     branch_end_4:;
     branch_end_3:;
@@ -18044,15 +17574,15 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_5;
         int tmp_truth_name_1;
-        tmp_compexpr_left_4 = mod_consts[44];
+        tmp_cmp_expr_left_4 = mod_consts[43];
         CHECK_OBJECT(par_record);
-        tmp_expression_name_5 = par_record;
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[43]);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_expression_value_5 = par_record;
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[42]);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18062,8 +17592,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18120,13 +17650,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_3;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_7 = par_record;
-        tmp_expression_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[43]);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_7 = par_record;
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[42]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18136,9 +17666,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_3 = mod_consts[44];
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_6);
+        tmp_subscript_value_3 = mod_consts[43];
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_6);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18153,14 +17683,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
         var_local_org = tmp_assign_source_5;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
         CHECK_OBJECT(var_local_org);
         tmp_isinstance_inst_2 = var_local_org;
         tmp_isinstance_cls_2 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18171,8 +17701,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18183,8 +17713,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -18192,13 +17722,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     }
     branch_yes_6:;
     {
-        PyObject *tmp_raise_type_2;
+        PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_2;
         tmp_make_exception_arg_2 = mod_consts[198];
         frame_153286ffcef6876a7cfb22dcf6638641->m_frame.f_lineno = 564;
-        tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_2);
-        assert(!(tmp_raise_type_2 == NULL));
-        exception_type = tmp_raise_type_2;
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_2);
+        assert(!(tmp_raise_type_1 == NULL));
+        exception_type = tmp_raise_type_1;
         exception_lineno = 564;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
         type_description_1 = "ooooo";
@@ -18206,8 +17736,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     }
     branch_no_6:;
     {
-        nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_operand_name_2;
+        bool tmp_condition_result_7;
+        PyObject *tmp_operand_value_2;
         PyObject *tmp_isinstance_inst_3;
         PyObject *tmp_isinstance_cls_3;
         if (var_local_ncbi_taxid == NULL) {
@@ -18224,7 +17754,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
 
         tmp_isinstance_inst_3 = var_local_ncbi_taxid;
         tmp_isinstance_cls_3 = mod_consts[173];
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18235,8 +17765,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_2 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_operand_value_2 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18247,8 +17777,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_7 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_7 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_7 != false) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
@@ -18256,13 +17786,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     }
     branch_yes_7:;
     {
-        PyObject *tmp_raise_type_3;
+        PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_3;
         tmp_make_exception_arg_3 = mod_consts[174];
         frame_153286ffcef6876a7cfb22dcf6638641->m_frame.f_lineno = 567;
-        tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_3);
-        assert(!(tmp_raise_type_3 == NULL));
-        exception_type = tmp_raise_type_3;
+        tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_3);
+        assert(!(tmp_raise_type_2 == NULL));
+        exception_type = tmp_raise_type_2;
         exception_lineno = 567;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
         type_description_1 = "ooooo";
@@ -18274,18 +17804,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(var_local_org);
-        tmp_compexpr_left_5 = var_local_org;
+        tmp_cmp_expr_left_5 = var_local_org;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_8 = par_self;
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[59]);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_expression_value_8 = par_self;
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[58]);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18295,8 +17825,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_left_value_1 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        tmp_or_left_value_1 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (tmp_or_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -18337,11 +17867,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_6 = var_local_ncbi_taxid;
+        tmp_cmp_expr_left_6 = var_local_ncbi_taxid;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_9 = par_self;
-        tmp_compexpr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[168]);
-        if (tmp_compexpr_right_6 == NULL) {
+        tmp_expression_value_9 = par_self;
+        tmp_cmp_expr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[168]);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18351,8 +17881,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_right_value_1 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        Py_DECREF(tmp_compexpr_right_6);
+        tmp_or_right_value_1 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
         if (tmp_or_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -18380,7 +17910,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
         PyObject *tmp_assign_source_6;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[71];
+        tmp_dict_key_1 = mod_consts[70];
         CHECK_OBJECT(var_local_org);
         tmp_dict_value_1 = var_local_org;
         tmp_assign_source_6 = _PyDict_NewPresized( 2 );
@@ -18428,18 +17958,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
         var_attr = tmp_assign_source_6;
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_11 = par_self;
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[165]);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_value_11 = par_self;
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[165]);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18449,9 +17979,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_10);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18461,32 +17991,32 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[59];
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_1 = mod_consts[58];
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 573;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_attr);
-        tmp_args_element_name_3 = var_attr;
+        tmp_args_element_value_3 = var_attr;
         frame_153286ffcef6876a7cfb22dcf6638641->m_frame.f_lineno = 573;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 573;
             type_description_1 = "ooooo";
@@ -18494,12 +18024,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
         }
         frame_153286ffcef6876a7cfb22dcf6638641->m_frame.f_lineno = 573;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18514,11 +18044,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(struct Nu
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_call_result_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_12 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[165]);
+        tmp_expression_value_12 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[165]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18728,12 +18258,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[61]);
+        tmp_expression_value_1 = par_record;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[60]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18765,14 +18295,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     }
     branch_yes_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_2 = par_record;
-        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[61]);
+        tmp_expression_value_2 = par_record;
+        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[60]);
         if (tmp_isinstance_inst_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18784,7 +18314,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             goto frame_exception_exit_1;
         }
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_inst_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -18796,8 +18326,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18808,8 +18338,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -18832,10 +18362,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     branch_no_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_3 = par_record;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[61]);
+        tmp_expression_value_3 = par_record;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[60]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18851,15 +18381,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_description);
-        tmp_compexpr_left_1 = var_description;
-        tmp_compexpr_right_1 = mod_consts[202];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_description;
+        tmp_cmp_expr_right_1 = mod_consts[202];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18869,29 +18397,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 584;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[85];
+        tmp_assign_source_2 = mod_consts[84];
         {
             PyObject *old = var_description;
             assert(old != NULL);
@@ -18904,14 +18420,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_tmp_condition_result_4_object_1;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_4 = par_record;
-        tmp_len_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[61]);
+        tmp_expression_value_4 = par_record;
+        tmp_len_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[60]);
         if (tmp_len_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18922,9 +18437,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
         Py_DECREF(tmp_len_arg_1);
-        if (tmp_compexpr_left_2 == NULL) {
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18934,12 +18449,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[195];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_4_object_1 == NULL));
-        tmp_condition_result_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[195];
+        tmp_condition_result_4 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -18948,18 +18460,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_arg_element_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[165]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[165]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18969,9 +18481,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18981,18 +18493,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[61];
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_1 = mod_consts[60];
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 588;
             type_description_1 = "ooo";
@@ -19000,13 +18512,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
         }
         tmp_call_arg_element_1 = PyDict_New();
         frame_e1cabb669a0dc9770e5fe85deee973a4->m_frame.f_lineno = 588;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_call_arg_element_1);
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_call_arg_element_1);
         Py_DECREF(tmp_call_arg_element_1);
-        if (tmp_args_element_name_2 == NULL) {
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 588;
             type_description_1 = "ooo";
@@ -19014,12 +18526,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
         }
         frame_e1cabb669a0dc9770e5fe85deee973a4->m_frame.f_lineno = 588;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19034,12 +18546,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[165]);
+        tmp_expression_value_7 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[165]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19051,9 +18563,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_description);
-        tmp_args_element_name_3 = var_description;
+        tmp_args_element_value_3 = var_description;
         frame_e1cabb669a0dc9770e5fe85deee973a4->m_frame.f_lineno = 589;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[203], tmp_args_element_name_3);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[203], tmp_args_element_value_3);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19069,11 +18581,11 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description(struc
     }
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_8 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[165]);
+        tmp_expression_value_8 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[165]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19277,10 +18789,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[106]);
+        tmp_expression_value_1 = par_record;
+        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[105]);
         if (tmp_isinstance_inst_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19307,7 +18819,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_inst_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -19343,12 +18855,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_no_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_bytes_arg_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_unicode_arg_1;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_2 = par_record;
-        tmp_bytes_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[106]);
-        if (tmp_bytes_arg_1 == NULL) {
+        tmp_expression_value_2 = par_record;
+        tmp_unicode_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[105]);
+        if (tmp_unicode_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19358,8 +18870,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_1 = BUILTIN_BYTES1(tmp_bytes_arg_1);
-        Py_DECREF(tmp_bytes_arg_1);
+        tmp_assign_source_1 = PyObject_Unicode(tmp_unicode_arg_1);
+        Py_DECREF(tmp_unicode_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19375,14 +18887,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_2_object_1;
         CHECK_OBJECT(var_seq);
         tmp_len_arg_1 = var_seq;
-        tmp_compexpr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19392,12 +18903,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[195];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_LE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        assert(!(tmp_tmp_condition_result_2_object_1 == NULL));
-        tmp_condition_result_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
+        tmp_cmp_expr_right_1 = mod_consts[195];
+        tmp_condition_result_2 = RICH_COMPARE_LE_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -19421,12 +18929,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_no_2:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_3 = par_record;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[43]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_expression_value_4 = par_record;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[42]);
+        if (tmp_expression_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 606;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[209]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19437,13 +18958,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             goto frame_exception_exit_1;
         }
         frame_3db7160d46f3c595310b36611a68c980->m_frame.f_lineno = 606;
-        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[209],
-            PyTuple_GET_ITEM(mod_consts[210], 0)
-        );
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[210]);
 
-        Py_DECREF(tmp_called_instance_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19459,12 +18976,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_molecule_type);
-        tmp_compexpr_left_2 = var_molecule_type;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = var_molecule_type;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -19489,12 +19006,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        tmp_compexpr_left_3 = mod_consts[98];
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        tmp_cmp_expr_left_3 = mod_consts[97];
         CHECK_OBJECT(var_molecule_type);
-        tmp_compexpr_right_3 = var_molecule_type;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_3, tmp_compexpr_left_3);
+        tmp_cmp_expr_right_3 = var_molecule_type;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_3, tmp_cmp_expr_left_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19515,7 +19032,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_3;
-        tmp_assign_source_3 = mod_consts[97];
+        tmp_assign_source_3 = mod_consts[96];
         assert(var_seqElem == NULL);
         Py_INCREF(tmp_assign_source_3);
         var_seqElem = tmp_assign_source_3;
@@ -19524,12 +19041,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        tmp_compexpr_left_4 = mod_consts[101];
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        tmp_cmp_expr_left_4 = mod_consts[100];
         CHECK_OBJECT(var_molecule_type);
-        tmp_compexpr_right_4 = var_molecule_type;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
+        tmp_cmp_expr_right_4 = var_molecule_type;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19550,7 +19067,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = mod_consts[100];
+        tmp_assign_source_4 = mod_consts[99];
         assert(var_seqElem == NULL);
         Py_INCREF(tmp_assign_source_4);
         var_seqElem = tmp_assign_source_4;
@@ -19559,12 +19076,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_no_5:;
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        tmp_compexpr_left_5 = mod_consts[103];
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        tmp_cmp_expr_left_5 = mod_consts[102];
         CHECK_OBJECT(var_molecule_type);
-        tmp_compexpr_right_5 = var_molecule_type;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_5, tmp_compexpr_left_5);
+        tmp_cmp_expr_right_5 = var_molecule_type;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_5, tmp_cmp_expr_left_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19585,7 +19102,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_5;
-        tmp_assign_source_5 = mod_consts[102];
+        tmp_assign_source_5 = mod_consts[101];
         assert(var_seqElem == NULL);
         Py_INCREF(tmp_assign_source_5);
         var_seqElem = tmp_assign_source_5;
@@ -19595,12 +19112,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[212];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[212];
         CHECK_OBJECT(var_molecule_type);
-        tmp_right_name_1 = var_molecule_type;
-        tmp_make_exception_arg_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = var_molecule_type;
+        tmp_make_exception_arg_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19626,18 +19143,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
     branch_end_4:;
     branch_end_3:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_call_arg_element_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[165]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[165]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19647,9 +19164,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19660,7 +19177,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             goto frame_exception_exit_1;
         }
         if (var_seqElem == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[213]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -19671,18 +19188,18 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = var_seqElem;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_1 = var_seqElem;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 618;
             type_description_1 = "ooooo";
@@ -19690,13 +19207,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
         }
         tmp_call_arg_element_1 = PyDict_New();
         frame_3db7160d46f3c595310b36611a68c980->m_frame.f_lineno = 618;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_call_arg_element_1);
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_call_arg_element_1);
         Py_DECREF(tmp_call_arg_element_1);
-        if (tmp_args_element_name_2 == NULL) {
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 618;
             type_description_1 = "ooooo";
@@ -19704,12 +19221,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
         }
         frame_3db7160d46f3c595310b36611a68c980->m_frame.f_lineno = 618;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19723,14 +19240,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[165]);
-        if (tmp_called_instance_2 == NULL) {
+        tmp_expression_value_7 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[165]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19741,10 +19258,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_seq);
-        tmp_args_element_name_3 = var_seq;
+        tmp_args_element_value_3 = var_seq;
         frame_3db7160d46f3c595310b36611a68c980->m_frame.f_lineno = 619;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[203], tmp_args_element_name_3);
-        Py_DECREF(tmp_called_instance_2);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[203], tmp_args_element_value_3);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19758,15 +19275,15 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_8 = par_self;
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[165]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_9 = par_self;
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[165]);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19776,9 +19293,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[189]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[189]);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19789,7 +19306,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             goto frame_exception_exit_1;
         }
         if (var_seqElem == NULL) {
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[213]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -19800,10 +19317,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq(struct Nuitka
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_4 = var_seqElem;
+        tmp_args_element_value_4 = var_seqElem;
         frame_3db7160d46f3c595310b36611a68c980->m_frame.f_lineno = 620;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_3);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20016,13 +19533,13 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[114]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_record;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[113]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20032,9 +19549,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -20045,10 +19562,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_2 = par_record;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[114]);
+        tmp_expression_value_2 = par_record;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[113]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20115,14 +19632,14 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
 
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
         CHECK_OBJECT(var_dbxref);
         tmp_isinstance_inst_1 = var_dbxref;
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -20133,8 +19650,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -20145,8 +19662,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -20169,21 +19686,28 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(var_dbxref);
-        tmp_called_instance_1 = var_dbxref;
+        tmp_expression_value_3 = var_dbxref;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[216]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 630;
+            type_description_1 = "oooooo";
+            goto try_except_handler_2;
+        }
         frame_243186796217aefb88effe89ed2e902f->m_frame.f_lineno = 630;
-        tmp_compexpr_left_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[216],
-            PyTuple_GET_ITEM(mod_consts[217], 0)
-        );
+        tmp_cmp_expr_left_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[217]);
 
-        if (tmp_compexpr_left_2 == NULL) {
+        Py_DECREF(tmp_called_value_1);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20193,10 +19717,10 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_2 = mod_consts[156];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_right_2 = mod_consts[156];
+        tmp_condition_result_3 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20206,24 +19730,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 630;
-            type_description_1 = "oooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -20244,16 +19756,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(var_dbxref);
-        tmp_called_instance_2 = var_dbxref;
-        frame_243186796217aefb88effe89ed2e902f->m_frame.f_lineno = 635;
-        tmp_iter_arg_2 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_2,
-            mod_consts[219],
-            &PyTuple_GET_ITEM(mod_consts[220], 0)
-        );
+        tmp_expression_value_4 = var_dbxref;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[219]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 635;
+            type_description_1 = "oooooo";
+            goto try_except_handler_3;
+        }
+        frame_243186796217aefb88effe89ed2e902f->m_frame.f_lineno = 635;
+        tmp_iter_arg_2 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_2, mod_consts[220]);
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20264,7 +19785,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_3;
         }
-        tmp_assign_source_4 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_4 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         Py_DECREF(tmp_iter_arg_2);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20469,7 +19990,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
         tmp_assign_source_9 = _PyDict_NewPresized( 2 );
         tmp_res = PyDict_SetItem(tmp_assign_source_9, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[47];
+        tmp_dict_key_1 = mod_consts[46];
         CHECK_OBJECT(var_dbid);
         tmp_dict_value_1 = var_dbid;
         tmp_res = PyDict_SetItem(tmp_assign_source_9, tmp_dict_key_1, tmp_dict_value_1);
@@ -20482,17 +20003,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_3;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20502,9 +20023,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[165]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[165]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20514,9 +20035,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20526,32 +20047,32 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_1 = mod_consts[65];
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_1 = mod_consts[64];
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 638;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_attr);
-        tmp_args_element_name_3 = var_attr;
+        tmp_args_element_value_3 = var_attr;
         frame_243186796217aefb88effe89ed2e902f->m_frame.f_lineno = 638;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 638;
             type_description_1 = "oooooo";
@@ -20559,12 +20080,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
         }
         frame_243186796217aefb88effe89ed2e902f->m_frame.f_lineno = 638;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20578,12 +20099,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_call_result_2;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20593,9 +20114,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[165]);
-        if (tmp_called_instance_3 == NULL) {
+        tmp_expression_value_7 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[165]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20607,12 +20128,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(struct Nu
         }
         frame_243186796217aefb88effe89ed2e902f->m_frame.f_lineno = 639;
         tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_3,
+            tmp_called_instance_1,
             mod_consts[189],
             PyTuple_GET_ITEM(mod_consts[221], 0)
         );
 
-        Py_DECREF(tmp_called_instance_3);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20879,12 +20400,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_record);
-        tmp_expression_name_1 = par_record;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[43]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_expression_value_2 = par_record;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[42]);
+        if (tmp_expression_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 643;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[16]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20895,8 +20429,8 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
             goto frame_exception_exit_1;
         }
         frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 643;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[16]);
-        Py_DECREF(tmp_called_instance_1);
+        tmp_iter_arg_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20956,7 +20490,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         PyObject *tmp_iter_arg_2;
         CHECK_OBJECT(tmp_for_loop_1__iter_value);
         tmp_iter_arg_2 = tmp_for_loop_1__iter_value;
-        tmp_assign_source_3 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_3 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21152,12 +20686,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_key);
-        tmp_compexpr_left_1 = var_key;
-        tmp_compexpr_right_1 = mod_consts[223];
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
+        tmp_cmp_expr_left_1 = var_key;
+        tmp_cmp_expr_right_1 = mod_consts[223];
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -21178,12 +20712,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
     branch_yes_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_value);
-        tmp_compexpr_left_2 = var_value;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = var_value;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -21195,7 +20729,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         PyObject *tmp_assign_source_8;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[71];
+        tmp_dict_key_1 = mod_consts[70];
         CHECK_OBJECT(var_key);
         tmp_dict_value_1 = var_key;
         tmp_assign_source_8 = _PyDict_NewPresized( 1 );
@@ -21209,17 +20743,17 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_3;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21229,9 +20763,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[165]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[165]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21241,9 +20775,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21253,32 +20787,32 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_1 = mod_consts[67];
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_1 = mod_consts[66];
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 650;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_attr);
-        tmp_args_element_name_3 = var_attr;
+        tmp_args_element_value_3 = var_attr;
         frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 650;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 650;
             type_description_1 = "oooooo";
@@ -21286,12 +20820,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         }
         frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 650;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21305,12 +20839,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_2;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21320,9 +20854,9 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[165]);
-        if (tmp_called_instance_2 == NULL) {
+        tmp_expression_value_5 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[165]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21334,12 +20868,12 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         }
         frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 651;
         tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
+            tmp_called_instance_1,
             mod_consts[189],
             PyTuple_GET_ITEM(mod_consts[224], 0)
         );
 
-        Py_DECREF(tmp_called_instance_2);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21361,7 +20895,7 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         CHECK_OBJECT(var_value);
         tmp_isinstance_inst_1 = var_value;
         tmp_isinstance_cls_1 = (PyObject *)&PyList_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -21444,14 +20978,25 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
 
     }
     {
-        bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        CHECK_OBJECT(var_v);
-        tmp_compexpr_left_3 = var_v;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_4 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
-        if (tmp_condition_result_4 != false) {
+        nuitka_bool tmp_condition_result_4;
+        PyObject *tmp_isinstance_inst_2;
+        PyObject *tmp_isinstance_cls_2;
+        CHECK_OBJECT(var_value);
+        tmp_isinstance_inst_2 = var_value;
+        tmp_isinstance_cls_2 = mod_consts[225];
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        if (tmp_res == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 656;
+            type_description_1 = "oooooo";
+            goto try_except_handler_5;
+        }
+        tmp_condition_result_4 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -21462,21 +21007,15 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         PyObject *tmp_assign_source_12;
         PyObject *tmp_dict_key_2;
         PyObject *tmp_dict_value_2;
-        tmp_dict_key_2 = mod_consts[71];
-        if (var_key == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[225]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 657;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-
+        tmp_dict_key_2 = mod_consts[70];
+        CHECK_OBJECT(var_key);
         tmp_dict_value_2 = var_key;
-        tmp_assign_source_12 = _PyDict_NewPresized( 1 );
+        tmp_assign_source_12 = _PyDict_NewPresized( 2 );
+        tmp_res = PyDict_SetItem(tmp_assign_source_12, tmp_dict_key_2, tmp_dict_value_2);
+        assert(!(tmp_res != 0));
+        tmp_dict_key_2 = mod_consts[121];
+        CHECK_OBJECT(var_v);
+        tmp_dict_value_2 = var_v;
         tmp_res = PyDict_SetItem(tmp_assign_source_12, tmp_dict_key_2, tmp_dict_value_2);
         assert(!(tmp_res != 0));
         {
@@ -21486,208 +21025,151 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
         }
 
     }
-    goto branch_end_4;
-    branch_no_4:;
     {
-        PyObject *tmp_assign_source_13;
-        PyObject *tmp_dict_key_3;
-        PyObject *tmp_dict_value_3;
-        tmp_dict_key_3 = mod_consts[71];
-        if (var_key == NULL) {
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_call_result_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_6;
+        if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[225]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 658;
+            type_description_1 = "oooooo";
+            goto try_except_handler_5;
+        }
+
+        tmp_expression_value_7 = par_self;
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[165]);
+        if (tmp_expression_value_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 658;
+            type_description_1 = "oooooo";
+            goto try_except_handler_5;
+        }
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_called_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 658;
+            type_description_1 = "oooooo";
+            goto try_except_handler_5;
+        }
+        tmp_args_element_value_4 = mod_consts[66];
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        }
+
+        if (tmp_called_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 659;
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-
-        tmp_dict_value_3 = var_key;
-        tmp_assign_source_13 = _PyDict_NewPresized( 2 );
-        {
-            PyObject *tmp_unicode_arg_1;
-            tmp_res = PyDict_SetItem(tmp_assign_source_13, tmp_dict_key_3, tmp_dict_value_3);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[122];
-            CHECK_OBJECT(var_v);
-            tmp_unicode_arg_1 = var_v;
-            tmp_dict_value_3 = PyObject_Unicode(tmp_unicode_arg_1);
-            if (tmp_dict_value_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 659;
-                type_description_1 = "oooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_assign_source_13, tmp_dict_key_3, tmp_dict_value_3);
-            Py_DECREF(tmp_dict_value_3);
-            assert(!(tmp_res != 0));
-        }
-        goto dict_build_noexception_1;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_1:;
-        Py_DECREF(tmp_assign_source_13);
-        goto try_except_handler_5;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_1:;
-        {
-            PyObject *old = var_attr;
-            var_attr = tmp_assign_source_13;
-            Py_XDECREF(old);
-        }
-
-    }
-    branch_end_4:;
-    {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_6;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 660;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_expression_name_6 = par_self;
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[165]);
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 660;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 660;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-        tmp_args_element_name_4 = mod_consts[67];
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
-
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
-        }
-
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-
-            exception_lineno = 661;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
         CHECK_OBJECT(var_attr);
-        tmp_args_element_name_6 = var_attr;
-        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 661;
-        tmp_args_element_name_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_6);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_args_element_value_6 = var_attr;
+        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 659;
+        tmp_args_element_value_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_6);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_4);
 
-            exception_lineno = 661;
+            exception_lineno = 659;
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 660;
+        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 658;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 660;
+            exception_lineno = 658;
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
         Py_DECREF(tmp_call_result_3);
     }
     {
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_4;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 663;
+            exception_lineno = 661;
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_7 = par_self;
-        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[165]);
-        if (tmp_called_instance_3 == NULL) {
+        tmp_expression_value_8 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[165]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 663;
+            exception_lineno = 661;
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 663;
+        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 661;
         tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_3,
+            tmp_called_instance_2,
             mod_consts[189],
             PyTuple_GET_ITEM(mod_consts[224], 0)
         );
 
-        Py_DECREF(tmp_called_instance_3);
+        Py_DECREF(tmp_called_instance_2);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 663;
+            exception_lineno = 661;
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
         Py_DECREF(tmp_call_result_4);
     }
+    branch_no_4:;
     if (CONSIDER_THREADING() == false) {
         assert(ERROR_OCCURRED());
 
@@ -21735,19 +21217,19 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_isinstance_inst_2;
-        PyObject *tmp_isinstance_cls_2;
+        PyObject *tmp_isinstance_inst_3;
+        PyObject *tmp_isinstance_cls_3;
         CHECK_OBJECT(var_value);
-        tmp_isinstance_inst_2 = var_value;
-        tmp_isinstance_cls_2 = mod_consts[226];
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_isinstance_inst_3 = var_value;
+        tmp_isinstance_cls_3 = mod_consts[225];
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 665;
+            exception_lineno = 663;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
@@ -21760,188 +21242,188 @@ static PyObject *impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties(struct
     }
     branch_yes_5:;
     {
-        PyObject *tmp_assign_source_14;
-        PyObject *tmp_dict_key_4;
-        PyObject *tmp_dict_value_4;
-        tmp_dict_key_4 = mod_consts[71];
+        PyObject *tmp_assign_source_13;
+        PyObject *tmp_dict_key_3;
+        PyObject *tmp_dict_value_3;
+        tmp_dict_key_3 = mod_consts[70];
         CHECK_OBJECT(var_key);
-        tmp_dict_value_4 = var_key;
-        tmp_assign_source_14 = _PyDict_NewPresized( 2 );
+        tmp_dict_value_3 = var_key;
+        tmp_assign_source_13 = _PyDict_NewPresized( 2 );
         {
-            PyObject *tmp_unicode_arg_2;
-            tmp_res = PyDict_SetItem(tmp_assign_source_14, tmp_dict_key_4, tmp_dict_value_4);
+            PyObject *tmp_unicode_arg_1;
+            tmp_res = PyDict_SetItem(tmp_assign_source_13, tmp_dict_key_3, tmp_dict_value_3);
             assert(!(tmp_res != 0));
-            tmp_dict_key_4 = mod_consts[122];
+            tmp_dict_key_3 = mod_consts[121];
             CHECK_OBJECT(var_value);
-            tmp_unicode_arg_2 = var_value;
-            tmp_dict_value_4 = PyObject_Unicode(tmp_unicode_arg_2);
-            if (tmp_dict_value_4 == NULL) {
+            tmp_unicode_arg_1 = var_value;
+            tmp_dict_value_3 = PyObject_Unicode(tmp_unicode_arg_1);
+            if (tmp_dict_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 667;
+                exception_lineno = 665;
                 type_description_1 = "oooooo";
-                goto dict_build_exception_2;
+                goto dict_build_exception_1;
             }
-            tmp_res = PyDict_SetItem(tmp_assign_source_14, tmp_dict_key_4, tmp_dict_value_4);
-            Py_DECREF(tmp_dict_value_4);
+            tmp_res = PyDict_SetItem(tmp_assign_source_13, tmp_dict_key_3, tmp_dict_value_3);
+            Py_DECREF(tmp_dict_value_3);
             assert(!(tmp_res != 0));
         }
-        goto dict_build_noexception_2;
+        goto dict_build_noexception_1;
         // Exception handling pass through code for dict_build:
-        dict_build_exception_2:;
-        Py_DECREF(tmp_assign_source_14);
+        dict_build_exception_1:;
+        Py_DECREF(tmp_assign_source_13);
         goto try_except_handler_2;
         // Finished with no exception for dict_build:
-        dict_build_noexception_2:;
+        dict_build_noexception_1:;
         {
             PyObject *old = var_attr;
-            var_attr = tmp_assign_source_14;
+            var_attr = tmp_assign_source_13;
             Py_XDECREF(old);
         }
 
     }
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_9;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 668;
+            exception_lineno = 666;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_9 = par_self;
-        tmp_expression_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[165]);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_expression_value_10 = par_self;
+        tmp_expression_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[165]);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 668;
+            exception_lineno = 666;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[175]);
-        Py_DECREF(tmp_expression_name_8);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[175]);
+        Py_DECREF(tmp_expression_value_9);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 668;
+            exception_lineno = 666;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_7 = mod_consts[67];
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
+        tmp_args_element_value_7 = mod_consts[66];
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_6);
 
-            exception_lineno = 668;
+            exception_lineno = 666;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_attr);
-        tmp_args_element_name_9 = var_attr;
-        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 668;
-        tmp_args_element_name_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_9);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_args_element_value_9 = var_attr;
+        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 666;
+        tmp_args_element_value_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_9);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_6);
 
-            exception_lineno = 668;
+            exception_lineno = 666;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 668;
+        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 666;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_call_result_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_call_result_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_8);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_8);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 668;
+            exception_lineno = 666;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
         Py_DECREF(tmp_call_result_5);
     }
     {
-        PyObject *tmp_called_instance_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_call_result_6;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[155]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 669;
+            exception_lineno = 667;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_10 = par_self;
-        tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[165]);
-        if (tmp_called_instance_4 == NULL) {
+        tmp_expression_value_11 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[165]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 669;
+            exception_lineno = 667;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 669;
+        frame_ce082a85f13d5d944571267e83c08fee->m_frame.f_lineno = 667;
         tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_4,
+            tmp_called_instance_3,
             mod_consts[189],
             PyTuple_GET_ITEM(mod_consts[224], 0)
         );
 
-        Py_DECREF(tmp_called_instance_4);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 669;
+            exception_lineno = 667;
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
@@ -22124,9 +21606,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement,
-        mod_consts[62],
+        mod_consts[61],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[272],
+        mod_consts[270],
 #endif
         codeobj_7b0daec79d52f3b45da51a02d02dcc49,
         NULL,
@@ -22135,7 +21617,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptio
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[87],
+        mod_consts[86],
         NULL,
         0
     );
@@ -22149,9 +21631,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptio
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement,
-        mod_consts[86],
+        mod_consts[85],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[273],
+        mod_consts[271],
 #endif
         codeobj_1e7165e41411a49eda4a0c42352ddd8b,
         NULL,
@@ -22160,7 +21642,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionE
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[91],
+        mod_consts[90],
         NULL,
         0
     );
@@ -22174,9 +21656,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionE
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement,
-        mod_consts[64],
+        mod_consts[63],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[274],
+        mod_consts[272],
 #endif
         codeobj_d7ae9b7af5181ea6f6e16db24ec9fb0e,
         NULL,
@@ -22185,7 +21667,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceEl
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[94],
+        mod_consts[93],
         NULL,
         0
     );
@@ -22199,9 +21681,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceEl
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement,
-        mod_consts[93],
+        mod_consts[92],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[275],
+        mod_consts[273],
 #endif
         codeobj_a78fe4687731da4d83a9cd2deb7908de,
         NULL,
@@ -22210,7 +21692,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElem
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[107],
+        mod_consts[106],
         NULL,
         0
     );
@@ -22224,9 +21706,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElem
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement,
-        mod_consts[66],
+        mod_consts[65],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[276],
+        mod_consts[274],
 #endif
         codeobj_789e8c4d35c616bbe168c966e35ca3cc,
         NULL,
@@ -22235,7 +21717,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefEleme
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[116],
+        mod_consts[115],
         NULL,
         0
     );
@@ -22249,9 +21731,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefEleme
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement,
-        mod_consts[115],
+        mod_consts[114],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[277],
+        mod_consts[275],
 #endif
         codeobj_3e577455c82ecdadbb683af794fd16ed,
         NULL,
@@ -22260,7 +21742,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[121],
+        mod_consts[120],
         NULL,
         0
     );
@@ -22274,9 +21756,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement,
-        mod_consts[68],
+        mod_consts[67],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[278],
+        mod_consts[276],
 #endif
         codeobj_489b0f2328b48bc29ec26b575a43953c,
         NULL,
@@ -22285,7 +21767,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyEl
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[129],
+        mod_consts[128],
         NULL,
         0
     );
@@ -22299,11 +21781,36 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyEl
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement,
-        mod_consts[128],
+        mod_consts[127],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[279],
+        mod_consts[277],
 #endif
         codeobj_41b461937f3fda914ae278238af43e6f,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_Bio$SeqIO$SeqXmlIO,
+        mod_consts[132],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__18_characters() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_Bio$SeqIO$SeqXmlIO$$$function__18_characters,
+        mod_consts[203],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[278],
+#endif
+        codeobj_5f726bdc97b4d6bb0ad22306a12985a4,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -22321,37 +21828,12 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElem
 
 
 
-static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__18_characters() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_Bio$SeqIO$SeqXmlIO$$$function__18_characters,
-        mod_consts[203],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[280],
-#endif
-        codeobj_5f726bdc97b4d6bb0ad22306a12985a4,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[134],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__19___init__(PyObject *defaults, struct Nuitka_CellObject **closure) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__19___init__,
         mod_consts[1],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[285],
+        mod_consts[284],
 #endif
         codeobj_58b9a343167da02702238b5c375c96fc,
         defaults,
@@ -22360,7 +21842,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__19___init__(PyObje
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[144],
+        mod_consts[143],
         closure,
         1
     );
@@ -22376,7 +21858,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__1___init__(struct 
         impl_Bio$SeqIO$SeqXmlIO$$$function__1___init__,
         mod_consts[1],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[263],
+        mod_consts[261],
 #endif
         codeobj_e5011ea807b8a9e221b5b1992721a356,
         NULL,
@@ -22399,11 +21881,36 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__1___init__(struct 
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__20_parse() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__20_parse,
-        mod_consts[286],
+        mod_consts[285],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[287],
+        mod_consts[286],
 #endif
         codeobj_8d3c100649119582769587b088ece3a3,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_Bio$SeqIO$SeqXmlIO,
+        mod_consts[153],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__21_iterate() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_Bio$SeqIO$SeqXmlIO$$$function__21_iterate,
+        mod_consts[152],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[161],
+#endif
+        codeobj_3423e92b06ed8e503aba0f147d87a218,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -22421,37 +21928,12 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__20_parse() {
 
 
 
-static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__21_iterate() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_Bio$SeqIO$SeqXmlIO$$$function__21_iterate,
-        mod_consts[153],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[161],
-#endif
-        codeobj_3423e92b06ed8e503aba0f147d87a218,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[155],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__22___init__(PyObject *defaults, struct Nuitka_CellObject **closure) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__22___init__,
         mod_consts[1],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[291],
+        mod_consts[290],
 #endif
         codeobj_9915476ba6bca01a551e46e76d6aefea,
         defaults,
@@ -22474,9 +21956,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__22___init__(PyObje
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__23_write_header() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__23_write_header,
-        mod_consts[292],
+        mod_consts[291],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[293],
+        mod_consts[292],
 #endif
         codeobj_97e9856e1ab5ab1f08327b5d5cfd749c,
         NULL,
@@ -22499,9 +21981,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__23_write_header() 
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__24_write_record() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__24_write_record,
-        mod_consts[294],
+        mod_consts[293],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[295],
+        mod_consts[294],
 #endif
         codeobj_5a73473c38458f34b099508bc9d3232a,
         NULL,
@@ -22524,9 +22006,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__24_write_record() 
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__25_write_footer() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__25_write_footer,
-        mod_consts[296],
+        mod_consts[295],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[297],
+        mod_consts[296],
 #endif
         codeobj_21f7b34500922ce71274d6c60fb76d62,
         NULL,
@@ -22551,7 +22033,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__26__write_species(
         impl_Bio$SeqIO$SeqXmlIO$$$function__26__write_species,
         mod_consts[184],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[298],
+        mod_consts[297],
 #endif
         codeobj_153286ffcef6876a7cfb22dcf6638641,
         NULL,
@@ -22576,7 +22058,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__27__write_descript
         impl_Bio$SeqIO$SeqXmlIO$$$function__27__write_description,
         mod_consts[185],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[299],
+        mod_consts[298],
 #endif
         codeobj_e1cabb669a0dc9770e5fe85deee973a4,
         NULL,
@@ -22601,7 +22083,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq() {
         impl_Bio$SeqIO$SeqXmlIO$$$function__28__write_seq,
         mod_consts[186],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[300],
+        mod_consts[299],
 #endif
         codeobj_3db7160d46f3c595310b36611a68c980,
         NULL,
@@ -22626,7 +22108,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs(
         impl_Bio$SeqIO$SeqXmlIO$$$function__29__write_dbxrefs,
         mod_consts[187],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[301],
+        mod_consts[300],
 #endif
         codeobj_243186796217aefb88effe89ed2e902f,
         NULL,
@@ -22651,7 +22133,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__2_startDocument() 
         impl_Bio$SeqIO$SeqXmlIO$$$function__2_startDocument,
         mod_consts[166],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[264],
+        mod_consts[262],
 #endif
         codeobj_26c94b9adfc5941e62a8a3d83ee70b8c,
         NULL,
@@ -22676,7 +22158,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__30__write_properti
         impl_Bio$SeqIO$SeqXmlIO$$$function__30__write_properties,
         mod_consts[188],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[302],
+        mod_consts[301],
 #endif
         codeobj_ce082a85f13d5d944571267e83c08fee,
         NULL,
@@ -22685,7 +22167,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__30__write_properti
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[227],
+        mod_consts[226],
         NULL,
         0
     );
@@ -22701,7 +22183,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLEleme
         impl_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLElement,
         mod_consts[11],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[265],
+        mod_consts[263],
 #endif
         codeobj_4f6ae32f377f98123219377da3efe5c7,
         NULL,
@@ -22710,7 +22192,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLEleme
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[31],
+        mod_consts[30],
         NULL,
         0
     );
@@ -22724,9 +22206,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__3_startSeqXMLEleme
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement,
-        mod_consts[28],
+        mod_consts[27],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[266],
+        mod_consts[264],
 #endif
         codeobj_c82175d4419357e8a69c1845895e8e48,
         NULL,
@@ -22735,7 +22217,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[36],
+        mod_consts[35],
         NULL,
         0
     );
@@ -22749,9 +22231,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement,
-        mod_consts[30],
+        mod_consts[29],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[267],
+        mod_consts[265],
 #endif
         codeobj_0fdc7593cf490629b61edfa002e76f7a,
         NULL,
@@ -22760,7 +22242,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElemen
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[54],
+        mod_consts[53],
         NULL,
         0
     );
@@ -22774,9 +22256,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElemen
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement,
-        mod_consts[53],
+        mod_consts[52],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[268],
+        mod_consts[266],
 #endif
         codeobj_7d405c4b28bc62f7254048f762082eb4,
         NULL,
@@ -22785,7 +22267,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[56],
+        mod_consts[55],
         NULL,
         0
     );
@@ -22799,9 +22281,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement(
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement,
-        mod_consts[52],
+        mod_consts[51],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[269],
+        mod_consts[267],
 #endif
         codeobj_fc2ef1e9d12623b5431ac1615eca9852,
         NULL,
@@ -22810,7 +22292,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldE
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[70],
+        mod_consts[69],
         NULL,
         0
     );
@@ -22824,9 +22306,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldE
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement,
-        mod_consts[60],
+        mod_consts[59],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[270],
+        mod_consts[268],
 #endif
         codeobj_3db018beb0af236e997c3616c1f07c7d,
         NULL,
@@ -22835,7 +22317,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElem
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[78],
+        mod_consts[77],
         NULL,
         0
     );
@@ -22849,9 +22331,9 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElem
 static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement,
-        mod_consts[77],
+        mod_consts[76],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[271],
+        mod_consts[269],
 #endif
         codeobj_5fcbecfc2ce0fd0421e4b1298310e4c8,
         NULL,
@@ -22860,7 +22342,7 @@ static PyObject *MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElemen
         NULL,
 #endif
         module_Bio$SeqIO$SeqXmlIO,
-        mod_consts[82],
+        mod_consts[81],
         NULL,
         0
     );
@@ -23067,63 +22549,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("Bio.SeqIO.SeqXmlIO");
+
+    // Store the module for future use.
     module_Bio$SeqIO$SeqXmlIO = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.SeqIO.SeqXmlIO: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("Bio.SeqIO.SeqXmlIO: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.SeqIO.SeqXmlIO: Calling createModuleConstants().\n");
+        PRINT_STRING("Bio.SeqIO.SeqXmlIO: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.SeqIO.SeqXmlIO: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("Bio.SeqIO.SeqXmlIO: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initBio$SeqIO$SeqXmlIO\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_Bio$SeqIO$SeqXmlIO = MODULE_DICT(module_Bio$SeqIO$SeqXmlIO);
 
@@ -23144,7 +22630,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         UPDATE_STRING_DICT0(
             moduledict_Bio$SeqIO$SeqXmlIO,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[84]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)const_str_plain___name__);
@@ -23194,7 +22680,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -23244,17 +22730,21 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     struct Nuitka_CellObject *outline_1_var___class__ = Nuitka_Cell_Empty();
     struct Nuitka_CellObject *outline_2_var___class__ = Nuitka_Cell_Empty();
     PyObject *tmp_class_creation_1__bases = NULL;
+    PyObject *tmp_class_creation_1__bases_orig = NULL;
     PyObject *tmp_class_creation_1__class_decl_dict = NULL;
     PyObject *tmp_class_creation_1__metaclass = NULL;
     PyObject *tmp_class_creation_1__prepared = NULL;
     PyObject *tmp_class_creation_2__bases = NULL;
+    PyObject *tmp_class_creation_2__bases_orig = NULL;
     PyObject *tmp_class_creation_2__class_decl_dict = NULL;
     PyObject *tmp_class_creation_2__metaclass = NULL;
     PyObject *tmp_class_creation_2__prepared = NULL;
     PyObject *tmp_class_creation_3__bases = NULL;
+    PyObject *tmp_class_creation_3__bases_orig = NULL;
     PyObject *tmp_class_creation_3__class_decl_dict = NULL;
     PyObject *tmp_class_creation_3__metaclass = NULL;
     PyObject *tmp_class_creation_3__prepared = NULL;
+    PyObject *tmp_import_from_1__module = NULL;
     struct Nuitka_FrameObject *frame_0289c0d8dd3cf6361f6c83279ae818ce;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
@@ -23262,6 +22752,10 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
+    PyObject *exception_keeper_type_1;
+    PyObject *exception_keeper_value_1;
+    PyTracebackObject *exception_keeper_tb_1;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     int tmp_res;
     PyObject *tmp_dictdel_dict;
     PyObject *tmp_dictdel_key;
@@ -23270,10 +22764,6 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     struct Nuitka_FrameObject *frame_7b7d74b9976a1f23a39b1ca1af0451a2_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
     static struct Nuitka_FrameObject *cache_frame_7b7d74b9976a1f23a39b1ca1af0451a2_2 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -23282,14 +22772,14 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
-    PyObject *locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380 = NULL;
-    struct Nuitka_FrameObject *frame_7c658cb20b8b0a7229b23b6e88fc77ae_3;
-    NUITKA_MAY_BE_UNUSED char const *type_description_3 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_7c658cb20b8b0a7229b23b6e88fc77ae_3 = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_4;
+    PyObject *locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380 = NULL;
+    struct Nuitka_FrameObject *frame_7c658cb20b8b0a7229b23b6e88fc77ae_3;
+    NUITKA_MAY_BE_UNUSED char const *type_description_3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_7c658cb20b8b0a7229b23b6e88fc77ae_3 = NULL;
     PyObject *exception_keeper_type_5;
     PyObject *exception_keeper_value_5;
     PyTracebackObject *exception_keeper_tb_5;
@@ -23298,14 +22788,14 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     PyObject *exception_keeper_value_6;
     PyTracebackObject *exception_keeper_tb_6;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_6;
-    PyObject *locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457 = NULL;
-    struct Nuitka_FrameObject *frame_77784b56bf2d6daf1392401eb7f73d57_4;
-    NUITKA_MAY_BE_UNUSED char const *type_description_4 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_77784b56bf2d6daf1392401eb7f73d57_4 = NULL;
     PyObject *exception_keeper_type_7;
     PyObject *exception_keeper_value_7;
     PyTracebackObject *exception_keeper_tb_7;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_7;
+    PyObject *locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457 = NULL;
+    struct Nuitka_FrameObject *frame_77784b56bf2d6daf1392401eb7f73d57_4;
+    NUITKA_MAY_BE_UNUSED char const *type_description_4 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_77784b56bf2d6daf1392401eb7f73d57_4 = NULL;
     PyObject *exception_keeper_type_8;
     PyObject *exception_keeper_value_8;
     PyTracebackObject *exception_keeper_tb_8;
@@ -23314,17 +22804,21 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     PyObject *exception_keeper_value_9;
     PyTracebackObject *exception_keeper_tb_9;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_9;
+    PyObject *exception_keeper_type_10;
+    PyObject *exception_keeper_value_10;
+    PyTracebackObject *exception_keeper_tb_10;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_10;
 
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[228];
-        UPDATE_STRING_DICT0(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[229], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[227];
+        UPDATE_STRING_DICT0(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[228], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[230], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[229], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_0289c0d8dd3cf6361f6c83279ae818ce = MAKE_MODULE_FRAME(codeobj_0289c0d8dd3cf6361f6c83279ae818ce, module_Bio$SeqIO$SeqXmlIO);
@@ -23339,14 +22833,14 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[231]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[230]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[231]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[230]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[232], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[231], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -23362,14 +22856,14 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[231]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[230]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[231]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[230]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[233], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[232], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -23384,30 +22878,30 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[234], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[233], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[235];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[236];
-        tmp_level_name_1 = mod_consts[195];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 16;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[234];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[235];
+        tmp_level_value_1 = mod_consts[195];
+        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 17;
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 16;
+            exception_lineno = 17;
 
             goto frame_exception_exit_1;
         }
@@ -23415,11 +22909,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_4 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[135],
+                mod_consts[163],
                 mod_consts[195]
             );
         } else {
-            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[135]);
+            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[163]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -23429,34 +22923,34 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 16;
+            exception_lineno = 17;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[135], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[163], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[237];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[238];
-        tmp_level_name_2 = mod_consts[195];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 17;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[236];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[237];
+        tmp_level_value_2 = mod_consts[195];
+        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 18;
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 17;
+            exception_lineno = 18;
 
             goto frame_exception_exit_1;
         }
@@ -23464,11 +22958,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[141],
+                mod_consts[176],
                 mod_consts[195]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[141]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[176]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -23478,34 +22972,34 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 17;
+            exception_lineno = 18;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[141], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[239];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[240];
-        tmp_level_name_3 = mod_consts[195];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 18;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[238];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[239];
+        tmp_level_value_3 = mod_consts[195];
+        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 19;
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 18;
+            exception_lineno = 19;
 
             goto frame_exception_exit_1;
         }
@@ -23513,11 +23007,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[163],
+                mod_consts[140],
                 mod_consts[195]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[163]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[140]);
         }
 
         Py_DECREF(tmp_import_name_from_3);
@@ -23527,34 +23021,34 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 18;
+            exception_lineno = 19;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[163], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[140], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[241];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[242];
-        tmp_level_name_4 = mod_consts[195];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 19;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[240];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[241];
+        tmp_level_value_4 = mod_consts[195];
+        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 20;
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 19;
+            exception_lineno = 20;
 
             goto frame_exception_exit_1;
         }
@@ -23562,11 +23056,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[176],
+                mod_consts[134],
                 mod_consts[195]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[176]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[134]);
         }
 
         Py_DECREF(tmp_import_name_from_4);
@@ -23576,34 +23070,34 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 19;
+            exception_lineno = 20;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[176], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[134], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_5;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[243];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[244];
-        tmp_level_name_5 = mod_consts[195];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 21;
-        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[242];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[243];
+        tmp_level_value_5 = mod_consts[195];
+        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 23;
+        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 21;
+            exception_lineno = 23;
 
             goto frame_exception_exit_1;
         }
@@ -23611,11 +23105,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[105],
+                mod_consts[104],
                 mod_consts[195]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[105]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[104]);
         }
 
         Py_DECREF(tmp_import_name_from_5);
@@ -23625,34 +23119,34 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 21;
+            exception_lineno = 23;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[105], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[104], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_import_name_from_6;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[243];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[245];
-        tmp_level_name_6 = mod_consts[195];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 22;
-        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[242];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[244];
+        tmp_level_value_6 = mod_consts[195];
+        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 24;
+        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_import_name_from_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 22;
+            exception_lineno = 24;
 
             goto frame_exception_exit_1;
         }
@@ -23674,7 +23168,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 22;
+            exception_lineno = 24;
 
             goto frame_exception_exit_1;
         }
@@ -23683,25 +23177,25 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_10;
         PyObject *tmp_import_name_from_7;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[246];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_7 = Py_None;
-        tmp_fromlist_name_7 = mod_consts[247];
-        tmp_level_name_7 = mod_consts[195];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 23;
-        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[245];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_7 = Py_None;
+        tmp_fromlist_value_7 = mod_consts[246];
+        tmp_level_value_7 = mod_consts[195];
+        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 25;
+        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
         if (tmp_import_name_from_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 23;
+            exception_lineno = 25;
 
             goto frame_exception_exit_1;
         }
@@ -23709,11 +23203,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[40],
+                mod_consts[39],
                 mod_consts[195]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[40]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[39]);
         }
 
         Py_DECREF(tmp_import_name_from_7);
@@ -23723,77 +23217,27 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 23;
+            exception_lineno = 25;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[40], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[39], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_import_name_from_8;
-        PyObject *tmp_name_name_8;
-        PyObject *tmp_globals_arg_name_8;
-        PyObject *tmp_locals_arg_name_8;
-        PyObject *tmp_fromlist_name_8;
-        PyObject *tmp_level_name_8;
-        tmp_name_name_8 = mod_consts[248];
-        tmp_globals_arg_name_8 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_8 = Py_None;
-        tmp_fromlist_name_8 = mod_consts[249];
-        tmp_level_name_8 = mod_consts[156];
-        frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 25;
-        tmp_import_name_from_8 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_8, tmp_locals_arg_name_8, tmp_fromlist_name_8, tmp_level_name_8);
-        if (tmp_import_name_from_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 25;
-
-            goto frame_exception_exit_1;
-        }
-        if (PyModule_Check(tmp_import_name_from_8)) {
-            tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_8,
-                (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[250],
-                mod_consts[195]
-            );
-        } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[250]);
-        }
-
-        Py_DECREF(tmp_import_name_from_8);
-        if (tmp_assign_source_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 25;
-
-            goto frame_exception_exit_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[250], tmp_assign_source_11);
-    }
-    {
-        PyObject *tmp_assign_source_12;
-        PyObject *tmp_import_name_from_9;
-        PyObject *tmp_name_name_9;
-        PyObject *tmp_globals_arg_name_9;
-        PyObject *tmp_locals_arg_name_9;
-        PyObject *tmp_fromlist_name_9;
-        PyObject *tmp_level_name_9;
-        tmp_name_name_9 = mod_consts[248];
-        tmp_globals_arg_name_9 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
-        tmp_locals_arg_name_9 = Py_None;
-        tmp_fromlist_name_9 = mod_consts[251];
-        tmp_level_name_9 = mod_consts[156];
+        PyObject *tmp_name_value_8;
+        PyObject *tmp_globals_arg_value_8;
+        PyObject *tmp_locals_arg_value_8;
+        PyObject *tmp_fromlist_value_8;
+        PyObject *tmp_level_value_8;
+        tmp_name_value_8 = mod_consts[247];
+        tmp_globals_arg_value_8 = (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO;
+        tmp_locals_arg_value_8 = Py_None;
+        tmp_fromlist_value_8 = mod_consts[248];
+        tmp_level_value_8 = mod_consts[156];
         frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 26;
-        tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_name_9, tmp_globals_arg_name_9, tmp_locals_arg_name_9, tmp_fromlist_name_9, tmp_level_name_9);
-        if (tmp_import_name_from_9 == NULL) {
+        tmp_assign_source_11 = IMPORT_MODULE5(tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
+        if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23803,18 +23247,26 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_9)) {
+        assert(tmp_import_from_1__module == NULL);
+        tmp_import_from_1__module = tmp_assign_source_11;
+    }
+    // Tried code:
+    {
+        PyObject *tmp_assign_source_12;
+        PyObject *tmp_import_name_from_8;
+        CHECK_OBJECT(tmp_import_from_1__module);
+        tmp_import_name_from_8 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_8)) {
             tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_9,
+                tmp_import_name_from_8,
                 (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
-                mod_consts[252],
+                mod_consts[249],
                 mod_consts[195]
             );
         } else {
-            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[252]);
+            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[249]);
         }
 
-        Py_DECREF(tmp_import_name_from_9);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23823,22 +23275,77 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 26;
 
-            goto frame_exception_exit_1;
+            goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[252], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[249], tmp_assign_source_12);
     }
-    // Tried code:
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[141]);
-
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[141]);
+        PyObject *tmp_import_name_from_9;
+        CHECK_OBJECT(tmp_import_from_1__module);
+        tmp_import_name_from_9 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_9)) {
+            tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_9,
+                (PyObject *)moduledict_Bio$SeqIO$SeqXmlIO,
+                mod_consts[250],
+                mod_consts[195]
+            );
+        } else {
+            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[250]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_assign_source_13 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 26;
+
+            goto try_except_handler_1;
+        }
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[250], tmp_assign_source_13);
+    }
+    goto try_end_1;
+    // Exception handler code:
+    try_except_handler_1:;
+    exception_keeper_type_1 = exception_type;
+    exception_keeper_value_1 = exception_value;
+    exception_keeper_tb_1 = exception_tb;
+    exception_keeper_lineno_1 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    CHECK_OBJECT(tmp_import_from_1__module);
+    Py_DECREF(tmp_import_from_1__module);
+    tmp_import_from_1__module = NULL;
+    // Re-raise.
+    exception_type = exception_keeper_type_1;
+    exception_value = exception_keeper_value_1;
+    exception_tb = exception_keeper_tb_1;
+    exception_lineno = exception_keeper_lineno_1;
+
+    goto frame_exception_exit_1;
+    // End of try:
+    try_end_1:;
+    CHECK_OBJECT(tmp_import_from_1__module);
+    Py_DECREF(tmp_import_from_1__module);
+    tmp_import_from_1__module = NULL;
+    // Tried code:
+    {
+        PyObject *tmp_assign_source_14;
+        PyObject *tmp_tuple_element_1;
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[140]);
+
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[140]);
+        }
+
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23846,9 +23353,9 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[138]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[137]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23857,90 +23364,24 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_assign_source_13 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_assign_source_13, 0, tmp_tuple_element_1);
-        assert(tmp_class_creation_1__bases == NULL);
-        tmp_class_creation_1__bases = tmp_assign_source_13;
-    }
-    {
-        PyObject *tmp_assign_source_14;
-        tmp_assign_source_14 = PyDict_New();
-        assert(tmp_class_creation_1__class_decl_dict == NULL);
-        tmp_class_creation_1__class_decl_dict = tmp_assign_source_14;
+        tmp_assign_source_14 = PyTuple_New(1);
+        PyTuple_SET_ITEM(tmp_assign_source_14, 0, tmp_tuple_element_1);
+        assert(tmp_class_creation_1__bases_orig == NULL);
+        tmp_class_creation_1__bases_orig = tmp_assign_source_14;
     }
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[253];
-        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_1;
-        } else {
-            goto condexpr_false_1;
+        PyObject *tmp_dircall_arg1_1;
+        CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+        tmp_dircall_arg1_1 = tmp_class_creation_1__bases_orig;
+        Py_INCREF(tmp_dircall_arg1_1);
+
+        {
+            PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
+            tmp_assign_source_15 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        condexpr_true_1:;
-        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[253];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 29;
-
-            goto try_except_handler_1;
-        }
-        goto condexpr_end_1;
-        condexpr_false_1:;
-        CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_2 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[195];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
-        if (tmp_type_arg_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 29;
-
-            goto try_except_handler_1;
-        }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
-        Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 29;
-
-            goto try_except_handler_1;
-        }
-        condexpr_end_1:;
-        CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_15 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23949,22 +23390,133 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        assert(tmp_class_creation_1__metaclass == NULL);
-        tmp_class_creation_1__metaclass = tmp_assign_source_15;
+        assert(tmp_class_creation_1__bases == NULL);
+        tmp_class_creation_1__bases = tmp_assign_source_15;
     }
     {
+        PyObject *tmp_assign_source_16;
+        tmp_assign_source_16 = PyDict_New();
+        assert(tmp_class_creation_1__class_decl_dict == NULL);
+        tmp_class_creation_1__class_decl_dict = tmp_assign_source_16;
+    }
+    {
+        PyObject *tmp_assign_source_17;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[253];
+        int tmp_truth_name_1;
+        PyObject *tmp_type_arg_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[251];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
+            goto condexpr_true_1;
+        } else {
+            goto condexpr_false_1;
+        }
+        condexpr_true_1:;
+        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[251];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
+        }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
+        goto condexpr_end_1;
+        condexpr_false_1:;
+        CHECK_OBJECT(tmp_class_creation_1__bases);
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_class_creation_1__bases);
+        if (tmp_truth_name_1 == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 29;
+
+            goto try_except_handler_2;
+        }
+        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+            goto condexpr_true_2;
+        } else {
+            goto condexpr_false_2;
+        }
+        condexpr_true_2:;
+        CHECK_OBJECT(tmp_class_creation_1__bases);
+        tmp_expression_value_2 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[195];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
+        if (tmp_type_arg_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 29;
+
+            goto try_except_handler_2;
+        }
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        Py_DECREF(tmp_type_arg_1);
+        if (tmp_metaclass_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 29;
+
+            goto try_except_handler_2;
+        }
+        goto condexpr_end_2;
+        condexpr_false_2:;
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
+        condexpr_end_2:;
+        condexpr_end_1:;
+        CHECK_OBJECT(tmp_class_creation_1__bases);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_17 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
+        if (tmp_assign_source_17 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 29;
+
+            goto try_except_handler_2;
+        }
+        assert(tmp_class_creation_1__metaclass == NULL);
+        tmp_class_creation_1__metaclass = tmp_assign_source_17;
+    }
+    {
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[251];
+        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -23973,7 +23525,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[253];
+    tmp_dictdel_key = mod_consts[251];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -23983,17 +23535,17 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         exception_lineno = 29;
 
-        goto try_except_handler_1;
+        goto try_except_handler_2;
     }
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_3;
+        nuitka_bool tmp_condition_result_4;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[254]);
-        tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[252]);
+        tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -24001,16 +23553,16 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     }
     branch_yes_2:;
     {
-        PyObject *tmp_assign_source_16;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_assign_source_18;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_4 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[254]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_4 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[252]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24018,21 +23570,21 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_tuple_element_2 = mod_consts[138];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
+        tmp_tuple_element_2 = mod_consts[137];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_2 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 29;
-        tmp_assign_source_16 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        if (tmp_assign_source_16 == NULL) {
+        tmp_assign_source_18 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24040,20 +23592,20 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_16;
+        tmp_class_creation_1__prepared = tmp_assign_source_18;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_5;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_5 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[255]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_5 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[253]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -24062,10 +23614,10 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -24075,18 +23627,18 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[256];
+        tmp_left_value_1 = mod_consts[254];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[257];
-        tmp_getattr_default_1 = mod_consts[258];
+        tmp_getattr_attr_1 = mod_consts[255];
+        tmp_getattr_default_1 = mod_consts[256];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -24096,19 +23648,19 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_6;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_6 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_6 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[257]);
-            Py_DECREF(tmp_expression_name_6);
+            tmp_expression_value_6 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_6 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[255]);
+            Py_DECREF(tmp_expression_value_6);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -24119,17 +23671,17 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
-        goto try_except_handler_1;
+        Py_DECREF(tmp_right_value_1);
+        goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24138,7 +23690,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         exception_type = tmp_raise_type_1;
         Py_INCREF(tmp_raise_type_1);
@@ -24146,20 +23698,20 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         exception_lineno = 29;
         RAISE_EXCEPTION_IMPLICIT(&exception_type, &exception_value, &exception_tb);
 
-        goto try_except_handler_1;
+        goto try_except_handler_2;
     }
     branch_no_3:;
     goto branch_end_2;
     branch_no_2:;
     {
-        PyObject *tmp_assign_source_17;
-        tmp_assign_source_17 = PyDict_New();
+        PyObject *tmp_assign_source_19;
+        tmp_assign_source_19 = PyDict_New();
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_17;
+        tmp_class_creation_1__prepared = tmp_assign_source_19;
     }
     branch_end_2:;
     {
-        PyObject *tmp_assign_source_18;
+        PyObject *tmp_assign_source_20;
         {
             PyObject *tmp_set_locals_1;
             CHECK_OBJECT(tmp_class_creation_1__prepared);
@@ -24169,7 +23721,31 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         }
         // Tried code:
         // Tried code:
+        tmp_dictset_value = mod_consts[257];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[258], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 29;
+
+            goto try_except_handler_4;
+        }
         tmp_dictset_value = mod_consts[259];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[228], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 29;
+
+            goto try_except_handler_4;
+        }
+        tmp_dictset_value = mod_consts[137];
         tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[260], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24179,31 +23755,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 29;
 
-            goto try_except_handler_3;
-        }
-        tmp_dictset_value = mod_consts[261];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[229], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 29;
-
-            goto try_except_handler_3;
-        }
-        tmp_dictset_value = mod_consts[138];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[262], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 29;
-
-            goto try_except_handler_3;
+            goto try_except_handler_4;
         }
         if (isFrameUnusable(cache_frame_7b7d74b9976a1f23a39b1ca1af0451a2_2)) {
             Py_XDECREF(cache_frame_7b7d74b9976a1f23a39b1ca1af0451a2_2);
@@ -24289,7 +23841,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__4_endSeqXMLElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[28], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[27], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24305,7 +23857,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__5_startEntryElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[30], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[29], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24321,7 +23873,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__6_endEntryElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[53], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[52], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24337,7 +23889,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__7_startEntryFieldElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[52], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[51], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24353,7 +23905,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__8_startSpeciesElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[60], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[59], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24369,7 +23921,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__9_endSpeciesElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[77], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[76], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24385,7 +23937,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__10_startDescriptionElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[62], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[61], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24401,7 +23953,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__11_endDescriptionElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[86], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[85], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24417,7 +23969,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__12_startSequenceElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[64], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[63], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24433,7 +23985,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__13_endSequenceElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[93], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[92], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24449,7 +24001,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__14_startDBRefElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[66], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[65], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24465,7 +24017,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__15_endDBRefElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[115], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[114], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24481,7 +24033,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__16_startPropertyElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[68], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[67], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24497,7 +24049,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__17_endPropertyElement();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[128], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[127], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -24578,30 +24130,18 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
 
-        goto try_except_handler_3;
+        goto try_except_handler_4;
         skip_nested_handling_1:;
         {
-            PyObject *tmp_assign_source_19;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
-            PyObject *tmp_tuple_element_4;
-            PyObject *tmp_kwargs_name_2;
-            CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_4 = mod_consts[138];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_4);
+            nuitka_bool tmp_condition_result_6;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_tuple_element_4 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_4);
-            tmp_tuple_element_4 = locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_4);
-            CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
-            frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 29;
-            tmp_assign_source_19 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
-            if (tmp_assign_source_19 == NULL) {
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
+            CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+            tmp_cmp_expr_right_1 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+            if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24609,54 +24149,78 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
                 exception_lineno = 29;
 
-                goto try_except_handler_3;
+                goto try_except_handler_4;
+            }
+            if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+                goto branch_yes_4;
+            } else {
+                goto branch_no_4;
+            }
+            assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
+        }
+        branch_yes_4:;
+        CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+        tmp_dictset_value = tmp_class_creation_1__bases_orig;
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29, mod_consts[279], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 29;
+
+            goto try_except_handler_4;
+        }
+        branch_no_4:;
+        {
+            PyObject *tmp_assign_source_21;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
+            PyObject *tmp_tuple_element_4;
+            PyObject *tmp_kwargs_value_2;
+            CHECK_OBJECT(tmp_class_creation_1__metaclass);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_4 = mod_consts[137];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_4);
+            CHECK_OBJECT(tmp_class_creation_1__bases);
+            tmp_tuple_element_4 = tmp_class_creation_1__bases;
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_4);
+            tmp_tuple_element_4 = locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29;
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_4);
+            CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
+            frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 29;
+            tmp_assign_source_21 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
+            if (tmp_assign_source_21 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 29;
+
+                goto try_except_handler_4;
             }
             assert(Nuitka_Cell_GET(outline_0_var___class__) == NULL);
-            PyCell_SET(outline_0_var___class__, tmp_assign_source_19);
+            PyCell_SET(outline_0_var___class__, tmp_assign_source_21);
 
         }
         CHECK_OBJECT(Nuitka_Cell_GET(outline_0_var___class__));
-        tmp_assign_source_18 = Nuitka_Cell_GET(outline_0_var___class__);
-        Py_INCREF(tmp_assign_source_18);
+        tmp_assign_source_20 = Nuitka_Cell_GET(outline_0_var___class__);
+        Py_INCREF(tmp_assign_source_20);
+        goto try_return_handler_4;
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_4:;
+        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29);
+        locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29 = NULL;
         goto try_return_handler_3;
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_3:;
-        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29);
-        locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29 = NULL;
-        goto try_return_handler_2;
         // Exception handler code:
-        try_except_handler_3:;
-        exception_keeper_type_1 = exception_type;
-        exception_keeper_value_1 = exception_value;
-        exception_keeper_tb_1 = exception_tb;
-        exception_keeper_lineno_1 = exception_lineno;
-        exception_type = NULL;
-        exception_value = NULL;
-        exception_tb = NULL;
-        exception_lineno = 0;
-
-        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29);
-        locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29 = NULL;
-        // Re-raise.
-        exception_type = exception_keeper_type_1;
-        exception_value = exception_keeper_value_1;
-        exception_tb = exception_keeper_tb_1;
-        exception_lineno = exception_keeper_lineno_1;
-
-        goto try_except_handler_2;
-        // End of try:
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_2:;
-        CHECK_OBJECT(outline_0_var___class__);
-        Py_DECREF(outline_0_var___class__);
-        outline_0_var___class__ = NULL;
-        goto outline_result_1;
-        // Exception handler code:
-        try_except_handler_2:;
+        try_except_handler_4:;
         exception_keeper_type_2 = exception_type;
         exception_keeper_value_2 = exception_value;
         exception_keeper_tb_2 = exception_tb;
@@ -24666,11 +24230,40 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         exception_tb = NULL;
         exception_lineno = 0;
 
+        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29);
+        locals_Bio$SeqIO$SeqXmlIO$$$class__1_ContentHandler_29 = NULL;
         // Re-raise.
         exception_type = exception_keeper_type_2;
         exception_value = exception_keeper_value_2;
         exception_tb = exception_keeper_tb_2;
         exception_lineno = exception_keeper_lineno_2;
+
+        goto try_except_handler_3;
+        // End of try:
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_3:;
+        CHECK_OBJECT(outline_0_var___class__);
+        Py_DECREF(outline_0_var___class__);
+        outline_0_var___class__ = NULL;
+        goto outline_result_1;
+        // Exception handler code:
+        try_except_handler_3:;
+        exception_keeper_type_3 = exception_type;
+        exception_keeper_value_3 = exception_value;
+        exception_keeper_tb_3 = exception_tb;
+        exception_keeper_lineno_3 = exception_lineno;
+        exception_type = NULL;
+        exception_value = NULL;
+        exception_tb = NULL;
+        exception_lineno = 0;
+
+        // Re-raise.
+        exception_type = exception_keeper_type_3;
+        exception_value = exception_keeper_value_3;
+        exception_tb = exception_keeper_tb_3;
+        exception_lineno = exception_keeper_lineno_3;
 
         goto outline_exception_1;
         // End of try:
@@ -24678,22 +24271,24 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         return NULL;
         outline_exception_1:;
         exception_lineno = 29;
-        goto try_except_handler_1;
+        goto try_except_handler_2;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[138], tmp_assign_source_18);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[137], tmp_assign_source_20);
     }
-    goto try_end_1;
+    goto try_end_2;
     // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_3 = exception_type;
-    exception_keeper_value_3 = exception_value;
-    exception_keeper_tb_3 = exception_tb;
-    exception_keeper_lineno_3 = exception_lineno;
+    try_except_handler_2:;
+    exception_keeper_type_4 = exception_type;
+    exception_keeper_value_4 = exception_value;
+    exception_keeper_tb_4 = exception_tb;
+    exception_keeper_lineno_4 = exception_lineno;
     exception_type = NULL;
     exception_value = NULL;
     exception_tb = NULL;
     exception_lineno = 0;
 
+    Py_XDECREF(tmp_class_creation_1__bases_orig);
+    tmp_class_creation_1__bases_orig = NULL;
     Py_XDECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
     Py_XDECREF(tmp_class_creation_1__class_decl_dict);
@@ -24703,31 +24298,37 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     Py_XDECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
     // Re-raise.
-    exception_type = exception_keeper_type_3;
-    exception_value = exception_keeper_value_3;
-    exception_tb = exception_keeper_tb_3;
-    exception_lineno = exception_keeper_lineno_3;
+    exception_type = exception_keeper_type_4;
+    exception_value = exception_keeper_value_4;
+    exception_tb = exception_keeper_tb_4;
+    exception_lineno = exception_keeper_lineno_4;
 
     goto frame_exception_exit_1;
     // End of try:
-    try_end_1:;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    try_end_2:;
+    CHECK_OBJECT(tmp_class_creation_1__bases_orig);
+    Py_DECREF(tmp_class_creation_1__bases_orig);
+    tmp_class_creation_1__bases_orig = NULL;
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
     // Tried code:
     {
-        PyObject *tmp_assign_source_20;
+        PyObject *tmp_assign_source_22;
         PyObject *tmp_tuple_element_5;
-        tmp_tuple_element_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[250]);
+        tmp_tuple_element_5 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[249]);
 
         if (unlikely(tmp_tuple_element_5 == NULL)) {
-            tmp_tuple_element_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[250]);
+            tmp_tuple_element_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[249]);
         }
 
         if (tmp_tuple_element_5 == NULL) {
@@ -24738,48 +24339,25 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
-        tmp_assign_source_20 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_assign_source_20, 0, tmp_tuple_element_5);
-        assert(tmp_class_creation_2__bases == NULL);
-        tmp_class_creation_2__bases = tmp_assign_source_20;
+        tmp_assign_source_22 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_assign_source_22, 0, tmp_tuple_element_5);
+        assert(tmp_class_creation_2__bases_orig == NULL);
+        tmp_class_creation_2__bases_orig = tmp_assign_source_22;
     }
     {
-        PyObject *tmp_assign_source_21;
-        tmp_assign_source_21 = PyDict_New();
-        assert(tmp_class_creation_2__class_decl_dict == NULL);
-        tmp_class_creation_2__class_decl_dict = tmp_assign_source_21;
-    }
-    {
-        PyObject *tmp_assign_source_22;
-        PyObject *tmp_metaclass_name_2;
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_key_name_4;
-        PyObject *tmp_dict_arg_name_4;
-        PyObject *tmp_dict_arg_name_5;
-        PyObject *tmp_key_name_5;
-        PyObject *tmp_type_arg_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[253];
-        CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_5 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_2;
-        } else {
-            goto condexpr_false_2;
+        PyObject *tmp_assign_source_23;
+        PyObject *tmp_dircall_arg1_2;
+        CHECK_OBJECT(tmp_class_creation_2__bases_orig);
+        tmp_dircall_arg1_2 = tmp_class_creation_2__bases_orig;
+        Py_INCREF(tmp_dircall_arg1_2);
+
+        {
+            PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
+            tmp_assign_source_23 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        condexpr_true_2:;
-        CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[253];
-        tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
-        if (tmp_metaclass_name_2 == NULL) {
+        if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24787,14 +24365,77 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
-        goto condexpr_end_2;
-        condexpr_false_2:;
+        assert(tmp_class_creation_2__bases == NULL);
+        tmp_class_creation_2__bases = tmp_assign_source_23;
+    }
+    {
+        PyObject *tmp_assign_source_24;
+        tmp_assign_source_24 = PyDict_New();
+        assert(tmp_class_creation_2__class_decl_dict == NULL);
+        tmp_class_creation_2__class_decl_dict = tmp_assign_source_24;
+    }
+    {
+        PyObject *tmp_assign_source_25;
+        PyObject *tmp_metaclass_value_2;
+        bool tmp_condition_result_7;
+        PyObject *tmp_key_value_4;
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
+        nuitka_bool tmp_condition_result_8;
+        int tmp_truth_name_2;
+        PyObject *tmp_type_arg_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_bases_value_2;
+        tmp_key_value_4 = mod_consts[251];
+        CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+        tmp_dict_arg_value_4 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_4, tmp_key_value_4);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_7 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_7 != false) {
+            goto condexpr_true_3;
+        } else {
+            goto condexpr_false_3;
+        }
+        condexpr_true_3:;
+        CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+        tmp_dict_arg_value_5 = tmp_class_creation_2__class_decl_dict;
+        tmp_key_value_5 = mod_consts[251];
+        tmp_metaclass_value_2 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
+        if (tmp_metaclass_value_2 == NULL) {
+            tmp_metaclass_value_2 = Py_None;
+        }
+        assert(!(tmp_metaclass_value_2 == NULL));
+        Py_INCREF(tmp_metaclass_value_2);
+        goto condexpr_end_3;
+        condexpr_false_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_expression_name_7 = tmp_class_creation_2__bases;
-        tmp_subscript_name_2 = mod_consts[195];
-        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_2, 0);
+        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_class_creation_2__bases);
+        if (tmp_truth_name_2 == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 380;
+
+            goto try_except_handler_5;
+        }
+        tmp_condition_result_8 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
+            goto condexpr_true_4;
+        } else {
+            goto condexpr_false_4;
+        }
+        condexpr_true_4:;
+        CHECK_OBJECT(tmp_class_creation_2__bases);
+        tmp_expression_value_7 = tmp_class_creation_2__bases;
+        tmp_subscript_value_2 = mod_consts[195];
+        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_7, tmp_subscript_value_2, 0);
         if (tmp_type_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24803,11 +24444,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
-        tmp_metaclass_name_2 = BUILTIN_TYPE1(tmp_type_arg_3);
+        tmp_metaclass_value_2 = BUILTIN_TYPE1(tmp_type_arg_3);
         Py_DECREF(tmp_type_arg_3);
-        if (tmp_metaclass_name_2 == NULL) {
+        if (tmp_metaclass_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24815,14 +24456,19 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
-        condexpr_end_2:;
+        goto condexpr_end_4;
+        condexpr_false_4:;
+        tmp_metaclass_value_2 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_2);
+        condexpr_end_4:;
+        condexpr_end_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_bases_name_2 = tmp_class_creation_2__bases;
-        tmp_assign_source_22 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
-        Py_DECREF(tmp_metaclass_name_2);
-        if (tmp_assign_source_22 == NULL) {
+        tmp_bases_value_2 = tmp_class_creation_2__bases;
+        tmp_assign_source_25 = SELECT_METACLASS(tmp_metaclass_value_2, tmp_bases_value_2);
+        Py_DECREF(tmp_metaclass_value_2);
+        if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24830,31 +24476,31 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
         assert(tmp_class_creation_2__metaclass == NULL);
-        tmp_class_creation_2__metaclass = tmp_assign_source_22;
+        tmp_class_creation_2__metaclass = tmp_assign_source_25;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_key_name_6;
-        PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[253];
+        bool tmp_condition_result_9;
+        PyObject *tmp_key_value_6;
+        PyObject *tmp_dict_arg_value_6;
+        tmp_key_value_6 = mod_consts[251];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
+        tmp_dict_arg_value_6 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_6, tmp_key_value_6);
         assert(!(tmp_res == -1));
-        tmp_condition_result_6 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_4;
+        tmp_condition_result_9 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_9 != false) {
+            goto branch_yes_5;
         } else {
-            goto branch_no_4;
+            goto branch_no_5;
         }
     }
-    branch_yes_4:;
+    branch_yes_5:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[253];
+    tmp_dictdel_key = mod_consts[251];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -24864,34 +24510,34 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         exception_lineno = 380;
 
-        goto try_except_handler_4;
+        goto try_except_handler_5;
     }
-    branch_no_4:;
+    branch_no_5:;
     {
-        nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_expression_name_8;
+        nuitka_bool tmp_condition_result_10;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_8 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_8, mod_consts[254]);
-        tmp_condition_result_7 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_5;
+        tmp_expression_value_8 = tmp_class_creation_2__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_8, mod_consts[252]);
+        tmp_condition_result_10 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_6;
         } else {
-            goto branch_no_5;
+            goto branch_no_6;
         }
     }
-    branch_yes_5:;
+    branch_yes_6:;
     {
-        PyObject *tmp_assign_source_23;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_name_3;
+        PyObject *tmp_assign_source_26;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_args_value_3;
         PyObject *tmp_tuple_element_6;
-        PyObject *tmp_kwargs_name_3;
+        PyObject *tmp_kwargs_value_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_9 = tmp_class_creation_2__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[254]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_9 = tmp_class_creation_2__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[252]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24899,21 +24545,21 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
-        tmp_tuple_element_6 = mod_consts[281];
-        tmp_args_name_3 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_6);
+        tmp_tuple_element_6 = mod_consts[280];
+        tmp_args_value_3 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 0, tmp_tuple_element_6);
         CHECK_OBJECT(tmp_class_creation_2__bases);
         tmp_tuple_element_6 = tmp_class_creation_2__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_3, 1, tmp_tuple_element_6);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 1, tmp_tuple_element_6);
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
+        tmp_kwargs_value_3 = tmp_class_creation_2__class_decl_dict;
         frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 380;
-        tmp_assign_source_23 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_3);
-        if (tmp_assign_source_23 == NULL) {
+        tmp_assign_source_26 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_3);
+        if (tmp_assign_source_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24921,20 +24567,20 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
         assert(tmp_class_creation_2__prepared == NULL);
-        tmp_class_creation_2__prepared = tmp_assign_source_23;
+        tmp_class_creation_2__prepared = tmp_assign_source_26;
     }
     {
-        nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_expression_name_10;
+        bool tmp_condition_result_11;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_expression_value_10;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
-        tmp_expression_name_10 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_10, mod_consts[255]);
-        tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_expression_value_10 = tmp_class_creation_2__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_10, mod_consts[253]);
+        tmp_operand_value_2 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -24943,31 +24589,31 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
-        tmp_condition_result_8 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_6;
+        tmp_condition_result_11 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_11 != false) {
+            goto branch_yes_7;
         } else {
-            goto branch_no_6;
+            goto branch_no_7;
         }
     }
-    branch_yes_6:;
+    branch_yes_7:;
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_raise_value_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_tuple_element_7;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_2 = mod_consts[256];
+        tmp_left_value_2 = mod_consts[254];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[257];
-        tmp_getattr_default_2 = mod_consts[258];
+        tmp_getattr_attr_2 = mod_consts[255];
+        tmp_getattr_default_2 = mod_consts[256];
         tmp_tuple_element_7 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -24977,19 +24623,19 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
-        tmp_right_name_2 = PyTuple_New(2);
+        tmp_right_value_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_11;
+            PyObject *tmp_expression_value_11;
             PyObject *tmp_type_arg_4;
-            PyTuple_SET_ITEM(tmp_right_name_2, 0, tmp_tuple_element_7);
+            PyTuple_SET_ITEM(tmp_right_value_2, 0, tmp_tuple_element_7);
             CHECK_OBJECT(tmp_class_creation_2__prepared);
             tmp_type_arg_4 = tmp_class_creation_2__prepared;
-            tmp_expression_name_11 = BUILTIN_TYPE1(tmp_type_arg_4);
-            assert(!(tmp_expression_name_11 == NULL));
-            tmp_tuple_element_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[257]);
-            Py_DECREF(tmp_expression_name_11);
+            tmp_expression_value_11 = BUILTIN_TYPE1(tmp_type_arg_4);
+            assert(!(tmp_expression_value_11 == NULL));
+            tmp_tuple_element_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[255]);
+            Py_DECREF(tmp_expression_value_11);
             if (tmp_tuple_element_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -25000,17 +24646,17 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_2;
             }
-            PyTuple_SET_ITEM(tmp_right_name_2, 1, tmp_tuple_element_7);
+            PyTuple_SET_ITEM(tmp_right_value_2, 1, tmp_tuple_element_7);
         }
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_2:;
-        Py_DECREF(tmp_right_name_2);
-        goto try_except_handler_4;
+        Py_DECREF(tmp_right_value_2);
+        goto try_except_handler_5;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_raise_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -25019,7 +24665,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_4;
+            goto try_except_handler_5;
         }
         exception_type = tmp_raise_type_2;
         Py_INCREF(tmp_raise_type_2);
@@ -25027,20 +24673,20 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         exception_lineno = 380;
         RAISE_EXCEPTION_IMPLICIT(&exception_type, &exception_value, &exception_tb);
 
-        goto try_except_handler_4;
+        goto try_except_handler_5;
     }
+    branch_no_7:;
+    goto branch_end_6;
     branch_no_6:;
-    goto branch_end_5;
-    branch_no_5:;
     {
-        PyObject *tmp_assign_source_24;
-        tmp_assign_source_24 = PyDict_New();
+        PyObject *tmp_assign_source_27;
+        tmp_assign_source_27 = PyDict_New();
         assert(tmp_class_creation_2__prepared == NULL);
-        tmp_class_creation_2__prepared = tmp_assign_source_24;
+        tmp_class_creation_2__prepared = tmp_assign_source_27;
     }
-    branch_end_5:;
+    branch_end_6:;
     {
-        PyObject *tmp_assign_source_25;
+        PyObject *tmp_assign_source_28;
         {
             PyObject *tmp_set_locals_2;
             CHECK_OBJECT(tmp_class_creation_2__prepared);
@@ -25050,7 +24696,31 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[259];
+        tmp_dictset_value = mod_consts[257];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[258], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 380;
+
+            goto try_except_handler_7;
+        }
+        tmp_dictset_value = mod_consts[281];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[228], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 380;
+
+            goto try_except_handler_7;
+        }
+        tmp_dictset_value = mod_consts[280];
         tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[260], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25060,31 +24730,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 380;
 
-            goto try_except_handler_6;
-        }
-        tmp_dictset_value = mod_consts[282];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[229], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 380;
-
-            goto try_except_handler_6;
-        }
-        tmp_dictset_value = mod_consts[281];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[262], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 380;
-
-            goto try_except_handler_6;
+            goto try_except_handler_7;
         }
         if (isFrameUnusable(cache_frame_7c658cb20b8b0a7229b23b6e88fc77ae_3)) {
             Py_XDECREF(cache_frame_7c658cb20b8b0a7229b23b6e88fc77ae_3);
@@ -25113,8 +24759,8 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         assert(Py_REFCNT(frame_7c658cb20b8b0a7229b23b6e88fc77ae_3) == 2); // Frame stack
 
         // Framed code:
-        tmp_dictset_value = mod_consts[283];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[146], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[282];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[145], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -25128,7 +24774,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         {
             PyObject *tmp_defaults_1;
             struct Nuitka_CellObject *tmp_closure_2[1];
-            tmp_defaults_1 = mod_consts[284];
+            tmp_defaults_1 = mod_consts[283];
             Py_INCREF(tmp_defaults_1);
 
             tmp_closure_2[0] = outline_1_var___class__;
@@ -25153,7 +24799,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__20_parse();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[286], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[285], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25169,7 +24815,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__21_iterate();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[153], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[152], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25234,30 +24880,18 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         goto skip_nested_handling_2;
         nested_frame_exit_2:;
 
-        goto try_except_handler_6;
+        goto try_except_handler_7;
         skip_nested_handling_2:;
         {
-            PyObject *tmp_assign_source_26;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_name_4;
-            PyObject *tmp_tuple_element_8;
-            PyObject *tmp_kwargs_name_4;
-            CHECK_OBJECT(tmp_class_creation_2__metaclass);
-            tmp_called_name_4 = tmp_class_creation_2__metaclass;
-            tmp_tuple_element_8 = mod_consts[281];
-            tmp_args_name_4 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_8);
+            nuitka_bool tmp_condition_result_12;
+            PyObject *tmp_cmp_expr_left_2;
+            PyObject *tmp_cmp_expr_right_2;
             CHECK_OBJECT(tmp_class_creation_2__bases);
-            tmp_tuple_element_8 = tmp_class_creation_2__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_8);
-            tmp_tuple_element_8 = locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_8);
-            CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-            tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
-            frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 380;
-            tmp_assign_source_26 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_4, tmp_kwargs_name_4);
-            Py_DECREF(tmp_args_name_4);
-            if (tmp_assign_source_26 == NULL) {
+            tmp_cmp_expr_left_2 = tmp_class_creation_2__bases;
+            CHECK_OBJECT(tmp_class_creation_2__bases_orig);
+            tmp_cmp_expr_right_2 = tmp_class_creation_2__bases_orig;
+            tmp_condition_result_12 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+            if (tmp_condition_result_12 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25265,54 +24899,78 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
                 exception_lineno = 380;
 
-                goto try_except_handler_6;
+                goto try_except_handler_7;
+            }
+            if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
+                goto branch_yes_8;
+            } else {
+                goto branch_no_8;
+            }
+            assert(tmp_condition_result_12 != NUITKA_BOOL_UNASSIGNED);
+        }
+        branch_yes_8:;
+        CHECK_OBJECT(tmp_class_creation_2__bases_orig);
+        tmp_dictset_value = tmp_class_creation_2__bases_orig;
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380, mod_consts[279], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 380;
+
+            goto try_except_handler_7;
+        }
+        branch_no_8:;
+        {
+            PyObject *tmp_assign_source_29;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_value_4;
+            PyObject *tmp_tuple_element_8;
+            PyObject *tmp_kwargs_value_4;
+            CHECK_OBJECT(tmp_class_creation_2__metaclass);
+            tmp_called_value_4 = tmp_class_creation_2__metaclass;
+            tmp_tuple_element_8 = mod_consts[280];
+            tmp_args_value_4 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_8);
+            CHECK_OBJECT(tmp_class_creation_2__bases);
+            tmp_tuple_element_8 = tmp_class_creation_2__bases;
+            PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_8);
+            tmp_tuple_element_8 = locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380;
+            PyTuple_SET_ITEM0(tmp_args_value_4, 2, tmp_tuple_element_8);
+            CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+            tmp_kwargs_value_4 = tmp_class_creation_2__class_decl_dict;
+            frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 380;
+            tmp_assign_source_29 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_4, tmp_kwargs_value_4);
+            Py_DECREF(tmp_args_value_4);
+            if (tmp_assign_source_29 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 380;
+
+                goto try_except_handler_7;
             }
             assert(Nuitka_Cell_GET(outline_1_var___class__) == NULL);
-            PyCell_SET(outline_1_var___class__, tmp_assign_source_26);
+            PyCell_SET(outline_1_var___class__, tmp_assign_source_29);
 
         }
         CHECK_OBJECT(Nuitka_Cell_GET(outline_1_var___class__));
-        tmp_assign_source_25 = Nuitka_Cell_GET(outline_1_var___class__);
-        Py_INCREF(tmp_assign_source_25);
+        tmp_assign_source_28 = Nuitka_Cell_GET(outline_1_var___class__);
+        Py_INCREF(tmp_assign_source_28);
+        goto try_return_handler_7;
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_7:;
+        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380);
+        locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380 = NULL;
         goto try_return_handler_6;
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_6:;
-        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380);
-        locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380 = NULL;
-        goto try_return_handler_5;
         // Exception handler code:
-        try_except_handler_6:;
-        exception_keeper_type_4 = exception_type;
-        exception_keeper_value_4 = exception_value;
-        exception_keeper_tb_4 = exception_tb;
-        exception_keeper_lineno_4 = exception_lineno;
-        exception_type = NULL;
-        exception_value = NULL;
-        exception_tb = NULL;
-        exception_lineno = 0;
-
-        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380);
-        locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380 = NULL;
-        // Re-raise.
-        exception_type = exception_keeper_type_4;
-        exception_value = exception_keeper_value_4;
-        exception_tb = exception_keeper_tb_4;
-        exception_lineno = exception_keeper_lineno_4;
-
-        goto try_except_handler_5;
-        // End of try:
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_5:;
-        CHECK_OBJECT(outline_1_var___class__);
-        Py_DECREF(outline_1_var___class__);
-        outline_1_var___class__ = NULL;
-        goto outline_result_2;
-        // Exception handler code:
-        try_except_handler_5:;
+        try_except_handler_7:;
         exception_keeper_type_5 = exception_type;
         exception_keeper_value_5 = exception_value;
         exception_keeper_tb_5 = exception_tb;
@@ -25322,11 +24980,40 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         exception_tb = NULL;
         exception_lineno = 0;
 
+        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380);
+        locals_Bio$SeqIO$SeqXmlIO$$$class__2_SeqXmlIterator_380 = NULL;
         // Re-raise.
         exception_type = exception_keeper_type_5;
         exception_value = exception_keeper_value_5;
         exception_tb = exception_keeper_tb_5;
         exception_lineno = exception_keeper_lineno_5;
+
+        goto try_except_handler_6;
+        // End of try:
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_6:;
+        CHECK_OBJECT(outline_1_var___class__);
+        Py_DECREF(outline_1_var___class__);
+        outline_1_var___class__ = NULL;
+        goto outline_result_2;
+        // Exception handler code:
+        try_except_handler_6:;
+        exception_keeper_type_6 = exception_type;
+        exception_keeper_value_6 = exception_value;
+        exception_keeper_tb_6 = exception_tb;
+        exception_keeper_lineno_6 = exception_lineno;
+        exception_type = NULL;
+        exception_value = NULL;
+        exception_tb = NULL;
+        exception_lineno = 0;
+
+        // Re-raise.
+        exception_type = exception_keeper_type_6;
+        exception_value = exception_keeper_value_6;
+        exception_tb = exception_keeper_tb_6;
+        exception_lineno = exception_keeper_lineno_6;
 
         goto outline_exception_2;
         // End of try:
@@ -25334,22 +25021,24 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         return NULL;
         outline_exception_2:;
         exception_lineno = 380;
-        goto try_except_handler_4;
+        goto try_except_handler_5;
         outline_result_2:;
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[281], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[280], tmp_assign_source_28);
     }
-    goto try_end_2;
+    goto try_end_3;
     // Exception handler code:
-    try_except_handler_4:;
-    exception_keeper_type_6 = exception_type;
-    exception_keeper_value_6 = exception_value;
-    exception_keeper_tb_6 = exception_tb;
-    exception_keeper_lineno_6 = exception_lineno;
+    try_except_handler_5:;
+    exception_keeper_type_7 = exception_type;
+    exception_keeper_value_7 = exception_value;
+    exception_keeper_tb_7 = exception_tb;
+    exception_keeper_lineno_7 = exception_lineno;
     exception_type = NULL;
     exception_value = NULL;
     exception_tb = NULL;
     exception_lineno = 0;
 
+    Py_XDECREF(tmp_class_creation_2__bases_orig);
+    tmp_class_creation_2__bases_orig = NULL;
     Py_XDECREF(tmp_class_creation_2__bases);
     tmp_class_creation_2__bases = NULL;
     Py_XDECREF(tmp_class_creation_2__class_decl_dict);
@@ -25359,31 +25048,37 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     Py_XDECREF(tmp_class_creation_2__prepared);
     tmp_class_creation_2__prepared = NULL;
     // Re-raise.
-    exception_type = exception_keeper_type_6;
-    exception_value = exception_keeper_value_6;
-    exception_tb = exception_keeper_tb_6;
-    exception_lineno = exception_keeper_lineno_6;
+    exception_type = exception_keeper_type_7;
+    exception_value = exception_keeper_value_7;
+    exception_tb = exception_keeper_tb_7;
+    exception_lineno = exception_keeper_lineno_7;
 
     goto frame_exception_exit_1;
     // End of try:
-    try_end_2:;
-    Py_XDECREF(tmp_class_creation_2__bases);
+    try_end_3:;
+    CHECK_OBJECT(tmp_class_creation_2__bases_orig);
+    Py_DECREF(tmp_class_creation_2__bases_orig);
+    tmp_class_creation_2__bases_orig = NULL;
+    CHECK_OBJECT(tmp_class_creation_2__bases);
+    Py_DECREF(tmp_class_creation_2__bases);
     tmp_class_creation_2__bases = NULL;
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_2__prepared);
     Py_DECREF(tmp_class_creation_2__prepared);
     tmp_class_creation_2__prepared = NULL;
     // Tried code:
     {
-        PyObject *tmp_assign_source_27;
+        PyObject *tmp_assign_source_30;
         PyObject *tmp_tuple_element_9;
-        tmp_tuple_element_9 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[252]);
+        tmp_tuple_element_9 = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[250]);
 
         if (unlikely(tmp_tuple_element_9 == NULL)) {
-            tmp_tuple_element_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[252]);
+            tmp_tuple_element_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[250]);
         }
 
         if (tmp_tuple_element_9 == NULL) {
@@ -25394,48 +25089,25 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
-        tmp_assign_source_27 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_assign_source_27, 0, tmp_tuple_element_9);
-        assert(tmp_class_creation_3__bases == NULL);
-        tmp_class_creation_3__bases = tmp_assign_source_27;
+        tmp_assign_source_30 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_assign_source_30, 0, tmp_tuple_element_9);
+        assert(tmp_class_creation_3__bases_orig == NULL);
+        tmp_class_creation_3__bases_orig = tmp_assign_source_30;
     }
     {
-        PyObject *tmp_assign_source_28;
-        tmp_assign_source_28 = PyDict_New();
-        assert(tmp_class_creation_3__class_decl_dict == NULL);
-        tmp_class_creation_3__class_decl_dict = tmp_assign_source_28;
-    }
-    {
-        PyObject *tmp_assign_source_29;
-        PyObject *tmp_metaclass_name_3;
-        nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_key_name_7;
-        PyObject *tmp_dict_arg_name_7;
-        PyObject *tmp_dict_arg_name_8;
-        PyObject *tmp_key_name_8;
-        PyObject *tmp_type_arg_5;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_bases_name_3;
-        tmp_key_name_7 = mod_consts[253];
-        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_7 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_7, tmp_key_name_7);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_9 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_3;
-        } else {
-            goto condexpr_false_3;
+        PyObject *tmp_assign_source_31;
+        PyObject *tmp_dircall_arg1_3;
+        CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+        tmp_dircall_arg1_3 = tmp_class_creation_3__bases_orig;
+        Py_INCREF(tmp_dircall_arg1_3);
+
+        {
+            PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
+            tmp_assign_source_31 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        condexpr_true_3:;
-        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_8 = tmp_class_creation_3__class_decl_dict;
-        tmp_key_name_8 = mod_consts[253];
-        tmp_metaclass_name_3 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_8, tmp_key_name_8);
-        if (tmp_metaclass_name_3 == NULL) {
+        if (tmp_assign_source_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25443,14 +25115,77 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
-        goto condexpr_end_3;
-        condexpr_false_3:;
+        assert(tmp_class_creation_3__bases == NULL);
+        tmp_class_creation_3__bases = tmp_assign_source_31;
+    }
+    {
+        PyObject *tmp_assign_source_32;
+        tmp_assign_source_32 = PyDict_New();
+        assert(tmp_class_creation_3__class_decl_dict == NULL);
+        tmp_class_creation_3__class_decl_dict = tmp_assign_source_32;
+    }
+    {
+        PyObject *tmp_assign_source_33;
+        PyObject *tmp_metaclass_value_3;
+        bool tmp_condition_result_13;
+        PyObject *tmp_key_value_7;
+        PyObject *tmp_dict_arg_value_7;
+        PyObject *tmp_dict_arg_value_8;
+        PyObject *tmp_key_value_8;
+        nuitka_bool tmp_condition_result_14;
+        int tmp_truth_name_3;
+        PyObject *tmp_type_arg_5;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_bases_value_3;
+        tmp_key_value_7 = mod_consts[251];
+        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+        tmp_dict_arg_value_7 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_7, tmp_key_value_7);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_13 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_13 != false) {
+            goto condexpr_true_5;
+        } else {
+            goto condexpr_false_5;
+        }
+        condexpr_true_5:;
+        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+        tmp_dict_arg_value_8 = tmp_class_creation_3__class_decl_dict;
+        tmp_key_value_8 = mod_consts[251];
+        tmp_metaclass_value_3 = DICT_GET_ITEM0(tmp_dict_arg_value_8, tmp_key_value_8);
+        if (tmp_metaclass_value_3 == NULL) {
+            tmp_metaclass_value_3 = Py_None;
+        }
+        assert(!(tmp_metaclass_value_3 == NULL));
+        Py_INCREF(tmp_metaclass_value_3);
+        goto condexpr_end_5;
+        condexpr_false_5:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
-        tmp_expression_name_12 = tmp_class_creation_3__bases;
-        tmp_subscript_name_3 = mod_consts[195];
-        tmp_type_arg_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_12, tmp_subscript_name_3, 0);
+        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_class_creation_3__bases);
+        if (tmp_truth_name_3 == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 457;
+
+            goto try_except_handler_8;
+        }
+        tmp_condition_result_14 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        if (tmp_condition_result_14 == NUITKA_BOOL_TRUE) {
+            goto condexpr_true_6;
+        } else {
+            goto condexpr_false_6;
+        }
+        condexpr_true_6:;
+        CHECK_OBJECT(tmp_class_creation_3__bases);
+        tmp_expression_value_12 = tmp_class_creation_3__bases;
+        tmp_subscript_value_3 = mod_consts[195];
+        tmp_type_arg_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_12, tmp_subscript_value_3, 0);
         if (tmp_type_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -25459,11 +25194,11 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
-        tmp_metaclass_name_3 = BUILTIN_TYPE1(tmp_type_arg_5);
+        tmp_metaclass_value_3 = BUILTIN_TYPE1(tmp_type_arg_5);
         Py_DECREF(tmp_type_arg_5);
-        if (tmp_metaclass_name_3 == NULL) {
+        if (tmp_metaclass_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25471,14 +25206,19 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
-        condexpr_end_3:;
+        goto condexpr_end_6;
+        condexpr_false_6:;
+        tmp_metaclass_value_3 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_3);
+        condexpr_end_6:;
+        condexpr_end_5:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
-        tmp_bases_name_3 = tmp_class_creation_3__bases;
-        tmp_assign_source_29 = SELECT_METACLASS(tmp_metaclass_name_3, tmp_bases_name_3);
-        Py_DECREF(tmp_metaclass_name_3);
-        if (tmp_assign_source_29 == NULL) {
+        tmp_bases_value_3 = tmp_class_creation_3__bases;
+        tmp_assign_source_33 = SELECT_METACLASS(tmp_metaclass_value_3, tmp_bases_value_3);
+        Py_DECREF(tmp_metaclass_value_3);
+        if (tmp_assign_source_33 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25486,31 +25226,31 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
         assert(tmp_class_creation_3__metaclass == NULL);
-        tmp_class_creation_3__metaclass = tmp_assign_source_29;
+        tmp_class_creation_3__metaclass = tmp_assign_source_33;
     }
     {
-        nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_key_name_9;
-        PyObject *tmp_dict_arg_name_9;
-        tmp_key_name_9 = mod_consts[253];
+        bool tmp_condition_result_15;
+        PyObject *tmp_key_value_9;
+        PyObject *tmp_dict_arg_value_9;
+        tmp_key_value_9 = mod_consts[251];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_9 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_9, tmp_key_name_9);
+        tmp_dict_arg_value_9 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_9, tmp_key_value_9);
         assert(!(tmp_res == -1));
-        tmp_condition_result_10 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_7;
+        tmp_condition_result_15 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_15 != false) {
+            goto branch_yes_9;
         } else {
-            goto branch_no_7;
+            goto branch_no_9;
         }
     }
-    branch_yes_7:;
+    branch_yes_9:;
     CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_3__class_decl_dict;
-    tmp_dictdel_key = mod_consts[253];
+    tmp_dictdel_key = mod_consts[251];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -25520,34 +25260,34 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         exception_lineno = 457;
 
-        goto try_except_handler_7;
+        goto try_except_handler_8;
     }
-    branch_no_7:;
+    branch_no_9:;
     {
-        nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_expression_name_13;
+        nuitka_bool tmp_condition_result_16;
+        PyObject *tmp_expression_value_13;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_13 = tmp_class_creation_3__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_13, mod_consts[254]);
-        tmp_condition_result_11 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_8;
+        tmp_expression_value_13 = tmp_class_creation_3__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_13, mod_consts[252]);
+        tmp_condition_result_16 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_16 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_10;
         } else {
-            goto branch_no_8;
+            goto branch_no_10;
         }
     }
-    branch_yes_8:;
+    branch_yes_10:;
     {
-        PyObject *tmp_assign_source_30;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_name_5;
+        PyObject *tmp_assign_source_34;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_value_5;
         PyObject *tmp_tuple_element_10;
-        PyObject *tmp_kwargs_name_5;
+        PyObject *tmp_kwargs_value_5;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_14 = tmp_class_creation_3__metaclass;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[254]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_14 = tmp_class_creation_3__metaclass;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[252]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25555,21 +25295,21 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
-        tmp_tuple_element_10 = mod_consts[288];
-        tmp_args_name_5 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_5, 0, tmp_tuple_element_10);
+        tmp_tuple_element_10 = mod_consts[287];
+        tmp_args_value_5 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_5, 0, tmp_tuple_element_10);
         CHECK_OBJECT(tmp_class_creation_3__bases);
         tmp_tuple_element_10 = tmp_class_creation_3__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_5, 1, tmp_tuple_element_10);
+        PyTuple_SET_ITEM0(tmp_args_value_5, 1, tmp_tuple_element_10);
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_kwargs_name_5 = tmp_class_creation_3__class_decl_dict;
+        tmp_kwargs_value_5 = tmp_class_creation_3__class_decl_dict;
         frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 457;
-        tmp_assign_source_30 = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_5, tmp_kwargs_name_5);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_name_5);
-        if (tmp_assign_source_30 == NULL) {
+        tmp_assign_source_34 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_5, tmp_kwargs_value_5);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_value_5);
+        if (tmp_assign_source_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25577,20 +25317,20 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
         assert(tmp_class_creation_3__prepared == NULL);
-        tmp_class_creation_3__prepared = tmp_assign_source_30;
+        tmp_class_creation_3__prepared = tmp_assign_source_34;
     }
     {
-        nuitka_bool tmp_condition_result_12;
-        PyObject *tmp_operand_name_3;
-        PyObject *tmp_expression_name_15;
+        bool tmp_condition_result_17;
+        PyObject *tmp_operand_value_3;
+        PyObject *tmp_expression_value_15;
         CHECK_OBJECT(tmp_class_creation_3__prepared);
-        tmp_expression_name_15 = tmp_class_creation_3__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_15, mod_consts[255]);
-        tmp_operand_name_3 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_3);
+        tmp_expression_value_15 = tmp_class_creation_3__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_15, mod_consts[253]);
+        tmp_operand_value_3 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -25599,31 +25339,31 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
-        tmp_condition_result_12 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_9;
+        tmp_condition_result_17 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_17 != false) {
+            goto branch_yes_11;
         } else {
-            goto branch_no_9;
+            goto branch_no_11;
         }
     }
-    branch_yes_9:;
+    branch_yes_11:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_raise_value_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_tuple_element_11;
         PyObject *tmp_getattr_target_3;
         PyObject *tmp_getattr_attr_3;
         PyObject *tmp_getattr_default_3;
         tmp_raise_type_3 = PyExc_TypeError;
-        tmp_left_name_3 = mod_consts[256];
+        tmp_left_value_3 = mod_consts[254];
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
         tmp_getattr_target_3 = tmp_class_creation_3__metaclass;
-        tmp_getattr_attr_3 = mod_consts[257];
-        tmp_getattr_default_3 = mod_consts[258];
+        tmp_getattr_attr_3 = mod_consts[255];
+        tmp_getattr_default_3 = mod_consts[256];
         tmp_tuple_element_11 = BUILTIN_GETATTR(tmp_getattr_target_3, tmp_getattr_attr_3, tmp_getattr_default_3);
         if (tmp_tuple_element_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -25633,19 +25373,19 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
-        tmp_right_name_3 = PyTuple_New(2);
+        tmp_right_value_3 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_16;
+            PyObject *tmp_expression_value_16;
             PyObject *tmp_type_arg_6;
-            PyTuple_SET_ITEM(tmp_right_name_3, 0, tmp_tuple_element_11);
+            PyTuple_SET_ITEM(tmp_right_value_3, 0, tmp_tuple_element_11);
             CHECK_OBJECT(tmp_class_creation_3__prepared);
             tmp_type_arg_6 = tmp_class_creation_3__prepared;
-            tmp_expression_name_16 = BUILTIN_TYPE1(tmp_type_arg_6);
-            assert(!(tmp_expression_name_16 == NULL));
-            tmp_tuple_element_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[257]);
-            Py_DECREF(tmp_expression_name_16);
+            tmp_expression_value_16 = BUILTIN_TYPE1(tmp_type_arg_6);
+            assert(!(tmp_expression_value_16 == NULL));
+            tmp_tuple_element_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[255]);
+            Py_DECREF(tmp_expression_value_16);
             if (tmp_tuple_element_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -25656,17 +25396,17 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_3;
             }
-            PyTuple_SET_ITEM(tmp_right_name_3, 1, tmp_tuple_element_11);
+            PyTuple_SET_ITEM(tmp_right_value_3, 1, tmp_tuple_element_11);
         }
         goto tuple_build_noexception_3;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_3:;
-        Py_DECREF(tmp_right_name_3);
-        goto try_except_handler_7;
+        Py_DECREF(tmp_right_value_3);
+        goto try_except_handler_8;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_3:;
-        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_raise_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -25675,7 +25415,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_7;
+            goto try_except_handler_8;
         }
         exception_type = tmp_raise_type_3;
         Py_INCREF(tmp_raise_type_3);
@@ -25683,20 +25423,20 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         exception_lineno = 457;
         RAISE_EXCEPTION_IMPLICIT(&exception_type, &exception_value, &exception_tb);
 
-        goto try_except_handler_7;
+        goto try_except_handler_8;
     }
-    branch_no_9:;
-    goto branch_end_8;
-    branch_no_8:;
+    branch_no_11:;
+    goto branch_end_10;
+    branch_no_10:;
     {
-        PyObject *tmp_assign_source_31;
-        tmp_assign_source_31 = PyDict_New();
+        PyObject *tmp_assign_source_35;
+        tmp_assign_source_35 = PyDict_New();
         assert(tmp_class_creation_3__prepared == NULL);
-        tmp_class_creation_3__prepared = tmp_assign_source_31;
+        tmp_class_creation_3__prepared = tmp_assign_source_35;
     }
-    branch_end_8:;
+    branch_end_10:;
     {
-        PyObject *tmp_assign_source_32;
+        PyObject *tmp_assign_source_36;
         {
             PyObject *tmp_set_locals_3;
             CHECK_OBJECT(tmp_class_creation_3__prepared);
@@ -25706,7 +25446,31 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[259];
+        tmp_dictset_value = mod_consts[257];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[258], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 457;
+
+            goto try_except_handler_10;
+        }
+        tmp_dictset_value = mod_consts[288];
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[228], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 457;
+
+            goto try_except_handler_10;
+        }
+        tmp_dictset_value = mod_consts[287];
         tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[260], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25716,31 +25480,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
             exception_lineno = 457;
 
-            goto try_except_handler_9;
-        }
-        tmp_dictset_value = mod_consts[289];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[229], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 457;
-
-            goto try_except_handler_9;
-        }
-        tmp_dictset_value = mod_consts[288];
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[262], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 457;
-
-            goto try_except_handler_9;
+            goto try_except_handler_10;
         }
         if (isFrameUnusable(cache_frame_77784b56bf2d6daf1392401eb7f73d57_4)) {
             Py_XDECREF(cache_frame_77784b56bf2d6daf1392401eb7f73d57_4);
@@ -25772,7 +25512,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         {
             PyObject *tmp_defaults_2;
             struct Nuitka_CellObject *tmp_closure_3[1];
-            tmp_defaults_2 = mod_consts[290];
+            tmp_defaults_2 = mod_consts[289];
             Py_INCREF(tmp_defaults_2);
 
             tmp_closure_3[0] = outline_2_var___class__;
@@ -25797,7 +25537,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__23_write_header();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[292], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[291], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25813,7 +25553,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__24_write_record();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[294], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[293], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25829,7 +25569,7 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$SeqIO$SeqXmlIO$$$function__25_write_footer();
 
-        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[296], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[295], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25974,30 +25714,18 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         goto skip_nested_handling_3;
         nested_frame_exit_3:;
 
-        goto try_except_handler_9;
+        goto try_except_handler_10;
         skip_nested_handling_3:;
         {
-            PyObject *tmp_assign_source_33;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_name_6;
-            PyObject *tmp_tuple_element_12;
-            PyObject *tmp_kwargs_name_6;
-            CHECK_OBJECT(tmp_class_creation_3__metaclass);
-            tmp_called_name_6 = tmp_class_creation_3__metaclass;
-            tmp_tuple_element_12 = mod_consts[288];
-            tmp_args_name_6 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_6, 0, tmp_tuple_element_12);
+            nuitka_bool tmp_condition_result_18;
+            PyObject *tmp_cmp_expr_left_3;
+            PyObject *tmp_cmp_expr_right_3;
             CHECK_OBJECT(tmp_class_creation_3__bases);
-            tmp_tuple_element_12 = tmp_class_creation_3__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 1, tmp_tuple_element_12);
-            tmp_tuple_element_12 = locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 2, tmp_tuple_element_12);
-            CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-            tmp_kwargs_name_6 = tmp_class_creation_3__class_decl_dict;
-            frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 457;
-            tmp_assign_source_33 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_6, tmp_kwargs_name_6);
-            Py_DECREF(tmp_args_name_6);
-            if (tmp_assign_source_33 == NULL) {
+            tmp_cmp_expr_left_3 = tmp_class_creation_3__bases;
+            CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+            tmp_cmp_expr_right_3 = tmp_class_creation_3__bases_orig;
+            tmp_condition_result_18 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+            if (tmp_condition_result_18 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26005,54 +25733,78 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
 
                 exception_lineno = 457;
 
-                goto try_except_handler_9;
+                goto try_except_handler_10;
+            }
+            if (tmp_condition_result_18 == NUITKA_BOOL_TRUE) {
+                goto branch_yes_12;
+            } else {
+                goto branch_no_12;
+            }
+            assert(tmp_condition_result_18 != NUITKA_BOOL_UNASSIGNED);
+        }
+        branch_yes_12:;
+        CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+        tmp_dictset_value = tmp_class_creation_3__bases_orig;
+        tmp_res = PyObject_SetItem(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457, mod_consts[279], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 457;
+
+            goto try_except_handler_10;
+        }
+        branch_no_12:;
+        {
+            PyObject *tmp_assign_source_37;
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_value_6;
+            PyObject *tmp_tuple_element_12;
+            PyObject *tmp_kwargs_value_6;
+            CHECK_OBJECT(tmp_class_creation_3__metaclass);
+            tmp_called_value_6 = tmp_class_creation_3__metaclass;
+            tmp_tuple_element_12 = mod_consts[287];
+            tmp_args_value_6 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 0, tmp_tuple_element_12);
+            CHECK_OBJECT(tmp_class_creation_3__bases);
+            tmp_tuple_element_12 = tmp_class_creation_3__bases;
+            PyTuple_SET_ITEM0(tmp_args_value_6, 1, tmp_tuple_element_12);
+            tmp_tuple_element_12 = locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457;
+            PyTuple_SET_ITEM0(tmp_args_value_6, 2, tmp_tuple_element_12);
+            CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+            tmp_kwargs_value_6 = tmp_class_creation_3__class_decl_dict;
+            frame_0289c0d8dd3cf6361f6c83279ae818ce->m_frame.f_lineno = 457;
+            tmp_assign_source_37 = CALL_FUNCTION(tmp_called_value_6, tmp_args_value_6, tmp_kwargs_value_6);
+            Py_DECREF(tmp_args_value_6);
+            if (tmp_assign_source_37 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 457;
+
+                goto try_except_handler_10;
             }
             assert(Nuitka_Cell_GET(outline_2_var___class__) == NULL);
-            PyCell_SET(outline_2_var___class__, tmp_assign_source_33);
+            PyCell_SET(outline_2_var___class__, tmp_assign_source_37);
 
         }
         CHECK_OBJECT(Nuitka_Cell_GET(outline_2_var___class__));
-        tmp_assign_source_32 = Nuitka_Cell_GET(outline_2_var___class__);
-        Py_INCREF(tmp_assign_source_32);
+        tmp_assign_source_36 = Nuitka_Cell_GET(outline_2_var___class__);
+        Py_INCREF(tmp_assign_source_36);
+        goto try_return_handler_10;
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_10:;
+        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457);
+        locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457 = NULL;
         goto try_return_handler_9;
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_9:;
-        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457);
-        locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457 = NULL;
-        goto try_return_handler_8;
         // Exception handler code:
-        try_except_handler_9:;
-        exception_keeper_type_7 = exception_type;
-        exception_keeper_value_7 = exception_value;
-        exception_keeper_tb_7 = exception_tb;
-        exception_keeper_lineno_7 = exception_lineno;
-        exception_type = NULL;
-        exception_value = NULL;
-        exception_tb = NULL;
-        exception_lineno = 0;
-
-        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457);
-        locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457 = NULL;
-        // Re-raise.
-        exception_type = exception_keeper_type_7;
-        exception_value = exception_keeper_value_7;
-        exception_tb = exception_keeper_tb_7;
-        exception_lineno = exception_keeper_lineno_7;
-
-        goto try_except_handler_8;
-        // End of try:
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_8:;
-        CHECK_OBJECT(outline_2_var___class__);
-        Py_DECREF(outline_2_var___class__);
-        outline_2_var___class__ = NULL;
-        goto outline_result_3;
-        // Exception handler code:
-        try_except_handler_8:;
+        try_except_handler_10:;
         exception_keeper_type_8 = exception_type;
         exception_keeper_value_8 = exception_value;
         exception_keeper_tb_8 = exception_tb;
@@ -26062,11 +25814,40 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         exception_tb = NULL;
         exception_lineno = 0;
 
+        Py_DECREF(locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457);
+        locals_Bio$SeqIO$SeqXmlIO$$$class__3_SeqXmlWriter_457 = NULL;
         // Re-raise.
         exception_type = exception_keeper_type_8;
         exception_value = exception_keeper_value_8;
         exception_tb = exception_keeper_tb_8;
         exception_lineno = exception_keeper_lineno_8;
+
+        goto try_except_handler_9;
+        // End of try:
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_9:;
+        CHECK_OBJECT(outline_2_var___class__);
+        Py_DECREF(outline_2_var___class__);
+        outline_2_var___class__ = NULL;
+        goto outline_result_3;
+        // Exception handler code:
+        try_except_handler_9:;
+        exception_keeper_type_9 = exception_type;
+        exception_keeper_value_9 = exception_value;
+        exception_keeper_tb_9 = exception_tb;
+        exception_keeper_lineno_9 = exception_lineno;
+        exception_type = NULL;
+        exception_value = NULL;
+        exception_tb = NULL;
+        exception_lineno = 0;
+
+        // Re-raise.
+        exception_type = exception_keeper_type_9;
+        exception_value = exception_keeper_value_9;
+        exception_tb = exception_keeper_tb_9;
+        exception_lineno = exception_keeper_lineno_9;
 
         goto outline_exception_3;
         // End of try:
@@ -26074,22 +25855,24 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
         return NULL;
         outline_exception_3:;
         exception_lineno = 457;
-        goto try_except_handler_7;
+        goto try_except_handler_8;
         outline_result_3:;
-        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[288], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)mod_consts[287], tmp_assign_source_36);
     }
-    goto try_end_3;
+    goto try_end_4;
     // Exception handler code:
-    try_except_handler_7:;
-    exception_keeper_type_9 = exception_type;
-    exception_keeper_value_9 = exception_value;
-    exception_keeper_tb_9 = exception_tb;
-    exception_keeper_lineno_9 = exception_lineno;
+    try_except_handler_8:;
+    exception_keeper_type_10 = exception_type;
+    exception_keeper_value_10 = exception_value;
+    exception_keeper_tb_10 = exception_tb;
+    exception_keeper_lineno_10 = exception_lineno;
     exception_type = NULL;
     exception_value = NULL;
     exception_tb = NULL;
     exception_lineno = 0;
 
+    Py_XDECREF(tmp_class_creation_3__bases_orig);
+    tmp_class_creation_3__bases_orig = NULL;
     Py_XDECREF(tmp_class_creation_3__bases);
     tmp_class_creation_3__bases = NULL;
     Py_XDECREF(tmp_class_creation_3__class_decl_dict);
@@ -26099,14 +25882,14 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     Py_XDECREF(tmp_class_creation_3__prepared);
     tmp_class_creation_3__prepared = NULL;
     // Re-raise.
-    exception_type = exception_keeper_type_9;
-    exception_value = exception_keeper_value_9;
-    exception_tb = exception_keeper_tb_9;
-    exception_lineno = exception_keeper_lineno_9;
+    exception_type = exception_keeper_type_10;
+    exception_value = exception_keeper_value_10;
+    exception_tb = exception_keeper_tb_10;
+    exception_lineno = exception_keeper_lineno_10;
 
     goto frame_exception_exit_1;
     // End of try:
-    try_end_3:;
+    try_end_4:;
 
     // Restore frame exception if necessary.
 #if 0
@@ -26136,19 +25919,39 @@ PyObject *modulecode_Bio$SeqIO$SeqXmlIO(PyObject *module, struct Nuitka_MetaPath
     goto module_exception_exit;
 
     frame_no_exception_4:;
-    Py_XDECREF(tmp_class_creation_3__bases);
+    CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+    Py_DECREF(tmp_class_creation_3__bases_orig);
+    tmp_class_creation_3__bases_orig = NULL;
+    CHECK_OBJECT(tmp_class_creation_3__bases);
+    Py_DECREF(tmp_class_creation_3__bases);
     tmp_class_creation_3__bases = NULL;
-    Py_XDECREF(tmp_class_creation_3__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+    Py_DECREF(tmp_class_creation_3__class_decl_dict);
     tmp_class_creation_3__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_3__metaclass);
+    CHECK_OBJECT(tmp_class_creation_3__metaclass);
+    Py_DECREF(tmp_class_creation_3__metaclass);
     tmp_class_creation_3__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_3__prepared);
     Py_DECREF(tmp_class_creation_3__prepared);
     tmp_class_creation_3__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("Bio.SeqIO.SeqXmlIO", false);
+
     return module_Bio$SeqIO$SeqXmlIO;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Bio$SeqIO$SeqXmlIO, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("Bio$SeqIO$SeqXmlIO", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

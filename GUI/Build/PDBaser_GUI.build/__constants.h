@@ -1,7 +1,7 @@
 #ifndef __NUITKA_GLOBAL_CONSTANTS_H__
 #define __NUITKA_GLOBAL_CONSTANTS_H__
 
-extern PyObject *global_constants[69];
+extern PyObject *global_constants[71];
 // ()
 #define const_tuple_empty global_constants[0]
 // {}
@@ -82,67 +82,70 @@ extern PyObject *global_constants[69];
 #define const_str_plain_staticmethod global_constants[37]
 // 'classmethod'
 #define const_str_plain_classmethod global_constants[38]
+// 'keys'
+#define const_str_plain_keys global_constants[39]
 // 'name'
-#define const_str_plain_name global_constants[39]
+#define const_str_plain_name global_constants[40]
 // 'globals'
-#define const_str_plain_globals global_constants[40]
+#define const_str_plain_globals global_constants[41]
 // 'locals'
-#define const_str_plain_locals global_constants[41]
+#define const_str_plain_locals global_constants[42]
 // 'fromlist'
-#define const_str_plain_fromlist global_constants[42]
+#define const_str_plain_fromlist global_constants[43]
 // 'level'
-#define const_str_plain_level global_constants[43]
+#define const_str_plain_level global_constants[44]
 // 'read'
-#define const_str_plain_read global_constants[44]
+#define const_str_plain_read global_constants[45]
 // 'rb'
-#define const_str_plain_rb global_constants[45]
+#define const_str_plain_rb global_constants[46]
 // 'getattr'
-#define const_str_plain_getattr global_constants[46]
+#define const_str_plain_getattr global_constants[47]
 // '__cached__'
-#define const_str_plain___cached__ global_constants[47]
+#define const_str_plain___cached__ global_constants[48]
 // '__loader__'
-#define const_str_plain___loader__ global_constants[48]
+#define const_str_plain___loader__ global_constants[49]
 // 'print'
-#define const_str_plain_print global_constants[49]
+#define const_str_plain_print global_constants[50]
 // 'end'
-#define const_str_plain_end global_constants[50]
+#define const_str_plain_end global_constants[51]
 // 'file'
-#define const_str_plain_file global_constants[51]
+#define const_str_plain_file global_constants[52]
 // 'bytes'
-#define const_str_plain_bytes global_constants[52]
+#define const_str_plain_bytes global_constants[53]
 // '.'
-#define const_str_dot global_constants[53]
+#define const_str_dot global_constants[54]
 // '__loader__'
-#define const_str_plain___loader__ global_constants[48]
+#define const_str_plain___loader__ global_constants[49]
 // 'send'
-#define const_str_plain_send global_constants[54]
+#define const_str_plain_send global_constants[55]
 // 'throw'
-#define const_str_plain_throw global_constants[55]
+#define const_str_plain_throw global_constants[56]
 // 'close'
-#define const_str_plain_close global_constants[56]
+#define const_str_plain_close global_constants[57]
 // 'site'
-#define const_str_plain_site global_constants[57]
+#define const_str_plain_site global_constants[58]
 // 'type'
-#define const_str_plain_type global_constants[58]
+#define const_str_plain_type global_constants[59]
 // 'len'
-#define const_str_plain_len global_constants[59]
+#define const_str_plain_len global_constants[60]
 // 'range'
 #define const_str_plain_range global_constants[31]
 // 'repr'
-#define const_str_plain_repr global_constants[60]
+#define const_str_plain_repr global_constants[61]
 // 'int'
-#define const_str_plain_int global_constants[61]
+#define const_str_plain_int global_constants[62]
 // 'iter'
-#define const_str_plain_iter global_constants[62]
+#define const_str_plain_iter global_constants[63]
 // '__spec__'
-#define const_str_plain___spec__ global_constants[63]
+#define const_str_plain___spec__ global_constants[64]
 // '_initializing'
-#define const_str_plain__initializing global_constants[64]
+#define const_str_plain__initializing global_constants[65]
 // 'parent'
-#define const_str_plain_parent global_constants[65]
+#define const_str_plain_parent global_constants[66]
 // 'types'
-#define const_str_plain_types global_constants[66]
+#define const_str_plain_types global_constants[67]
 // '__main__'
-#define const_str_plain___main__ global_constants[67]
+#define const_str_plain___main__ global_constants[68]
+// '__class_getitem__'
+#define const_str_plain___class_getitem__ global_constants[69]
 #endif
-

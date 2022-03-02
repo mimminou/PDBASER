@@ -9,7 +9,7 @@ from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont, ImageTk  # NEEDED FOR DEPICTION
 from logging import debug
 from threading import Thread, Lock
-import platform
+from platform import system
 
 # HIDDEN IMPORTS NEEDED FOR NUITKA :
 from pygubu.builder import tkstdwidgets
@@ -32,7 +32,7 @@ class MainApp:
         builder.add_from_file(PROJECT_UI)
         # GET MAIN WINDOW ITEMS
         self.mainwindow = builder.get_object('toplevel0')  ##GET MAIN WINDOW
-        if platform.system()=="Windows":
+        if system() == "Windows":
             self.mainwindow.iconbitmap("default_icon.ico") ##Set Icon for Windows
         self.PDB_input_DIR = builder.get_object("PDB_input_DIR")  ##GET INPUT DIR
         self.PDB_output_DIR = builder.get_object("PDB_output_DIR")  ##GET OUTPUT DIR
@@ -57,7 +57,9 @@ class MainApp:
         self.checkboxAddHydrogens = builder.get_variable("addHydrogens")
 
         # GET IMAGE SECTION
-        self.imager = builder.get_object("Depiction")
+        # self.imager = builder.get_object("Depiction") #Deprecated, Instead of LABEL use CANVAS
+        self.imager = builder.get_object("canvas1")
+
 
         ## GET LISTS ##
         self.ListBox_PDB = builder.get_object("listbox1")
@@ -101,7 +103,8 @@ class MainApp:
         self.ListBox_PDB.delete(0, "end")
         self.ListBox_Chains.delete(0, "end")
         self.ListBox_Residues.delete(0, "end")
-        self.imager.config(image="")
+        self.imager.create_image(480, 480, image="", anchor="nw")
+        # self.imager.config(image="") deprecated
 
         extensions = [".pdb", ".PDB", ".ent", ".ENT", ".ent.gz", ".pdb.gz"]
         path = self.PDB_input_DIR.cget("path")
@@ -148,7 +151,9 @@ class MainApp:
                 debug("MY SELECTION : " + str(selection))
                 self.ListBox_Chains.insert("end",
                                            *get_Chain.get_PDB_Chains(str(selection), self.PDB_input_DIR.cget("path")))
-                self.imager.config(image="")
+                # self.imager.config(image="")
+                self.imager.create_image(480, 480, image="", anchor="nw")
+
             except Exception as exception:
                 print(exception)
         self.ListBox_PDB.config(state="normal")
@@ -172,7 +177,9 @@ class MainApp:
                                                              selection, self.PDB_input_DIR.cget("path"))
             self.ListBox_Residues.insert("end", *get_ResidueReturn[0])
             loadedPDB = get_ResidueReturn[1]
-            self.imager.config(image="")
+            # self.imager.config(image="")
+            self.imager.create_image(480, 480, image="", anchor="nw")
+
             debug("MY SELECTION : " + str(selection))
         except Exception as exc:
             debug(exc)
@@ -197,7 +204,9 @@ class MainApp:
                 self.drawDepiction(selected_index)
             else:
                 debug("NOT PRINTING, TOO MANY SELECTIONS")
-                self.imager.config(image="")
+                # self.imager.config(image="")
+                self.imager.create_image(480, 480, image="", anchor="nw")
+
 
         except Exception as residueSelectionException:
             debug("Residue selection error : " + str(residueSelectionException))
@@ -213,13 +222,16 @@ class MainApp:
             try:
                 self.depiction = self.Resize_Image(
                     Image.open(self.imageAsBytes))  # Resizes image and adds white bars if it isn't squared
+
                 drawMW = ImageDraw.Draw(self.depiction)
-                font = ImageFont.truetype("LiberationSans-Regular.ttf", size=15) # Avoid specifying a font for crosscompatibility
+                font = ImageFont.truetype("LiberationSans-Regular.ttf", size=15,) # Avoid specifying a font for crosscompatibility
                 drawMW.text((5, 5), str(self.MW + " g/mol"), fill=(0, 0, 0), font=font)
                 self.img1 = ImageTk.PhotoImage(self.depiction)
-                self.imager.config(image=self.img1)
+                self.imager.create_image(0, 0, image=self.img1, anchor="nw")
+                # self.imager.config(image=self.img1)
                 self.imageAsBytes.close()
             except Exception as exc:
+                print("Image Generation Exception")
                 print(exc)
                 self.imageAsBytes.close()
 
@@ -232,8 +244,8 @@ class MainApp:
         image_size = image.size
         width = image_size[0]
         height = image_size[1]
-        x = 480
-        y = 480
+        x = 320
+        y = 320
         bigside = width if width > height else height
         background = Image.new('RGBA', (bigside, bigside), (255, 255, 255, 255))
         offset = (int(round(((bigside - width) / 2), 0)), int(round(((bigside - height) / 2), 0)))
@@ -259,11 +271,11 @@ class MainApp:
 
     def downloadPDB(self, event=None):
         downloadThread = Thread(target=self.getPDBFromServer)
-        if self.PDB_output_DIR.cget("path"):
+        if self.PDB_input_DIR.cget("path"):
             if (not downloadThread.is_alive()) or (not self.Downloader.locked()):
                 downloadThread.start()
         else:
-            messagebox.showerror("Error", "Please select output path for downloading")
+            messagebox.showerror("Error", "Please select an input path for downloading")
 
     def getPDBFromServer(self, event=None):
         if not all(char.isalnum() or char.isspace() for char in self.getFromFTP.get()):
@@ -287,7 +299,7 @@ class MainApp:
             for entry in PDBList:
                 i = (i + (100 / count)).__round__(2)
                 self.progressBarVar.set(i)  ## SET PROGRESS BAR TO i VALUE
-                DownloadOperation = get_PDB.getPDBFromFTP(self.PDB_output_DIR.cget("path"), entry)
+                DownloadOperation = get_PDB.getPDBFromFTP(self.PDB_input_DIR.cget("path"), entry)
                 if DownloadOperation == 0:
                     Downloaded.append(entry)
                 elif DownloadOperation == 1:

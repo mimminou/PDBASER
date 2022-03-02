@@ -3,7 +3,7 @@
 #include "structseq.h"
 
 // Global constants storage
-PyObject *global_constants[69];
+PyObject *global_constants[71];
 
 // Sentinel PyObject to be used for all our call iterator endings. It will
 // become a PyCObject pointing to NULL. It's address is unique, and that's
@@ -17,46 +17,52 @@ PyObject *Nuitka_dunder_compiled_value = NULL;
 extern PyObject *getStandaloneSysExecutablePath(PyObject *basename);
 #endif
 
+// We provide the sys.version info shortcut as a global value here for ease of use.
+PyObject *Py_SysVersionInfo = NULL;
+
 static void _createGlobalConstants(void) {
+    // We provide the sys.version info shortcut as a global value here for ease of use.
+    Py_SysVersionInfo = Nuitka_SysGetObject("version_info");
+
     // The empty name means global.
     loadConstantsBlob(&global_constants[0], "");
 
 #if _NUITKA_EXE
     /* Set the "sys.executable" path to the original CPython executable or point to inside the
        distribution for standalone. */
-    PySys_SetObject(
-        (char *)"executable",
+    Nuitka_SysSetObject(
+        "executable",
 #ifndef _NUITKA_STANDALONE
-        global_constants[68]
+        global_constants[70]
 #else
-        getStandaloneSysExecutablePath(global_constants[68])
+        getStandaloneSysExecutablePath(global_constants[70])
 #endif
     );
 
 #ifndef _NUITKA_STANDALONE
     /* Set the "sys.prefix" path to the original one. */
-    PySys_SetObject(
-        (char *)"prefix",
+    Nuitka_SysSetObject(
+        "prefix",
         None
     );
 
     /* Set the "sys.prefix" path to the original one. */
-    PySys_SetObject(
-        (char *)"exec_prefix",
+    Nuitka_SysSetObject(
+        "exec_prefix",
         None
     );
 
 
 #if PYTHON_VERSION >= 0x300
     /* Set the "sys.base_prefix" path to the original one. */
-    PySys_SetObject(
-        (char *)"base_prefix",
+    Nuitka_SysSetObject(
+        "base_prefix",
         None
     );
 
     /* Set the "sys.exec_base_prefix" path to the original one. */
-    PySys_SetObject(
-        (char *)"base_exec_prefix",
+    Nuitka_SysSetObject(
+        "base_exec_prefix",
         None
     );
 
@@ -90,8 +96,8 @@ static void _createGlobalConstants(void) {
     assert(Nuitka_dunder_compiled_value != NULL);
 
     PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 0, PyInt_FromLong(0));
-    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 1, PyInt_FromLong(6));
-    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 2, PyInt_FromLong(17));
+    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 1, PyInt_FromLong(7));
+    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 2, PyInt_FromLong(0));
 
     PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 3, Nuitka_String_FromString("release"));
 
@@ -137,4 +143,3 @@ void createGlobalConstants(void) {
         _createGlobalConstants();
     }
 }
-

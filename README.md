@@ -40,12 +40,12 @@ There are 2 possible ways to run PDBaser in this case :
 
     PDBaser is not OS dependant, and will probably run on any operating system provided the environment is correctly setup. However, since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
 
-    - 1 - First, you need a working python 3.6+ environment with support for Tkinter (i'm looking at you, Arch Linux)
+    - 1 - First, you need a working python 3.6+ environment with support for Tkinter and PIL.
     - 2 - Install BioPython and Pygubu from pip (`pip install biopython` / `pip install pygubu`)
-    - 3 - You need to build openbabel 3.1.1 with depiction support (Cairo) and python bindings from source, and then install it from pip (`pip install openbabel==3.1.1`).
+    - 3 - You need to build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/dev/Installation/install.html) ), and then install it's python library from pip (`pip install openbabel==3.1.1`).
     - 4 - You also need the OASA library, which can be installed from pip ( package name : oasa3 )
 
-    If everything is setup correctly, running GUI/Build/PDBaser_GUI.py should work.
+    If everything is setup correctly, running GUI/Build/PDBaser_GUI.py from terminal should work.
 
 # Features
 

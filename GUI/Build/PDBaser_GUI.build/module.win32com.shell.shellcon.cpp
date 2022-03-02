@@ -1,5 +1,5 @@
 /* Generated code for Python module 'win32com.shell.shellcon'
- * created by Nuitka version 0.6.17.3
+ * created by Nuitka version 0.7
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_win32com$shell$shellcon;
 PyDictObject *moduledict_win32com$shell$shellcon;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[1832];
+static PyObject *mod_consts[1833];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[1832];
+static Py_hash_t mod_consts_hash[1833];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 1832; i++) {
+        for(int i = 0; i < 1833; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_win32com$shell$shellcon(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 1832; i++) {
+    for(int i = 0; i < 1833; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -138,14 +138,14 @@ static PyObject *impl_win32com$shell$shellcon$$$function__1_EIRESID(struct Nuitk
 
     // Framed code:
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_int_arg_1;
-        tmp_left_name_1 = mod_consts[0];
+        tmp_left_value_1 = mod_consts[0];
         CHECK_OBJECT(par_x);
         tmp_int_arg_1 = par_x;
-        tmp_right_name_1 = PyNumber_Int(tmp_int_arg_1);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = PyNumber_Int(tmp_int_arg_1);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -155,8 +155,8 @@ static PyObject *impl_win32com$shell$shellcon$$$function__1_EIRESID(struct Nuitk
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_return_value = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -446,63 +446,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("win32com.shell.shellcon");
+
+    // Store the module for future use.
     module_win32com$shell$shellcon = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("win32com.shell.shellcon: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("win32com.shell.shellcon: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("win32com.shell.shellcon: Calling createModuleConstants().\n");
+        PRINT_STRING("win32com.shell.shellcon: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("win32com.shell.shellcon: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("win32com.shell.shellcon: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initwin32com$shell$shellcon\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_win32com$shell$shellcon = MODULE_DICT(module_win32com$shell$shellcon);
 
@@ -523,7 +527,7 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
         UPDATE_STRING_DICT0(
             moduledict_win32com$shell$shellcon,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[1832]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)const_str_plain___name__);
@@ -573,7 +577,7 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -859,47 +863,47 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_30;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_right_name_3;
-        tmp_left_name_3 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[26]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_right_value_3;
+        tmp_left_value_3 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[26]);
 
-        if (unlikely(tmp_left_name_3 == NULL)) {
-            tmp_left_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
+        if (unlikely(tmp_left_value_3 == NULL)) {
+            tmp_left_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
         }
 
-        assert(!(tmp_left_name_3 == NULL));
-        tmp_right_name_1 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[30]);
+        assert(!(tmp_left_value_3 == NULL));
+        tmp_right_value_1 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[30]);
 
-        if (unlikely(tmp_right_name_1 == NULL)) {
-            tmp_right_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[30]);
+        if (unlikely(tmp_right_value_1 == NULL)) {
+            tmp_right_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[30]);
         }
 
-        assert(!(tmp_right_name_1 == NULL));
-        tmp_left_name_2 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_3, tmp_right_name_1);
-        assert(!(tmp_left_name_2 == NULL));
-        tmp_right_name_2 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[41]);
+        assert(!(tmp_right_value_1 == NULL));
+        tmp_left_value_2 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_3, tmp_right_value_1);
+        assert(!(tmp_left_value_2 == NULL));
+        tmp_right_value_2 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[41]);
 
-        if (unlikely(tmp_right_name_2 == NULL)) {
-            tmp_right_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+        if (unlikely(tmp_right_value_2 == NULL)) {
+            tmp_right_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
         }
 
-        assert(!(tmp_right_name_2 == NULL));
-        tmp_left_name_1 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
-        assert(!(tmp_left_name_1 == NULL));
-        tmp_right_name_3 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[40]);
+        assert(!(tmp_right_value_2 == NULL));
+        tmp_left_value_1 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
+        assert(!(tmp_left_value_1 == NULL));
+        tmp_right_value_3 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[40]);
 
-        if (unlikely(tmp_right_name_3 == NULL)) {
-            tmp_right_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[40]);
+        if (unlikely(tmp_right_value_3 == NULL)) {
+            tmp_right_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[40]);
         }
 
-        assert(!(tmp_right_name_3 == NULL));
-        tmp_assign_source_30 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_1);
+        assert(!(tmp_right_value_3 == NULL));
+        tmp_assign_source_30 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_1);
         assert(!(tmp_assign_source_30 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_30);
     }
@@ -1915,193 +1919,193 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_215;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        tmp_left_name_4 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        tmp_left_value_4 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_4 == NULL)) {
-            tmp_left_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_4 == NULL)) {
+            tmp_left_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_4 == NULL));
-        tmp_right_name_4 = mod_consts[9];
-        tmp_assign_source_215 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_4, tmp_right_name_4);
+        assert(!(tmp_left_value_4 == NULL));
+        tmp_right_value_4 = mod_consts[9];
+        tmp_assign_source_215 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_4, tmp_right_value_4);
         assert(!(tmp_assign_source_215 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[235], tmp_assign_source_215);
     }
     {
         PyObject *tmp_assign_source_216;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
-        tmp_left_name_5 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
+        tmp_left_value_5 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_5 == NULL)) {
-            tmp_left_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_5 == NULL)) {
+            tmp_left_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_5 == NULL));
-        tmp_right_name_5 = mod_consts[33];
-        tmp_assign_source_216 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_5, tmp_right_name_5);
+        assert(!(tmp_left_value_5 == NULL));
+        tmp_right_value_5 = mod_consts[33];
+        tmp_assign_source_216 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_5, tmp_right_value_5);
         assert(!(tmp_assign_source_216 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[236], tmp_assign_source_216);
     }
     {
         PyObject *tmp_assign_source_217;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
-        tmp_left_name_6 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
+        tmp_left_value_6 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_6 == NULL)) {
-            tmp_left_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_6 == NULL)) {
+            tmp_left_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_6 == NULL));
-        tmp_right_name_6 = mod_consts[35];
-        tmp_assign_source_217 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_6, tmp_right_name_6);
+        assert(!(tmp_left_value_6 == NULL));
+        tmp_right_value_6 = mod_consts[35];
+        tmp_assign_source_217 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_6, tmp_right_value_6);
         assert(!(tmp_assign_source_217 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[237], tmp_assign_source_217);
     }
     {
         PyObject *tmp_assign_source_218;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
-        tmp_left_name_7 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
+        tmp_left_value_7 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_7 == NULL)) {
-            tmp_left_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_7 == NULL)) {
+            tmp_left_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_7 == NULL));
-        tmp_right_name_7 = mod_consts[238];
-        tmp_assign_source_218 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_7, tmp_right_name_7);
+        assert(!(tmp_left_value_7 == NULL));
+        tmp_right_value_7 = mod_consts[238];
+        tmp_assign_source_218 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_7, tmp_right_value_7);
         assert(!(tmp_assign_source_218 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[239], tmp_assign_source_218);
     }
     {
         PyObject *tmp_assign_source_219;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
-        tmp_left_name_8 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
+        tmp_left_value_8 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_8 == NULL)) {
-            tmp_left_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_8 == NULL)) {
+            tmp_left_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_8 == NULL));
-        tmp_right_name_8 = mod_consts[240];
-        tmp_assign_source_219 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_8, tmp_right_name_8);
+        assert(!(tmp_left_value_8 == NULL));
+        tmp_right_value_8 = mod_consts[240];
+        tmp_assign_source_219 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_8, tmp_right_value_8);
         assert(!(tmp_assign_source_219 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[241], tmp_assign_source_219);
     }
     {
         PyObject *tmp_assign_source_220;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_right_name_9;
-        tmp_left_name_9 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_right_value_9;
+        tmp_left_value_9 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_9 == NULL)) {
-            tmp_left_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_9 == NULL)) {
+            tmp_left_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_9 == NULL));
-        tmp_right_name_9 = mod_consts[242];
-        tmp_assign_source_220 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_9, tmp_right_name_9);
+        assert(!(tmp_left_value_9 == NULL));
+        tmp_right_value_9 = mod_consts[242];
+        tmp_assign_source_220 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_9, tmp_right_value_9);
         assert(!(tmp_assign_source_220 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[243], tmp_assign_source_220);
     }
     {
         PyObject *tmp_assign_source_221;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_10;
-        tmp_left_name_10 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_10;
+        tmp_left_value_10 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_10 == NULL)) {
-            tmp_left_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_10 == NULL)) {
+            tmp_left_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_10 == NULL));
-        tmp_right_name_10 = mod_consts[37];
-        tmp_assign_source_221 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_10, tmp_right_name_10);
+        assert(!(tmp_left_value_10 == NULL));
+        tmp_right_value_10 = mod_consts[37];
+        tmp_assign_source_221 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_10, tmp_right_value_10);
         assert(!(tmp_assign_source_221 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[244], tmp_assign_source_221);
     }
     {
         PyObject *tmp_assign_source_222;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_11;
-        tmp_left_name_11 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_11;
+        tmp_left_value_11 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_11 == NULL)) {
-            tmp_left_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_11 == NULL)) {
+            tmp_left_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_11 == NULL));
-        tmp_right_name_11 = mod_consts[245];
-        tmp_assign_source_222 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_11, tmp_right_name_11);
+        assert(!(tmp_left_value_11 == NULL));
+        tmp_right_value_11 = mod_consts[245];
+        tmp_assign_source_222 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_11, tmp_right_value_11);
         assert(!(tmp_assign_source_222 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[246], tmp_assign_source_222);
     }
     {
         PyObject *tmp_assign_source_223;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_right_name_12;
-        tmp_left_name_12 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_right_value_12;
+        tmp_left_value_12 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_12 == NULL)) {
-            tmp_left_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_12 == NULL)) {
+            tmp_left_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_12 == NULL));
-        tmp_right_name_12 = mod_consts[247];
-        tmp_assign_source_223 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_12, tmp_right_name_12);
+        assert(!(tmp_left_value_12 == NULL));
+        tmp_right_value_12 = mod_consts[247];
+        tmp_assign_source_223 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_12, tmp_right_value_12);
         assert(!(tmp_assign_source_223 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[248], tmp_assign_source_223);
     }
     {
         PyObject *tmp_assign_source_224;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_right_name_13;
-        tmp_left_name_13 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_right_value_13;
+        tmp_left_value_13 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[232]);
 
-        if (unlikely(tmp_left_name_13 == NULL)) {
-            tmp_left_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+        if (unlikely(tmp_left_value_13 == NULL)) {
+            tmp_left_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
         }
 
-        assert(!(tmp_left_name_13 == NULL));
-        tmp_right_name_13 = mod_consts[249];
-        tmp_assign_source_224 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_13, tmp_right_name_13);
+        assert(!(tmp_left_value_13 == NULL));
+        tmp_right_value_13 = mod_consts[249];
+        tmp_assign_source_224 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_13, tmp_right_value_13);
         assert(!(tmp_assign_source_224 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[250], tmp_assign_source_224);
     }
     {
         PyObject *tmp_assign_source_225;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_right_name_14;
-        tmp_left_name_14 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[229]);
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_right_value_14;
+        tmp_left_value_14 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[229]);
 
-        if (unlikely(tmp_left_name_14 == NULL)) {
-            tmp_left_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[229]);
+        if (unlikely(tmp_left_value_14 == NULL)) {
+            tmp_left_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[229]);
         }
 
-        assert(!(tmp_left_name_14 == NULL));
-        tmp_right_name_14 = mod_consts[9];
-        tmp_assign_source_225 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_14, tmp_right_name_14);
+        assert(!(tmp_left_value_14 == NULL));
+        tmp_right_value_14 = mod_consts[9];
+        tmp_assign_source_225 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_14, tmp_right_value_14);
         assert(!(tmp_assign_source_225 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[251], tmp_assign_source_225);
     }
     {
         PyObject *tmp_assign_source_226;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_15;
-        tmp_left_name_15 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[229]);
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_15;
+        tmp_left_value_15 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[229]);
 
-        if (unlikely(tmp_left_name_15 == NULL)) {
-            tmp_left_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[229]);
+        if (unlikely(tmp_left_value_15 == NULL)) {
+            tmp_left_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[229]);
         }
 
-        assert(!(tmp_left_name_15 == NULL));
-        tmp_right_name_15 = mod_consts[11];
-        tmp_assign_source_226 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_15, tmp_right_name_15);
+        assert(!(tmp_left_value_15 == NULL));
+        tmp_right_value_15 = mod_consts[11];
+        tmp_assign_source_226 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_15, tmp_right_value_15);
         assert(!(tmp_assign_source_226 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[252], tmp_assign_source_226);
     }
@@ -2682,81 +2686,81 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_342;
-        PyObject *tmp_left_name_16;
-        PyObject *tmp_right_name_16;
-        tmp_left_name_16 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_left_value_16;
+        PyObject *tmp_right_value_16;
+        tmp_left_value_16 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_left_name_16 == NULL)) {
-            tmp_left_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_left_value_16 == NULL)) {
+            tmp_left_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        assert(!(tmp_left_name_16 == NULL));
-        tmp_right_name_16 = mod_consts[408];
-        tmp_assign_source_342 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_16, tmp_right_name_16);
+        assert(!(tmp_left_value_16 == NULL));
+        tmp_right_value_16 = mod_consts[408];
+        tmp_assign_source_342 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_16, tmp_right_value_16);
         assert(!(tmp_assign_source_342 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[409], tmp_assign_source_342);
     }
     {
         PyObject *tmp_assign_source_343;
-        PyObject *tmp_left_name_17;
-        PyObject *tmp_right_name_17;
-        tmp_left_name_17 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_left_value_17;
+        PyObject *tmp_right_value_17;
+        tmp_left_value_17 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_left_name_17 == NULL)) {
-            tmp_left_name_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_left_value_17 == NULL)) {
+            tmp_left_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        assert(!(tmp_left_name_17 == NULL));
-        tmp_right_name_17 = mod_consts[410];
-        tmp_assign_source_343 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_17, tmp_right_name_17);
+        assert(!(tmp_left_value_17 == NULL));
+        tmp_right_value_17 = mod_consts[410];
+        tmp_assign_source_343 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_17, tmp_right_value_17);
         assert(!(tmp_assign_source_343 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[411], tmp_assign_source_343);
     }
     {
         PyObject *tmp_assign_source_344;
-        PyObject *tmp_left_name_18;
-        PyObject *tmp_right_name_18;
-        tmp_left_name_18 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_left_value_18;
+        PyObject *tmp_right_value_18;
+        tmp_left_value_18 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_left_name_18 == NULL)) {
-            tmp_left_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_left_value_18 == NULL)) {
+            tmp_left_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        assert(!(tmp_left_name_18 == NULL));
-        tmp_right_name_18 = mod_consts[412];
-        tmp_assign_source_344 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_18, tmp_right_name_18);
+        assert(!(tmp_left_value_18 == NULL));
+        tmp_right_value_18 = mod_consts[412];
+        tmp_assign_source_344 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_18, tmp_right_value_18);
         assert(!(tmp_assign_source_344 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[413], tmp_assign_source_344);
     }
     {
         PyObject *tmp_assign_source_345;
-        PyObject *tmp_left_name_19;
-        PyObject *tmp_right_name_19;
-        tmp_left_name_19 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_left_value_19;
+        PyObject *tmp_right_value_19;
+        tmp_left_value_19 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_left_name_19 == NULL)) {
-            tmp_left_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_left_value_19 == NULL)) {
+            tmp_left_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        assert(!(tmp_left_name_19 == NULL));
-        tmp_right_name_19 = mod_consts[253];
-        tmp_assign_source_345 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_19, tmp_right_name_19);
+        assert(!(tmp_left_value_19 == NULL));
+        tmp_right_value_19 = mod_consts[253];
+        tmp_assign_source_345 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_19, tmp_right_value_19);
         assert(!(tmp_assign_source_345 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[414], tmp_assign_source_345);
     }
     {
         PyObject *tmp_assign_source_346;
-        PyObject *tmp_left_name_20;
-        PyObject *tmp_right_name_20;
-        tmp_left_name_20 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_left_value_20;
+        PyObject *tmp_right_value_20;
+        tmp_left_value_20 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_left_name_20 == NULL)) {
-            tmp_left_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_left_value_20 == NULL)) {
+            tmp_left_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        assert(!(tmp_left_name_20 == NULL));
-        tmp_right_name_20 = mod_consts[415];
-        tmp_assign_source_346 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_20, tmp_right_name_20);
+        assert(!(tmp_left_value_20 == NULL));
+        tmp_right_value_20 = mod_consts[415];
+        tmp_assign_source_346 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_20, tmp_right_value_20);
         assert(!(tmp_assign_source_346 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[416], tmp_assign_source_346);
     }
@@ -3116,35 +3120,35 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_407;
-        PyObject *tmp_left_name_21;
-        PyObject *tmp_left_name_22;
-        PyObject *tmp_right_name_21;
-        PyObject *tmp_right_name_22;
-        tmp_left_name_22 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[475]);
+        PyObject *tmp_left_value_21;
+        PyObject *tmp_left_value_22;
+        PyObject *tmp_right_value_21;
+        PyObject *tmp_right_value_22;
+        tmp_left_value_22 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[475]);
 
-        if (unlikely(tmp_left_name_22 == NULL)) {
-            tmp_left_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[475]);
+        if (unlikely(tmp_left_value_22 == NULL)) {
+            tmp_left_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[475]);
         }
 
-        assert(!(tmp_left_name_22 == NULL));
-        tmp_right_name_21 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[476]);
+        assert(!(tmp_left_value_22 == NULL));
+        tmp_right_value_21 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[476]);
 
-        if (unlikely(tmp_right_name_21 == NULL)) {
-            tmp_right_name_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[476]);
+        if (unlikely(tmp_right_value_21 == NULL)) {
+            tmp_right_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[476]);
         }
 
-        assert(!(tmp_right_name_21 == NULL));
-        tmp_left_name_21 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_22, tmp_right_name_21);
-        assert(!(tmp_left_name_21 == NULL));
-        tmp_right_name_22 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[477]);
+        assert(!(tmp_right_value_21 == NULL));
+        tmp_left_value_21 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_22, tmp_right_value_21);
+        assert(!(tmp_left_value_21 == NULL));
+        tmp_right_value_22 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[477]);
 
-        if (unlikely(tmp_right_name_22 == NULL)) {
-            tmp_right_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[477]);
+        if (unlikely(tmp_right_value_22 == NULL)) {
+            tmp_right_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[477]);
         }
 
-        assert(!(tmp_right_name_22 == NULL));
-        tmp_assign_source_407 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_21, tmp_right_name_22);
-        Py_DECREF(tmp_left_name_21);
+        assert(!(tmp_right_value_22 == NULL));
+        tmp_assign_source_407 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_21, tmp_right_value_22);
+        Py_DECREF(tmp_left_value_21);
         assert(!(tmp_assign_source_407 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[478], tmp_assign_source_407);
     }
@@ -5310,17 +5314,17 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_825;
-        PyObject *tmp_left_name_23;
-        PyObject *tmp_right_name_23;
-        tmp_left_name_23 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[919]);
+        PyObject *tmp_left_value_23;
+        PyObject *tmp_right_value_23;
+        tmp_left_value_23 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[919]);
 
-        if (unlikely(tmp_left_name_23 == NULL)) {
-            tmp_left_name_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[919]);
+        if (unlikely(tmp_left_value_23 == NULL)) {
+            tmp_left_value_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[919]);
         }
 
-        assert(!(tmp_left_name_23 == NULL));
-        tmp_right_name_23 = mod_consts[11];
-        tmp_assign_source_825 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_23, tmp_right_name_23);
+        assert(!(tmp_left_value_23 == NULL));
+        tmp_right_value_23 = mod_consts[11];
+        tmp_assign_source_825 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_23, tmp_right_value_23);
         assert(!(tmp_assign_source_825 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[920], tmp_assign_source_825);
     }
@@ -5881,101 +5885,101 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_937;
-        PyObject *tmp_left_name_24;
-        PyObject *tmp_right_name_24;
-        tmp_left_name_24 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1036]);
+        PyObject *tmp_left_value_24;
+        PyObject *tmp_right_value_24;
+        tmp_left_value_24 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1036]);
 
-        if (unlikely(tmp_left_name_24 == NULL)) {
-            tmp_left_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1036]);
+        if (unlikely(tmp_left_value_24 == NULL)) {
+            tmp_left_value_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1036]);
         }
 
-        assert(!(tmp_left_name_24 == NULL));
-        tmp_right_name_24 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1038]);
+        assert(!(tmp_left_value_24 == NULL));
+        tmp_right_value_24 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1038]);
 
-        if (unlikely(tmp_right_name_24 == NULL)) {
-            tmp_right_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1038]);
+        if (unlikely(tmp_right_value_24 == NULL)) {
+            tmp_right_value_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1038]);
         }
 
-        assert(!(tmp_right_name_24 == NULL));
-        tmp_assign_source_937 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_24, tmp_right_name_24);
+        assert(!(tmp_right_value_24 == NULL));
+        tmp_assign_source_937 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_24, tmp_right_value_24);
         assert(!(tmp_assign_source_937 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1043], tmp_assign_source_937);
     }
     {
         PyObject *tmp_assign_source_938;
-        PyObject *tmp_left_name_25;
-        PyObject *tmp_left_name_26;
-        PyObject *tmp_right_name_25;
-        PyObject *tmp_right_name_26;
-        tmp_left_name_26 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1036]);
+        PyObject *tmp_left_value_25;
+        PyObject *tmp_left_value_26;
+        PyObject *tmp_right_value_25;
+        PyObject *tmp_right_value_26;
+        tmp_left_value_26 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1036]);
 
-        if (unlikely(tmp_left_name_26 == NULL)) {
-            tmp_left_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1036]);
+        if (unlikely(tmp_left_value_26 == NULL)) {
+            tmp_left_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1036]);
         }
 
-        assert(!(tmp_left_name_26 == NULL));
-        tmp_right_name_25 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1038]);
+        assert(!(tmp_left_value_26 == NULL));
+        tmp_right_value_25 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1038]);
 
-        if (unlikely(tmp_right_name_25 == NULL)) {
-            tmp_right_name_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1038]);
+        if (unlikely(tmp_right_value_25 == NULL)) {
+            tmp_right_value_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1038]);
         }
 
-        assert(!(tmp_right_name_25 == NULL));
-        tmp_left_name_25 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_26, tmp_right_name_25);
-        assert(!(tmp_left_name_25 == NULL));
-        tmp_right_name_26 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1042]);
+        assert(!(tmp_right_value_25 == NULL));
+        tmp_left_value_25 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_26, tmp_right_value_25);
+        assert(!(tmp_left_value_25 == NULL));
+        tmp_right_value_26 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1042]);
 
-        if (unlikely(tmp_right_name_26 == NULL)) {
-            tmp_right_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1042]);
+        if (unlikely(tmp_right_value_26 == NULL)) {
+            tmp_right_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1042]);
         }
 
-        assert(!(tmp_right_name_26 == NULL));
-        tmp_assign_source_938 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_25, tmp_right_name_26);
-        Py_DECREF(tmp_left_name_25);
+        assert(!(tmp_right_value_26 == NULL));
+        tmp_assign_source_938 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_25, tmp_right_value_26);
+        Py_DECREF(tmp_left_value_25);
         assert(!(tmp_assign_source_938 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1044], tmp_assign_source_938);
     }
     {
         PyObject *tmp_assign_source_939;
-        PyObject *tmp_left_name_27;
-        PyObject *tmp_right_name_27;
-        tmp_left_name_27 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1036]);
+        PyObject *tmp_left_value_27;
+        PyObject *tmp_right_value_27;
+        tmp_left_value_27 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1036]);
 
-        if (unlikely(tmp_left_name_27 == NULL)) {
-            tmp_left_name_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1036]);
+        if (unlikely(tmp_left_value_27 == NULL)) {
+            tmp_left_value_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1036]);
         }
 
-        assert(!(tmp_left_name_27 == NULL));
-        tmp_right_name_27 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1039]);
+        assert(!(tmp_left_value_27 == NULL));
+        tmp_right_value_27 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1039]);
 
-        if (unlikely(tmp_right_name_27 == NULL)) {
-            tmp_right_name_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1039]);
+        if (unlikely(tmp_right_value_27 == NULL)) {
+            tmp_right_value_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1039]);
         }
 
-        assert(!(tmp_right_name_27 == NULL));
-        tmp_assign_source_939 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_27, tmp_right_name_27);
+        assert(!(tmp_right_value_27 == NULL));
+        tmp_assign_source_939 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_27, tmp_right_value_27);
         assert(!(tmp_assign_source_939 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1045], tmp_assign_source_939);
     }
     {
         PyObject *tmp_assign_source_940;
-        PyObject *tmp_left_name_28;
-        PyObject *tmp_right_name_28;
-        tmp_left_name_28 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1037]);
+        PyObject *tmp_left_value_28;
+        PyObject *tmp_right_value_28;
+        tmp_left_value_28 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1037]);
 
-        if (unlikely(tmp_left_name_28 == NULL)) {
-            tmp_left_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1037]);
+        if (unlikely(tmp_left_value_28 == NULL)) {
+            tmp_left_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1037]);
         }
 
-        assert(!(tmp_left_name_28 == NULL));
-        tmp_right_name_28 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1039]);
+        assert(!(tmp_left_value_28 == NULL));
+        tmp_right_value_28 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1039]);
 
-        if (unlikely(tmp_right_name_28 == NULL)) {
-            tmp_right_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1039]);
+        if (unlikely(tmp_right_value_28 == NULL)) {
+            tmp_right_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1039]);
         }
 
-        assert(!(tmp_right_name_28 == NULL));
-        tmp_assign_source_940 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_28, tmp_right_name_28);
+        assert(!(tmp_right_value_28 == NULL));
+        tmp_assign_source_940 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_28, tmp_right_value_28);
         assert(!(tmp_assign_source_940 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1046], tmp_assign_source_940);
     }
@@ -6296,81 +6300,81 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_1004;
-        PyObject *tmp_left_name_29;
-        PyObject *tmp_left_name_30;
-        PyObject *tmp_right_name_29;
-        PyObject *tmp_right_name_30;
-        tmp_left_name_30 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1092]);
+        PyObject *tmp_left_value_29;
+        PyObject *tmp_left_value_30;
+        PyObject *tmp_right_value_29;
+        PyObject *tmp_right_value_30;
+        tmp_left_value_30 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1092]);
 
-        if (unlikely(tmp_left_name_30 == NULL)) {
-            tmp_left_name_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1092]);
+        if (unlikely(tmp_left_value_30 == NULL)) {
+            tmp_left_value_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1092]);
         }
 
-        assert(!(tmp_left_name_30 == NULL));
-        tmp_right_name_29 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1094]);
+        assert(!(tmp_left_value_30 == NULL));
+        tmp_right_value_29 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1094]);
 
-        if (unlikely(tmp_right_name_29 == NULL)) {
-            tmp_right_name_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1094]);
+        if (unlikely(tmp_right_value_29 == NULL)) {
+            tmp_right_value_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1094]);
         }
 
-        assert(!(tmp_right_name_29 == NULL));
-        tmp_left_name_29 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_30, tmp_right_name_29);
-        assert(!(tmp_left_name_29 == NULL));
-        tmp_right_name_30 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1093]);
+        assert(!(tmp_right_value_29 == NULL));
+        tmp_left_value_29 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_30, tmp_right_value_29);
+        assert(!(tmp_left_value_29 == NULL));
+        tmp_right_value_30 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1093]);
 
-        if (unlikely(tmp_right_name_30 == NULL)) {
-            tmp_right_name_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1093]);
+        if (unlikely(tmp_right_value_30 == NULL)) {
+            tmp_right_value_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1093]);
         }
 
-        assert(!(tmp_right_name_30 == NULL));
-        tmp_assign_source_1004 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_29, tmp_right_name_30);
-        Py_DECREF(tmp_left_name_29);
+        assert(!(tmp_right_value_30 == NULL));
+        tmp_assign_source_1004 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_29, tmp_right_value_30);
+        Py_DECREF(tmp_left_value_29);
         assert(!(tmp_assign_source_1004 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1095], tmp_assign_source_1004);
     }
     {
         PyObject *tmp_assign_source_1005;
-        PyObject *tmp_left_name_31;
-        PyObject *tmp_left_name_32;
-        PyObject *tmp_left_name_33;
-        PyObject *tmp_left_name_34;
-        PyObject *tmp_right_name_31;
-        PyObject *tmp_right_name_32;
-        PyObject *tmp_right_name_33;
-        PyObject *tmp_right_name_34;
-        tmp_left_name_34 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1092]);
+        PyObject *tmp_left_value_31;
+        PyObject *tmp_left_value_32;
+        PyObject *tmp_left_value_33;
+        PyObject *tmp_left_value_34;
+        PyObject *tmp_right_value_31;
+        PyObject *tmp_right_value_32;
+        PyObject *tmp_right_value_33;
+        PyObject *tmp_right_value_34;
+        tmp_left_value_34 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1092]);
 
-        if (unlikely(tmp_left_name_34 == NULL)) {
-            tmp_left_name_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1092]);
+        if (unlikely(tmp_left_value_34 == NULL)) {
+            tmp_left_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1092]);
         }
 
-        assert(!(tmp_left_name_34 == NULL));
-        tmp_right_name_31 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1094]);
+        assert(!(tmp_left_value_34 == NULL));
+        tmp_right_value_31 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1094]);
 
-        if (unlikely(tmp_right_name_31 == NULL)) {
-            tmp_right_name_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1094]);
+        if (unlikely(tmp_right_value_31 == NULL)) {
+            tmp_right_value_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1094]);
         }
 
-        assert(!(tmp_right_name_31 == NULL));
-        tmp_left_name_33 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_34, tmp_right_name_31);
-        assert(!(tmp_left_name_33 == NULL));
-        tmp_right_name_32 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1093]);
+        assert(!(tmp_right_value_31 == NULL));
+        tmp_left_value_33 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_34, tmp_right_value_31);
+        assert(!(tmp_left_value_33 == NULL));
+        tmp_right_value_32 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1093]);
 
-        if (unlikely(tmp_right_name_32 == NULL)) {
-            tmp_right_name_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1093]);
+        if (unlikely(tmp_right_value_32 == NULL)) {
+            tmp_right_value_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1093]);
         }
 
-        assert(!(tmp_right_name_32 == NULL));
-        tmp_left_name_32 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_33, tmp_right_name_32);
-        Py_DECREF(tmp_left_name_33);
-        assert(!(tmp_left_name_32 == NULL));
-        tmp_right_name_33 = mod_consts[79];
-        tmp_left_name_31 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_32, tmp_right_name_33);
-        Py_DECREF(tmp_left_name_32);
-        assert(!(tmp_left_name_31 == NULL));
-        tmp_right_name_34 = mod_consts[77];
-        tmp_assign_source_1005 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_31, tmp_right_name_34);
-        Py_DECREF(tmp_left_name_31);
+        assert(!(tmp_right_value_32 == NULL));
+        tmp_left_value_32 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_33, tmp_right_value_32);
+        Py_DECREF(tmp_left_value_33);
+        assert(!(tmp_left_value_32 == NULL));
+        tmp_right_value_33 = mod_consts[79];
+        tmp_left_value_31 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_32, tmp_right_value_33);
+        Py_DECREF(tmp_left_value_32);
+        assert(!(tmp_left_value_31 == NULL));
+        tmp_right_value_34 = mod_consts[77];
+        tmp_assign_source_1005 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_31, tmp_right_value_34);
+        Py_DECREF(tmp_left_value_31);
         assert(!(tmp_assign_source_1005 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1096], tmp_assign_source_1005);
     }
@@ -6391,35 +6395,35 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_1009;
-        PyObject *tmp_left_name_35;
-        PyObject *tmp_left_name_36;
-        PyObject *tmp_right_name_35;
-        PyObject *tmp_right_name_36;
-        tmp_left_name_36 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[475]);
+        PyObject *tmp_left_value_35;
+        PyObject *tmp_left_value_36;
+        PyObject *tmp_right_value_35;
+        PyObject *tmp_right_value_36;
+        tmp_left_value_36 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[475]);
 
-        if (unlikely(tmp_left_name_36 == NULL)) {
-            tmp_left_name_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[475]);
+        if (unlikely(tmp_left_value_36 == NULL)) {
+            tmp_left_value_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[475]);
         }
 
-        assert(!(tmp_left_name_36 == NULL));
-        tmp_right_name_35 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[476]);
+        assert(!(tmp_left_value_36 == NULL));
+        tmp_right_value_35 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[476]);
 
-        if (unlikely(tmp_right_name_35 == NULL)) {
-            tmp_right_name_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[476]);
+        if (unlikely(tmp_right_value_35 == NULL)) {
+            tmp_right_value_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[476]);
         }
 
-        assert(!(tmp_right_name_35 == NULL));
-        tmp_left_name_35 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_36, tmp_right_name_35);
-        assert(!(tmp_left_name_35 == NULL));
-        tmp_right_name_36 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[477]);
+        assert(!(tmp_right_value_35 == NULL));
+        tmp_left_value_35 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_36, tmp_right_value_35);
+        assert(!(tmp_left_value_35 == NULL));
+        tmp_right_value_36 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[477]);
 
-        if (unlikely(tmp_right_name_36 == NULL)) {
-            tmp_right_name_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[477]);
+        if (unlikely(tmp_right_value_36 == NULL)) {
+            tmp_right_value_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[477]);
         }
 
-        assert(!(tmp_right_name_36 == NULL));
-        tmp_assign_source_1009 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_35, tmp_right_name_36);
-        Py_DECREF(tmp_left_name_35);
+        assert(!(tmp_right_value_36 == NULL));
+        tmp_assign_source_1009 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_35, tmp_right_value_36);
+        Py_DECREF(tmp_left_value_35);
         assert(!(tmp_assign_source_1009 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[478], tmp_assign_source_1009);
     }
@@ -6535,179 +6539,179 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_1032;
-        PyObject *tmp_left_name_37;
-        PyObject *tmp_left_name_38;
-        PyObject *tmp_left_name_39;
-        PyObject *tmp_left_name_40;
-        PyObject *tmp_left_name_41;
-        PyObject *tmp_left_name_42;
-        PyObject *tmp_left_name_43;
-        PyObject *tmp_left_name_44;
-        PyObject *tmp_left_name_45;
-        PyObject *tmp_left_name_46;
-        PyObject *tmp_left_name_47;
-        PyObject *tmp_left_name_48;
-        PyObject *tmp_left_name_49;
-        PyObject *tmp_left_name_50;
-        PyObject *tmp_right_name_37;
-        PyObject *tmp_right_name_38;
-        PyObject *tmp_right_name_39;
-        PyObject *tmp_right_name_40;
-        PyObject *tmp_right_name_41;
-        PyObject *tmp_right_name_42;
-        PyObject *tmp_right_name_43;
-        PyObject *tmp_right_name_44;
-        PyObject *tmp_right_name_45;
-        PyObject *tmp_right_name_46;
-        PyObject *tmp_right_name_47;
-        PyObject *tmp_right_name_48;
-        PyObject *tmp_right_name_49;
-        PyObject *tmp_right_name_50;
-        tmp_left_name_50 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[485]);
+        PyObject *tmp_left_value_37;
+        PyObject *tmp_left_value_38;
+        PyObject *tmp_left_value_39;
+        PyObject *tmp_left_value_40;
+        PyObject *tmp_left_value_41;
+        PyObject *tmp_left_value_42;
+        PyObject *tmp_left_value_43;
+        PyObject *tmp_left_value_44;
+        PyObject *tmp_left_value_45;
+        PyObject *tmp_left_value_46;
+        PyObject *tmp_left_value_47;
+        PyObject *tmp_left_value_48;
+        PyObject *tmp_left_value_49;
+        PyObject *tmp_left_value_50;
+        PyObject *tmp_right_value_37;
+        PyObject *tmp_right_value_38;
+        PyObject *tmp_right_value_39;
+        PyObject *tmp_right_value_40;
+        PyObject *tmp_right_value_41;
+        PyObject *tmp_right_value_42;
+        PyObject *tmp_right_value_43;
+        PyObject *tmp_right_value_44;
+        PyObject *tmp_right_value_45;
+        PyObject *tmp_right_value_46;
+        PyObject *tmp_right_value_47;
+        PyObject *tmp_right_value_48;
+        PyObject *tmp_right_value_49;
+        PyObject *tmp_right_value_50;
+        tmp_left_value_50 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[485]);
 
-        if (unlikely(tmp_left_name_50 == NULL)) {
-            tmp_left_name_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[485]);
+        if (unlikely(tmp_left_value_50 == NULL)) {
+            tmp_left_value_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[485]);
         }
 
-        assert(!(tmp_left_name_50 == NULL));
-        tmp_right_name_37 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[486]);
+        assert(!(tmp_left_value_50 == NULL));
+        tmp_right_value_37 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[486]);
 
-        if (unlikely(tmp_right_name_37 == NULL)) {
-            tmp_right_name_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[486]);
+        if (unlikely(tmp_right_value_37 == NULL)) {
+            tmp_right_value_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[486]);
         }
 
-        assert(!(tmp_right_name_37 == NULL));
-        tmp_left_name_49 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_50, tmp_right_name_37);
-        assert(!(tmp_left_name_49 == NULL));
-        tmp_right_name_38 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[487]);
+        assert(!(tmp_right_value_37 == NULL));
+        tmp_left_value_49 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_50, tmp_right_value_37);
+        assert(!(tmp_left_value_49 == NULL));
+        tmp_right_value_38 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[487]);
 
-        if (unlikely(tmp_right_name_38 == NULL)) {
-            tmp_right_name_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[487]);
+        if (unlikely(tmp_right_value_38 == NULL)) {
+            tmp_right_value_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[487]);
         }
 
-        assert(!(tmp_right_name_38 == NULL));
-        tmp_left_name_48 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_49, tmp_right_name_38);
-        Py_DECREF(tmp_left_name_49);
-        assert(!(tmp_left_name_48 == NULL));
-        tmp_right_name_39 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[488]);
+        assert(!(tmp_right_value_38 == NULL));
+        tmp_left_value_48 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_49, tmp_right_value_38);
+        Py_DECREF(tmp_left_value_49);
+        assert(!(tmp_left_value_48 == NULL));
+        tmp_right_value_39 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[488]);
 
-        if (unlikely(tmp_right_name_39 == NULL)) {
-            tmp_right_name_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[488]);
+        if (unlikely(tmp_right_value_39 == NULL)) {
+            tmp_right_value_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[488]);
         }
 
-        assert(!(tmp_right_name_39 == NULL));
-        tmp_left_name_47 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_48, tmp_right_name_39);
-        Py_DECREF(tmp_left_name_48);
-        assert(!(tmp_left_name_47 == NULL));
-        tmp_right_name_40 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[489]);
+        assert(!(tmp_right_value_39 == NULL));
+        tmp_left_value_47 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_48, tmp_right_value_39);
+        Py_DECREF(tmp_left_value_48);
+        assert(!(tmp_left_value_47 == NULL));
+        tmp_right_value_40 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[489]);
 
-        if (unlikely(tmp_right_name_40 == NULL)) {
-            tmp_right_name_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[489]);
+        if (unlikely(tmp_right_value_40 == NULL)) {
+            tmp_right_value_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[489]);
         }
 
-        assert(!(tmp_right_name_40 == NULL));
-        tmp_left_name_46 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_47, tmp_right_name_40);
-        Py_DECREF(tmp_left_name_47);
-        assert(!(tmp_left_name_46 == NULL));
-        tmp_right_name_41 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[491]);
+        assert(!(tmp_right_value_40 == NULL));
+        tmp_left_value_46 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_47, tmp_right_value_40);
+        Py_DECREF(tmp_left_value_47);
+        assert(!(tmp_left_value_46 == NULL));
+        tmp_right_value_41 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[491]);
 
-        if (unlikely(tmp_right_name_41 == NULL)) {
-            tmp_right_name_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[491]);
+        if (unlikely(tmp_right_value_41 == NULL)) {
+            tmp_right_value_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[491]);
         }
 
-        assert(!(tmp_right_name_41 == NULL));
-        tmp_left_name_45 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_46, tmp_right_name_41);
-        Py_DECREF(tmp_left_name_46);
-        assert(!(tmp_left_name_45 == NULL));
-        tmp_right_name_42 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[492]);
+        assert(!(tmp_right_value_41 == NULL));
+        tmp_left_value_45 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_46, tmp_right_value_41);
+        Py_DECREF(tmp_left_value_46);
+        assert(!(tmp_left_value_45 == NULL));
+        tmp_right_value_42 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[492]);
 
-        if (unlikely(tmp_right_name_42 == NULL)) {
-            tmp_right_name_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[492]);
+        if (unlikely(tmp_right_value_42 == NULL)) {
+            tmp_right_value_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[492]);
         }
 
-        assert(!(tmp_right_name_42 == NULL));
-        tmp_left_name_44 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_45, tmp_right_name_42);
-        Py_DECREF(tmp_left_name_45);
-        assert(!(tmp_left_name_44 == NULL));
-        tmp_right_name_43 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[493]);
+        assert(!(tmp_right_value_42 == NULL));
+        tmp_left_value_44 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_45, tmp_right_value_42);
+        Py_DECREF(tmp_left_value_45);
+        assert(!(tmp_left_value_44 == NULL));
+        tmp_right_value_43 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[493]);
 
-        if (unlikely(tmp_right_name_43 == NULL)) {
-            tmp_right_name_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[493]);
+        if (unlikely(tmp_right_value_43 == NULL)) {
+            tmp_right_value_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[493]);
         }
 
-        assert(!(tmp_right_name_43 == NULL));
-        tmp_left_name_43 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_44, tmp_right_name_43);
-        Py_DECREF(tmp_left_name_44);
-        assert(!(tmp_left_name_43 == NULL));
-        tmp_right_name_44 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[494]);
+        assert(!(tmp_right_value_43 == NULL));
+        tmp_left_value_43 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_44, tmp_right_value_43);
+        Py_DECREF(tmp_left_value_44);
+        assert(!(tmp_left_value_43 == NULL));
+        tmp_right_value_44 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[494]);
 
-        if (unlikely(tmp_right_name_44 == NULL)) {
-            tmp_right_name_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[494]);
+        if (unlikely(tmp_right_value_44 == NULL)) {
+            tmp_right_value_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[494]);
         }
 
-        assert(!(tmp_right_name_44 == NULL));
-        tmp_left_name_42 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_43, tmp_right_name_44);
-        Py_DECREF(tmp_left_name_43);
-        assert(!(tmp_left_name_42 == NULL));
-        tmp_right_name_45 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[495]);
+        assert(!(tmp_right_value_44 == NULL));
+        tmp_left_value_42 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_43, tmp_right_value_44);
+        Py_DECREF(tmp_left_value_43);
+        assert(!(tmp_left_value_42 == NULL));
+        tmp_right_value_45 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[495]);
 
-        if (unlikely(tmp_right_name_45 == NULL)) {
-            tmp_right_name_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[495]);
+        if (unlikely(tmp_right_value_45 == NULL)) {
+            tmp_right_value_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[495]);
         }
 
-        assert(!(tmp_right_name_45 == NULL));
-        tmp_left_name_41 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_42, tmp_right_name_45);
-        Py_DECREF(tmp_left_name_42);
-        assert(!(tmp_left_name_41 == NULL));
-        tmp_right_name_46 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[490]);
+        assert(!(tmp_right_value_45 == NULL));
+        tmp_left_value_41 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_42, tmp_right_value_45);
+        Py_DECREF(tmp_left_value_42);
+        assert(!(tmp_left_value_41 == NULL));
+        tmp_right_value_46 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[490]);
 
-        if (unlikely(tmp_right_name_46 == NULL)) {
-            tmp_right_name_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[490]);
+        if (unlikely(tmp_right_value_46 == NULL)) {
+            tmp_right_value_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[490]);
         }
 
-        assert(!(tmp_right_name_46 == NULL));
-        tmp_left_name_40 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_41, tmp_right_name_46);
-        Py_DECREF(tmp_left_name_41);
-        assert(!(tmp_left_name_40 == NULL));
-        tmp_right_name_47 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[496]);
+        assert(!(tmp_right_value_46 == NULL));
+        tmp_left_value_40 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_41, tmp_right_value_46);
+        Py_DECREF(tmp_left_value_41);
+        assert(!(tmp_left_value_40 == NULL));
+        tmp_right_value_47 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[496]);
 
-        if (unlikely(tmp_right_name_47 == NULL)) {
-            tmp_right_name_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[496]);
+        if (unlikely(tmp_right_value_47 == NULL)) {
+            tmp_right_value_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[496]);
         }
 
-        assert(!(tmp_right_name_47 == NULL));
-        tmp_left_name_39 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_40, tmp_right_name_47);
-        Py_DECREF(tmp_left_name_40);
-        assert(!(tmp_left_name_39 == NULL));
-        tmp_right_name_48 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1098]);
+        assert(!(tmp_right_value_47 == NULL));
+        tmp_left_value_39 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_40, tmp_right_value_47);
+        Py_DECREF(tmp_left_value_40);
+        assert(!(tmp_left_value_39 == NULL));
+        tmp_right_value_48 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1098]);
 
-        if (unlikely(tmp_right_name_48 == NULL)) {
-            tmp_right_name_48 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1098]);
+        if (unlikely(tmp_right_value_48 == NULL)) {
+            tmp_right_value_48 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1098]);
         }
 
-        assert(!(tmp_right_name_48 == NULL));
-        tmp_left_name_38 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_39, tmp_right_name_48);
-        Py_DECREF(tmp_left_name_39);
-        assert(!(tmp_left_name_38 == NULL));
-        tmp_right_name_49 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1099]);
+        assert(!(tmp_right_value_48 == NULL));
+        tmp_left_value_38 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_39, tmp_right_value_48);
+        Py_DECREF(tmp_left_value_39);
+        assert(!(tmp_left_value_38 == NULL));
+        tmp_right_value_49 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1099]);
 
-        if (unlikely(tmp_right_name_49 == NULL)) {
-            tmp_right_name_49 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1099]);
+        if (unlikely(tmp_right_value_49 == NULL)) {
+            tmp_right_value_49 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1099]);
         }
 
-        assert(!(tmp_right_name_49 == NULL));
-        tmp_left_name_37 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_38, tmp_right_name_49);
-        Py_DECREF(tmp_left_name_38);
-        assert(!(tmp_left_name_37 == NULL));
-        tmp_right_name_50 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1100]);
+        assert(!(tmp_right_value_49 == NULL));
+        tmp_left_value_37 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_38, tmp_right_value_49);
+        Py_DECREF(tmp_left_value_38);
+        assert(!(tmp_left_value_37 == NULL));
+        tmp_right_value_50 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1100]);
 
-        if (unlikely(tmp_right_name_50 == NULL)) {
-            tmp_right_name_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1100]);
+        if (unlikely(tmp_right_value_50 == NULL)) {
+            tmp_right_value_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1100]);
         }
 
-        assert(!(tmp_right_name_50 == NULL));
-        tmp_assign_source_1032 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_37, tmp_right_name_50);
-        Py_DECREF(tmp_left_name_37);
+        assert(!(tmp_right_value_50 == NULL));
+        tmp_assign_source_1032 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_37, tmp_right_value_50);
+        Py_DECREF(tmp_left_value_37);
         assert(!(tmp_assign_source_1032 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1101], tmp_assign_source_1032);
     }
@@ -7353,35 +7357,35 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_1161;
-        PyObject *tmp_left_name_51;
-        PyObject *tmp_right_name_51;
-        tmp_left_name_51 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1246]);
+        PyObject *tmp_left_value_51;
+        PyObject *tmp_right_value_51;
+        tmp_left_value_51 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1246]);
 
-        if (unlikely(tmp_left_name_51 == NULL)) {
-            tmp_left_name_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1246]);
+        if (unlikely(tmp_left_value_51 == NULL)) {
+            tmp_left_value_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1246]);
         }
 
-        assert(!(tmp_left_name_51 == NULL));
-        tmp_right_name_51 = LIST_COPY(mod_consts[1247]);
-        tmp_assign_source_1161 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_name_51, tmp_right_name_51);
-        Py_DECREF(tmp_right_name_51);
+        assert(!(tmp_left_value_51 == NULL));
+        tmp_right_value_51 = LIST_COPY(mod_consts[1247]);
+        tmp_assign_source_1161 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_value_51, tmp_right_value_51);
+        Py_DECREF(tmp_right_value_51);
         assert(!(tmp_assign_source_1161 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1248], tmp_assign_source_1161);
     }
     {
         PyObject *tmp_assign_source_1162;
-        PyObject *tmp_left_name_52;
-        PyObject *tmp_right_name_52;
-        tmp_left_name_52 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1248]);
+        PyObject *tmp_left_value_52;
+        PyObject *tmp_right_value_52;
+        tmp_left_value_52 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1248]);
 
-        if (unlikely(tmp_left_name_52 == NULL)) {
-            tmp_left_name_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1248]);
+        if (unlikely(tmp_left_value_52 == NULL)) {
+            tmp_left_value_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1248]);
         }
 
-        assert(!(tmp_left_name_52 == NULL));
-        tmp_right_name_52 = LIST_COPY(mod_consts[1249]);
-        tmp_assign_source_1162 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_name_52, tmp_right_name_52);
-        Py_DECREF(tmp_right_name_52);
+        assert(!(tmp_left_value_52 == NULL));
+        tmp_right_value_52 = LIST_COPY(mod_consts[1249]);
+        tmp_assign_source_1162 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_value_52, tmp_right_value_52);
+        Py_DECREF(tmp_right_value_52);
         assert(!(tmp_assign_source_1162 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1250], tmp_assign_source_1162);
     }
@@ -7392,18 +7396,18 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_1164;
-        PyObject *tmp_left_name_53;
-        PyObject *tmp_right_name_53;
-        tmp_left_name_53 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1244]);
+        PyObject *tmp_left_value_53;
+        PyObject *tmp_right_value_53;
+        tmp_left_value_53 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1244]);
 
-        if (unlikely(tmp_left_name_53 == NULL)) {
-            tmp_left_name_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1244]);
+        if (unlikely(tmp_left_value_53 == NULL)) {
+            tmp_left_value_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1244]);
         }
 
-        assert(!(tmp_left_name_53 == NULL));
-        tmp_right_name_53 = LIST_COPY(mod_consts[1252]);
-        tmp_assign_source_1164 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_name_53, tmp_right_name_53);
-        Py_DECREF(tmp_right_name_53);
+        assert(!(tmp_left_value_53 == NULL));
+        tmp_right_value_53 = LIST_COPY(mod_consts[1252]);
+        tmp_assign_source_1164 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_value_53, tmp_right_value_53);
+        Py_DECREF(tmp_right_value_53);
         assert(!(tmp_assign_source_1164 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1253], tmp_assign_source_1164);
     }
@@ -7414,18 +7418,18 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_1166;
-        PyObject *tmp_left_name_54;
-        PyObject *tmp_right_name_54;
-        tmp_left_name_54 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1255]);
+        PyObject *tmp_left_value_54;
+        PyObject *tmp_right_value_54;
+        tmp_left_value_54 = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1255]);
 
-        if (unlikely(tmp_left_name_54 == NULL)) {
-            tmp_left_name_54 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1255]);
+        if (unlikely(tmp_left_value_54 == NULL)) {
+            tmp_left_value_54 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1255]);
         }
 
-        assert(!(tmp_left_name_54 == NULL));
-        tmp_right_name_54 = LIST_COPY(mod_consts[1256]);
-        tmp_assign_source_1166 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_name_54, tmp_right_name_54);
-        Py_DECREF(tmp_right_name_54);
+        assert(!(tmp_left_value_54 == NULL));
+        tmp_right_value_54 = LIST_COPY(mod_consts[1256]);
+        tmp_assign_source_1166 = BINARY_OPERATION_ADD_OBJECT_LIST_LIST(tmp_left_value_54, tmp_right_value_54);
+        Py_DECREF(tmp_right_value_54);
         assert(!(tmp_assign_source_1166 == NULL));
         UPDATE_STRING_DICT1(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1257], tmp_assign_source_1166);
     }
@@ -9115,9 +9119,23 @@ PyObject *modulecode_win32com$shell$shellcon(PyObject *module, struct Nuitka_Met
         UPDATE_STRING_DICT0(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)mod_consts[1828], tmp_assign_source_1503);
     }
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("win32com.shell.shellcon", false);
+
     return module_win32com$shell$shellcon;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_win32com$shell$shellcon, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("win32com$shell$shellcon", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

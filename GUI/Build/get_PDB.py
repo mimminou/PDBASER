@@ -16,7 +16,7 @@ def isThereInternet():
     return False
 
 
-def getPDBFromFTP(output_DIR, PDB_FILE):
+def getPDBFromFTP(input_DIR, PDB_FILE):
     if not isThereInternet():
         return 1
     pdbFile = PDBList()
@@ -25,7 +25,7 @@ def getPDBFromFTP(output_DIR, PDB_FILE):
     ExistsString = "Structure exists"
     try:
         with redirect_stdout(f):
-            pdbFile.retrieve_pdb_file(PDB_FILE,False,output_DIR,"pdb",False)
+            pdbFile.retrieve_pdb_file(PDB_FILE,False,input_DIR,"pdb",False)
         returnString = f.getvalue()
         if ExistsString in returnString:   # CHECK IF FILE EXIST
             print(returnString)

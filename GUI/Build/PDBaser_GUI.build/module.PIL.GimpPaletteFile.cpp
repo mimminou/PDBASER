@@ -1,5 +1,5 @@
 /* Generated code for Python module 'PIL.GimpPaletteFile'
- * created by Nuitka version 0.6.17.3
+ * created by Nuitka version 0.7
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_PIL$GimpPaletteFile;
 PyDictObject *moduledict_PIL$GimpPaletteFile;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[57];
+static PyObject *mod_consts[58];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[57];
+static Py_hash_t mod_consts_hash[58];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 57; i++) {
+        for(int i = 0; i < 58; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_PIL$GimpPaletteFile(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 57; i++) {
+    for(int i = 0; i < 58; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -267,19 +267,19 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
         {
             PyObject *tmp_append_list_1;
             PyObject *tmp_append_value_1;
-            PyObject *tmp_left_name_1;
-            PyObject *tmp_called_name_1;
-            PyObject *tmp_args_element_name_1;
-            PyObject *tmp_right_name_1;
+            PyObject *tmp_left_value_1;
+            PyObject *tmp_called_value_1;
+            PyObject *tmp_args_element_value_1;
+            PyObject *tmp_right_value_1;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
-            tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
+            tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
 
-            if (unlikely(tmp_called_name_1 == NULL)) {
-                tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
+            if (unlikely(tmp_called_value_1 == NULL)) {
+                tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
             }
 
-            if (tmp_called_name_1 == NULL) {
+            if (tmp_called_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -290,10 +290,10 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
                 goto try_except_handler_3;
             }
             CHECK_OBJECT(outline_0_var_i);
-            tmp_args_element_name_1 = outline_0_var_i;
+            tmp_args_element_value_1 = outline_0_var_i;
             frame_5e596c9fbf8d9c8812494051ea4ab4a1_2->m_frame.f_lineno = 29;
-            tmp_left_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-            if (tmp_left_name_1 == NULL) {
+            tmp_left_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+            if (tmp_left_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -303,9 +303,9 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
                 type_description_2 = "o";
                 goto try_except_handler_3;
             }
-            tmp_right_name_1 = mod_consts[2];
-            tmp_append_value_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_name_1, tmp_right_name_1);
-            Py_DECREF(tmp_left_name_1);
+            tmp_right_value_1 = mod_consts[2];
+            tmp_append_value_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_value_1, tmp_right_value_1);
+            Py_DECREF(tmp_left_value_1);
             if (tmp_append_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -501,16 +501,16 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_fp);
         tmp_called_instance_1 = par_fp;
         frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 31;
-        tmp_expression_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[4]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[4]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -520,10 +520,10 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[5];
-        tmp_compexpr_left_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_subscript_value_1 = mod_consts[5];
+        tmp_cmp_expr_left_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -533,9 +533,9 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[6];
-        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_BYTES(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = mod_consts[6];
+        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_BYTES(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -653,11 +653,11 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
 
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
         CHECK_OBJECT(var_s);
-        tmp_operand_name_1 = var_s;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = var_s;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -668,8 +668,8 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -682,8 +682,8 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
         nuitka_bool tmp_condition_result_3;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         int tmp_truth_name_1;
         tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[9]);
 
@@ -701,12 +701,12 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_args_element_name_2 = mod_consts[11];
+        tmp_args_element_value_2 = mod_consts[11];
         CHECK_OBJECT(var_s);
-        tmp_args_element_name_3 = var_s;
+        tmp_args_element_value_3 = var_s;
         frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 41;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_3,
                 mod_consts[10],
@@ -748,14 +748,13 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_4_object_1;
         CHECK_OBJECT(var_s);
         tmp_len_arg_1 = var_s;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -765,12 +764,9 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_2 = mod_consts[12];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_4_object_1 == NULL));
-        tmp_condition_result_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[12];
+        tmp_condition_result_4 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -795,19 +791,19 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_tuple_arg_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_instance_4;
-        PyObject *tmp_subscript_name_2;
-        tmp_called_name_2 = (PyObject *)&PyMap_Type;
-        tmp_args_element_name_4 = (PyObject *)&PyLong_Type;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_2;
+        tmp_called_value_2 = (PyObject *)&PyMap_Type;
+        tmp_args_element_value_4 = (PyObject *)&PyLong_Type;
         CHECK_OBJECT(var_s);
-        tmp_called_instance_4 = var_s;
-        frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 46;
-        tmp_expression_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[14]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = var_s;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[14]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -817,10 +813,23 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_subscript_name_2 = mod_consts[15];
-        tmp_args_element_name_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_args_element_name_5 == NULL) {
+        frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 46;
+        tmp_expression_value_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_3);
+        Py_DECREF(tmp_called_value_3);
+        if (tmp_expression_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 46;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_subscript_value_2 = mod_consts[15];
+        tmp_args_element_value_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -832,11 +841,11 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
         }
         frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 46;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_tuple_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_tuple_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_tuple_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -868,20 +877,16 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
     }
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_5_object_1;
         CHECK_OBJECT(var_v);
         tmp_len_arg_2 = var_v;
-        tmp_compexpr_left_3 = BUILTIN_LEN(tmp_len_arg_2);
-        assert(!(tmp_compexpr_left_3 == NULL));
-        tmp_compexpr_right_3 = mod_consts[2];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        assert(!(tmp_tmp_condition_result_5_object_1 == NULL));
-        tmp_condition_result_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
+        tmp_cmp_expr_left_3 = BUILTIN_LEN(tmp_len_arg_2);
+        assert(!(tmp_cmp_expr_left_3 == NULL));
+        tmp_cmp_expr_right_3 = mod_consts[2];
+        tmp_condition_result_5 = RICH_COMPARE_NE_CBOOL_LONG_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -905,32 +910,32 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
     branch_no_5:;
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_5;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_5;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_ass_subscript_1;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -941,10 +946,10 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_v);
-        tmp_expression_name_3 = var_v;
-        tmp_subscript_name_3 = mod_consts[17];
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_3, 0);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_expression_value_4 = var_v;
+        tmp_subscript_value_3 = mod_consts[17];
+        tmp_args_element_value_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_3, 0);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -955,9 +960,9 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_4;
         }
         frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 50;
-        tmp_left_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_6);
-        Py_DECREF(tmp_args_element_name_6);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_6);
+        Py_DECREF(tmp_args_element_value_6);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -967,53 +972,53 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_3);
+            Py_DECREF(tmp_left_value_3);
 
             exception_lineno = 50;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_v);
-        tmp_expression_name_4 = var_v;
-        tmp_subscript_name_4 = mod_consts[18];
-        tmp_args_element_name_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 1);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_expression_value_5 = var_v;
+        tmp_subscript_value_4 = mod_consts[18];
+        tmp_args_element_value_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_4, 1);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_3);
+            Py_DECREF(tmp_left_value_3);
 
             exception_lineno = 50;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 50;
-        tmp_right_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_7);
-        Py_DECREF(tmp_args_element_name_7);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_7);
+        Py_DECREF(tmp_args_element_value_7);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_3);
+            Py_DECREF(tmp_left_value_3);
 
             exception_lineno = 50;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_3);
-        Py_DECREF(tmp_right_name_2);
-        if (tmp_left_name_2 == NULL) {
+        tmp_left_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_3);
+        Py_DECREF(tmp_right_value_2);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1023,52 +1028,52 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)mod_consts[1]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[1]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 50;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_v);
-        tmp_expression_name_5 = var_v;
-        tmp_subscript_name_5 = mod_consts[19];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_5, 2);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_expression_value_6 = var_v;
+        tmp_subscript_value_5 = mod_consts[19];
+        tmp_args_element_value_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_6, tmp_subscript_value_5, 2);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 50;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 50;
-        tmp_right_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_8);
-        Py_DECREF(tmp_args_element_name_8);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_8);
+        Py_DECREF(tmp_args_element_value_8);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 50;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_ass_subvalue_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_2);
-        Py_DECREF(tmp_right_name_3);
+        tmp_ass_subvalue_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_2);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1091,8 +1096,8 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_6 = par_self;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[3]);
+        tmp_expression_value_7 = par_self;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[3]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1164,16 +1169,16 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
     tmp_for_loop_1__for_iterator = NULL;
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_assattr_target_2;
-        tmp_expression_name_7 = mod_consts[21];
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[22]);
-        assert(!(tmp_called_name_6 == NULL));
+        tmp_expression_value_8 = mod_consts[21];
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[22]);
+        assert(!(tmp_called_value_7 == NULL));
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_7);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -1184,22 +1189,22 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__1___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = par_self;
-        tmp_args_element_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[3]);
-        if (tmp_args_element_name_9 == NULL) {
+        tmp_expression_value_9 = par_self;
+        tmp_args_element_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[3]);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 52;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         frame_16f0fbed10c8b2e8311721ff96d84766->m_frame.f_lineno = 52;
-        tmp_assattr_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_9);
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_9);
+        tmp_assattr_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_9);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1404,10 +1409,10 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__2_getpalette(struct Nuitka
     // Framed code:
     {
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[3]);
+        tmp_expression_value_1 = par_self;
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[3]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1420,11 +1425,11 @@ static PyObject *impl_PIL$GimpPaletteFile$$$function__2_getpalette(struct Nuitka
         }
         tmp_return_value = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_2;
+            PyObject *tmp_expression_value_2;
             PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_1);
             CHECK_OBJECT(par_self);
-            tmp_expression_name_2 = par_self;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[23]);
+            tmp_expression_value_2 = par_self;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[23]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -1749,63 +1754,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("PIL.GimpPaletteFile");
+
+    // Store the module for future use.
     module_PIL$GimpPaletteFile = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("PIL.GimpPaletteFile: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("PIL.GimpPaletteFile: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("PIL.GimpPaletteFile: Calling createModuleConstants().\n");
+        PRINT_STRING("PIL.GimpPaletteFile: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("PIL.GimpPaletteFile: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("PIL.GimpPaletteFile: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initPIL$GimpPaletteFile\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_PIL$GimpPaletteFile = MODULE_DICT(module_PIL$GimpPaletteFile);
 
@@ -1826,7 +1835,7 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
         UPDATE_STRING_DICT0(
             moduledict_PIL$GimpPaletteFile,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[57]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)const_str_plain___name__);
@@ -1876,7 +1885,7 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -2027,18 +2036,18 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[9];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_PIL$GimpPaletteFile;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[17];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[9];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_PIL$GimpPaletteFile;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[17];
         frame_5f930d266f1d860e7074e0865947af74->m_frame.f_lineno = 17;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2054,18 +2063,18 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[30];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_PIL$GimpPaletteFile;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[31];
-        tmp_level_name_2 = mod_consts[18];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[30];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_PIL$GimpPaletteFile;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[31];
+        tmp_level_value_2 = mod_consts[18];
         frame_5f930d266f1d860e7074e0865947af74->m_frame.f_lineno = 19;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2109,47 +2118,39 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     // Tried code:
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[32];
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[32];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[32];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 22;
-
-            goto try_except_handler_1;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[32];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
         goto condexpr_end_1;
         condexpr_false_1:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
         condexpr_end_1:;
-        tmp_bases_name_1 = mod_consts[33];
-        tmp_assign_source_7 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = mod_consts[33];
+        tmp_assign_source_7 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2164,16 +2165,16 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_1__metaclass = tmp_assign_source_7;
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[32];
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[32];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -2197,10 +2198,10 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_1 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_1, mod_consts[34]);
+        tmp_expression_value_1 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_1, mod_consts[34]);
         tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -2211,14 +2212,14 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[34]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[34]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2228,12 +2229,12 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        tmp_args_name_1 = mod_consts[35];
+        tmp_args_value_1 = mod_consts[35];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_5f930d266f1d860e7074e0865947af74->m_frame.f_lineno = 22;
-        tmp_assign_source_8 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_8 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2248,14 +2249,14 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_1__prepared = tmp_assign_source_8;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_3;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_3 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[36]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_3 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[36]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2266,8 +2267,8 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -2277,14 +2278,14 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[37];
+        tmp_left_value_1 = mod_consts[37];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
         tmp_getattr_attr_1 = mod_consts[38];
@@ -2300,17 +2301,17 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_4;
+            PyObject *tmp_expression_value_4;
             PyObject *tmp_type_arg_1;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_1 = tmp_class_creation_1__prepared;
-            tmp_expression_name_4 = BUILTIN_TYPE1(tmp_type_arg_1);
-            assert(!(tmp_expression_name_4 == NULL));
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[38]);
-            Py_DECREF(tmp_expression_name_4);
+            tmp_expression_value_4 = BUILTIN_TYPE1(tmp_type_arg_1);
+            assert(!(tmp_expression_value_4 == NULL));
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[38]);
+            Py_DECREF(tmp_expression_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2321,17 +2322,17 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2535,24 +2536,24 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
         skip_nested_handling_1:;
         {
             PyObject *tmp_assign_source_11;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_2;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
             tmp_tuple_element_2 = mod_consts[43];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_2);
             tmp_tuple_element_2 = mod_consts[33];
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_2);
             tmp_tuple_element_2 = locals_PIL$GimpPaletteFile$$$class__1_GimpPaletteFile_22;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_2);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_5f930d266f1d860e7074e0865947af74->m_frame.f_lineno = 22;
-            tmp_assign_source_11 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_11 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2645,9 +2646,11 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     Py_XDECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
@@ -2689,17 +2692,33 @@ PyObject *modulecode_PIL$GimpPaletteFile(PyObject *module, struct Nuitka_MetaPat
     goto module_exception_exit;
 
     frame_no_exception_2:;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("PIL.GimpPaletteFile", false);
+
     return module_PIL$GimpPaletteFile;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_PIL$GimpPaletteFile, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("PIL$GimpPaletteFile", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

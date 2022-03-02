@@ -1,5 +1,5 @@
 /* Generated code for Python module 'Bio.PDB.Polypeptide'
- * created by Nuitka version 0.6.17.3
+ * created by Nuitka version 0.7
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_Bio$PDB$Polypeptide;
 PyDictObject *moduledict_Bio$PDB$Polypeptide;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[204];
+static PyObject *mod_consts[200];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[204];
+static Py_hash_t mod_consts_hash[200];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 204; i++) {
+        for(int i = 0; i < 200; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_Bio$PDB$Polypeptide(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 204; i++) {
+    for(int i = 0; i < 200; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -78,7 +78,7 @@ void checkModuleConstants_Bio$PDB$Polypeptide(void) {
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_b472c6f84ec5182b06b6e29a02931d68;
+static PyCodeObject *codeobj_d484da71a86ca8ab0679ab38953dd2ac;
 static PyCodeObject *codeobj_1c1135bdc2cdd1cf7950c77fb28d04e1;
 static PyCodeObject *codeobj_b22d6c0b62b0708b234c78e82d32255e;
 static PyCodeObject *codeobj_a2b6eaaff4a41badf3763569721a557e;
@@ -109,40 +109,43 @@ static PyCodeObject *codeobj_0070d31738f6d29a0b38f9e1ee9ec89a;
 static PyCodeObject *codeobj_7c2a6fe45de74e403d39d1db608e7fcb;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[181]); CHECK_OBJECT(module_filename_obj);
-    codeobj_b472c6f84ec5182b06b6e29a02931d68 = MAKE_CODEOBJECT(module_filename_obj, 302, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[58], mod_consts[182], NULL, 1, 0, 0);
-    codeobj_1c1135bdc2cdd1cf7950c77fb28d04e1 = MAKE_CODEOBJECT(module_filename_obj, 273, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[183], mod_consts[184], NULL, 1, 0, 0);
-    codeobj_b22d6c0b62b0708b234c78e82d32255e = MAKE_CODEOBJECT(module_filename_obj, 287, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[183], mod_consts[184], NULL, 1, 0, 0);
-    codeobj_a2b6eaaff4a41badf3763569721a557e = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[185], NULL, NULL, 0, 0, 0);
-    codeobj_439e14d5b2a6d2645a1c228a92cf0877 = MAKE_CODEOBJECT(module_filename_obj, 403, CO_NOFREE, mod_consts[170], mod_consts[186], NULL, 0, 0, 0);
-    codeobj_cbed787e2d0be94b17759f801d39942c = MAKE_CODEOBJECT(module_filename_obj, 432, CO_NOFREE, mod_consts[175], mod_consts[186], NULL, 0, 0, 0);
-    codeobj_ee58542720b4336100f93b37e7b9bb9d = MAKE_CODEOBJECT(module_filename_obj, 207, CO_NOFREE, mod_consts[88], mod_consts[186], NULL, 0, 0, 0);
-    codeobj_7b0bb2d8ef876447f60e6734d889b906 = MAKE_CODEOBJECT(module_filename_obj, 317, CO_NOFREE, mod_consts[92], mod_consts[186], NULL, 0, 0, 0);
-    codeobj_10da8351d0b59270662657b91fe1b077 = MAKE_CODEOBJECT(module_filename_obj, 326, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[187], NULL, 2, 0, 0);
-    codeobj_03b8ebeffd5546bea3c5fa9fe14ec2cc = MAKE_CODEOBJECT(module_filename_obj, 406, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[187], NULL, 2, 0, 0);
-    codeobj_206cfc06c70f0ed30f9d854380a8de1c = MAKE_CODEOBJECT(module_filename_obj, 435, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[187], NULL, 2, 0, 0);
-    codeobj_e29bec7708dabb1209f10deae3173e69 = MAKE_CODEOBJECT(module_filename_obj, 306, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[160], mod_consts[188], NULL, 1, 0, 0);
-    codeobj_5af1b7cbd66d1bc149b76baf5fb733a9 = MAKE_CODEOBJECT(module_filename_obj, 334, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[74], mod_consts[189], NULL, 3, 0, 0);
-    codeobj_47580418af86be26fe5acaa5217ff508 = MAKE_CODEOBJECT(module_filename_obj, 410, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[190], NULL, 3, 0, 0);
-    codeobj_2a6b2170b0a019ecf086df5573e9d57c = MAKE_CODEOBJECT(module_filename_obj, 439, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[191], NULL, 3, 0, 0);
-    codeobj_8ffe35a72fdee416593fafb3bb891e45 = MAKE_CODEOBJECT(module_filename_obj, 474, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[103], mod_consts[192], NULL, 3, 0, 0);
-    codeobj_5bf1831d5ca0a81c810b373b3a812f1a = MAKE_CODEOBJECT(module_filename_obj, 351, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[168], mod_consts[193], NULL, 3, 0, 0);
-    codeobj_9fcbe27ebdceaf905902aa340ef0ade7 = MAKE_CODEOBJECT(module_filename_obj, 210, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[39], mod_consts[194], NULL, 1, 0, 0);
-    codeobj_a550f482be205d3680a3d6c17c4796b4 = MAKE_CODEOBJECT(module_filename_obj, 222, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[152], mod_consts[195], NULL, 1, 0, 0);
-    codeobj_e282f35b4bd64ecb09d4fa849eb1f4ea = MAKE_CODEOBJECT(module_filename_obj, 295, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[158], mod_consts[196], NULL, 1, 0, 0);
-    codeobj_b2992f4d4c14c979031d2129f814a934 = MAKE_CODEOBJECT(module_filename_obj, 267, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[154], mod_consts[197], NULL, 1, 0, 0);
-    codeobj_856aef09236f38705430bf932fa640e0 = MAKE_CODEOBJECT(module_filename_obj, 281, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[156], mod_consts[198], NULL, 1, 0, 0);
-    codeobj_9ed746ddcf5cc4c91aa78373e1f24677 = MAKE_CODEOBJECT(module_filename_obj, 103, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[133], mod_consts[199], NULL, 1, 0, 0);
-    codeobj_ca6dbb839fde2b90a20549b84cbfc7e3 = MAKE_CODEOBJECT(module_filename_obj, 125, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[135], mod_consts[200], NULL, 1, 0, 0);
-    codeobj_76296ff78f27b0def273f73d6483873d = MAKE_CODEOBJECT(module_filename_obj, 178, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[66], mod_consts[201], NULL, 2, 0, 0);
-    codeobj_e416327feafd61d8e2d9560f3359e439 = MAKE_CODEOBJECT(module_filename_obj, 114, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[202], NULL, 1, 0, 0);
-    codeobj_da80e0920468f5c2834f607bb299eb06 = MAKE_CODEOBJECT(module_filename_obj, 166, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[138], mod_consts[203], NULL, 1, 0, 0);
-    codeobj_0070d31738f6d29a0b38f9e1ee9ec89a = MAKE_CODEOBJECT(module_filename_obj, 136, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[136], mod_consts[202], NULL, 1, 0, 0);
-    codeobj_7c2a6fe45de74e403d39d1db608e7fcb = MAKE_CODEOBJECT(module_filename_obj, 147, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[137], mod_consts[203], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[177]); CHECK_OBJECT(module_filename_obj);
+    codeobj_d484da71a86ca8ab0679ab38953dd2ac = MAKE_CODEOBJECT(module_filename_obj, 301, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[52], mod_consts[178], NULL, 1, 0, 0);
+    codeobj_1c1135bdc2cdd1cf7950c77fb28d04e1 = MAKE_CODEOBJECT(module_filename_obj, 273, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[179], mod_consts[180], NULL, 1, 0, 0);
+    codeobj_b22d6c0b62b0708b234c78e82d32255e = MAKE_CODEOBJECT(module_filename_obj, 287, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[179], mod_consts[180], NULL, 1, 0, 0);
+    codeobj_a2b6eaaff4a41badf3763569721a557e = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[181], NULL, NULL, 0, 0, 0);
+    codeobj_439e14d5b2a6d2645a1c228a92cf0877 = MAKE_CODEOBJECT(module_filename_obj, 403, CO_NOFREE, mod_consts[166], mod_consts[182], NULL, 0, 0, 0);
+    codeobj_cbed787e2d0be94b17759f801d39942c = MAKE_CODEOBJECT(module_filename_obj, 432, CO_NOFREE, mod_consts[171], mod_consts[182], NULL, 0, 0, 0);
+    codeobj_ee58542720b4336100f93b37e7b9bb9d = MAKE_CODEOBJECT(module_filename_obj, 207, CO_NOFREE, mod_consts[81], mod_consts[182], NULL, 0, 0, 0);
+    codeobj_7b0bb2d8ef876447f60e6734d889b906 = MAKE_CODEOBJECT(module_filename_obj, 317, CO_NOFREE, mod_consts[85], mod_consts[182], NULL, 0, 0, 0);
+    codeobj_10da8351d0b59270662657b91fe1b077 = MAKE_CODEOBJECT(module_filename_obj, 326, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[183], NULL, 2, 0, 0);
+    codeobj_03b8ebeffd5546bea3c5fa9fe14ec2cc = MAKE_CODEOBJECT(module_filename_obj, 406, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[183], NULL, 2, 0, 0);
+    codeobj_206cfc06c70f0ed30f9d854380a8de1c = MAKE_CODEOBJECT(module_filename_obj, 435, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[183], NULL, 2, 0, 0);
+    codeobj_e29bec7708dabb1209f10deae3173e69 = MAKE_CODEOBJECT(module_filename_obj, 306, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[155], mod_consts[184], NULL, 1, 0, 0);
+    codeobj_5af1b7cbd66d1bc149b76baf5fb733a9 = MAKE_CODEOBJECT(module_filename_obj, 334, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[185], NULL, 3, 0, 0);
+    codeobj_47580418af86be26fe5acaa5217ff508 = MAKE_CODEOBJECT(module_filename_obj, 410, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[186], NULL, 3, 0, 0);
+    codeobj_2a6b2170b0a019ecf086df5573e9d57c = MAKE_CODEOBJECT(module_filename_obj, 439, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[187], NULL, 3, 0, 0);
+    codeobj_8ffe35a72fdee416593fafb3bb891e45 = MAKE_CODEOBJECT(module_filename_obj, 474, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[97], mod_consts[188], NULL, 3, 0, 0);
+    codeobj_5bf1831d5ca0a81c810b373b3a812f1a = MAKE_CODEOBJECT(module_filename_obj, 351, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[164], mod_consts[189], NULL, 3, 0, 0);
+    codeobj_9fcbe27ebdceaf905902aa340ef0ade7 = MAKE_CODEOBJECT(module_filename_obj, 210, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[34], mod_consts[190], NULL, 1, 0, 0);
+    codeobj_a550f482be205d3680a3d6c17c4796b4 = MAKE_CODEOBJECT(module_filename_obj, 222, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[147], mod_consts[191], NULL, 1, 0, 0);
+    codeobj_e282f35b4bd64ecb09d4fa849eb1f4ea = MAKE_CODEOBJECT(module_filename_obj, 295, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[153], mod_consts[192], NULL, 1, 0, 0);
+    codeobj_b2992f4d4c14c979031d2129f814a934 = MAKE_CODEOBJECT(module_filename_obj, 267, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[149], mod_consts[193], NULL, 1, 0, 0);
+    codeobj_856aef09236f38705430bf932fa640e0 = MAKE_CODEOBJECT(module_filename_obj, 281, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[151], mod_consts[194], NULL, 1, 0, 0);
+    codeobj_9ed746ddcf5cc4c91aa78373e1f24677 = MAKE_CODEOBJECT(module_filename_obj, 103, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[128], mod_consts[195], NULL, 1, 0, 0);
+    codeobj_ca6dbb839fde2b90a20549b84cbfc7e3 = MAKE_CODEOBJECT(module_filename_obj, 125, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[130], mod_consts[196], NULL, 1, 0, 0);
+    codeobj_76296ff78f27b0def273f73d6483873d = MAKE_CODEOBJECT(module_filename_obj, 178, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[60], mod_consts[197], NULL, 2, 0, 0);
+    codeobj_e416327feafd61d8e2d9560f3359e439 = MAKE_CODEOBJECT(module_filename_obj, 114, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[129], mod_consts[198], NULL, 1, 0, 0);
+    codeobj_da80e0920468f5c2834f607bb299eb06 = MAKE_CODEOBJECT(module_filename_obj, 166, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[133], mod_consts[199], NULL, 1, 0, 0);
+    codeobj_0070d31738f6d29a0b38f9e1ee9ec89a = MAKE_CODEOBJECT(module_filename_obj, 136, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[131], mod_consts[198], NULL, 1, 0, 0);
+    codeobj_7c2a6fe45de74e403d39d1db608e7fcb = MAKE_CODEOBJECT(module_filename_obj, 147, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[132], mod_consts[199], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
 static PyObject *MAKE_GENERATOR_Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
+
+
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__10_get_tau_list();
@@ -255,15 +258,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__1_index_to_one(struct Nuit
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -274,8 +277,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__1_index_to_one(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_index);
-        tmp_subscript_name_1 = par_index;
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_index;
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -418,15 +421,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__2_one_to_index(struct Nuit
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[2]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -437,8 +440,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__2_one_to_index(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_s);
-        tmp_subscript_name_1 = par_s;
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_s;
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -581,15 +584,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__3_index_to_three(struct Nu
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -600,8 +603,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__3_index_to_three(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_i);
-        tmp_subscript_name_1 = par_i;
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_i;
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -744,15 +747,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__4_three_to_index(struct Nu
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[6]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -763,8 +766,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__4_three_to_index(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_s);
-        tmp_subscript_name_1 = par_s;
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_s;
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -914,15 +917,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__5_three_to_one(struct Nuit
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[6]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -933,8 +936,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__5_three_to_one(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_s);
-        tmp_subscript_name_1 = par_s;
-        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_s;
+        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -949,15 +952,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__5_three_to_one(struct Nuit
         var_i = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -968,8 +971,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__5_three_to_one(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_2 = var_i;
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
+        tmp_subscript_value_2 = var_i;
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1149,15 +1152,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__6_one_to_three(struct Nuit
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[2]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1168,8 +1171,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__6_one_to_three(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_s);
-        tmp_subscript_name_1 = par_s;
-        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_s;
+        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1184,15 +1187,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__6_one_to_three(struct Nuit
         var_i = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1203,8 +1206,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__6_one_to_three(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_2 = var_i;
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
+        tmp_subscript_value_2 = var_i;
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1384,14 +1387,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
         CHECK_OBJECT(par_residue);
         tmp_isinstance_inst_1 = par_residue;
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1402,8 +1405,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1414,8 +1417,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -1450,11 +1453,24 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_residue);
-        tmp_called_instance_2 = par_residue;
+        tmp_expression_value_1 = par_residue;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[11]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 200;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
         frame_76296ff78f27b0def273f73d6483873d->m_frame.f_lineno = 200;
-        tmp_assign_source_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[11]);
+        tmp_assign_source_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1497,17 +1513,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
     }
     branch_yes_2:;
     {
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_residue);
-        tmp_compexpr_left_1 = par_residue;
-        tmp_compexpr_right_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_cmp_expr_left_1 = par_residue;
+        tmp_cmp_expr_right_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[6]);
 
-        if (unlikely(tmp_compexpr_right_1 == NULL)) {
-            tmp_compexpr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_cmp_expr_right_1 == NULL)) {
+            tmp_cmp_expr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
         }
 
-        if (tmp_compexpr_right_1 == NULL) {
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1517,7 +1533,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1535,18 +1551,18 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
     goto branch_end_2;
     branch_no_2:;
     {
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_residue);
-        tmp_compexpr_left_2 = par_residue;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_cmp_expr_left_2 = par_residue;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1556,8 +1572,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[13]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[13]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1567,8 +1583,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__7_is_aa(struct Nuitka_Func
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_2, tmp_compexpr_left_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_2, tmp_cmp_expr_left_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1825,12 +1841,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__8_get_ca_list(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_1 = var_res;
-        tmp_subscript_name_1 = mod_consts[15];
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_expression_value_1 = var_res;
+        tmp_subscript_value_1 = mod_consts[15];
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1851,7 +1867,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__8_get_ca_list(struct Nuitk
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         if (var_ca_list == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
@@ -1866,9 +1882,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__8_get_ca_list(struct Nuitk
 
         tmp_called_instance_1 = var_ca_list;
         CHECK_OBJECT(var_ca);
-        tmp_args_element_name_1 = var_ca;
+        tmp_args_element_value_1 = var_ca;
         frame_9fcbe27ebdceaf905902aa340ef0ade7->m_frame.f_lineno = 219;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[17], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[17], tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2268,24 +2284,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 227;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_1 = par_self;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_1 = par_self;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_1 = var_i;
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = var_i;
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2307,12 +2312,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_2 = var_res;
-        tmp_subscript_name_2 = mod_consts[21];
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
+        tmp_expression_value_2 = var_res;
+        tmp_subscript_value_2 = mod_consts[20];
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2324,7 +2329,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_3;
         }
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 229;
-        tmp_assign_source_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[22]);
+        tmp_assign_source_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[21]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2346,12 +2351,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_3;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_3 = var_res;
-        tmp_subscript_name_3 = mod_consts[15];
-        tmp_called_instance_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_3);
+        tmp_expression_value_3 = var_res;
+        tmp_subscript_value_3 = mod_consts[15];
+        tmp_called_instance_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_3);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2363,7 +2368,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_3;
         }
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 230;
-        tmp_assign_source_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[22]);
+        tmp_assign_source_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[21]);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2385,12 +2390,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_4;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_4;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_4 = var_res;
-        tmp_subscript_name_4 = mod_consts[23];
-        tmp_called_instance_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_4);
+        tmp_expression_value_4 = var_res;
+        tmp_subscript_value_4 = mod_consts[22];
+        tmp_called_instance_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_4);
         if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2402,7 +2407,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_3;
         }
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 231;
-        tmp_assign_source_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[22]);
+        tmp_assign_source_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[21]);
         Py_DECREF(tmp_called_instance_3);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2448,11 +2453,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_Exception;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_Exception;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_1 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -2467,7 +2472,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
         PyObject *tmp_call_result_1;
         if (var_ppl == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2482,7 +2487,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
         tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_4,
             mod_consts[17],
-            PyTuple_GET_ITEM(mod_consts[25], 0)
+            PyTuple_GET_ITEM(mod_consts[24], 0)
         );
 
         if (tmp_call_result_1 == NULL) {
@@ -2500,12 +2505,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_ass_subscript_1;
         tmp_ass_subvalue_1 = Py_None;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_5 = var_res;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[26]);
+        tmp_expression_value_5 = var_res;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[25]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2516,7 +2521,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_ass_subscript_1 = mod_consts[27];
+        tmp_ass_subscript_1 = mod_consts[26];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subscribed_1);
         if (tmp_result == false) {
@@ -2533,12 +2538,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_ass_subscript_2;
         tmp_ass_subvalue_2 = Py_None;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_6 = var_res;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[26]);
+        tmp_expression_value_6 = var_res;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[25]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2549,7 +2554,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_ass_subscript_2 = mod_consts[28];
+        tmp_ass_subscript_2 = mod_consts[27];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_2, tmp_ass_subscript_2, tmp_ass_subvalue_2);
         Py_DECREF(tmp_ass_subscribed_2);
         if (tmp_result == false) {
@@ -2609,15 +2614,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     try_end_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_i);
-        tmp_compexpr_left_2 = var_i;
-        tmp_compexpr_right_2 = mod_consts[19];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_i;
+        tmp_cmp_expr_right_2 = mod_consts[19];
+        tmp_condition_result_2 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2627,50 +2630,27 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 240;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 241;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_7 = par_self;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_7 = par_self;
         CHECK_OBJECT(var_i);
-        tmp_left_name_1 = var_i;
-        tmp_right_name_1 = mod_consts[29];
-        tmp_subscript_name_5 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_subscript_name_5 == NULL) {
+        tmp_left_value_1 = var_i;
+        tmp_right_value_1 = mod_consts[28];
+        tmp_subscript_value_5 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_subscript_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2680,8 +2660,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_5);
-        Py_DECREF(tmp_subscript_name_5);
+        tmp_assign_source_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_5);
+        Py_DECREF(tmp_subscript_value_5);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2703,12 +2683,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_assign_source_11;
         PyObject *tmp_called_instance_5;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_6;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_subscript_value_6;
         CHECK_OBJECT(var_rp);
-        tmp_expression_name_8 = var_rp;
-        tmp_subscript_name_6 = mod_consts[23];
-        tmp_called_instance_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_6);
+        tmp_expression_value_8 = var_rp;
+        tmp_subscript_value_6 = mod_consts[22];
+        tmp_called_instance_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_6);
         if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2720,7 +2700,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_5;
         }
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 243;
-        tmp_assign_source_11 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[22]);
+        tmp_assign_source_11 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[21]);
         Py_DECREF(tmp_called_instance_5);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2741,18 +2721,18 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     }
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[30]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[30]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2763,17 +2743,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_5;
         }
         CHECK_OBJECT(var_cp);
-        tmp_args_element_name_1 = var_cp;
+        tmp_args_element_value_1 = var_cp;
         CHECK_OBJECT(var_n);
-        tmp_args_element_name_2 = var_n;
+        tmp_args_element_value_2 = var_n;
         CHECK_OBJECT(var_ca);
-        tmp_args_element_name_3 = var_ca;
+        tmp_args_element_value_3 = var_ca;
         CHECK_OBJECT(var_c);
-        tmp_args_element_name_4 = var_c;
+        tmp_args_element_value_4 = var_c;
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 244;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_1, call_args);
         }
 
         if (tmp_assign_source_12 == NULL) {
@@ -2820,11 +2800,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     // Tried code:
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_3 = PyExc_Exception;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_3 = PyExc_Exception;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
         assert(!(tmp_res == -1));
         tmp_condition_result_3 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_3 != false) {
@@ -2904,26 +2884,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     branch_end_2:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[31]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 251;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_left_4 = var_i;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        CHECK_OBJECT(var_i);
+        tmp_cmp_expr_left_4 = var_i;
         if (var_lng == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[30]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2933,10 +2902,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_2;
         }
 
-        tmp_left_name_2 = var_lng;
-        tmp_right_name_2 = mod_consts[29];
-        tmp_compexpr_right_4 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_2, tmp_right_name_2);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_left_value_2 = var_lng;
+        tmp_right_value_2 = mod_consts[28];
+        tmp_cmp_expr_right_4 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_2, tmp_right_value_2);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2946,8 +2915,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_4 = RICH_COMPARE_LT_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_condition_result_4 = RICH_COMPARE_LT_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -2968,39 +2937,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_7;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 252;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_9 = par_self;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[31]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 252;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_left_name_3 = var_i;
-        tmp_right_name_3 = mod_consts[29];
-        tmp_subscript_name_7 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
-        if (tmp_subscript_name_7 == NULL) {
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_7;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_9 = par_self;
+        CHECK_OBJECT(var_i);
+        tmp_left_value_3 = var_i;
+        tmp_right_value_3 = mod_consts[28];
+        tmp_subscript_value_7 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
+        if (tmp_subscript_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3010,8 +2957,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_15 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_7);
-        Py_DECREF(tmp_subscript_name_7);
+        tmp_assign_source_15 = LOOKUP_SUBSCRIPT(tmp_expression_value_9, tmp_subscript_value_7);
+        Py_DECREF(tmp_subscript_value_7);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3033,12 +2980,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_assign_source_16;
         PyObject *tmp_called_instance_6;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_8;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_8;
         CHECK_OBJECT(var_rn);
-        tmp_expression_name_10 = var_rn;
-        tmp_subscript_name_8 = mod_consts[21];
-        tmp_called_instance_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_8);
+        tmp_expression_value_10 = var_rn;
+        tmp_subscript_value_8 = mod_consts[20];
+        tmp_called_instance_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_8);
         if (tmp_called_instance_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3050,7 +2997,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_7;
         }
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 254;
-        tmp_assign_source_16 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[22]);
+        tmp_assign_source_16 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[21]);
         Py_DECREF(tmp_called_instance_6);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3071,18 +3018,18 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[30]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[30]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3092,51 +3039,18 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_7;
         }
-        if (var_n == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 255;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_7;
-        }
-
-        tmp_args_element_name_5 = var_n;
-        if (var_ca == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 255;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_7;
-        }
-
-        tmp_args_element_name_6 = var_ca;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[35]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 255;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_7;
-        }
-
-        tmp_args_element_name_7 = var_c;
+        CHECK_OBJECT(var_n);
+        tmp_args_element_value_5 = var_n;
+        CHECK_OBJECT(var_ca);
+        tmp_args_element_value_6 = var_ca;
+        CHECK_OBJECT(var_c);
+        tmp_args_element_value_7 = var_c;
         CHECK_OBJECT(var_nn);
-        tmp_args_element_name_8 = var_nn;
+        tmp_args_element_value_8 = var_nn;
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 255;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_assign_source_17 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_assign_source_17 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_2, call_args);
         }
 
         if (tmp_assign_source_17 == NULL) {
@@ -3183,11 +3097,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     // Tried code:
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        tmp_compexpr_left_5 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_5 = PyExc_Exception;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_5, tmp_compexpr_right_5);
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        tmp_cmp_expr_left_5 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_5 = PyExc_Exception;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
         assert(!(tmp_res == -1));
         tmp_condition_result_5 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_5 != false) {
@@ -3266,14 +3180,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     }
     branch_end_4:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_args_element_value_9;
         PyObject *tmp_tuple_element_1;
         if (var_ppl == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3283,9 +3197,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_11 = var_ppl;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[17]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_11 = var_ppl;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[17]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3296,8 +3210,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             goto try_except_handler_2;
         }
         if (var_phi == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[31]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3308,11 +3222,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
         }
 
         tmp_tuple_element_1 = var_phi;
-        tmp_args_element_name_9 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_element_name_9, 0, tmp_tuple_element_1);
+        tmp_args_element_value_9 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_9, 0, tmp_tuple_element_1);
         if (var_psi == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3323,19 +3237,19 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
         }
 
         tmp_tuple_element_1 = var_psi;
-        PyTuple_SET_ITEM0(tmp_args_element_name_9, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_element_value_9, 1, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_9);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_9);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         frame_a550f482be205d3680a3d6c17c4796b4->m_frame.f_lineno = 261;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_9);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_9);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_9);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3351,11 +3265,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_ass_subvalue_3;
         PyObject *tmp_ass_subscribed_3;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_ass_subscript_3;
         if (var_phi == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[31]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3367,8 +3281,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
 
         tmp_ass_subvalue_3 = var_phi;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_12 = var_res;
-        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[26]);
+        tmp_expression_value_12 = var_res;
+        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[25]);
         if (tmp_ass_subscribed_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3379,7 +3293,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_3 = mod_consts[27];
+        tmp_ass_subscript_3 = mod_consts[26];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_3, tmp_ass_subscript_3, tmp_ass_subvalue_3);
         Py_DECREF(tmp_ass_subscribed_3);
         if (tmp_result == false) {
@@ -3396,11 +3310,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     {
         PyObject *tmp_ass_subvalue_4;
         PyObject *tmp_ass_subscribed_4;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_ass_subscript_4;
         if (var_psi == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3412,8 +3326,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
 
         tmp_ass_subvalue_4 = var_psi;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_13 = var_res;
-        tmp_ass_subscribed_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[26]);
+        tmp_expression_value_13 = var_res;
+        tmp_ass_subscribed_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[25]);
         if (tmp_ass_subscribed_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3424,7 +3338,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_4 = mod_consts[28];
+        tmp_ass_subscript_4 = mod_consts[27];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_4, tmp_ass_subscript_4, tmp_ass_subvalue_4);
         Py_DECREF(tmp_ass_subscribed_4);
         if (tmp_result == false) {
@@ -3483,7 +3397,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list(struct 
     tmp_for_loop_1__for_iterator = NULL;
     if (var_ppl == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -3772,7 +3686,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_b2992f4d4c14c979031d2129f814a934->m_frame.f_lineno = 269;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[39]);
+        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[34]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3797,14 +3711,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_xrange_low_1;
         PyObject *tmp_xrange_high_1;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_right_value_1;
         tmp_xrange_low_1 = mod_consts[19];
         CHECK_OBJECT(var_ca_list);
         tmp_len_arg_1 = var_ca_list;
-        tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3814,9 +3728,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[40];
-        tmp_xrange_high_1 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = mod_consts[35];
+        tmp_xrange_high_1 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         assert(!(tmp_xrange_high_1 == NULL));
         tmp_iter_arg_1 = BUILTIN_XRANGE2(tmp_xrange_low_1, tmp_xrange_high_1);
         Py_DECREF(tmp_xrange_high_1);
@@ -3888,24 +3802,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        if (var_ca_list == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 272;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_1 = var_ca_list;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(var_ca_list);
+        tmp_expression_value_1 = var_ca_list;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_1 = var_i;
-        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = var_i;
+        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3918,37 +3821,26 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
         }
         tmp_assign_source_6 = PyTuple_New(4);
         {
-            PyObject *tmp_expression_name_2;
-            PyObject *tmp_subscript_name_2;
-            PyObject *tmp_left_name_2;
-            PyObject *tmp_right_name_2;
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_subscript_name_3;
-            PyObject *tmp_left_name_3;
-            PyObject *tmp_right_name_3;
-            PyObject *tmp_expression_name_4;
-            PyObject *tmp_subscript_name_4;
-            PyObject *tmp_left_name_4;
-            PyObject *tmp_right_name_4;
+            PyObject *tmp_expression_value_2;
+            PyObject *tmp_subscript_value_2;
+            PyObject *tmp_left_value_2;
+            PyObject *tmp_right_value_2;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_subscript_value_3;
+            PyObject *tmp_left_value_3;
+            PyObject *tmp_right_value_3;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_subscript_value_4;
+            PyObject *tmp_left_value_4;
+            PyObject *tmp_right_value_4;
             PyTuple_SET_ITEM(tmp_assign_source_6, 0, tmp_tuple_element_1);
-            if (var_ca_list == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 272;
-                type_description_1 = "ooooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_2 = var_ca_list;
+            CHECK_OBJECT(var_ca_list);
+            tmp_expression_value_2 = var_ca_list;
             CHECK_OBJECT(var_i);
-            tmp_left_name_2 = var_i;
-            tmp_right_name_2 = mod_consts[29];
-            tmp_subscript_name_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_2, tmp_right_name_2);
-            if (tmp_subscript_name_2 == NULL) {
+            tmp_left_value_2 = var_i;
+            tmp_right_value_2 = mod_consts[28];
+            tmp_subscript_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_2, tmp_right_value_2);
+            if (tmp_subscript_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3958,8 +3850,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
                 type_description_1 = "ooooooooooo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
-            Py_DECREF(tmp_subscript_name_2);
+            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
+            Py_DECREF(tmp_subscript_value_2);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3971,24 +3863,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_assign_source_6, 1, tmp_tuple_element_1);
-            if (var_ca_list == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 272;
-                type_description_1 = "ooooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_3 = var_ca_list;
+            CHECK_OBJECT(var_ca_list);
+            tmp_expression_value_3 = var_ca_list;
             CHECK_OBJECT(var_i);
-            tmp_left_name_3 = var_i;
-            tmp_right_name_3 = mod_consts[41];
-            tmp_subscript_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
-            if (tmp_subscript_name_3 == NULL) {
+            tmp_left_value_3 = var_i;
+            tmp_right_value_3 = mod_consts[36];
+            tmp_subscript_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
+            if (tmp_subscript_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3998,8 +3879,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
                 type_description_1 = "ooooooooooo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_3);
-            Py_DECREF(tmp_subscript_name_3);
+            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_3);
+            Py_DECREF(tmp_subscript_value_3);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -4011,24 +3892,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_assign_source_6, 2, tmp_tuple_element_1);
-            if (var_ca_list == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 272;
-                type_description_1 = "ooooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_4 = var_ca_list;
+            CHECK_OBJECT(var_ca_list);
+            tmp_expression_value_4 = var_ca_list;
             CHECK_OBJECT(var_i);
-            tmp_left_name_4 = var_i;
-            tmp_right_name_4 = mod_consts[40];
-            tmp_subscript_name_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_4, tmp_right_name_4);
-            if (tmp_subscript_name_4 == NULL) {
+            tmp_left_value_4 = var_i;
+            tmp_right_value_4 = mod_consts[35];
+            tmp_subscript_value_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_4, tmp_right_value_4);
+            if (tmp_subscript_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4038,8 +3908,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
                 type_description_1 = "ooooooooooo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_4);
-            Py_DECREF(tmp_subscript_name_4);
+            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_4);
+            Py_DECREF(tmp_subscript_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -4180,7 +4050,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
             CHECK_OBJECT(outline_0_var_a);
             tmp_called_instance_2 = outline_0_var_a;
             frame_1c1135bdc2cdd1cf7950c77fb28d04e1_2->m_frame.f_lineno = 273;
-            tmp_append_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[22]);
+            tmp_append_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[21]);
             if (tmp_append_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -4359,7 +4229,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
         exception_lineno = 273;
         goto try_except_handler_3;
         outline_result_1:;
-        tmp_assign_source_7 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_7 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         Py_DECREF(tmp_iter_arg_2);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4519,7 +4389,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[42];
+            exception_value = mod_consts[37];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -4646,18 +4516,18 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
 
     {
         PyObject *tmp_assign_source_20;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[30]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[30]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4668,17 +4538,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_v1);
-        tmp_args_element_name_1 = var_v1;
+        tmp_args_element_value_1 = var_v1;
         CHECK_OBJECT(var_v2);
-        tmp_args_element_name_2 = var_v2;
+        tmp_args_element_value_2 = var_v2;
         CHECK_OBJECT(var_v3);
-        tmp_args_element_name_3 = var_v3;
+        tmp_args_element_value_3 = var_v3;
         CHECK_OBJECT(var_v4);
-        tmp_args_element_name_4 = var_v4;
+        tmp_args_element_value_4 = var_v4;
         frame_b2992f4d4c14c979031d2129f814a934->m_frame.f_lineno = 274;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_assign_source_20 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_assign_source_20 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_1, call_args);
         }
 
         if (tmp_assign_source_20 == NULL) {
@@ -4701,10 +4571,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
     {
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_5;
         if (var_tau_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4716,9 +4586,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
 
         tmp_called_instance_3 = var_tau_list;
         CHECK_OBJECT(var_tau);
-        tmp_args_element_name_5 = var_tau;
+        tmp_args_element_value_5 = var_tau;
         frame_b2992f4d4c14c979031d2129f814a934->m_frame.f_lineno = 275;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[17], tmp_args_element_name_5);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[17], tmp_args_element_value_5);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4734,28 +4604,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
     {
         PyObject *tmp_assign_source_21;
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
-        if (var_ca_list == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 277;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_5 = var_ca_list;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
+        CHECK_OBJECT(var_ca_list);
+        tmp_expression_value_5 = var_ca_list;
         CHECK_OBJECT(var_i);
-        tmp_left_name_5 = var_i;
-        tmp_right_name_5 = mod_consts[41];
-        tmp_subscript_name_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_5, tmp_right_name_5);
-        if (tmp_subscript_name_5 == NULL) {
+        tmp_left_value_5 = var_i;
+        tmp_right_value_5 = mod_consts[36];
+        tmp_subscript_value_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_5, tmp_right_value_5);
+        if (tmp_subscript_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4765,8 +4624,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_instance_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_5);
-        Py_DECREF(tmp_subscript_name_5);
+        tmp_called_instance_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_5);
+        Py_DECREF(tmp_subscript_value_5);
         if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4778,7 +4637,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
             goto try_except_handler_2;
         }
         frame_b2992f4d4c14c979031d2129f814a934->m_frame.f_lineno = 277;
-        tmp_assign_source_21 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[44]);
+        tmp_assign_source_21 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[39]);
         Py_DECREF(tmp_called_instance_4);
         if (tmp_assign_source_21 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4800,13 +4659,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(var_tau);
         tmp_ass_subvalue_1 = var_tau;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_6 = var_res;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[26]);
+        tmp_expression_value_6 = var_res;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[25]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4817,7 +4676,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
             type_description_1 = "ooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_1 = mod_consts[45];
+        tmp_ass_subscript_1 = mod_consts[40];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subscribed_1);
         if (tmp_result == false) {
@@ -4876,7 +4735,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
     tmp_for_loop_1__for_iterator = NULL;
     if (var_tau_list == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -4963,7 +4822,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list(struct Nui
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(var_ca_list);
+    CHECK_OBJECT(var_ca_list);
+    Py_DECREF(var_ca_list);
     var_ca_list = NULL;
     Py_XDECREF(var_tau_list);
     var_tau_list = NULL;
@@ -5154,7 +5014,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_856aef09236f38705430bf932fa640e0->m_frame.f_lineno = 284;
-        tmp_assign_source_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[39]);
+        tmp_assign_source_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[34]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5173,14 +5033,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_xrange_low_1;
         PyObject *tmp_xrange_high_1;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_right_value_1;
         tmp_xrange_low_1 = mod_consts[19];
         CHECK_OBJECT(var_ca_list);
         tmp_len_arg_1 = var_ca_list;
-        tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5190,9 +5050,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[41];
-        tmp_xrange_high_1 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = mod_consts[36];
+        tmp_xrange_high_1 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         assert(!(tmp_xrange_high_1 == NULL));
         tmp_iter_arg_1 = BUILTIN_XRANGE2(tmp_xrange_low_1, tmp_xrange_high_1);
         Py_DECREF(tmp_xrange_high_1);
@@ -5264,24 +5124,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        if (var_ca_list == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 286;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_1 = var_ca_list;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(var_ca_list);
+        tmp_expression_value_1 = var_ca_list;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_1 = var_i;
-        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = var_i;
+        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5294,33 +5143,22 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
         }
         tmp_assign_source_6 = PyTuple_New(3);
         {
-            PyObject *tmp_expression_name_2;
-            PyObject *tmp_subscript_name_2;
-            PyObject *tmp_left_name_2;
-            PyObject *tmp_right_name_2;
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_subscript_name_3;
-            PyObject *tmp_left_name_3;
-            PyObject *tmp_right_name_3;
+            PyObject *tmp_expression_value_2;
+            PyObject *tmp_subscript_value_2;
+            PyObject *tmp_left_value_2;
+            PyObject *tmp_right_value_2;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_subscript_value_3;
+            PyObject *tmp_left_value_3;
+            PyObject *tmp_right_value_3;
             PyTuple_SET_ITEM(tmp_assign_source_6, 0, tmp_tuple_element_1);
-            if (var_ca_list == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 286;
-                type_description_1 = "oooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_2 = var_ca_list;
+            CHECK_OBJECT(var_ca_list);
+            tmp_expression_value_2 = var_ca_list;
             CHECK_OBJECT(var_i);
-            tmp_left_name_2 = var_i;
-            tmp_right_name_2 = mod_consts[29];
-            tmp_subscript_name_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_2, tmp_right_name_2);
-            if (tmp_subscript_name_2 == NULL) {
+            tmp_left_value_2 = var_i;
+            tmp_right_value_2 = mod_consts[28];
+            tmp_subscript_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_2, tmp_right_value_2);
+            if (tmp_subscript_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5330,8 +5168,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
                 type_description_1 = "oooooooooo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
-            Py_DECREF(tmp_subscript_name_2);
+            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
+            Py_DECREF(tmp_subscript_value_2);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5343,24 +5181,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_assign_source_6, 1, tmp_tuple_element_1);
-            if (var_ca_list == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 286;
-                type_description_1 = "oooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_3 = var_ca_list;
+            CHECK_OBJECT(var_ca_list);
+            tmp_expression_value_3 = var_ca_list;
             CHECK_OBJECT(var_i);
-            tmp_left_name_3 = var_i;
-            tmp_right_name_3 = mod_consts[41];
-            tmp_subscript_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
-            if (tmp_subscript_name_3 == NULL) {
+            tmp_left_value_3 = var_i;
+            tmp_right_value_3 = mod_consts[36];
+            tmp_subscript_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
+            if (tmp_subscript_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5370,8 +5197,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
                 type_description_1 = "oooooooooo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_3);
-            Py_DECREF(tmp_subscript_name_3);
+            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_3);
+            Py_DECREF(tmp_subscript_value_3);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5512,7 +5339,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
             CHECK_OBJECT(outline_0_var_a);
             tmp_called_instance_2 = outline_0_var_a;
             frame_b22d6c0b62b0708b234c78e82d32255e_2->m_frame.f_lineno = 287;
-            tmp_append_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[22]);
+            tmp_append_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[21]);
             if (tmp_append_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5691,7 +5518,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
         exception_lineno = 287;
         goto try_except_handler_3;
         outline_result_1:;
-        tmp_assign_source_7 = MAKE_ITERATOR(tmp_iter_arg_2);
+        tmp_assign_source_7 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_2);
         Py_DECREF(tmp_iter_arg_2);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5823,7 +5650,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[47];
+            exception_value = mod_consts[42];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -5933,17 +5760,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
 
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[48]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[43]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5954,15 +5781,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_v1);
-        tmp_args_element_name_1 = var_v1;
+        tmp_args_element_value_1 = var_v1;
         CHECK_OBJECT(var_v2);
-        tmp_args_element_name_2 = var_v2;
+        tmp_args_element_value_2 = var_v2;
         CHECK_OBJECT(var_v3);
-        tmp_args_element_name_3 = var_v3;
+        tmp_args_element_value_3 = var_v3;
         frame_856aef09236f38705430bf932fa640e0->m_frame.f_lineno = 288;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_18 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_18 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
         if (tmp_assign_source_18 == NULL) {
@@ -5985,10 +5812,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
     {
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         if (var_theta_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[49]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6000,9 +5827,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
 
         tmp_called_instance_3 = var_theta_list;
         CHECK_OBJECT(var_theta);
-        tmp_args_element_name_4 = var_theta;
+        tmp_args_element_value_4 = var_theta;
         frame_856aef09236f38705430bf932fa640e0->m_frame.f_lineno = 289;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[17], tmp_args_element_name_4);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[17], tmp_args_element_value_4);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6018,28 +5845,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
     {
         PyObject *tmp_assign_source_19;
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        if (var_ca_list == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 291;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_4 = var_ca_list;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        CHECK_OBJECT(var_ca_list);
+        tmp_expression_value_4 = var_ca_list;
         CHECK_OBJECT(var_i);
-        tmp_left_name_4 = var_i;
-        tmp_right_name_4 = mod_consts[29];
-        tmp_subscript_name_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_4, tmp_right_name_4);
-        if (tmp_subscript_name_4 == NULL) {
+        tmp_left_value_4 = var_i;
+        tmp_right_value_4 = mod_consts[28];
+        tmp_subscript_value_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_4, tmp_right_value_4);
+        if (tmp_subscript_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6049,8 +5865,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_instance_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_4);
-        Py_DECREF(tmp_subscript_name_4);
+        tmp_called_instance_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_4);
+        Py_DECREF(tmp_subscript_value_4);
         if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6062,7 +5878,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
             goto try_except_handler_2;
         }
         frame_856aef09236f38705430bf932fa640e0->m_frame.f_lineno = 291;
-        tmp_assign_source_19 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[44]);
+        tmp_assign_source_19 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[39]);
         Py_DECREF(tmp_called_instance_4);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6084,13 +5900,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(var_theta);
         tmp_ass_subvalue_1 = var_theta;
         CHECK_OBJECT(var_res);
-        tmp_expression_name_5 = var_res;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[26]);
+        tmp_expression_value_5 = var_res;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[25]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6101,7 +5917,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_1 = mod_consts[50];
+        tmp_ass_subscript_1 = mod_consts[45];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subscribed_1);
         if (tmp_result == false) {
@@ -6160,7 +5976,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
     tmp_for_loop_1__for_iterator = NULL;
     if (var_theta_list == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[49]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -6248,7 +6064,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list(struct N
     try_return_handler_1:;
     Py_XDECREF(var_theta_list);
     var_theta_list = NULL;
-    Py_XDECREF(var_ca_list);
+    CHECK_OBJECT(var_ca_list);
+    Py_DECREF(var_ca_list);
     var_ca_list = NULL;
     Py_XDECREF(var_i);
     var_i = NULL;
@@ -6380,12 +6197,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__12_get_sequence(struct Nui
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_1 = mod_consts[52];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[53]);
-        assert(!(tmp_called_name_1 == NULL));
+        PyObject *tmp_str_arg_value_1;
+        PyObject *tmp_iterable_value_1;
+        tmp_str_arg_value_1 = mod_consts[47];
         {
             PyObject *tmp_assign_source_2;
             PyObject *tmp_iter_arg_1;
@@ -6398,7 +6212,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__12_get_sequence(struct Nui
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 302;
+                exception_lineno = 301;
                 type_description_1 = "oo";
                 goto frame_exception_exit_1;
             }
@@ -6411,7 +6225,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__12_get_sequence(struct Nui
 
             tmp_closure_1[0] = Nuitka_Cell_New0(tmp_genexpr_1__$0);
 
-            tmp_args_element_name_1 = MAKE_GENERATOR_Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_genexpr(tmp_closure_1);
+            tmp_iterable_value_1 = MAKE_GENERATOR_Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_genexpr(tmp_closure_1);
 
             goto try_return_handler_2;
         }
@@ -6424,16 +6238,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__12_get_sequence(struct Nui
         tmp_genexpr_1__$0 = NULL;
         goto outline_result_1;
         // End of try:
-        CHECK_OBJECT(tmp_genexpr_1__$0);
-        Py_DECREF(tmp_genexpr_1__$0);
-        tmp_genexpr_1__$0 = NULL;
         NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
         return NULL;
         outline_result_1:;
-        frame_e282f35b4bd64ecb09d4fa849eb1f4ea->m_frame.f_lineno = 301;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_1 = UNICODE_JOIN(tmp_str_arg_value_1, tmp_iterable_value_1);
+        Py_DECREF(tmp_iterable_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6448,15 +6257,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__12_get_sequence(struct Nui
         var_s = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6467,9 +6276,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__12_get_sequence(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_s);
-        tmp_args_element_name_2 = var_s;
+        tmp_args_element_value_1 = var_s;
         frame_e282f35b4bd64ecb09d4fa849eb1f4ea->m_frame.f_lineno = 304;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6653,7 +6462,7 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_m_frame = MAKE_FUNCTION_FRAME(codeobj_b472c6f84ec5182b06b6e29a02931d68, module_Bio$PDB$Polypeptide, sizeof(void *)+sizeof(void *));
+        cache_m_frame = MAKE_FUNCTION_FRAME(codeobj_d484da71a86ca8ab0679ab38953dd2ac, module_Bio$PDB$Polypeptide, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
@@ -6714,7 +6523,7 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
 
                 FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
                 generator_heap->type_description_1 = "No";
-                generator_heap->exception_lineno = 302;
+                generator_heap->exception_lineno = 301;
                 goto try_except_handler_2;
             }
         }
@@ -6739,21 +6548,21 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
 
     }
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -6763,8 +6572,8 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
             generator_heap->type_description_1 = "No";
             goto try_except_handler_2;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[13]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[13]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -6774,9 +6583,9 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
             generator_heap->type_description_1 = "No";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[56]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[50]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -6789,27 +6598,27 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
         CHECK_OBJECT(generator_heap->var_res);
         tmp_called_instance_1 = generator_heap->var_res;
         generator->m_frame->m_frame.f_lineno = 302;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[10]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[10]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             generator_heap->exception_lineno = 302;
             generator_heap->type_description_1 = "No";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_2 = mod_consts[57];
+        tmp_args_element_value_2 = mod_consts[51];
         generator->m_frame->m_frame.f_lineno = 302;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -6819,11 +6628,11 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
             generator_heap->type_description_1 = "No";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(generator_heap->yield_tmps, &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_2, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(generator_heap->yield_tmps, &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_2, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_1;
+        return tmp_expression_value_1;
         yield_return_1:
-        Nuitka_RestoreHeap(generator_heap->yield_tmps, &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_2, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(generator_heap->yield_tmps, &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_2, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6842,7 +6651,7 @@ static PyObject *Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_ge
         FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-        generator_heap->exception_lineno = 302;
+        generator_heap->exception_lineno = 301;
         generator_heap->type_description_1 = "No";
         goto try_except_handler_2;
     }
@@ -6971,11 +6780,11 @@ static PyObject *MAKE_GENERATOR_Bio$PDB$Polypeptide$$$function__12_get_sequence$
     return Nuitka_Generator_New(
         Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_genexpr_context,
         module_Bio$PDB$Polypeptide,
-        mod_consts[58],
+        mod_consts[52],
 #if PYTHON_VERSION >= 0x350
-        mod_consts[59],
+        mod_consts[53],
 #endif
-        codeobj_b472c6f84ec5182b06b6e29a02931d68,
+        codeobj_d484da71a86ca8ab0679ab38953dd2ac,
         closure,
         1,
         sizeof(struct Bio$PDB$Polypeptide$$$function__12_get_sequence$$$genexpr__1_genexpr_locals)
@@ -7037,15 +6846,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__13___repr__(struct Nuitka_
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_subscript_name_1 = mod_consts[19];
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
+        tmp_expression_value_2 = par_self;
+        tmp_subscript_value_1 = mod_consts[19];
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7057,9 +6866,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__13___repr__(struct Nuitka_
             goto frame_exception_exit_1;
         }
         frame_e29bec7708dabb1209f10deae3173e69->m_frame.f_lineno = 312;
-        tmp_expression_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[60]);
+        tmp_expression_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[54]);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7069,9 +6878,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__13___repr__(struct Nuitka_
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[29];
-        tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_2 = mod_consts[28];
+        tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_2, 1);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7087,15 +6896,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__13___repr__(struct Nuitka_
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_subscript_name_4;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_subscript_value_4;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_subscript_name_3 = mod_consts[61];
-        tmp_called_instance_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_3, -1);
+        tmp_expression_value_4 = par_self;
+        tmp_subscript_value_3 = mod_consts[55];
+        tmp_called_instance_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_3, -1);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7107,9 +6916,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__13___repr__(struct Nuitka_
             goto frame_exception_exit_1;
         }
         frame_e29bec7708dabb1209f10deae3173e69->m_frame.f_lineno = 313;
-        tmp_expression_name_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[60]);
+        tmp_expression_value_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[54]);
         Py_DECREF(tmp_called_instance_2);
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7119,9 +6928,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__13___repr__(struct Nuitka_
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[29];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 1);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_subscript_value_4 = mod_consts[28];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_4, 1);
+        Py_DECREF(tmp_expression_value_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7136,19 +6945,19 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__13___repr__(struct Nuitka_
         var_end = tmp_assign_source_2;
     }
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
-        tmp_left_name_1 = mod_consts[62];
+        tmp_left_value_1 = mod_consts[56];
         CHECK_OBJECT(var_start);
         tmp_tuple_element_1 = var_start;
-        tmp_right_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_right_name_1, 0, tmp_tuple_element_1);
+        tmp_right_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_right_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(var_end);
         tmp_tuple_element_1 = var_end;
-        PyTuple_SET_ITEM0(tmp_right_name_1, 1, tmp_tuple_element_1);
-        tmp_return_value = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        PyTuple_SET_ITEM0(tmp_right_value_1, 1, tmp_tuple_element_1);
+        tmp_return_value = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7335,7 +7144,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__14___init__(struct Nuitka_
         tmp_assattr_value_1 = par_radius;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[64], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[58], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7480,18 +7289,18 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         int tmp_truth_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[66]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[60]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[66]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[60]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7509,7 +7318,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[67]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[61]);
         }
 
         if (tmp_call_result_1 == NULL) {
@@ -7548,17 +7357,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
     goto branch_end_1;
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_2;
+        bool tmp_condition_result_2;
         int tmp_and_left_truth_1;
-        nuitka_bool tmp_and_left_value_1;
-        nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_and_left_value_1;
+        bool tmp_and_right_value_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_standard_aa_only);
-        tmp_operand_name_1 = par_standard_aa_only;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = par_standard_aa_only;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7569,29 +7378,19 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_and_left_value_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
-        if (tmp_and_left_truth_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 338;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
+        tmp_and_left_value_1 = (tmp_res == 0) ? true : false;
+        tmp_and_left_truth_1 = tmp_and_left_value_1 != false ? 1 : 0;
         if (tmp_and_left_truth_1 == 1) {
             goto and_right_1;
         } else {
             goto and_left_1;
         }
         and_right_1:;
-        tmp_compexpr_left_1 = mod_consts[15];
+        tmp_cmp_expr_left_1 = mod_consts[15];
         CHECK_OBJECT(par_residue);
-        tmp_expression_name_1 = par_residue;
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[68]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_1 = par_residue;
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[62]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7601,8 +7400,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7613,13 +7412,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_and_right_value_1 = (tmp_res == 1) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        tmp_and_right_value_1 = (tmp_res == 1) ? true : false;
         tmp_condition_result_2 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
         tmp_condition_result_2 = tmp_and_left_value_1;
         and_end_1:;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -7627,20 +7426,20 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_called_instance_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[69]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[63]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[69]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[63]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7650,8 +7449,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[70]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[64]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7661,37 +7460,37 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__15__accept(struct Nuitka_F
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = mod_consts[71];
+        tmp_left_value_1 = mod_consts[65];
         CHECK_OBJECT(par_residue);
         tmp_called_instance_1 = par_residue;
         frame_5af1b7cbd66d1bc149b76baf5fb733a9->m_frame.f_lineno = 344;
-        tmp_right_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[10]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[10]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 344;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 344;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
         frame_5af1b7cbd66d1bc149b76baf5fb733a9->m_frame.f_lineno = 342;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7899,10 +7698,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[73]);
+        tmp_expression_value_1 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[67]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7918,10 +7717,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[74]);
+        tmp_expression_value_2 = par_self;
+        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[68]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7941,7 +7740,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         CHECK_OBJECT(par_entity);
         tmp_called_instance_1 = par_entity;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 362;
-        tmp_assign_source_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[75]);
+        tmp_assign_source_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[69]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7957,15 +7756,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_level);
-        tmp_compexpr_left_1 = var_level;
-        tmp_compexpr_right_1 = mod_consts[76];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_level;
+        tmp_cmp_expr_right_1 = mod_consts[70];
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7975,34 +7772,22 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 364;
-            type_description_1 = "oooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_entity);
-        tmp_expression_name_3 = par_entity;
-        tmp_subscript_name_1 = mod_consts[19];
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_1, 0);
+        tmp_expression_value_3 = par_entity;
+        tmp_subscript_value_1 = mod_consts[19];
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_1, 0);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8022,7 +7807,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         CHECK_OBJECT(var_model);
         tmp_called_instance_2 = var_model;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 366;
-        tmp_assign_source_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[77]);
+        tmp_assign_source_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[71]);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8040,15 +7825,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_level);
-        tmp_compexpr_left_2 = var_level;
-        tmp_compexpr_right_2 = mod_consts[78];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_level;
+        tmp_cmp_expr_right_2 = mod_consts[72];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8058,24 +7841,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 367;
-            type_description_1 = "oooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -8084,7 +7855,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         CHECK_OBJECT(par_entity);
         tmp_called_instance_3 = par_entity;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 368;
-        tmp_assign_source_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[77]);
+        tmp_assign_source_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[71]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8102,15 +7873,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_level);
-        tmp_compexpr_left_3 = var_level;
-        tmp_compexpr_right_3 = mod_consts[23];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_level;
+        tmp_cmp_expr_right_3 = mod_consts[22];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8120,24 +7889,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 369;
-            type_description_1 = "oooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -8154,14 +7911,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     branch_no_3:;
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[79]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[73]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[79]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[73]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8172,7 +7929,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto frame_exception_exit_1;
         }
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 372;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[80]);
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[74]);
 
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8204,7 +7961,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         PyObject *tmp_iter_arg_1;
         if (var_chain_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8295,10 +8052,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     // Tried code:
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_value_name_1;
+        PyObject *tmp_value_value_1;
         CHECK_OBJECT(var_chain_it);
-        tmp_value_name_1 = var_chain_it;
-        tmp_assign_source_13 = ITERATOR_NEXT(tmp_value_name_1);
+        tmp_value_value_1 = var_chain_it;
+        tmp_assign_source_13 = ITERATOR_NEXT(tmp_value_value_1);
         if (tmp_assign_source_13 == NULL) {
             if (!ERROR_OCCURRED()) {
                 exception_type = PyExc_StopIteration;
@@ -8323,15 +8080,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     }
     loop_start_2:;
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (var_accept == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[82]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8341,10 +8098,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_3;
         }
 
-        tmp_called_name_2 = var_accept;
+        tmp_called_value_2 = var_accept;
         if (var_prev_res == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8354,10 +8111,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_1 = var_prev_res;
+        tmp_args_element_value_1 = var_prev_res;
         if (par_aa_only == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[84]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8367,14 +8124,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_2 = par_aa_only;
+        tmp_args_element_value_2 = par_aa_only;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 378;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_operand_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_operand_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        if (tmp_operand_name_2 == NULL) {
+        if (tmp_operand_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8384,8 +8141,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
-        Py_DECREF(tmp_operand_name_2);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
+        Py_DECREF(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8396,20 +8153,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_operand_name_1 = (tmp_res == 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        if (tmp_res == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 378;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_operand_value_1 = (tmp_res == 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -8420,21 +8168,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     branch_no_4:;
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_value_name_2;
-        if (var_chain_it == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 379;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_value_name_2 = var_chain_it;
-        tmp_assign_source_14 = ITERATOR_NEXT(tmp_value_name_2);
+        PyObject *tmp_value_value_2;
+        CHECK_OBJECT(var_chain_it);
+        tmp_value_value_2 = var_chain_it;
+        tmp_assign_source_14 = ITERATOR_NEXT(tmp_value_value_2);
         if (tmp_assign_source_14 == NULL) {
             if (!ERROR_OCCURRED()) {
                 exception_type = PyExc_StopIteration;
@@ -8496,11 +8233,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     // Tried code:
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        tmp_compexpr_left_4 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_4 = PyExc_StopIteration;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_4, tmp_compexpr_right_4);
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        tmp_cmp_expr_left_4 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_4 = PyExc_StopIteration;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
         assert(!(tmp_res == -1));
         tmp_condition_result_5 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_5 != false) {
@@ -8568,18 +8305,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     {
         PyObject *tmp_assign_source_16;
         PyObject *tmp_iter_arg_3;
-        if (var_chain_it == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 384;
-            type_description_1 = "oooooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(var_chain_it);
         tmp_iter_arg_3 = var_chain_it;
         tmp_assign_source_16 = MAKE_ITERATOR(tmp_iter_arg_3);
         if (tmp_assign_source_16 == NULL) {
@@ -8644,27 +8370,27 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        int tmp_truth_name_4;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        int tmp_truth_name_1;
         int tmp_and_left_truth_2;
         nuitka_bool tmp_and_left_value_2;
         nuitka_bool tmp_and_right_value_2;
-        PyObject *tmp_called_name_4;
+        PyObject *tmp_called_value_4;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        int tmp_truth_name_5;
-        PyObject *tmp_called_name_5;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        int tmp_truth_name_2;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        int tmp_truth_name_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        int tmp_truth_name_3;
         if (var_accept == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[82]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8674,10 +8400,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_called_name_3 = var_accept;
+        tmp_called_value_3 = var_accept;
         if (var_prev_res == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8687,10 +8413,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_3 = var_prev_res;
+        tmp_args_element_value_3 = var_prev_res;
         if (par_aa_only == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[84]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8700,11 +8426,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_4 = par_aa_only;
+        tmp_args_element_value_4 = par_aa_only;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 386;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
         if (tmp_call_result_1 == NULL) {
@@ -8717,8 +8443,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_call_result_1);
-        if (tmp_truth_name_4 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_call_result_1);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8728,7 +8454,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_and_left_value_1 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_left_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_1);
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == -1) {
@@ -8749,7 +8475,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         and_right_1:;
         if (var_accept == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[82]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8759,12 +8485,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_called_name_4 = var_accept;
+        tmp_called_value_4 = var_accept;
         CHECK_OBJECT(var_next_res);
-        tmp_args_element_name_5 = var_next_res;
+        tmp_args_element_value_5 = var_next_res;
         if (par_aa_only == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[84]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8774,11 +8500,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_6 = par_aa_only;
+        tmp_args_element_value_6 = par_aa_only;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 387;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
         if (tmp_call_result_2 == NULL) {
@@ -8791,8 +8517,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_call_result_2);
-        if (tmp_truth_name_5 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_call_result_2);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8802,7 +8528,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_and_left_value_2 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_left_value_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_2);
         tmp_and_left_truth_2 = tmp_and_left_value_2 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_2 == -1) {
@@ -8823,7 +8549,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         and_right_2:;
         if (var_is_connected == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[86]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8833,10 +8559,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_called_name_5 = var_is_connected;
+        tmp_called_value_5 = var_is_connected;
         if (var_prev_res == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8846,13 +8572,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_7 = var_prev_res;
+        tmp_args_element_value_7 = var_prev_res;
         CHECK_OBJECT(var_next_res);
-        tmp_args_element_name_8 = var_next_res;
+        tmp_args_element_value_8 = var_next_res;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 388;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_5, call_args);
         }
 
         if (tmp_call_result_3 == NULL) {
@@ -8865,8 +8591,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_call_result_3);
-        if (tmp_truth_name_6 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_call_result_3);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8876,7 +8602,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             type_description_1 = "oooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_and_right_value_2 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_right_value_2 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_3);
         tmp_and_right_value_1 = tmp_and_right_value_2;
         goto and_end_2;
@@ -8897,11 +8623,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     branch_yes_6:;
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         if (var_pp == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[80]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8911,9 +8637,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_compexpr_left_5 = var_pp;
-        tmp_compexpr_right_5 = Py_None;
-        tmp_condition_result_7 = (tmp_compexpr_left_5 == tmp_compexpr_right_5) ? true : false;
+        tmp_cmp_expr_left_5 = var_pp;
+        tmp_cmp_expr_right_5 = Py_None;
+        tmp_condition_result_7 = (tmp_cmp_expr_left_5 == tmp_cmp_expr_right_5) ? true : false;
         if (tmp_condition_result_7 != false) {
             goto branch_yes_7;
         } else {
@@ -8923,14 +8649,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     branch_yes_7:;
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_called_name_6;
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[88]);
+        PyObject *tmp_called_value_6;
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[81]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[88]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8941,7 +8667,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 391;
-        tmp_assign_source_19 = CALL_FUNCTION_NO_ARGS(tmp_called_name_6);
+        tmp_assign_source_19 = CALL_FUNCTION_NO_ARGS(tmp_called_value_6);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8960,14 +8686,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
 
     }
     {
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_args_element_value_9;
         CHECK_OBJECT(var_pp);
-        tmp_expression_name_4 = var_pp;
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[17]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_4 = var_pp;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[17]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8978,8 +8704,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
         if (var_prev_res == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
+            Py_DECREF(tmp_called_value_7);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8989,10 +8715,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_9 = var_prev_res;
+        tmp_args_element_value_9 = var_prev_res;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 392;
-        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_9);
-        Py_DECREF(tmp_called_name_7);
+        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_9);
+        Py_DECREF(tmp_called_value_7);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9008,10 +8734,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     {
         PyObject *tmp_called_instance_4;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_10;
+        PyObject *tmp_args_element_value_10;
         if (var_pp_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[89]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[82]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9023,9 +8749,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
 
         tmp_called_instance_4 = var_pp_list;
         CHECK_OBJECT(var_pp);
-        tmp_args_element_name_10 = var_pp;
+        tmp_args_element_value_10 = var_pp;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 393;
-        tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[17], tmp_args_element_name_10);
+        tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[17], tmp_args_element_value_10);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9040,13 +8766,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     }
     branch_no_7:;
     {
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_6;
-        PyObject *tmp_args_element_name_11;
+        PyObject *tmp_args_element_value_11;
         if (var_pp == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[87]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[80]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9056,9 +8782,9 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_5 = var_pp;
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[17]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_expression_value_5 = var_pp;
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[17]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9069,8 +8795,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
         if (var_next_res == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[90]);
+            Py_DECREF(tmp_called_value_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9080,10 +8806,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_11 = var_next_res;
+        tmp_args_element_value_11 = var_next_res;
         frame_5bf1831d5ca0a81c810b373b3a812f1a->m_frame.f_lineno = 394;
-        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_11);
-        Py_DECREF(tmp_called_name_8);
+        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_11);
+        Py_DECREF(tmp_called_value_8);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9114,7 +8840,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
         PyObject *tmp_assign_source_21;
         if (var_next_res == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[90]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9221,7 +8947,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__16_build_peptides(struct N
     tmp_for_loop_1__for_iterator = NULL;
     if (var_pp_list == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[89]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[82]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -9458,12 +9184,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__17___init__(struct Nuitka_
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[85]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -9477,15 +9203,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__17___init__(struct Nuitka_
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_radius);
-        tmp_args_element_name_2 = par_radius;
+        tmp_args_element_value_2 = par_radius;
         frame_03b8ebeffd5546bea3c5fa9fe14ec2cc->m_frame.f_lineno = 408;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[93],
+                mod_consts[86],
                 call_args
             );
         }
@@ -9720,19 +9446,19 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
 
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_called_instance_1;
         CHECK_OBJECT(var_r);
         tmp_called_instance_1 = var_r;
         frame_47580418af86be26fe5acaa5217ff508->m_frame.f_lineno = 412;
-        tmp_operand_name_1 = CALL_METHOD_WITH_SINGLE_ARG(
+        tmp_operand_value_1 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_1,
-            mod_consts[95],
-            PyTuple_GET_ITEM(mod_consts[96], 0)
+            mod_consts[88],
+            PyTuple_GET_ITEM(mod_consts[89], 0)
         );
 
-        if (tmp_operand_name_1 == NULL) {
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9742,8 +9468,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9754,8 +9480,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -9820,12 +9546,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
     tmp_for_loop_1__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_next_res);
-        tmp_expression_name_1 = par_next_res;
-        tmp_subscript_name_1 = mod_consts[15];
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_expression_value_1 = par_next_res;
+        tmp_subscript_value_1 = mod_consts[15];
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9841,12 +9567,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(par_prev_res);
-        tmp_expression_name_2 = par_prev_res;
-        tmp_subscript_name_2 = mod_consts[15];
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
+        tmp_expression_value_2 = par_prev_res;
+        tmp_subscript_value_2 = mod_consts[15];
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9868,7 +9594,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
         CHECK_OBJECT(var_n);
         tmp_called_instance_2 = var_n;
         frame_47580418af86be26fe5acaa5217ff508->m_frame.f_lineno = 417;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[97]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[90]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9905,7 +9631,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
         CHECK_OBJECT(var_n);
         tmp_called_instance_3 = var_n;
         frame_47580418af86be26fe5acaa5217ff508->m_frame.f_lineno = 418;
-        tmp_assign_source_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[98]);
+        tmp_assign_source_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[91]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9940,7 +9666,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
         CHECK_OBJECT(var_p);
         tmp_called_instance_4 = var_p;
         frame_47580418af86be26fe5acaa5217ff508->m_frame.f_lineno = 421;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[97]);
+        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[90]);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9977,7 +9703,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
         CHECK_OBJECT(var_p);
         tmp_called_instance_5 = var_p;
         frame_47580418af86be26fe5acaa5217ff508->m_frame.f_lineno = 422;
-        tmp_assign_source_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[98]);
+        tmp_assign_source_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[91]);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10068,7 +9794,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
         PyObject *tmp_iter_arg_3;
         if (var_plist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10139,14 +9865,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
     }
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_3;
         if (var_nn == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[93]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10156,11 +9882,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
             goto try_except_handler_4;
         }
 
-        tmp_left_name_1 = var_nn;
+        tmp_left_value_1 = var_nn;
         CHECK_OBJECT(var_pp);
-        tmp_right_name_1 = var_pp;
-        tmp_compexpr_left_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_right_value_1 = var_pp;
+        tmp_cmp_expr_left_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10171,8 +9897,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
             goto try_except_handler_4;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_compexpr_left_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
+            Py_DECREF(tmp_cmp_expr_left_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[94]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10182,21 +9908,21 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__18__is_connected(struct Nu
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[64]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[58]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_1);
+            Py_DECREF(tmp_cmp_expr_left_1);
 
             exception_lineno = 427;
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_condition_result_4 = RICH_COMPARE_LT_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_condition_result_4 = RICH_COMPARE_LT_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -10529,12 +10255,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__19___init__(struct Nuitka_
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[85]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -10548,15 +10274,15 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__19___init__(struct Nuitka_
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_radius);
-        tmp_args_element_name_2 = par_radius;
+        tmp_args_element_value_2 = par_radius;
         frame_206cfc06c70f0ed30f9d854380a8de1c->m_frame.f_lineno = 437;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[93],
+                mod_consts[86],
                 call_args
             );
         }
@@ -10731,19 +10457,19 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_called_instance_1;
         CHECK_OBJECT(par_prev_res);
         tmp_called_instance_1 = par_prev_res;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 440;
-        tmp_operand_name_1 = CALL_METHOD_WITH_SINGLE_ARG(
+        tmp_operand_value_1 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_1,
-            mod_consts[95],
-            PyTuple_GET_ITEM(mod_consts[101], 0)
+            mod_consts[88],
+            PyTuple_GET_ITEM(mod_consts[95], 0)
         );
 
-        if (tmp_operand_name_1 == NULL) {
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10753,8 +10479,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -10765,8 +10491,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -10778,19 +10504,19 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
     goto frame_return_exit_1;
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_2;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_2;
         PyObject *tmp_called_instance_2;
         CHECK_OBJECT(par_next_res);
         tmp_called_instance_2 = par_next_res;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 442;
-        tmp_operand_name_2 = CALL_METHOD_WITH_SINGLE_ARG(
+        tmp_operand_value_2 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_2,
-            mod_consts[95],
-            PyTuple_GET_ITEM(mod_consts[102], 0)
+            mod_consts[88],
+            PyTuple_GET_ITEM(mod_consts[96], 0)
         );
 
-        if (tmp_operand_name_2 == NULL) {
+        if (tmp_operand_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10800,8 +10526,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
-        Py_DECREF(tmp_operand_name_2);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
+        Py_DECREF(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -10812,8 +10538,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -10826,10 +10552,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
     branch_no_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[103]);
+        tmp_expression_value_1 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[97]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10845,12 +10571,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_prev_res);
-        tmp_expression_name_2 = par_prev_res;
-        tmp_subscript_name_1 = mod_consts[23];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
+        tmp_expression_value_2 = par_prev_res;
+        tmp_subscript_value_1 = mod_consts[22];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10866,12 +10592,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(par_next_res);
-        tmp_expression_name_3 = par_next_res;
-        tmp_subscript_name_2 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_2);
+        tmp_expression_value_3 = par_next_res;
+        tmp_subscript_value_2 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_2);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10893,7 +10619,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         CHECK_OBJECT(var_c);
         tmp_called_instance_3 = var_c;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 448;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[97]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[90]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10930,7 +10656,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         CHECK_OBJECT(var_c);
         tmp_called_instance_4 = var_c;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 449;
-        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[98]);
+        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[91]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10965,7 +10691,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         CHECK_OBJECT(var_n);
         tmp_called_instance_5 = var_n;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 452;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[97]);
+        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[90]);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11002,7 +10728,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         CHECK_OBJECT(var_n);
         tmp_called_instance_6 = var_n;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 453;
-        tmp_assign_source_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[98]);
+        tmp_assign_source_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[91]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11093,7 +10819,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         PyObject *tmp_iter_arg_2;
         if (var_clist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[104]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[98]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11167,7 +10893,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         PyObject *tmp_called_instance_7;
         if (var_nn == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[93]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11179,7 +10905,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
 
         tmp_called_instance_7 = var_nn;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 461;
-        tmp_assign_source_14 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[105]);
+        tmp_assign_source_14 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[99]);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11203,7 +10929,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         CHECK_OBJECT(var_cc);
         tmp_called_instance_8 = var_cc;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 462;
-        tmp_assign_source_15 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[105]);
+        tmp_assign_source_15 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[99]);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11226,24 +10952,20 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         int tmp_or_left_truth_2;
         nuitka_bool tmp_or_left_value_2;
         nuitka_bool tmp_or_right_value_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_or_left_value_2_object_1;
-        int tmp_truth_name_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_or_right_value_2_object_1;
-        int tmp_truth_name_4;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_n_altloc);
-        tmp_compexpr_left_1 = var_n_altloc;
+        tmp_cmp_expr_left_1 = var_n_altloc;
         CHECK_OBJECT(var_c_altloc);
-        tmp_compexpr_right_1 = var_c_altloc;
-        tmp_or_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_cmp_expr_right_1 = var_c_altloc;
+        tmp_or_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_or_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -11273,10 +10995,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         or_right_1:;
         assert(tmp_or_left_value_1 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(var_n_altloc);
-        tmp_compexpr_left_2 = var_n_altloc;
-        tmp_compexpr_right_2 = mod_consts[106];
-        tmp_tmp_or_left_value_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_or_left_value_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_n_altloc;
+        tmp_cmp_expr_right_2 = mod_consts[100];
+        tmp_or_left_value_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_or_left_value_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11286,25 +11008,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_or_left_value_2_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_or_left_value_2_object_1);
-
-            exception_lineno = 463;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_or_left_value_2 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_or_left_value_2_object_1);
         tmp_or_left_truth_2 = tmp_or_left_value_2 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_or_left_truth_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_or_left_value_2);
 
             exception_lineno = 463;
             type_description_1 = "oooooooooooo";
@@ -11316,11 +11025,12 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             goto or_right_2;
         }
         or_right_2:;
+        assert(tmp_or_left_value_2 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(var_c_altloc);
-        tmp_compexpr_left_3 = var_c_altloc;
-        tmp_compexpr_right_3 = mod_consts[106];
-        tmp_tmp_or_right_value_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_or_right_value_2_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_c_altloc;
+        tmp_cmp_expr_right_3 = mod_consts[100];
+        tmp_or_right_value_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_or_right_value_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11330,19 +11040,6 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_or_right_value_2_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_or_right_value_2_object_1);
-
-            exception_lineno = 463;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_or_right_value_2 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_or_right_value_2_object_1);
         tmp_or_right_value_1 = tmp_or_right_value_2;
         goto or_end_2;
         or_left_2:;
@@ -11363,14 +11060,14 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
     branch_yes_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        int tmp_truth_name_5;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        int tmp_truth_name_3;
         if (var_test_dist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[107]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[101]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11380,10 +11077,10 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             goto try_except_handler_3;
         }
 
-        tmp_called_name_1 = var_test_dist;
+        tmp_called_value_1 = var_test_dist;
         if (var_nn == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[93]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11393,13 +11090,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_1 = var_nn;
+        tmp_args_element_value_1 = var_nn;
         CHECK_OBJECT(var_cc);
-        tmp_args_element_name_2 = var_cc;
+        tmp_args_element_value_2 = var_cc;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 464;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_call_result_3 == NULL) {
@@ -11412,8 +11109,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_call_result_3);
-        if (tmp_truth_name_5 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_call_result_3);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11423,7 +11120,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_condition_result_6 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_6 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_3);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
@@ -11436,22 +11133,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         nuitka_bool tmp_condition_result_7;
         PyObject *tmp_called_instance_9;
         PyObject *tmp_call_result_4;
-        int tmp_truth_name_6;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[35]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 467;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_3;
-        }
-
+        int tmp_truth_name_4;
+        CHECK_OBJECT(var_c);
         tmp_called_instance_9 = var_c;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 467;
-        tmp_call_result_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[97]);
+        tmp_call_result_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[90]);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11462,8 +11148,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_call_result_4);
-        if (tmp_truth_name_6 == -1) {
+        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_call_result_4);
+        if (tmp_truth_name_4 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11473,7 +11159,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_condition_result_7 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_7 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_4);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
@@ -11485,24 +11171,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
     {
         PyObject *tmp_called_instance_10;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_3;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[35]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 468;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_3;
-        }
-
+        PyObject *tmp_args_element_value_3;
+        CHECK_OBJECT(var_c);
         tmp_called_instance_10 = var_c;
         CHECK_OBJECT(var_c_altloc);
-        tmp_args_element_name_3 = var_c_altloc;
+        tmp_args_element_value_3 = var_c_altloc;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 468;
-        tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_10, mod_consts[108], tmp_args_element_name_3);
+        tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_10, mod_consts[102], tmp_args_element_value_3);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11520,22 +11195,11 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
         nuitka_bool tmp_condition_result_8;
         PyObject *tmp_called_instance_11;
         PyObject *tmp_call_result_6;
-        int tmp_truth_name_7;
-        if (var_n == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 469;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_3;
-        }
-
+        int tmp_truth_name_5;
+        CHECK_OBJECT(var_n);
         tmp_called_instance_11 = var_n;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 469;
-        tmp_call_result_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_11, mod_consts[97]);
+        tmp_call_result_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_11, mod_consts[90]);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11546,8 +11210,8 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_truth_name_7 = CHECK_IF_TRUE(tmp_call_result_6);
-        if (tmp_truth_name_7 == -1) {
+        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_call_result_6);
+        if (tmp_truth_name_5 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11557,7 +11221,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
             type_description_1 = "oooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_condition_result_8 = tmp_truth_name_7 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_8 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_6);
         if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
             goto branch_yes_8;
@@ -11569,24 +11233,13 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__20__is_connected(struct Nu
     {
         PyObject *tmp_called_instance_12;
         PyObject *tmp_call_result_7;
-        PyObject *tmp_args_element_name_4;
-        if (var_n == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 470;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_3;
-        }
-
+        PyObject *tmp_args_element_value_4;
+        CHECK_OBJECT(var_n);
         tmp_called_instance_12 = var_n;
         CHECK_OBJECT(var_n_altloc);
-        tmp_args_element_name_4 = var_n_altloc;
+        tmp_args_element_value_4 = var_n_altloc;
         frame_2a6b2170b0a019ecf086df5573e9d57c->m_frame.f_lineno = 470;
-        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_12, mod_consts[108], tmp_args_element_name_4);
+        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_12, mod_consts[102], tmp_args_element_value_4);
         if (tmp_call_result_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11924,17 +11577,17 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__21__test_dist(struct Nuitk
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_c);
-        tmp_left_name_1 = par_c;
+        tmp_left_value_1 = par_c;
         CHECK_OBJECT(par_n);
-        tmp_right_name_1 = par_n;
-        tmp_compexpr_left_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_right_value_1 = par_n;
+        tmp_cmp_expr_left_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11945,21 +11598,21 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__21__test_dist(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[64]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[58]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_1);
+            Py_DECREF(tmp_cmp_expr_left_1);
 
             exception_lineno = 476;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = RICH_COMPARE_LT_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_condition_result_1 = RICH_COMPARE_LT_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -11978,7 +11631,7 @@ static PyObject *impl_Bio$PDB$Polypeptide$$$function__21__test_dist(struct Nuitk
         assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
-    tmp_return_value = mod_consts[29];
+    tmp_return_value = mod_consts[28];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     goto branch_end_1;
@@ -12085,11 +11738,36 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__10_get_tau_list() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__10_get_tau_list,
-        mod_consts[154],
+        mod_consts[149],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[155],
+        mod_consts[150],
 #endif
         codeobj_b2992f4d4c14c979031d2129f814a934,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_Bio$PDB$Polypeptide,
+        mod_consts[41],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__11_get_theta_list() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list,
+        mod_consts[151],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[152],
+#endif
+        codeobj_856aef09236f38705430bf932fa640e0,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -12107,37 +11785,12 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__10_get_tau_list()
 
 
 
-static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__11_get_theta_list() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_Bio$PDB$Polypeptide$$$function__11_get_theta_list,
-        mod_consts[156],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[157],
-#endif
-        codeobj_856aef09236f38705430bf932fa640e0,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_Bio$PDB$Polypeptide,
-        mod_consts[51],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__12_get_sequence() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__12_get_sequence,
-        mod_consts[158],
+        mod_consts[153],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[159],
+        mod_consts[154],
 #endif
         codeobj_e282f35b4bd64ecb09d4fa849eb1f4ea,
         NULL,
@@ -12146,7 +11799,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__12_get_sequence()
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[55],
+        mod_consts[49],
         NULL,
         0
     );
@@ -12160,9 +11813,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__12_get_sequence()
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__13___repr__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__13___repr__,
-        mod_consts[160],
+        mod_consts[155],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[161],
+        mod_consts[156],
 #endif
         codeobj_e29bec7708dabb1209f10deae3173e69,
         NULL,
@@ -12171,7 +11824,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__13___repr__() {
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[63],
+        mod_consts[57],
         NULL,
         0
     );
@@ -12185,9 +11838,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__13___repr__() {
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__14___init__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__14___init__,
-        mod_consts[93],
+        mod_consts[86],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[165],
+        mod_consts[161],
 #endif
         codeobj_10da8351d0b59270662657b91fe1b077,
         NULL,
@@ -12196,7 +11849,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__14___init__() {
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[65],
+        mod_consts[59],
         NULL,
         0
     );
@@ -12210,9 +11863,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__14___init__() {
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__15__accept() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__15__accept,
-        mod_consts[74],
+        mod_consts[68],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[166],
+        mod_consts[162],
 #endif
         codeobj_5af1b7cbd66d1bc149b76baf5fb733a9,
         NULL,
@@ -12221,7 +11874,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__15__accept() {
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[72],
+        mod_consts[66],
         NULL,
         0
     );
@@ -12235,9 +11888,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__15__accept() {
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__16_build_peptides(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__16_build_peptides,
-        mod_consts[168],
+        mod_consts[164],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[169],
+        mod_consts[165],
 #endif
         codeobj_5bf1831d5ca0a81c810b373b3a812f1a,
         defaults,
@@ -12246,7 +11899,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__16_build_peptides
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[91],
+        mod_consts[84],
         NULL,
         0
     );
@@ -12260,9 +11913,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__16_build_peptides
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__17___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__17___init__,
-        mod_consts[93],
+        mod_consts[86],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[173],
+        mod_consts[169],
 #endif
         codeobj_03b8ebeffd5546bea3c5fa9fe14ec2cc,
         defaults,
@@ -12271,7 +11924,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__17___init__(PyObj
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[94],
+        mod_consts[87],
         NULL,
         0
     );
@@ -12285,9 +11938,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__17___init__(PyObj
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__18__is_connected() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__18__is_connected,
-        mod_consts[73],
+        mod_consts[67],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[174],
+        mod_consts[170],
 #endif
         codeobj_47580418af86be26fe5acaa5217ff508,
         NULL,
@@ -12310,9 +11963,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__18__is_connected(
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__19___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__19___init__,
-        mod_consts[93],
+        mod_consts[86],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[178],
+        mod_consts[174],
 #endif
         codeobj_206cfc06c70f0ed30f9d854380a8de1c,
         defaults,
@@ -12321,7 +11974,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__19___init__(PyObj
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[94],
+        mod_consts[87],
         NULL,
         0
     );
@@ -12335,7 +11988,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__19___init__(PyObj
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__1_index_to_one() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__1_index_to_one,
-        mod_consts[133],
+        mod_consts[128],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -12360,9 +12013,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__1_index_to_one() 
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__20__is_connected() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__20__is_connected,
-        mod_consts[73],
+        mod_consts[67],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[179],
+        mod_consts[175],
 #endif
         codeobj_2a6b2170b0a019ecf086df5573e9d57c,
         NULL,
@@ -12385,9 +12038,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__20__is_connected(
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__21__test_dist() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__21__test_dist,
-        mod_consts[103],
+        mod_consts[97],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[180],
+        mod_consts[176],
 #endif
         codeobj_8ffe35a72fdee416593fafb3bb891e45,
         NULL,
@@ -12396,7 +12049,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__21__test_dist() {
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[109],
+        mod_consts[103],
         NULL,
         0
     );
@@ -12410,7 +12063,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__21__test_dist() {
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__2_one_to_index() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__2_one_to_index,
-        mod_consts[134],
+        mod_consts[129],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -12435,7 +12088,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__2_one_to_index() 
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__3_index_to_three() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__3_index_to_three,
-        mod_consts[135],
+        mod_consts[130],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -12460,7 +12113,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__3_index_to_three(
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__4_three_to_index() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__4_three_to_index,
-        mod_consts[136],
+        mod_consts[131],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -12485,7 +12138,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__4_three_to_index(
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__5_three_to_one() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__5_three_to_one,
-        mod_consts[137],
+        mod_consts[132],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -12510,7 +12163,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__5_three_to_one() 
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__6_one_to_three() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__6_one_to_three,
-        mod_consts[138],
+        mod_consts[133],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -12535,7 +12188,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__6_one_to_three() 
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__7_is_aa(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__7_is_aa,
-        mod_consts[66],
+        mod_consts[60],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -12560,9 +12213,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__7_is_aa(PyObject 
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__8_get_ca_list() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__8_get_ca_list,
-        mod_consts[39],
+        mod_consts[34],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[151],
+        mod_consts[146],
 #endif
         codeobj_9fcbe27ebdceaf905902aa340ef0ade7,
         NULL,
@@ -12585,9 +12238,9 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__8_get_ca_list() {
 static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list,
-        mod_consts[152],
+        mod_consts[147],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[153],
+        mod_consts[148],
 #endif
         codeobj_a550f482be205d3680a3d6c17c4796b4,
         NULL,
@@ -12596,7 +12249,7 @@ static PyObject *MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_lis
         NULL,
 #endif
         module_Bio$PDB$Polypeptide,
-        mod_consts[38],
+        mod_consts[33],
         NULL,
         0
     );
@@ -12794,63 +12447,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("Bio.PDB.Polypeptide");
+
+    // Store the module for future use.
     module_Bio$PDB$Polypeptide = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.PDB.Polypeptide: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("Bio.PDB.Polypeptide: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.PDB.Polypeptide: Calling createModuleConstants().\n");
+        PRINT_STRING("Bio.PDB.Polypeptide: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Bio.PDB.Polypeptide: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("Bio.PDB.Polypeptide: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initBio$PDB$Polypeptide\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_Bio$PDB$Polypeptide = MODULE_DICT(module_Bio$PDB$Polypeptide);
 
@@ -12871,7 +12528,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         UPDATE_STRING_DICT0(
             moduledict_Bio$PDB$Polypeptide,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[47]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)const_str_plain___name__);
@@ -12921,7 +12578,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -12979,10 +12636,12 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     PyObject *tmp_class_creation_2__metaclass = NULL;
     PyObject *tmp_class_creation_2__prepared = NULL;
     PyObject *tmp_class_creation_3__bases = NULL;
+    PyObject *tmp_class_creation_3__bases_orig = NULL;
     PyObject *tmp_class_creation_3__class_decl_dict = NULL;
     PyObject *tmp_class_creation_3__metaclass = NULL;
     PyObject *tmp_class_creation_3__prepared = NULL;
     PyObject *tmp_class_creation_4__bases = NULL;
+    PyObject *tmp_class_creation_4__bases_orig = NULL;
     PyObject *tmp_class_creation_4__class_decl_dict = NULL;
     PyObject *tmp_class_creation_4__metaclass = NULL;
     PyObject *tmp_class_creation_4__prepared = NULL;
@@ -13076,13 +12735,13 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[110];
-        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[111], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[104];
+        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[105], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[112], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[106], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_a2b6eaaff4a41badf3763569721a557e = MAKE_MODULE_FRAME(codeobj_a2b6eaaff4a41badf3763569721a557e, module_Bio$PDB$Polypeptide);
@@ -13097,14 +12756,14 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[113]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[107]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[113]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[114], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[108], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -13120,14 +12779,14 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[113]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[107]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[113]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[115], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[109], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -13142,22 +12801,22 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[116], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[110], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[69];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[19];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[63];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[19];
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 53;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13168,23 +12827,23 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[69], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[63], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[117];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[118];
-        tmp_level_name_2 = mod_consts[19];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[111];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[112];
+        tmp_level_value_2 = mod_consts[19];
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 55;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13222,18 +12881,18 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[119];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[120];
-        tmp_level_name_3 = mod_consts[19];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[113];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[114];
+        tmp_level_value_3 = mod_consts[19];
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 56;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13248,11 +12907,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_Bio$PDB$Polypeptide,
-                mod_consts[54],
+                mod_consts[48],
                 mod_consts[19]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[54]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[48]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -13266,23 +12925,23 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[121];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[122];
-        tmp_level_name_4 = mod_consts[19];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[115];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[116];
+        tmp_level_value_4 = mod_consts[19];
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 57;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13297,11 +12956,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_Bio$PDB$Polypeptide,
-                mod_consts[79],
+                mod_consts[73],
                 mod_consts[19]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[79]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[73]);
         }
 
         Py_DECREF(tmp_import_name_from_3);
@@ -13315,22 +12974,22 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[79], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[73], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[123];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[124];
-        tmp_level_name_5 = mod_consts[19];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[117];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_Bio$PDB$Polypeptide;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[118];
+        tmp_level_value_5 = mod_consts[19];
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 58;
-        tmp_assign_source_8 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_assign_source_8 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13354,11 +13013,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_Bio$PDB$Polypeptide,
-                mod_consts[30],
+                mod_consts[29],
                 mod_consts[19]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[30]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[29]);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -13371,7 +13030,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[30], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
@@ -13382,11 +13041,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_Bio$PDB$Polypeptide,
-                mod_consts[48],
+                mod_consts[43],
                 mod_consts[19]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[48]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[43]);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -13399,7 +13058,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[43], tmp_assign_source_10);
     }
     goto try_end_1;
     // Exception handler code:
@@ -13430,24 +13089,24 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     tmp_import_from_1__module = NULL;
     {
         PyObject *tmp_assign_source_11;
-        tmp_assign_source_11 = LIST_COPY(mod_consts[125]);
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_11);
+        tmp_assign_source_11 = LIST_COPY(mod_consts[119]);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[120], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = mod_consts[127];
-        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[128], tmp_assign_source_12);
+        tmp_assign_source_12 = mod_consts[121];
+        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[122], tmp_assign_source_12);
     }
     {
         PyObject *tmp_assign_source_13;
-        tmp_assign_source_13 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[126]);
+        tmp_assign_source_13 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[120]);
 
         if (unlikely(tmp_assign_source_13 == NULL)) {
-            tmp_assign_source_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+            tmp_assign_source_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[120]);
         }
 
         assert(!(tmp_assign_source_13 == NULL));
-        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_13);
+        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[123], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
@@ -13472,7 +13131,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_18;
         PyObject *tmp_iter_arg_1;
-        tmp_iter_arg_1 = mod_consts[130];
+        tmp_iter_arg_1 = mod_consts[124];
         tmp_assign_source_18 = MAKE_ITERATOR_INFALLIBLE(tmp_iter_arg_1);
         assert(!(tmp_assign_source_18 == NULL));
         assert(tmp_for_loop_1__for_iterator == NULL);
@@ -13510,19 +13169,19 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         PyObject *tmp_assign_source_20;
         CHECK_OBJECT(tmp_for_loop_1__iter_value);
         tmp_assign_source_20 = tmp_for_loop_1__iter_value;
-        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[31], tmp_assign_source_20);
+        UPDATE_STRING_DICT0(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[125], tmp_assign_source_20);
     }
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[128]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[122]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[128]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[122]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13532,14 +13191,14 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        tmp_subscript_name_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[31]);
+        tmp_subscript_value_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[125]);
 
-        if (unlikely(tmp_subscript_name_1 == NULL)) {
-            tmp_subscript_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_subscript_value_1 == NULL)) {
+            tmp_subscript_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
-        assert(!(tmp_subscript_name_1 == NULL));
-        tmp_assign_source_21 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        assert(!(tmp_subscript_value_1 == NULL));
+        tmp_assign_source_21 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assign_source_21 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13550,19 +13209,19 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[131], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_21);
     }
     {
         PyObject *tmp_assign_source_22;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[129]);
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[123]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[123]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13572,13 +13231,13 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        tmp_subscript_name_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[31]);
+        tmp_subscript_value_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[125]);
 
-        if (unlikely(tmp_subscript_name_2 == NULL)) {
-            tmp_subscript_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_subscript_value_2 == NULL)) {
+            tmp_subscript_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
-        if (tmp_subscript_name_2 == NULL) {
+        if (tmp_subscript_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13588,7 +13247,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        tmp_assign_source_22 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
+        tmp_assign_source_22 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
         if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13599,16 +13258,16 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[132], tmp_assign_source_22);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[127], tmp_assign_source_22);
     }
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
-        tmp_ass_subvalue_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[31]);
+        tmp_ass_subvalue_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[125]);
 
         if (unlikely(tmp_ass_subvalue_1 == NULL)) {
-            tmp_ass_subvalue_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+            tmp_ass_subvalue_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
         if (tmp_ass_subvalue_1 == NULL) {
@@ -13637,10 +13296,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[131]);
+        tmp_ass_subscript_1 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[126]);
 
         if (unlikely(tmp_ass_subscript_1 == NULL)) {
-            tmp_ass_subscript_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[131]);
+            tmp_ass_subscript_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
         }
 
         if (tmp_ass_subscript_1 == NULL) {
@@ -13669,10 +13328,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
-        tmp_ass_subvalue_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[131]);
+        tmp_ass_subvalue_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[126]);
 
         if (unlikely(tmp_ass_subvalue_2 == NULL)) {
-            tmp_ass_subvalue_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[131]);
+            tmp_ass_subvalue_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
         }
 
         if (tmp_ass_subvalue_2 == NULL) {
@@ -13701,10 +13360,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[31]);
+        tmp_ass_subscript_2 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[125]);
 
         if (unlikely(tmp_ass_subscript_2 == NULL)) {
-            tmp_ass_subscript_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+            tmp_ass_subscript_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
         if (tmp_ass_subscript_2 == NULL) {
@@ -13733,10 +13392,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         PyObject *tmp_ass_subvalue_3;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
-        tmp_ass_subvalue_3 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[31]);
+        tmp_ass_subvalue_3 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[125]);
 
         if (unlikely(tmp_ass_subvalue_3 == NULL)) {
-            tmp_ass_subvalue_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+            tmp_ass_subvalue_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
         if (tmp_ass_subvalue_3 == NULL) {
@@ -13765,10 +13424,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_3 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[132]);
+        tmp_ass_subscript_3 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[127]);
 
         if (unlikely(tmp_ass_subscript_3 == NULL)) {
-            tmp_ass_subscript_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+            tmp_ass_subscript_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
         }
 
         if (tmp_ass_subscript_3 == NULL) {
@@ -13797,10 +13456,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         PyObject *tmp_ass_subvalue_4;
         PyObject *tmp_ass_subscribed_4;
         PyObject *tmp_ass_subscript_4;
-        tmp_ass_subvalue_4 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[132]);
+        tmp_ass_subvalue_4 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[127]);
 
         if (unlikely(tmp_ass_subvalue_4 == NULL)) {
-            tmp_ass_subvalue_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+            tmp_ass_subvalue_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
         }
 
         if (tmp_ass_subvalue_4 == NULL) {
@@ -13829,10 +13488,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_2;
         }
-        tmp_ass_subscript_4 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[31]);
+        tmp_ass_subscript_4 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[125]);
 
         if (unlikely(tmp_ass_subscript_4 == NULL)) {
-            tmp_ass_subscript_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+            tmp_ass_subscript_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
         if (tmp_ass_subscript_4 == NULL) {
@@ -13906,7 +13565,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_assign_source_23 = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__1_index_to_one();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[128], tmp_assign_source_23);
     }
     {
         PyObject *tmp_assign_source_24;
@@ -13914,7 +13573,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_assign_source_24 = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__2_one_to_index();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[134], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
@@ -13922,7 +13581,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_assign_source_25 = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__3_index_to_three();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[135], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[130], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
@@ -13930,7 +13589,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_assign_source_26 = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__4_three_to_index();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[136], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[131], tmp_assign_source_26);
     }
     {
         PyObject *tmp_assign_source_27;
@@ -13938,7 +13597,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_assign_source_27 = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__5_three_to_one();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[137], tmp_assign_source_27);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[132], tmp_assign_source_27);
     }
     {
         PyObject *tmp_assign_source_28;
@@ -13946,62 +13605,31 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_assign_source_28 = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__6_one_to_three();
 
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[138], tmp_assign_source_28);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_28);
     }
     {
         PyObject *tmp_assign_source_29;
         PyObject *tmp_defaults_1;
-        tmp_defaults_1 = mod_consts[139];
+        tmp_defaults_1 = mod_consts[134];
         Py_INCREF(tmp_defaults_1);
 
 
         tmp_assign_source_29 = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__7_is_aa(tmp_defaults_1);
 
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[66], tmp_assign_source_29);
-    }
-    {
-        PyObject *tmp_assign_source_30;
-        tmp_assign_source_30 = mod_consts[140];
-        assert(tmp_class_creation_1__bases == NULL);
-        Py_INCREF(tmp_assign_source_30);
-        tmp_class_creation_1__bases = tmp_assign_source_30;
-    }
-    {
-        PyObject *tmp_assign_source_31;
-        tmp_assign_source_31 = PyDict_New();
-        assert(tmp_class_creation_1__class_decl_dict == NULL);
-        tmp_class_creation_1__class_decl_dict = tmp_assign_source_31;
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_29);
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_32;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[141];
-        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_1;
-        } else {
-            goto condexpr_false_1;
+        PyObject *tmp_assign_source_30;
+        PyObject *tmp_dircall_arg1_1;
+        tmp_dircall_arg1_1 = mod_consts[135];
+        Py_INCREF(tmp_dircall_arg1_1);
+
+        {
+            PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
+            tmp_assign_source_30 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        condexpr_true_1:;
-        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[141];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_assign_source_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14011,12 +13639,75 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_3;
         }
+        assert(tmp_class_creation_1__bases == NULL);
+        tmp_class_creation_1__bases = tmp_assign_source_30;
+    }
+    {
+        PyObject *tmp_assign_source_31;
+        tmp_assign_source_31 = PyDict_New();
+        assert(tmp_class_creation_1__class_decl_dict == NULL);
+        tmp_class_creation_1__class_decl_dict = tmp_assign_source_31;
+    }
+    {
+        PyObject *tmp_assign_source_32;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
+        nuitka_bool tmp_condition_result_2;
+        int tmp_truth_name_1;
+        PyObject *tmp_type_arg_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[136];
+        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
+            goto condexpr_true_1;
+        } else {
+            goto condexpr_false_1;
+        }
+        condexpr_true_1:;
+        CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[136];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
+        }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_3 = tmp_class_creation_1__bases;
-        tmp_subscript_name_3 = mod_consts[19];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_3, 0);
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_class_creation_1__bases);
+        if (tmp_truth_name_1 == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 207;
+
+            goto try_except_handler_3;
+        }
+        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+            goto condexpr_true_2;
+        } else {
+            goto condexpr_false_2;
+        }
+        condexpr_true_2:;
+        CHECK_OBJECT(tmp_class_creation_1__bases);
+        tmp_expression_value_3 = tmp_class_creation_1__bases;
+        tmp_subscript_value_3 = mod_consts[19];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_3, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14027,9 +13718,9 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_3;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14039,11 +13730,16 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_3;
         }
+        goto condexpr_end_2;
+        condexpr_false_2:;
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
+        condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_32 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_32 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_32 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14058,16 +13754,16 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_1__metaclass = tmp_assign_source_32;
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[141];
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[136];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -14076,7 +13772,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[141];
+    tmp_dictdel_key = mod_consts[136];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -14090,13 +13786,13 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     }
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_4;
+        nuitka_bool tmp_condition_result_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_4 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[142]);
-        tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_expression_value_4 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[137]);
+        tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -14105,15 +13801,15 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_33;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_5 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[142]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_5 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[137]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14123,18 +13819,18 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_3;
         }
-        tmp_tuple_element_1 = mod_consts[88];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = mod_consts[81];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_1 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 207;
-        tmp_assign_source_33 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_33 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_33 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14149,14 +13845,14 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_1__prepared = tmp_assign_source_33;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_6;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_6 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_6, mod_consts[143]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_6 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_6, mod_consts[138]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14167,8 +13863,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_3;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -14178,18 +13874,18 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_2;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[144];
+        tmp_left_value_1 = mod_consts[139];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[145];
-        tmp_getattr_default_1 = mod_consts[146];
+        tmp_getattr_attr_1 = mod_consts[140];
+        tmp_getattr_default_1 = mod_consts[141];
         tmp_tuple_element_2 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14201,17 +13897,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_3;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_7;
+            PyObject *tmp_expression_value_7;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_7 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_7 == NULL));
-            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[145]);
-            Py_DECREF(tmp_expression_name_7);
+            tmp_expression_value_7 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_7 == NULL));
+            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[140]);
+            Py_DECREF(tmp_expression_value_7);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -14222,17 +13918,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_2);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_3;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14272,8 +13968,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[147];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[148], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[142];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -14284,8 +13980,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_5;
         }
-        tmp_dictset_value = mod_consts[149];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[111], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[144];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[105], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -14296,8 +13992,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_5;
         }
-        tmp_dictset_value = mod_consts[88];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[150], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[81];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[145], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -14339,7 +14035,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__8_get_ca_list();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[39], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[34], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14355,7 +14051,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__9_get_phi_psi_list();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[152], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[147], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14371,7 +14067,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__10_get_tau_list();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[154], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[149], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14387,7 +14083,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__11_get_theta_list();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[156], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[151], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14403,7 +14099,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__12_get_sequence();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[158], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[153], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14419,7 +14115,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__13___repr__();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[160], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[155], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14487,26 +14183,65 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         goto try_except_handler_5;
         skip_nested_handling_1:;
         {
+            nuitka_bool tmp_condition_result_6;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
+            CHECK_OBJECT(tmp_class_creation_1__bases);
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_right_1 = mod_consts[135];
+            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+            if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 207;
+
+                goto try_except_handler_5;
+            }
+            if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+                goto branch_yes_4;
+            } else {
+                goto branch_no_4;
+            }
+            assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
+        }
+        branch_yes_4:;
+        tmp_dictset_value = mod_consts[135];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207, mod_consts[157], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 207;
+
+            goto try_except_handler_5;
+        }
+        branch_no_4:;
+        {
             PyObject *tmp_assign_source_36;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_3;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_3 = mod_consts[88];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_3 = mod_consts[81];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_3 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_3);
             tmp_tuple_element_3 = locals_Bio$PDB$Polypeptide$$$class__1_Polypeptide_207;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 207;
-            tmp_assign_source_36 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_36 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_36 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -14585,7 +14320,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         exception_lineno = 207;
         goto try_except_handler_3;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[88], tmp_assign_source_35);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_35);
     }
     goto try_end_3;
     // Exception handler code:
@@ -14616,11 +14351,14 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     goto frame_exception_exit_1;
     // End of try:
     try_end_3:;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -14634,47 +14372,39 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     // Tried code:
     {
         PyObject *tmp_assign_source_38;
-        PyObject *tmp_metaclass_name_2;
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_key_name_4;
-        PyObject *tmp_dict_arg_name_4;
-        PyObject *tmp_dict_arg_name_5;
-        PyObject *tmp_key_name_5;
-        PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[141];
+        PyObject *tmp_metaclass_value_2;
+        bool tmp_condition_result_7;
+        PyObject *tmp_key_value_4;
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
+        PyObject *tmp_bases_value_2;
+        tmp_key_value_4 = mod_consts[136];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
+        tmp_dict_arg_value_4 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_4, tmp_key_value_4);
         assert(!(tmp_res == -1));
-        tmp_condition_result_5 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_2;
+        tmp_condition_result_7 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_7 != false) {
+            goto condexpr_true_3;
         } else {
-            goto condexpr_false_2;
+            goto condexpr_false_3;
         }
-        condexpr_true_2:;
+        condexpr_true_3:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[141];
-        tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
-        if (tmp_metaclass_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 317;
-
-            goto try_except_handler_6;
+        tmp_dict_arg_value_5 = tmp_class_creation_2__class_decl_dict;
+        tmp_key_value_5 = mod_consts[136];
+        tmp_metaclass_value_2 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
+        if (tmp_metaclass_value_2 == NULL) {
+            tmp_metaclass_value_2 = Py_None;
         }
-        goto condexpr_end_2;
-        condexpr_false_2:;
-        tmp_metaclass_name_2 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_2);
-        condexpr_end_2:;
-        tmp_bases_name_2 = mod_consts[162];
-        tmp_assign_source_38 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
-        Py_DECREF(tmp_metaclass_name_2);
+        assert(!(tmp_metaclass_value_2 == NULL));
+        goto condexpr_end_3;
+        condexpr_false_3:;
+        tmp_metaclass_value_2 = (PyObject *)&PyType_Type;
+        condexpr_end_3:;
+        tmp_bases_value_2 = mod_consts[158];
+        tmp_assign_source_38 = SELECT_METACLASS(tmp_metaclass_value_2, tmp_bases_value_2);
         if (tmp_assign_source_38 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14689,25 +14419,25 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_2__metaclass = tmp_assign_source_38;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_key_name_6;
-        PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[141];
+        bool tmp_condition_result_8;
+        PyObject *tmp_key_value_6;
+        PyObject *tmp_dict_arg_value_6;
+        tmp_key_value_6 = mod_consts[136];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
+        tmp_dict_arg_value_6 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_6, tmp_key_value_6);
         assert(!(tmp_res == -1));
-        tmp_condition_result_6 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_4;
+        tmp_condition_result_8 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_8 != false) {
+            goto branch_yes_5;
         } else {
-            goto branch_no_4;
+            goto branch_no_5;
         }
     }
-    branch_yes_4:;
+    branch_yes_5:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[141];
+    tmp_dictdel_key = mod_consts[136];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -14719,31 +14449,31 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         goto try_except_handler_6;
     }
-    branch_no_4:;
+    branch_no_5:;
     {
-        nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_expression_name_8;
+        nuitka_bool tmp_condition_result_9;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_8 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_8, mod_consts[142]);
-        tmp_condition_result_7 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_5;
+        tmp_expression_value_8 = tmp_class_creation_2__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_8, mod_consts[137]);
+        tmp_condition_result_9 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_6;
         } else {
-            goto branch_no_5;
+            goto branch_no_6;
         }
     }
-    branch_yes_5:;
+    branch_yes_6:;
     {
         PyObject *tmp_assign_source_39;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_name_3;
-        PyObject *tmp_kwargs_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_args_value_3;
+        PyObject *tmp_kwargs_value_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_9 = tmp_class_creation_2__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[142]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_9 = tmp_class_creation_2__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[137]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14753,12 +14483,12 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_6;
         }
-        tmp_args_name_3 = mod_consts[163];
+        tmp_args_value_3 = mod_consts[159];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
+        tmp_kwargs_value_3 = tmp_class_creation_2__class_decl_dict;
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 317;
-        tmp_assign_source_39 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_3);
+        tmp_assign_source_39 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_assign_source_39 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14773,14 +14503,14 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_2__prepared = tmp_assign_source_39;
     }
     {
-        nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_expression_name_10;
+        bool tmp_condition_result_10;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_expression_value_10;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
-        tmp_expression_name_10 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_10, mod_consts[143]);
-        tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_expression_value_10 = tmp_class_creation_2__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_10, mod_consts[138]);
+        tmp_operand_value_2 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14791,29 +14521,29 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_6;
         }
-        tmp_condition_result_8 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_6;
+        tmp_condition_result_10 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_10 != false) {
+            goto branch_yes_7;
         } else {
-            goto branch_no_6;
+            goto branch_no_7;
         }
     }
-    branch_yes_6:;
+    branch_yes_7:;
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_raise_value_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_tuple_element_4;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_2 = mod_consts[144];
+        tmp_left_value_2 = mod_consts[139];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[145];
-        tmp_getattr_default_2 = mod_consts[146];
+        tmp_getattr_attr_2 = mod_consts[140];
+        tmp_getattr_default_2 = mod_consts[141];
         tmp_tuple_element_4 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14825,17 +14555,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_6;
         }
-        tmp_right_name_2 = PyTuple_New(2);
+        tmp_right_value_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_11;
+            PyObject *tmp_expression_value_11;
             PyObject *tmp_type_arg_3;
-            PyTuple_SET_ITEM(tmp_right_name_2, 0, tmp_tuple_element_4);
+            PyTuple_SET_ITEM(tmp_right_value_2, 0, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_2__prepared);
             tmp_type_arg_3 = tmp_class_creation_2__prepared;
-            tmp_expression_name_11 = BUILTIN_TYPE1(tmp_type_arg_3);
-            assert(!(tmp_expression_name_11 == NULL));
-            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[145]);
-            Py_DECREF(tmp_expression_name_11);
+            tmp_expression_value_11 = BUILTIN_TYPE1(tmp_type_arg_3);
+            assert(!(tmp_expression_value_11 == NULL));
+            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[140]);
+            Py_DECREF(tmp_expression_value_11);
             if (tmp_tuple_element_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -14846,17 +14576,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
                 goto tuple_build_exception_2;
             }
-            PyTuple_SET_ITEM(tmp_right_name_2, 1, tmp_tuple_element_4);
+            PyTuple_SET_ITEM(tmp_right_value_2, 1, tmp_tuple_element_4);
         }
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_2:;
-        Py_DECREF(tmp_right_name_2);
+        Py_DECREF(tmp_right_value_2);
         goto try_except_handler_6;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_raise_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14875,16 +14605,16 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         goto try_except_handler_6;
     }
+    branch_no_7:;
+    goto branch_end_6;
     branch_no_6:;
-    goto branch_end_5;
-    branch_no_5:;
     {
         PyObject *tmp_assign_source_40;
         tmp_assign_source_40 = PyDict_New();
         assert(tmp_class_creation_2__prepared == NULL);
         tmp_class_creation_2__prepared = tmp_assign_source_40;
     }
-    branch_end_5:;
+    branch_end_6:;
     {
         PyObject *tmp_assign_source_41;
         {
@@ -14896,8 +14626,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[147];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[148], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[142];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -14908,8 +14638,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_8;
         }
-        tmp_dictset_value = mod_consts[164];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[111], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[160];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[105], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -14920,8 +14650,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_8;
         }
-        tmp_dictset_value = mod_consts[92];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[150], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[85];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[145], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -14963,7 +14693,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__14___init__();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[93], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[86], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14979,7 +14709,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__15__accept();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[74], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[68], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14993,13 +14723,13 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         }
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[167];
+            tmp_defaults_2 = mod_consts[163];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__16_build_peptides(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[168], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317, mod_consts[164], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -15069,24 +14799,24 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         skip_nested_handling_2:;
         {
             PyObject *tmp_assign_source_42;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_name_4;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_value_4;
             PyObject *tmp_tuple_element_5;
-            PyObject *tmp_kwargs_name_4;
+            PyObject *tmp_kwargs_value_4;
             CHECK_OBJECT(tmp_class_creation_2__metaclass);
-            tmp_called_name_4 = tmp_class_creation_2__metaclass;
-            tmp_tuple_element_5 = mod_consts[92];
-            tmp_args_name_4 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_5);
-            tmp_tuple_element_5 = mod_consts[162];
-            PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_5);
+            tmp_called_value_4 = tmp_class_creation_2__metaclass;
+            tmp_tuple_element_5 = mod_consts[85];
+            tmp_args_value_4 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_5);
+            tmp_tuple_element_5 = mod_consts[158];
+            PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_5);
             tmp_tuple_element_5 = locals_Bio$PDB$Polypeptide$$$class__2__PPBuilder_317;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 2, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-            tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
+            tmp_kwargs_value_4 = tmp_class_creation_2__class_decl_dict;
             frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 317;
-            tmp_assign_source_42 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_4, tmp_kwargs_name_4);
-            Py_DECREF(tmp_args_name_4);
+            tmp_assign_source_42 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_4, tmp_kwargs_value_4);
+            Py_DECREF(tmp_args_value_4);
             if (tmp_assign_source_42 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -15165,7 +14895,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         exception_lineno = 317;
         goto try_except_handler_6;
         outline_result_2:;
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[92], tmp_assign_source_41);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_41);
     }
     goto try_end_4;
     // Exception handler code:
@@ -15179,9 +14909,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     Py_XDECREF(tmp_class_creation_2__prepared);
     tmp_class_creation_2__prepared = NULL;
@@ -15194,9 +14926,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     goto frame_exception_exit_1;
     // End of try:
     try_end_4:;
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_2__prepared);
     Py_DECREF(tmp_class_creation_2__prepared);
@@ -15205,10 +14939,10 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_43;
         PyObject *tmp_tuple_element_6;
-        tmp_tuple_element_6 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[92]);
+        tmp_tuple_element_6 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[85]);
 
         if (unlikely(tmp_tuple_element_6 == NULL)) {
-            tmp_tuple_element_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+            tmp_tuple_element_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
         }
 
         if (tmp_tuple_element_6 == NULL) {
@@ -15223,44 +14957,21 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         }
         tmp_assign_source_43 = PyTuple_New(1);
         PyTuple_SET_ITEM0(tmp_assign_source_43, 0, tmp_tuple_element_6);
-        assert(tmp_class_creation_3__bases == NULL);
-        tmp_class_creation_3__bases = tmp_assign_source_43;
+        assert(tmp_class_creation_3__bases_orig == NULL);
+        tmp_class_creation_3__bases_orig = tmp_assign_source_43;
     }
     {
         PyObject *tmp_assign_source_44;
-        tmp_assign_source_44 = PyDict_New();
-        assert(tmp_class_creation_3__class_decl_dict == NULL);
-        tmp_class_creation_3__class_decl_dict = tmp_assign_source_44;
-    }
-    {
-        PyObject *tmp_assign_source_45;
-        PyObject *tmp_metaclass_name_3;
-        nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_key_name_7;
-        PyObject *tmp_dict_arg_name_7;
-        PyObject *tmp_dict_arg_name_8;
-        PyObject *tmp_key_name_8;
-        PyObject *tmp_type_arg_4;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_bases_name_3;
-        tmp_key_name_7 = mod_consts[141];
-        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_7 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_7, tmp_key_name_7);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_9 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_3;
-        } else {
-            goto condexpr_false_3;
+        PyObject *tmp_dircall_arg1_2;
+        CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+        tmp_dircall_arg1_2 = tmp_class_creation_3__bases_orig;
+        Py_INCREF(tmp_dircall_arg1_2);
+
+        {
+            PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
+            tmp_assign_source_44 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        condexpr_true_3:;
-        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_8 = tmp_class_creation_3__class_decl_dict;
-        tmp_key_name_8 = mod_consts[141];
-        tmp_metaclass_name_3 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_8, tmp_key_name_8);
-        if (tmp_metaclass_name_3 == NULL) {
+        if (tmp_assign_source_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15270,12 +14981,75 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_9;
         }
-        goto condexpr_end_3;
-        condexpr_false_3:;
+        assert(tmp_class_creation_3__bases == NULL);
+        tmp_class_creation_3__bases = tmp_assign_source_44;
+    }
+    {
+        PyObject *tmp_assign_source_45;
+        tmp_assign_source_45 = PyDict_New();
+        assert(tmp_class_creation_3__class_decl_dict == NULL);
+        tmp_class_creation_3__class_decl_dict = tmp_assign_source_45;
+    }
+    {
+        PyObject *tmp_assign_source_46;
+        PyObject *tmp_metaclass_value_3;
+        bool tmp_condition_result_11;
+        PyObject *tmp_key_value_7;
+        PyObject *tmp_dict_arg_value_7;
+        PyObject *tmp_dict_arg_value_8;
+        PyObject *tmp_key_value_8;
+        nuitka_bool tmp_condition_result_12;
+        int tmp_truth_name_2;
+        PyObject *tmp_type_arg_4;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_bases_value_3;
+        tmp_key_value_7 = mod_consts[136];
+        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+        tmp_dict_arg_value_7 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_7, tmp_key_value_7);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_11 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_11 != false) {
+            goto condexpr_true_4;
+        } else {
+            goto condexpr_false_4;
+        }
+        condexpr_true_4:;
+        CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+        tmp_dict_arg_value_8 = tmp_class_creation_3__class_decl_dict;
+        tmp_key_value_8 = mod_consts[136];
+        tmp_metaclass_value_3 = DICT_GET_ITEM0(tmp_dict_arg_value_8, tmp_key_value_8);
+        if (tmp_metaclass_value_3 == NULL) {
+            tmp_metaclass_value_3 = Py_None;
+        }
+        assert(!(tmp_metaclass_value_3 == NULL));
+        Py_INCREF(tmp_metaclass_value_3);
+        goto condexpr_end_4;
+        condexpr_false_4:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
-        tmp_expression_name_12 = tmp_class_creation_3__bases;
-        tmp_subscript_name_4 = mod_consts[19];
-        tmp_type_arg_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_12, tmp_subscript_name_4, 0);
+        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_class_creation_3__bases);
+        if (tmp_truth_name_2 == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 403;
+
+            goto try_except_handler_9;
+        }
+        tmp_condition_result_12 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
+            goto condexpr_true_5;
+        } else {
+            goto condexpr_false_5;
+        }
+        condexpr_true_5:;
+        CHECK_OBJECT(tmp_class_creation_3__bases);
+        tmp_expression_value_12 = tmp_class_creation_3__bases;
+        tmp_subscript_value_4 = mod_consts[19];
+        tmp_type_arg_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_12, tmp_subscript_value_4, 0);
         if (tmp_type_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15286,9 +15060,9 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_9;
         }
-        tmp_metaclass_name_3 = BUILTIN_TYPE1(tmp_type_arg_4);
+        tmp_metaclass_value_3 = BUILTIN_TYPE1(tmp_type_arg_4);
         Py_DECREF(tmp_type_arg_4);
-        if (tmp_metaclass_name_3 == NULL) {
+        if (tmp_metaclass_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15298,12 +15072,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_9;
         }
-        condexpr_end_3:;
+        goto condexpr_end_5;
+        condexpr_false_5:;
+        tmp_metaclass_value_3 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_3);
+        condexpr_end_5:;
+        condexpr_end_4:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
-        tmp_bases_name_3 = tmp_class_creation_3__bases;
-        tmp_assign_source_45 = SELECT_METACLASS(tmp_metaclass_name_3, tmp_bases_name_3);
-        Py_DECREF(tmp_metaclass_name_3);
-        if (tmp_assign_source_45 == NULL) {
+        tmp_bases_value_3 = tmp_class_creation_3__bases;
+        tmp_assign_source_46 = SELECT_METACLASS(tmp_metaclass_value_3, tmp_bases_value_3);
+        Py_DECREF(tmp_metaclass_value_3);
+        if (tmp_assign_source_46 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15314,28 +15093,28 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
             goto try_except_handler_9;
         }
         assert(tmp_class_creation_3__metaclass == NULL);
-        tmp_class_creation_3__metaclass = tmp_assign_source_45;
+        tmp_class_creation_3__metaclass = tmp_assign_source_46;
     }
     {
-        nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_key_name_9;
-        PyObject *tmp_dict_arg_name_9;
-        tmp_key_name_9 = mod_consts[141];
+        bool tmp_condition_result_13;
+        PyObject *tmp_key_value_9;
+        PyObject *tmp_dict_arg_value_9;
+        tmp_key_value_9 = mod_consts[136];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_9 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_9, tmp_key_name_9);
+        tmp_dict_arg_value_9 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_9, tmp_key_value_9);
         assert(!(tmp_res == -1));
-        tmp_condition_result_10 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_7;
+        tmp_condition_result_13 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_13 != false) {
+            goto branch_yes_8;
         } else {
-            goto branch_no_7;
+            goto branch_no_8;
         }
     }
-    branch_yes_7:;
+    branch_yes_8:;
     CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_3__class_decl_dict;
-    tmp_dictdel_key = mod_consts[141];
+    tmp_dictdel_key = mod_consts[136];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -15347,32 +15126,32 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         goto try_except_handler_9;
     }
-    branch_no_7:;
+    branch_no_8:;
     {
-        nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_expression_name_13;
+        nuitka_bool tmp_condition_result_14;
+        PyObject *tmp_expression_value_13;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_13 = tmp_class_creation_3__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_13, mod_consts[142]);
-        tmp_condition_result_11 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_8;
+        tmp_expression_value_13 = tmp_class_creation_3__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_13, mod_consts[137]);
+        tmp_condition_result_14 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_14 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_9;
         } else {
-            goto branch_no_8;
+            goto branch_no_9;
         }
     }
-    branch_yes_8:;
+    branch_yes_9:;
     {
-        PyObject *tmp_assign_source_46;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_name_5;
+        PyObject *tmp_assign_source_47;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_value_5;
         PyObject *tmp_tuple_element_7;
-        PyObject *tmp_kwargs_name_5;
+        PyObject *tmp_kwargs_value_5;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_14 = tmp_class_creation_3__metaclass;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[142]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_14 = tmp_class_creation_3__metaclass;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[137]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15382,19 +15161,19 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_9;
         }
-        tmp_tuple_element_7 = mod_consts[170];
-        tmp_args_name_5 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_5, 0, tmp_tuple_element_7);
+        tmp_tuple_element_7 = mod_consts[166];
+        tmp_args_value_5 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_5, 0, tmp_tuple_element_7);
         CHECK_OBJECT(tmp_class_creation_3__bases);
         tmp_tuple_element_7 = tmp_class_creation_3__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_5, 1, tmp_tuple_element_7);
+        PyTuple_SET_ITEM0(tmp_args_value_5, 1, tmp_tuple_element_7);
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_kwargs_name_5 = tmp_class_creation_3__class_decl_dict;
+        tmp_kwargs_value_5 = tmp_class_creation_3__class_decl_dict;
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 403;
-        tmp_assign_source_46 = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_5, tmp_kwargs_name_5);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_name_5);
-        if (tmp_assign_source_46 == NULL) {
+        tmp_assign_source_47 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_5, tmp_kwargs_value_5);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_value_5);
+        if (tmp_assign_source_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15405,17 +15184,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
             goto try_except_handler_9;
         }
         assert(tmp_class_creation_3__prepared == NULL);
-        tmp_class_creation_3__prepared = tmp_assign_source_46;
+        tmp_class_creation_3__prepared = tmp_assign_source_47;
     }
     {
-        nuitka_bool tmp_condition_result_12;
-        PyObject *tmp_operand_name_3;
-        PyObject *tmp_expression_name_15;
+        bool tmp_condition_result_15;
+        PyObject *tmp_operand_value_3;
+        PyObject *tmp_expression_value_15;
         CHECK_OBJECT(tmp_class_creation_3__prepared);
-        tmp_expression_name_15 = tmp_class_creation_3__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_15, mod_consts[143]);
-        tmp_operand_name_3 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_3);
+        tmp_expression_value_15 = tmp_class_creation_3__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_15, mod_consts[138]);
+        tmp_operand_value_3 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -15426,29 +15205,29 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_9;
         }
-        tmp_condition_result_12 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_9;
+        tmp_condition_result_15 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_15 != false) {
+            goto branch_yes_10;
         } else {
-            goto branch_no_9;
+            goto branch_no_10;
         }
     }
-    branch_yes_9:;
+    branch_yes_10:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_raise_value_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_tuple_element_8;
         PyObject *tmp_getattr_target_3;
         PyObject *tmp_getattr_attr_3;
         PyObject *tmp_getattr_default_3;
         tmp_raise_type_3 = PyExc_TypeError;
-        tmp_left_name_3 = mod_consts[144];
+        tmp_left_value_3 = mod_consts[139];
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
         tmp_getattr_target_3 = tmp_class_creation_3__metaclass;
-        tmp_getattr_attr_3 = mod_consts[145];
-        tmp_getattr_default_3 = mod_consts[146];
+        tmp_getattr_attr_3 = mod_consts[140];
+        tmp_getattr_default_3 = mod_consts[141];
         tmp_tuple_element_8 = BUILTIN_GETATTR(tmp_getattr_target_3, tmp_getattr_attr_3, tmp_getattr_default_3);
         if (tmp_tuple_element_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15460,17 +15239,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_9;
         }
-        tmp_right_name_3 = PyTuple_New(2);
+        tmp_right_value_3 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_16;
+            PyObject *tmp_expression_value_16;
             PyObject *tmp_type_arg_5;
-            PyTuple_SET_ITEM(tmp_right_name_3, 0, tmp_tuple_element_8);
+            PyTuple_SET_ITEM(tmp_right_value_3, 0, tmp_tuple_element_8);
             CHECK_OBJECT(tmp_class_creation_3__prepared);
             tmp_type_arg_5 = tmp_class_creation_3__prepared;
-            tmp_expression_name_16 = BUILTIN_TYPE1(tmp_type_arg_5);
-            assert(!(tmp_expression_name_16 == NULL));
-            tmp_tuple_element_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[145]);
-            Py_DECREF(tmp_expression_name_16);
+            tmp_expression_value_16 = BUILTIN_TYPE1(tmp_type_arg_5);
+            assert(!(tmp_expression_value_16 == NULL));
+            tmp_tuple_element_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[140]);
+            Py_DECREF(tmp_expression_value_16);
             if (tmp_tuple_element_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -15481,17 +15260,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
                 goto tuple_build_exception_3;
             }
-            PyTuple_SET_ITEM(tmp_right_name_3, 1, tmp_tuple_element_8);
+            PyTuple_SET_ITEM(tmp_right_value_3, 1, tmp_tuple_element_8);
         }
         goto tuple_build_noexception_3;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_3:;
-        Py_DECREF(tmp_right_name_3);
+        Py_DECREF(tmp_right_value_3);
         goto try_except_handler_9;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_3:;
-        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_raise_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15510,18 +15289,18 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         goto try_except_handler_9;
     }
+    branch_no_10:;
+    goto branch_end_9;
     branch_no_9:;
-    goto branch_end_8;
-    branch_no_8:;
-    {
-        PyObject *tmp_assign_source_47;
-        tmp_assign_source_47 = PyDict_New();
-        assert(tmp_class_creation_3__prepared == NULL);
-        tmp_class_creation_3__prepared = tmp_assign_source_47;
-    }
-    branch_end_8:;
     {
         PyObject *tmp_assign_source_48;
+        tmp_assign_source_48 = PyDict_New();
+        assert(tmp_class_creation_3__prepared == NULL);
+        tmp_class_creation_3__prepared = tmp_assign_source_48;
+    }
+    branch_end_9:;
+    {
+        PyObject *tmp_assign_source_49;
         {
             PyObject *tmp_set_locals_3;
             CHECK_OBJECT(tmp_class_creation_3__prepared);
@@ -15531,8 +15310,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[147];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[148], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[142];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -15543,8 +15322,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_11;
         }
-        tmp_dictset_value = mod_consts[171];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[111], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[167];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[105], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -15555,8 +15334,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_11;
         }
-        tmp_dictset_value = mod_consts[170];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[150], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[166];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[145], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -15596,13 +15375,13 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         // Framed code:
         {
             PyObject *tmp_defaults_3;
-            tmp_defaults_3 = mod_consts[172];
+            tmp_defaults_3 = mod_consts[168];
             Py_INCREF(tmp_defaults_3);
 
 
             tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__17___init__(tmp_defaults_3);
 
-            tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[93], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[86], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -15619,7 +15398,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__18__is_connected();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[73], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[67], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -15687,27 +15466,68 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         goto try_except_handler_11;
         skip_nested_handling_3:;
         {
-            PyObject *tmp_assign_source_49;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_name_6;
+            nuitka_bool tmp_condition_result_16;
+            PyObject *tmp_cmp_expr_left_2;
+            PyObject *tmp_cmp_expr_right_2;
+            CHECK_OBJECT(tmp_class_creation_3__bases);
+            tmp_cmp_expr_left_2 = tmp_class_creation_3__bases;
+            CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+            tmp_cmp_expr_right_2 = tmp_class_creation_3__bases_orig;
+            tmp_condition_result_16 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+            if (tmp_condition_result_16 == NUITKA_BOOL_EXCEPTION) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 403;
+
+                goto try_except_handler_11;
+            }
+            if (tmp_condition_result_16 == NUITKA_BOOL_TRUE) {
+                goto branch_yes_11;
+            } else {
+                goto branch_no_11;
+            }
+            assert(tmp_condition_result_16 != NUITKA_BOOL_UNASSIGNED);
+        }
+        branch_yes_11:;
+        CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+        tmp_dictset_value = tmp_class_creation_3__bases_orig;
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403, mod_consts[157], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 403;
+
+            goto try_except_handler_11;
+        }
+        branch_no_11:;
+        {
+            PyObject *tmp_assign_source_50;
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_value_6;
             PyObject *tmp_tuple_element_9;
-            PyObject *tmp_kwargs_name_6;
+            PyObject *tmp_kwargs_value_6;
             CHECK_OBJECT(tmp_class_creation_3__metaclass);
-            tmp_called_name_6 = tmp_class_creation_3__metaclass;
-            tmp_tuple_element_9 = mod_consts[170];
-            tmp_args_name_6 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_6, 0, tmp_tuple_element_9);
+            tmp_called_value_6 = tmp_class_creation_3__metaclass;
+            tmp_tuple_element_9 = mod_consts[166];
+            tmp_args_value_6 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 0, tmp_tuple_element_9);
             CHECK_OBJECT(tmp_class_creation_3__bases);
             tmp_tuple_element_9 = tmp_class_creation_3__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 1, tmp_tuple_element_9);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 1, tmp_tuple_element_9);
             tmp_tuple_element_9 = locals_Bio$PDB$Polypeptide$$$class__3_CaPPBuilder_403;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 2, tmp_tuple_element_9);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 2, tmp_tuple_element_9);
             CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-            tmp_kwargs_name_6 = tmp_class_creation_3__class_decl_dict;
+            tmp_kwargs_value_6 = tmp_class_creation_3__class_decl_dict;
             frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 403;
-            tmp_assign_source_49 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_6, tmp_kwargs_name_6);
-            Py_DECREF(tmp_args_name_6);
-            if (tmp_assign_source_49 == NULL) {
+            tmp_assign_source_50 = CALL_FUNCTION(tmp_called_value_6, tmp_args_value_6, tmp_kwargs_value_6);
+            Py_DECREF(tmp_args_value_6);
+            if (tmp_assign_source_50 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15718,11 +15538,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
                 goto try_except_handler_11;
             }
             assert(outline_2_var___class__ == NULL);
-            outline_2_var___class__ = tmp_assign_source_49;
+            outline_2_var___class__ = tmp_assign_source_50;
         }
         CHECK_OBJECT(outline_2_var___class__);
-        tmp_assign_source_48 = outline_2_var___class__;
-        Py_INCREF(tmp_assign_source_48);
+        tmp_assign_source_49 = outline_2_var___class__;
+        Py_INCREF(tmp_assign_source_49);
         goto try_return_handler_11;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -15785,7 +15605,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         exception_lineno = 403;
         goto try_except_handler_9;
         outline_result_3:;
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[170], tmp_assign_source_48);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[166], tmp_assign_source_49);
     }
     goto try_end_5;
     // Exception handler code:
@@ -15799,6 +15619,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     exception_tb = NULL;
     exception_lineno = 0;
 
+    Py_XDECREF(tmp_class_creation_3__bases_orig);
+    tmp_class_creation_3__bases_orig = NULL;
     Py_XDECREF(tmp_class_creation_3__bases);
     tmp_class_creation_3__bases = NULL;
     Py_XDECREF(tmp_class_creation_3__class_decl_dict);
@@ -15816,23 +15638,29 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     goto frame_exception_exit_1;
     // End of try:
     try_end_5:;
-    Py_XDECREF(tmp_class_creation_3__bases);
+    CHECK_OBJECT(tmp_class_creation_3__bases_orig);
+    Py_DECREF(tmp_class_creation_3__bases_orig);
+    tmp_class_creation_3__bases_orig = NULL;
+    CHECK_OBJECT(tmp_class_creation_3__bases);
+    Py_DECREF(tmp_class_creation_3__bases);
     tmp_class_creation_3__bases = NULL;
-    Py_XDECREF(tmp_class_creation_3__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+    Py_DECREF(tmp_class_creation_3__class_decl_dict);
     tmp_class_creation_3__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_3__metaclass);
+    CHECK_OBJECT(tmp_class_creation_3__metaclass);
+    Py_DECREF(tmp_class_creation_3__metaclass);
     tmp_class_creation_3__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_3__prepared);
     Py_DECREF(tmp_class_creation_3__prepared);
     tmp_class_creation_3__prepared = NULL;
     // Tried code:
     {
-        PyObject *tmp_assign_source_50;
+        PyObject *tmp_assign_source_51;
         PyObject *tmp_tuple_element_10;
-        tmp_tuple_element_10 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[92]);
+        tmp_tuple_element_10 = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[85]);
 
         if (unlikely(tmp_tuple_element_10 == NULL)) {
-            tmp_tuple_element_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+            tmp_tuple_element_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
         }
 
         if (tmp_tuple_element_10 == NULL) {
@@ -15845,88 +15673,22 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_12;
         }
-        tmp_assign_source_50 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_assign_source_50, 0, tmp_tuple_element_10);
-        assert(tmp_class_creation_4__bases == NULL);
-        tmp_class_creation_4__bases = tmp_assign_source_50;
-    }
-    {
-        PyObject *tmp_assign_source_51;
-        tmp_assign_source_51 = PyDict_New();
-        assert(tmp_class_creation_4__class_decl_dict == NULL);
-        tmp_class_creation_4__class_decl_dict = tmp_assign_source_51;
+        tmp_assign_source_51 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_assign_source_51, 0, tmp_tuple_element_10);
+        assert(tmp_class_creation_4__bases_orig == NULL);
+        tmp_class_creation_4__bases_orig = tmp_assign_source_51;
     }
     {
         PyObject *tmp_assign_source_52;
-        PyObject *tmp_metaclass_name_4;
-        nuitka_bool tmp_condition_result_13;
-        PyObject *tmp_key_name_10;
-        PyObject *tmp_dict_arg_name_10;
-        PyObject *tmp_dict_arg_name_11;
-        PyObject *tmp_key_name_11;
-        PyObject *tmp_type_arg_6;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_bases_name_4;
-        tmp_key_name_10 = mod_consts[141];
-        CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_10 = tmp_class_creation_4__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_10, tmp_key_name_10);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_13 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_13 == NUITKA_BOOL_TRUE) {
-            goto condexpr_true_4;
-        } else {
-            goto condexpr_false_4;
+        PyObject *tmp_dircall_arg1_3;
+        CHECK_OBJECT(tmp_class_creation_4__bases_orig);
+        tmp_dircall_arg1_3 = tmp_class_creation_4__bases_orig;
+        Py_INCREF(tmp_dircall_arg1_3);
+
+        {
+            PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
+            tmp_assign_source_52 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        condexpr_true_4:;
-        CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_11 = tmp_class_creation_4__class_decl_dict;
-        tmp_key_name_11 = mod_consts[141];
-        tmp_metaclass_name_4 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_11, tmp_key_name_11);
-        if (tmp_metaclass_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 432;
-
-            goto try_except_handler_12;
-        }
-        goto condexpr_end_4;
-        condexpr_false_4:;
-        CHECK_OBJECT(tmp_class_creation_4__bases);
-        tmp_expression_name_17 = tmp_class_creation_4__bases;
-        tmp_subscript_name_5 = mod_consts[19];
-        tmp_type_arg_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_17, tmp_subscript_name_5, 0);
-        if (tmp_type_arg_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 432;
-
-            goto try_except_handler_12;
-        }
-        tmp_metaclass_name_4 = BUILTIN_TYPE1(tmp_type_arg_6);
-        Py_DECREF(tmp_type_arg_6);
-        if (tmp_metaclass_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 432;
-
-            goto try_except_handler_12;
-        }
-        condexpr_end_4:;
-        CHECK_OBJECT(tmp_class_creation_4__bases);
-        tmp_bases_name_4 = tmp_class_creation_4__bases;
-        tmp_assign_source_52 = SELECT_METACLASS(tmp_metaclass_name_4, tmp_bases_name_4);
-        Py_DECREF(tmp_metaclass_name_4);
         if (tmp_assign_source_52 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15937,29 +15699,140 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_12;
         }
-        assert(tmp_class_creation_4__metaclass == NULL);
-        tmp_class_creation_4__metaclass = tmp_assign_source_52;
+        assert(tmp_class_creation_4__bases == NULL);
+        tmp_class_creation_4__bases = tmp_assign_source_52;
     }
     {
-        nuitka_bool tmp_condition_result_14;
-        PyObject *tmp_key_name_12;
-        PyObject *tmp_dict_arg_name_12;
-        tmp_key_name_12 = mod_consts[141];
+        PyObject *tmp_assign_source_53;
+        tmp_assign_source_53 = PyDict_New();
+        assert(tmp_class_creation_4__class_decl_dict == NULL);
+        tmp_class_creation_4__class_decl_dict = tmp_assign_source_53;
+    }
+    {
+        PyObject *tmp_assign_source_54;
+        PyObject *tmp_metaclass_value_4;
+        bool tmp_condition_result_17;
+        PyObject *tmp_key_value_10;
+        PyObject *tmp_dict_arg_value_10;
+        PyObject *tmp_dict_arg_value_11;
+        PyObject *tmp_key_value_11;
+        nuitka_bool tmp_condition_result_18;
+        int tmp_truth_name_3;
+        PyObject *tmp_type_arg_6;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_bases_value_4;
+        tmp_key_value_10 = mod_consts[136];
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_12 = tmp_class_creation_4__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_12, tmp_key_name_12);
+        tmp_dict_arg_value_10 = tmp_class_creation_4__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_10, tmp_key_value_10);
         assert(!(tmp_res == -1));
-        tmp_condition_result_14 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_14 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_10;
+        tmp_condition_result_17 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_17 != false) {
+            goto condexpr_true_6;
         } else {
-            goto branch_no_10;
+            goto condexpr_false_6;
+        }
+        condexpr_true_6:;
+        CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
+        tmp_dict_arg_value_11 = tmp_class_creation_4__class_decl_dict;
+        tmp_key_value_11 = mod_consts[136];
+        tmp_metaclass_value_4 = DICT_GET_ITEM0(tmp_dict_arg_value_11, tmp_key_value_11);
+        if (tmp_metaclass_value_4 == NULL) {
+            tmp_metaclass_value_4 = Py_None;
+        }
+        assert(!(tmp_metaclass_value_4 == NULL));
+        Py_INCREF(tmp_metaclass_value_4);
+        goto condexpr_end_6;
+        condexpr_false_6:;
+        CHECK_OBJECT(tmp_class_creation_4__bases);
+        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_class_creation_4__bases);
+        if (tmp_truth_name_3 == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 432;
+
+            goto try_except_handler_12;
+        }
+        tmp_condition_result_18 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        if (tmp_condition_result_18 == NUITKA_BOOL_TRUE) {
+            goto condexpr_true_7;
+        } else {
+            goto condexpr_false_7;
+        }
+        condexpr_true_7:;
+        CHECK_OBJECT(tmp_class_creation_4__bases);
+        tmp_expression_value_17 = tmp_class_creation_4__bases;
+        tmp_subscript_value_5 = mod_consts[19];
+        tmp_type_arg_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_17, tmp_subscript_value_5, 0);
+        if (tmp_type_arg_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 432;
+
+            goto try_except_handler_12;
+        }
+        tmp_metaclass_value_4 = BUILTIN_TYPE1(tmp_type_arg_6);
+        Py_DECREF(tmp_type_arg_6);
+        if (tmp_metaclass_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 432;
+
+            goto try_except_handler_12;
+        }
+        goto condexpr_end_7;
+        condexpr_false_7:;
+        tmp_metaclass_value_4 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_4);
+        condexpr_end_7:;
+        condexpr_end_6:;
+        CHECK_OBJECT(tmp_class_creation_4__bases);
+        tmp_bases_value_4 = tmp_class_creation_4__bases;
+        tmp_assign_source_54 = SELECT_METACLASS(tmp_metaclass_value_4, tmp_bases_value_4);
+        Py_DECREF(tmp_metaclass_value_4);
+        if (tmp_assign_source_54 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 432;
+
+            goto try_except_handler_12;
+        }
+        assert(tmp_class_creation_4__metaclass == NULL);
+        tmp_class_creation_4__metaclass = tmp_assign_source_54;
+    }
+    {
+        bool tmp_condition_result_19;
+        PyObject *tmp_key_value_12;
+        PyObject *tmp_dict_arg_value_12;
+        tmp_key_value_12 = mod_consts[136];
+        CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
+        tmp_dict_arg_value_12 = tmp_class_creation_4__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_12, tmp_key_value_12);
+        assert(!(tmp_res == -1));
+        tmp_condition_result_19 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_19 != false) {
+            goto branch_yes_12;
+        } else {
+            goto branch_no_12;
         }
     }
-    branch_yes_10:;
+    branch_yes_12:;
     CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_4__class_decl_dict;
-    tmp_dictdel_key = mod_consts[141];
+    tmp_dictdel_key = mod_consts[136];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -15971,32 +15844,32 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         goto try_except_handler_12;
     }
-    branch_no_10:;
+    branch_no_12:;
     {
-        nuitka_bool tmp_condition_result_15;
-        PyObject *tmp_expression_name_18;
+        nuitka_bool tmp_condition_result_20;
+        PyObject *tmp_expression_value_18;
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
-        tmp_expression_name_18 = tmp_class_creation_4__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_18, mod_consts[142]);
-        tmp_condition_result_15 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_15 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_11;
+        tmp_expression_value_18 = tmp_class_creation_4__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_18, mod_consts[137]);
+        tmp_condition_result_20 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        if (tmp_condition_result_20 == NUITKA_BOOL_TRUE) {
+            goto branch_yes_13;
         } else {
-            goto branch_no_11;
+            goto branch_no_13;
         }
     }
-    branch_yes_11:;
+    branch_yes_13:;
     {
-        PyObject *tmp_assign_source_53;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_args_name_7;
+        PyObject *tmp_assign_source_55;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_args_value_7;
         PyObject *tmp_tuple_element_11;
-        PyObject *tmp_kwargs_name_7;
+        PyObject *tmp_kwargs_value_7;
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
-        tmp_expression_name_19 = tmp_class_creation_4__metaclass;
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[142]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_19 = tmp_class_creation_4__metaclass;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[137]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16006,19 +15879,19 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_12;
         }
-        tmp_tuple_element_11 = mod_consts[175];
-        tmp_args_name_7 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_7, 0, tmp_tuple_element_11);
+        tmp_tuple_element_11 = mod_consts[171];
+        tmp_args_value_7 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_7, 0, tmp_tuple_element_11);
         CHECK_OBJECT(tmp_class_creation_4__bases);
         tmp_tuple_element_11 = tmp_class_creation_4__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_7, 1, tmp_tuple_element_11);
+        PyTuple_SET_ITEM0(tmp_args_value_7, 1, tmp_tuple_element_11);
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_kwargs_name_7 = tmp_class_creation_4__class_decl_dict;
+        tmp_kwargs_value_7 = tmp_class_creation_4__class_decl_dict;
         frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 432;
-        tmp_assign_source_53 = CALL_FUNCTION(tmp_called_name_7, tmp_args_name_7, tmp_kwargs_name_7);
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_name_7);
-        if (tmp_assign_source_53 == NULL) {
+        tmp_assign_source_55 = CALL_FUNCTION(tmp_called_value_7, tmp_args_value_7, tmp_kwargs_value_7);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_value_7);
+        if (tmp_assign_source_55 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16029,17 +15902,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
             goto try_except_handler_12;
         }
         assert(tmp_class_creation_4__prepared == NULL);
-        tmp_class_creation_4__prepared = tmp_assign_source_53;
+        tmp_class_creation_4__prepared = tmp_assign_source_55;
     }
     {
-        nuitka_bool tmp_condition_result_16;
-        PyObject *tmp_operand_name_4;
-        PyObject *tmp_expression_name_20;
+        bool tmp_condition_result_21;
+        PyObject *tmp_operand_value_4;
+        PyObject *tmp_expression_value_20;
         CHECK_OBJECT(tmp_class_creation_4__prepared);
-        tmp_expression_name_20 = tmp_class_creation_4__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_20, mod_consts[143]);
-        tmp_operand_name_4 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_4);
+        tmp_expression_value_20 = tmp_class_creation_4__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_20, mod_consts[138]);
+        tmp_operand_value_4 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16050,29 +15923,29 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_12;
         }
-        tmp_condition_result_16 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_16 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_12;
+        tmp_condition_result_21 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_21 != false) {
+            goto branch_yes_14;
         } else {
-            goto branch_no_12;
+            goto branch_no_14;
         }
     }
-    branch_yes_12:;
+    branch_yes_14:;
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_raise_value_4;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
         PyObject *tmp_tuple_element_12;
         PyObject *tmp_getattr_target_4;
         PyObject *tmp_getattr_attr_4;
         PyObject *tmp_getattr_default_4;
         tmp_raise_type_4 = PyExc_TypeError;
-        tmp_left_name_4 = mod_consts[144];
+        tmp_left_value_4 = mod_consts[139];
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
         tmp_getattr_target_4 = tmp_class_creation_4__metaclass;
-        tmp_getattr_attr_4 = mod_consts[145];
-        tmp_getattr_default_4 = mod_consts[146];
+        tmp_getattr_attr_4 = mod_consts[140];
+        tmp_getattr_default_4 = mod_consts[141];
         tmp_tuple_element_12 = BUILTIN_GETATTR(tmp_getattr_target_4, tmp_getattr_attr_4, tmp_getattr_default_4);
         if (tmp_tuple_element_12 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16084,17 +15957,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_12;
         }
-        tmp_right_name_4 = PyTuple_New(2);
+        tmp_right_value_4 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_21;
+            PyObject *tmp_expression_value_21;
             PyObject *tmp_type_arg_7;
-            PyTuple_SET_ITEM(tmp_right_name_4, 0, tmp_tuple_element_12);
+            PyTuple_SET_ITEM(tmp_right_value_4, 0, tmp_tuple_element_12);
             CHECK_OBJECT(tmp_class_creation_4__prepared);
             tmp_type_arg_7 = tmp_class_creation_4__prepared;
-            tmp_expression_name_21 = BUILTIN_TYPE1(tmp_type_arg_7);
-            assert(!(tmp_expression_name_21 == NULL));
-            tmp_tuple_element_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[145]);
-            Py_DECREF(tmp_expression_name_21);
+            tmp_expression_value_21 = BUILTIN_TYPE1(tmp_type_arg_7);
+            assert(!(tmp_expression_value_21 == NULL));
+            tmp_tuple_element_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[140]);
+            Py_DECREF(tmp_expression_value_21);
             if (tmp_tuple_element_12 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -16105,17 +15978,17 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
                 goto tuple_build_exception_4;
             }
-            PyTuple_SET_ITEM(tmp_right_name_4, 1, tmp_tuple_element_12);
+            PyTuple_SET_ITEM(tmp_right_value_4, 1, tmp_tuple_element_12);
         }
         goto tuple_build_noexception_4;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_4:;
-        Py_DECREF(tmp_right_name_4);
+        Py_DECREF(tmp_right_value_4);
         goto try_except_handler_12;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_4:;
-        tmp_raise_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_raise_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_raise_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16134,18 +16007,18 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         goto try_except_handler_12;
     }
-    branch_no_12:;
-    goto branch_end_11;
-    branch_no_11:;
+    branch_no_14:;
+    goto branch_end_13;
+    branch_no_13:;
     {
-        PyObject *tmp_assign_source_54;
-        tmp_assign_source_54 = PyDict_New();
+        PyObject *tmp_assign_source_56;
+        tmp_assign_source_56 = PyDict_New();
         assert(tmp_class_creation_4__prepared == NULL);
-        tmp_class_creation_4__prepared = tmp_assign_source_54;
+        tmp_class_creation_4__prepared = tmp_assign_source_56;
     }
-    branch_end_11:;
+    branch_end_13:;
     {
-        PyObject *tmp_assign_source_55;
+        PyObject *tmp_assign_source_57;
         {
             PyObject *tmp_set_locals_4;
             CHECK_OBJECT(tmp_class_creation_4__prepared);
@@ -16155,8 +16028,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[147];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[148], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[142];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -16167,8 +16040,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_14;
         }
-        tmp_dictset_value = mod_consts[176];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[111], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[172];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[105], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -16179,8 +16052,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_14;
         }
-        tmp_dictset_value = mod_consts[175];
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[150], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[171];
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[145], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -16220,13 +16093,13 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         // Framed code:
         {
             PyObject *tmp_defaults_4;
-            tmp_defaults_4 = mod_consts[177];
+            tmp_defaults_4 = mod_consts[173];
             Py_INCREF(tmp_defaults_4);
 
 
             tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__19___init__(tmp_defaults_4);
 
-            tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[93], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[86], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -16243,7 +16116,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__20__is_connected();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[73], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[67], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -16259,7 +16132,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_Bio$PDB$Polypeptide$$$function__21__test_dist();
 
-        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[103], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[97], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -16327,27 +16200,68 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         goto try_except_handler_14;
         skip_nested_handling_4:;
         {
-            PyObject *tmp_assign_source_56;
-            PyObject *tmp_called_name_8;
-            PyObject *tmp_args_name_8;
+            nuitka_bool tmp_condition_result_22;
+            PyObject *tmp_cmp_expr_left_3;
+            PyObject *tmp_cmp_expr_right_3;
+            CHECK_OBJECT(tmp_class_creation_4__bases);
+            tmp_cmp_expr_left_3 = tmp_class_creation_4__bases;
+            CHECK_OBJECT(tmp_class_creation_4__bases_orig);
+            tmp_cmp_expr_right_3 = tmp_class_creation_4__bases_orig;
+            tmp_condition_result_22 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+            if (tmp_condition_result_22 == NUITKA_BOOL_EXCEPTION) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 432;
+
+                goto try_except_handler_14;
+            }
+            if (tmp_condition_result_22 == NUITKA_BOOL_TRUE) {
+                goto branch_yes_15;
+            } else {
+                goto branch_no_15;
+            }
+            assert(tmp_condition_result_22 != NUITKA_BOOL_UNASSIGNED);
+        }
+        branch_yes_15:;
+        CHECK_OBJECT(tmp_class_creation_4__bases_orig);
+        tmp_dictset_value = tmp_class_creation_4__bases_orig;
+        tmp_res = PyObject_SetItem(locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432, mod_consts[157], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 432;
+
+            goto try_except_handler_14;
+        }
+        branch_no_15:;
+        {
+            PyObject *tmp_assign_source_58;
+            PyObject *tmp_called_value_8;
+            PyObject *tmp_args_value_8;
             PyObject *tmp_tuple_element_13;
-            PyObject *tmp_kwargs_name_8;
+            PyObject *tmp_kwargs_value_8;
             CHECK_OBJECT(tmp_class_creation_4__metaclass);
-            tmp_called_name_8 = tmp_class_creation_4__metaclass;
-            tmp_tuple_element_13 = mod_consts[175];
-            tmp_args_name_8 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_8, 0, tmp_tuple_element_13);
+            tmp_called_value_8 = tmp_class_creation_4__metaclass;
+            tmp_tuple_element_13 = mod_consts[171];
+            tmp_args_value_8 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 0, tmp_tuple_element_13);
             CHECK_OBJECT(tmp_class_creation_4__bases);
             tmp_tuple_element_13 = tmp_class_creation_4__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_8, 1, tmp_tuple_element_13);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 1, tmp_tuple_element_13);
             tmp_tuple_element_13 = locals_Bio$PDB$Polypeptide$$$class__4_PPBuilder_432;
-            PyTuple_SET_ITEM0(tmp_args_name_8, 2, tmp_tuple_element_13);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 2, tmp_tuple_element_13);
             CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-            tmp_kwargs_name_8 = tmp_class_creation_4__class_decl_dict;
+            tmp_kwargs_value_8 = tmp_class_creation_4__class_decl_dict;
             frame_a2b6eaaff4a41badf3763569721a557e->m_frame.f_lineno = 432;
-            tmp_assign_source_56 = CALL_FUNCTION(tmp_called_name_8, tmp_args_name_8, tmp_kwargs_name_8);
-            Py_DECREF(tmp_args_name_8);
-            if (tmp_assign_source_56 == NULL) {
+            tmp_assign_source_58 = CALL_FUNCTION(tmp_called_value_8, tmp_args_value_8, tmp_kwargs_value_8);
+            Py_DECREF(tmp_args_value_8);
+            if (tmp_assign_source_58 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16358,11 +16272,11 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
                 goto try_except_handler_14;
             }
             assert(outline_3_var___class__ == NULL);
-            outline_3_var___class__ = tmp_assign_source_56;
+            outline_3_var___class__ = tmp_assign_source_58;
         }
         CHECK_OBJECT(outline_3_var___class__);
-        tmp_assign_source_55 = outline_3_var___class__;
-        Py_INCREF(tmp_assign_source_55);
+        tmp_assign_source_57 = outline_3_var___class__;
+        Py_INCREF(tmp_assign_source_57);
         goto try_return_handler_14;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -16425,7 +16339,7 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
         exception_lineno = 432;
         goto try_except_handler_12;
         outline_result_4:;
-        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[175], tmp_assign_source_55);
+        UPDATE_STRING_DICT1(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)mod_consts[171], tmp_assign_source_57);
     }
     goto try_end_6;
     // Exception handler code:
@@ -16439,6 +16353,8 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     exception_tb = NULL;
     exception_lineno = 0;
 
+    Py_XDECREF(tmp_class_creation_4__bases_orig);
+    tmp_class_creation_4__bases_orig = NULL;
     Py_XDECREF(tmp_class_creation_4__bases);
     tmp_class_creation_4__bases = NULL;
     Py_XDECREF(tmp_class_creation_4__class_decl_dict);
@@ -16485,19 +16401,39 @@ PyObject *modulecode_Bio$PDB$Polypeptide(PyObject *module, struct Nuitka_MetaPat
     goto module_exception_exit;
 
     frame_no_exception_5:;
-    Py_XDECREF(tmp_class_creation_4__bases);
+    CHECK_OBJECT(tmp_class_creation_4__bases_orig);
+    Py_DECREF(tmp_class_creation_4__bases_orig);
+    tmp_class_creation_4__bases_orig = NULL;
+    CHECK_OBJECT(tmp_class_creation_4__bases);
+    Py_DECREF(tmp_class_creation_4__bases);
     tmp_class_creation_4__bases = NULL;
-    Py_XDECREF(tmp_class_creation_4__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
+    Py_DECREF(tmp_class_creation_4__class_decl_dict);
     tmp_class_creation_4__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_4__metaclass);
+    CHECK_OBJECT(tmp_class_creation_4__metaclass);
+    Py_DECREF(tmp_class_creation_4__metaclass);
     tmp_class_creation_4__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_4__prepared);
     Py_DECREF(tmp_class_creation_4__prepared);
     tmp_class_creation_4__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("Bio.PDB.Polypeptide", false);
+
     return module_Bio$PDB$Polypeptide;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Bio$PDB$Polypeptide, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("Bio$PDB$Polypeptide", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

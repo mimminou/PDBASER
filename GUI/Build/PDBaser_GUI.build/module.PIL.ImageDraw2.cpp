@@ -1,5 +1,5 @@
 /* Generated code for Python module 'PIL.ImageDraw2'
- * created by Nuitka version 0.6.17.3
+ * created by Nuitka version 0.7
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_PIL$ImageDraw2;
 PyDictObject *moduledict_PIL$ImageDraw2;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[117];
+static PyObject *mod_consts[116];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[117];
+static Py_hash_t mod_consts_hash[116];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 117; i++) {
+        for(int i = 0; i < 116; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_PIL$ImageDraw2(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 117; i++) {
+    for(int i = 0; i < 116; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -101,28 +101,28 @@ static PyCodeObject *codeobj_5c5965a7b30bce9de4f37d003104ffb3;
 static PyCodeObject *codeobj_ec9f540fa68f7d55ff3acc05d3d5e936;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[103]); CHECK_OBJECT(module_filename_obj);
-    codeobj_77d241fcdac1b165e5407d5412c7f589 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[104], NULL, NULL, 0, 0, 0);
-    codeobj_2475e74b5bbfd3328738fb65853ea58d = MAKE_CODEOBJECT(module_filename_obj, 38, CO_NOFREE, mod_consts[18], mod_consts[105], NULL, 0, 0, 0);
-    codeobj_24be2d7f34ea851a40fd1a47a81968c2 = MAKE_CODEOBJECT(module_filename_obj, 54, CO_NOFREE, mod_consts[11], mod_consts[105], NULL, 0, 0, 0);
-    codeobj_07f3beab0affbe43f2a2ecd6cdb85420 = MAKE_CODEOBJECT(module_filename_obj, 45, CO_NOFREE, mod_consts[81], mod_consts[105], NULL, 0, 0, 0);
-    codeobj_d156c418e2fac1c6e863eeb03dab4e8b = MAKE_CODEOBJECT(module_filename_obj, 30, CO_NOFREE, mod_consts[16], mod_consts[105], NULL, 0, 0, 0);
-    codeobj_c2e039aeb273657f46f4d2b2b7ed8360 = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[106], NULL, 4, 0, 0);
-    codeobj_9dff896a62486576bfdceceb5b2bf130 = MAKE_CODEOBJECT(module_filename_obj, 41, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[107], NULL, 3, 0, 0);
-    codeobj_e15f64ccb7e10e9bbb8aed23847da06b = MAKE_CODEOBJECT(module_filename_obj, 33, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[108], NULL, 4, 0, 0);
-    codeobj_50cf4c126a07a2f46c0cdfa3cc422a6b = MAKE_CODEOBJECT(module_filename_obj, 59, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[109], NULL, 4, 0, 0);
-    codeobj_f49a71f1fb64a9495dcdcf1c1e2d1a7e = MAKE_CODEOBJECT(module_filename_obj, 98, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[32], mod_consts[110], NULL, 4, 0, 0);
-    codeobj_6a06f4014bd609eab80e2862980c1183 = MAKE_CODEOBJECT(module_filename_obj, 107, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[34], mod_consts[110], NULL, 4, 0, 0);
-    codeobj_cb3b1f86e16c7e3407359cd8dc0ad0f7 = MAKE_CODEOBJECT(module_filename_obj, 116, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[36], mod_consts[111], NULL, 2, 0, 0);
-    codeobj_3c4d15b393180081fd1e4ee1bf467b79 = MAKE_CODEOBJECT(module_filename_obj, 66, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[88], mod_consts[112], NULL, 1, 0, 0);
-    codeobj_7ba1fdb6a11d7a720e976248f618c36a = MAKE_CODEOBJECT(module_filename_obj, 124, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[22], mod_consts[111], NULL, 2, 0, 0);
-    codeobj_870259f4bde79cc76de1bb8f93b06c5a = MAKE_CODEOBJECT(module_filename_obj, 132, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[39], mod_consts[110], NULL, 4, 0, 0);
-    codeobj_dfb17b2bbcb67611a2961b0780937bc0 = MAKE_CODEOBJECT(module_filename_obj, 141, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[41], mod_consts[111], NULL, 2, 0, 0);
-    codeobj_955357ab19ba4bcf86b840818da3e8fa = MAKE_CODEOBJECT(module_filename_obj, 154, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[43], mod_consts[111], NULL, 2, 0, 0);
-    codeobj_d1a5b298f9b8476d2f9f011112d2e345 = MAKE_CODEOBJECT(module_filename_obj, 69, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[31], mod_consts[113], NULL, 5, 0, 0);
-    codeobj_5cfa76b5e933be7f8b93910d492425cd = MAKE_CODEOBJECT(module_filename_obj, 93, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[92], mod_consts[114], NULL, 2, 0, 0);
-    codeobj_5c5965a7b30bce9de4f37d003104ffb3 = MAKE_CODEOBJECT(module_filename_obj, 162, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[45], mod_consts[115], NULL, 4, 0, 0);
-    codeobj_ec9f540fa68f7d55ff3acc05d3d5e936 = MAKE_CODEOBJECT(module_filename_obj, 173, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[48], mod_consts[116], NULL, 3, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[102]); CHECK_OBJECT(module_filename_obj);
+    codeobj_77d241fcdac1b165e5407d5412c7f589 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[103], NULL, NULL, 0, 0, 0);
+    codeobj_2475e74b5bbfd3328738fb65853ea58d = MAKE_CODEOBJECT(module_filename_obj, 38, CO_NOFREE, mod_consts[18], mod_consts[104], NULL, 0, 0, 0);
+    codeobj_24be2d7f34ea851a40fd1a47a81968c2 = MAKE_CODEOBJECT(module_filename_obj, 54, CO_NOFREE, mod_consts[11], mod_consts[104], NULL, 0, 0, 0);
+    codeobj_07f3beab0affbe43f2a2ecd6cdb85420 = MAKE_CODEOBJECT(module_filename_obj, 45, CO_NOFREE, mod_consts[80], mod_consts[104], NULL, 0, 0, 0);
+    codeobj_d156c418e2fac1c6e863eeb03dab4e8b = MAKE_CODEOBJECT(module_filename_obj, 30, CO_NOFREE, mod_consts[16], mod_consts[104], NULL, 0, 0, 0);
+    codeobj_c2e039aeb273657f46f4d2b2b7ed8360 = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[105], NULL, 4, 0, 0);
+    codeobj_9dff896a62486576bfdceceb5b2bf130 = MAKE_CODEOBJECT(module_filename_obj, 41, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[106], NULL, 3, 0, 0);
+    codeobj_e15f64ccb7e10e9bbb8aed23847da06b = MAKE_CODEOBJECT(module_filename_obj, 33, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[107], NULL, 4, 0, 0);
+    codeobj_50cf4c126a07a2f46c0cdfa3cc422a6b = MAKE_CODEOBJECT(module_filename_obj, 59, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[108], NULL, 4, 0, 0);
+    codeobj_f49a71f1fb64a9495dcdcf1c1e2d1a7e = MAKE_CODEOBJECT(module_filename_obj, 98, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[31], mod_consts[109], NULL, 4, 0, 0);
+    codeobj_6a06f4014bd609eab80e2862980c1183 = MAKE_CODEOBJECT(module_filename_obj, 107, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[33], mod_consts[109], NULL, 4, 0, 0);
+    codeobj_cb3b1f86e16c7e3407359cd8dc0ad0f7 = MAKE_CODEOBJECT(module_filename_obj, 116, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[35], mod_consts[110], NULL, 2, 0, 0);
+    codeobj_3c4d15b393180081fd1e4ee1bf467b79 = MAKE_CODEOBJECT(module_filename_obj, 66, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[87], mod_consts[111], NULL, 1, 0, 0);
+    codeobj_7ba1fdb6a11d7a720e976248f618c36a = MAKE_CODEOBJECT(module_filename_obj, 124, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[21], mod_consts[110], NULL, 2, 0, 0);
+    codeobj_870259f4bde79cc76de1bb8f93b06c5a = MAKE_CODEOBJECT(module_filename_obj, 132, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[38], mod_consts[109], NULL, 4, 0, 0);
+    codeobj_dfb17b2bbcb67611a2961b0780937bc0 = MAKE_CODEOBJECT(module_filename_obj, 141, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[40], mod_consts[110], NULL, 2, 0, 0);
+    codeobj_955357ab19ba4bcf86b840818da3e8fa = MAKE_CODEOBJECT(module_filename_obj, 154, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_NOFREE, mod_consts[42], mod_consts[110], NULL, 2, 0, 0);
+    codeobj_d1a5b298f9b8476d2f9f011112d2e345 = MAKE_CODEOBJECT(module_filename_obj, 69, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[30], mod_consts[112], NULL, 5, 0, 0);
+    codeobj_5cfa76b5e933be7f8b93910d492425cd = MAKE_CODEOBJECT(module_filename_obj, 93, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[91], mod_consts[113], NULL, 2, 0, 0);
+    codeobj_5c5965a7b30bce9de4f37d003104ffb3 = MAKE_CODEOBJECT(module_filename_obj, 162, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[44], mod_consts[114], NULL, 4, 0, 0);
+    codeobj_ec9f540fa68f7d55ff3acc05d3d5e936 = MAKE_CODEOBJECT(module_filename_obj, 173, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[47], mod_consts[115], NULL, 3, 0, 0);
 }
 
 // The module function declarations.
@@ -230,7 +230,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__1___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -249,9 +249,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__1___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_color);
-        tmp_args_element_name_1 = par_color;
+        tmp_args_element_value_1 = par_color;
         frame_e15f64ccb7e10e9bbb8aed23847da06b->m_frame.f_lineno = 34;
-        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
+        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -439,7 +439,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__2___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -458,9 +458,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__2___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_color);
-        tmp_args_element_name_1 = par_color;
+        tmp_args_element_value_1 = par_color;
         frame_9dff896a62486576bfdceceb5b2bf130->m_frame.f_lineno = 42;
-        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
+        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -625,7 +625,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__3___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -644,9 +644,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__3___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_color);
-        tmp_args_element_name_1 = par_color;
+        tmp_args_element_value_1 = par_color;
         frame_c2e039aeb273657f46f4d2b2b7ed8360->m_frame.f_lineno = 50;
-        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
+        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -675,8 +675,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__3___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         PyObject *tmp_assattr_target_2;
         tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[4]);
 
@@ -695,12 +695,12 @@ static PyObject *impl_PIL$ImageDraw2$$$function__3___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_file);
-        tmp_args_element_name_2 = par_file;
+        tmp_args_element_value_2 = par_file;
         CHECK_OBJECT(par_size);
-        tmp_args_element_name_3 = par_size;
+        tmp_args_element_value_3 = par_size;
         frame_c2e039aeb273657f46f4d2b2b7ed8360->m_frame.f_lineno = 51;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
             tmp_assattr_value_2 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_2,
                 mod_consts[5],
@@ -881,14 +881,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__4___init__(struct Nuitka_Functi
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_attribute_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_attribute_value_1;
         CHECK_OBJECT(par_image);
-        tmp_expression_name_1 = par_image;
-        tmp_attribute_name_1 = mod_consts[7];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_1, tmp_attribute_name_1);
+        tmp_expression_value_1 = par_image;
+        tmp_attribute_value_1 = mod_consts[7];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_1, tmp_attribute_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -899,8 +899,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__4___init__(struct Nuitka_Functi
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -911,8 +911,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__4___init__(struct Nuitka_Functi
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -922,9 +922,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__4___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[8]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -942,14 +942,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__4___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_image);
-        tmp_args_element_name_1 = par_image;
+        tmp_args_element_value_1 = par_image;
         CHECK_OBJECT(par_size);
-        tmp_args_element_name_2 = par_size;
+        tmp_args_element_value_2 = par_size;
         CHECK_OBJECT(par_color);
-        tmp_args_element_name_3 = par_color;
+        tmp_args_element_value_3 = par_color;
         frame_50cf4c126a07a2f46c0cdfa3cc422a6b->m_frame.f_lineno = 61;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_1,
                 mod_consts[9],
@@ -979,7 +979,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__4___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_assattr_target_1;
         tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[10]);
 
@@ -998,9 +998,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__4___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_image);
-        tmp_args_element_name_4 = par_image;
+        tmp_args_element_value_4 = par_image;
         frame_50cf4c126a07a2f46c0cdfa3cc422a6b->m_frame.f_lineno = 62;
-        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[11], tmp_args_element_name_4);
+        tmp_assattr_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[11], tmp_args_element_value_4);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1226,10 +1226,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__5_flush(struct Nuitka_FunctionO
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[13]);
+        tmp_expression_value_1 = par_self;
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[13]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1428,7 +1428,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1449,10 +1449,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_pen);
-        tmp_expression_name_1 = par_pen;
-        tmp_assign_source_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[2]);
+        tmp_expression_value_1 = par_pen;
+        tmp_assign_source_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[2]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1473,10 +1473,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_pen);
-        tmp_expression_name_2 = par_pen;
-        tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[3]);
+        tmp_expression_value_2 = par_pen;
+        tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[3]);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1519,7 +1519,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1540,10 +1540,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_brush);
-        tmp_expression_name_3 = par_brush;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[2]);
+        tmp_expression_value_3 = par_brush;
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[2]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1564,10 +1564,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(par_brush);
-        tmp_expression_name_4 = par_brush;
-        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[3]);
+        tmp_expression_value_4 = par_brush;
+        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[3]);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1621,7 +1621,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1642,7 +1642,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         if (par_brush == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
@@ -1655,8 +1655,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = par_brush;
-        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[2]);
+        tmp_expression_value_5 = par_brush;
+        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[2]);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1681,18 +1681,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
         nuitka_bool tmp_condition_result_4;
         PyObject *tmp_isinstance_inst_4;
         PyObject *tmp_isinstance_cls_4;
-        if (par_pen == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 81;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_pen);
         tmp_isinstance_inst_4 = par_pen;
         tmp_isinstance_cls_4 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[18]);
 
@@ -1710,7 +1699,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_4, tmp_isinstance_cls_4);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_4, tmp_isinstance_cls_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1731,21 +1720,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_expression_name_6;
-        if (par_pen == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 82;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_6 = par_pen;
-        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[2]);
+        PyObject *tmp_expression_value_6;
+        CHECK_OBJECT(par_pen);
+        tmp_expression_value_6 = par_pen;
+        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[2]);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1768,12 +1746,12 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     branch_end_3:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[14]);
+        tmp_expression_value_7 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[14]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1807,11 +1785,11 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     {
         PyObject *tmp_assign_source_10;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[20]);
+        PyObject *tmp_args_element_value_1;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[19]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -1825,9 +1803,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_xy);
-        tmp_args_element_name_1 = par_xy;
+        tmp_args_element_value_1 = par_xy;
         frame_d1a5b298f9b8476d2f9f011112d2e345->m_frame.f_lineno = 85;
-        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[21], tmp_args_element_name_1);
+        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[20], tmp_args_element_value_1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1847,15 +1825,15 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(par_xy);
-        tmp_expression_name_8 = par_xy;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[14]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_8 = par_xy;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[14]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1866,22 +1844,22 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_9 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[14]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_9 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[14]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 86;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
         frame_d1a5b298f9b8476d2f9f011112d2e345->m_frame.f_lineno = 86;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1897,15 +1875,13 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_op);
-        tmp_compexpr_left_1 = par_op;
-        tmp_compexpr_right_1 = mod_consts[22];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = par_op;
+        tmp_cmp_expr_right_1 = mod_consts[21];
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1915,38 +1891,26 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 88;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_6 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_call_result_2;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_11 = par_self;
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[12]);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_value_11 = par_self;
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[12]);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1956,9 +1920,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[22]);
-        Py_DECREF(tmp_expression_name_10);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[21]);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1969,8 +1933,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             goto frame_exception_exit_1;
         }
         if (par_xy == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1982,8 +1946,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
 
         tmp_kw_call_arg_value_0_1 = par_xy;
         if (var_outline == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1995,7 +1959,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
 
         tmp_kw_call_dict_value_0_1 = var_outline;
         if (var_width == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[3]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -2011,10 +1975,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[25]);
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[24]);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2030,17 +1994,17 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
     goto branch_end_6;
     branch_no_6:;
     {
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_getattr_target_1;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_call_result_3;
         PyObject *tmp_kw_call_arg_value_0_2;
         PyObject *tmp_kw_call_dict_value_0_2;
         PyObject *tmp_kw_call_dict_value_1_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_12 = par_self;
-        tmp_getattr_target_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[12]);
+        tmp_expression_value_12 = par_self;
+        tmp_getattr_target_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[12]);
         if (tmp_getattr_target_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2053,9 +2017,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
         }
         CHECK_OBJECT(par_op);
         tmp_getattr_attr_1 = par_op;
-        tmp_called_name_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, NULL);
+        tmp_called_value_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, NULL);
         Py_DECREF(tmp_getattr_target_1);
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2066,8 +2030,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
             goto frame_exception_exit_1;
         }
         if (par_xy == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2079,8 +2043,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
 
         tmp_kw_call_arg_value_0_2 = par_xy;
         if (var_fill == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[26]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2092,8 +2056,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
 
         tmp_kw_call_dict_value_0_2 = var_fill;
         if (var_outline == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2108,10 +2072,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__6_render(struct Nuitka_Function
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_2};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_3, args, kw_values, mod_consts[27]);
+            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_3, args, kw_values, mod_consts[26]);
         }
 
-        Py_DECREF(tmp_called_name_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2333,7 +2297,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__7_settransform(struct Nuitka_Fu
         PyObject *tmp_iter_arg_1;
         CHECK_OBJECT(par_offset);
         tmp_iter_arg_1 = par_offset;
-        tmp_assign_source_1 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2424,7 +2388,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__7_settransform(struct Nuitka_Fu
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[28];
+            exception_value = mod_consts[27];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -2514,12 +2478,12 @@ static PyObject *impl_PIL$ImageDraw2$$$function__7_settransform(struct Nuitka_Fu
         tmp_tuple_element_1 = mod_consts[15];
         tmp_assattr_value_1 = PyTuple_New(6);
         PyTuple_SET_ITEM0(tmp_assattr_value_1, 0, tmp_tuple_element_1);
-        tmp_tuple_element_1 = mod_consts[29];
+        tmp_tuple_element_1 = mod_consts[28];
         PyTuple_SET_ITEM0(tmp_assattr_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(var_xoffset);
         tmp_tuple_element_1 = var_xoffset;
         PyTuple_SET_ITEM0(tmp_assattr_value_1, 2, tmp_tuple_element_1);
-        tmp_tuple_element_1 = mod_consts[29];
+        tmp_tuple_element_1 = mod_consts[28];
         PyTuple_SET_ITEM0(tmp_assattr_value_1, 3, tmp_tuple_element_1);
         tmp_tuple_element_1 = mod_consts[15];
         PyTuple_SET_ITEM0(tmp_assattr_value_1, 4, tmp_tuple_element_1);
@@ -2711,14 +2675,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__8_arc(struct Nuitka_FunctionObj
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[31]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2729,7 +2693,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__8_arc(struct Nuitka_FunctionObj
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[32];
+        tmp_tuple_element_1 = mod_consts[31];
         tmp_dircall_arg2_1 = PyTuple_New(4);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_xy);
@@ -2910,14 +2874,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__9_chord(struct Nuitka_FunctionO
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[31]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2928,7 +2892,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__9_chord(struct Nuitka_FunctionO
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[34];
+        tmp_tuple_element_1 = mod_consts[33];
         tmp_dircall_arg2_1 = PyTuple_New(4);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_xy);
@@ -3107,14 +3071,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__10_ellipse(struct Nuitka_Functi
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[31]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3125,7 +3089,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__10_ellipse(struct Nuitka_Functi
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[36];
+        tmp_tuple_element_1 = mod_consts[35];
         tmp_dircall_arg2_1 = PyTuple_New(2);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_xy);
@@ -3288,14 +3252,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__11_line(struct Nuitka_FunctionO
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[31]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3306,7 +3270,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__11_line(struct Nuitka_FunctionO
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[22];
+        tmp_tuple_element_1 = mod_consts[21];
         tmp_dircall_arg2_1 = PyTuple_New(2);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_xy);
@@ -3471,14 +3435,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__12_pieslice(struct Nuitka_Funct
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[31]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3489,7 +3453,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__12_pieslice(struct Nuitka_Funct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[39];
+        tmp_tuple_element_1 = mod_consts[38];
         tmp_dircall_arg2_1 = PyTuple_New(4);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_xy);
@@ -3668,14 +3632,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__13_polygon(struct Nuitka_Functi
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[31]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3686,7 +3650,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__13_polygon(struct Nuitka_Functi
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[41];
+        tmp_tuple_element_1 = mod_consts[40];
         tmp_dircall_arg2_1 = PyTuple_New(2);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_xy);
@@ -3849,14 +3813,14 @@ static PyObject *impl_PIL$ImageDraw2$$$function__14_rectangle(struct Nuitka_Func
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[31]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3867,7 +3831,7 @@ static PyObject *impl_PIL$ImageDraw2$$$function__14_rectangle(struct Nuitka_Func
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[43];
+        tmp_tuple_element_1 = mod_consts[42];
         tmp_dircall_arg2_1 = PyTuple_New(2);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_xy);
@@ -4036,12 +4000,12 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[14]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[14]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4075,11 +4039,11 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[20]);
+        PyObject *tmp_args_element_value_1;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[19]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -4093,9 +4057,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_xy);
-        tmp_args_element_name_1 = par_xy;
+        tmp_args_element_value_1 = par_xy;
         frame_5c5965a7b30bce9de4f37d003104ffb3->m_frame.f_lineno = 169;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[21], tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[20], tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4115,15 +4079,15 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_xy);
-        tmp_expression_name_2 = par_xy;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[14]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_2 = par_xy;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[14]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4134,22 +4098,22 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[14]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 170;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
         frame_5c5965a7b30bce9de4f37d003104ffb3->m_frame.f_lineno = 170;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4164,20 +4128,20 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
     }
     branch_no_1:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_2;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_arg_value_1_1;
         PyObject *tmp_kw_call_dict_value_0_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_kw_call_dict_value_1_1;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[12]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_5 = par_self;
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[12]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4187,9 +4151,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[45]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[44]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4200,8 +4164,8 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
             goto frame_exception_exit_1;
         }
         if (par_xy == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4215,26 +4179,26 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
         CHECK_OBJECT(par_text);
         tmp_kw_call_arg_value_1_1 = par_text;
         CHECK_OBJECT(par_font);
-        tmp_expression_name_6 = par_font;
-        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[6]);
+        tmp_expression_value_6 = par_font;
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[6]);
         if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 171;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_font);
-        tmp_expression_name_7 = par_font;
-        tmp_kw_call_dict_value_1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[2]);
+        tmp_expression_value_7 = par_font;
+        tmp_kw_call_dict_value_1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[2]);
         if (tmp_kw_call_dict_value_1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_dict_value_0_1);
 
             exception_lineno = 171;
@@ -4245,10 +4209,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__15_text(struct Nuitka_FunctionO
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[46]);
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[45]);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_2);
         Py_DECREF(tmp_kw_call_dict_value_0_1);
         Py_DECREF(tmp_kw_call_dict_value_1_1);
         if (tmp_call_result_2 == NULL) {
@@ -4427,16 +4391,16 @@ static PyObject *impl_PIL$ImageDraw2$$$function__16_textsize(struct Nuitka_Funct
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4446,9 +4410,9 @@ static PyObject *impl_PIL$ImageDraw2$$$function__16_textsize(struct Nuitka_Funct
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[48]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[47]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4461,13 +4425,13 @@ static PyObject *impl_PIL$ImageDraw2$$$function__16_textsize(struct Nuitka_Funct
         CHECK_OBJECT(par_text);
         tmp_kw_call_arg_value_0_1 = par_text;
         CHECK_OBJECT(par_font);
-        tmp_expression_name_3 = par_font;
-        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[6]);
+        tmp_expression_value_3 = par_font;
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[6]);
         if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 179;
             type_description_1 = "ooo";
@@ -4477,10 +4441,10 @@ static PyObject *impl_PIL$ImageDraw2$$$function__16_textsize(struct Nuitka_Funct
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[49]);
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[48]);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -4592,11 +4556,36 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__10_ellipse() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__10_ellipse,
+        mod_consts[35],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[95],
+#endif
+        codeobj_cb3b1f86e16c7e3407359cd8dc0ad0f7,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_PIL$ImageDraw2,
         mod_consts[36],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__11_line() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_PIL$ImageDraw2$$$function__11_line,
+        mod_consts[21],
 #if PYTHON_VERSION >= 0x300
         mod_consts[96],
 #endif
-        codeobj_cb3b1f86e16c7e3407359cd8dc0ad0f7,
+        codeobj_7ba1fdb6a11d7a720e976248f618c36a,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -4614,37 +4603,12 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__10_ellipse() {
 
 
 
-static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__11_line() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_PIL$ImageDraw2$$$function__11_line,
-        mod_consts[22],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[97],
-#endif
-        codeobj_7ba1fdb6a11d7a720e976248f618c36a,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_PIL$ImageDraw2,
-        mod_consts[38],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__12_pieslice() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__12_pieslice,
-        mod_consts[39],
+        mod_consts[38],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[98],
+        mod_consts[97],
 #endif
         codeobj_870259f4bde79cc76de1bb8f93b06c5a,
         NULL,
@@ -4653,7 +4617,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__12_pieslice() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[40],
+        mod_consts[39],
         NULL,
         0
     );
@@ -4667,9 +4631,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__12_pieslice() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__13_polygon() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__13_polygon,
-        mod_consts[41],
+        mod_consts[40],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[99],
+        mod_consts[98],
 #endif
         codeobj_dfb17b2bbcb67611a2961b0780937bc0,
         NULL,
@@ -4678,7 +4642,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__13_polygon() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[42],
+        mod_consts[41],
         NULL,
         0
     );
@@ -4692,9 +4656,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__13_polygon() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__14_rectangle() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__14_rectangle,
-        mod_consts[43],
+        mod_consts[42],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[100],
+        mod_consts[99],
 #endif
         codeobj_955357ab19ba4bcf86b840818da3e8fa,
         NULL,
@@ -4703,7 +4667,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__14_rectangle() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[44],
+        mod_consts[43],
         NULL,
         0
     );
@@ -4717,9 +4681,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__14_rectangle() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__15_text() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__15_text,
-        mod_consts[45],
+        mod_consts[44],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[101],
+        mod_consts[100],
 #endif
         codeobj_5c5965a7b30bce9de4f37d003104ffb3,
         NULL,
@@ -4728,7 +4692,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__15_text() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[47],
+        mod_consts[46],
         NULL,
         0
     );
@@ -4742,9 +4706,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__15_text() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__16_textsize() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__16_textsize,
-        mod_consts[48],
+        mod_consts[47],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[102],
+        mod_consts[101],
 #endif
         codeobj_ec9f540fa68f7d55ff3acc05d3d5e936,
         NULL,
@@ -4753,7 +4717,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__16_textsize() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[50],
+        mod_consts[49],
         NULL,
         0
     );
@@ -4767,9 +4731,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__16_textsize() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__1___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__1___init__,
-        mod_consts[73],
+        mod_consts[72],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[74],
+        mod_consts[73],
 #endif
         codeobj_e15f64ccb7e10e9bbb8aed23847da06b,
         defaults,
@@ -4792,9 +4756,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__1___init__(PyObject *d
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__2___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__2___init__,
-        mod_consts[73],
+        mod_consts[72],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[78],
+        mod_consts[77],
 #endif
         codeobj_9dff896a62486576bfdceceb5b2bf130,
         defaults,
@@ -4817,9 +4781,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__2___init__(PyObject *d
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__3___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__3___init__,
-        mod_consts[73],
+        mod_consts[72],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[83],
+        mod_consts[82],
 #endif
         codeobj_c2e039aeb273657f46f4d2b2b7ed8360,
         defaults,
@@ -4842,9 +4806,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__3___init__(PyObject *d
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__4___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__4___init__,
-        mod_consts[73],
+        mod_consts[72],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[87],
+        mod_consts[86],
 #endif
         codeobj_50cf4c126a07a2f46c0cdfa3cc422a6b,
         defaults,
@@ -4867,9 +4831,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__4___init__(PyObject *d
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__5_flush() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__5_flush,
-        mod_consts[88],
+        mod_consts[87],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[89],
+        mod_consts[88],
 #endif
         codeobj_3c4d15b393180081fd1e4ee1bf467b79,
         NULL,
@@ -4892,9 +4856,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__5_flush() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__6_render(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__6_render,
-        mod_consts[31],
+        mod_consts[30],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[91],
+        mod_consts[90],
 #endif
         codeobj_d1a5b298f9b8476d2f9f011112d2e345,
         defaults,
@@ -4917,9 +4881,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__6_render(PyObject *def
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__7_settransform() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__7_settransform,
-        mod_consts[92],
+        mod_consts[91],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[93],
+        mod_consts[92],
 #endif
         codeobj_5cfa76b5e933be7f8b93910d492425cd,
         NULL,
@@ -4928,7 +4892,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__7_settransform() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[30],
+        mod_consts[29],
         NULL,
         0
     );
@@ -4942,9 +4906,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__7_settransform() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__8_arc() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__8_arc,
-        mod_consts[32],
+        mod_consts[31],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[94],
+        mod_consts[93],
 #endif
         codeobj_f49a71f1fb64a9495dcdcf1c1e2d1a7e,
         NULL,
@@ -4953,7 +4917,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__8_arc() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[33],
+        mod_consts[32],
         NULL,
         0
     );
@@ -4967,9 +4931,9 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__8_arc() {
 static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__9_chord() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_PIL$ImageDraw2$$$function__9_chord,
-        mod_consts[34],
+        mod_consts[33],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[95],
+        mod_consts[94],
 #endif
         codeobj_6a06f4014bd609eab80e2862980c1183,
         NULL,
@@ -4978,7 +4942,7 @@ static PyObject *MAKE_FUNCTION_PIL$ImageDraw2$$$function__9_chord() {
         NULL,
 #endif
         module_PIL$ImageDraw2,
-        mod_consts[35],
+        mod_consts[34],
         NULL,
         0
     );
@@ -5171,63 +5135,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("PIL.ImageDraw2");
+
+    // Store the module for future use.
     module_PIL$ImageDraw2 = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("PIL.ImageDraw2: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("PIL.ImageDraw2: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("PIL.ImageDraw2: Calling createModuleConstants().\n");
+        PRINT_STRING("PIL.ImageDraw2: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("PIL.ImageDraw2: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("PIL.ImageDraw2: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initPIL$ImageDraw2\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_PIL$ImageDraw2 = MODULE_DICT(module_PIL$ImageDraw2);
 
@@ -5248,7 +5216,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT0(
             moduledict_PIL$ImageDraw2,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[57]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)const_str_plain___name__);
@@ -5298,7 +5266,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -5444,13 +5412,13 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[51];
-        UPDATE_STRING_DICT0(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[50];
+        UPDATE_STRING_DICT0(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[53], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_77d241fcdac1b165e5407d5412c7f589 = MAKE_MODULE_FRAME(codeobj_77d241fcdac1b165e5407d5412c7f589, module_PIL$ImageDraw2);
@@ -5465,14 +5433,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[54]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[53]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[53]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[55], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[54], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5488,14 +5456,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[54]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[53]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[53]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[56], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[55], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5510,22 +5478,22 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[57], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[56], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[58];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_PIL$ImageDraw2;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[59];
-        tmp_level_name_1 = mod_consts[15];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[57];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_PIL$ImageDraw2;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[58];
+        tmp_level_value_1 = mod_consts[15];
         frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 27;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5550,7 +5518,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_PIL$ImageDraw2,
                 mod_consts[8],
-                mod_consts[29]
+                mod_consts[28]
             );
         } else {
             tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[8]);
@@ -5578,7 +5546,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_PIL$ImageDraw2,
                 mod_consts[0],
-                mod_consts[29]
+                mod_consts[28]
             );
         } else {
             tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[0]);
@@ -5606,7 +5574,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_PIL$ImageDraw2,
                 mod_consts[10],
-                mod_consts[29]
+                mod_consts[28]
             );
         } else {
             tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[10]);
@@ -5634,7 +5602,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_PIL$ImageDraw2,
                 mod_consts[4],
-                mod_consts[29]
+                mod_consts[28]
             );
         } else {
             tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[4]);
@@ -5661,11 +5629,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_PIL$ImageDraw2,
-                mod_consts[20],
-                mod_consts[29]
+                mod_consts[19],
+                mod_consts[28]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[20]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[19]);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -5678,7 +5646,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[19], tmp_assign_source_9);
     }
     goto try_end_1;
     // Exception handler code:
@@ -5716,47 +5684,39 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     // Tried code:
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[60];
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[60];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 30;
-
-            goto try_except_handler_2;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[59];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
         goto condexpr_end_1;
         condexpr_false_1:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
         condexpr_end_1:;
-        tmp_bases_name_1 = mod_consts[61];
-        tmp_assign_source_11 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = mod_consts[60];
+        tmp_assign_source_11 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5771,16 +5731,16 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_1__metaclass = tmp_assign_source_11;
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[60];
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -5789,7 +5749,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[60];
+    tmp_dictdel_key = mod_consts[59];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -5804,10 +5764,10 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_1 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_1, mod_consts[62]);
+        tmp_expression_value_1 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_1, mod_consts[61]);
         tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -5818,14 +5778,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[62]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[61]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5835,12 +5795,12 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        tmp_args_name_1 = mod_consts[63];
+        tmp_args_value_1 = mod_consts[62];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 30;
-        tmp_assign_source_12 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_12 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5855,14 +5815,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_1__prepared = tmp_assign_source_12;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_3;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_3 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[64]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_3 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[63]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5873,8 +5833,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -5884,18 +5844,18 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[65];
+        tmp_left_value_1 = mod_consts[64];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[66];
-        tmp_getattr_default_1 = mod_consts[67];
+        tmp_getattr_attr_1 = mod_consts[65];
+        tmp_getattr_default_1 = mod_consts[66];
         tmp_tuple_element_1 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5907,17 +5867,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_4;
+            PyObject *tmp_expression_value_4;
             PyObject *tmp_type_arg_1;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_1 = tmp_class_creation_1__prepared;
-            tmp_expression_name_4 = BUILTIN_TYPE1(tmp_type_arg_1);
-            assert(!(tmp_expression_name_4 == NULL));
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[66]);
-            Py_DECREF(tmp_expression_name_4);
+            tmp_expression_value_4 = BUILTIN_TYPE1(tmp_type_arg_1);
+            assert(!(tmp_expression_value_4 == NULL));
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[65]);
+            Py_DECREF(tmp_expression_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5928,17 +5888,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5978,8 +5938,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[68];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[69], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[67];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[68], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -5990,8 +5950,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_4;
         }
-        tmp_dictset_value = mod_consts[70];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[52], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[69];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[51], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -6003,7 +5963,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_4;
         }
         tmp_dictset_value = mod_consts[16];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[71], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[70], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -6043,13 +6003,13 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         // Framed code:
         {
             PyObject *tmp_defaults_1;
-            tmp_defaults_1 = mod_consts[72];
+            tmp_defaults_1 = mod_consts[71];
             Py_INCREF(tmp_defaults_1);
 
 
             tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__1___init__(tmp_defaults_1);
 
-            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[73], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__1_Pen_30, mod_consts[72], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -6119,24 +6079,24 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_1:;
         {
             PyObject *tmp_assign_source_15;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_2;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
             tmp_tuple_element_2 = mod_consts[16];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-            tmp_tuple_element_2 = mod_consts[61];
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_2);
+            tmp_tuple_element_2 = mod_consts[60];
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_2);
             tmp_tuple_element_2 = locals_PIL$ImageDraw2$$$class__1_Pen_30;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_2);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 30;
-            tmp_assign_source_15 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_15 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_15 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6229,9 +6189,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     Py_XDECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
@@ -6244,9 +6206,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -6260,47 +6224,39 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     // Tried code:
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_metaclass_name_2;
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_key_name_4;
-        PyObject *tmp_dict_arg_name_4;
-        PyObject *tmp_dict_arg_name_5;
-        PyObject *tmp_key_name_5;
-        PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[60];
+        PyObject *tmp_metaclass_value_2;
+        bool tmp_condition_result_5;
+        PyObject *tmp_key_value_4;
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
+        PyObject *tmp_bases_value_2;
+        tmp_key_value_4 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
+        tmp_dict_arg_value_4 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_4, tmp_key_value_4);
         assert(!(tmp_res == -1));
-        tmp_condition_result_5 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto condexpr_true_2;
         } else {
             goto condexpr_false_2;
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[60];
-        tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
-        if (tmp_metaclass_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 38;
-
-            goto try_except_handler_5;
+        tmp_dict_arg_value_5 = tmp_class_creation_2__class_decl_dict;
+        tmp_key_value_5 = mod_consts[59];
+        tmp_metaclass_value_2 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
+        if (tmp_metaclass_value_2 == NULL) {
+            tmp_metaclass_value_2 = Py_None;
         }
+        assert(!(tmp_metaclass_value_2 == NULL));
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_2 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_2);
+        tmp_metaclass_value_2 = (PyObject *)&PyType_Type;
         condexpr_end_2:;
-        tmp_bases_name_2 = mod_consts[61];
-        tmp_assign_source_17 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
-        Py_DECREF(tmp_metaclass_name_2);
+        tmp_bases_value_2 = mod_consts[60];
+        tmp_assign_source_17 = SELECT_METACLASS(tmp_metaclass_value_2, tmp_bases_value_2);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6315,16 +6271,16 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_2__metaclass = tmp_assign_source_17;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_key_name_6;
-        PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[60];
+        bool tmp_condition_result_6;
+        PyObject *tmp_key_value_6;
+        PyObject *tmp_dict_arg_value_6;
+        tmp_key_value_6 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
+        tmp_dict_arg_value_6 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_6, tmp_key_value_6);
         assert(!(tmp_res == -1));
-        tmp_condition_result_6 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -6333,7 +6289,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_4:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[60];
+    tmp_dictdel_key = mod_consts[59];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -6348,10 +6304,10 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_5 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[62]);
+        tmp_expression_value_5 = tmp_class_creation_2__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[61]);
         tmp_condition_result_7 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
@@ -6362,14 +6318,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_name_3;
-        PyObject *tmp_kwargs_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_value_3;
+        PyObject *tmp_kwargs_value_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_6 = tmp_class_creation_2__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[62]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_6 = tmp_class_creation_2__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[61]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6379,12 +6335,12 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_5;
         }
-        tmp_args_name_3 = mod_consts[75];
+        tmp_args_value_3 = mod_consts[74];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
+        tmp_kwargs_value_3 = tmp_class_creation_2__class_decl_dict;
         frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 38;
-        tmp_assign_source_18 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_3);
+        tmp_assign_source_18 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6399,14 +6355,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_2__prepared = tmp_assign_source_18;
     }
     {
-        nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_expression_name_7;
+        bool tmp_condition_result_8;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
-        tmp_expression_name_7 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_7, mod_consts[64]);
-        tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_expression_value_7 = tmp_class_creation_2__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_7, mod_consts[63]);
+        tmp_operand_value_2 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6417,8 +6373,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_5;
         }
-        tmp_condition_result_8 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_8 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_8 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -6428,18 +6384,18 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_raise_value_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_2 = mod_consts[65];
+        tmp_left_value_2 = mod_consts[64];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[66];
-        tmp_getattr_default_2 = mod_consts[67];
+        tmp_getattr_attr_2 = mod_consts[65];
+        tmp_getattr_default_2 = mod_consts[66];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6451,17 +6407,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_5;
         }
-        tmp_right_name_2 = PyTuple_New(2);
+        tmp_right_value_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_8;
+            PyObject *tmp_expression_value_8;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_2, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_2__prepared);
             tmp_type_arg_2 = tmp_class_creation_2__prepared;
-            tmp_expression_name_8 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_8 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[66]);
-            Py_DECREF(tmp_expression_name_8);
+            tmp_expression_value_8 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_8 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[65]);
+            Py_DECREF(tmp_expression_value_8);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6472,17 +6428,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_2;
             }
-            PyTuple_SET_ITEM(tmp_right_name_2, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_2, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_2:;
-        Py_DECREF(tmp_right_name_2);
+        Py_DECREF(tmp_right_value_2);
         goto try_except_handler_5;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_raise_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6522,8 +6478,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[68];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[69], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[67];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[68], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -6534,8 +6490,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_7;
         }
-        tmp_dictset_value = mod_consts[76];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[52], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[75];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[51], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -6547,7 +6503,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_7;
         }
         tmp_dictset_value = mod_consts[18];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[71], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[70], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -6587,13 +6543,13 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         // Framed code:
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[77];
+            tmp_defaults_2 = mod_consts[76];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__2___init__(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[73], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__2_Brush_38, mod_consts[72], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -6663,24 +6619,24 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_2:;
         {
             PyObject *tmp_assign_source_21;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_name_4;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_value_4;
             PyObject *tmp_tuple_element_4;
-            PyObject *tmp_kwargs_name_4;
+            PyObject *tmp_kwargs_value_4;
             CHECK_OBJECT(tmp_class_creation_2__metaclass);
-            tmp_called_name_4 = tmp_class_creation_2__metaclass;
+            tmp_called_value_4 = tmp_class_creation_2__metaclass;
             tmp_tuple_element_4 = mod_consts[18];
-            tmp_args_name_4 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_4);
-            tmp_tuple_element_4 = mod_consts[61];
-            PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_4);
+            tmp_args_value_4 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_4);
+            tmp_tuple_element_4 = mod_consts[60];
+            PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_4);
             tmp_tuple_element_4 = locals_PIL$ImageDraw2$$$class__2_Brush_38;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_4);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 2, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-            tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
+            tmp_kwargs_value_4 = tmp_class_creation_2__class_decl_dict;
             frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 38;
-            tmp_assign_source_21 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_4, tmp_kwargs_name_4);
-            Py_DECREF(tmp_args_name_4);
+            tmp_assign_source_21 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_4, tmp_kwargs_value_4);
+            Py_DECREF(tmp_args_value_4);
             if (tmp_assign_source_21 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6773,9 +6729,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     Py_XDECREF(tmp_class_creation_2__prepared);
     tmp_class_creation_2__prepared = NULL;
@@ -6788,9 +6746,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     goto frame_exception_exit_1;
     // End of try:
     try_end_3:;
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_2__prepared);
     Py_DECREF(tmp_class_creation_2__prepared);
@@ -6804,47 +6764,39 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     // Tried code:
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_metaclass_name_3;
-        nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_key_name_7;
-        PyObject *tmp_dict_arg_name_7;
-        PyObject *tmp_dict_arg_name_8;
-        PyObject *tmp_key_name_8;
-        PyObject *tmp_bases_name_3;
-        tmp_key_name_7 = mod_consts[60];
+        PyObject *tmp_metaclass_value_3;
+        bool tmp_condition_result_9;
+        PyObject *tmp_key_value_7;
+        PyObject *tmp_dict_arg_value_7;
+        PyObject *tmp_dict_arg_value_8;
+        PyObject *tmp_key_value_8;
+        PyObject *tmp_bases_value_3;
+        tmp_key_value_7 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_7 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_7, tmp_key_name_7);
+        tmp_dict_arg_value_7 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_7, tmp_key_value_7);
         assert(!(tmp_res == -1));
-        tmp_condition_result_9 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_9 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_9 != false) {
             goto condexpr_true_3;
         } else {
             goto condexpr_false_3;
         }
         condexpr_true_3:;
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_8 = tmp_class_creation_3__class_decl_dict;
-        tmp_key_name_8 = mod_consts[60];
-        tmp_metaclass_name_3 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_8, tmp_key_name_8);
-        if (tmp_metaclass_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 45;
-
-            goto try_except_handler_8;
+        tmp_dict_arg_value_8 = tmp_class_creation_3__class_decl_dict;
+        tmp_key_value_8 = mod_consts[59];
+        tmp_metaclass_value_3 = DICT_GET_ITEM0(tmp_dict_arg_value_8, tmp_key_value_8);
+        if (tmp_metaclass_value_3 == NULL) {
+            tmp_metaclass_value_3 = Py_None;
         }
+        assert(!(tmp_metaclass_value_3 == NULL));
         goto condexpr_end_3;
         condexpr_false_3:;
-        tmp_metaclass_name_3 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_3);
+        tmp_metaclass_value_3 = (PyObject *)&PyType_Type;
         condexpr_end_3:;
-        tmp_bases_name_3 = mod_consts[61];
-        tmp_assign_source_23 = SELECT_METACLASS(tmp_metaclass_name_3, tmp_bases_name_3);
-        Py_DECREF(tmp_metaclass_name_3);
+        tmp_bases_value_3 = mod_consts[60];
+        tmp_assign_source_23 = SELECT_METACLASS(tmp_metaclass_value_3, tmp_bases_value_3);
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6859,16 +6811,16 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_3__metaclass = tmp_assign_source_23;
     }
     {
-        nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_key_name_9;
-        PyObject *tmp_dict_arg_name_9;
-        tmp_key_name_9 = mod_consts[60];
+        bool tmp_condition_result_10;
+        PyObject *tmp_key_value_9;
+        PyObject *tmp_dict_arg_value_9;
+        tmp_key_value_9 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_9 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_9, tmp_key_name_9);
+        tmp_dict_arg_value_9 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_9, tmp_key_value_9);
         assert(!(tmp_res == -1));
-        tmp_condition_result_10 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_10 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_10 != false) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
@@ -6877,7 +6829,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_7:;
     CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_3__class_decl_dict;
-    tmp_dictdel_key = mod_consts[60];
+    tmp_dictdel_key = mod_consts[59];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -6892,10 +6844,10 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_7:;
     {
         nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_9 = tmp_class_creation_3__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_9, mod_consts[62]);
+        tmp_expression_value_9 = tmp_class_creation_3__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_9, mod_consts[61]);
         tmp_condition_result_11 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
             goto branch_yes_8;
@@ -6906,14 +6858,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_8:;
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_name_5;
-        PyObject *tmp_kwargs_name_5;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_args_value_5;
+        PyObject *tmp_kwargs_value_5;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_10 = tmp_class_creation_3__metaclass;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[62]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_10 = tmp_class_creation_3__metaclass;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[61]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6923,12 +6875,12 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_8;
         }
-        tmp_args_name_5 = mod_consts[79];
+        tmp_args_value_5 = mod_consts[78];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_kwargs_name_5 = tmp_class_creation_3__class_decl_dict;
+        tmp_kwargs_value_5 = tmp_class_creation_3__class_decl_dict;
         frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 45;
-        tmp_assign_source_24 = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_5, tmp_kwargs_name_5);
-        Py_DECREF(tmp_called_name_5);
+        tmp_assign_source_24 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_5, tmp_kwargs_value_5);
+        Py_DECREF(tmp_called_value_5);
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6943,14 +6895,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_3__prepared = tmp_assign_source_24;
     }
     {
-        nuitka_bool tmp_condition_result_12;
-        PyObject *tmp_operand_name_3;
-        PyObject *tmp_expression_name_11;
+        bool tmp_condition_result_12;
+        PyObject *tmp_operand_value_3;
+        PyObject *tmp_expression_value_11;
         CHECK_OBJECT(tmp_class_creation_3__prepared);
-        tmp_expression_name_11 = tmp_class_creation_3__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_11, mod_consts[64]);
-        tmp_operand_name_3 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_3);
+        tmp_expression_value_11 = tmp_class_creation_3__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_11, mod_consts[63]);
+        tmp_operand_value_3 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6961,8 +6913,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_8;
         }
-        tmp_condition_result_12 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_12 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_12 != false) {
             goto branch_yes_9;
         } else {
             goto branch_no_9;
@@ -6972,18 +6924,18 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_raise_value_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_tuple_element_5;
         PyObject *tmp_getattr_target_3;
         PyObject *tmp_getattr_attr_3;
         PyObject *tmp_getattr_default_3;
         tmp_raise_type_3 = PyExc_TypeError;
-        tmp_left_name_3 = mod_consts[65];
+        tmp_left_value_3 = mod_consts[64];
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
         tmp_getattr_target_3 = tmp_class_creation_3__metaclass;
-        tmp_getattr_attr_3 = mod_consts[66];
-        tmp_getattr_default_3 = mod_consts[67];
+        tmp_getattr_attr_3 = mod_consts[65];
+        tmp_getattr_default_3 = mod_consts[66];
         tmp_tuple_element_5 = BUILTIN_GETATTR(tmp_getattr_target_3, tmp_getattr_attr_3, tmp_getattr_default_3);
         if (tmp_tuple_element_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6995,17 +6947,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_8;
         }
-        tmp_right_name_3 = PyTuple_New(2);
+        tmp_right_value_3 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_12;
+            PyObject *tmp_expression_value_12;
             PyObject *tmp_type_arg_3;
-            PyTuple_SET_ITEM(tmp_right_name_3, 0, tmp_tuple_element_5);
+            PyTuple_SET_ITEM(tmp_right_value_3, 0, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_3__prepared);
             tmp_type_arg_3 = tmp_class_creation_3__prepared;
-            tmp_expression_name_12 = BUILTIN_TYPE1(tmp_type_arg_3);
-            assert(!(tmp_expression_name_12 == NULL));
-            tmp_tuple_element_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[66]);
-            Py_DECREF(tmp_expression_name_12);
+            tmp_expression_value_12 = BUILTIN_TYPE1(tmp_type_arg_3);
+            assert(!(tmp_expression_value_12 == NULL));
+            tmp_tuple_element_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[65]);
+            Py_DECREF(tmp_expression_value_12);
             if (tmp_tuple_element_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7016,17 +6968,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_3;
             }
-            PyTuple_SET_ITEM(tmp_right_name_3, 1, tmp_tuple_element_5);
+            PyTuple_SET_ITEM(tmp_right_value_3, 1, tmp_tuple_element_5);
         }
         goto tuple_build_noexception_3;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_3:;
-        Py_DECREF(tmp_right_name_3);
+        Py_DECREF(tmp_right_value_3);
         goto try_except_handler_8;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_3:;
-        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_raise_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7066,8 +7018,20 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[68];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[69], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[67];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[68], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 45;
+
+            goto try_except_handler_10;
+        }
+        tmp_dictset_value = mod_consts[79];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[51], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7079,19 +7043,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_10;
         }
         tmp_dictset_value = mod_consts[80];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[52], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 45;
-
-            goto try_except_handler_10;
-        }
-        tmp_dictset_value = mod_consts[81];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[71], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[70], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7131,13 +7083,13 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         // Framed code:
         {
             PyObject *tmp_defaults_3;
-            tmp_defaults_3 = mod_consts[82];
+            tmp_defaults_3 = mod_consts[81];
             Py_INCREF(tmp_defaults_3);
 
 
             tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__3___init__(tmp_defaults_3);
 
-            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[73], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__3_Font_45, mod_consts[72], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -7207,24 +7159,24 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_3:;
         {
             PyObject *tmp_assign_source_27;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_name_6;
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_value_6;
             PyObject *tmp_tuple_element_6;
-            PyObject *tmp_kwargs_name_6;
+            PyObject *tmp_kwargs_value_6;
             CHECK_OBJECT(tmp_class_creation_3__metaclass);
-            tmp_called_name_6 = tmp_class_creation_3__metaclass;
-            tmp_tuple_element_6 = mod_consts[81];
-            tmp_args_name_6 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_6, 0, tmp_tuple_element_6);
-            tmp_tuple_element_6 = mod_consts[61];
-            PyTuple_SET_ITEM0(tmp_args_name_6, 1, tmp_tuple_element_6);
+            tmp_called_value_6 = tmp_class_creation_3__metaclass;
+            tmp_tuple_element_6 = mod_consts[80];
+            tmp_args_value_6 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 0, tmp_tuple_element_6);
+            tmp_tuple_element_6 = mod_consts[60];
+            PyTuple_SET_ITEM0(tmp_args_value_6, 1, tmp_tuple_element_6);
             tmp_tuple_element_6 = locals_PIL$ImageDraw2$$$class__3_Font_45;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 2, tmp_tuple_element_6);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 2, tmp_tuple_element_6);
             CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-            tmp_kwargs_name_6 = tmp_class_creation_3__class_decl_dict;
+            tmp_kwargs_value_6 = tmp_class_creation_3__class_decl_dict;
             frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 45;
-            tmp_assign_source_27 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_6, tmp_kwargs_name_6);
-            Py_DECREF(tmp_args_name_6);
+            tmp_assign_source_27 = CALL_FUNCTION(tmp_called_value_6, tmp_args_value_6, tmp_kwargs_value_6);
+            Py_DECREF(tmp_args_value_6);
             if (tmp_assign_source_27 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7303,7 +7255,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         exception_lineno = 45;
         goto try_except_handler_8;
         outline_result_3:;
-        UPDATE_STRING_DICT1(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_26);
     }
     goto try_end_4;
     // Exception handler code:
@@ -7317,9 +7269,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_3__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+    Py_DECREF(tmp_class_creation_3__class_decl_dict);
     tmp_class_creation_3__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_3__metaclass);
+    CHECK_OBJECT(tmp_class_creation_3__metaclass);
+    Py_DECREF(tmp_class_creation_3__metaclass);
     tmp_class_creation_3__metaclass = NULL;
     Py_XDECREF(tmp_class_creation_3__prepared);
     tmp_class_creation_3__prepared = NULL;
@@ -7332,9 +7286,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     goto frame_exception_exit_1;
     // End of try:
     try_end_4:;
-    Py_XDECREF(tmp_class_creation_3__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+    Py_DECREF(tmp_class_creation_3__class_decl_dict);
     tmp_class_creation_3__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_3__metaclass);
+    CHECK_OBJECT(tmp_class_creation_3__metaclass);
+    Py_DECREF(tmp_class_creation_3__metaclass);
     tmp_class_creation_3__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_3__prepared);
     Py_DECREF(tmp_class_creation_3__prepared);
@@ -7348,47 +7304,39 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     // Tried code:
     {
         PyObject *tmp_assign_source_29;
-        PyObject *tmp_metaclass_name_4;
-        nuitka_bool tmp_condition_result_13;
-        PyObject *tmp_key_name_10;
-        PyObject *tmp_dict_arg_name_10;
-        PyObject *tmp_dict_arg_name_11;
-        PyObject *tmp_key_name_11;
-        PyObject *tmp_bases_name_4;
-        tmp_key_name_10 = mod_consts[60];
+        PyObject *tmp_metaclass_value_4;
+        bool tmp_condition_result_13;
+        PyObject *tmp_key_value_10;
+        PyObject *tmp_dict_arg_value_10;
+        PyObject *tmp_dict_arg_value_11;
+        PyObject *tmp_key_value_11;
+        PyObject *tmp_bases_value_4;
+        tmp_key_value_10 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_10 = tmp_class_creation_4__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_10, tmp_key_name_10);
+        tmp_dict_arg_value_10 = tmp_class_creation_4__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_10, tmp_key_value_10);
         assert(!(tmp_res == -1));
-        tmp_condition_result_13 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_13 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_13 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_13 != false) {
             goto condexpr_true_4;
         } else {
             goto condexpr_false_4;
         }
         condexpr_true_4:;
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_11 = tmp_class_creation_4__class_decl_dict;
-        tmp_key_name_11 = mod_consts[60];
-        tmp_metaclass_name_4 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_11, tmp_key_name_11);
-        if (tmp_metaclass_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 54;
-
-            goto try_except_handler_11;
+        tmp_dict_arg_value_11 = tmp_class_creation_4__class_decl_dict;
+        tmp_key_value_11 = mod_consts[59];
+        tmp_metaclass_value_4 = DICT_GET_ITEM0(tmp_dict_arg_value_11, tmp_key_value_11);
+        if (tmp_metaclass_value_4 == NULL) {
+            tmp_metaclass_value_4 = Py_None;
         }
+        assert(!(tmp_metaclass_value_4 == NULL));
         goto condexpr_end_4;
         condexpr_false_4:;
-        tmp_metaclass_name_4 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_4);
+        tmp_metaclass_value_4 = (PyObject *)&PyType_Type;
         condexpr_end_4:;
-        tmp_bases_name_4 = mod_consts[61];
-        tmp_assign_source_29 = SELECT_METACLASS(tmp_metaclass_name_4, tmp_bases_name_4);
-        Py_DECREF(tmp_metaclass_name_4);
+        tmp_bases_value_4 = mod_consts[60];
+        tmp_assign_source_29 = SELECT_METACLASS(tmp_metaclass_value_4, tmp_bases_value_4);
         if (tmp_assign_source_29 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7403,16 +7351,16 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_4__metaclass = tmp_assign_source_29;
     }
     {
-        nuitka_bool tmp_condition_result_14;
-        PyObject *tmp_key_name_12;
-        PyObject *tmp_dict_arg_name_12;
-        tmp_key_name_12 = mod_consts[60];
+        bool tmp_condition_result_14;
+        PyObject *tmp_key_value_12;
+        PyObject *tmp_dict_arg_value_12;
+        tmp_key_value_12 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_12 = tmp_class_creation_4__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_12, tmp_key_name_12);
+        tmp_dict_arg_value_12 = tmp_class_creation_4__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_12, tmp_key_value_12);
         assert(!(tmp_res == -1));
-        tmp_condition_result_14 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_14 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_14 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_14 != false) {
             goto branch_yes_10;
         } else {
             goto branch_no_10;
@@ -7421,7 +7369,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_10:;
     CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_4__class_decl_dict;
-    tmp_dictdel_key = mod_consts[60];
+    tmp_dictdel_key = mod_consts[59];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -7436,10 +7384,10 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_10:;
     {
         nuitka_bool tmp_condition_result_15;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_value_13;
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
-        tmp_expression_name_13 = tmp_class_creation_4__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_13, mod_consts[62]);
+        tmp_expression_value_13 = tmp_class_creation_4__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_13, mod_consts[61]);
         tmp_condition_result_15 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_15 == NUITKA_BOOL_TRUE) {
             goto branch_yes_11;
@@ -7450,14 +7398,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_11:;
     {
         PyObject *tmp_assign_source_30;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_name_7;
-        PyObject *tmp_kwargs_name_7;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_value_7;
+        PyObject *tmp_kwargs_value_7;
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
-        tmp_expression_name_14 = tmp_class_creation_4__metaclass;
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[62]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_14 = tmp_class_creation_4__metaclass;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[61]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7467,12 +7415,12 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_11;
         }
-        tmp_args_name_7 = mod_consts[84];
+        tmp_args_value_7 = mod_consts[83];
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_kwargs_name_7 = tmp_class_creation_4__class_decl_dict;
+        tmp_kwargs_value_7 = tmp_class_creation_4__class_decl_dict;
         frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 54;
-        tmp_assign_source_30 = CALL_FUNCTION(tmp_called_name_7, tmp_args_name_7, tmp_kwargs_name_7);
-        Py_DECREF(tmp_called_name_7);
+        tmp_assign_source_30 = CALL_FUNCTION(tmp_called_value_7, tmp_args_value_7, tmp_kwargs_value_7);
+        Py_DECREF(tmp_called_value_7);
         if (tmp_assign_source_30 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7487,14 +7435,14 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_4__prepared = tmp_assign_source_30;
     }
     {
-        nuitka_bool tmp_condition_result_16;
-        PyObject *tmp_operand_name_4;
-        PyObject *tmp_expression_name_15;
+        bool tmp_condition_result_16;
+        PyObject *tmp_operand_value_4;
+        PyObject *tmp_expression_value_15;
         CHECK_OBJECT(tmp_class_creation_4__prepared);
-        tmp_expression_name_15 = tmp_class_creation_4__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_15, mod_consts[64]);
-        tmp_operand_name_4 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_4);
+        tmp_expression_value_15 = tmp_class_creation_4__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_15, mod_consts[63]);
+        tmp_operand_value_4 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7505,8 +7453,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_11;
         }
-        tmp_condition_result_16 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_16 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_16 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_16 != false) {
             goto branch_yes_12;
         } else {
             goto branch_no_12;
@@ -7516,18 +7464,18 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_raise_value_4;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
         PyObject *tmp_tuple_element_7;
         PyObject *tmp_getattr_target_4;
         PyObject *tmp_getattr_attr_4;
         PyObject *tmp_getattr_default_4;
         tmp_raise_type_4 = PyExc_TypeError;
-        tmp_left_name_4 = mod_consts[65];
+        tmp_left_value_4 = mod_consts[64];
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
         tmp_getattr_target_4 = tmp_class_creation_4__metaclass;
-        tmp_getattr_attr_4 = mod_consts[66];
-        tmp_getattr_default_4 = mod_consts[67];
+        tmp_getattr_attr_4 = mod_consts[65];
+        tmp_getattr_default_4 = mod_consts[66];
         tmp_tuple_element_7 = BUILTIN_GETATTR(tmp_getattr_target_4, tmp_getattr_attr_4, tmp_getattr_default_4);
         if (tmp_tuple_element_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7539,17 +7487,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_11;
         }
-        tmp_right_name_4 = PyTuple_New(2);
+        tmp_right_value_4 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_16;
+            PyObject *tmp_expression_value_16;
             PyObject *tmp_type_arg_4;
-            PyTuple_SET_ITEM(tmp_right_name_4, 0, tmp_tuple_element_7);
+            PyTuple_SET_ITEM(tmp_right_value_4, 0, tmp_tuple_element_7);
             CHECK_OBJECT(tmp_class_creation_4__prepared);
             tmp_type_arg_4 = tmp_class_creation_4__prepared;
-            tmp_expression_name_16 = BUILTIN_TYPE1(tmp_type_arg_4);
-            assert(!(tmp_expression_name_16 == NULL));
-            tmp_tuple_element_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[66]);
-            Py_DECREF(tmp_expression_name_16);
+            tmp_expression_value_16 = BUILTIN_TYPE1(tmp_type_arg_4);
+            assert(!(tmp_expression_value_16 == NULL));
+            tmp_tuple_element_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[65]);
+            Py_DECREF(tmp_expression_value_16);
             if (tmp_tuple_element_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7560,17 +7508,17 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_4;
             }
-            PyTuple_SET_ITEM(tmp_right_name_4, 1, tmp_tuple_element_7);
+            PyTuple_SET_ITEM(tmp_right_value_4, 1, tmp_tuple_element_7);
         }
         goto tuple_build_noexception_4;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_4:;
-        Py_DECREF(tmp_right_name_4);
+        Py_DECREF(tmp_right_value_4);
         goto try_except_handler_11;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_4:;
-        tmp_raise_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_raise_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_raise_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7610,8 +7558,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[68];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[69], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[67];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[68], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7622,8 +7570,8 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_13;
         }
-        tmp_dictset_value = mod_consts[85];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[52], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[84];
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[51], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7635,7 +7583,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_13;
         }
         tmp_dictset_value = mod_consts[11];
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[71], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[70], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7675,13 +7623,13 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         // Framed code:
         {
             PyObject *tmp_defaults_4;
-            tmp_defaults_4 = mod_consts[86];
+            tmp_defaults_4 = mod_consts[85];
             Py_INCREF(tmp_defaults_4);
 
 
             tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__4___init__(tmp_defaults_4);
 
-            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[73], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[72], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -7698,7 +7646,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__5_flush();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[88], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[87], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7712,13 +7660,13 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         }
         {
             PyObject *tmp_defaults_5;
-            tmp_defaults_5 = mod_consts[90];
+            tmp_defaults_5 = mod_consts[89];
             Py_INCREF(tmp_defaults_5);
 
 
             tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__6_render(tmp_defaults_5);
 
-            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[31], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[30], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -7735,7 +7683,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__7_settransform();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[92], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[91], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7751,7 +7699,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__8_arc();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[32], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[31], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7767,7 +7715,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__9_chord();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[34], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[33], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7783,7 +7731,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__10_ellipse();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[36], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[35], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7799,7 +7747,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__11_line();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[22], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[21], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7815,7 +7763,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__12_pieslice();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[39], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[38], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7831,7 +7779,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__13_polygon();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[41], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[40], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7847,7 +7795,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__14_rectangle();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[43], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[42], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7863,7 +7811,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__15_text();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[45], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[44], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7879,7 +7827,7 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_PIL$ImageDraw2$$$function__16_textsize();
 
-        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[48], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_PIL$ImageDraw2$$$class__4_Draw_54, mod_consts[47], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -7948,24 +7896,24 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_4:;
         {
             PyObject *tmp_assign_source_33;
-            PyObject *tmp_called_name_8;
-            PyObject *tmp_args_name_8;
+            PyObject *tmp_called_value_8;
+            PyObject *tmp_args_value_8;
             PyObject *tmp_tuple_element_8;
-            PyObject *tmp_kwargs_name_8;
+            PyObject *tmp_kwargs_value_8;
             CHECK_OBJECT(tmp_class_creation_4__metaclass);
-            tmp_called_name_8 = tmp_class_creation_4__metaclass;
+            tmp_called_value_8 = tmp_class_creation_4__metaclass;
             tmp_tuple_element_8 = mod_consts[11];
-            tmp_args_name_8 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_8, 0, tmp_tuple_element_8);
-            tmp_tuple_element_8 = mod_consts[61];
-            PyTuple_SET_ITEM0(tmp_args_name_8, 1, tmp_tuple_element_8);
+            tmp_args_value_8 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 0, tmp_tuple_element_8);
+            tmp_tuple_element_8 = mod_consts[60];
+            PyTuple_SET_ITEM0(tmp_args_value_8, 1, tmp_tuple_element_8);
             tmp_tuple_element_8 = locals_PIL$ImageDraw2$$$class__4_Draw_54;
-            PyTuple_SET_ITEM0(tmp_args_name_8, 2, tmp_tuple_element_8);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 2, tmp_tuple_element_8);
             CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-            tmp_kwargs_name_8 = tmp_class_creation_4__class_decl_dict;
+            tmp_kwargs_value_8 = tmp_class_creation_4__class_decl_dict;
             frame_77d241fcdac1b165e5407d5412c7f589->m_frame.f_lineno = 54;
-            tmp_assign_source_33 = CALL_FUNCTION(tmp_called_name_8, tmp_args_name_8, tmp_kwargs_name_8);
-            Py_DECREF(tmp_args_name_8);
+            tmp_assign_source_33 = CALL_FUNCTION(tmp_called_value_8, tmp_args_value_8, tmp_kwargs_value_8);
+            Py_DECREF(tmp_args_value_8);
             if (tmp_assign_source_33 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -8058,9 +8006,11 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_4__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
+    Py_DECREF(tmp_class_creation_4__class_decl_dict);
     tmp_class_creation_4__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_4__metaclass);
+    CHECK_OBJECT(tmp_class_creation_4__metaclass);
+    Py_DECREF(tmp_class_creation_4__metaclass);
     tmp_class_creation_4__metaclass = NULL;
     Py_XDECREF(tmp_class_creation_4__prepared);
     tmp_class_creation_4__prepared = NULL;
@@ -8102,17 +8052,33 @@ PyObject *modulecode_PIL$ImageDraw2(PyObject *module, struct Nuitka_MetaPathBase
     goto module_exception_exit;
 
     frame_no_exception_5:;
-    Py_XDECREF(tmp_class_creation_4__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
+    Py_DECREF(tmp_class_creation_4__class_decl_dict);
     tmp_class_creation_4__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_4__metaclass);
+    CHECK_OBJECT(tmp_class_creation_4__metaclass);
+    Py_DECREF(tmp_class_creation_4__metaclass);
     tmp_class_creation_4__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_4__prepared);
     Py_DECREF(tmp_class_creation_4__prepared);
     tmp_class_creation_4__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("PIL.ImageDraw2", false);
+
     return module_PIL$ImageDraw2;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_PIL$ImageDraw2, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("PIL$ImageDraw2", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

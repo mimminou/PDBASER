@@ -1,5 +1,5 @@
 /* Generated code for Python module 'cffi.lock'
- * created by Nuitka version 0.6.17.3
+ * created by Nuitka version 0.7
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_cffi$lock;
 PyDictObject *moduledict_cffi$lock;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[17];
+static PyObject *mod_consts[14];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[17];
+static Py_hash_t mod_consts_hash[14];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 17; i++) {
+        for(int i = 0; i < 14; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_cffi$lock(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 17; i++) {
+    for(int i = 0; i < 14; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -81,8 +81,8 @@ void checkModuleConstants_cffi$lock(void) {
 static PyCodeObject *codeobj_cc50dd2a728a45c53c00b78c65307e22;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[15]); CHECK_OBJECT(module_filename_obj);
-    codeobj_cc50dd2a728a45c53c00b78c65307e22 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[16], NULL, NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[11]); CHECK_OBJECT(module_filename_obj);
+    codeobj_cc50dd2a728a45c53c00b78c65307e22 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[12], NULL, NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -259,63 +259,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_cffi$lock(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("cffi.lock");
+
+    // Store the module for future use.
     module_cffi$lock = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("cffi.lock: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("cffi.lock: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("cffi.lock: Calling createModuleConstants().\n");
+        PRINT_STRING("cffi.lock: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("cffi.lock: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("cffi.lock: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initcffi$lock\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_cffi$lock = MODULE_DICT(module_cffi$lock);
 
@@ -336,7 +340,7 @@ PyObject *modulecode_cffi$lock(PyObject *module, struct Nuitka_MetaPathBasedLoad
         UPDATE_STRING_DICT0(
             moduledict_cffi$lock,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[13]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_cffi$lock, (Nuitka_StringObject *)const_str_plain___name__);
@@ -386,7 +390,7 @@ PyObject *modulecode_cffi$lock(PyObject *module, struct Nuitka_MetaPathBasedLoad
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -439,18 +443,6 @@ PyObject *modulecode_cffi$lock(PyObject *module, struct Nuitka_MetaPathBasedLoad
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
-    PyObject *exception_preserved_type_1;
-    PyObject *exception_preserved_value_1;
-    PyTracebackObject *exception_preserved_tb_1;
-    int tmp_res;
-    PyObject *exception_keeper_type_2;
-    PyObject *exception_keeper_value_2;
-    PyTracebackObject *exception_keeper_tb_2;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
 
     // Module code.
     {
@@ -518,279 +510,6 @@ PyObject *modulecode_cffi$lock(PyObject *module, struct Nuitka_MetaPathBasedLoad
             goto frame_exception_exit_1;
         }
     }
-    {
-        PyObject *tmp_assign_source_3;
-        tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_3);
-    }
-    {
-        PyObject *tmp_assign_source_4;
-        frame_cc50dd2a728a45c53c00b78c65307e22->m_frame.f_lineno = 1;
-        tmp_assign_source_4 = IMPORT_HARD_SYS();
-        assert(!(tmp_assign_source_4 == NULL));
-        UPDATE_STRING_DICT0(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_4);
-    }
-    {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[6]);
-
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
-        }
-
-        assert(!(tmp_expression_name_1 == NULL));
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
-        if (tmp_compexpr_left_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 3;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_compexpr_right_1 = mod_consts[8];
-        tmp_condition_result_1 = RICH_COMPARE_LT_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 3;
-
-            goto frame_exception_exit_1;
-        }
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_1;
-        } else {
-            goto branch_no_1;
-        }
-        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
-    }
-    branch_yes_1:;
-    // Tried code:
-    {
-        PyObject *tmp_assign_source_5;
-        PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[9];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_cffi$lock;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[10];
-        tmp_level_name_1 = mod_consts[11];
-        frame_cc50dd2a728a45c53c00b78c65307e22->m_frame.f_lineno = 5;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
-        if (tmp_import_name_from_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 5;
-
-            goto try_except_handler_1;
-        }
-        if (PyModule_Check(tmp_import_name_from_1)) {
-            tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_1,
-                (PyObject *)moduledict_cffi$lock,
-                mod_consts[12],
-                mod_consts[11]
-            );
-        } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[12]);
-        }
-
-        Py_DECREF(tmp_import_name_from_1);
-        if (tmp_assign_source_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 5;
-
-            goto try_except_handler_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_5);
-    }
-    goto try_end_1;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    // Preserve existing published exception id 1.
-    GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
-
-    if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_cc50dd2a728a45c53c00b78c65307e22, exception_keeper_lineno_1);
-    } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_cc50dd2a728a45c53c00b78c65307e22, exception_keeper_lineno_1);
-    }
-
-    NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
-    ATTACH_TRACEBACK_TO_EXCEPTION_VALUE(exception_keeper_value_1, exception_keeper_tb_1);
-    PUBLISH_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
-    // Tried code:
-    {
-        bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_2 = PyExc_ImportError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
-        if (tmp_condition_result_2 != false) {
-            goto branch_yes_2;
-        } else {
-            goto branch_no_2;
-        }
-    }
-    branch_yes_2:;
-    {
-        PyObject *tmp_assign_source_6;
-        PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[13];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_cffi$lock;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[10];
-        tmp_level_name_2 = mod_consts[11];
-        frame_cc50dd2a728a45c53c00b78c65307e22->m_frame.f_lineno = 7;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
-        if (tmp_import_name_from_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 7;
-
-            goto try_except_handler_2;
-        }
-        if (PyModule_Check(tmp_import_name_from_2)) {
-            tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_2,
-                (PyObject *)moduledict_cffi$lock,
-                mod_consts[12],
-                mod_consts[11]
-            );
-        } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[12]);
-        }
-
-        Py_DECREF(tmp_import_name_from_2);
-        if (tmp_assign_source_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 7;
-
-            goto try_except_handler_2;
-        }
-        UPDATE_STRING_DICT1(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_6);
-    }
-    goto branch_end_2;
-    branch_no_2:;
-    tmp_result = RERAISE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-    if (unlikely(tmp_result == false)) {
-        exception_lineno = 4;
-    }
-
-    if (exception_tb && exception_tb->tb_frame == &frame_cc50dd2a728a45c53c00b78c65307e22->m_frame) frame_cc50dd2a728a45c53c00b78c65307e22->m_frame.f_lineno = exception_tb->tb_lineno;
-
-    goto try_except_handler_2;
-    branch_end_2:;
-    goto try_end_2;
-    // Exception handler code:
-    try_except_handler_2:;
-    exception_keeper_type_2 = exception_type;
-    exception_keeper_value_2 = exception_value;
-    exception_keeper_tb_2 = exception_tb;
-    exception_keeper_lineno_2 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    // Restore previous exception id 1.
-    SET_CURRENT_EXCEPTION(exception_preserved_type_1, exception_preserved_value_1, exception_preserved_tb_1);
-
-    // Re-raise.
-    exception_type = exception_keeper_type_2;
-    exception_value = exception_keeper_value_2;
-    exception_tb = exception_keeper_tb_2;
-    exception_lineno = exception_keeper_lineno_2;
-
-    goto frame_exception_exit_1;
-    // End of try:
-    try_end_2:;
-    // Restore previous exception id 1.
-    SET_CURRENT_EXCEPTION(exception_preserved_type_1, exception_preserved_value_1, exception_preserved_tb_1);
-
-    goto try_end_1;
-    NUITKA_CANNOT_GET_HERE("exception handler codes exits in all cases");
-    return NULL;
-    // End of try:
-    try_end_1:;
-    goto branch_end_1;
-    branch_no_1:;
-    {
-        PyObject *tmp_assign_source_7;
-        PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[14];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_cffi$lock;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[10];
-        tmp_level_name_3 = mod_consts[11];
-        frame_cc50dd2a728a45c53c00b78c65307e22->m_frame.f_lineno = 10;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
-        assert(!(tmp_import_name_from_3 == NULL));
-        if (PyModule_Check(tmp_import_name_from_3)) {
-            tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_3,
-                (PyObject *)moduledict_cffi$lock,
-                mod_consts[12],
-                mod_consts[11]
-            );
-        } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[12]);
-        }
-
-        Py_DECREF(tmp_import_name_from_3);
-        assert(!(tmp_assign_source_7 == NULL));
-        UPDATE_STRING_DICT1(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_7);
-    }
-    branch_end_1:;
 
     // Restore frame exception if necessary.
 #if 0
@@ -820,10 +539,65 @@ PyObject *modulecode_cffi$lock(PyObject *module, struct Nuitka_MetaPathBasedLoad
     goto module_exception_exit;
 
     frame_no_exception_1:;
+    {
+        PyObject *tmp_assign_source_3;
+        tmp_assign_source_3 = Py_None;
+        UPDATE_STRING_DICT0(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_3);
+    }
+    {
+        PyObject *tmp_assign_source_4;
+        tmp_assign_source_4 = IMPORT_HARD_SYS();
+        assert(!(tmp_assign_source_4 == NULL));
+        UPDATE_STRING_DICT0(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_4);
+    }
+    {
+        PyObject *tmp_assign_source_5;
+        PyObject *tmp_import_name_from_1;
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[7];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_cffi$lock;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[8];
+        tmp_level_value_1 = mod_consts[9];
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
+        assert(!(tmp_import_name_from_1 == NULL));
+        if (PyModule_Check(tmp_import_name_from_1)) {
+            tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_1,
+                (PyObject *)moduledict_cffi$lock,
+                mod_consts[10],
+                mod_consts[9]
+            );
+        } else {
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[10]);
+        }
+
+        Py_DECREF(tmp_import_name_from_1);
+        assert(!(tmp_assign_source_5 == NULL));
+        UPDATE_STRING_DICT1(moduledict_cffi$lock, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_5);
+    }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("cffi.lock", false);
 
     return module_cffi$lock;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_cffi$lock, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("cffi$lock", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

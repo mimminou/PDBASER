@@ -1,22 +1,19 @@
 import pathlib
 from Bio.PDB import PDBParser, PDBIO, Select
 from warnings import simplefilter
-import platform
-if platform.system()=="windows":
-    from obabel.openbabel import pybel
-else:
-    from openbabel import pybel
 from io import StringIO, BytesIO
 from shutil import copyfile
 from logging import debug
-from oasa import cairo_out, coords_generator, molfile
+from oasa.molfile import text_to_mol
+from oasa.coords_generator import coords_generator
+from oasa.cairo_out import cairo_out
 from gzip import open as gzOpen
+from openbabel import pybel
 
 
 ## THIS IS VERSION 1.8 OF THIS SCRIPT ...
 simplefilter("ignore")
 
-global Pic
 
 def is_het(residue):
     res = residue.id[0]
@@ -42,13 +39,12 @@ class ResidueSelect(Select):
 
 
 def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
-            saveDepictionPNG=False,saveDepictionSVG=False, add_hydrogens=False):  ## Main Function
+            saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False):  ## Main Function
     extractedResidues = []
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
     nonHetSelect = NonHetSelect()
-
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
@@ -66,7 +62,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
     pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
     if PDB_ID.startswith("pdb"):
-        PDB_Name =  PDB_ID[3:]
+        PDB_Name = PDB_ID[3:]
     else:
         PDB_Name = PDB_ID
 
@@ -92,10 +88,10 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     ligandExtractFormat = "smi"
 
                 filenameOfOutput = Output_DIR + "/" + PDB_ID + "/" + PDB_Name + f"_{Chain}_" + \
-                                       residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
+                                   residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
                 molecule = pybel.readstring("pdb", virtualFilePDBFormat.getvalue())
 
-                if (add_hydrogens):             # ADD HYDROGEN
+                if (add_hydrogens):  # ADD HYDROGEN
                     if not ligandExtractFormat == "smi":
                         molecule.addh()
 
@@ -104,39 +100,40 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
 
                 if ligandExtractFormat == "sdf":
                     virtualString.writelines(resname + "\n")
-                    virtualString.seek(0,0)
+                    virtualString.seek(0, 0)
                     content = virtualString.readlines()
-                    content.insert(2,"Extracted with PDBaser")   ## INSERT THIS IN 3rd Line
+                    content.insert(2, "Extracted with PDBaser")  ## INSERT THIS IN 3rd Line
                     VS = "".join(content)
                     virtualString = StringIO(VS)
 
                 elif ligandExtractFormat == "mol2":
-                    virtualString.seek(0,0)     ## SKIP THE FIRST LINE OF THE HEADER IN TRIPOS MOL2 FILES
+                    virtualString.seek(0, 0)  ## SKIP THE FIRST LINE OF THE HEADER IN TRIPOS MOL2 FILES
                     content = virtualString.readlines()
                     content.pop(1)
-                    content.insert(1,resname + "\n")
+                    content.insert(1, resname + "\n")
                     VS = "".join(content)
                     virtualString = StringIO(VS)
 
 
                 elif ligandExtractFormat == "smi":
-                    #todo FIX LIGAND NAME IN SMI FILE FORMAT
+                    # todo FIX LIGAND NAME IN SMI FILE FORMAT
                     pass
-                if(add_hydrogens):
-                    with open(filenameOfOutput +"_H."+ ligandExtractFormat,"w") as savedFile :  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
+                if (add_hydrogens):
+                    with open(filenameOfOutput + "_H." + ligandExtractFormat,
+                              "w") as savedFile:  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
                         savedFile.write(virtualString.getvalue())
                 else:
-                    with open(filenameOfOutput +"."+ ligandExtractFormat,"w") as savedFile :
+                    with open(filenameOfOutput + "." + ligandExtractFormat, "w") as savedFile:
                         savedFile.write(virtualString.getvalue())
 
                 # Check IF SAVE DEPICTION IS TRUE
                 if (saveDepictionPNG):
-                    with open(filenameOfOutput + ".png","wb") as imgPNG:
-                        imgPNG.write(drawImg(virtualFilePDBFormat,"png"))
+                    with open(filenameOfOutput + ".png", "wb") as imgPNG:
+                        imgPNG.write(drawImg(virtualFilePDBFormat, "png"))
 
                 if (saveDepictionSVG):
-                    with open(filenameOfOutput + ".svg","wt") as imgSVG:
-                        imgSVG.write(drawImg(virtualFilePDBFormat,"svg").decode("utf-8"))
+                    with open(filenameOfOutput + ".svg", "wt") as imgSVG:
+                        imgSVG.write(drawImg(virtualFilePDBFormat, "svg").decode("utf-8"))
 
                 virtualFilePDBFormat.close()
                 virtualString.close()
@@ -155,32 +152,33 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     return extractedResidues
 
 
-
-def drawImg(PDBString,format="png",getMW=False):    ## Used for generating coords and actual images
+def drawImg(PDBString, format="png", getMW=False):  ## Used for generating coords and actual images
     drawingFile = PDBString
     drawingFile.seek(0)
 
-    resMolecule = pybel.readstring("pdb",drawingFile.getvalue())  # Need to be converted to SDF / MOL for image depiction
+    resMolecule = pybel.readstring("pdb",
+                                   drawingFile.getvalue())  # Need to be converted to SDF / MOL for image depiction
     resMolecule.removeh()  # Removes H for better depiciton
     molMoleculeString = StringIO(resMolecule.write("mol"))  # write as smiles to the stringIO
-    mol = molfile.text_to_mol(molMoleculeString.getvalue())
-    coordGenerator = coords_generator.coords_generator(18)  ## bond length
-    coordGenerator.calculate_coords(mol, 18, 1)  ##Generate coordinates for depiction with bond length 18
-    mycairoinstance = cairo_out.cairo_out(scaling=4, margin=15, font_size=10, bond_width=2.0,
-                                          background_color=(0, 0, 0, 0), bond_second_line_shortening=0.08,
-                                          color_bonds=False, space_around_atom=2.0,
-                                          line_width=1.2,
-                                          show_hydrogens_on_hetero= True,
-                                          wedge_width= 5)  ## Instantiante depictor, arguments are down below on this file
+    mol = text_to_mol(molMoleculeString.getvalue())
+    coords_generator().calculate_coords(mol, 18, force=1)  ##Generate coordinates for depiction with bond length 18
+
+    mycairoinstance = cairo_out(scaling=4, margin=15, font_size=10, bond_width=2.0,
+                                background_color=(0, 0, 0, 0), bond_second_line_shortening=0.08,
+                                color_bonds=False, space_around_atom=2.0,
+                                line_width=1.2,
+                                show_hydrogens_on_hetero=True,
+                                wedge_width=5, align_coords=True)  ## Instantiante depictor, arguments are down below on this file
 
     virtualPicture = BytesIO()
-    mycairoinstance.mol_to_cairo(mol, virtualPicture, format=format)  ## Save image to virtual picture as bytes with the specified format
+    mycairoinstance.mol_to_cairo(mol, virtualPicture,
+                                 format=format)  ## Save image to virtual picture as bytes with the specified format
     molMoleculeString.close()
     picture = virtualPicture.getvalue()
     virtualPicture.close()
-    if(getMW==True):
+    if (getMW == True):
         mw = "{:.2f}".format(mol.weight)
-        return [picture,mw]
+        return [picture, mw]
     return picture
 
 
@@ -217,11 +215,12 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
                 virtualFile = StringIO()
                 io.save(virtualFile, resSelect)
                 try:
-                    picture, mw = drawImg(virtualFile, getMW=True) # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
+                    picture, mw = drawImg(virtualFile,
+                                          getMW=True)  # SAVE STRING IN THIS VARIABLE BEFORE CLOSING THE VIRTUAL FILE
                     if compressedFile:
                         Structure.close()
                     virtualFile.close()
-                    return picture,mw
+                    return picture, mw
 
                 except Exception as e:
                     print(e)
@@ -233,14 +232,12 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
         Structure.close()
     return picture
 
-
 ################################################################
 ################################################################
 ################################################################
 
 
 # TESTS AND OTHER META DATA :
-
 
 
 # input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
@@ -274,7 +271,6 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
 #     input("Finished, press any key to terminate . . .")
 # #
 # #
-
 
 
 # # TESTS, FOR INTERNAL USAGE ONLY, SPECIFIC TO MY PC, CHANGE THE VARIABLES AS YOU LIKE

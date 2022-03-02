@@ -8,7 +8,7 @@ extern PyObject *callPythonFunction(PyObject *func, PyObject *const *args, int c
 
 PyObject *CALL_FUNCTION_WITH_ARGS11(PyObject *called, PyObject *const *args) {
     CHECK_OBJECT(called);
-    CHECK_OBJECTS(args, 11);
+     CHECK_OBJECTS(args, 11); 
 
     if (Nuitka_Function_Check(called)) {
         if (unlikely(Py_EnterRecursiveCall((char *)" while calling a Python object"))) {
@@ -365,7 +365,7 @@ PyObject *CALL_FUNCTION_WITH_ARGS11(PyObject *called, PyObject *const *args) {
 }
 PyObject *CALL_FUNCTION_WITH_ARGS13(PyObject *called, PyObject *const *args) {
     CHECK_OBJECT(called);
-    CHECK_OBJECTS(args, 13);
+     CHECK_OBJECTS(args, 13); 
 
     if (Nuitka_Function_Check(called)) {
         if (unlikely(Py_EnterRecursiveCall((char *)" while calling a Python object"))) {
@@ -722,7 +722,7 @@ PyObject *CALL_FUNCTION_WITH_ARGS13(PyObject *called, PyObject *const *args) {
 }
 PyObject *CALL_FUNCTION_WITH_ARGS14(PyObject *called, PyObject *const *args) {
     CHECK_OBJECT(called);
-    CHECK_OBJECTS(args, 14);
+     CHECK_OBJECTS(args, 14); 
 
     if (Nuitka_Function_Check(called)) {
         if (unlikely(Py_EnterRecursiveCall((char *)" while calling a Python object"))) {
@@ -1079,7 +1079,7 @@ PyObject *CALL_FUNCTION_WITH_ARGS14(PyObject *called, PyObject *const *args) {
 }
 PyObject *CALL_FUNCTION_WITH_ARGS15(PyObject *called, PyObject *const *args) {
     CHECK_OBJECT(called);
-    CHECK_OBJECTS(args, 15);
+     CHECK_OBJECTS(args, 15); 
 
     if (Nuitka_Function_Check(called)) {
         if (unlikely(Py_EnterRecursiveCall((char *)" while calling a Python object"))) {
@@ -1438,7 +1438,7 @@ PyObject *CALL_METHOD_WITH_ARGS11(PyObject *source, PyObject *attr_name, PyObjec
     CHECK_OBJECT(source);
     CHECK_OBJECT(attr_name);
 
-    CHECK_OBJECTS(args, 11);
+     CHECK_OBJECTS(args, 11); 
 
     PyTypeObject *type = Py_TYPE(source);
 
@@ -1717,7 +1717,7 @@ PyObject *CALL_METHOD_WITH_ARGS13(PyObject *source, PyObject *attr_name, PyObjec
     CHECK_OBJECT(source);
     CHECK_OBJECT(attr_name);
 
-    CHECK_OBJECTS(args, 13);
+     CHECK_OBJECTS(args, 13); 
 
     PyTypeObject *type = Py_TYPE(source);
 
