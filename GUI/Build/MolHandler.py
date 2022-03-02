@@ -292,7 +292,7 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputPath, 
         fileName = f"{PDB_Name}_Chain_{Chain}_BINDING_SITE_W"
         output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
     pdbio.save(output_filename, bss)
-    return fileName
+    return "\n Binding Site Generated"
 
 
 
