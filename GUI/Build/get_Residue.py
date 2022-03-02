@@ -51,7 +51,6 @@ def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
     pdb = pdbParser.get_structure(PDB_FILE,Structure)
     for model in pdb:
         for res in model[Chain]:
-
             if (not is_het(res)):
                 continue
             if "H_" in res.id[0]:

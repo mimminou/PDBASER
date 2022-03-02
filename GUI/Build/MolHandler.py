@@ -9,8 +9,8 @@ from oasa.coords_generator import coords_generator
 from oasa.cairo_out import cairo_out
 from gzip import open as gzOpen
 from openbabel import pybel
-from get_Residue import __getResList
-from numpy import unique, array
+# from get_Residue import __getResList
+
 
 ## THIS IS VERSION 1.9 OF THIS SCRIPT ...
 simplefilter("ignore")
@@ -20,18 +20,16 @@ def is_het(residue):
     res = residue.id[0]
     return res not in (" ", "W")
 
-def is_water(residue):
-    res = residue.id[0]
-    return res not in ("W")
 
-def getHeteroResidueList():
-    return __getResList()
+def SelectWater(residue):
+    res = residue.id[0]
+    return res in ("W")
 
 
 class BINDING_SITE_SELECT(Select):
     def __init__(self, binding_site_residues, keep_waters=True):
         self.binding_site_residues = binding_site_residues
-        self.keep_waters= keep_waters
+        self.keep_waters = keep_waters
 
     def accept_residue(self, residue):
         if(self.keep_waters):
@@ -39,7 +37,7 @@ class BINDING_SITE_SELECT(Select):
                 return 1
 
         else:
-            if residue in self.binding_site_residues and is_water(residue):
+            if residue in self.binding_site_residues and not SelectWater(residue):
                 return 1
 
 
@@ -49,9 +47,8 @@ class NonHetSelect(Select):
 
 
 class KeepWaterSelect(Select):
-    __ignoredResList = getHeteroResidueList()
     def accept_residue(self, residue):
-        return 1 if residue.id[0] not in self.__ignoredResList else 0
+        return 1 if not is_het(residue) else 0
 
 
 class ResidueSelect(Select):
@@ -75,6 +72,12 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     compressedFile = False
     nonHetSelect = NonHetSelect()
     keepWaterSelect = KeepWaterSelect()
+    try:
+        binding_site_radius = int(binding_site_radius)
+    except Exception as w:
+        print("Warning, No radius has been selected, defaulting to 7 Angstroms")
+        binding_site_radius = 7
+
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
         zippedFile = gzOpen(input_DIR + "/" + PDB_FILE, "rt")
@@ -154,7 +157,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     with open(filenameOfOutput + "." + ligandExtractFormat, "w") as savedFile:
                         savedFile.write(virtualString.getvalue())
 
-                if (binding_site_radius != 0):                 # THIS GENERATES THE BINDING SITE
+                if (binding_site_radius > 0):                 # THIS GENERATES THE BINDING SITE
                     extractedResidues.append(generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR, residue, binding_site_radius, keep_waters))
 
                 # Check IF SAVE DEPICTION IS TRUE
@@ -271,11 +274,6 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
 
 # generates binding site and extracts it
 def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputPath, selectedResidue, radius = 7, KeepWaters = True):
-    if (len(radius)==0):
-        radius = 7
-    elif radius == 0 :
-        radius = radius + 1
-    radius = int(radius)
     Binding_Site = set()   # Create a set, much faster than List since order doesn't really matter
     residueAtoms = Selection.unfold_entities(selectedResidue, "A")
     querySet = Selection.unfold_entities(pdb_STRCUT, "A")
@@ -284,12 +282,12 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputPath, 
         Binding_Site.update(ns.search(atom.coord, radius, "R"))
 
     if (KeepWaters):
-        bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = False)
-        fileName = f"{PDB_Name}_Chain_{Chain}_BINDING_SITE"
+        bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = True)
+        fileName = f"{PDB_Name}_Chain_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BINDING_SITE_W"
         output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
     else:
-        bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = True)
-        fileName = f"{PDB_Name}_Chain_{Chain}_BINDING_SITE_W"
+        bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = False)
+        fileName = f"{PDB_Name}_Chain_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BINDING_SITE"
         output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
     pdbio.save(output_filename, bss)
     return "\nBinding Site Generated"

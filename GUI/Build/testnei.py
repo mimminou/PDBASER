@@ -40,6 +40,8 @@ atom_distance = 6.0
 binding_site = []
 for residue in target_res:
     if residue.get_resname() == "E20":
+        print(residue.get_resname())
+        print(residue.id[1])
         atoms = Selection.unfold_entities(residue, "A")
         querySet = Selection.unfold_entities(structure, "A")
         ns = NeighborSearch(querySet)

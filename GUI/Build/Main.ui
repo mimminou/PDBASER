@@ -508,7 +508,7 @@
         </child>
         <child>
           <object class="ttk.Label" id="VersionLabel">
-            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.8)</property>
+            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.9)</property>
             <layout manager="grid">
               <property name="column">4</property>
               <property name="columnspan">1</property>
@@ -707,10 +707,12 @@
         </child>
         <child>
           <object class="ttk.Label" id="label12">
-            <property name="text" translatable="yes">Keep water</property>
+            <property name="text" translatable="yes">Keep water in Chain</property>
             <layout manager="grid">
-              <property name="column">4</property>
+              <property name="column">5</property>
+              <property name="columnspan">1</property>
               <property name="row">1</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>
@@ -720,7 +722,8 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:KeepWaters</property>
             <layout manager="grid">
-              <property name="column">4</property>
+              <property name="column">5</property>
+              <property name="columnspan">1</property>
               <property name="row">1</property>
               <property name="sticky">e</property>
             </layout>
@@ -732,7 +735,7 @@
             <property name="takefocus">false</property>
             <property name="variable">boolean:BSG</property>
             <layout manager="grid">
-              <property name="column">4</property>
+              <property name="column">5</property>
               <property name="row">2</property>
               <property name="sticky">e</property>
             </layout>
@@ -740,23 +743,27 @@
         </child>
         <child>
           <object class="ttk.Label" id="label13">
-            <property name="text" translatable="yes">Binding Site</property>
+            <property name="text" translatable="yes">Generate Binding Site</property>
             <layout manager="grid">
-              <property name="column">4</property>
+              <property name="column">5</property>
               <property name="row">2</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>
         <child>
           <object class="ttk.Spinbox" id="spinbox1">
-            <property name="from_">0</property>
+            <property name="from_">1</property>
             <property name="increment">1</property>
             <property name="state">readonly</property>
             <property name="to">10</property>
+            <property name="values">1 2 3 4 5 6 7 8 9 10</property>
             <layout manager="grid">
               <property name="column">5</property>
-              <property name="row">2</property>
-              <property name="sticky">e</property>
+              <property name="columnspan">1</property>
+              <property name="row">3</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">w</property>
             </layout>
           </object>
         </child>

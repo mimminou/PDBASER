@@ -400,7 +400,7 @@ class MainApp:
             self.ExtractButton.config(state="disabled")
             for index in self.ListBox_Residues.curselection():
                 selected_residues.append(self.ListBox_Residues.get(index))
-            if self.checkboxGenerateBindingSite.state():
+            if self.checkboxGenerateBindingSite.state():        # check if checkboxGenerateBindingSite is true
                 extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
                                                            self.PDB_output_DIR.cget("path"),
                                                            self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
