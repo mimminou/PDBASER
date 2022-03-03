@@ -19,7 +19,7 @@ This tool is perfect for RMSD reliability test preparation, where a large number
 
 #### Windows
 
-For Windows users, PDBaser has a precompiled version, it can be found in the releases category, and can be installed on windows 7 SP1 / 8 / 8.1 / 10 and only requires Microsoft visual C++ 2015 x86.
+For Windows users, PDBaser has a precompiled version, it can be found in the releases category, and can be installed on windows 7 SP1 / 8 / 8.1 / 10 / 11 and only requires Microsoft visual C++ 2015 x86, which is embedded in the installation. ( For Windows 7 Users : Service Pack 1 with update KB3063858 Must be installed in order for PDBaser to run )
 
 #### Linux / MacOS and other Unix / Unix-like systems
 
@@ -29,9 +29,9 @@ There are 2 possible ways to run PDBaser in this case :
 1. **Using Wine**
 
 
-    The quickest way to get PDBaser running on those systems is by using Wine (Tested on Wine 6.0.1, works only on a 64bit prefix for some reason),
+    The quickest way to get PDBaser running on those systems is by using Wine (Tested on Wine 6.0.1 +, works only on a 64bit prefix for some reason),
     
-    - 1 - Download and install the windows msi package and install it.
+    - 1 - Download and install the windows setup package and install it.
     - 2 - open a terminal window where you installed PDBaser and run `wine PDBaser_GUI.exe`.
 
 
@@ -40,12 +40,12 @@ There are 2 possible ways to run PDBaser in this case :
 
     PDBaser is not OS dependant, and will probably run on any operating system provided the environment is correctly setup. However, since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
 
-    - 1 - First, you need a working python 3.6+ environment with support for Tkinter and PIL.
+    - 1 - First, you need a working python 3.6+ environment with support for Tkinter and PILLOW.
     - 2 - Install BioPython and Pygubu from pip (`pip install biopython` / `pip install pygubu`)
     - 3 - You need to build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/dev/Installation/install.html) ), and then install it's python library from pip (`pip install openbabel==3.1.1`).
-    - 4 - You also need the OASA library, which can be installed from pip ( package name : oasa3 )
+    - 4 - You also need the OASA library, which can be installed from pip ( `pip install oasa3` )
 
-    If everything is setup correctly, running GUI/Build/PDBaser_GUI.py from terminal should work.
+    If everything is setup correctly, running GUI/Build/PDBaser_GUI.py from terminal should work, if not, email me at abdz.amine@gmail.com or open an issue in the repository.
 
 # Features
 
@@ -54,8 +54,10 @@ There are 2 possible ways to run PDBaser in this case :
 - 2D Depiction and PNG/SVG output.
 - Outputs residues in most popular formats (pdb, sdf, mol2, smiles).
 - Multiple residue extraction at once is possible, chain only extraction with no residues is also possible.
-- Hydrogen generation for extracted residues is available (Except for SMILES format).
-- Support for downloading proteins from the PDB directly.
+- Binding Site Extraction is available for up to 10Å in radius from a selected residue.
+- Water extraction in chains and binding site is available.
+- Hydrogen generation for extracted residues is available (Only for ligands).
+- Support for downloading proteins from the PDB directly (files are saved in input directory).
 
 ![Screenshot](GUI/pdbaser.PNG?raw=true)
 
@@ -64,7 +66,7 @@ There are 2 possible ways to run PDBaser in this case :
 - No metadata extraction (Header, comments etc ...), only atom 3D poses with the molecule code in the PDB.
 - Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in pdb and ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
 - there is a known bug where extracting a ligand in SMILES format does not generate a name for it, i'm gonna fix it as soon as i finish some work on my studies.
-
+- Hydrogen generation is only available for residues and ligands, this is a decision i made because most docking software have their own algorithm for hydrogen generation and optimization for proteins, which can vary by multiple factors.
   
 
 # Downloads
