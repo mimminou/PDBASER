@@ -8,7 +8,8 @@ PDBaser does this for you !
 
 # What does it do ?
 
-PDBaser reads raw .pdb and .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and removes water molecules, and then saves everything in a directory named as the original input filename.
+PDBaser reads raw .pdb and .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and (optionally) removes water molecules, and then saves everything in a directory named as the original input filename.
+You can also use it to generate and extract a binding site provided there is a ligand in a cavity in the protein file.
 
 # Who is this for ?
 
