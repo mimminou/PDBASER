@@ -15,11 +15,11 @@ def get_PDB_Chains(PDB_FILE, input_DIR):
         temp_file = zippedFile.read()
         zippedFile.close()
         Structure = StringIO(temp_file)
-    pdb = PDBParser().get_structure(PDB_FILE,Structure)
-    for item in pdb:
-        for item2 in item:
-            if(str(item2.get_id()).strip()!=""):## GET CHAINS NAMES
-                chain_Name.append(item2.get_id())
+    pdb = PDBParser().get_structure(PDB_FILE, Structure)
+    for model in pdb:
+        for chain in model:
+            if(str(chain.get_id()).strip()!=""):## GET CHAINS NAMES
+                chain_Name.append(chain.get_id())
     if compressedFile:
         Structure.close()
     return chain_Name

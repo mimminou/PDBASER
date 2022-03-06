@@ -1,6 +1,6 @@
+import os
 import pathlib
 from Bio.PDB import PDBParser, PDBIO, Select, NeighborSearch, Selection
-from warnings import simplefilter
 from io import StringIO, BytesIO
 from shutil import copyfile
 from logging import debug
@@ -8,12 +8,41 @@ from oasa.molfile import text_to_mol
 from oasa.coords_generator import coords_generator
 from oasa.cairo_out import cairo_out
 from gzip import open as gzOpen
-from openbabel import pybel
-# from get_Residue import __getResList
+from platform import system
+from os import environ, path
+
+
+    ##This will check Log sizes and delete exceeding ones ( for end users, they can send logs to me to hopefully find bugs )
+
+try:
+    if (path.getsize("Slog.txt")/1024.0 > 500):
+        os.remove("Slog.txt")
+    if (path.getsize("errors.txt")/1024.0 > 500):
+        os.remove("errors.txt")
+except Exception:
+    pass
+
+
+ ## Check if we are running on windows and are running compiled version :
+if system().lower() == "windows" and "__compiled__" in globals():
+    print("running windows and compiled")
+    if "BABEL_DATADIR" in environ:
+        del environ["BABEL_DATADIR"]  ## THIS IS NECESSARY TO PREVENT ENVIRONMENT CONFLICT WITH ANY INSTALLED OPENBABEL
+    from obabel.openbabel import pybel  # This is the import for compiled version, i manually copy /obabel_pyXX/openbabel the dir of output after compiling
+
+elif system().lower() == "windows":     # this will know if i'm running on windows and interpreted or not
+    if "BABEL_DATADIR" in environ:
+        del environ["BABEL_DATADIR"]  ## THIS IS NECESSARY TO PREVENT ENVIRONMENT CONFLICT WITH ANY INSTALLED OPENBABEL IN WINDOWS
+    from openbabel import pybel
+
+else:
+    print("Not running windows or not compiled")
+    from openbabel import pybel
+
 
 
 ## THIS IS VERSION 1.9 OF THIS SCRIPT ...
-simplefilter("ignore")
+
 
 
 def is_het(residue):
