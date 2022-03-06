@@ -1,4 +1,3 @@
-import os
 import pathlib
 from Bio.PDB import PDBParser, PDBIO, Select, NeighborSearch, Selection
 from io import StringIO, BytesIO
@@ -9,18 +8,8 @@ from oasa.coords_generator import coords_generator
 from oasa.cairo_out import cairo_out
 from gzip import open as gzOpen
 from platform import system
-from os import environ, path
+from os import environ
 
-
-    ##This will check Log sizes and delete exceeding ones ( for end users, they can send logs to me to hopefully find bugs )
-
-try:
-    if (path.getsize("Slog.txt")/1024.0 > 500):
-        os.remove("Slog.txt")
-    if (path.getsize("errors.txt")/1024.0 > 500):
-        os.remove("errors.txt")
-except Exception:
-    pass
 
 
  ## Check if we are running on windows and are running compiled version :
@@ -117,11 +106,15 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     if ligandExtractFormat is None:
         ligandExtractFormat = "pdb"
     pdbParser = PDBParser()
-    pdb = pdbParser.get_structure(PDB_FILE, Structure)
-    io = PDBIO()
-    io.set_structure(pdb)
-    PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
-    pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
+    try:
+        pdb = pdbParser.get_structure(PDB_FILE, Structure)
+        io = PDBIO()
+        io.set_structure(pdb)
+        PDB_ID = PDB_FILE.replace(".pdb", "").replace(".ent", "").replace(".gz", "")
+        pathlib.Path(Output_DIR + "/" + PDB_ID).mkdir(parents=True, exist_ok=True)
+    except Exception as E:
+        print(E)
+        return ["ERROR, FILE NOT FOUND"]
     if PDB_ID.startswith("pdb"):            ##? To Handle PDB files downloaded from the RCSPDB, if you name your files manually starting with "pdb" this can break stuff
         PDB_Name = PDB_ID[3:]
     else:
