@@ -3,8 +3,6 @@ from gzip import open as gzOpen
 from io import StringIO
 
 
-
-
 __Res_List = []  # Internal usage, used for caching values
 
 

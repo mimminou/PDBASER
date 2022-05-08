@@ -35,7 +35,7 @@
         </containerlayout>
         <child>
           <object class="ttk.Label" id="label1">
-            <property name="font">{Arial} 14 {}</property>
+            <property name="font">{Open Sans Semibold} 14 {}</property>
             <property name="text" translatable="yes">PDB File</property>
             <layout manager="grid">
               <property name="column">0</property>
@@ -104,7 +104,7 @@
         </child>
         <child>
           <object class="ttk.Label" id="label2">
-            <property name="font">{Arial} 14 {}</property>
+            <property name="font">{Open Sans Semibold} 14 {}</property>
             <property name="text" translatable="yes">Chain</property>
             <layout manager="grid">
               <property name="column">4</property>
@@ -173,7 +173,7 @@
         </child>
         <child>
           <object class="ttk.Label" id="label3">
-            <property name="font">{Arial} 14 {}</property>
+            <property name="font">{Open Sans Semibold} 14 {}</property>
             <property name="text" translatable="yes">Residue</property>
             <layout manager="grid">
               <property name="column">8</property>
@@ -277,6 +277,16 @@
             </layout>
           </object>
         </child>
+        <child>
+          <object class="ttk.Label" id="label8">
+            <property name="font">{Open Sans Semibold} 14 {}</property>
+            <property name="text" translatable="yes">Depiction</property>
+            <layout manager="grid">
+              <property name="column">10</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
       </object>
     </child>
     <child>
@@ -287,7 +297,6 @@
         <layout manager="grid">
           <property name="column">0</property>
           <property name="columnspan">1</property>
-          <property name="ipady">5</property>
           <property name="padx">10</property>
           <property name="pady">10</property>
           <property name="row">16</property>
@@ -299,16 +308,441 @@
           <property type="row" id="0" name="weight">1</property>
         </containerlayout>
         <child>
+          <object class="ttk.Label" id="label9">
+            <property name="text" translatable="yes">Get from PDB
+Separate PDB codes by a space 
+Downloaded files will be saved in Input directory</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="columnspan">1</property>
+              <property name="row">0</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">nw</property>
+            </layout>
+            <containerlayout manager="grid">
+              <property name="propagate">False</property>
+            </containerlayout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="DownloadButton">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Download</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">3</property>
+              <property name="ipadx">15</property>
+              <property name="padx">10</property>
+              <property name="row">2</property>
+              <property name="rowspan">1</property>
+            </layout>
+            <containerlayout manager="grid">
+              <property name="propagate">False</property>
+            </containerlayout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator1">
+            <property name="orient">vertical</property>
+            <layout manager="grid">
+              <property name="column">3</property>
+              <property name="columnspan">1</property>
+              <property name="ipadx">0</property>
+              <property name="padx">10</property>
+              <property name="row">0</property>
+              <property name="rowspan">4</property>
+              <property name="sticky">nsw</property>
+            </layout>
+            <containerlayout manager="grid">
+              <property name="propagate">False</property>
+            </containerlayout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Separator" id="separator2">
+            <property name="orient">horizontal</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="columnspan">10</property>
+              <property name="ipady">0</property>
+              <property name="pady">10</property>
+              <property name="row">6</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">sew</property>
+            </layout>
+            <containerlayout manager="grid">
+              <property name="propagate">False</property>
+            </containerlayout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Text" id="getFromFTP">
+            <property name="height">5</property>
+            <property name="width">0</property>
+            <property name="wrap">word</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="columnspan">1</property>
+              <property name="row">1</property>
+              <property name="rowspan">1</property>
+              <property name="sticky">nsew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Labelframe" id="LIG_FRAME">
+            <property name="borderwidth">0</property>
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="text" translatable="yes">Ligand</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">4</property>
+              <property name="columnspan">3</property>
+              <property name="padx">5</property>
+              <property name="row">0</property>
+              <property name="rowspan">5</property>
+              <property name="sticky">nsew</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="label6">
+                <property name="text" translatable="yes">Output format</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Combobox" id="format_combobox">
+                <property name="exportselection">false</property>
+                <property name="state">readonly</property>
+                <property name="takefocus">false</property>
+                <property name="values">pdb mol2 sdf smi</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="format_combobox_callback" add="" />
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="row">0</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label5">
+                <property name="text" translatable="yes">Save depiction as PNG</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">1</property>
+                  <property name="padx">0</property>
+                  <property name="row">1</property>
+                  <property name="rowspan">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="PNG_checkbox">
+                <property name="state">normal</property>
+                <property name="takefocus">false</property>
+                <property name="variable">boolean:SaveDepictionPNG</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="columnspan">1</property>
+                  <property name="ipadx">0</property>
+                  <property name="row">1</property>
+                  <property name="rowspan">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label4">
+                <property name="text" translatable="yes">Save depiction as SVG</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">1</property>
+                  <property name="padx">0</property>
+                  <property name="row">2</property>
+                  <property name="rowspan">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="SVG_checkbox">
+                <property name="state">normal</property>
+                <property name="takefocus">false</property>
+                <property name="variable">boolean:SaveDepictionSVG</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="columnspan">1</property>
+                  <property name="ipadx">0</property>
+                  <property name="padx">0</property>
+                  <property name="row">2</property>
+                  <property name="rowspan">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label7">
+                <property name="text" translatable="yes">Protonate (add H)</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">1</property>
+                  <property name="padx">0</property>
+                  <property name="row">3</property>
+                  <property name="rowspan">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="addH_ligand_checkbox">
+                <property name="state">normal</property>
+                <property name="takefocus">false</property>
+                <property name="variable">boolean:addHydrogens</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="columnspan">1</property>
+                  <property name="ipadx">0</property>
+                  <property name="padx">0</property>
+                  <property name="row">3</property>
+                  <property name="rowspan">1</property>
+                  <property name="sticky">sw</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Labelframe" id="PROT_FRAME">
+            <property name="borderwidth">0</property>
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="text" translatable="yes">Protein / Chain</property>
+            <property name="width">200</property>
+            <layout manager="grid">
+              <property name="column">7</property>
+              <property name="columnspan">3</property>
+              <property name="padx">5</property>
+              <property name="row">0</property>
+              <property name="rowspan">5</property>
+              <property name="sticky">nsew</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="label11">
+                <property name="text" translatable="yes">Save full protein</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="save_full_prot_checkbox">
+                <property name="state">normal</property>
+                <property name="takefocus">false</property>
+                <property name="variable">boolean:ExtractFullProtein</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+                <containerlayout manager="grid">
+                  <property name="propagate">False</property>
+                </containerlayout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label12">
+                <property name="text" translatable="yes">Keep water molecules</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">1</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="keep_water_checkbox">
+                <property name="state">normal</property>
+                <property name="takefocus">false</property>
+                <property name="variable">boolean:KeepWaters</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="columnspan">1</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label10">
+                <property name="text" translatable="yes">Protonate Chain</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">2</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="protonate_chain_checkbox">
+                <property name="command" type="command" cbtype="simple">setProtonate_chain_state</property>
+                <property name="state">normal</property>
+                <property name="takefocus">false</property>
+                <property name="variable">boolean:protonate_chain</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="row">2</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label13">
+                <property name="text" translatable="yes">Generate binding site (Å)</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Combobox" id="BSG_combobox">
+                <property name="exportselection">false</property>
+                <property name="state">readonly</property>
+                <property name="takefocus">false</property>
+                <property name="values">"No" "1 Å" "2 Å" "3 Å" "4 Å" "5 Å" "6 Å" "7 Å" "8 Å" "9 Å" "10 Å"</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="BSGCallback" add="" />
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label14">
+                <property name="text" translatable="yes">Protonate binding site</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="protonate_BS_checkbox">
+                <property name="state">disabled</property>
+                <property name="takefocus">false</property>
+                <property name="variable">boolean:protonate_BS</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label15">
+                <property name="text" translatable="yes">Protonation force field</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">5</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Combobox" id="forcefield_combobox">
+                <property name="exportselection">false</property>
+                <property name="state">disabled</property>
+                <property name="values">"PARSE (default)" "AMBER" "CHARMM"</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="force_field_callback" add="" />
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="row">5</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label16">
+                <property name="text" translatable="yes">Protonation pH</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="pady">2</property>
+                  <property name="row">6</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Combobox" id="ph_combobox">
+                <property name="exportselection">false</property>
+                <property name="state">disabled</property>
+                <property name="values">1 2 3 4 5 6 "7 (default)" 8 9 10 11 12 13 14</property>
+                <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="pH_callback" add="" />
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="pady">2</property>
+                  <property name="row">6</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="frame2">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipady">10</property>
+          <property name="pady">0</property>
+          <property name="row">17</property>
+          <property name="sticky">nsew</property>
+        </layout>
+        <child>
           <object class="tk.Label" id="Input_Dir_Label">
             <property name="relief">flat</property>
             <property name="text" translatable="yes">Input directory</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">1</property>
-              <property name="padx">10</property>
-              <property name="row">6</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
+              <property name="padx">5</property>
+              <property name="row">0</property>
             </layout>
             <containerlayout manager="grid">
               <property name="propagate">False</property>
@@ -323,10 +757,9 @@
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="input_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">1</property>
-              <property name="ipadx">80</property>
-              <property name="row">6</property>
-              <property name="rowspan">1</property>
+              <property name="columnspan">4</property>
+              <property name="ipadx">150</property>
+              <property name="row">0</property>
               <property name="sticky">nsew</property>
             </layout>
           </object>
@@ -337,11 +770,8 @@
             <property name="text" translatable="yes">Output directory</property>
             <layout manager="grid">
               <property name="column">0</property>
-              <property name="columnspan">1</property>
-              <property name="padx">10</property>
-              <property name="row">7</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
+              <property name="padx">5</property>
+              <property name="row">1</property>
             </layout>
             <containerlayout manager="grid">
               <property name="propagate">False</property>
@@ -356,10 +786,10 @@
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="output_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">1</property>
-              <property name="ipadx">80</property>
-              <property name="row">7</property>
-              <property name="rowspan">1</property>
+              <property name="columnspan">4</property>
+              <property name="ipadx">150</property>
+              <property name="padx">0</property>
+              <property name="row">1</property>
               <property name="sticky">nsew</property>
             </layout>
           </object>
@@ -369,118 +799,13 @@
             <property name="takefocus">false</property>
             <property name="text" translatable="yes">Extract</property>
             <layout manager="grid">
-              <property name="column">3</property>
+              <property name="column">5</property>
               <property name="columnspan">1</property>
-              <property name="padx">10</property>
-              <property name="row">6</property>
+              <property name="padx">5</property>
+              <property name="pady">0</property>
+              <property name="row">0</property>
               <property name="rowspan">2</property>
               <property name="sticky">nsew</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label4">
-            <property name="text" translatable="yes">Save depiction SVG</property>
-            <layout manager="grid">
-              <property name="column">3</property>
-              <property name="columnspan">1</property>
-              <property name="padx">0</property>
-              <property name="row">2</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label5">
-            <property name="text" translatable="yes">Save depiction PNG</property>
-            <layout manager="grid">
-              <property name="column">3</property>
-              <property name="columnspan">1</property>
-              <property name="padx">0</property>
-              <property name="row">1</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Checkbutton" id="checkbutton1">
-            <property name="state">normal</property>
-            <property name="takefocus">false</property>
-            <property name="variable">boolean:SaveDepictionPNG</property>
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">2</property>
-              <property name="ipadx">0</property>
-              <property name="padx">10</property>
-              <property name="row">1</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Checkbutton" id="checkbutton2">
-            <property name="state">normal</property>
-            <property name="takefocus">false</property>
-            <property name="variable">boolean:SaveDepictionSVG</property>
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">1</property>
-              <property name="ipadx">0</property>
-              <property name="padx">10</property>
-              <property name="row">2</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Combobox" id="formatComboBox">
-            <property name="exportselection">false</property>
-            <property name="state">readonly</property>
-            <property name="takefocus">false</property>
-            <property name="values">pdb mol2 sdf smi</property>
-            <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="ComboxSelected" add="" />
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">1</property>
-              <property name="padx">0</property>
-              <property name="row">0</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label6">
-            <property name="text" translatable="yes">Output format</property>
-            <layout manager="grid">
-              <property name="column">3</property>
-              <property name="columnspan">1</property>
-              <property name="padx">0</property>
-              <property name="row">0</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
             </layout>
             <containerlayout manager="grid">
               <property name="propagate">False</property>
@@ -495,11 +820,10 @@
             <property name="value">0</property>
             <property name="variable">string:barVar</property>
             <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">1</property>
-              <property name="row">6</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">nsew</property>
+              <property name="column">8</property>
+              <property name="padx">10</property>
+              <property name="row">0</property>
+              <property name="sticky">ew</property>
             </layout>
             <containerlayout manager="grid">
               <property name="propagate">False</property>
@@ -510,260 +834,9 @@
           <object class="ttk.Label" id="VersionLabel">
             <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.9)</property>
             <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">1</property>
-              <property name="row">7</property>
-              <property name="rowspan">2</property>
-              <property name="sticky">nsew</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label7">
-            <property name="text" translatable="yes">Add hydrogens</property>
-            <layout manager="grid">
-              <property name="column">3</property>
-              <property name="columnspan">1</property>
-              <property name="padx">0</property>
-              <property name="row">3</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label9">
-            <property name="text" translatable="yes">Get from PDB</property>
-            <layout manager="grid">
-              <property name="column">0</property>
-              <property name="columnspan">1</property>
-              <property name="row">0</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">nw</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Entry" id="getFromFTP">
-            <property name="exportselection">false</property>
-            <property name="state">normal</property>
-            <property name="textvariable">string:getFromPDBList</property>
-            <property name="validate">none</property>
-            <layout manager="grid">
-              <property name="column">1</property>
-              <property name="columnspan">1</property>
-              <property name="ipadx">30</property>
-              <property name="padx">5</property>
-              <property name="row">0</property>
-              <property name="rowspan">3</property>
-              <property name="sticky">nw</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Separator" id="separator1">
-            <property name="orient">vertical</property>
-            <layout manager="grid">
-              <property name="column">1</property>
-              <property name="columnspan">1</property>
-              <property name="ipadx">0</property>
-              <property name="padx">0</property>
-              <property name="row">0</property>
-              <property name="rowspan">5</property>
-              <property name="sticky">nse</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Separator" id="separator2">
-            <property name="orient">horizontal</property>
-            <layout manager="grid">
-              <property name="column">0</property>
-              <property name="columnspan">6</property>
-              <property name="ipady">5</property>
-              <property name="pady">5</property>
-              <property name="row">5</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">new</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Button" id="DownloadButton">
-            <property name="takefocus">false</property>
-            <property name="text" translatable="yes">Download</property>
-            <layout manager="grid">
-              <property name="column">1</property>
-              <property name="columnspan">1</property>
+              <property name="column">8</property>
               <property name="padx">10</property>
-              <property name="row">0</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">ne</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label8">
-            <property name="justify">left</property>
-            <property name="text" translatable="yes">Separate PDB codes by a space </property>
-            <property name="wraplength">0</property>
-            <layout manager="grid">
-              <property name="column">0</property>
-              <property name="columnspan">3</property>
               <property name="row">1</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label10">
-            <property name="text" translatable="yes">Downloaded files will be saved in Input directory</property>
-            <layout manager="grid">
-              <property name="column">0</property>
-              <property name="columnspan">3</property>
-              <property name="row">2</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label11">
-            <property name="text" translatable="yes">Save full protein</property>
-            <layout manager="grid">
-              <property name="column">3</property>
-              <property name="columnspan">1</property>
-              <property name="padx">0</property>
-              <property name="row">4</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Checkbutton" id="checkbutton4">
-            <property name="state">normal</property>
-            <property name="takefocus">false</property>
-            <property name="variable">boolean:ExtractFullProtein</property>
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">1</property>
-              <property name="padx">10</property>
-              <property name="row">4</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Checkbutton" id="checkbutton3">
-            <property name="state">normal</property>
-            <property name="takefocus">false</property>
-            <property name="variable">boolean:addHydrogens</property>
-            <layout manager="grid">
-              <property name="column">4</property>
-              <property name="columnspan">1</property>
-              <property name="ipadx">0</property>
-              <property name="padx">10</property>
-              <property name="row">3</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
-            </layout>
-            <containerlayout manager="grid">
-              <property name="propagate">False</property>
-            </containerlayout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label12">
-            <property name="text" translatable="yes">Keep water in Chain</property>
-            <layout manager="grid">
-              <property name="column">5</property>
-              <property name="columnspan">1</property>
-              <property name="row">1</property>
-              <property name="sticky">w</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Checkbutton" id="checkbutton5">
-            <property name="state">normal</property>
-            <property name="takefocus">false</property>
-            <property name="variable">boolean:KeepWaters</property>
-            <layout manager="grid">
-              <property name="column">5</property>
-              <property name="columnspan">1</property>
-              <property name="row">1</property>
-              <property name="sticky">e</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Checkbutton" id="checkbutton6">
-            <property name="state">normal</property>
-            <property name="takefocus">false</property>
-            <property name="variable">boolean:BSG</property>
-            <layout manager="grid">
-              <property name="column">5</property>
-              <property name="row">2</property>
-              <property name="sticky">e</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Label" id="label13">
-            <property name="text" translatable="yes">Generate Binding Site</property>
-            <layout manager="grid">
-              <property name="column">5</property>
-              <property name="row">2</property>
-              <property name="sticky">w</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="ttk.Spinbox" id="spinbox1">
-            <property name="from_">1</property>
-            <property name="increment">1</property>
-            <property name="state">readonly</property>
-            <property name="to">10</property>
-            <property name="values">1 2 3 4 5 6 7 8 9 10</property>
-            <layout manager="grid">
-              <property name="column">5</property>
-              <property name="columnspan">1</property>
-              <property name="row">3</property>
-              <property name="rowspan">1</property>
-              <property name="sticky">w</property>
             </layout>
           </object>
         </child>

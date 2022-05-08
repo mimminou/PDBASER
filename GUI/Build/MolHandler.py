@@ -82,20 +82,21 @@ class ResidueSelect(Select):
         return residue == self.residue and is_het(residue)
 
 
+  ## Main Function
 def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
-            saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius = 0):  ## Main Function
+            saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
+            protonate_chain=False, protonate_BS=False, force_field="PARSE", pH=7):
     extractedResidues = []
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
     nonHetSelect = NonHetSelect()
     keepWaterSelect = KeepWaterSelect()
-    try:
-        binding_site_radius = int(binding_site_radius)
-    except Exception as w:
-        print("Warning, No radius has been selected, defaulting to 7 Angstroms")
-        binding_site_radius = 7
 
+    if(binding_site_radius != "No"):
+        binding_site_radius = int(binding_site_radius.join(c for c in binding_site_radius if (c.isdigit())))
+    else:
+        binding_site_radius = 0
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
         zippedFile = gzOpen(input_DIR + "/" + PDB_FILE, "rt")
@@ -179,9 +180,17 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     with open(filenameOfOutput + "." + ligandExtractFormat, "w") as savedFile:
                         savedFile.write(virtualString.getvalue())
 
-                if (binding_site_radius > 0):                 # THIS GENERATES THE BINDING SITE
-                    extractedResidues.append(generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR, residue, binding_site_radius, keep_waters))
+                if (protonate_chain):
+                    ## TODO : ADD PROTONATE CHAIN FUNCTION HERE, WITH PDB BEING THE FUNCTION ITSELF
+                    pass
 
+
+                if (binding_site_radius > 0):                 # THIS GENERATES THE BINDING SITE
+                    binding_site = generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR, residue, binding_site_radius, keep_waters)
+                    extractedResidues.append("\nBinding Site Generated")
+                    if (protonate_BS):
+                        ## TODO :ADD PROTONATE BINDING SITE THAT WAS JUST EXTRACTED IN THE PREVIOUS IF,
+                        pass
                 # Check IF SAVE DEPICTION IS TRUE
                 if (saveDepictionPNG):
                     with open(filenameOfOutput + ".png", "wb") as imgPNG:
@@ -312,7 +321,8 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputPath, 
         fileName = f"{PDB_Name}_Chain_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BINDING_SITE"
         output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
     pdbio.save(output_filename, bss)
-    return "\nBinding Site Generated"
+
+    return bss
 
 
 
