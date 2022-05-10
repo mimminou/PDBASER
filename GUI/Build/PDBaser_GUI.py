@@ -10,12 +10,14 @@ from PIL import Image, ImageDraw, ImageFont, ImageTk  # NEEDED FOR DEPICTION
 from logging import debug
 from threading import Thread, Lock
 from platform import system
+from idlelib.tooltip import Hovertip
+
 
 # HIDDEN IMPORTS NEEDED FOR NUITKA :
-# from pygubu.builder import tkstdwidgets
-# from pygubu.builder import ttkstdwidgets
-# from pygubu.builder import widgets
-# from pygubu.builder.widgets import pathchooserinput
+from pygubu.builder import tkstdwidgets
+from pygubu.builder import ttkstdwidgets
+from pygubu.builder import widgets
+from pygubu.builder.widgets import pathchooserinput
 
 PROJECT_PATH = path.dirname(__file__)
 PROJECT_UI = path.join(PROJECT_PATH, "Main.ui")
@@ -24,18 +26,22 @@ global loadedPDB
 
 class MainApp:
     def __init__(self):
-        self.VERSION = "Abdelaziz. A, PDBaser(1.9)"
+        self.VERSION = "Abdelaziz. A, PDBaser(2.0)"
         self.PDB_Files = []
         self.format = "pdb"
         self.builder = builder = Builder()
         builder.add_resource_path(PROJECT_PATH)
         builder.add_from_file(PROJECT_UI)
+        self.progress = 0
         # GET MAIN WINDOW ITEMS
         self.mainwindow = builder.get_object('toplevel0')  ##GET MAIN WINDOW
         if system() == "Windows":
             self.mainwindow.iconbitmap("default_icon.ico") ##Set Icon for Windows
         self.PDB_input_DIR = builder.get_object("PDB_input_DIR")  ##GET INPUT DIR
         self.PDB_output_DIR = builder.get_object("PDB_output_DIR")  ##GET OUTPUT DIR
+        self.PDB_input_DIR.config(filetypes=[('PDB Files', [".pdb", ".PDB"]),
+                                             ('compressed PDB files', [".gz", ".GZ"]),
+                                             ('PDB ent files', [".ent", ".ENT"])], type='directory')
         self.SearchBox = builder.get_object("SearchBox")
         self.SearchBox.bind("<Return>", self.finder)
         self.ExtractButton = builder.get_object("Extract_Button")
@@ -49,7 +55,6 @@ class MainApp:
         self.DownloaderButton = builder.get_object("DownloadButton")
         self.DownloaderButton.config(command=self.downloadPDB)
         self.img1 = ""
-        self.protonate_chain_state = False
         self.force_field = "PARSE"
         self.ph = "7"
 
@@ -66,7 +71,7 @@ class MainApp:
         self.checkboxKeepWater = builder.get_object("keep_water_checkbox")
         self.checkboxProtonateChain = builder.get_object("protonate_chain_checkbox")
         self.checkboxProtonateBS = builder.get_object("protonate_BS_checkbox")
-
+        self.checkboxUsePropka = builder.get_object("use_propka_checkbox")
 
         # GET IMAGE SECTION
         # self.imager = builder.get_object("Depiction") #Deprecated, Instead of LABEL use CANVAS
@@ -115,8 +120,20 @@ class MainApp:
         self.format_combobox.set("pdb")
         self.BSG_combobox.set("No")
         self.forcefield_combobox.set("PARSE (default)")
-        self.ph_combobox.set("7 (default)")
+        self.ph_combobox.set("7")
 
+
+        # INFO TIPS :
+        self.citation_tip = Hovertip(self.versionLabel, "Citation : M. A. Abdelaziz, “PDBaser, A python tool for fast protein - ligand extraction.")
+        self.format_tip = Hovertip(self.format_combobox, "Format of the ligand.")
+        self.addH_ligand_tip = Hovertip(self.checkboxAddHydrogens, "Add hydrogens for ligands.\nNote : This just fills the ligands with hydrogens, and \ndoes not attempt to optimize H bonds")
+        self.copy_protein_tip = Hovertip(self.checkBoxExtractFullProt, "Writes the full protein in the output folder.")
+        self.keep_water_tip = Hovertip(self.checkboxKeepWater,"Keep water molecules on protein, chain and binding site if generated.")
+        self.Extract_Button_tip = Hovertip(self.ExtractButton, "Extracts the chain and the selected residue(s) from the PDB file.")
+        self.BSG_tip = Hovertip(self.BSG_combobox, "Generate a binding site from the position of selected ligand(s)\
+                                                   \nExtracts all Amino acids closest to residue atoms with the picked distance.")
+        self.BSG_protonation = Hovertip(self.checkboxProtonateBS, "Protonate the generated binding site.")
+        self.propka_tip = Hovertip(self.checkboxUsePropka, "Use PROPKA to predict titration states and generate hydrogens.")
 
     # CHECKS IF ANY CHECKBOX IS ENABLED OR NOT
     def isCheckBoxEnabled(self, checkbox):
@@ -125,7 +142,6 @@ class MainApp:
             return True
         else :
             return False
-
 
         ## define callbacks and other functions for various ui elements
     def force_field_callback(self, event=None):
@@ -152,29 +168,45 @@ class MainApp:
             self.checkboxAddHydrogens.config(state="normal")
         self.setOutputFormat(self.format_combobox.get())
 
+
     def setProtonate_chain_state(self):
-        if  self.isCheckBoxEnabled(self.checkboxProtonateChain):
-            self.protonate_chain_state = True
+        if self.isCheckBoxEnabled(self.checkboxProtonateChain):
             self.forcefield_combobox.config(state="readonly")
             self.ph_combobox.config(state="readonly")
-        elif self.BSG_combobox.get() == "No":
-            self.checkboxProtonateBS.config(state="disabled")
+            self.checkboxUsePropka.config(state="readonly")
+
+        elif self.isCheckBoxEnabled(self.checkboxProtonateBS) == False:
             self.forcefield_combobox.config(state="disabled")
             self.ph_combobox.config(state="disabled")
-            self.protonate_chain_state = False
-        else:
-            self.protonate_chain_state = False
+            self.checkboxUsePropka.config(state="disabled")
+
+
+    def setProtonate_BS_state(self):
+        if self.isCheckBoxEnabled(self.checkboxProtonateBS):
+            self.forcefield_combobox.config(state="readonly")
+            self.ph_combobox.config(state="readonly")
+            self.checkboxUsePropka.config(state="readonly")
+
+        elif self.isCheckBoxEnabled(self.checkboxProtonateChain) == False :
+            self.forcefield_combobox.config(state="disabled")
+            self.ph_combobox.config(state="disabled")
+            self.checkboxUsePropka.config(state="disabled")
 
 
     def BSGCallback(self, event=None):
-        if self.BSG_combobox.get() == "No" and self.protonate_chain_state == False:
+        if self.BSG_combobox.get() == "No" :
             self.checkboxProtonateBS.config(state="disabled")
-            self.forcefield_combobox.config(state="disabled")
-            self.ph_combobox.config(state="disabled")
-        else:
-            self.checkboxProtonateBS.config(state="enabled")
+            if self.isCheckBoxEnabled(self.checkboxProtonateChain) == False:
+                self.forcefield_combobox.config(state="disabled")
+                self.ph_combobox.config(state="disabled")
+                self.checkboxUsePropka.config(state="disabled")
+
+        else :
+            self.checkboxProtonateBS.config(state="readonly")
+        if self.isCheckBoxEnabled(self.checkboxProtonateBS):
             self.forcefield_combobox.config(state="readonly")
             self.ph_combobox.config(state="readonly")
+            self.checkboxUsePropka.config(state="readonly")
 
 
     def input_Path_Changed(self, event=None):
@@ -358,10 +390,11 @@ class MainApp:
             messagebox.showerror("Error", "Please select an input path for downloading")
 
     def getPDBFromServer(self, event=None):
-        if not all(char.isalnum() or char.isspace() for char in self.getFromFTP.get()):
+        PDB_DownloadText = self.getFromFTP.get("1.0", "end")
+        if not all(char.isalnum() or char.isspace() for char in PDB_DownloadText):
             messagebox.showerror("Failed to download", "Please insert correct PDB ID codes")
             return
-        PDBList = self.getFromFTP.get().split()
+        PDBList = PDB_DownloadText.split()
         NotFound = []
         Existing = []
         Downloaded = []
@@ -443,14 +476,15 @@ class MainApp:
         ExtractionThread = Thread(target=self.extractionThread)
 
         if not self.ExtractorLock.locked():
-            self.progressBarVar.set(20)
+            self.progressBarVar.set(10)
             ExtractionThread.start()
 
     def extractionThread(self):
         self.ExtractorLock.acquire()
         selected_residues = []
         extracted_values = []
-        self.progressBarVar.set(45)
+        self.progressBarVar.set(20)
+        self.progress = 20
         try:
             self.ListBox_PDB.config(state="disabled")
             self.ListBox_Chains.config(state="disabled")
@@ -458,31 +492,32 @@ class MainApp:
             self.DownloaderButton.config(state="disabled")
             self.ExtractButton.config(state="disabled")
             for index in self.ListBox_Residues.curselection():
-
-                if(self.isCheckBoxEnabled(self.checkboxProtonateBS)):
-                    print(" THIS PRINTS ACTUALLY TRUE : : ")
-                    print(self.checkboxProtonateBS.state())
-                else:
-                    print(" THIS IS FALSE WTH : : :")
-                    print(self.checkboxProtonateBS.state())
-
                 selected_residues.append(self.ListBox_Residues.get(index))
-                extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
-                                                           self.PDB_output_DIR.cget("path"),
-                                                           self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
-                                                           self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
-                                                           self.getOutputFormat(),
-                                                           selected_residues, self.checkBoxExtractFullProt.state(),
-                                                           self.checkboxDepictionPNG.state(),
-                                                           self.checkboxDepictionSVG.state(),
-                                                           self.checkboxAddHydrogens.state(),
-                                                           self.checkboxKeepWater.state(),
-                                                           self.BSG_combobox.get(),
-                                                           self.checkboxProtonateChain.state(),
-                                                           self.isCheckBoxEnabled(self.checkboxProtonateBS), ## Needed extra check because it can actually be disabled and ticked
-                                                           self.forcefield_combobox.get(),
-                                                           self.ph_combobox.get()
-                                                           ))
+
+            if(len(selected_residues) == 0):
+                selected_residues = None
+
+            self.progressBarVar.set(self.progress)
+            if(int(self.progressBarVar.get())<70):
+                self.progress = self.progress + 30
+            print("Extract stuff")
+            extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
+                                                       self.PDB_output_DIR.cget("path"),
+                                                       self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
+                                                       self.ListBox_Chains.get(self.ListBox_Chains.curselection()),
+                                                       self.getOutputFormat(),
+                                                       selected_residues, self.checkBoxExtractFullProt.state(),
+                                                       self.checkboxDepictionPNG.state(),
+                                                       self.checkboxDepictionSVG.state(),
+                                                       self.checkboxAddHydrogens.state(),
+                                                       self.checkboxKeepWater.state(),
+                                                       self.BSG_combobox.get(),
+                                                       self.checkboxProtonateChain.state(),
+                                                       self.isCheckBoxEnabled(self.checkboxProtonateBS), ## Needed extra check because it can actually be disabled and ticked
+                                                       self.force_field,
+                                                       self.isCheckBoxEnabled(self.checkboxUsePropka),
+                                                       int(self.ph_combobox.get())
+                                                       ))
 
             self.progressBarVar.set(80)
             self.ListBox_PDB.itemconfig(self.ListBox_PDB.curselection(), bg="lawn green")
@@ -512,11 +547,13 @@ class MainApp:
 
     def ExtractionDone(self, values):
         self.progressBarVar.set(100)
+        if len(values) < 1:
+            values = [""]
         messagebox.showinfo("Extraction Successeful",
                             "Protein : " + self.ListBox_PDB.get(self.ListBox_PDB.curselection()) + "\n"
-                                                                                                   "Chain : " + self.ListBox_Chains.get(
+                            "Chain : " + self.ListBox_Chains.get(
                                 self.ListBox_Chains.curselection()) + "\n"
-                                                                      "Residue : \n" + "\n".join(values[0]))
+                                                                      "Residues : \n" + "\n".join(values[0]))
         self.progressBarVar.set(0)
 
     def setOutputFormat(self, format):

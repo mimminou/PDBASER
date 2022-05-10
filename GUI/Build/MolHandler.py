@@ -9,7 +9,7 @@ from oasa.cairo_out import cairo_out
 from gzip import open as gzOpen
 from platform import system
 from os import environ
-
+from prot2pqr import generate_target_H
 
 
  ## Check if we are running on windows and are running compiled version :
@@ -17,7 +17,7 @@ if system().lower() == "windows" and "__compiled__" in globals():
     print("running windows and compiled")
     if "BABEL_DATADIR" in environ:
         del environ["BABEL_DATADIR"]  ## THIS IS NECESSARY TO PREVENT ENVIRONMENT CONFLICT WITH ANY INSTALLED OPENBABEL
-    from obabel.openbabel import pybel  # This is the import for compiled version, i manually copy /obabel_pyXX/openbabel the dir of output after compiling
+    from obabel.openbabel import pybel  # This is the import for compiled version, i manually copy /obabel_pyXX/openbabel to the dir of output after compiling
 
 elif system().lower() == "windows":     # this will know if i'm running on windows and interpreted or not
     if "BABEL_DATADIR" in environ:
@@ -85,7 +85,7 @@ class ResidueSelect(Select):
   ## Main Function
 def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
             saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
-            protonate_chain=False, protonate_BS=False, force_field="PARSE", pH=7):
+            protonate_chain=False, protonate_BS=False, force_field="PARSE", use_propka=True, PH=7):
     extractedResidues = []
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
@@ -94,7 +94,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     keepWaterSelect = KeepWaterSelect()
 
     if(binding_site_radius != "No"):
-        binding_site_radius = int(binding_site_radius.join(c for c in binding_site_radius if (c.isdigit())))
+        binding_site_radius = int(binding_site_radius)
     else:
         binding_site_radius = 0
     if PDB_FILE.endswith(tuple(extensions)):
@@ -172,7 +172,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     # todo FIX LIGAND NAME IN SMI FILE FORMAT
                     pass
 
-                if (add_hydrogens):
+                if (add_hydrogens):    # LIGAND STUFF
                     with open(filenameOfOutput + "_H." + ligandExtractFormat,
                               "w") as savedFile:  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
                         savedFile.write(virtualString.getvalue())
@@ -180,17 +180,28 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                     with open(filenameOfOutput + "." + ligandExtractFormat, "w") as savedFile:
                         savedFile.write(virtualString.getvalue())
 
-                if (protonate_chain):
-                    ## TODO : ADD PROTONATE CHAIN FUNCTION HERE, WITH PDB BEING THE FUNCTION ITSELF
-                    pass
-
-
                 if (binding_site_radius > 0):                 # THIS GENERATES THE BINDING SITE
-                    binding_site = generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR, residue, binding_site_radius, keep_waters)
-                    extractedResidues.append("\nBinding Site Generated")
+                    if keep_waters:
+                        output = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_"+ \
+                                 residue.id[0].replace("H_", "") + "_" + str(residue.id[1]) + "_BS_H_W.pqr" #todo maybe change to pdb
+                    else:
+                        output = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_"+ \
+                                 residue.id[0].replace("H_", "") + "_" + str(residue.id[1]) + "_BS_H.pqr" #todo maybe change to pdb
                     if (protonate_BS):
-                        ## TODO :ADD PROTONATE BINDING SITE THAT WAS JUST EXTRACTED IN THE PREVIOUS IF,
-                        pass
+                        binding_site_atoms = generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR,
+                                                                 residue,
+                                                                 binding_site_radius, keep_waters,
+                                                                 WRITE_TO_FILE=False)
+                        generate_target_H(binding_site_atoms, output, force_field, use_propka, PH, WRITE_TO_OUTPUT= True )
+                        extractedResidues.append("\nBinding Site Generated and Protonated")
+                    else:
+                        binding_site_atoms = generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR,
+                                                                 residue,
+                                                                 binding_site_radius, keep_waters,
+                                                                 WRITE_TO_FILE=True)
+                        extractedResidues.append("\nBinding Site Generated")
+
+                    binding_site_atoms.close()
                 # Check IF SAVE DEPICTION IS TRUE
                 if (saveDepictionPNG):
                     with open(filenameOfOutput + ".png", "wb") as imgPNG:
@@ -203,15 +214,33 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                 virtualFilePDBFormat.close()
                 virtualString.close()
 
-        else:
-            debug("Saving Peptidic Chain . . .")
-            io.set_structure(model[Chain])
-            if(keep_waters):
-                io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}_W_.pdb", keepWaterSelect)
-            else:
-                io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_Chain_{Chain}.pdb", nonHetSelect)
+        debug("Saving Peptidic Chain . . .")
+        print("saving chain only")
+        io.set_structure(model[Chain])
 
-            io.set_structure(pdb)
+        if (protonate_chain):
+            ChainVirtualString = StringIO()
+            if (keep_waters):
+                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H_W.pqr" #todo maybe change to pdb
+                io.save(ChainVirtualString, keepWaterSelect)
+                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+
+            else:
+                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H.pqr" #todo maybe change to pdb
+                io.save(ChainVirtualString, nonHetSelect)
+                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+
+            ChainVirtualString.close()
+            extractedResidues.append("\nChain Protonated")
+        else :
+            if (keep_waters):
+                io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_W_.pdb", keepWaterSelect)
+            else:
+                io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}.pdb", nonHetSelect)
+
+        io.set_structure(pdb)
         # SAVING FULL PROTEIN
         if saveFullProtein:
             debug("saving full protein")
@@ -270,7 +299,6 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
         for residue in model[Chain]:  ## ITERATE OVER RESIDUES IN CHAIN
             resSelect = ResidueSelect(model[Chain], residue)
             if (Residues is None) or (not residue):
-                print("residue is none")
                 return
             if (not is_het(residue)):
                 continue
@@ -304,7 +332,7 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
 
 
 # generates binding site and extracts it
-def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputPath, selectedResidue, radius = 7, KeepWaters = True):
+def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputDIR, selectedResidue, radius = 7, KeepWaters = True, WRITE_TO_FILE= False):
     Binding_Site = set()   # Create a set, much faster than List since order doesn't really matter
     residueAtoms = Selection.unfold_entities(selectedResidue, "A")
     querySet = Selection.unfold_entities(pdb_STRCUT, "A")
@@ -314,15 +342,19 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputPath, 
 
     if (KeepWaters):
         bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = True)
-        fileName = f"{PDB_Name}_Chain_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BINDING_SITE_W"
-        output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
+        fileName = f"{PDB_Name}_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BSW"
+        output_filename = outputDIR + "/" + PDB_ID + "/" + fileName + ".pdb"
     else:
         bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = False)
-        fileName = f"{PDB_Name}_Chain_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BINDING_SITE"
-        output_filename = outputPath + "/" + PDB_ID + "/" + fileName + ".pdb"
-    pdbio.save(output_filename, bss)
+        fileName = f"{PDB_Name}_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BS"
+        output_filename = outputDIR + "/" + PDB_ID + "/" + fileName + ".pdb"
 
-    return bss
+    if(WRITE_TO_FILE):
+        pdbio.save(output_filename, bss)
+    binding_site_virtual_string = StringIO()
+    pdbio.save(binding_site_virtual_string, bss)
+
+    return binding_site_virtual_string
 
 
 

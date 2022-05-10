@@ -11,3 +11,8 @@ GUI/Source/__pycache__/pdbExtractor.cpython-36.pyc
 GUI/EXPERIMENTAL/__pycache__/pdbExtractor.cpython-36.pyc
 /GUI/Build/PDBaser_GUI.build/
 /GUI/Build/PDBaser_GUI.dist/
+/GUI/Build/.idea/
+/GUI/Build/.vs/
+/GUI/Build/.vscode/
+/GUI/Build/__pycache__/
+/GUI/Build/oasa3-lib/

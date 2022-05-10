@@ -189,7 +189,7 @@
         <child>
           <object class="tk.Listbox" id="listbox3">
             <property name="activestyle">dotbox</property>
-            <property name="exportselection">false</property>
+            <property name="exportselection">true</property>
             <property name="font">{Helvetica} 12 {}</property>
             <property name="selectmode">extended</property>
             <property name="setgrid">false</property>
@@ -644,7 +644,7 @@ Downloaded files will be saved in Input directory</property>
                 <property name="exportselection">false</property>
                 <property name="state">readonly</property>
                 <property name="takefocus">false</property>
-                <property name="values">"No" "1 Å" "2 Å" "3 Å" "4 Å" "5 Å" "6 Å" "7 Å" "8 Å" "9 Å" "10 Å"</property>
+                <property name="values">"No" 1 2 3 4 5 6 7 8 9 10 11 12</property>
                 <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="BSGCallback" add="" />
                 <layout manager="grid">
                   <property name="column">1</property>
@@ -664,6 +664,7 @@ Downloaded files will be saved in Input directory</property>
             </child>
             <child>
               <object class="ttk.Checkbutton" id="protonate_BS_checkbox">
+                <property name="command" type="command" cbtype="simple">setProtonate_BS_state</property>
                 <property name="state">disabled</property>
                 <property name="takefocus">false</property>
                 <property name="variable">boolean:protonate_BS</property>
@@ -698,11 +699,11 @@ Downloaded files will be saved in Input directory</property>
             </child>
             <child>
               <object class="ttk.Label" id="label16">
-                <property name="text" translatable="yes">Protonation pH</property>
+                <property name="text" translatable="yes">Protonation pH (7 default)</property>
                 <layout manager="grid">
                   <property name="column">0</property>
                   <property name="pady">2</property>
-                  <property name="row">6</property>
+                  <property name="row">7</property>
                   <property name="sticky">w</property>
                 </layout>
               </object>
@@ -711,12 +712,33 @@ Downloaded files will be saved in Input directory</property>
               <object class="ttk.Combobox" id="ph_combobox">
                 <property name="exportselection">false</property>
                 <property name="state">disabled</property>
-                <property name="values">1 2 3 4 5 6 "7 (default)" 8 9 10 11 12 13 14</property>
+                <property name="values">1 2 3 4 5 6 7 8 9 10 11 12 13 14</property>
                 <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="pH_callback" add="" />
                 <layout manager="grid">
                   <property name="column">1</property>
                   <property name="pady">2</property>
+                  <property name="row">7</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="label17">
+                <property name="text" translatable="yes">Protonate using Propka</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
                   <property name="row">6</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="use_propka_checkbox">
+                <property name="state">disabled</property>
+                <property name="variable">string:usePropka</property>
+                <layout manager="grid">
+                  <property name="column">1</property>
+                  <property name="row">6</property>
+                  <property name="sticky">w</property>
                 </layout>
               </object>
             </child>
@@ -751,13 +773,12 @@ Downloaded files will be saved in Input directory</property>
         </child>
         <child>
           <object class="pygubu.builder.widgets.pathchooserinput" id="PDB_input_DIR">
-            <property name="mustexist">true</property>
-            <property name="title" translatable="yes">PDB directory Folder</property>
+            <property name="title" translatable="yes">Input directory of PDB files</property>
             <property name="type">directory</property>
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="input_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">4</property>
+              <property name="columnspan">3</property>
               <property name="ipadx">150</property>
               <property name="row">0</property>
               <property name="sticky">nsew</property>
@@ -780,15 +801,13 @@ Downloaded files will be saved in Input directory</property>
         </child>
         <child>
           <object class="pygubu.builder.widgets.pathchooserinput" id="PDB_output_DIR">
-            <property name="mustexist">true</property>
-            <property name="title" translatable="yes">PDB directory Folder</property>
+            <property name="title" translatable="yes">Output directory for processed files</property>
             <property name="type">directory</property>
             <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="output_Path_Changed" add="" />
             <layout manager="grid">
               <property name="column">1</property>
-              <property name="columnspan">4</property>
+              <property name="columnspan">3</property>
               <property name="ipadx">150</property>
-              <property name="padx">0</property>
               <property name="row">1</property>
               <property name="sticky">nsew</property>
             </layout>
@@ -799,7 +818,7 @@ Downloaded files will be saved in Input directory</property>
             <property name="takefocus">false</property>
             <property name="text" translatable="yes">Extract</property>
             <layout manager="grid">
-              <property name="column">5</property>
+              <property name="column">4</property>
               <property name="columnspan">1</property>
               <property name="padx">5</property>
               <property name="pady">0</property>
@@ -823,6 +842,7 @@ Downloaded files will be saved in Input directory</property>
               <property name="column">8</property>
               <property name="padx">10</property>
               <property name="row">0</property>
+              <property name="rowspan">2</property>
               <property name="sticky">ew</property>
             </layout>
             <containerlayout manager="grid">
@@ -832,11 +852,14 @@ Downloaded files will be saved in Input directory</property>
         </child>
         <child>
           <object class="ttk.Label" id="VersionLabel">
-            <property name="text" translatable="yes">Abdelaziz. A, PDBaser(1.9)</property>
+            <property name="text" translatable="yes">Abdelaziz. A
+PDBaser (2.0)</property>
             <layout manager="grid">
-              <property name="column">8</property>
+              <property name="column">9</property>
               <property name="padx">10</property>
-              <property name="row">1</property>
+              <property name="row">0</property>
+              <property name="rowspan">2</property>
+              <property name="sticky">nsew</property>
             </layout>
           </object>
         </child>

@@ -2,12 +2,13 @@ openbabel python bindings from unnoficial windows python binaries conflicts with
 this is due to BABEL_DATADIR variable being in the environment variables, the unnoficial binary version has no variable and use the
 directory it's installed into as default, while the installable .exe one writes in environemnt variables and therefore changes the 
 behaviour of all obabel.exe in the system, hence most formats will not work if it's there.
+
 To fix this behaviour:
 
 #import environ
 from os import environ
 
-check if "BABEL_DATADIR" exists, and delete it from runtime if it does
+#check if "BABEL_DATADIR" exists, and delete it from runtime if it does
 
 if("BABEL_DATADIR" in environ):
    del environ["BABEL_DATADIR"]

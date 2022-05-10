@@ -41,12 +41,12 @@ def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
 
     if PDB_FILE.endswith(tuple(extensions)):
         compressedFile = True
-        zippedFile = gzOpen(input_DIR +"/" + PDB_FILE, "rt")
+        zippedFile = gzOpen(input_DIR + "/" + PDB_FILE, "rt")
         temp_file = zippedFile.read()
         zippedFile.close()
         Structure = StringIO(temp_file)
     pdbParser = PDBParser()
-    pdb = pdbParser.get_structure(PDB_FILE,Structure)
+    pdb = pdbParser.get_structure(PDB_FILE, Structure)
     for model in pdb:
         for res in model[Chain]:
             if (not is_het(res)):
