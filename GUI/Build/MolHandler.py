@@ -29,9 +29,7 @@ else:
     from openbabel import pybel
 
 
-
-## THIS IS VERSION 1.9 OF THIS SCRIPT ...
-
+## THIS IS VERSION 2.0 OF THIS SCRIPT ...
 
 
 def is_het(residue):
@@ -45,17 +43,16 @@ def SelectWater(residue):
 
 
 class BINDING_SITE_SELECT(Select):
-    def __init__(self, binding_site_residues, keep_waters=True):
+    def __init__(self, binding_site_residues, keep_waters=True, keep_ligand=False):
         self.binding_site_residues = binding_site_residues
         self.keep_waters = keep_waters
 
     def accept_residue(self, residue):
         if(self.keep_waters):
-            if residue in self.binding_site_residues:
+            if residue in self.binding_site_residues and not is_het(residue):
                 return 1
-
         else:
-            if residue in self.binding_site_residues and not SelectWater(residue):
+            if residue in self.binding_site_residues and not SelectWater(residue) and not is_het(residue):
                 return 1
 
 
