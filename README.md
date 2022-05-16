@@ -65,30 +65,38 @@ There are 2 possible ways to run PDBaser in this case :
 ### Limitations
 
 - No metadata extraction (Header, comments etc ...), only atom 3D poses with the molecule code in the PDB.
-- Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in pdb and ent formats, however residue outputs can have different formats (pdb, mol2, sdf, smiles).
-- there is a known bug where extracting a ligand in SMILES format does not generate a name for it, i'm gonna fix it as soon as i finish some work on my studies.
-- Hydrogen generation is only available for residues and ligands, this is a decision i made because most docking software have their own algorithm for hydrogen generation and optimization for proteins, which can vary by multiple factors.
+- Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in pdb and ent formats, however residue outputs can have different formats(pdb, mol2, sdf, smiles).
+- Extracting a ligand in SMILES format does not generate a name for it, this is a known bug, I will probably fix it if it raises issues.
   
+### Roadmap
+
+- Bring back preparation through CLI with batch support.
+- Add chain separation support for generated binding site Amino acids.
+- Add cif (mmcif) support.
+- Packaging binaries for Linux (Maybe through flatpak).
+
 
 # Downloads
 
 For Windows x86/x64 : A binary setup is available in releases section.
 
 
-For Unix/Unix-like(Linux/MacOS etc..) : Source is available in releases section, although i recommend installing the windows version and using it through Wine.
+For Unix/Unix-like : Source is available in releases section, although I recommend installing the windows version and using it through Wine.
 
 
 # Citations
 
-PDBaser relies on Biopython's BIO.PDB module, openbabel's pybel module and OASA.
+PDBaser relies on Biopython's BIO.PDB module, openbabel's pybel module, the OASA library and PDB2PQR.
 
 BIO.PDB : Hamelryck T and Manderick B (2003) PDB file parser and structure class implemented in Python. [*Bioinformatics*, 22, 2308-2310](http://dx.doi.org/10.1093/bioinformatics/btg299)
 
-openbabel's pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python wrapper for the OpenBabel cheminformatics toolkit. *Chemistry Central Journal* **2,** 5 (2008).
+Openbabel + pybel : O'Boyle, N.M., Morley, C. & Hutchison, G.R. Pybel: a Python wrapper for the OpenBabel cheminformatics toolkit. *Chemistry Central Journal* **2,** 5 (2008).
+
+PDB2PQR (+ PROPKA ) : https://github.com/Electrostatics/pdb2pqr
 
 
 
-If this software helped you making a scientific publication, please cite it using the citation below :
+**If this software helped you making a scientific publication, please cite it using the citation below :**
 
 M. A. Abdelaziz, “PDBaser, A python tool for fast protein - ligand extraction”, https://github.com/mimminou/PDBASER
 
