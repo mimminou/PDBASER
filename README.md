@@ -139,7 +139,7 @@ Running `pdbaser -h` will show a help message.
 
 **Example** :
 
-$ pdbaser -i 
+$ ./pdbaser.exe -i C:\Users\USER\Desktop\zz\IC50MOLES\cli_test -o ./exp/ -r -bs 8 -pbs -ff CHARMM -ph 8 -w
 
 **Optional arguments**
 
