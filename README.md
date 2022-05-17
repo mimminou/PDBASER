@@ -143,4 +143,4 @@ Running `pdbaser -h` will show a help message.
 
 **Optional arguments**
 
-A list of optional arguments can be found in USAGE.txt (https://github.com/mimminou/PDBASER/GUI/Build/Usage.txt)
+A list of optional arguments can be found in USAGE.txt (https://github.com/mimminou/PDBASER/blob/main/GUI/Build/USAGE.txt)
