@@ -12,24 +12,53 @@ from os import environ
 from prot2pqr import generate_target_H
 
 
- ## Check if we are running on windows and are running compiled version :
-if system().lower() == "windows" and "__compiled__" in globals():
-    print("running windows and compiled")
-    if "BABEL_DATADIR" in environ:
-        del environ["BABEL_DATADIR"]  ## THIS IS NECESSARY TO PREVENT ENVIRONMENT CONFLICT WITH ANY INSTALLED OPENBABEL
-    from obabel.openbabel import pybel  # This is the import for compiled version, i manually copy /obabel_pyXX/openbabel to the dir of output after compiling
+def ImportPybel():
+    if system().lower() == "windows" and "__compiled__" in globals():
+        print("running windows and compiled")
+        if "BABEL_DATADIR" in environ:
+            del environ[
+                "BABEL_DATADIR"]  ## THIS IS NECESSARY TO PREVENT ENVIRONMENT CONFLICT WITH ANY INSTALLED OPENBABEL
+        from obabel.openbabel import pybel  # This is the import for compiled version, i manually copy /obabel_pyXX/openbabel to the dir of output after compiling
+        return pybel
 
-elif system().lower() == "windows":     # this will know if i'm running on windows and interpreted or not
-    if "BABEL_DATADIR" in environ:
-        del environ["BABEL_DATADIR"]  ## THIS IS NECESSARY TO PREVENT ENVIRONMENT CONFLICT WITH ANY INSTALLED OPENBABEL IN WINDOWS
-    from openbabel import pybel
+    elif system().lower() == "windows":  # this will know if i'm running on windows and interpreted or not
+        if "BABEL_DATADIR" in environ:
+            del environ[
+                "BABEL_DATADIR"]  ## THIS IS NECESSARY TO PREVENT ENVIRONMENT CONFLICT WITH ANY INSTALLED OPENBABEL IN WINDOWS
+        from openbabel import pybel
+        return pybel
 
-else:
-    print("Not running windows or not compiled")
-    from openbabel import pybel
+    else:
+        print("Not running windows or not compiled")
+        from openbabel import pybel
+        return pybel
 
+def pybel_exists():
+    try:
+        pybel = ImportPybel()
+        return True, pybel
+    except ModuleNotFoundError:
+        return False, None
+
+def pybel_full():
+    exists, pybel = pybel_exists()
+    if exists:
+        if {"pdb", "mol2", "sdf", "smi"} <= set(pybel.informats):
+            return "FULL", pybel
+        else:
+            print("WARNING, PARTIAL PYBEL SUPPORT, CHECK YOUR OPENBABEL INSTALLATION AND ITS ENVIRONMENT VARIABLES")
+            print(" LIGANDS WILL ONLY OUTPUT IN PDB FORMAT, DEPICTIONS WILL NOT BE SUPPORTED")
+            return "PARTIAL", pybel
+    else:
+        print(" WARNING, PYBEL WAS NOT FOUND, CHECK YOUR OPENBABEL INSTALLATION AND ITS PYTHON BINDINGS")
+        print(" LIGANDS WILL ONLY OUTPUT IN PDB FORMAT, DEPICTIONS WILL NOT BE SUPPORTED")
+        return "NOT_EXISTING", None
 
 ## THIS IS VERSION 2.0 OF THIS SCRIPT ...
+__PYBEL_STATE__, pybel = pybel_full()
+## SIMULATE IF PYBEL IS PARTIAL OR IF IT DOESNT EXIST, INTERNAL DEV ONLY
+# __PYBEL_STATE__ = "PARTIAL"
+# pybel = None
 
 
 def is_het(residue):
@@ -79,7 +108,7 @@ class ResidueSelect(Select):
         return residue == self.residue and is_het(residue)
 
 
-  ## Main Function
+## Main Function
 def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
             saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
             protonate_chain=False, protonate_BS=False, force_field="PARSE", use_propka=True, PH=7):
@@ -89,6 +118,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     compressedFile = False
     nonHetSelect = NonHetSelect()
     keepWaterSelect = KeepWaterSelect()
+    ResiduesArg = Residues
 
     if(binding_site_radius != "No"):
         binding_site_radius = int(binding_site_radius)
@@ -103,6 +133,10 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
         Structure = StringIO(temp_file)
     if ligandExtractFormat is None:
         ligandExtractFormat = "pdb"
+
+    elif ligandExtractFormat == "smiles":
+        ligandExtractFormat = "smi"
+
     pdbParser = PDBParser()
     try:
         pdb = pdbParser.get_structure(PDB_FILE, Structure)
@@ -119,77 +153,105 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
         PDB_Name = PDB_ID
 
     for model in pdb:
-        for residue in model[Chain]:  ## ITERATE OVER CHAINS
-            resSelect = ResidueSelect(model[Chain], residue)
+        for residue in model[Chain]:  ## ITERATE OVER CHAIN
             if (Residues is None) or (not residue):
                 break
             elif (not is_het(residue)):
                 continue
-            elif str((residue.id[0], residue.id[1])).replace("H_", "") in str(Residues):  ## REMOVE H_ PREFIX
-
+            elif ResiduesArg == "extract_all":
+                resSelect = ResidueSelect(model[Chain], residue)
+                Residues = []
+                Residues.append((residue.id[0].replace("H_", ""), residue.id[1]))
+            if (residue.id[0].replace("H_", ""), residue.id[1]) in (Residues):  ## REMOVE H_ PREFIX
+                resSelect = ResidueSelect(model[Chain], residue)
                 residue.id[0].replace(" ", "")
                 extractedResidues.append(residue.id[0].replace("H_", "") + "_" + str(residue.id[1]))
                 resname = residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
+                if ResiduesArg == "extract_all":
+                    Residues = "extract_all"
                 # SAVE RESIDUE IN VIRTUAL FILE
                 debug("SAVING TO VIRTUAL FILE")
                 virtualFilePDBFormat = StringIO()
                 io.save(virtualFilePDBFormat, resSelect)
                 ## CONVERT RESIDUE TO SAVE IT IN OUTPUT DIRECTORY
-                if ligandExtractFormat == "smiles":
-                    ligandExtractFormat = "smi"
 
                 filenameOfOutput = Output_DIR + "/" + PDB_ID + "/" + PDB_Name + f"_{Chain}_" + \
                                    residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
-                molecule = pybel.readstring("pdb", virtualFilePDBFormat.getvalue())
 
-                if (add_hydrogens):  # ADD HYDROGEN
-                    if not ligandExtractFormat == "smi":
-                        molecule.addh()
+                if __PYBEL_STATE__== "FULL":
+                    molecule = pybel.readstring("pdb", virtualFilePDBFormat.getvalue())
 
-                virtualString = StringIO(molecule.write(ligandExtractFormat))
-                virtualString.seek(0)
+                    if (add_hydrogens):  # ADD HYDROGEN
+                        if not ligandExtractFormat == "smi":
+                            molecule.addh()
 
-                if ligandExtractFormat == "sdf":
-                    virtualString.writelines(resname + "\n")
-                    virtualString.seek(0, 0)
-                    content = virtualString.readlines()
-                    content.insert(2, "Extracted with PDBaser")  ## INSERT THIS IN 3rd Line
-                    VS = "".join(content)
-                    virtualString = StringIO(VS)
+                    virtualString = StringIO(molecule.write(ligandExtractFormat))
+                    virtualString.seek(0)
 
-                elif ligandExtractFormat == "mol2":
-                    virtualString.seek(0, 0)  ## SKIP THE FIRST LINE OF THE HEADER IN TRIPOS MOL2 FILES
-                    content = virtualString.readlines()
-                    content.pop(1)
-                    content.insert(1, resname + "\n")
-                    VS = "".join(content)
-                    virtualString = StringIO(VS)
+                    if ligandExtractFormat == "sdf":
+                        virtualString.writelines(resname + "\n")
+                        virtualString.seek(0, 0)
+                        content = virtualString.readlines()
+                        content.insert(2, "Extracted with PDBaser")  ## INSERT THIS IN 3rd Line
+                        VS = "".join(content)
+                        virtualString = StringIO(VS)
 
-                elif ligandExtractFormat == "smi":
-                    # todo FIX LIGAND NAME IN SMI FILE FORMAT
-                    pass
+                    elif ligandExtractFormat == "mol2":
+                        virtualString.seek(0, 0)  ## SKIP THE FIRST LINE OF THE HEADER IN TRIPOS MOL2 FILES
+                        content = virtualString.readlines()
+                        content.pop(1)
+                        content.insert(1, resname + "\n")
+                        VS = "".join(content)
+                        virtualString = StringIO(VS)
 
-                if (add_hydrogens):    # LIGAND STUFF
-                    with open(filenameOfOutput + "_H." + ligandExtractFormat,
-                              "w") as savedFile:  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
-                        savedFile.write(virtualString.getvalue())
-                else:
-                    with open(filenameOfOutput + "." + ligandExtractFormat, "w") as savedFile:
-                        savedFile.write(virtualString.getvalue())
+                    elif ligandExtractFormat == "smi":
+                        # todo FIX LIGAND NAME IN SMI FILE FORMAT
+                        pass
 
-                if (binding_site_radius > 0):                 # THIS GENERATES THE BINDING SITE
-                    if keep_waters:
-                        output = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_"+ \
-                                 residue.id[0].replace("H_", "") + "_" + str(residue.id[1]) + "_BS_H_W.pqr" #todo maybe change to pdb
+                    if (add_hydrogens):    # LIGAND STUFF
+                        with open(filenameOfOutput + "_H." + ligandExtractFormat,
+                                  "w") as savedFile:  ## ITS LATE AND I WAS LAZY, I JUST ADDED _H AS A QUICK FIX, I COULD HAVE DONE THIS BETTER I KNOW ...
+                            savedFile.write(virtualString.getvalue())
                     else:
-                        output = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_"+ \
-                                 residue.id[0].replace("H_", "") + "_" + str(residue.id[1]) + "_BS_H.pqr" #todo maybe change to pdb
+                        with open(filenameOfOutput + "." + ligandExtractFormat, "w") as savedFile:
+                            savedFile.write(virtualString.getvalue())
+
+                    # Check IF SAVE DEPICTION IS TRUE
+                    if (saveDepictionPNG):
+                        with open(filenameOfOutput + ".png", "wb") as imgPNG:
+                            imgPNG.write(drawImg(virtualFilePDBFormat, "png"))
+
+                    if (saveDepictionSVG):
+                        with open(filenameOfOutput + ".svg", "wt") as imgSVG:
+                            imgSVG.write(drawImg(virtualFilePDBFormat, "svg").decode("utf-8"))
+
+                    virtualFilePDBFormat.close()
+                    virtualString.close()
+
+                else:
+                    if __PYBEL_STATE__=="PARTIAL":
+                        print("WARNING, PARTIAL PYBEL SUPPORT, CHECK YOUR OPENBABEL INSTALLATION AND ITS ENVIRONMENT VARIABLES")
+                    else:
+                        print(" WARNING, PYBEL WAS NOT FOUND, CHECK YOUR OPENBABEL INSTALLATION AND ITS PYTHON BINDINGS")
+                    ligandExtractFormat = "pdb"
+                    io.save(filenameOfOutput + "." + ligandExtractFormat, resSelect)
+                    virtualFilePDBFormat.close()
+
+                if (binding_site_radius > 0):  # THIS GENERATES THE BINDING SITE
+                    if keep_waters:
+                        output = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_" + \
+                                 residue.id[0].replace("H_", "") + "_" + str(
+                            residue.id[1]) + "_BS_H_W.pqr"  # todo maybe change extension to pdb
+                    else:
+                        output = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_" + \
+                                 residue.id[0].replace("H_", "") + "_" + str(
+                            residue.id[1]) + "_BS_H.pqr"  # todo maybe change extension to pdb
                     if (protonate_BS):
                         binding_site_atoms = generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR,
                                                                  residue,
                                                                  binding_site_radius, keep_waters,
                                                                  WRITE_TO_FILE=False)
-                        generate_target_H(binding_site_atoms, output, force_field, use_propka, PH, WRITE_TO_OUTPUT= True )
+                        generate_target_H(binding_site_atoms, output, force_field, use_propka, PH, WRITE_TO_OUTPUT=True)
                         extractedResidues.append("\nBinding Site Generated and Protonated")
                     else:
                         binding_site_atoms = generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR,
@@ -199,20 +261,8 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                         extractedResidues.append("\nBinding Site Generated")
 
                     binding_site_atoms.close()
-                # Check IF SAVE DEPICTION IS TRUE
-                if (saveDepictionPNG):
-                    with open(filenameOfOutput + ".png", "wb") as imgPNG:
-                        imgPNG.write(drawImg(virtualFilePDBFormat, "png"))
-
-                if (saveDepictionSVG):
-                    with open(filenameOfOutput + ".svg", "wt") as imgSVG:
-                        imgSVG.write(drawImg(virtualFilePDBFormat, "svg").decode("utf-8"))
-
-                virtualFilePDBFormat.close()
-                virtualString.close()
 
         debug("Saving Peptidic Chain . . .")
-        print("saving chain only")
         io.set_structure(model[Chain])
 
         if (protonate_chain):
@@ -250,31 +300,31 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
 def drawImg(PDBString, format="png", getMW=False):  ## Used for generating coords and actual images
     drawingFile = PDBString
     drawingFile.seek(0)
-
-    resMolecule = pybel.readstring("pdb",
+    if __PYBEL_STATE__=="FULL":
+        resMolecule = pybel.readstring("pdb",
                                    drawingFile.getvalue())  # Need to be converted to SDF / MOL for image depiction
-    resMolecule.removeh()  # Removes H for better depiciton
-    molMoleculeString = StringIO(resMolecule.write("mol"))  # write as smiles to the stringIO
-    mol = text_to_mol(molMoleculeString.getvalue())
-    coords_generator().calculate_coords(mol, 18, force=1)  ##Generate coordinates for depiction with bond length 18
+        resMolecule.removeh()  # Removes H for better depiciton
+        molMoleculeString = StringIO(resMolecule.write("mol"))  # write as smiles to the stringIO
+        mol = text_to_mol(molMoleculeString.getvalue())
+        coords_generator().calculate_coords(mol, 18, force=1)  ##Generate coordinates for depiction with bond length 18
 
-    mycairoinstance = cairo_out(scaling=4, margin=15, font_size=10, bond_width=2.0,
-                                background_color=(0, 0, 0, 0), bond_second_line_shortening=0.08,
-                                color_bonds=False, space_around_atom=2.0,
-                                line_width=1.2,
-                                show_hydrogens_on_hetero=True,
-                                wedge_width=5, align_coords=True)  ## Instantiante depictor, arguments are down below on this file
+        mycairoinstance = cairo_out(scaling=4, margin=15, font_size=10, bond_width=2.0,
+                                    background_color=(0, 0, 0, 0), bond_second_line_shortening=0.08,
+                                    color_bonds=False, space_around_atom=2.0,
+                                    line_width=1.2,
+                                    show_hydrogens_on_hetero=True,
+                                    wedge_width=5, align_coords=True)  ## Instantiante depictor, arguments are down below on this file
 
-    virtualPicture = BytesIO()
-    mycairoinstance.mol_to_cairo(mol, virtualPicture,
-                                 format=format)  ## Save image to virtual picture as bytes with the specified format
-    molMoleculeString.close()
-    picture = virtualPicture.getvalue()
-    virtualPicture.close()
-    if (getMW == True):
-        mw = "{:.2f}".format(mol.weight)
-        return [picture, mw]
-    return picture
+        virtualPicture = BytesIO()
+        mycairoinstance.mol_to_cairo(mol, virtualPicture,
+                                     format=format)  ## Save image to virtual picture as bytes with the specified format
+        molMoleculeString.close()
+        picture = virtualPicture.getvalue()
+        virtualPicture.close()
+        if (getMW == True):
+            mw = "{:.2f}".format(mol.weight)
+            return [picture, mw]
+        return picture
 
 
 def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
@@ -294,18 +344,14 @@ def DrawMol(input_DIR, PDB_FILE, Chain, Residues=None, pdbFile=None):
     io.set_structure(pdb)
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER RESIDUES IN CHAIN
-            resSelect = ResidueSelect(model[Chain], residue)
             if (Residues is None) or (not residue):
                 return
             if (not is_het(residue)):
                 continue
-
             if str((residue.id[0], residue.id[1])).replace("H_", "") in str(Residues):  ## REMOVE H_ PREFIX
+                resSelect = ResidueSelect(model[Chain], residue)
                 residue.id[0].replace(" ", "")
-                debug("RESIDUES TEST : ")
-                debug(residue.id[0])
                 # SAVE RESIDUE IN VIRTUAL FILE
-                debug("SAVING TO VIRTUAL FILE")
                 virtualFile = StringIO()
                 io.save(virtualFile, resSelect)
                 try:
@@ -339,7 +385,7 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputDIR, s
 
     if (KeepWaters):
         bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = True)
-        fileName = f"{PDB_Name}_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BSW"
+        fileName = f"{PDB_Name}_{Chain}_{selectedResidue.get_resname()}_{selectedResidue.id[1]}_BS_W"
         output_filename = outputDIR + "/" + PDB_ID + "/" + fileName + ".pdb"
     else:
         bss = BINDING_SITE_SELECT(Binding_Site, keep_waters = False)

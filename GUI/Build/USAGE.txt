@@ -1,0 +1,58 @@
+GUI usage :
+
+Pretty straightforward, add the input pdbs directory , add the output directory... and then select a protein in start working.
+
+**Note : Selecting a protein and a chain is minimal amount of input for the gui version to work correctly, even if no residue is selected when extracting,
+PDBaser will extract the selected chain.
+
+If you need to prepare a lot of files, consider using the cli usage as it supports batch operation.
+
+
+CLI usage:
+
+pdbaser -i [INPUT] -o [OUTPUT]
+use pdbaser -h for further instructions
+
+PDBaser, Protein preparation made fast and easy
+
+ -h, --help            show this usage message and exit
+
+Required arguments:
+  -i INPUT_DIR, --input INPUT_DIR
+                        Input directory for pdbs, if a file is specified instead, it will only treat t hat file.
+  -o OUTPUT_DIR, --output OUTPUT_DIR
+                        Output directory for processed files ( only pass a path to a directory , PDBaser will take
+                        care of the rest )
+
+Ligand arguments:
+
+  -r [RESIDUE [RESIDUE ...]], --residue [RESIDUE [RESIDUE ...]]
+                        name of residue, if not specified. If -r flag is present but no residue is specified, will
+                        extract all heteroatoms.
+  -f {mol2,pdb,sdf,smi}, --format {mol2,pdb,sdf,smi}
+                        output format for the ligand ( pdb / mol2 / sdf / smi ) (default mol2).
+  -png                  Save ligand 2D depiction as PNG (default False).
+  -svg                  Save ligand 2D depiction as SVG (default False).
+  -pl, --protonate-ligand
+                        Add hydrogens to ligand (default False).
+
+Protein arguments:
+  -c CHAIN, --chain CHAIN
+                        eg: A or B, if not specified, will treat all chains and will extract residue s from all of
+                        them. If specified, will only treat the specified cha in and extract residues only from it
+                        (default False).
+  -cp, --copy-protein   Copy the full PDB file to output, usefull to organize outputs (default False).
+  -w, --keep-water      Keep water molecules (default False).
+  -pc, --protonate-chain
+                        Protonate the Extracted chains (default False).
+  -bs BINDING_SITE_SIZE, --binding-site BINDING_SITE_SIZE
+                        Will generate a binding site with all Amino acids in the vicinity of the ligand(s), specify
+                        the radius as Angstroms (default False).
+  -pbs, --protonate-binding-site
+                        Attempts to protonate the binding site if generated. (default FALSE)
+  -ff {PARSE,AMBER,CHARMM}, --force-field {PARSE,AMBER,CHARMM}
+                        Protonation Forcefields (Default PARSE).
+  -propka, --use-propka
+                        Generate titration states and protonate using PROPKA (Default True).
+  -ph PROTONATION_PH, --protonation-ph PROTONATION_PH
+                        Specify at which pH the protonation occures.

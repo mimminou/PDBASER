@@ -537,6 +537,19 @@ Downloaded files will be saved in Input directory</property>
                 </containerlayout>
               </object>
             </child>
+            <child>
+              <object class="ttk.Label" id="PYBEL_LABEL">
+                <property name="justify">left</property>
+                <property name="wraplength">200</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="row">4</property>
+                  <property name="rowspan">2</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+              </object>
+            </child>
           </object>
         </child>
         <child>

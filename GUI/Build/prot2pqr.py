@@ -120,7 +120,6 @@ def generate_target_H(PDB_FILE, OUTPUT_FILE, force_field="PARSE", USE_PROPKA=Tru
         "pka_df": pka_df,
     }
     if(WRITE_TO_OUTPUT):
-        print("TRYING TO WRITE TO OUTPUT")
         write_pqr(
             args=args,
             pqr_lines=results["lines"],
