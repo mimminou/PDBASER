@@ -1,0 +1,1 @@
+This version of CLI is no longer supported, a better, more powerfull and scalable version is provided with the GUI package.
