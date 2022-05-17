@@ -2,10 +2,10 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "PDBaser"
-#define MyAppVersion "1.9"
+#define MyAppVersion "2.0"
 #define MyAppPublisher "Aminus SoftWorks"
 #define MyAppURL "https://github.com/mimminou/PDBASER/"
-#define MyAppExeName "PDBaser_GUI.exe"
+#define MyAppExeName "pdbaser.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -25,7 +25,7 @@ DisableProgramGroupPage=yes
 ;PrivilegesRequired=lowest
 OutputDir=D:\innosetup_output
 OutputBaseFilename=mysetup
-SetupIconFile=D:\Github\repositories\PDBASER\GUI\Build\PDBaser_GUI.dist\default_icon.ico
+SetupIconFile=D:\Github\repositories\PDBASER\GUI\Build\pdbaser.dist\default_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -37,8 +37,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\Github\repositories\PDBASER\GUI\Build\PDBaser_GUI.dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Github\repositories\PDBASER\GUI\Build\PDBaser_GUI.dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "D:\Github\repositories\PDBASER\GUI\Build\pdbaser.dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Github\repositories\PDBASER\GUI\Build\pdbaser.dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
