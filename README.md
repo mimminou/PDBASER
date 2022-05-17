@@ -139,8 +139,8 @@ Running `pdbaser -h` will show a help message.
 
 **Example** :
 
-$ pdbaser -i 
+`$ ./pdbaser.exe -i C:\Users\USER\Desktop\zz\IC50MOLES\cli_test -o ./exp/ -r -bs 8 -pbs -ff CHARMM -ph 8 -w`
 
 **Optional arguments**
 
-A list of optional arguments can be found in USAGE.txt (https://github.com/mimminou/PDBASER/GUI/Build/Usage.txt)
+A list of optional arguments can be found in USAGE.txt (https://github.com/mimminou/PDBASER/blob/main/GUI/Build/USAGE.txt)
