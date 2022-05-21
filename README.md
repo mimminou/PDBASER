@@ -120,16 +120,12 @@ However, it is still in testing phase and should be used carefully.
 Invoke pdbaser by passing arguments:
 
 `pdbaser -i [INPUT] -o [OUTPUT]`
-use pdbaser -h for further instructions
-
-PDBaser, Protein preparation made fast and easy
 
 **Help** :
 
 Running `pdbaser -h` will show a help message.
 
   -h, --help            shows a help message and exit
-
 
 **Required arguments:**
 
@@ -139,7 +135,7 @@ Running `pdbaser -h` will show a help message.
 
 **Example** :
 
-`$ ./pdbaser.exe -i C:\Users\USER\Desktop\zz\IC50MOLES\cli_test -o ./exp/ -r -bs 8 -pbs -ff CHARMM -ph 8 -w`
+`./pdbaser.exe -i C:\Users\USER\Desktop\zz\IC50MOLES\cli_test -o ./exp/ -r -bs 8 -pbs -ff CHARMM -ph 8 -w`
 
 **Optional arguments**
 
