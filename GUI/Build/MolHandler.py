@@ -304,7 +304,7 @@ def drawImg(PDBString, format="png", getMW=False):  ## Used for generating coord
         resMolecule = pybel.readstring("pdb",
                                    drawingFile.getvalue())  # Need to be converted to SDF / MOL for image depiction
         resMolecule.removeh()  # Removes H for better depiciton
-        molMoleculeString = StringIO(resMolecule.write("mol"))  # write as smiles to the stringIO
+        molMoleculeString = StringIO(resMolecule.write("mol"))  # write as "MDL mol" to the stringIO
         mol = text_to_mol(molMoleculeString.getvalue())
         coords_generator().calculate_coords(mol, 18, force=1)  ##Generate coordinates for depiction with bond length 18
 
