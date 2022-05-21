@@ -396,7 +396,8 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputDIR, s
         pdbio.save(output_filename, bss)
     binding_site_virtual_string = StringIO()
     pdbio.save(binding_site_virtual_string, bss)
-
+    print(binding_site_virtual_string.getvalue())
+    binding_site_virtual_string.seek(0)
     return binding_site_virtual_string
 
 
@@ -404,18 +405,6 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputDIR, s
 ################################################################
 ################################################################
 ################################################################
-
-
-# TESTS AND OTHER META DATA :
-
-# # TESTS, FOR INTERNAL USAGE ONLY, SPECIFIC TO MY PC, CHANGE THE VARIABLES AS YOU LIKE
-# input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
-# output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
-# for x in range(0,1000):
-#     print(Extract(input_dir,output_dir,"4EY7.pdb","A","smi",('E20', 604)))
-#     print(x)
-#
-# input("Finished, press any key to terminate . . .")
 
 
 # Cairo_out args

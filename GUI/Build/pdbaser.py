@@ -12,7 +12,8 @@ from logging import debug
 from threading import Thread, Lock
 from platform import system
 from pdbaser_cli import CLI_MAIN_APP
-import Pmw
+from custom_tk_tooltip import Tooltip
+# import Pmw
 
 # HIDDEN IMPORTS NEEDED FOR NUITKA :
 from pygubu.builder import tkstdwidgets
@@ -38,7 +39,7 @@ class MainApp:
         self.mainwindow = builder.get_object('toplevel0')  ##GET MAIN WINDOW
         if system() == "Windows":
             self.mainwindow.iconbitmap("default_icon.ico") ##Set Icon for Windows
-        Pmw.initialise(self.mainwindow)  # initializing it in the root window
+        # Pmw.initialise(self.mainwindow)  # initializing it in the root window
         self.PDB_input_DIR = builder.get_object("PDB_input_DIR")  ##GET INPUT DIR
         self.PDB_output_DIR = builder.get_object("PDB_output_DIR")  ##GET OUTPUT DIR
         self.PDB_input_DIR.config(filetypes=[('PDB Files', [".pdb", ".PDB"]),
@@ -139,17 +140,17 @@ class MainApp:
 
 
         # INFO TIPS :
-        tooltip = Pmw.Balloon(self.mainwindow)  # Calling the tooltip
-        self.citation_tip = tooltip.bind(self.versionLabel, "Citation : M. A. Abdelaziz, “PDBaser, A python tool for fast protein - ligand extraction.")
-        self.format_tip = tooltip.bind(self.format_combobox, "Format of the ligand.")
-        self.addH_ligand_tip = tooltip.bind(self.checkboxAddHydrogens, "Add hydrogens for ligands.\nNote : This just fills the ligands with hydrogens, and \ndoes not attempt to optimize H bonds")
-        self.copy_protein_tip = tooltip.bind(self.checkBoxExtractFullProt, "Writes the full protein in the output folder.")
-        self.keep_water_tip = tooltip.bind(self.checkboxKeepWater,"Keep water molecules on protein, chain and binding site if generated.")
-        self.Extract_Button_tip = tooltip.bind(self.ExtractButton, "Extracts the chain and the selected residue(s) from the PDB file.")
-        self.BSG_tip = tooltip.bind(self.BSG_combobox, "Generate a binding site from the position of selected ligand(s)\
+        # tooltip = Pmw.Balloon(self.mainwindow)  # Calling the tooltip
+        self.citation_tip = Tooltip(self.versionLabel, text= "Citation : M. A. Abdelaziz, “PDBaser, A python tool for fast protein - ligand extraction.")
+        self.format_tip = Tooltip(self.format_combobox,text= "Format of the ligand.")
+        self.addH_ligand_tip = Tooltip(self.checkboxAddHydrogens, text= "Add hydrogens for ligands.\nNote : This just fills the ligands with hydrogens, and \ndoes not attempt to optimize H bonds")
+        self.copy_protein_tip = Tooltip(self.checkBoxExtractFullProt, text= "Writes the full protein in the output folder.")
+        self.keep_water_tip = Tooltip(self.checkboxKeepWater, text= "Keep water molecules on protein, chain and binding site if generated.")
+        self.Extract_Button_tip = Tooltip(self.ExtractButton, text= "Extracts the chain and the selected residue(s) from the PDB file.")
+        self.BSG_tip = Tooltip(self.BSG_combobox, text= "Generate a binding site from the position of selected ligand(s)\
                                                    \nExtracts all Amino acids closest to residue atoms with the picked distance.")
-        self.BSG_protonation = tooltip.bind(self.checkboxProtonateBS, "Protonate the generated binding site.")
-        self.propka_tip = tooltip.bind(self.checkboxUsePropka, "Use PROPKA to predict titration states and generate hydrogens.")
+        self.BSG_protonation = Tooltip(self.checkboxProtonateBS, text= "Protonate the generated binding site.")
+        self.propka_tip = Tooltip(self.checkboxUsePropka, text= "Use PROPKA to predict titration states and generate hydrogens.")
 
         if not (MolHandler.__PYBEL_STATE__=="FULL"):
             self.format_combobox.config(state="readonly", value="pdb")
