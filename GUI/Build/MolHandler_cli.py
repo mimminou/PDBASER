@@ -40,7 +40,7 @@ def Extract_CLI(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None
                 protonate_chain, protonate_BS, force_field, use_propka, PH)
             
         elif Residues[0] == None:
-            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, None, saveFullProtein,
+            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, None, saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
                 protonate_chain, protonate_BS, force_field, use_propka, PH)
 
