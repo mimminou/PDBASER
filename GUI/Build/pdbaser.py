@@ -13,7 +13,7 @@ from threading import Thread, Lock
 from platform import system
 from pdbaser_cli import CLI_MAIN_APP
 from custom_tk_tooltip import Tooltip
-# import Pmw
+from time import time
 
 # HIDDEN IMPORTS NEEDED FOR NUITKA :
 from pygubu.builder import tkstdwidgets
@@ -140,9 +140,8 @@ class MainApp:
 
 
         # INFO TIPS :
-        # tooltip = Pmw.Balloon(self.mainwindow)  # Calling the tooltip
         self.citation_tip = Tooltip(self.versionLabel, text= "Citation : M. A. Abdelaziz, “PDBaser, A python tool for fast protein - ligand extraction.")
-        self.format_tip = Tooltip(self.format_combobox,text= "Format of the ligand.")
+        self.format_tip = Tooltip(self.format_combobox, text= "Format of the ligand.")
         self.addH_ligand_tip = Tooltip(self.checkboxAddHydrogens, text= "Add hydrogens for ligands.\nNote : This just fills the ligands with hydrogens, and \ndoes not attempt to optimize H bonds")
         self.copy_protein_tip = Tooltip(self.checkBoxExtractFullProt, text= "Writes the full protein in the output folder.")
         self.keep_water_tip = Tooltip(self.checkboxKeepWater, text= "Keep water molecules on protein, chain and binding site if generated.")
@@ -600,9 +599,11 @@ class MainApp:
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
+        start_time = time()         # test function speed
         app = CLI_MAIN_APP(sys.argv)
         print(sys.argv)
         app.run()
+        print("Operation fininshed in --- %s seconds ---" % "{:.2f}".format(time() - start_time))
     else:
         if system().lower() == "windows" and "__compiled__" in globals():           # This will detect if we are compiled, and if running windows, close the cmd window
             #Thanks to Eryk Sun From stackOverflow for this amazing piece of code, works with the standard lib !

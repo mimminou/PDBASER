@@ -396,7 +396,6 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputDIR, s
         pdbio.save(output_filename, bss)
     binding_site_virtual_string = StringIO()
     pdbio.save(binding_site_virtual_string, bss)
-    print(binding_site_virtual_string.getvalue())
     binding_site_virtual_string.seek(0)
     return binding_site_virtual_string
 

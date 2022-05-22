@@ -16,37 +16,34 @@ def Extract_CLI(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None
     pdbParser = PDBParser()
     Structure = input_DIR + "/" + PDB_FILE
     pdb = pdbParser.get_structure(PDB_FILE, Structure)
-    results = []
     if Chain is None:
         for pdbChain in pdb.get_chains():
             if Residues is None:
-                results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
+                MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                    protonate_chain, protonate_BS, force_field, use_propka, PH))
+                    protonate_chain, protonate_BS, force_field, use_propka, PH)
             elif "extract_all" in Residues:
-                results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, "extract_all", saveFullProtein,
+                MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, "extract_all", saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                    protonate_chain, protonate_BS, force_field, use_propka, PH))
+                    protonate_chain, protonate_BS, force_field, use_propka, PH)
             else:
-                results.append(Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
+                Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                    protonate_chain, protonate_BS, force_field, use_propka, PH))
-        return results
+                    protonate_chain, protonate_BS, force_field, use_propka, PH)
 
     else:
         if Residues is None:
-            results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
+            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                protonate_chain, protonate_BS, force_field, use_propka, PH))
+                protonate_chain, protonate_BS, force_field, use_propka, PH)
         elif "extract_all" in Residues:
-            results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, "extract_all", saveFullProtein,
+            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, "extract_all", saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                protonate_chain, protonate_BS, force_field, use_propka, PH))
+                protonate_chain, protonate_BS, force_field, use_propka, PH)
         else:
-            results.append(Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
+            Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                protonate_chain, protonate_BS, force_field, use_propka, PH))
-        return results
+                protonate_chain, protonate_BS, force_field, use_propka, PH)
 
 
 ## Main Function
