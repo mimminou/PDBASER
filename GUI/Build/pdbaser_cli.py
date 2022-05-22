@@ -2,6 +2,7 @@ import argparse
 import os
 from os import path
 import pprint
+from tkinter import N
 import MolHandler_cli
 from multiprocessing import Pool
 
@@ -56,7 +57,7 @@ class CLI_MAIN_APP:
             "--residue",
             nargs="*",
             action="store",
-            default=[None],
+            default=[None], # Needs to be iterable type to pass multiple kinds of residues or else that won't be possible
             help="name of residue, if not specified. If -r flag is present but no residue is specified, will extract all heteroatoms."
         )
         ligand_group.add_argument(
@@ -174,6 +175,7 @@ class CLI_MAIN_APP:
 
         if len(parsed_args.residue) == 0 :
             parsed_args.residue = ["extract_all"]
+
 
         if path.isdir(parsed_args.input_dir):
             print("Running in batch mode")

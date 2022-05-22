@@ -18,28 +18,32 @@ def Extract_CLI(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None
     pdb = pdbParser.get_structure(PDB_FILE, Structure)
     if Chain is None:
         for pdbChain in pdb.get_chains():
-            if Residues is None:
-                MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
-                    saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                    protonate_chain, protonate_BS, force_field, use_propka, PH)
-            elif "extract_all" in Residues:
+            if "extract_all" in Residues:
                 MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, "extract_all", saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
                     protonate_chain, protonate_BS, force_field, use_propka, PH)
+
+            elif Residues[0] == None:
+                MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, None, saveFullProtein,
+                    saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
+                    protonate_chain, protonate_BS, force_field, use_propka, PH)
+
             else:
                 Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
                     protonate_chain, protonate_BS, force_field, use_propka, PH)
 
     else:
-        if Residues is None:
-            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
-                saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                protonate_chain, protonate_BS, force_field, use_propka, PH)
-        elif "extract_all" in Residues:
+        if "extract_all" in Residues:
             MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, "extract_all", saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
                 protonate_chain, protonate_BS, force_field, use_propka, PH)
+            
+        elif Residues[0] == None:
+            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, None, saveFullProtein,
+                saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
+                protonate_chain, protonate_BS, force_field, use_propka, PH)
+
         else:
             Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
@@ -47,7 +51,7 @@ def Extract_CLI(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None
 
 
 ## Main Function
-def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues="all", saveFullProtein=False,
+def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
             saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
             protonate_chain=False, protonate_BS=False, force_field="PARSE", use_propka=True, PH=7):
     extractedResidues = []
@@ -189,21 +193,28 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
         io.set_structure(model[Chain])
 
         if (protonate_chain):
-            ChainVirtualString = StringIO()
-            if (keep_waters):
-                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H_W.pqr" #todo maybe change to pdb
-                io.save(ChainVirtualString, keepWaterSelect)
-                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
-                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+            try: 
+                ChainVirtualString = StringIO()
+                if (keep_waters):
+                    chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H_W.pqr" #todo maybe change to pdb or even mol2
+                    io.save(ChainVirtualString, keepWaterSelect)
+                    generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                                USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
 
-            else:
-                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H.pqr" #todo maybe change to pdb
-                io.save(ChainVirtualString, nonHetSelect)
-                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
-                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+                else:
+                    chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H.pqr" #todo maybe change to pdb or even mol2
+                    io.save(ChainVirtualString, nonHetSelect)
+                    generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                                USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
 
-            ChainVirtualString.close()
-            extractedResidues.append("\nChain Protonated")
+                extractedResidues.append("\nChain Protonated")
+            
+            except Exception as e:
+                print("Error, Chain protonation failed Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
+                extractedResidues.append("\nChain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
+            finally:
+                ChainVirtualString.close()
+
         else :
             if (keep_waters):
                 io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_W_.pdb", keepWaterSelect)

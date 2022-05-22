@@ -25,3 +25,4 @@ GUI/Source/__pycache__/pdbExtractor.cpython-36.pyc
 /GUI/Build/obabel_py38/
 /GUI/Build/obabel_py36/
 /GUI/Build/pdbaser.dist/
+*.pyc
