@@ -151,6 +151,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
         PDB_Name = PDB_ID[3:]
     else:
         PDB_Name = PDB_ID
+    print("WORKING ON : " + PDB_ID)
 
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAIN

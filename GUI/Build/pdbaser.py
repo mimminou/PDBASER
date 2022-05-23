@@ -524,7 +524,6 @@ class MainApp:
             self.progressBarVar.set(self.progress)
             if(int(self.progressBarVar.get())<70):
                 self.progress = self.progress + 30
-            print("Extract stuff")
             extracted_values.append(MolHandler.Extract(self.PDB_input_DIR.cget("path"),
                                                        self.PDB_output_DIR.cget("path"),
                                                        self.ListBox_PDB.get(self.ListBox_PDB.curselection()),
@@ -605,7 +604,8 @@ if __name__ == '__main__':
         app.run()
         print("Operation fininshed in --- %s seconds ---" % "{:.2f}".format(time() - start_time))
     else:
-        if system().lower() == "windows" and "__compiled__" in globals():           # This will detect if we are compiled, and if running windows, close the cmd window
+        if system().lower() == "windows" and "__compiled__" in globals():   # This will detect if we are compiled, and if running windows, close the cmd window
+            # Not necessary for Linux, because I don't know how to do it in Linux, but most importantly because linux users don't have terminalophobia.
             #Thanks to Eryk Sun From stackOverflow for this amazing piece of code, works with the standard lib !
             import ctypes
             kernel32 = ctypes.WinDLL('kernel32')

@@ -45,7 +45,7 @@ def get_PDB_Residues(PDB_FILE,Chain, input_DIR):
         temp_file = zippedFile.read()
         zippedFile.close()
         Structure = StringIO(temp_file)
-    pdbParser = PDBParser()
+    pdbParser = PDBParser(QUIET=True)
     pdb = pdbParser.get_structure(PDB_FILE, Structure)
     for model in pdb:
         for res in model[Chain]:

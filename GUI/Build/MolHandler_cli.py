@@ -89,6 +89,7 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
     else:
         PDB_Name = PDB_ID
 
+    print("WORKING ON : " + PDB_ID)
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAIN
             if (Residues is None) or (not residue):
