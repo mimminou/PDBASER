@@ -1,4 +1,5 @@
 import pathlib
+from re import T
 from Bio.PDB import PDBParser, PDBIO
 from io import StringIO
 from shutil import copyfile
@@ -13,47 +14,47 @@ def Extract_CLI(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None
             saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
             protonate_chain=False, protonate_BS=False, force_field="PARSE", use_propka=True, PH=7):
 
-    pdbParser = PDBParser()
+    pdbParser = PDBParser(QUIET=True)
     Structure = input_DIR + "/" + PDB_FILE
     pdb = pdbParser.get_structure(PDB_FILE, Structure)
-    results = []
     if Chain is None:
         for pdbChain in pdb.get_chains():
-            if Residues is None:
-                results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
+            if "extract_all" in Residues:
+                MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, "extract_all", saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                    protonate_chain, protonate_BS, force_field, use_propka, PH))
-            elif "extract_all" in Residues:
-                results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, "extract_all", saveFullProtein,
+                    protonate_chain, protonate_BS, force_field, use_propka, PH)
+
+            elif Residues[0] == None:
+                MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, None, saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                    protonate_chain, protonate_BS, force_field, use_propka, PH))
+                    protonate_chain, protonate_BS, force_field, use_propka, PH)
+
             else:
-                results.append(Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
+                Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, pdbChain.id, ligandExtractFormat, Residues, saveFullProtein,
                     saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                    protonate_chain, protonate_BS, force_field, use_propka, PH))
-        return results
+                    protonate_chain, protonate_BS, force_field, use_propka, PH)
 
     else:
-        if Residues is None:
-            results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
+        if "extract_all" in Residues:
+            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, "extract_all", saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                protonate_chain, protonate_BS, force_field, use_propka, PH))
-        elif "extract_all" in Residues:
-            results.append(MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, "extract_all", saveFullProtein,
+                protonate_chain, protonate_BS, force_field, use_propka, PH)
+            
+        elif Residues[0] == None:
+            MolHandler.Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, None, saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                protonate_chain, protonate_BS, force_field, use_propka, PH))
+                protonate_chain, protonate_BS, force_field, use_propka, PH)
+
         else:
-            results.append(Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
+            Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat, Residues, saveFullProtein,
                 saveDepictionPNG, saveDepictionSVG, add_hydrogens, keep_waters, binding_site_radius,
-                protonate_chain, protonate_BS, force_field, use_propka, PH))
-        return results
+                protonate_chain, protonate_BS, force_field, use_propka, PH)
 
 
 ## Main Function
-def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues="all", saveFullProtein=False,
+def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
             saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
             protonate_chain=False, protonate_BS=False, force_field="PARSE", use_propka=True, PH=7):
-    extractedResidues = []
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
@@ -73,7 +74,7 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
         Structure = StringIO(temp_file)
     if ligandExtractFormat is None:
         ligandExtractFormat = "pdb"
-    pdbParser = PDBParser()
+    pdbParser = PDBParser(QUIET=True)
     try:
         pdb = pdbParser.get_structure(PDB_FILE, Structure)
         io = PDBIO()
@@ -88,6 +89,7 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
     else:
         PDB_Name = PDB_ID
 
+    print("WORKING ON : " + PDB_ID)
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAIN
             if (Residues is None) or (not residue):
@@ -97,7 +99,6 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
             elif (residue.id[0].replace("H_", "")) in (Residues):
                 resSelect = MolHandler.ResidueSelect(model[Chain], residue)
                 residue.id[0].replace(" ", "")
-                extractedResidues.append(residue.id[0].replace("H_", "") + "_" + str(residue.id[1]))
                 resname = residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
                 # SAVE RESIDUE IN VIRTUAL FILE
                 debug("SAVING TO VIRTUAL FILE")
@@ -178,13 +179,11 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
                                                                  binding_site_radius, keep_waters,
                                                                  WRITE_TO_FILE=False)
                         generate_target_H(binding_site_atoms, output, force_field, use_propka, PH, WRITE_TO_OUTPUT=True)
-                        extractedResidues.append("\nBinding Site Generated and Protonated")
                     else:
                         binding_site_atoms = MolHandler.generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR,
                                                                  residue,
                                                                  binding_site_radius, keep_waters,
                                                                  WRITE_TO_FILE=True)
-                        extractedResidues.append("\nBinding Site Generated")
                     binding_site_atoms.close()
 
 
@@ -192,21 +191,26 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
         io.set_structure(model[Chain])
 
         if (protonate_chain):
-            ChainVirtualString = StringIO()
-            if (keep_waters):
-                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H_W.pqr" #todo maybe change to pdb
-                io.save(ChainVirtualString, keepWaterSelect)
-                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
-                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+            try: 
+                ChainVirtualString = StringIO()
+                if (keep_waters):
+                    chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H_W.pqr" #todo maybe change to pdb or even mol2
+                    io.save(ChainVirtualString, keepWaterSelect)
+                    generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                                USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
 
-            else:
-                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H.pqr" #todo maybe change to pdb
-                io.save(ChainVirtualString, nonHetSelect)
-                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
-                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+                else:
+                    chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H.pqr" #todo maybe change to pdb or even mol2
+                    io.save(ChainVirtualString, nonHetSelect)
+                    generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                                USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
 
-            ChainVirtualString.close()
-            extractedResidues.append("\nChain Protonated")
+            
+            except Exception as e:
+                print("Chain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
+            finally:
+                ChainVirtualString.close()
+
         else :
             if (keep_waters):
                 io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_W_.pdb", keepWaterSelect)
@@ -220,58 +224,4 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
             copyfile(input_DIR + "/" + PDB_FILE, Output_DIR + "/" + PDB_ID + "/" + f"{PDB_Name}.pdb")
     if compressedFile:
         Structure.close()  # CLOSE STRING IO IF FILE IS COMPRESSED
-    return extractedResidues
 
-
-################################################################
-################################################################
-################################################################
-
-
-# TESTS AND OTHER META DATA :
-
-# # TESTS, FOR INTERNAL USAGE ONLY, SPECIFIC TO MY PC, CHANGE THE VARIABLES AS YOU LIKE
-# input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
-# output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
-# for x in range(0,1000):
-#     print(Extract(input_dir,output_dir,"4EY7.pdb","A","smi",('E20', 604)))
-#     print(x)
-#
-# input("Finished, press any key to terminate . . .")
-
-
-# Cairo_out args
-# #default_options = {
-#         'scaling': 1.0,
-#         # should atom coordinates be rounded to whole pixels before rendering?
-#         # This improves image sharpness but might slightly change the geometry
-#         'align_coords': True,
-#         # the following also draws hydrogens on shown carbons
-#         'show_hydrogens_on_hetero': False,
-#         'show_carbon_symbol': False,
-#         'margin': 15,
-#         'line_width': 1.0,
-#         # how far second bond is drawn
-#         'bond_width': 6.0,
-#         'wedge_width': 6.0,
-#         'font_name': "Arial",
-#         'font_size': 16,
-#         # background color in RGBA
-#         'background_color': (1, 1, 1, 1),
-#         'color_atoms': True,
-#         'color_bonds': True,
-#         'space_around_atom': 2,
-#         # you can choose between atom_colors_full, atom_colors_minimal
-#         # or provide a custom dictionary
-#         'atom_colors': atom_colors_full,
-#         # proportion between subscript and normal letters size
-#         'subscript_size_ratio': 0.8,
-#         # how much to shorten second line of double and triple bonds (0-0.5)
-#         'bond_second_line_shortening': 0.15,
-#         # the following two are just for playing
-#         # - without antialiasing the output is ugly
-#         'antialias_text': True,
-#         'antialias_drawing': True,
-#         # this will only change appearance of overlapping text
-#         'add_background_to_text': False,
-#     }

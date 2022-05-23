@@ -15,7 +15,7 @@ def get_PDB_Chains(PDB_FILE, input_DIR):
         temp_file = zippedFile.read()
         zippedFile.close()
         Structure = StringIO(temp_file)
-    pdb = PDBParser().get_structure(PDB_FILE, Structure)
+    pdb = PDBParser(QUIET=True).get_structure(PDB_FILE, Structure)
     for model in pdb:
         for chain in model:
             if(str(chain.get_id()).strip()!=""):## GET CHAINS NAMES

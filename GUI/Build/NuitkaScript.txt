@@ -1,7 +1,11 @@
 Nuitka Script :
 
-nuitka pdbaser.py --plugin-enable=tk-inter --enable-plugin=pmw-freezer --plugin-enable=numpy --standalone --windows-icon-from-ico=default_icon.ico --include-data-file=default_icon.ico=default_icon.ico --include-data-file=Main.ui=Main.ui --include-data-file=vc_redist.x86_2015.exe=vc_redist.x86_2015.exe --include-data-file=LiberationSans-Regular.ttf=LiberationSans-Regular.ttf --include-data-file=OpenSans-SemiBold.ttf=OpenSans-SemiBold.ttf --msvc=14.0
+nuitka pdbaser.py --plugin-enable=tk-inter --plugin-enable=numpy --standalone --windows-icon-from-ico=default_icon.ico --include-data-file=default_icon.ico=default_icon.ico --include-data-file=Main.ui=Main.ui --include-data-file=vc_redist.x86_2015.exe=vc_redist.x86_2015.exe --include-data-file=LiberationSans-Regular.ttf=LiberationSans-Regular.ttf --include-data-file=OpenSans-SemiBold.ttf=OpenSans-SemiBold.ttf --msvc=14.0
 
 
 Nuitka Script Anti-bloat :
-nuitka pdbaser.py --plugin-enable=tk-inter --enable-plugin=pmw-freezer --plugin-enable=numpy --standalone --windows-icon-from-ico=default_icon.ico --include-data-file=default_icon.ico=default_icon.ico --include-data-file=Main.ui=Main.ui --include-data-file=vc_redist.x86_2015.exe=vc_redist.x86_2015.exe --include-data-file=LiberationSans-Regular.ttf=LiberationSans-Regular.ttf --include-data-file=OpenSans-SemiBold.ttf=OpenSans-SemiBold.ttf --msvc=14.0 --enable-plugin=anti-bloat --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow
+nuitka pdbaser.py --plugin-enable=tk-inter --plugin-enable=numpy --plugin-enable=multiprocessing --standalone --windows-icon-from-ico=default_icon.ico --include-data-file=default_icon.ico=default_icon.ico --include-data-file=Main.ui=Main.ui --include-data-file=vc_redist.x86_2015.exe=vc_redist.x86_2015.exe --include-data-file=LiberationSans-Regular.ttf=LiberationSans-Regular.ttf --include-data-file=OpenSans-SemiBold.ttf=OpenSans-SemiBold.ttf --msvc=14.0 --enable-plugin=anti-bloat --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow
+
+
+USE THIS ::
+nuitka pdbaser.py --plugin-enable=tk-inter --plugin-enable=numpy --plugin-enable=multiprocessing --standalone --windows-icon-from-ico=default_icon.ico --include-data-file=default_icon.ico=default_icon.ico --include-data-file=Main.ui=Main.ui --include-data-file=vc_redist.x86_2015.exe=vc_redist.x86_2015.exe --include-data-file=LiberationSans-Regular.ttf=LiberationSans-Regular.ttf --include-data-file=OpenSans-SemiBold.ttf=OpenSans-SemiBold.ttf --msvc=14.0 --enable-plugin=anti-bloat --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow --include-package-data=pdb2pqr --include-package-data=propka

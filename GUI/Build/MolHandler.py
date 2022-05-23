@@ -54,7 +54,7 @@ def pybel_full():
         print(" LIGANDS WILL ONLY OUTPUT IN PDB FORMAT, DEPICTIONS WILL NOT BE SUPPORTED")
         return "NOT_EXISTING", None
 
-## THIS IS VERSION 2.0 OF THIS SCRIPT ...
+## THIS IS VERSION 2.1 OF THIS SCRIPT ...
 __PYBEL_STATE__, pybel = pybel_full()
 ## SIMULATE IF PYBEL IS PARTIAL OR IF IT DOESNT EXIST, INTERNAL DEV ONLY
 # __PYBEL_STATE__ = "PARTIAL"
@@ -137,7 +137,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     elif ligandExtractFormat == "smiles":
         ligandExtractFormat = "smi"
 
-    pdbParser = PDBParser()
+    pdbParser = PDBParser(QUIET=True)
     try:
         pdb = pdbParser.get_structure(PDB_FILE, Structure)
         io = PDBIO()
@@ -151,6 +151,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
         PDB_Name = PDB_ID[3:]
     else:
         PDB_Name = PDB_ID
+    print("WORKING ON : " + PDB_ID)
 
     for model in pdb:
         for residue in model[Chain]:  ## ITERATE OVER CHAIN
@@ -266,21 +267,28 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
         io.set_structure(model[Chain])
 
         if (protonate_chain):
-            ChainVirtualString = StringIO()
-            if (keep_waters):
-                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H_W.pqr" #todo maybe change to pdb
-                io.save(ChainVirtualString, keepWaterSelect)
-                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
-                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+            try:
+                ChainVirtualString = StringIO()
+                if (keep_waters):
+                    chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H_W.pqr" #todo maybe change to pdb or even mol2
+                    io.save(ChainVirtualString, keepWaterSelect)
+                    generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                                USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
 
-            else:
-                chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H.pqr" #todo maybe change to pdb
-                io.save(ChainVirtualString, nonHetSelect)
-                generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
-                              USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
+                else:
+                    chain_out_dir = Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_H.pqr" #todo maybe change to pdb or even mol2
+                    io.save(ChainVirtualString, nonHetSelect)
+                    generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
+                                USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
 
-            ChainVirtualString.close()
-            extractedResidues.append("\nChain Protonated")
+                extractedResidues.append("\nChain Protonated")
+
+            except Exception as e:
+                print("Chain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
+                extractedResidues.append("\nChain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
+            finally:
+                ChainVirtualString.close()
+
         else :
             if (keep_waters):
                 io.save(Output_DIR + "/" + PDB_ID + "/" f"{PDB_Name}_{Chain}_W_.pdb", keepWaterSelect)
@@ -304,7 +312,7 @@ def drawImg(PDBString, format="png", getMW=False):  ## Used for generating coord
         resMolecule = pybel.readstring("pdb",
                                    drawingFile.getvalue())  # Need to be converted to SDF / MOL for image depiction
         resMolecule.removeh()  # Removes H for better depiciton
-        molMoleculeString = StringIO(resMolecule.write("mol"))  # write as smiles to the stringIO
+        molMoleculeString = StringIO(resMolecule.write("mol"))  # write as "MDL mol" to the stringIO
         mol = text_to_mol(molMoleculeString.getvalue())
         coords_generator().calculate_coords(mol, 18, force=1)  ##Generate coordinates for depiction with bond length 18
 
@@ -396,7 +404,7 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputDIR, s
         pdbio.save(output_filename, bss)
     binding_site_virtual_string = StringIO()
     pdbio.save(binding_site_virtual_string, bss)
-
+    binding_site_virtual_string.seek(0)
     return binding_site_virtual_string
 
 
@@ -404,18 +412,6 @@ def generateBindingSite(pdb_STRCUT, pdbio, PDB_Name, PDB_ID, Chain, outputDIR, s
 ################################################################
 ################################################################
 ################################################################
-
-
-# TESTS AND OTHER META DATA :
-
-# # TESTS, FOR INTERNAL USAGE ONLY, SPECIFIC TO MY PC, CHANGE THE VARIABLES AS YOU LIKE
-# input_dir = "C:\\Users\\bL4nK\\Desktop\\zz\\IC50MOLES"
-# output_dir = "C:\\Users\\bL4nK\\Desktop\\test-extractions"
-# for x in range(0,1000):
-#     print(Extract(input_dir,output_dir,"4EY7.pdb","A","smi",('E20', 604)))
-#     print(x)
-#
-# input("Finished, press any key to terminate . . .")
 
 
 # Cairo_out args

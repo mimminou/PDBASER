@@ -2,7 +2,9 @@ import argparse
 import os
 from os import path
 import pprint
+from tkinter import N
 import MolHandler_cli
+from multiprocessing import Pool
 
 
 class CLI_MAIN_APP:
@@ -55,7 +57,7 @@ class CLI_MAIN_APP:
             "--residue",
             nargs="*",
             action="store",
-            default=[None],
+            default=[None], # Needs to be iterable type to pass multiple kinds of residues or else that won't be possible
             help="name of residue, if not specified. If -r flag is present but no residue is specified, will extract all heteroatoms."
         )
         ligand_group.add_argument(
@@ -146,11 +148,26 @@ class CLI_MAIN_APP:
             default=7,
             help="Specify at which pH the protonation occures."
         )
-
         return parser
 
+    @staticmethod
+    def worker(file, parsed_args):
+        MolHandler_cli.Extract_CLI(input_DIR=parsed_args.input_dir, Output_DIR=parsed_args.output_dir,
+                                        PDB_FILE=file, Chain=parsed_args.chain,
+                                        ligandExtractFormat=parsed_args.format,
+                                        Residues=parsed_args.residue, saveFullProtein=parsed_args.copy_protein,
+                                        saveDepictionPNG=parsed_args.save_png,
+                                        saveDepictionSVG=parsed_args.save_svg,
+                                        add_hydrogens=parsed_args.protonate_ligand,
+                                        keep_waters=parsed_args.keep_water,
+                                        protonate_chain=parsed_args.protonate_chain,
+                                        binding_site_radius=parsed_args.binding_site_size,
+                                        protonate_BS=parsed_args.protonate_binding_site,
+                                        force_field=parsed_args.force_field, use_propka=parsed_args.use_propka,
+                                        PH=parsed_args.protonation_ph)
+
+
     def run(self):
-        result = ""
         run_args = self.argument_parser()
         parsed_args = run_args.parse_args()
         if not path.isdir(parsed_args.output_dir):
@@ -159,62 +176,23 @@ class CLI_MAIN_APP:
         if len(parsed_args.residue) == 0 :
             parsed_args.residue = ["extract_all"]
 
+
         if path.isdir(parsed_args.input_dir):
             print("Running in batch mode")
+            PDB_ARGS = []
+            pool = Pool()
             pprint.pprint(vars(parsed_args))
             for file in os.listdir(parsed_args.input_dir):
                 if file.lower().endswith((".pdb", ".ent", ".ent.gz", ".pdb.gz")):
-                    if parsed_args.chain is None:
-                        result = MolHandler_cli.Extract_CLI(input_DIR=parsed_args.input_dir,Output_DIR=parsed_args.output_dir,
-                                                      PDB_FILE=file, Chain=parsed_args.chain, ligandExtractFormat=parsed_args.format,
-                                                      Residues=parsed_args.residue, saveFullProtein=parsed_args.copy_protein,
-                                                      saveDepictionPNG=parsed_args.save_png,saveDepictionSVG=parsed_args.save_svg,add_hydrogens=parsed_args.protonate_ligand
-                                                      ,keep_waters=parsed_args.keep_water,protonate_chain=parsed_args.protonate_chain,
-                                                      binding_site_radius=parsed_args.binding_site_size,protonate_BS=parsed_args.protonate_binding_site,
-                                                      force_field=parsed_args.force_field,use_propka=parsed_args.use_propka,PH=parsed_args.protonation_ph)
+                    PDB_ARGS.append((file, parsed_args))
 
-                    else:
-                        result = MolHandler_cli.Extract_CLI(input_DIR=parsed_args.input_dir,Output_DIR=parsed_args.output_dir,
-                                            PDB_FILE=file, Chain=parsed_args.chain, ligandExtractFormat=parsed_args.format,
-                                            Residues=parsed_args.residue, saveFullProtein=parsed_args.copy_protein,
-                                            saveDepictionPNG=parsed_args.save_png,saveDepictionSVG=parsed_args.save_svg,add_hydrogens=parsed_args.protonate_ligand,
-                                            keep_waters=parsed_args.keep_water,protonate_chain=parsed_args.protonate_chain,
-                                            binding_site_radius=parsed_args.binding_site_size,protonate_BS=parsed_args.protonate_binding_site,
-                                            force_field=parsed_args.force_field,use_propka=parsed_args.use_propka,PH=parsed_args.protonation_ph)
-                pprint.pprint(result)
-
+            # Process files with multiprocessing :D, the more cores you have the faster you will finish
+            pool.starmap(self.worker, PDB_ARGS)
+            pool.close()
 
         else:
             print("Running in single protein mode")
             pprint.pprint(vars(parsed_args))
             file = path.basename(parsed_args.input_dir)
             parsed_args.input_dir = path.dirname(parsed_args.input_dir)
-            if parsed_args.chain is None:
-                result = MolHandler_cli.Extract_CLI(input_DIR=parsed_args.input_dir, Output_DIR=parsed_args.output_dir,
-                                              PDB_FILE=file, Chain=parsed_args.chain,
-                                              ligandExtractFormat=parsed_args.format,
-                                              Residues=parsed_args.residue, saveFullProtein=parsed_args.copy_protein,
-                                              saveDepictionPNG=parsed_args.save_png,
-                                              saveDepictionSVG=parsed_args.save_svg,
-                                              add_hydrogens=parsed_args.protonate_ligand
-                                              , keep_waters=parsed_args.keep_water,
-                                              protonate_chain=parsed_args.protonate_chain,
-                                              binding_site_radius=parsed_args.binding_site_size,
-                                              protonate_BS=parsed_args.protonate_binding_site,
-                                              force_field=parsed_args.force_field, use_propka=parsed_args.use_propka,
-                                              PH=parsed_args.protonation_ph)
-
-            else:
-                result = MolHandler_cli.Extract_CLI(input_DIR=parsed_args.input_dir, Output_DIR=parsed_args.output_dir,
-                                   PDB_FILE=file, Chain=parsed_args.chain, ligandExtractFormat=parsed_args.format,
-                                   Residues=parsed_args.residue, saveFullProtein=parsed_args.copy_protein,
-                                   saveDepictionPNG=parsed_args.save_png, saveDepictionSVG=parsed_args.save_svg,
-                                   add_hydrogens=parsed_args.protonate_ligand,
-                                   keep_waters=parsed_args.keep_water, protonate_chain=parsed_args.protonate_chain,
-                                   binding_site_radius=parsed_args.binding_site_size,
-                                   protonate_BS=parsed_args.protonate_binding_site,
-                                   force_field=parsed_args.force_field, use_propka=parsed_args.use_propka,
-                                   PH=parsed_args.protonation_ph)
-
-            pprint.pprint(result)
-
+            self.worker(file, parsed_args)
