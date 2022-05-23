@@ -137,7 +137,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
     elif ligandExtractFormat == "smiles":
         ligandExtractFormat = "smi"
 
-    pdbParser = PDBParser()
+    pdbParser = PDBParser(QUIET=True)
     try:
         pdb = pdbParser.get_structure(PDB_FILE, Structure)
         io = PDBIO()
@@ -283,7 +283,7 @@ def Extract(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Re
                 extractedResidues.append("\nChain Protonated")
 
             except Exception as e:
-                print("Error, Chain protonation failed Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
+                print("Chain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
                 extractedResidues.append("\nChain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
             finally:
                 ChainVirtualString.close()

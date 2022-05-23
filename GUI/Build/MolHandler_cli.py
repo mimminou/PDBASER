@@ -1,4 +1,5 @@
 import pathlib
+from re import T
 from Bio.PDB import PDBParser, PDBIO
 from io import StringIO
 from shutil import copyfile
@@ -13,7 +14,7 @@ def Extract_CLI(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None
             saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
             protonate_chain=False, protonate_BS=False, force_field="PARSE", use_propka=True, PH=7):
 
-    pdbParser = PDBParser()
+    pdbParser = PDBParser(QUIET=True)
     Structure = input_DIR + "/" + PDB_FILE
     pdb = pdbParser.get_structure(PDB_FILE, Structure)
     if Chain is None:
@@ -54,7 +55,6 @@ def Extract_CLI(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None
 def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtractFormat=None, Residues=None, saveFullProtein=False,
             saveDepictionPNG=False, saveDepictionSVG=False, add_hydrogens=False, keep_waters=False, binding_site_radius="7",
             protonate_chain=False, protonate_BS=False, force_field="PARSE", use_propka=True, PH=7):
-    extractedResidues = []
     Structure = input_DIR + "/" + PDB_FILE
     extensions = [".pdb.gz", ".ent.gz"]
     compressedFile = False
@@ -74,7 +74,7 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
         Structure = StringIO(temp_file)
     if ligandExtractFormat is None:
         ligandExtractFormat = "pdb"
-    pdbParser = PDBParser()
+    pdbParser = PDBParser(QUIET=True)
     try:
         pdb = pdbParser.get_structure(PDB_FILE, Structure)
         io = PDBIO()
@@ -98,7 +98,6 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
             elif (residue.id[0].replace("H_", "")) in (Residues):
                 resSelect = MolHandler.ResidueSelect(model[Chain], residue)
                 residue.id[0].replace(" ", "")
-                extractedResidues.append(residue.id[0].replace("H_", "") + "_" + str(residue.id[1]))
                 resname = residue.id[0].replace("H_", "") + "_" + str(residue.id[1])
                 # SAVE RESIDUE IN VIRTUAL FILE
                 debug("SAVING TO VIRTUAL FILE")
@@ -179,13 +178,11 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
                                                                  binding_site_radius, keep_waters,
                                                                  WRITE_TO_FILE=False)
                         generate_target_H(binding_site_atoms, output, force_field, use_propka, PH, WRITE_TO_OUTPUT=True)
-                        extractedResidues.append("\nBinding Site Generated and Protonated")
                     else:
                         binding_site_atoms = MolHandler.generateBindingSite(pdb[0], io, PDB_Name, PDB_ID, Chain, Output_DIR,
                                                                  residue,
                                                                  binding_site_radius, keep_waters,
                                                                  WRITE_TO_FILE=True)
-                        extractedResidues.append("\nBinding Site Generated")
                     binding_site_atoms.close()
 
 
@@ -207,11 +204,9 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
                     generate_target_H(PDB_FILE=ChainVirtualString, OUTPUT_FILE=chain_out_dir, force_field=force_field,
                                 USE_PROPKA=use_propka, PH=PH, WRITE_TO_OUTPUT=True)
 
-                extractedResidues.append("\nChain Protonated")
             
             except Exception as e:
-                print("Error, Chain protonation failed Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
-                extractedResidues.append("\nChain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
+                print("Chain protonation failed, Chain " + Chain +" of " + PDB_ID +  " might not peptidic, skipping")
             finally:
                 ChainVirtualString.close()
 
@@ -228,5 +223,4 @@ def Extract_specific_residues(input_DIR, Output_DIR, PDB_FILE, Chain, ligandExtr
             copyfile(input_DIR + "/" + PDB_FILE, Output_DIR + "/" + PDB_ID + "/" + f"{PDB_Name}.pdb")
     if compressedFile:
         Structure.close()  # CLOSE STRING IO IF FILE IS COMPRESSED
-    return extractedResidues
 
