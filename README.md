@@ -61,12 +61,14 @@ There are 2 possible ways to run PDBaser in this case :
 
     - 1 - First, you need a working python 3.6+ environment with support for Tkinter, PILLOW.
     - 2 - Install BioPython and Pygubu from pip (`pip install biopython`, `pip install pygubu`)
-    - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/dev/Installation/install.html) ), and then install it's python library from pip (`pip install openbabel==3.1.1`).
+    - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/dev/Installation/install.html) ), and then install it's python library from pip (`pip install openbabel`).
     - 4 - Install the OASA library, easely obtained from pip ( `pip install oasa3` )
-    - 5 - Install PDB2PQR (which in turn will automatically install PROPKA, both are needed)
+    - 5 - Install PDB2PQR ( `pip install pdb2pqr` )(which in turn will automatically install PROPKA, both are needed)
 
     If everything is setup correctly, running GUI/Build/pdbaser.py from terminal should work, if not, email me at abdz.amine@gmail.com or open an issue in the repository.
-
+    
+    If PDBaser tells you that pybel is not available or is available but with only partial support, check your environment variables for BABEL_LIBDIR.
+    
 3. **Building Binaries**
 
 
@@ -74,18 +76,20 @@ There are 2 possible ways to run PDBaser in this case :
     
     If you Use Nuitka, a Nuitka_script.txt file is provided in PDBaser/GUI/Build with a bunch of scripts in there, they are specific to my machine so adapt them as you see fit.
 
+    If you compile PDBaser under windows (see next section), copy the content of your openbabel library into the build folder under /obabel/openbabel.
+
 
 ### Limitations
 
 - No metadata extraction (Header, comments etc ...), only atom 3D poses with the molecule code in the PDB.
 - Only .pdb / .ent inputs and their compressed (.gz) form are supported, this is done by design as most proteins come only in pdb and ent formats, however residue outputs can have different formats(pdb, mol2, sdf, smiles).
 - Extracting a ligand in SMILES format does not generate a name for it, this is a known bug, I will probably fix it if it raises issues.
-- PDBaser does not handle well structures that are composed of multiple models, try to avoid them as much as possible.
+- PDBaser does not handle well structures that are composed of multiple models, and tries to skip non peptidic chains, so try to avoid them as much as possible.
 
 ### Roadmap
 
 From most to least important :
-- If binding site is composed of multiple chains, add support to show them when generating it instead of just showing a list of residues.
+- If binding site is composed of multiple chains, add support to show these chains when generating it instead of just showing a list of residues.
 - Add cif (mmcif) support.
 - Add binding site AA extraction to seperate files (Each AA on it's seperate .pdb file, user requested feature).
 - Packaging binaries for Linux (Maybe through flatpak).
