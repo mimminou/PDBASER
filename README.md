@@ -59,13 +59,21 @@ There are 2 possible ways to run PDBaser in this case :
 
     PDBaser is not OS dependant, and will probably run on any operating system provided the environment is correctly setup. However, since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
 
-    - 1 - First, you need a working python 3.6+ environment with support for Tkinter, PILLOW and PMW.
+    - 1 - First, you need a working python 3.6+ environment with support for Tkinter, PILLOW.
     - 2 - Install BioPython and Pygubu from pip (`pip install biopython`, `pip install pygubu`)
     - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/dev/Installation/install.html) ), and then install it's python library from pip (`pip install openbabel==3.1.1`).
     - 4 - Install the OASA library, easely obtained from pip ( `pip install oasa3` )
     - 5 - Install PDB2PQR (which in turn will automatically install PROPKA, both are needed)
 
     If everything is setup correctly, running GUI/Build/pdbaser.py from terminal should work, if not, email me at abdz.amine@gmail.com or open an issue in the repository.
+
+3. **Building Binaries**
+
+
+    If you need to build binaries, and do not want to install the precompiled binaries from the releases section, clone the repository, build all the dependencies ( see previous section ), then using some Python compiler or a python freezer, build with main executable being pdbaser.py.
+    
+    If you Use Nuitka, a Nuitka_script.txt file is provided in PDBaser/GUI/Build with a bunch of scripts in there, they are specific to my machine so adapt them as you see fit.
+
 
 ### Limitations
 
@@ -77,9 +85,9 @@ There are 2 possible ways to run PDBaser in this case :
 ### Roadmap
 
 From most to least important :
-- Add multiprocessing / multithreading support for batch mode in cli.
 - If binding site is composed of multiple chains, add support to show them when generating it instead of just showing a list of residues.
 - Add cif (mmcif) support.
+- Add binding site AA extraction to seperate files (Each AA on it's seperate .pdb file, user requested feature).
 - Packaging binaries for Linux (Maybe through flatpak).
 
 
