@@ -140,9 +140,9 @@ Running `pdbaser -h` will show a help message.
 
 **Required arguments:**
 
-`-i INPUT_DIR, --input INPUT_DIR` : Input directory for pdbs, if a file is specified instead, it will only treat t hat file.
+`-i INPUT_DIR, --input INPUT_DIR` : Input directory for pdbs, if a file is specified instead, it will only treat that file and exit.
   
-`-o OUTPUT_DIR, --output OUTPUT_DIR` : Output directory for processed files ( only pass a path to a directory , PDBaser will take care of the rest )
+`-o OUTPUT_DIR, --output OUTPUT_DIR` : Output directory for processed files ( Must be an existing directory )
 
 **Example** :
 
