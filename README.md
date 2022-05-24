@@ -89,7 +89,6 @@ There are 2 possible ways to run PDBaser in this case :
 ### Roadmap
 
 From most to least important :
-- If binding site is composed of multiple chains, add support to show these chains when generating it instead of just showing a list of residues.
 - Add cif (mmcif) support.
 - Add binding site AA extraction to seperate files (Each AA on it's seperate .pdb file, user requested feature).
 - Packaging binaries for Linux (Maybe through flatpak).
