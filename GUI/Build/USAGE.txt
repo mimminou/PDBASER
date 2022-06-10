@@ -1,11 +1,11 @@
 GUI usage :
 
-Pretty straightforward, add the input pdbs directory , add the output directory... and then select a protein in start working.
+Pretty straightforward, add the input pdbs directory, add the output directory, select a protein to work on and voila.
 
-**Note : Selecting a protein and a chain is minimal amount of input for the gui version to work correctly, even if no residue is selected when extracting,
+**Note : Selecting a protein and a chain is mandatory for the GUI version to work correctly, even if no residue is selected when extracting,
 PDBaser will extract the selected chain.
 
-If you need to prepare a lot of files, consider using the cli usage as it supports batch operation.
+If you need to prepare lots of proteins, consider using the CLI mode as it supports batch operation.
 
 
 CLI usage:
