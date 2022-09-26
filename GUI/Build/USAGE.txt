@@ -19,7 +19,7 @@ PDBaser, Protein preparation made fast and easy
 
 Required arguments:
   -i INPUT_DIR, --input INPUT_DIR
-                        Input directory for pdbs, if a file is specified instead, it will only treat t hat file.
+                        Input directory for pdbs, if a file is specified instead, it will only treat that file.
   -o OUTPUT_DIR, --output OUTPUT_DIR
                         Output directory for processed files ( only pass a path to a directory , PDBaser will take
                         care of the rest )
@@ -27,7 +27,7 @@ Required arguments:
 Ligand arguments:
 
   -r [RESIDUE [RESIDUE ...]], --residue [RESIDUE [RESIDUE ...]]
-                        name of residue, if not specified. If -r flag is present but no residue is specified, will
+                        name of residue, if -r flag is present but no name of residue is specified, will
                         extract all heteroatoms.
   -f {mol2,pdb,sdf,smi}, --format {mol2,pdb,sdf,smi}
                         output format for the ligand ( pdb / mol2 / sdf / smi ) (default mol2).
@@ -38,21 +38,19 @@ Ligand arguments:
 
 Protein arguments:
   -c CHAIN, --chain CHAIN
-                        eg: A or B, if not specified, will treat all chains and will extract residue s from all of
-                        them. If specified, will only treat the specified cha in and extract residues only from it
-                        (default False).
+                        eg: A or B, if not specified, will process all chains and will extract residues from all of the processed chains. If specified,                             will only treat the specified chain and extract residues only from it (default False).
   -cp, --copy-protein   Copy the full PDB file to output, usefull to organize outputs (default False).
   -w, --keep-water      Keep water molecules (default False).
   -pc, --protonate-chain
                         Protonate the Extracted chains (default False).
   -bs BINDING_SITE_SIZE, --binding-site BINDING_SITE_SIZE
-                        Will generate a binding site with all Amino acids in the vicinity of the ligand(s), specify
+                        Will generate a binding site with all the Amino acids in the vicinity of the ligand(s), specify
                         the radius as Angstroms (default False).
   -pbs, --protonate-binding-site
-                        Attempts to protonate the binding site if generated. (default FALSE)
+                        Attempt to protonate the binding site if generated. (default False)
   -ff {PARSE,AMBER,CHARMM}, --force-field {PARSE,AMBER,CHARMM}
-                        Protonation Forcefields (Default PARSE).
+                        Protonation Forcefields (default PARSE) use the default FF unless you know what you are doing.
   -propka, --use-propka
-                        Generate titration states and protonate using PROPKA (Default True).
+                        Generate titration states and protonate using PROPKA (default True), will only have effect if protonate-binding-site is True.
   -ph PROTONATION_PH, --protonation-ph PROTONATION_PH
                         Specify at which pH the protonation occures.
