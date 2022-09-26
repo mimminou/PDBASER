@@ -3,17 +3,17 @@
 Are you tired of using visualization software, or full blown suites just to separate protein chains / ligands ?
 Are you tired of organizing the mess of molecules into separate folders ?
 
-PDBaser does this for you !
+PDBaser is the right tool for you !
 
 
 # What does it do ?
 
-PDBaser reads raw .pdb and .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and (optionally) removes water molecules, and then saves everything in a directory named as the original input filename.
+PDBaser reads raw .pdb and .ent files as downloaded from the pdb, extracts pure protein chains and heteroatoms (ligands and others) and (optionally) removes water molecules, then saves everything in a directory named as the original input filename.
 You can also use it to generate and extract a binding site provided there is a ligand in a cavity in the protein file.
 
 # Who is this for ?
 
-This tool is perfect for RMSD reliability test preparation, where a large number of proteins and their ligands are needed. It can also help people who are not very accustomed to command line interfaces, and aren't willing to pay a (usually high) premium for other software.
+This tool is perfect for RMSD reliability test preparation, where a large number of proteins and their ligands is needed. It can also help people who are not very accustomed to command line interfaces, and are not willing to pay a (usually high) premium for other software.
 
 
 # Features
@@ -38,17 +38,17 @@ This tool is perfect for RMSD reliability test preparation, where a large number
 
 #### Windows
 
-For Windows users, PDBaser has a precompiled version, it can be found in the releases category, and can be installed on windows 7 SP1 / 8 / 8.1 / 10 / 11 and only requires Microsoft visual C++ 2015 x86, which is embedded in the installation. ( For Windows 7 Users : Service Pack 1 with update KB3063858 Must be installed in order for PDBaser to run )
+For Windows users, PDBaser has a precompiled version, it can be found in the releases section, and can be installed on windows 7 SP1  or newer, and only requires Microsoft visual C++ 2015 x86, which is embedded in the setup. ( For Windows 7 Users : Service Pack 1 with update KB3063858 Must be installed in order for PDBaser to run )
 
 #### Linux / MacOS and other Unix / Unix-like systems
 
-There are 2 possible ways to run PDBaser in this case :
+There are 3 possible ways to run PDBaser in this case :
 
 
 1. **Using Wine**
 
 
-    The quickest way to get PDBaser running on those systems is by using Wine (Tested on Wine 6.0.1 +, works only on a 64bit prefix for some reason),
+    The quickest and easiest way to get PDBaser running on those systems is by using Wine (Tested on Wine 6.0.1 +) or a wine manager software like Bottles.
     
     - 1 - Download and install the windows setup package and install it.
     - 2 - open a terminal window where you installed PDBaser and run `wine pdbaser.exe` (or `wine PDBaser_GUI.exe` if release is older than 2.0).
@@ -57,17 +57,17 @@ There are 2 possible ways to run PDBaser in this case :
 2. **Building from source**
 
 
-    PDBaser is not OS dependant, and will probably run on any operating system provided the environment is correctly setup. However, since software distribution on Linux is a nightmare, and i do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
+    PDBaser is not OS dependant, and will probably run on any operating system provided the environment is correctly setup. However, since software distribution on Linux is still somewhat a new concept for me, and I do not have a mac system to package PDBaser for, you will have to either use Wine, or deal with setting up the environment from scratch.
 
-    - 1 - First, you need a working python 3.6+ environment with support for Tkinter, PILLOW.
+    - 1 - First, you need a working python 3.6+ environment with support for Tkinter and PILLOW.
     - 2 - Install BioPython and Pygubu from pip (`pip install biopython`, `pip install pygubu`)
     - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/dev/Installation/install.html) ), and then install it's python library from pip (`pip install openbabel`).
-    - 4 - Install the OASA library, easely obtained from pip ( `pip install oasa3` )
+    - 4 - Install the OASA library, obtainable from pip ( `pip install oasa3` )
     - 5 - Install PDB2PQR ( `pip install pdb2pqr` )(which in turn will automatically install PROPKA, both are needed)
 
     If everything is setup correctly, running GUI/Build/pdbaser.py from terminal should work, if not, email me at abdz.amine@gmail.com or open an issue in the repository.
     
-    If PDBaser tells you that pybel is not available or is available but with only partial support, check your environment variables for BABEL_LIBDIR.
+    If PDBaser warns you about pybel not being available or is available but with only partial support, check your environment variables for BABEL_LIBDIR.
     
 3. **Building Binaries**
 
@@ -76,7 +76,7 @@ There are 2 possible ways to run PDBaser in this case :
     
     If you Use Nuitka, a Nuitka_script.txt file is provided in PDBaser/GUI/Build with a bunch of scripts in there, they are specific to my machine so adapt them as you see fit.
 
-    If you compile PDBaser under windows (see next section), copy the content of your openbabel library into the build folder under /obabel/openbabel.
+    If you compile PDBaser under Windows, copy the content of your openbabel library into the build folder under /obabel/openbabel.
 
 
 ### Limitations
