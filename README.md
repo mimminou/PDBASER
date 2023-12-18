@@ -61,7 +61,7 @@ There are 3 possible ways to run PDBaser in this case :
 
     - 1 - First, you need a working python 3.6+ environment with support for Tkinter and PILLOW.
     - 2 - Install BioPython and Pygubu from pip (`pip install biopython`, `pip install pygubu`)
-    - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this]([http://openbabel.org/docs/dev/Installation/install.html](http://openbabel.org/docs/UseTheLibrary/PythonInstall.html)) ).
+    - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/UseTheLibrary/PythonInstall.html) ).
     - 4 - Install the OASA library, obtainable from pip ( `pip install oasa3` )
     - 5 - Install PDB2PQR ( `pip install pdb2pqr` )(which in turn will automatically install PROPKA, both are needed)
 
