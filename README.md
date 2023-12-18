@@ -61,22 +61,22 @@ There are 3 possible ways to run PDBaser in this case :
 
     - 1 - First, you need a working python 3.6+ environment with support for Tkinter and PILLOW.
     - 2 - Install BioPython and Pygubu from pip (`pip install biopython`, `pip install pygubu`)
-    - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this](http://openbabel.org/docs/dev/Installation/install.html) ), and then install it's python library from pip (`pip install openbabel`).
+    - 3 - You need to install openbabel 3.1.1 with python bindings (pybel), or directly build openbabel 3.1.1 with SWIG and python bindings from source ( follow [this]([http://openbabel.org/docs/dev/Installation/install.html](http://openbabel.org/docs/UseTheLibrary/PythonInstall.html)) ).
     - 4 - Install the OASA library, obtainable from pip ( `pip install oasa3` )
     - 5 - Install PDB2PQR ( `pip install pdb2pqr` )(which in turn will automatically install PROPKA, both are needed)
 
     If everything is setup correctly, running GUI/Build/pdbaser.py from terminal should work, if not, email me at abdz.amine@gmail.com or open an issue in the repository.
     
-    If PDBaser warns you about pybel not being available or is available but with only partial support, check your environment variables for BABEL_LIBDIR.
+    If PDBaser warns you about pybel not being available or is available but only with partial support, check your environment variables for BABEL_LIBDIR.
     
 3. **Building Binaries**
 
 
     If you need to build binaries, and do not want to install the precompiled binaries from the releases section, clone the repository, build all the dependencies ( see previous section ), then using some Python compiler or a python freezer, build with main executable being pdbaser.py.
     
-    If you Use Nuitka, a Nuitka_script.txt file is provided in PDBaser/GUI/Build with a bunch of scripts in there, they are specific to my machine so adapt them as you see fit.
+    If you Use Nuitka, a Nuitka_script.txt file is provided in PDBaser/GUI/Build with a bunch of command arguments in there, they are specific to my machine so adapt them as you see fit.
 
-    If you compile PDBaser under Windows, copy the content of your openbabel library into the build folder under /obabel/openbabel.
+    If you compile PDBaser for Windows, copy the content of your openbabel library into the build folder under /obabel/openbabel.
 
 
 ### Limitations
@@ -104,7 +104,7 @@ For Unix/Unix-like : Source is available in releases section, although I recomme
 
 # Citations
 
-PDBaser relies on Biopython's BIO.PDB module, openbabel's pybel module, the OASA library and PDB2PQR.
+PDBaser is based on Biopython's BIO.PDB module, openbabel's pybel module, the OASA library and PDB2PQR.
 
 BIO.PDB : Hamelryck T and Manderick B (2003) PDB file parser and structure class implemented in Python. [*Bioinformatics*, 22, 2308-2310](http://dx.doi.org/10.1093/bioinformatics/btg299)
 
